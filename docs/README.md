@@ -1,7 +1,6 @@
 # crossplane Jsonnet library
 
-The Jsonnet Kubernetes library is a generated with
-[`k8s`](https://github.com/jsonnet-libs/k8s).
+This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 
 - [crossplane/1.2](crossplane/1.2/README.md)
 - [provider-aws/0.18](provider-aws/0.18/README.md)
