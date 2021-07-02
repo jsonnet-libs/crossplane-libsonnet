@@ -1,0 +1,16 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1alpha1', url='', help=''),
+  api: (import 'api.libsonnet'),
+  apiMapping: (import 'apiMapping.libsonnet'),
+  authorizer: (import 'authorizer.libsonnet'),
+  deployment: (import 'deployment.libsonnet'),
+  domainName: (import 'domainName.libsonnet'),
+  integration: (import 'integration.libsonnet'),
+  integrationResponse: (import 'integrationResponse.libsonnet'),
+  model: (import 'model.libsonnet'),
+  route: (import 'route.libsonnet'),
+  routeResponse: (import 'routeResponse.libsonnet'),
+  stage: (import 'stage.libsonnet'),
+  vpcLink: (import 'vpcLink.libsonnet'),
+}
