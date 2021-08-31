@@ -58,6 +58,8 @@
   },
   '#resourceRef':: d.obj(help='ResourceReference to the managed resource using the provider config.'),
   resourceRef: {
+    '#withApiVersion':: d.fn(help='APIVersion of the referenced object.', args=[d.arg(name='apiVersion', type=d.T.string)]),
+    withApiVersion(apiVersion): { resourceRef+: { apiVersion: apiVersion } },
     '#withKind':: d.fn(help='Kind of the referenced object.', args=[d.arg(name='kind', type=d.T.string)]),
     withKind(kind): { resourceRef+: { kind: kind } },
     '#withName':: d.fn(help='Name of the referenced object.', args=[d.arg(name='name', type=d.T.string)]),

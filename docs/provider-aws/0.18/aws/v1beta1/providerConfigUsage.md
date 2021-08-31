@@ -34,6 +34,7 @@ A ProviderConfigUsage indicates that a resource is using a ProviderConfig.
 * [`obj providerConfigRef`](#obj-providerconfigref)
   * [`fn withName(name)`](#fn-providerconfigrefwithname)
 * [`obj resourceRef`](#obj-resourceref)
+  * [`fn withApiVersion(apiVersion)`](#fn-resourcerefwithapiversion)
   * [`fn withKind(kind)`](#fn-resourcerefwithkind)
   * [`fn withName(name)`](#fn-resourcerefwithname)
   * [`fn withUid(uid)`](#fn-resourcerefwithuid)
@@ -257,6 +258,14 @@ Name of the referenced object.
 ## obj resourceRef
 
 ResourceReference to the managed resource using the provider config.
+
+### fn resourceRef.withApiVersion
+
+```ts
+withApiVersion(apiVersion)
+```
+
+APIVersion of the referenced object.
 
 ### fn resourceRef.withKind
 

@@ -55,6 +55,8 @@
   spec: {
     '#compositeTypeRef':: d.obj(help='CompositeTypeRef specifies the type of composite resource that this composition is compatible with.'),
     compositeTypeRef: {
+      '#withApiVersion':: d.fn(help='APIVersion of the type.', args=[d.arg(name='apiVersion', type=d.T.string)]),
+      withApiVersion(apiVersion): { spec+: { compositeTypeRef+: { apiVersion: apiVersion } } },
       '#withKind':: d.fn(help='Kind of the type.', args=[d.arg(name='kind', type=d.T.string)]),
       withKind(kind): { spec+: { compositeTypeRef+: { kind: kind } } },
     },

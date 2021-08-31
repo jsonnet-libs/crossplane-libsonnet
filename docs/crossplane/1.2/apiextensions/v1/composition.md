@@ -38,6 +38,7 @@ Composition defines the group of resources to be created when a compatible type 
   * [`fn withResourcesMixin(resources)`](#fn-specwithresourcesmixin)
   * [`fn withWriteConnectionSecretsToNamespace(writeConnectionSecretsToNamespace)`](#fn-specwithwriteconnectionsecretstonamespace)
   * [`obj spec.compositeTypeRef`](#obj-speccompositetyperef)
+    * [`fn withApiVersion(apiVersion)`](#fn-speccompositetyperefwithapiversion)
     * [`fn withKind(kind)`](#fn-speccompositetyperefwithkind)
 
 ## Fields
@@ -295,6 +296,14 @@ WriteConnectionSecretsToNamespace specifies the namespace in which the connectio
 ## obj spec.compositeTypeRef
 
 CompositeTypeRef specifies the type of composite resource that this composition is compatible with.
+
+### fn spec.compositeTypeRef.withApiVersion
+
+```ts
+withApiVersion(apiVersion)
+```
+
+APIVersion of the type.
 
 ### fn spec.compositeTypeRef.withKind
 
