@@ -10,6 +10,7 @@ This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 - [provider-aws/0.18](provider-aws/0.18/README.md)
 - [provider-gcp/0.18](provider-gcp/0.18/README.md)
 - [provider-gcp/0.17](provider-gcp/0.17/README.md)
+- [provider-azure/0.18](provider-azure/0.18/README.md)
 - [provider-azure/0.17](provider-azure/0.17/README.md)
 - [provider-azure/0.16](provider-azure/0.16/README.md)
 - [provider-sql/0.2](provider-sql/0.2/README.md)
