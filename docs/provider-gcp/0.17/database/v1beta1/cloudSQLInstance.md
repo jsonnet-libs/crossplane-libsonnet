@@ -4,7 +4,7 @@ permalink: /provider-gcp/0.17/database/v1beta1/cloudSQLInstance/
 
 # database.v1beta1.cloudSQLInstance
 
-A CloudSQLInstance is a managed resource that represents a Google CloudSQL instance.
+"A CloudSQLInstance is a managed resource that represents a Google CloudSQL instance."
 
 ## Index
 
@@ -109,11 +109,11 @@ A CloudSQLInstance is a managed resource that represents a Google CloudSQL insta
 new(name)
 ```
 
-new returns an instance of Cloudsqlinstance
+new returns an instance of CloudSQLInstance
 
 ## obj metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."
 
 ### fn metadata.withAnnotations
 
@@ -121,7 +121,7 @@ ObjectMeta is metadata that all persisted resources must have, which includes al
 withAnnotations(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 ### fn metadata.withAnnotationsMixin
 
@@ -129,7 +129,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withAnnotationsMixin(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 **Note:** This function appends passed data to existing values
 
@@ -139,7 +139,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withClusterName(clusterName)
 ```
 
-The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
+"The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request."
 
 ### fn metadata.withCreationTimestamp
 
@@ -147,7 +147,7 @@ The name of the cluster which the object belongs to. This is used to distinguish
 withCreationTimestamp(creationTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withDeletionGracePeriodSeconds
 
@@ -155,7 +155,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withDeletionGracePeriodSeconds(deletionGracePeriodSeconds)
 ```
 
-Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
+"Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only."
 
 ### fn metadata.withDeletionTimestamp
 
@@ -163,7 +163,7 @@ Number of seconds allowed for this object to gracefully terminate before it will
 withDeletionTimestamp(deletionTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withFinalizers
 
@@ -171,7 +171,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withFinalizers(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 ### fn metadata.withFinalizersMixin
 
@@ -179,7 +179,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withFinalizersMixin(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 **Note:** This function appends passed data to existing values
 
@@ -189,11 +189,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withGenerateName(generateName)
 ```
 
-GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
-
-If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
-
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
+"GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency"
 
 ### fn metadata.withGeneration
 
@@ -201,7 +197,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 withGeneration(generation)
 ```
 
-A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
+"A sequence number representing a specific generation of the desired state. Populated by the system. Read-only."
 
 ### fn metadata.withLabels
 
@@ -209,7 +205,7 @@ A sequence number representing a specific generation of the desired state. Popul
 withLabels(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 ### fn metadata.withLabelsMixin
 
@@ -217,7 +213,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withLabelsMixin(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
 
@@ -227,7 +223,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withManagedFields(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 ### fn metadata.withManagedFieldsMixin
 
@@ -235,7 +231,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withManagedFieldsMixin(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -245,7 +241,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withName(name)
 ```
 
-Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"
 
 ### fn metadata.withNamespace
 
@@ -253,9 +249,7 @@ Name must be unique within a namespace. Is required when creating resources, alt
 withNamespace(namespace)
 ```
 
-Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
-
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\n\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"
 
 ### fn metadata.withOwnerReferences
 
@@ -263,7 +257,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 withOwnerReferences(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 ### fn metadata.withOwnerReferencesMixin
 
@@ -271,7 +265,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withOwnerReferencesMixin(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 **Note:** This function appends passed data to existing values
 
@@ -281,9 +275,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withResourceVersion(resourceVersion)
 ```
 
-An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
-
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+"An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency"
 
 ### fn metadata.withSelfLink
 
@@ -291,9 +283,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 withSelfLink(selfLink)
 ```
 
-SelfLink is a URL representing this object. Populated by the system. Read-only.
-
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+"SelfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release."
 
 ### fn metadata.withUid
 
@@ -301,13 +291,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 withUid(uid)
 ```
 
-UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
-
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+"UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
 
 ## obj spec
 
-A CloudSQLInstanceSpec defines the desired state of a CloudSQLInstance.
+"A CloudSQLInstanceSpec defines the desired state of a CloudSQLInstance."
 
 ### fn spec.withDeletionPolicy
 
@@ -315,11 +303,11 @@ A CloudSQLInstanceSpec defines the desired state of a CloudSQLInstance.
 withDeletionPolicy(deletionPolicy)
 ```
 
-DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. The "Delete" policy is the default when no policy is specified.
+"DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either \"Delete\" or \"Orphan\" the external resource. The \"Delete\" policy is the default when no policy is specified."
 
 ## obj spec.forProvider
 
-CloudSQLInstanceParameters define the desired state of a Google CloudSQL instance. Most of its fields are direct mirror of GCP DatabaseInstance object. See https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances#DatabaseInstance
+"CloudSQLInstanceParameters define the desired state of a Google CloudSQL instance. Most of its fields are direct mirror of GCP DatabaseInstance object. See https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances#DatabaseInstance"
 
 ### fn spec.forProvider.withDatabaseVersion
 
@@ -327,7 +315,7 @@ CloudSQLInstanceParameters define the desired state of a Google CloudSQL instanc
 withDatabaseVersion(databaseVersion)
 ```
 
-DatabaseVersion: The database engine type and version. The databaseVersion field can not be changed after instance creation. MySQL Second Generation instances: MYSQL_5_7 (default) or MYSQL_5_6. PostgreSQL instances: POSTGRES_9_6 (default) or POSTGRES_11 Beta. MySQL First Generation instances: MYSQL_5_6 (default) or MYSQL_5_5
+"DatabaseVersion: The database engine type and version. The databaseVersion field can not be changed after instance creation. MySQL Second Generation instances: MYSQL_5_7 (default) or MYSQL_5_6. PostgreSQL instances: POSTGRES_9_6 (default) or POSTGRES_11 Beta. MySQL First Generation instances: MYSQL_5_6 (default) or MYSQL_5_5"
 
 ### fn spec.forProvider.withGceZone
 
@@ -335,7 +323,7 @@ DatabaseVersion: The database engine type and version. The databaseVersion field
 withGceZone(gceZone)
 ```
 
-GceZone: The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone.
+"GceZone: The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone."
 
 ### fn spec.forProvider.withInstanceType
 
@@ -343,7 +331,7 @@ GceZone: The Compute Engine zone that the instance is currently serving from. Th
 withInstanceType(instanceType)
 ```
 
-InstanceType: The instance type. This can be one of the following. CLOUD_SQL_INSTANCE: A Cloud SQL instance that is not replicating from a master. ON_PREMISES_INSTANCE: An instance running on the customer's premises. READ_REPLICA_INSTANCE: A Cloud SQL instance configured as a read-replica.
+"InstanceType: The instance type. This can be one of the following. CLOUD_SQL_INSTANCE: A Cloud SQL instance that is not replicating from a master. ON_PREMISES_INSTANCE: An instance running on the customer's premises. READ_REPLICA_INSTANCE: A Cloud SQL instance configured as a read-replica."
 
 ### fn spec.forProvider.withMasterInstanceName
 
@@ -351,7 +339,7 @@ InstanceType: The instance type. This can be one of the following. CLOUD_SQL_INS
 withMasterInstanceName(masterInstanceName)
 ```
 
-MasterInstanceName: The name of the instance which will act as master in the replication setup.
+"MasterInstanceName: The name of the instance which will act as master in the replication setup."
 
 ### fn spec.forProvider.withMaxDiskSize
 
@@ -359,7 +347,7 @@ MasterInstanceName: The name of the instance which will act as master in the rep
 withMaxDiskSize(maxDiskSize)
 ```
 
-MaxDiskSize: The maximum disk size of the instance in bytes.
+"MaxDiskSize: The maximum disk size of the instance in bytes."
 
 ### fn spec.forProvider.withRegion
 
@@ -367,7 +355,7 @@ MaxDiskSize: The maximum disk size of the instance in bytes.
 withRegion(region)
 ```
 
-Region: The geographical region. Can be us-central (FIRST_GEN instances only), us-central1 (SECOND_GEN instances only), asia-east1 or europe-west1. Defaults to us-central or us-central1 depending on the instance type (First Generation or Second Generation). The region can not be changed after instance creation.
+"Region: The geographical region. Can be us-central (FIRST_GEN instances only), us-central1 (SECOND_GEN instances only), asia-east1 or europe-west1. Defaults to us-central or us-central1 depending on the instance type (First Generation or Second Generation). The region can not be changed after instance creation."
 
 ### fn spec.forProvider.withReplicaNames
 
@@ -375,7 +363,7 @@ Region: The geographical region. Can be us-central (FIRST_GEN instances only), u
 withReplicaNames(replicaNames)
 ```
 
-ReplicaNames: The replicas of the instance.
+"ReplicaNames: The replicas of the instance."
 
 ### fn spec.forProvider.withReplicaNamesMixin
 
@@ -383,7 +371,7 @@ ReplicaNames: The replicas of the instance.
 withReplicaNamesMixin(replicaNames)
 ```
 
-ReplicaNames: The replicas of the instance.
+"ReplicaNames: The replicas of the instance."
 
 **Note:** This function appends passed data to existing values
 
@@ -393,7 +381,7 @@ ReplicaNames: The replicas of the instance.
 withSuspensionReason(suspensionReason)
 ```
 
-SuspensionReason: If the instance state is SUSPENDED, the reason for the suspension.
+"SuspensionReason: If the instance state is SUSPENDED, the reason for the suspension."
 
 ### fn spec.forProvider.withSuspensionReasonMixin
 
@@ -401,13 +389,13 @@ SuspensionReason: If the instance state is SUSPENDED, the reason for the suspens
 withSuspensionReasonMixin(suspensionReason)
 ```
 
-SuspensionReason: If the instance state is SUSPENDED, the reason for the suspension.
+"SuspensionReason: If the instance state is SUSPENDED, the reason for the suspension."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.diskEncryptionConfiguration
 
-DiskEncryptionConfiguration: Disk encryption configuration specific to an instance. Applies only to Second Generation instances.
+"DiskEncryptionConfiguration: Disk encryption configuration specific to an instance. Applies only to Second Generation instances."
 
 ### fn spec.forProvider.diskEncryptionConfiguration.withKmsKeyName
 
@@ -415,11 +403,11 @@ DiskEncryptionConfiguration: Disk encryption configuration specific to an instan
 withKmsKeyName(kmsKeyName)
 ```
 
-KmsKeyName: KMS key resource name
+"KmsKeyName: KMS key resource name"
 
 ## obj spec.forProvider.failoverReplica
 
-FailoverReplica: The name and status of the failover replica. This property is applicable only to Second Generation instances.
+"FailoverReplica: The name and status of the failover replica. This property is applicable only to Second Generation instances."
 
 ### fn spec.forProvider.failoverReplica.withName
 
@@ -427,11 +415,11 @@ FailoverReplica: The name and status of the failover replica. This property is a
 withName(name)
 ```
 
-Name: The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.
+"Name: The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances."
 
 ## obj spec.forProvider.onPremisesConfiguration
 
-OnPremisesConfiguration: Configuration specific to on-premises instances.
+"OnPremisesConfiguration: Configuration specific to on-premises instances."
 
 ### fn spec.forProvider.onPremisesConfiguration.withHostPort
 
@@ -439,11 +427,11 @@ OnPremisesConfiguration: Configuration specific to on-premises instances.
 withHostPort(hostPort)
 ```
 
-HostPort: The host and port of the on-premises instance in host:port format
+"HostPort: The host and port of the on-premises instance in host:port format"
 
 ## obj spec.forProvider.settings
 
-Settings: The user settings.
+"Settings: The user settings."
 
 ### fn spec.forProvider.settings.withActivationPolicy
 
@@ -451,7 +439,7 @@ Settings: The user settings.
 withActivationPolicy(activationPolicy)
 ```
 
-ActivationPolicy: The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: ALWAYS: The instance is on, and remains so even in the absence of connection requests. NEVER: The instance is off; it is not activated, even if a connection request arrives. ON_DEMAND: First Generation instances only. The instance responds to incoming requests, and turns itself off when not in use. Instances with PER_USE pricing turn off after 15 minutes of inactivity. Instances with PER_PACKAGE pricing turn off after 12 hours of inactivity.
+"ActivationPolicy: The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: ALWAYS: The instance is on, and remains so even in the absence of connection requests. NEVER: The instance is off; it is not activated, even if a connection request arrives. ON_DEMAND: First Generation instances only. The instance responds to incoming requests, and turns itself off when not in use. Instances with PER_USE pricing turn off after 15 minutes of inactivity. Instances with PER_PACKAGE pricing turn off after 12 hours of inactivity."
 
 ### fn spec.forProvider.settings.withAuthorizedGaeApplications
 
@@ -459,7 +447,7 @@ ActivationPolicy: The activation policy specifies when the instance is activated
 withAuthorizedGaeApplications(authorizedGaeApplications)
 ```
 
-AuthorizedGaeApplications: The App Engine app IDs that can access this instance. First Generation instances only.
+"AuthorizedGaeApplications: The App Engine app IDs that can access this instance. First Generation instances only."
 
 ### fn spec.forProvider.settings.withAuthorizedGaeApplicationsMixin
 
@@ -467,7 +455,7 @@ AuthorizedGaeApplications: The App Engine app IDs that can access this instance.
 withAuthorizedGaeApplicationsMixin(authorizedGaeApplications)
 ```
 
-AuthorizedGaeApplications: The App Engine app IDs that can access this instance. First Generation instances only.
+"AuthorizedGaeApplications: The App Engine app IDs that can access this instance. First Generation instances only."
 
 **Note:** This function appends passed data to existing values
 
@@ -477,7 +465,7 @@ AuthorizedGaeApplications: The App Engine app IDs that can access this instance.
 withAvailabilityType(availabilityType)
 ```
 
-AvailabilityType: Availability type (PostgreSQL instances only). Potential values: ZONAL: The instance serves data from only one zone. Outages in that zone affect data accessibility. REGIONAL: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.
+"AvailabilityType: Availability type (PostgreSQL instances only). Potential values: ZONAL: The instance serves data from only one zone. Outages in that zone affect data accessibility. REGIONAL: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration."
 
 ### fn spec.forProvider.settings.withCrashSafeReplicationEnabled
 
@@ -485,7 +473,7 @@ AvailabilityType: Availability type (PostgreSQL instances only). Potential value
 withCrashSafeReplicationEnabled(crashSafeReplicationEnabled)
 ```
 
-CrashSafeReplicationEnabled: Configuration specific to read replica instances. Indicates whether database flags for crash-safe replication are enabled. This property is only applicable to First Generation instances.
+"CrashSafeReplicationEnabled: Configuration specific to read replica instances. Indicates whether database flags for crash-safe replication are enabled. This property is only applicable to First Generation instances."
 
 ### fn spec.forProvider.settings.withDataDiskSizeGb
 
@@ -493,7 +481,7 @@ CrashSafeReplicationEnabled: Configuration specific to read replica instances. I
 withDataDiskSizeGb(dataDiskSizeGb)
 ```
 
-DataDiskSizeGb: The size of data disk, in GB. The data disk size minimum is 10GB. Not used for First Generation instances.
+"DataDiskSizeGb: The size of data disk, in GB. The data disk size minimum is 10GB. Not used for First Generation instances."
 
 ### fn spec.forProvider.settings.withDataDiskType
 
@@ -501,7 +489,7 @@ DataDiskSizeGb: The size of data disk, in GB. The data disk size minimum is 10GB
 withDataDiskType(dataDiskType)
 ```
 
-DataDiskType: The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.
+"DataDiskType: The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances."
 
 ### fn spec.forProvider.settings.withDatabaseFlags
 
@@ -509,7 +497,7 @@ DataDiskType: The type of data disk: PD_SSD (default) or PD_HDD. Not used for Fi
 withDatabaseFlags(databaseFlags)
 ```
 
-DatabaseFlags is the array of database flags passed to the instance at startup.
+"DatabaseFlags is the array of database flags passed to the instance at startup."
 
 ### fn spec.forProvider.settings.withDatabaseFlagsMixin
 
@@ -517,7 +505,7 @@ DatabaseFlags is the array of database flags passed to the instance at startup.
 withDatabaseFlagsMixin(databaseFlags)
 ```
 
-DatabaseFlags is the array of database flags passed to the instance at startup.
+"DatabaseFlags is the array of database flags passed to the instance at startup."
 
 **Note:** This function appends passed data to existing values
 
@@ -527,7 +515,7 @@ DatabaseFlags is the array of database flags passed to the instance at startup.
 withDatabaseReplicationEnabled(databaseReplicationEnabled)
 ```
 
-DatabaseReplicationEnabled: Configuration specific to read replica instances. Indicates whether replication is enabled or not.
+"DatabaseReplicationEnabled: Configuration specific to read replica instances. Indicates whether replication is enabled or not."
 
 ### fn spec.forProvider.settings.withPricingPlan
 
@@ -535,7 +523,7 @@ DatabaseReplicationEnabled: Configuration specific to read replica instances. In
 withPricingPlan(pricingPlan)
 ```
 
-PricingPlan: The pricing plan for this instance. This can be either PER_USE or PACKAGE. Only PER_USE is supported for Second Generation instances.
+"PricingPlan: The pricing plan for this instance. This can be either PER_USE or PACKAGE. Only PER_USE is supported for Second Generation instances."
 
 ### fn spec.forProvider.settings.withReplicationType
 
@@ -543,7 +531,7 @@ PricingPlan: The pricing plan for this instance. This can be either PER_USE or P
 withReplicationType(replicationType)
 ```
 
-ReplicationType: The type of replication this instance uses. This can be either ASYNCHRONOUS or SYNCHRONOUS. This property is only applicable to First Generation instances.
+"ReplicationType: The type of replication this instance uses. This can be either ASYNCHRONOUS or SYNCHRONOUS. This property is only applicable to First Generation instances."
 
 ### fn spec.forProvider.settings.withStorageAutoResize
 
@@ -551,7 +539,7 @@ ReplicationType: The type of replication this instance uses. This can be either 
 withStorageAutoResize(storageAutoResize)
 ```
 
-StorageAutoResize: Configuration to increase storage size automatically. The default value is true. Not used for First Generation instances.
+"StorageAutoResize: Configuration to increase storage size automatically. The default value is true. Not used for First Generation instances."
 
 ### fn spec.forProvider.settings.withStorageAutoResizeLimit
 
@@ -559,7 +547,7 @@ StorageAutoResize: Configuration to increase storage size automatically. The def
 withStorageAutoResizeLimit(storageAutoResizeLimit)
 ```
 
-StorageAutoResizeLimit: The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit. Not used for First Generation instances.
+"StorageAutoResizeLimit: The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit. Not used for First Generation instances."
 
 ### fn spec.forProvider.settings.withTier
 
@@ -567,7 +555,7 @@ StorageAutoResizeLimit: The maximum size to which storage capacity can be automa
 withTier(tier)
 ```
 
-Tier: The tier (or machine type) for this instance, for example db-n1-standard-1 (MySQL instances) or db-custom-1-3840 (PostgreSQL instances). For MySQL instances, this property determines whether the instance is First or Second Generation. For more information, see Instance Settings.
+"Tier: The tier (or machine type) for this instance, for example db-n1-standard-1 (MySQL instances) or db-custom-1-3840 (PostgreSQL instances). For MySQL instances, this property determines whether the instance is First or Second Generation. For more information, see Instance Settings."
 
 ### fn spec.forProvider.settings.withUserLabels
 
@@ -575,7 +563,7 @@ Tier: The tier (or machine type) for this instance, for example db-n1-standard-1
 withUserLabels(userLabels)
 ```
 
-UserLabels: User-provided labels, represented as a dictionary where each label is a single key value pair.
+"UserLabels: User-provided labels, represented as a dictionary where each label is a single key value pair."
 
 ### fn spec.forProvider.settings.withUserLabelsMixin
 
@@ -583,13 +571,13 @@ UserLabels: User-provided labels, represented as a dictionary where each label i
 withUserLabelsMixin(userLabels)
 ```
 
-UserLabels: User-provided labels, represented as a dictionary where each label is a single key value pair.
+"UserLabels: User-provided labels, represented as a dictionary where each label is a single key value pair."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.settings.backupConfiguration
 
-BackupConfiguration is the daily backup configuration for the instance.
+"BackupConfiguration is the daily backup configuration for the instance."
 
 ### fn spec.forProvider.settings.backupConfiguration.withBinaryLogEnabled
 
@@ -597,7 +585,7 @@ BackupConfiguration is the daily backup configuration for the instance.
 withBinaryLogEnabled(binaryLogEnabled)
 ```
 
-BinaryLogEnabled: Whether binary log is enabled. If backup configuration is disabled, binary log must be disabled as well.
+"BinaryLogEnabled: Whether binary log is enabled. If backup configuration is disabled, binary log must be disabled as well."
 
 ### fn spec.forProvider.settings.backupConfiguration.withEnabled
 
@@ -605,7 +593,7 @@ BinaryLogEnabled: Whether binary log is enabled. If backup configuration is disa
 withEnabled(enabled)
 ```
 
-Enabled: Whether this configuration is enabled.
+"Enabled: Whether this configuration is enabled."
 
 ### fn spec.forProvider.settings.backupConfiguration.withLocation
 
@@ -613,7 +601,7 @@ Enabled: Whether this configuration is enabled.
 withLocation(location)
 ```
 
-Location: The location of the backup.
+"Location: The location of the backup."
 
 ### fn spec.forProvider.settings.backupConfiguration.withReplicationLogArchivingEnabled
 
@@ -621,7 +609,7 @@ Location: The location of the backup.
 withReplicationLogArchivingEnabled(replicationLogArchivingEnabled)
 ```
 
-ReplicationLogArchivingEnabled: Reserved for future use.
+"ReplicationLogArchivingEnabled: Reserved for future use."
 
 ### fn spec.forProvider.settings.backupConfiguration.withStartTime
 
@@ -629,11 +617,11 @@ ReplicationLogArchivingEnabled: Reserved for future use.
 withStartTime(startTime)
 ```
 
-StartTime: Start time for the daily backup configuration in UTC timezone in the 24 hour format - HH:MM.
+"StartTime: Start time for the daily backup configuration in UTC timezone in the 24 hour format - HH:MM."
 
 ## obj spec.forProvider.settings.ipConfiguration
 
-IPConfiguration: The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled for Second Generation instances.
+"IPConfiguration: The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled for Second Generation instances."
 
 ### fn spec.forProvider.settings.ipConfiguration.withAuthorizedNetworks
 
@@ -641,7 +629,7 @@ IPConfiguration: The settings for IP Management. This allows to enable or disabl
 withAuthorizedNetworks(authorizedNetworks)
 ```
 
-AuthorizedNetworks: The list of external networks that are allowed to connect to the instance using the IP. In CIDR notation, also known as 'slash' notation (e.g. 192.168.100.0/24).
+"AuthorizedNetworks: The list of external networks that are allowed to connect to the instance using the IP. In CIDR notation, also known as 'slash' notation (e.g. 192.168.100.0/24)."
 
 ### fn spec.forProvider.settings.ipConfiguration.withAuthorizedNetworksMixin
 
@@ -649,7 +637,7 @@ AuthorizedNetworks: The list of external networks that are allowed to connect to
 withAuthorizedNetworksMixin(authorizedNetworks)
 ```
 
-AuthorizedNetworks: The list of external networks that are allowed to connect to the instance using the IP. In CIDR notation, also known as 'slash' notation (e.g. 192.168.100.0/24).
+"AuthorizedNetworks: The list of external networks that are allowed to connect to the instance using the IP. In CIDR notation, also known as 'slash' notation (e.g. 192.168.100.0/24)."
 
 **Note:** This function appends passed data to existing values
 
@@ -659,7 +647,7 @@ AuthorizedNetworks: The list of external networks that are allowed to connect to
 withIpv4Enabled(ipv4Enabled)
 ```
 
-Ipv4Enabled: Whether the instance should be assigned an IP address or not.
+"Ipv4Enabled: Whether the instance should be assigned an IP address or not."
 
 ### fn spec.forProvider.settings.ipConfiguration.withPrivateNetwork
 
@@ -667,7 +655,7 @@ Ipv4Enabled: Whether the instance should be assigned an IP address or not.
 withPrivateNetwork(privateNetwork)
 ```
 
-PrivateNetwork: The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, /projects/myProject/global/networks/default. This setting can be updated, but it cannot be removed after it is set. The Network must have an active Service Networking connection peering before resolution will proceed. https://cloud.google.com/vpc/docs/configure-private-services-access
+"PrivateNetwork: The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, /projects/myProject/global/networks/default. This setting can be updated, but it cannot be removed after it is set. The Network must have an active Service Networking connection peering before resolution will proceed. https://cloud.google.com/vpc/docs/configure-private-services-access"
 
 ### fn spec.forProvider.settings.ipConfiguration.withRequireSsl
 
@@ -675,11 +663,11 @@ PrivateNetwork: The resource link for the VPC network from which the Cloud SQL i
 withRequireSsl(requireSsl)
 ```
 
-RequireSsl: Whether SSL connections over IP should be enforced or not.
+"RequireSsl: Whether SSL connections over IP should be enforced or not."
 
 ## obj spec.forProvider.settings.ipConfiguration.privateNetworkRef
 
-PrivateNetworkRef sets the PrivateNetwork field by resolving the resource link of the referenced Crossplane Network managed resource.
+"PrivateNetworkRef sets the PrivateNetwork field by resolving the resource link of the referenced Crossplane Network managed resource."
 
 ### fn spec.forProvider.settings.ipConfiguration.privateNetworkRef.withName
 
@@ -687,11 +675,11 @@ PrivateNetworkRef sets the PrivateNetwork field by resolving the resource link o
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.settings.ipConfiguration.privateNetworkSelector
 
-PrivateNetworkSelector selects a PrivateNetworkRef.
+"PrivateNetworkSelector selects a PrivateNetworkRef."
 
 ### fn spec.forProvider.settings.ipConfiguration.privateNetworkSelector.withMatchControllerRef
 
@@ -699,7 +687,7 @@ PrivateNetworkSelector selects a PrivateNetworkRef.
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.settings.ipConfiguration.privateNetworkSelector.withMatchLabels
 
@@ -707,7 +695,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.settings.ipConfiguration.privateNetworkSelector.withMatchLabelsMixin
 
@@ -715,13 +703,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.settings.locationPreference
 
-LocationPreference is the location preference settings. This allows the instance to be located as near as possible to either an App Engine app or Compute Engine zone for better performance. App Engine co-location is only applicable to First Generation instances.
+"LocationPreference is the location preference settings. This allows the instance to be located as near as possible to either an App Engine app or Compute Engine zone for better performance. App Engine co-location is only applicable to First Generation instances."
 
 ### fn spec.forProvider.settings.locationPreference.withFollowGaeApplication
 
@@ -729,7 +717,7 @@ LocationPreference is the location preference settings. This allows the instance
 withFollowGaeApplication(followGaeApplication)
 ```
 
-FollowGaeApplication: The AppEngine application to follow, it must be in the same region as the Cloud SQL instance.
+"FollowGaeApplication: The AppEngine application to follow, it must be in the same region as the Cloud SQL instance."
 
 ### fn spec.forProvider.settings.locationPreference.withZone
 
@@ -737,11 +725,11 @@ FollowGaeApplication: The AppEngine application to follow, it must be in the sam
 withZone(zone)
 ```
 
-Zone: The preferred Compute Engine zone (e.g. us-central1-a, us-central1-b, etc.).
+"Zone: The preferred Compute Engine zone (e.g. us-central1-a, us-central1-b, etc.)."
 
 ## obj spec.forProvider.settings.maintenanceWindow
 
-MaintenanceWindow: The maintenance window for this instance. This specifies when the instance can be restarted for maintenance purposes. Not used for First Generation instances.
+"MaintenanceWindow: The maintenance window for this instance. This specifies when the instance can be restarted for maintenance purposes. Not used for First Generation instances."
 
 ### fn spec.forProvider.settings.maintenanceWindow.withDay
 
@@ -749,7 +737,7 @@ MaintenanceWindow: The maintenance window for this instance. This specifies when
 withDay(day)
 ```
 
-Day: day of week (1-7), starting on Monday.
+"Day: day of week (1-7), starting on Monday."
 
 ### fn spec.forProvider.settings.maintenanceWindow.withHour
 
@@ -757,7 +745,7 @@ Day: day of week (1-7), starting on Monday.
 withHour(hour)
 ```
 
-Hour: hour of day - 0 to 23.
+"Hour: hour of day - 0 to 23."
 
 ### fn spec.forProvider.settings.maintenanceWindow.withUpdateTrack
 
@@ -765,11 +753,11 @@ Hour: hour of day - 0 to 23.
 withUpdateTrack(updateTrack)
 ```
 
-UpdateTrack: Maintenance timing setting: canary (Earlier) or stable (Later).
+"UpdateTrack: Maintenance timing setting: canary (Earlier) or stable (Later)."
 
 ## obj spec.providerConfigRef
 
-ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.
+"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."
 
 ### fn spec.providerConfigRef.withName
 
@@ -777,11 +765,11 @@ ProviderConfigReference specifies how the provider that will be used to create, 
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.providerRef
 
-ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`
+"ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`"
 
 ### fn spec.providerRef.withName
 
@@ -789,11 +777,11 @@ ProviderReference specifies the provider that will be used to create, observe, u
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.writeConnectionSecretToRef
 
-WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.
+"WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource."
 
 ### fn spec.writeConnectionSecretToRef.withName
 
@@ -801,7 +789,7 @@ WriteConnectionSecretToReference specifies the namespace and name of a Secret to
 withName(name)
 ```
 
-Name of the secret.
+"Name of the secret."
 
 ### fn spec.writeConnectionSecretToRef.withNamespace
 
@@ -809,4 +797,4 @@ Name of the secret.
 withNamespace(namespace)
 ```
 
-Namespace of the secret.
+"Namespace of the secret."

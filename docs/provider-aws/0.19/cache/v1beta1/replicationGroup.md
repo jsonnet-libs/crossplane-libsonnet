@@ -4,7 +4,7 @@ permalink: /provider-aws/0.19/cache/v1beta1/replicationGroup/
 
 # cache.v1beta1.replicationGroup
 
-A ReplicationGroup is a managed resource that represents an AWS ElastiCache Replication Group.
+"A ReplicationGroup is a managed resource that represents an AWS ElastiCache Replication Group."
 
 ## Index
 
@@ -106,11 +106,11 @@ A ReplicationGroup is a managed resource that represents an AWS ElastiCache Repl
 new(name)
 ```
 
-new returns an instance of Replicationgroup
+new returns an instance of ReplicationGroup
 
 ## obj metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."
 
 ### fn metadata.withAnnotations
 
@@ -118,7 +118,7 @@ ObjectMeta is metadata that all persisted resources must have, which includes al
 withAnnotations(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 ### fn metadata.withAnnotationsMixin
 
@@ -126,7 +126,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withAnnotationsMixin(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 **Note:** This function appends passed data to existing values
 
@@ -136,7 +136,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withClusterName(clusterName)
 ```
 
-The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
+"The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request."
 
 ### fn metadata.withCreationTimestamp
 
@@ -144,7 +144,7 @@ The name of the cluster which the object belongs to. This is used to distinguish
 withCreationTimestamp(creationTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withDeletionGracePeriodSeconds
 
@@ -152,7 +152,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withDeletionGracePeriodSeconds(deletionGracePeriodSeconds)
 ```
 
-Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
+"Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only."
 
 ### fn metadata.withDeletionTimestamp
 
@@ -160,7 +160,7 @@ Number of seconds allowed for this object to gracefully terminate before it will
 withDeletionTimestamp(deletionTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withFinalizers
 
@@ -168,7 +168,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withFinalizers(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 ### fn metadata.withFinalizersMixin
 
@@ -176,7 +176,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withFinalizersMixin(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 **Note:** This function appends passed data to existing values
 
@@ -186,11 +186,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withGenerateName(generateName)
 ```
 
-GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
-
-If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
-
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
+"GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency"
 
 ### fn metadata.withGeneration
 
@@ -198,7 +194,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 withGeneration(generation)
 ```
 
-A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
+"A sequence number representing a specific generation of the desired state. Populated by the system. Read-only."
 
 ### fn metadata.withLabels
 
@@ -206,7 +202,7 @@ A sequence number representing a specific generation of the desired state. Popul
 withLabels(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 ### fn metadata.withLabelsMixin
 
@@ -214,7 +210,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withLabelsMixin(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
 
@@ -224,7 +220,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withManagedFields(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 ### fn metadata.withManagedFieldsMixin
 
@@ -232,7 +228,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withManagedFieldsMixin(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -242,7 +238,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withName(name)
 ```
 
-Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"
 
 ### fn metadata.withNamespace
 
@@ -250,9 +246,7 @@ Name must be unique within a namespace. Is required when creating resources, alt
 withNamespace(namespace)
 ```
 
-Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
-
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\n\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"
 
 ### fn metadata.withOwnerReferences
 
@@ -260,7 +254,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 withOwnerReferences(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 ### fn metadata.withOwnerReferencesMixin
 
@@ -268,7 +262,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withOwnerReferencesMixin(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 **Note:** This function appends passed data to existing values
 
@@ -278,9 +272,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withResourceVersion(resourceVersion)
 ```
 
-An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
-
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+"An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency"
 
 ### fn metadata.withSelfLink
 
@@ -288,9 +280,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 withSelfLink(selfLink)
 ```
 
-SelfLink is a URL representing this object. Populated by the system. Read-only.
-
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+"SelfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release."
 
 ### fn metadata.withUid
 
@@ -298,13 +288,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 withUid(uid)
 ```
 
-UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
-
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+"UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
 
 ## obj spec
 
-A ReplicationGroupSpec defines the desired state of a ReplicationGroup.
+"A ReplicationGroupSpec defines the desired state of a ReplicationGroup."
 
 ### fn spec.withDeletionPolicy
 
@@ -312,11 +300,11 @@ A ReplicationGroupSpec defines the desired state of a ReplicationGroup.
 withDeletionPolicy(deletionPolicy)
 ```
 
-DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource.
+"DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either \"Delete\" or \"Orphan\" the external resource."
 
 ## obj spec.forProvider
 
-ReplicationGroupParameters define the desired state of an AWS ElastiCache Replication Group. Most fields map directly to an AWS ReplicationGroup: https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateReplicationGroup.html#API_CreateReplicationGroup_RequestParameters
+"ReplicationGroupParameters define the desired state of an AWS ElastiCache Replication Group. Most fields map directly to an AWS ReplicationGroup: https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateReplicationGroup.html#API_CreateReplicationGroup_RequestParameters"
 
 ### fn spec.forProvider.withApplyModificationsImmediately
 
@@ -324,8 +312,7 @@ ReplicationGroupParameters define the desired state of an AWS ElastiCache Replic
 withApplyModificationsImmediately(applyModificationsImmediately)
 ```
 
-If true, this parameter causes the modifications in this request and any pending modifications to be applied, asynchronously and as soon as possible, regardless of the PreferredMaintenanceWindow setting for the replication group. 
- If false, changes to the nodes in the replication group are applied on the next maintenance reboot, or the next failure reboot, whichever occurs first.
+"If true, this parameter causes the modifications in this request and any pending modifications to be applied, asynchronously and as soon as possible, regardless of the PreferredMaintenanceWindow setting for the replication group. \n If false, changes to the nodes in the replication group are applied on the next maintenance reboot, or the next failure reboot, whichever occurs first."
 
 ### fn spec.forProvider.withAtRestEncryptionEnabled
 
@@ -333,9 +320,7 @@ If true, this parameter causes the modifications in this request and any pending
 withAtRestEncryptionEnabled(atRestEncryptionEnabled)
 ```
 
-AtRestEncryptionEnabled enables encryption at rest when set to true. 
- You cannot modify the value of AtRestEncryptionEnabled after the replication group is created. To enable encryption at rest on a replication group you must set AtRestEncryptionEnabled to true when you create the replication group. 
- Only available when creating a replication group in an Amazon VPC using redis version 3.2.6 or 4.x.
+"AtRestEncryptionEnabled enables encryption at rest when set to true. \n You cannot modify the value of AtRestEncryptionEnabled after the replication group is created. To enable encryption at rest on a replication group you must set AtRestEncryptionEnabled to true when you create the replication group. \n Only available when creating a replication group in an Amazon VPC using redis version 3.2.6 or 4.x."
 
 ### fn spec.forProvider.withAuthEnabled
 
@@ -343,8 +328,7 @@ AtRestEncryptionEnabled enables encryption at rest when set to true.
 withAuthEnabled(authEnabled)
 ```
 
-AuthEnabled enables mandatory authentication when connecting to the managed replication group. AuthEnabled requires TransitEncryptionEnabled to be true. 
- While ReplicationGroupSpec mirrors the fields of the upstream replication group object as closely as possible, we expose a boolean here rather than requiring the operator pass in a string authentication token. Crossplane will generate a token automatically and expose it via a Secret.
+"AuthEnabled enables mandatory authentication when connecting to the managed replication group. AuthEnabled requires TransitEncryptionEnabled to be true. \n While ReplicationGroupSpec mirrors the fields of the upstream replication group object as closely as possible, we expose a boolean here rather than requiring the operator pass in a string authentication token. Crossplane will generate a token automatically and expose it via a Secret."
 
 ### fn spec.forProvider.withAutomaticFailoverEnabled
 
@@ -352,9 +336,7 @@ AuthEnabled enables mandatory authentication when connecting to the managed repl
 withAutomaticFailoverEnabled(automaticFailoverEnabled)
 ```
 
-AutomaticFailoverEnabled specifies whether a read-only replica is automatically promoted to read/write primary if the existing primary fails. If true, Multi-AZ is enabled for this replication group. If false, Multi-AZ is disabled for this replication group. 
- AutomaticFailoverEnabled must be enabled for Redis (cluster mode enabled) replication groups. 
- Amazon ElastiCache for Redis does not support Multi-AZ with automatic failover on: * Redis versions earlier than 2.8.6. * Redis (cluster mode disabled): T1 and T2 cache node types. * Redis (cluster mode enabled): T1 node types.
+"AutomaticFailoverEnabled specifies whether a read-only replica is automatically promoted to read/write primary if the existing primary fails. If true, Multi-AZ is enabled for this replication group. If false, Multi-AZ is disabled for this replication group. \n AutomaticFailoverEnabled must be enabled for Redis (cluster mode enabled) replication groups. \n Amazon ElastiCache for Redis does not support Multi-AZ with automatic failover on: * Redis versions earlier than 2.8.6. * Redis (cluster mode disabled): T1 and T2 cache node types. * Redis (cluster mode enabled): T1 node types."
 
 ### fn spec.forProvider.withCacheNodeType
 
@@ -362,7 +344,7 @@ AutomaticFailoverEnabled specifies whether a read-only replica is automatically 
 withCacheNodeType(cacheNodeType)
 ```
 
-CacheNodeType specifies the compute and memory capacity of the nodes in the node group (shard). For a complete listing of node types and specifications, see: * Amazon ElastiCache Product Features and Details (http://aws.amazon.com/elasticache/details) * Cache Node Type-Specific Parameters for Memcached (http://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/ParameterGroups.Memcached.html#ParameterGroups.Memcached.NodeSpecific) * Cache Node Type-Specific Parameters for Redis (http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ParameterGroups.Redis.html#ParameterGroups.Redis.NodeSpecific)
+"CacheNodeType specifies the compute and memory capacity of the nodes in the node group (shard). For a complete listing of node types and specifications, see: * Amazon ElastiCache Product Features and Details (http://aws.amazon.com/elasticache/details) * Cache Node Type-Specific Parameters for Memcached (http://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/ParameterGroups.Memcached.html#ParameterGroups.Memcached.NodeSpecific) * Cache Node Type-Specific Parameters for Redis (http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ParameterGroups.Redis.html#ParameterGroups.Redis.NodeSpecific)"
 
 ### fn spec.forProvider.withCacheParameterGroupName
 
@@ -370,8 +352,7 @@ CacheNodeType specifies the compute and memory capacity of the nodes in the node
 withCacheParameterGroupName(cacheParameterGroupName)
 ```
 
-CacheParameterGroupName specifies the name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. 
- If you are running Redis version 3.2.4 or later, only one node group (shard), and want to use a default parameter group, we recommend that you specify the parameter group by name. * To create a Redis (cluster mode disabled) replication group, use CacheParameterGroupName=default.redis3.2. * To create a Redis (cluster mode enabled) replication group, use CacheParameterGroupName=default.redis3.2.cluster.on.
+"CacheParameterGroupName specifies the name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. \n If you are running Redis version 3.2.4 or later, only one node group (shard), and want to use a default parameter group, we recommend that you specify the parameter group by name. * To create a Redis (cluster mode disabled) replication group, use CacheParameterGroupName=default.redis3.2. * To create a Redis (cluster mode enabled) replication group, use CacheParameterGroupName=default.redis3.2.cluster.on."
 
 ### fn spec.forProvider.withCacheSecurityGroupNameRefs
 
@@ -379,7 +360,7 @@ CacheParameterGroupName specifies the name of the parameter group to associate w
 withCacheSecurityGroupNameRefs(cacheSecurityGroupNameRefs)
 ```
 
-CacheSecurityGroupNameRefs are references to SecurityGroups used to set the CacheSecurityGroupNames.
+"CacheSecurityGroupNameRefs are references to SecurityGroups used to set the CacheSecurityGroupNames."
 
 ### fn spec.forProvider.withCacheSecurityGroupNameRefsMixin
 
@@ -387,7 +368,7 @@ CacheSecurityGroupNameRefs are references to SecurityGroups used to set the Cach
 withCacheSecurityGroupNameRefsMixin(cacheSecurityGroupNameRefs)
 ```
 
-CacheSecurityGroupNameRefs are references to SecurityGroups used to set the CacheSecurityGroupNames.
+"CacheSecurityGroupNameRefs are references to SecurityGroups used to set the CacheSecurityGroupNames."
 
 **Note:** This function appends passed data to existing values
 
@@ -397,7 +378,7 @@ CacheSecurityGroupNameRefs are references to SecurityGroups used to set the Cach
 withCacheSecurityGroupNames(cacheSecurityGroupNames)
 ```
 
-CacheSecurityGroupNames specifies a list of cache security group names to associate with this replication group. Only for EC2-Classic mode.
+"CacheSecurityGroupNames specifies a list of cache security group names to associate with this replication group. Only for EC2-Classic mode."
 
 ### fn spec.forProvider.withCacheSecurityGroupNamesMixin
 
@@ -405,7 +386,7 @@ CacheSecurityGroupNames specifies a list of cache security group names to associ
 withCacheSecurityGroupNamesMixin(cacheSecurityGroupNames)
 ```
 
-CacheSecurityGroupNames specifies a list of cache security group names to associate with this replication group. Only for EC2-Classic mode.
+"CacheSecurityGroupNames specifies a list of cache security group names to associate with this replication group. Only for EC2-Classic mode."
 
 **Note:** This function appends passed data to existing values
 
@@ -415,7 +396,7 @@ CacheSecurityGroupNames specifies a list of cache security group names to associ
 withCacheSubnetGroupName(cacheSubnetGroupName)
 ```
 
-CacheSubnetGroupName specifies the name of the cache subnet group to be used for the replication group. If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster. For more information, see Subnets and Subnet Groups (http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SubnetGroups.html).
+"CacheSubnetGroupName specifies the name of the cache subnet group to be used for the replication group. If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster. For more information, see Subnets and Subnet Groups (http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SubnetGroups.html)."
 
 ### fn spec.forProvider.withEngine
 
@@ -423,7 +404,7 @@ CacheSubnetGroupName specifies the name of the cache subnet group to be used for
 withEngine(engine)
 ```
 
-Engine is the name of the cache engine (memcached or redis) to be used for the clusters in this replication group.
+"Engine is the name of the cache engine (memcached or redis) to be used for the clusters in this replication group."
 
 ### fn spec.forProvider.withEngineVersion
 
@@ -431,8 +412,7 @@ Engine is the name of the cache engine (memcached or redis) to be used for the c
 withEngineVersion(engineVersion)
 ```
 
-EngineVersion specifies the version number of the cache engine to be used for the clusters in this replication group. To view the supported cache engine versions, use the DescribeCacheEngineVersions operation. 
- Important: You can upgrade to a newer engine version (see Selecting a Cache Engine and Version (http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)) in the ElastiCache User Guide, but you cannot downgrade to an earlier engine version. If you want to use an earlier engine version, you must delete the existing cluster or replication group and create it anew with the earlier engine version.
+"EngineVersion specifies the version number of the cache engine to be used for the clusters in this replication group. To view the supported cache engine versions, use the DescribeCacheEngineVersions operation. \n Important: You can upgrade to a newer engine version (see Selecting a Cache Engine and Version (http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)) in the ElastiCache User Guide, but you cannot downgrade to an earlier engine version. If you want to use an earlier engine version, you must delete the existing cluster or replication group and create it anew with the earlier engine version."
 
 ### fn spec.forProvider.withNodeGroupConfiguration
 
@@ -440,8 +420,7 @@ EngineVersion specifies the version number of the cache engine to be used for th
 withNodeGroupConfiguration(nodeGroupConfiguration)
 ```
 
-NodeGroupConfigurationSpec specifies a list of node group (shard) configuration options. 
- If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group, you can use this parameter to individually configure each node group (shard), or you can omit this parameter. However, when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file, you must configure each node group (shard) using this parameter because you must specify the slots for each node group.
+"NodeGroupConfigurationSpec specifies a list of node group (shard) configuration options. \n If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group, you can use this parameter to individually configure each node group (shard), or you can omit this parameter. However, when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file, you must configure each node group (shard) using this parameter because you must specify the slots for each node group."
 
 ### fn spec.forProvider.withNodeGroupConfigurationMixin
 
@@ -449,8 +428,7 @@ NodeGroupConfigurationSpec specifies a list of node group (shard) configuration 
 withNodeGroupConfigurationMixin(nodeGroupConfiguration)
 ```
 
-NodeGroupConfigurationSpec specifies a list of node group (shard) configuration options. 
- If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group, you can use this parameter to individually configure each node group (shard), or you can omit this parameter. However, when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file, you must configure each node group (shard) using this parameter because you must specify the slots for each node group.
+"NodeGroupConfigurationSpec specifies a list of node group (shard) configuration options. \n If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group, you can use this parameter to individually configure each node group (shard), or you can omit this parameter. However, when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file, you must configure each node group (shard) using this parameter because you must specify the slots for each node group."
 
 **Note:** This function appends passed data to existing values
 
@@ -460,7 +438,7 @@ NodeGroupConfigurationSpec specifies a list of node group (shard) configuration 
 withNotificationTopicArn(notificationTopicArn)
 ```
 
-NotificationTopicARN specifies the Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which notifications are sent. The Amazon SNS topic owner must be the same as the cluster owner.
+"NotificationTopicARN specifies the Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which notifications are sent. The Amazon SNS topic owner must be the same as the cluster owner."
 
 ### fn spec.forProvider.withNotificationTopicStatus
 
@@ -468,8 +446,7 @@ NotificationTopicARN specifies the Amazon Resource Name (ARN) of the Amazon Simp
 withNotificationTopicStatus(notificationTopicStatus)
 ```
 
-NotificationTopicStatus is the status of the Amazon SNS notification topic for the replication group. Notifications are sent only if the status is active. 
- Valid values: active | inactive
+"NotificationTopicStatus is the status of the Amazon SNS notification topic for the replication group. Notifications are sent only if the status is active. \n Valid values: active | inactive"
 
 ### fn spec.forProvider.withNumCacheClusters
 
@@ -477,9 +454,7 @@ NotificationTopicStatus is the status of the Amazon SNS notification topic for t
 withNumCacheClusters(numCacheClusters)
 ```
 
-NumCacheClusters specifies the number of clusters this replication group initially has. This parameter is not used if there is more than one node group (shard). You should use ReplicasPerNodeGroup instead. 
- If AutomaticFailoverEnabled is true, the value of this parameter must be at least 2. If AutomaticFailoverEnabled is false you can omit this parameter (it will default to 1), or you can explicitly set it to a value between 2 and 6. 
- The maximum permitted value for NumCacheClusters is 6 (1 primary plus 5 replicas).
+"NumCacheClusters specifies the number of clusters this replication group initially has. This parameter is not used if there is more than one node group (shard). You should use ReplicasPerNodeGroup instead. \n If AutomaticFailoverEnabled is true, the value of this parameter must be at least 2. If AutomaticFailoverEnabled is false you can omit this parameter (it will default to 1), or you can explicitly set it to a value between 2 and 6. \n The maximum permitted value for NumCacheClusters is 6 (1 primary plus 5 replicas)."
 
 ### fn spec.forProvider.withNumNodeGroups
 
@@ -487,8 +462,7 @@ NumCacheClusters specifies the number of clusters this replication group initial
 withNumNodeGroups(numNodeGroups)
 ```
 
-NumNodeGroups specifies the number of node groups (shards) for this Redis (cluster mode enabled) replication group. For Redis (cluster mode disabled) either omit this parameter or set it to 1. 
- Default: 1
+"NumNodeGroups specifies the number of node groups (shards) for this Redis (cluster mode enabled) replication group. For Redis (cluster mode disabled) either omit this parameter or set it to 1. \n Default: 1"
 
 ### fn spec.forProvider.withPort
 
@@ -496,7 +470,7 @@ NumNodeGroups specifies the number of node groups (shards) for this Redis (clust
 withPort(port)
 ```
 
-Port number on which each member of the replication group accepts connections.
+"Port number on which each member of the replication group accepts connections."
 
 ### fn spec.forProvider.withPreferredCacheClusterAzs
 
@@ -504,11 +478,7 @@ Port number on which each member of the replication group accepts connections.
 withPreferredCacheClusterAzs(preferredCacheClusterAzs)
 ```
 
-PreferredCacheClusterAZs specifies a list of EC2 Availability Zones in which the replication group's clusters are created. The order of the Availability Zones in the list is the order in which clusters are allocated. The primary cluster is created in the first AZ in the list. 
- This parameter is not used if there is more than one node group (shard). You should use NodeGroupConfigurationSpec instead. 
- If you are creating your replication group in an Amazon VPC (recommended), you can only locate clusters in Availability Zones associated with the subnets in the selected subnet group. 
- The number of Availability Zones listed must equal the value of NumCacheClusters. 
- Default: system chosen Availability Zones.
+"PreferredCacheClusterAZs specifies a list of EC2 Availability Zones in which the replication group's clusters are created. The order of the Availability Zones in the list is the order in which clusters are allocated. The primary cluster is created in the first AZ in the list. \n This parameter is not used if there is more than one node group (shard). You should use NodeGroupConfigurationSpec instead. \n If you are creating your replication group in an Amazon VPC (recommended), you can only locate clusters in Availability Zones associated with the subnets in the selected subnet group. \n The number of Availability Zones listed must equal the value of NumCacheClusters. \n Default: system chosen Availability Zones."
 
 ### fn spec.forProvider.withPreferredCacheClusterAzsMixin
 
@@ -516,11 +486,7 @@ PreferredCacheClusterAZs specifies a list of EC2 Availability Zones in which the
 withPreferredCacheClusterAzsMixin(preferredCacheClusterAzs)
 ```
 
-PreferredCacheClusterAZs specifies a list of EC2 Availability Zones in which the replication group's clusters are created. The order of the Availability Zones in the list is the order in which clusters are allocated. The primary cluster is created in the first AZ in the list. 
- This parameter is not used if there is more than one node group (shard). You should use NodeGroupConfigurationSpec instead. 
- If you are creating your replication group in an Amazon VPC (recommended), you can only locate clusters in Availability Zones associated with the subnets in the selected subnet group. 
- The number of Availability Zones listed must equal the value of NumCacheClusters. 
- Default: system chosen Availability Zones.
+"PreferredCacheClusterAZs specifies a list of EC2 Availability Zones in which the replication group's clusters are created. The order of the Availability Zones in the list is the order in which clusters are allocated. The primary cluster is created in the first AZ in the list. \n This parameter is not used if there is more than one node group (shard). You should use NodeGroupConfigurationSpec instead. \n If you are creating your replication group in an Amazon VPC (recommended), you can only locate clusters in Availability Zones associated with the subnets in the selected subnet group. \n The number of Availability Zones listed must equal the value of NumCacheClusters. \n Default: system chosen Availability Zones."
 
 **Note:** This function appends passed data to existing values
 
@@ -530,8 +496,7 @@ PreferredCacheClusterAZs specifies a list of EC2 Availability Zones in which the
 withPreferredMaintenanceWindow(preferredMaintenanceWindow)
 ```
 
-PreferredMaintenanceWindow specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. 
- Example: sun:23:00-mon:01:30
+"PreferredMaintenanceWindow specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. \n Example: sun:23:00-mon:01:30"
 
 ### fn spec.forProvider.withPrimaryClusterId
 
@@ -539,8 +504,7 @@ PreferredMaintenanceWindow specifies the weekly time range during which maintena
 withPrimaryClusterId(primaryClusterId)
 ```
 
-PrimaryClusterId is the identifier of the cluster that serves as the primary for this replication group. This cluster must already exist and have a status of available. 
- This parameter is not required if NumCacheClusters, NumNodeGroups or ReplicasPerNodeGroup is specified.
+"PrimaryClusterId is the identifier of the cluster that serves as the primary for this replication group. This cluster must already exist and have a status of available. \n This parameter is not required if NumCacheClusters, NumNodeGroups or ReplicasPerNodeGroup is specified."
 
 ### fn spec.forProvider.withRegion
 
@@ -548,7 +512,7 @@ PrimaryClusterId is the identifier of the cluster that serves as the primary for
 withRegion(region)
 ```
 
-Region is the region you'd like your ReplicationGroup to be created in.
+"Region is the region you'd like your ReplicationGroup to be created in."
 
 ### fn spec.forProvider.withReplicasPerNodeGroup
 
@@ -556,7 +520,7 @@ Region is the region you'd like your ReplicationGroup to be created in.
 withReplicasPerNodeGroup(replicasPerNodeGroup)
 ```
 
-ReplicasPerNodeGroup specifies the number of replica nodes in each node group (shard). Valid values are 0 to 5.
+"ReplicasPerNodeGroup specifies the number of replica nodes in each node group (shard). Valid values are 0 to 5."
 
 ### fn spec.forProvider.withReplicationGroupDescription
 
@@ -564,7 +528,7 @@ ReplicasPerNodeGroup specifies the number of replica nodes in each node group (s
 withReplicationGroupDescription(replicationGroupDescription)
 ```
 
-ReplicationGroupDescription is the description for the replication group.
+"ReplicationGroupDescription is the description for the replication group."
 
 ### fn spec.forProvider.withSecurityGroupIdRefs
 
@@ -572,7 +536,7 @@ ReplicationGroupDescription is the description for the replication group.
 withSecurityGroupIdRefs(securityGroupIdRefs)
 ```
 
-SecurityGroupIDRefs are references to SecurityGroups used to set the SecurityGroupIDs.
+"SecurityGroupIDRefs are references to SecurityGroups used to set the SecurityGroupIDs."
 
 ### fn spec.forProvider.withSecurityGroupIdRefsMixin
 
@@ -580,7 +544,7 @@ SecurityGroupIDRefs are references to SecurityGroups used to set the SecurityGro
 withSecurityGroupIdRefsMixin(securityGroupIdRefs)
 ```
 
-SecurityGroupIDRefs are references to SecurityGroups used to set the SecurityGroupIDs.
+"SecurityGroupIDRefs are references to SecurityGroups used to set the SecurityGroupIDs."
 
 **Note:** This function appends passed data to existing values
 
@@ -590,7 +554,7 @@ SecurityGroupIDRefs are references to SecurityGroups used to set the SecurityGro
 withSecurityGroupIds(securityGroupIds)
 ```
 
-SecurityGroupIDs specifies one or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon VPC.
+"SecurityGroupIDs specifies one or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon VPC."
 
 ### fn spec.forProvider.withSecurityGroupIdsMixin
 
@@ -598,7 +562,7 @@ SecurityGroupIDs specifies one or more Amazon VPC security groups associated wit
 withSecurityGroupIdsMixin(securityGroupIds)
 ```
 
-SecurityGroupIDs specifies one or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon VPC.
+"SecurityGroupIDs specifies one or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon VPC."
 
 **Note:** This function appends passed data to existing values
 
@@ -608,7 +572,7 @@ SecurityGroupIDs specifies one or more Amazon VPC security groups associated wit
 withSnapshotArns(snapshotArns)
 ```
 
-SnapshotARNs specifies a list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN cannot contain any commas. The new replication group will have the number of node groups (console: shards) specified by the parameter NumNodeGroups or the number of node groups configured by NodeGroupConfigurationSpec regardless of the number of ARNs specified here.
+"SnapshotARNs specifies a list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN cannot contain any commas. The new replication group will have the number of node groups (console: shards) specified by the parameter NumNodeGroups or the number of node groups configured by NodeGroupConfigurationSpec regardless of the number of ARNs specified here."
 
 ### fn spec.forProvider.withSnapshotArnsMixin
 
@@ -616,7 +580,7 @@ SnapshotARNs specifies a list of Amazon Resource Names (ARN) that uniquely ident
 withSnapshotArnsMixin(snapshotArns)
 ```
 
-SnapshotARNs specifies a list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN cannot contain any commas. The new replication group will have the number of node groups (console: shards) specified by the parameter NumNodeGroups or the number of node groups configured by NodeGroupConfigurationSpec regardless of the number of ARNs specified here.
+"SnapshotARNs specifies a list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN cannot contain any commas. The new replication group will have the number of node groups (console: shards) specified by the parameter NumNodeGroups or the number of node groups configured by NodeGroupConfigurationSpec regardless of the number of ARNs specified here."
 
 **Note:** This function appends passed data to existing values
 
@@ -626,7 +590,7 @@ SnapshotARNs specifies a list of Amazon Resource Names (ARN) that uniquely ident
 withSnapshotName(snapshotName)
 ```
 
-SnapshotName specifies the name of a snapshot from which to restore data into the new replication group. The snapshot status changes to restoring while the new replication group is being created.
+"SnapshotName specifies the name of a snapshot from which to restore data into the new replication group. The snapshot status changes to restoring while the new replication group is being created."
 
 ### fn spec.forProvider.withSnapshotRetentionLimit
 
@@ -634,7 +598,7 @@ SnapshotName specifies the name of a snapshot from which to restore data into th
 withSnapshotRetentionLimit(snapshotRetentionLimit)
 ```
 
-SnapshotRetentionLimit specifies the number of days for which ElastiCache retains automatic snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, a snapshot that was taken today is retained for 5 days before being deleted. Default: 0 (i.e., automatic backups are disabled for this cluster).
+"SnapshotRetentionLimit specifies the number of days for which ElastiCache retains automatic snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, a snapshot that was taken today is retained for 5 days before being deleted. Default: 0 (i.e., automatic backups are disabled for this cluster)."
 
 ### fn spec.forProvider.withSnapshotWindow
 
@@ -642,9 +606,7 @@ SnapshotRetentionLimit specifies the number of days for which ElastiCache retain
 withSnapshotWindow(snapshotWindow)
 ```
 
-SnapshotWindow specifies the daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard). 
- Example: 05:00-09:00 
- If you do not specify this parameter, ElastiCache automatically chooses an appropriate time range.
+"SnapshotWindow specifies the daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard). \n Example: 05:00-09:00 \n If you do not specify this parameter, ElastiCache automatically chooses an appropriate time range."
 
 ### fn spec.forProvider.withSnapshottingClusterID
 
@@ -652,7 +614,7 @@ SnapshotWindow specifies the daily time range (in UTC) during which ElastiCache 
 withSnapshottingClusterID(snapshottingClusterID)
 ```
 
-SnapshottingClusterID is used as the daily snapshot source for the replication group. This parameter cannot be set for Redis (cluster mode enabled) replication groups.
+"SnapshottingClusterID is used as the daily snapshot source for the replication group. This parameter cannot be set for Redis (cluster mode enabled) replication groups."
 
 ### fn spec.forProvider.withTags
 
@@ -660,7 +622,7 @@ SnapshottingClusterID is used as the daily snapshot source for the replication g
 withTags(tags)
 ```
 
-A list of cost allocation tags to be added to this resource. A tag is a key-value pair.
+"A list of cost allocation tags to be added to this resource. A tag is a key-value pair."
 
 ### fn spec.forProvider.withTagsMixin
 
@@ -668,7 +630,7 @@ A list of cost allocation tags to be added to this resource. A tag is a key-valu
 withTagsMixin(tags)
 ```
 
-A list of cost allocation tags to be added to this resource. A tag is a key-value pair.
+"A list of cost allocation tags to be added to this resource. A tag is a key-value pair."
 
 **Note:** This function appends passed data to existing values
 
@@ -678,17 +640,11 @@ A list of cost allocation tags to be added to this resource. A tag is a key-valu
 withTransitEncryptionEnabled(transitEncryptionEnabled)
 ```
 
-TransitEncryptionEnabled enables in-transit encryption when set to true. 
- You cannot modify the value of TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must TransitEncryptionEnabled to true when you create a cluster. 
- This parameter is valid only if the Engine parameter is redis, the EngineVersion parameter is 3.2.6 or 4.x, and the cluster is being created in an Amazon VPC. 
- If you enable in-transit encryption, you must also specify a value for CacheSubnetGroup. 
- Required: Only available when creating a replication group in an Amazon VPC using redis version 3.2.6 or 4.x. 
- Default: false 
- For HIPAA compliance, you must specify TransitEncryptionEnabled as true, an AuthToken, and a CacheSubnetGroup.
+"TransitEncryptionEnabled enables in-transit encryption when set to true. \n You cannot modify the value of TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must TransitEncryptionEnabled to true when you create a cluster. \n This parameter is valid only if the Engine parameter is redis, the EngineVersion parameter is 3.2.6 or 4.x, and the cluster is being created in an Amazon VPC. \n If you enable in-transit encryption, you must also specify a value for CacheSubnetGroup. \n Required: Only available when creating a replication group in an Amazon VPC using redis version 3.2.6 or 4.x. \n Default: false \n For HIPAA compliance, you must specify TransitEncryptionEnabled as true, an AuthToken, and a CacheSubnetGroup."
 
 ## obj spec.forProvider.cacheSecurityGroupNameSelector
 
-CacheSecurityGroupNameSelector selects references to SecurityGroups.
+"CacheSecurityGroupNameSelector selects references to SecurityGroups."
 
 ### fn spec.forProvider.cacheSecurityGroupNameSelector.withMatchControllerRef
 
@@ -696,7 +652,7 @@ CacheSecurityGroupNameSelector selects references to SecurityGroups.
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.cacheSecurityGroupNameSelector.withMatchLabels
 
@@ -704,7 +660,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.cacheSecurityGroupNameSelector.withMatchLabelsMixin
 
@@ -712,13 +668,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.cacheSubnetGroupNameRef
 
-CacheSubnetGroupNameRef is a reference to a Subnet Group used to set the CacheSubnetGroupName.
+"CacheSubnetGroupNameRef is a reference to a Subnet Group used to set the CacheSubnetGroupName."
 
 ### fn spec.forProvider.cacheSubnetGroupNameRef.withName
 
@@ -726,12 +682,11 @@ CacheSubnetGroupNameRef is a reference to a Subnet Group used to set the CacheSu
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.cacheSubnetGroupNameRefs
 
-DeprecatedCacheSubnetGroupNameRef is a reference to a Subnet Group used to set the CacheSubnetGroupName. 
- Deprecated: Use CacheSubnetGroupNameRef. This field exists because we introduced it with the JSON tag cacheSubnetGroupNameRefs (plural) when it should have been cacheSubnetGroupNameRef (singular). This is a bug that we need to avoid a breaking change to this v1beta1 API.
+"DeprecatedCacheSubnetGroupNameRef is a reference to a Subnet Group used to set the CacheSubnetGroupName. \n Deprecated: Use CacheSubnetGroupNameRef. This field exists because we introduced it with the JSON tag cacheSubnetGroupNameRefs (plural) when it should have been cacheSubnetGroupNameRef (singular). This is a bug that we need to avoid a breaking change to this v1beta1 API."
 
 ### fn spec.forProvider.cacheSubnetGroupNameRefs.withName
 
@@ -739,11 +694,11 @@ DeprecatedCacheSubnetGroupNameRef is a reference to a Subnet Group used to set t
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.cacheSubnetGroupNameSelector
 
-CacheSubnetGroupNameSelector selects a reference to a CacheSubnetGroup.
+"CacheSubnetGroupNameSelector selects a reference to a CacheSubnetGroup."
 
 ### fn spec.forProvider.cacheSubnetGroupNameSelector.withMatchControllerRef
 
@@ -751,7 +706,7 @@ CacheSubnetGroupNameSelector selects a reference to a CacheSubnetGroup.
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.cacheSubnetGroupNameSelector.withMatchLabels
 
@@ -759,7 +714,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.cacheSubnetGroupNameSelector.withMatchLabelsMixin
 
@@ -767,13 +722,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.securityGroupIdSelector
 
-SecurityGroupIDSelector selects references to SecurityGroups used to set the SecurityGroupIDs.
+"SecurityGroupIDSelector selects references to SecurityGroups used to set the SecurityGroupIDs."
 
 ### fn spec.forProvider.securityGroupIdSelector.withMatchControllerRef
 
@@ -781,7 +736,7 @@ SecurityGroupIDSelector selects references to SecurityGroups used to set the Sec
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.securityGroupIdSelector.withMatchLabels
 
@@ -789,7 +744,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.securityGroupIdSelector.withMatchLabelsMixin
 
@@ -797,13 +752,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 
-ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.
+"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."
 
 ### fn spec.providerConfigRef.withName
 
@@ -811,11 +766,11 @@ ProviderConfigReference specifies how the provider that will be used to create, 
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.providerRef
 
-ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`
+"ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`"
 
 ### fn spec.providerRef.withName
 
@@ -823,11 +778,11 @@ ProviderReference specifies the provider that will be used to create, observe, u
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.writeConnectionSecretToRef
 
-WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.
+"WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource."
 
 ### fn spec.writeConnectionSecretToRef.withName
 
@@ -835,7 +790,7 @@ WriteConnectionSecretToReference specifies the namespace and name of a Secret to
 withName(name)
 ```
 
-Name of the secret.
+"Name of the secret."
 
 ### fn spec.writeConnectionSecretToRef.withNamespace
 
@@ -843,4 +798,4 @@ Name of the secret.
 withNamespace(namespace)
 ```
 
-Namespace of the secret.
+"Namespace of the secret."

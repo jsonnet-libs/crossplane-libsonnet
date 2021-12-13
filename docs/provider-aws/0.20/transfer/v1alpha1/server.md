@@ -4,7 +4,7 @@ permalink: /provider-aws/0.20/transfer/v1alpha1/server/
 
 # transfer.v1alpha1.server
 
-Server is the Schema for the Servers API
+"Server is the Schema for the Servers API"
 
 ## Index
 
@@ -108,7 +108,7 @@ new returns an instance of Server
 
 ## obj metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."
 
 ### fn metadata.withAnnotations
 
@@ -116,7 +116,7 @@ ObjectMeta is metadata that all persisted resources must have, which includes al
 withAnnotations(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 ### fn metadata.withAnnotationsMixin
 
@@ -124,7 +124,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withAnnotationsMixin(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 **Note:** This function appends passed data to existing values
 
@@ -134,7 +134,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withClusterName(clusterName)
 ```
 
-The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
+"The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request."
 
 ### fn metadata.withCreationTimestamp
 
@@ -142,7 +142,7 @@ The name of the cluster which the object belongs to. This is used to distinguish
 withCreationTimestamp(creationTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withDeletionGracePeriodSeconds
 
@@ -150,7 +150,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withDeletionGracePeriodSeconds(deletionGracePeriodSeconds)
 ```
 
-Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
+"Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only."
 
 ### fn metadata.withDeletionTimestamp
 
@@ -158,7 +158,7 @@ Number of seconds allowed for this object to gracefully terminate before it will
 withDeletionTimestamp(deletionTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withFinalizers
 
@@ -166,7 +166,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withFinalizers(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 ### fn metadata.withFinalizersMixin
 
@@ -174,7 +174,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withFinalizersMixin(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 **Note:** This function appends passed data to existing values
 
@@ -184,11 +184,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withGenerateName(generateName)
 ```
 
-GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
-
-If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
-
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
+"GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency"
 
 ### fn metadata.withGeneration
 
@@ -196,7 +192,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 withGeneration(generation)
 ```
 
-A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
+"A sequence number representing a specific generation of the desired state. Populated by the system. Read-only."
 
 ### fn metadata.withLabels
 
@@ -204,7 +200,7 @@ A sequence number representing a specific generation of the desired state. Popul
 withLabels(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 ### fn metadata.withLabelsMixin
 
@@ -212,7 +208,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withLabelsMixin(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
 
@@ -222,7 +218,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withManagedFields(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 ### fn metadata.withManagedFieldsMixin
 
@@ -230,7 +226,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withManagedFieldsMixin(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -240,7 +236,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withName(name)
 ```
 
-Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"
 
 ### fn metadata.withNamespace
 
@@ -248,9 +244,7 @@ Name must be unique within a namespace. Is required when creating resources, alt
 withNamespace(namespace)
 ```
 
-Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
-
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\n\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"
 
 ### fn metadata.withOwnerReferences
 
@@ -258,7 +252,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 withOwnerReferences(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 ### fn metadata.withOwnerReferencesMixin
 
@@ -266,7 +260,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withOwnerReferencesMixin(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 **Note:** This function appends passed data to existing values
 
@@ -276,9 +270,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withResourceVersion(resourceVersion)
 ```
 
-An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
-
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+"An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency"
 
 ### fn metadata.withSelfLink
 
@@ -286,9 +278,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 withSelfLink(selfLink)
 ```
 
-SelfLink is a URL representing this object. Populated by the system. Read-only.
-
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+"SelfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release."
 
 ### fn metadata.withUid
 
@@ -296,13 +286,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 withUid(uid)
 ```
 
-UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
-
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+"UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
 
 ## obj spec
 
-ServerSpec defines the desired state of Server
+"ServerSpec defines the desired state of Server"
 
 ### fn spec.withDeletionPolicy
 
@@ -310,11 +298,11 @@ ServerSpec defines the desired state of Server
 withDeletionPolicy(deletionPolicy)
 ```
 
-DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource.
+"DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either \"Delete\" or \"Orphan\" the external resource."
 
 ## obj spec.forProvider
 
-ServerParameters defines the desired state of Server
+"ServerParameters defines the desired state of Server"
 
 ### fn spec.forProvider.withCertificate
 
@@ -322,17 +310,7 @@ ServerParameters defines the desired state of Server
 withCertificate(certificate)
 ```
 
-The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. Required when Protocols is set to FTPS. 
- To request a new public certificate, see Request a public certificate (https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html) in the AWS Certificate Manager User Guide. 
- To import an existing certificate into ACM, see Importing certificates into ACM (https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the AWS Certificate Manager User Guide. 
- To request a private certificate to use FTPS through private IP addresses, see Request a private certificate (https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-private.html) in the AWS Certificate Manager User Guide. 
- Certificates with the following cryptographic algorithms and key sizes are supported: 
-    * 2048-bit RSA (RSA_2048) 
-    * 4096-bit RSA (RSA_4096) 
-    * Elliptic Prime Curve 256 bit (EC_prime256v1) 
-    * Elliptic Prime Curve 384 bit (EC_secp384r1) 
-    * Elliptic Prime Curve 521 bit (EC_secp521r1) 
- The certificate must be a valid SSL/TLS X.509 version 3 certificate with FQDN or IP address specified and information about the issuer.
+"The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. Required when Protocols is set to FTPS. \n To request a new public certificate, see Request a public certificate (https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html) in the AWS Certificate Manager User Guide. \n To import an existing certificate into ACM, see Importing certificates into ACM (https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the AWS Certificate Manager User Guide. \n To request a private certificate to use FTPS through private IP addresses, see Request a private certificate (https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-private.html) in the AWS Certificate Manager User Guide. \n Certificates with the following cryptographic algorithms and key sizes are supported: \n    * 2048-bit RSA (RSA_2048) \n    * 4096-bit RSA (RSA_4096) \n    * Elliptic Prime Curve 256 bit (EC_prime256v1) \n    * Elliptic Prime Curve 384 bit (EC_secp384r1) \n    * Elliptic Prime Curve 521 bit (EC_secp521r1) \n The certificate must be a valid SSL/TLS X.509 version 3 certificate with FQDN or IP address specified and information about the issuer."
 
 ### fn spec.forProvider.withDomain
 
@@ -348,8 +326,7 @@ withDomain(domain)
 withEndpointType(endpointType)
 ```
 
-The type of VPC endpoint that you want your server to connect to. You can choose to connect to the public internet or a VPC endpoint. With a VPC endpoint, you can restrict access to your server and resources only within your VPC. 
- It is recommended that you use VPC as the EndpointType. With this endpoint type, you have the option to directly associate up to three Elastic IPv4 addresses (BYO IP included) with your server's endpoint and use VPC security groups to restrict traffic by the client's public IP address. This is not possible with EndpointType set to VPC_ENDPOINT.
+"The type of VPC endpoint that you want your server to connect to. You can choose to connect to the public internet or a VPC endpoint. With a VPC endpoint, you can restrict access to your server and resources only within your VPC. \n It is recommended that you use VPC as the EndpointType. With this endpoint type, you have the option to directly associate up to three Elastic IPv4 addresses (BYO IP included) with your server's endpoint and use VPC security groups to restrict traffic by the client's public IP address. This is not possible with EndpointType set to VPC_ENDPOINT."
 
 ### fn spec.forProvider.withHostKey
 
@@ -357,9 +334,7 @@ The type of VPC endpoint that you want your server to connect to. You can choose
 withHostKey(hostKey)
 ```
 
-The RSA private key as generated by the ssh-keygen -N '' -m PEM -f my-new-server-key command. 
- If you aren't planning to migrate existing users from an existing SFTP-enabled server to a new server, don't update the host key. Accidentally changing a server's host key can be disruptive. 
- For more information, see Change the host key for your SFTP-enabled server (https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html#configuring-servers-change-host-key) in the AWS Transfer Family User Guide.
+"The RSA private key as generated by the ssh-keygen -N \"\" -m PEM -f my-new-server-key command. \n If you aren't planning to migrate existing users from an existing SFTP-enabled server to a new server, don't update the host key. Accidentally changing a server's host key can be disruptive. \n For more information, see Change the host key for your SFTP-enabled server (https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html#configuring-servers-change-host-key) in the AWS Transfer Family User Guide."
 
 ### fn spec.forProvider.withIdentityProviderType
 
@@ -367,7 +342,7 @@ The RSA private key as generated by the ssh-keygen -N '' -m PEM -f my-new-server
 withIdentityProviderType(identityProviderType)
 ```
 
-Specifies the mode of authentication for a server. The default value is SERVICE_MANAGED, which allows you to store and access user credentials within the AWS Transfer Family service. Use the API_GATEWAY value to integrate with an identity provider of your choosing. The API_GATEWAY setting requires you to provide an API Gateway endpoint URL to call for authentication using the IdentityProviderDetails parameter.
+"Specifies the mode of authentication for a server. The default value is SERVICE_MANAGED, which allows you to store and access user credentials within the AWS Transfer Family service. Use the API_GATEWAY value to integrate with an identity provider of your choosing. The API_GATEWAY setting requires you to provide an API Gateway endpoint URL to call for authentication using the IdentityProviderDetails parameter."
 
 ### fn spec.forProvider.withLoggingRole
 
@@ -375,7 +350,7 @@ Specifies the mode of authentication for a server. The default value is SERVICE_
 withLoggingRole(loggingRole)
 ```
 
-Allows the service to write your users' activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
+"Allows the service to write your users' activity to your Amazon CloudWatch logs for monitoring and auditing purposes."
 
 ### fn spec.forProvider.withProtocols
 
@@ -383,14 +358,7 @@ Allows the service to write your users' activity to your Amazon CloudWatch logs 
 withProtocols(protocols)
 ```
 
-Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint. The available protocols are: 
-    * SFTP (Secure Shell (SSH) File Transfer Protocol): File transfer over    SSH 
-    * FTPS (File Transfer Protocol Secure): File transfer with TLS encryption 
-    * FTP (File Transfer Protocol): Unencrypted file transfer 
- If you select FTPS, you must choose a certificate stored in AWS Certificate Manager (ACM) which will be used to identify your server when clients connect to it over FTPS. 
- If Protocol includes either FTP or FTPS, then the EndpointType must be VPC and the IdentityProviderType must be API_GATEWAY. 
- If Protocol includes FTP, then AddressAllocationIds cannot be associated. 
- If Protocol is set only to SFTP, the EndpointType can be set to PUBLIC and the IdentityProviderType can be set to SERVICE_MANAGED.
+"Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint. The available protocols are: \n    * SFTP (Secure Shell (SSH) File Transfer Protocol): File transfer over    SSH \n    * FTPS (File Transfer Protocol Secure): File transfer with TLS encryption \n    * FTP (File Transfer Protocol): Unencrypted file transfer \n If you select FTPS, you must choose a certificate stored in AWS Certificate Manager (ACM) which will be used to identify your server when clients connect to it over FTPS. \n If Protocol includes either FTP or FTPS, then the EndpointType must be VPC and the IdentityProviderType must be API_GATEWAY. \n If Protocol includes FTP, then AddressAllocationIds cannot be associated. \n If Protocol is set only to SFTP, the EndpointType can be set to PUBLIC and the IdentityProviderType can be set to SERVICE_MANAGED."
 
 ### fn spec.forProvider.withProtocolsMixin
 
@@ -398,14 +366,7 @@ Specifies the file transfer protocol or protocols over which your file transfer 
 withProtocolsMixin(protocols)
 ```
 
-Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint. The available protocols are: 
-    * SFTP (Secure Shell (SSH) File Transfer Protocol): File transfer over    SSH 
-    * FTPS (File Transfer Protocol Secure): File transfer with TLS encryption 
-    * FTP (File Transfer Protocol): Unencrypted file transfer 
- If you select FTPS, you must choose a certificate stored in AWS Certificate Manager (ACM) which will be used to identify your server when clients connect to it over FTPS. 
- If Protocol includes either FTP or FTPS, then the EndpointType must be VPC and the IdentityProviderType must be API_GATEWAY. 
- If Protocol includes FTP, then AddressAllocationIds cannot be associated. 
- If Protocol is set only to SFTP, the EndpointType can be set to PUBLIC and the IdentityProviderType can be set to SERVICE_MANAGED.
+"Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint. The available protocols are: \n    * SFTP (Secure Shell (SSH) File Transfer Protocol): File transfer over    SSH \n    * FTPS (File Transfer Protocol Secure): File transfer with TLS encryption \n    * FTP (File Transfer Protocol): Unencrypted file transfer \n If you select FTPS, you must choose a certificate stored in AWS Certificate Manager (ACM) which will be used to identify your server when clients connect to it over FTPS. \n If Protocol includes either FTP or FTPS, then the EndpointType must be VPC and the IdentityProviderType must be API_GATEWAY. \n If Protocol includes FTP, then AddressAllocationIds cannot be associated. \n If Protocol is set only to SFTP, the EndpointType can be set to PUBLIC and the IdentityProviderType can be set to SERVICE_MANAGED."
 
 **Note:** This function appends passed data to existing values
 
@@ -415,7 +376,7 @@ Specifies the file transfer protocol or protocols over which your file transfer 
 withRegion(region)
 ```
 
-Region is which region the Server will be created.
+"Region is which region the Server will be created."
 
 ### fn spec.forProvider.withSecurityPolicyName
 
@@ -423,7 +384,7 @@ Region is which region the Server will be created.
 withSecurityPolicyName(securityPolicyName)
 ```
 
-Specifies the name of the security policy that is attached to the server.
+"Specifies the name of the security policy that is attached to the server."
 
 ### fn spec.forProvider.withTags
 
@@ -431,7 +392,7 @@ Specifies the name of the security policy that is attached to the server.
 withTags(tags)
 ```
 
-Key-value pairs that can be used to group and search for servers.
+"Key-value pairs that can be used to group and search for servers."
 
 ### fn spec.forProvider.withTagsMixin
 
@@ -439,13 +400,13 @@ Key-value pairs that can be used to group and search for servers.
 withTagsMixin(tags)
 ```
 
-Key-value pairs that can be used to group and search for servers.
+"Key-value pairs that can be used to group and search for servers."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.certificateRef
 
-CertificateRef is a reference to a Certificate.
+"CertificateRef is a reference to a Certificate."
 
 ### fn spec.forProvider.certificateRef.withName
 
@@ -453,11 +414,11 @@ CertificateRef is a reference to a Certificate.
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.certificateSelector
 
-CertificateSelector selects references to a Certificate.
+"CertificateSelector selects references to a Certificate."
 
 ### fn spec.forProvider.certificateSelector.withMatchControllerRef
 
@@ -465,7 +426,7 @@ CertificateSelector selects references to a Certificate.
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.certificateSelector.withMatchLabels
 
@@ -473,7 +434,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.certificateSelector.withMatchLabelsMixin
 
@@ -481,13 +442,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.endpointDetails
 
-The virtual private cloud (VPC) endpoint settings that are configured for your server. When you host your endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach Elastic IPs and make it accessible to clients over the internet. Your VPC's default security groups are automatically assigned to your endpoint.
+"The virtual private cloud (VPC) endpoint settings that are configured for your server. When you host your endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach Elastic IPs and make it accessible to clients over the internet. Your VPC's default security groups are automatically assigned to your endpoint."
 
 ### fn spec.forProvider.endpointDetails.withAddressAllocationIDs
 
@@ -495,8 +456,7 @@ The virtual private cloud (VPC) endpoint settings that are configured for your s
 withAddressAllocationIDs(addressAllocationIDs)
 ```
 
-A list of address allocation IDs that are required to attach an Elastic IP address to your server's endpoint. 
- This property can only be set when EndpointType is set to VPC and it is only valid in the UpdateServer API.
+"A list of address allocation IDs that are required to attach an Elastic IP address to your server's endpoint. \n This property can only be set when EndpointType is set to VPC and it is only valid in the UpdateServer API."
 
 ### fn spec.forProvider.endpointDetails.withAddressAllocationIDsMixin
 
@@ -504,8 +464,7 @@ A list of address allocation IDs that are required to attach an Elastic IP addre
 withAddressAllocationIDsMixin(addressAllocationIDs)
 ```
 
-A list of address allocation IDs that are required to attach an Elastic IP address to your server's endpoint. 
- This property can only be set when EndpointType is set to VPC and it is only valid in the UpdateServer API.
+"A list of address allocation IDs that are required to attach an Elastic IP address to your server's endpoint. \n This property can only be set when EndpointType is set to VPC and it is only valid in the UpdateServer API."
 
 **Note:** This function appends passed data to existing values
 
@@ -515,7 +474,7 @@ A list of address allocation IDs that are required to attach an Elastic IP addre
 withSecurityGroupIDRefs(securityGroupIDRefs)
 ```
 
-SecurityGroupIDRefs is a list of references to SecurityGroups used to set the SecurityGroupIDs.
+"SecurityGroupIDRefs is a list of references to SecurityGroups used to set the SecurityGroupIDs."
 
 ### fn spec.forProvider.endpointDetails.withSecurityGroupIDRefsMixin
 
@@ -523,7 +482,7 @@ SecurityGroupIDRefs is a list of references to SecurityGroups used to set the Se
 withSecurityGroupIDRefsMixin(securityGroupIDRefs)
 ```
 
-SecurityGroupIDRefs is a list of references to SecurityGroups used to set the SecurityGroupIDs.
+"SecurityGroupIDRefs is a list of references to SecurityGroups used to set the SecurityGroupIDs."
 
 **Note:** This function appends passed data to existing values
 
@@ -533,9 +492,7 @@ SecurityGroupIDRefs is a list of references to SecurityGroups used to set the Se
 withSecurityGroupIDs(securityGroupIDs)
 ```
 
-A list of security groups IDs that are available to attach to your server's endpoint. 
- This property can only be set when EndpointType is set to VPC. 
- You can edit the SecurityGroupIds property in the UpdateServer (https://docs.aws.amazon.com/transfer/latest/userguide/API_UpdateServer.html) API only if you are changing the EndpointType from PUBLIC or VPC_ENDPOINT to VPC. To change security groups associated with your server's VPC endpoint after creation, use the Amazon EC2 ModifyVpcEndpoint (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVpcEndpoint.html) API.
+"A list of security groups IDs that are available to attach to your server's endpoint. \n This property can only be set when EndpointType is set to VPC. \n You can edit the SecurityGroupIds property in the UpdateServer (https://docs.aws.amazon.com/transfer/latest/userguide/API_UpdateServer.html) API only if you are changing the EndpointType from PUBLIC or VPC_ENDPOINT to VPC. To change security groups associated with your server's VPC endpoint after creation, use the Amazon EC2 ModifyVpcEndpoint (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVpcEndpoint.html) API."
 
 ### fn spec.forProvider.endpointDetails.withSecurityGroupIDsMixin
 
@@ -543,9 +500,7 @@ A list of security groups IDs that are available to attach to your server's endp
 withSecurityGroupIDsMixin(securityGroupIDs)
 ```
 
-A list of security groups IDs that are available to attach to your server's endpoint. 
- This property can only be set when EndpointType is set to VPC. 
- You can edit the SecurityGroupIds property in the UpdateServer (https://docs.aws.amazon.com/transfer/latest/userguide/API_UpdateServer.html) API only if you are changing the EndpointType from PUBLIC or VPC_ENDPOINT to VPC. To change security groups associated with your server's VPC endpoint after creation, use the Amazon EC2 ModifyVpcEndpoint (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVpcEndpoint.html) API.
+"A list of security groups IDs that are available to attach to your server's endpoint. \n This property can only be set when EndpointType is set to VPC. \n You can edit the SecurityGroupIds property in the UpdateServer (https://docs.aws.amazon.com/transfer/latest/userguide/API_UpdateServer.html) API only if you are changing the EndpointType from PUBLIC or VPC_ENDPOINT to VPC. To change security groups associated with your server's VPC endpoint after creation, use the Amazon EC2 ModifyVpcEndpoint (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVpcEndpoint.html) API."
 
 **Note:** This function appends passed data to existing values
 
@@ -555,7 +510,7 @@ A list of security groups IDs that are available to attach to your server's endp
 withSubnetIDRefs(subnetIDRefs)
 ```
 
-SubnetIDsRefs is a list of references to Subnets used to set the SubnetIDs.
+"SubnetIDsRefs is a list of references to Subnets used to set the SubnetIDs."
 
 ### fn spec.forProvider.endpointDetails.withSubnetIDRefsMixin
 
@@ -563,7 +518,7 @@ SubnetIDsRefs is a list of references to Subnets used to set the SubnetIDs.
 withSubnetIDRefsMixin(subnetIDRefs)
 ```
 
-SubnetIDsRefs is a list of references to Subnets used to set the SubnetIDs.
+"SubnetIDsRefs is a list of references to Subnets used to set the SubnetIDs."
 
 **Note:** This function appends passed data to existing values
 
@@ -573,8 +528,7 @@ SubnetIDsRefs is a list of references to Subnets used to set the SubnetIDs.
 withSubnetIDs(subnetIDs)
 ```
 
-A list of subnet IDs that are required to host your server endpoint in your VPC. 
- This property can only be set when EndpointType is set to VPC.
+"A list of subnet IDs that are required to host your server endpoint in your VPC. \n This property can only be set when EndpointType is set to VPC."
 
 ### fn spec.forProvider.endpointDetails.withSubnetIDsMixin
 
@@ -582,8 +536,7 @@ A list of subnet IDs that are required to host your server endpoint in your VPC.
 withSubnetIDsMixin(subnetIDs)
 ```
 
-A list of subnet IDs that are required to host your server endpoint in your VPC. 
- This property can only be set when EndpointType is set to VPC.
+"A list of subnet IDs that are required to host your server endpoint in your VPC. \n This property can only be set when EndpointType is set to VPC."
 
 **Note:** This function appends passed data to existing values
 
@@ -593,9 +546,7 @@ A list of subnet IDs that are required to host your server endpoint in your VPC.
 withVpcEndpointID(vpcEndpointID)
 ```
 
-The ID of the VPC endpoint. 
- This property can only be set when EndpointType is set to VPC_ENDPOINT. 
- For more information, see https://docs.aws.amazon.com/transfer/latest/userguide/create-server-in-vpc.html#deprecate-vpc-endpoint.
+"The ID of the VPC endpoint. \n This property can only be set when EndpointType is set to VPC_ENDPOINT. \n For more information, see https://docs.aws.amazon.com/transfer/latest/userguide/create-server-in-vpc.html#deprecate-vpc-endpoint."
 
 ### fn spec.forProvider.endpointDetails.withVpcID
 
@@ -603,12 +554,11 @@ The ID of the VPC endpoint.
 withVpcID(vpcID)
 ```
 
-The VPC ID of the VPC in which a server's endpoint will be hosted. 
- This property can only be set when EndpointType is set to VPC.
+"The VPC ID of the VPC in which a server's endpoint will be hosted. \n This property can only be set when EndpointType is set to VPC."
 
 ## obj spec.forProvider.endpointDetails.securityGroupIDSelector
 
-SecurityGroupIDsSelector selects references to SecurityGroupID used to set the SecurityGroupIDs.
+"SecurityGroupIDsSelector selects references to SecurityGroupID used to set the SecurityGroupIDs."
 
 ### fn spec.forProvider.endpointDetails.securityGroupIDSelector.withMatchControllerRef
 
@@ -616,7 +566,7 @@ SecurityGroupIDsSelector selects references to SecurityGroupID used to set the S
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.endpointDetails.securityGroupIDSelector.withMatchLabels
 
@@ -624,7 +574,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.endpointDetails.securityGroupIDSelector.withMatchLabelsMixin
 
@@ -632,13 +582,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.endpointDetails.subnetIDSelector
 
-SubnetIDsSelector selects references to Subnets used to set the SubnetIds.
+"SubnetIDsSelector selects references to Subnets used to set the SubnetIds."
 
 ### fn spec.forProvider.endpointDetails.subnetIDSelector.withMatchControllerRef
 
@@ -646,7 +596,7 @@ SubnetIDsSelector selects references to Subnets used to set the SubnetIds.
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.endpointDetails.subnetIDSelector.withMatchLabels
 
@@ -654,7 +604,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.endpointDetails.subnetIDSelector.withMatchLabelsMixin
 
@@ -662,13 +612,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.endpointDetails.vpcIDRef
 
-VPCIDRef is a reference to a VPCID.
+"VPCIDRef is a reference to a VPCID."
 
 ### fn spec.forProvider.endpointDetails.vpcIDRef.withName
 
@@ -676,11 +626,11 @@ VPCIDRef is a reference to a VPCID.
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.endpointDetails.vpcIDSelector
 
-VPCIDSelector selects references to a VPCID.
+"VPCIDSelector selects references to a VPCID."
 
 ### fn spec.forProvider.endpointDetails.vpcIDSelector.withMatchControllerRef
 
@@ -688,7 +638,7 @@ VPCIDSelector selects references to a VPCID.
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.endpointDetails.vpcIDSelector.withMatchLabels
 
@@ -696,7 +646,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.endpointDetails.vpcIDSelector.withMatchLabelsMixin
 
@@ -704,13 +654,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.identityProviderDetails
 
-Required when IdentityProviderType is set to API_GATEWAY. Accepts an array containing all of the information required to call a customer-supplied authentication API, including the API Gateway URL. Not required when IdentityProviderType is set to SERVICE_MANAGED.
+"Required when IdentityProviderType is set to API_GATEWAY. Accepts an array containing all of the information required to call a customer-supplied authentication API, including the API Gateway URL. Not required when IdentityProviderType is set to SERVICE_MANAGED."
 
 ### fn spec.forProvider.identityProviderDetails.withInvocationRole
 
@@ -730,7 +680,7 @@ withUrl(url)
 
 ## obj spec.forProvider.loggingRoleRef
 
-LoggingRoleRef is a reference to a IAM role.
+"LoggingRoleRef is a reference to a IAM role."
 
 ### fn spec.forProvider.loggingRoleRef.withName
 
@@ -738,11 +688,11 @@ LoggingRoleRef is a reference to a IAM role.
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.loggingRoleSelector
 
-LoggingRoleSelector selects references to a IAM role.
+"LoggingRoleSelector selects references to a IAM role."
 
 ### fn spec.forProvider.loggingRoleSelector.withMatchControllerRef
 
@@ -750,7 +700,7 @@ LoggingRoleSelector selects references to a IAM role.
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.loggingRoleSelector.withMatchLabels
 
@@ -758,7 +708,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.loggingRoleSelector.withMatchLabelsMixin
 
@@ -766,13 +716,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 
-ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.
+"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."
 
 ### fn spec.providerConfigRef.withName
 
@@ -780,11 +730,11 @@ ProviderConfigReference specifies how the provider that will be used to create, 
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.providerRef
 
-ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`
+"ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`"
 
 ### fn spec.providerRef.withName
 
@@ -792,11 +742,11 @@ ProviderReference specifies the provider that will be used to create, observe, u
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.writeConnectionSecretToRef
 
-WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.
+"WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource."
 
 ### fn spec.writeConnectionSecretToRef.withName
 
@@ -804,7 +754,7 @@ WriteConnectionSecretToReference specifies the namespace and name of a Secret to
 withName(name)
 ```
 
-Name of the secret.
+"Name of the secret."
 
 ### fn spec.writeConnectionSecretToRef.withNamespace
 
@@ -812,4 +762,4 @@ Name of the secret.
 withNamespace(namespace)
 ```
 
-Namespace of the secret.
+"Namespace of the secret."

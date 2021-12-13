@@ -4,7 +4,7 @@ permalink: /provider-aws/0.18/s3/v1beta1/bucket/
 
 # s3.v1beta1.bucket
 
-An Bucket is a managed resource that represents an AWS S3 Bucket.
+"An Bucket is a managed resource that represents an AWS S3 Bucket."
 
 ## Index
 
@@ -118,7 +118,7 @@ new returns an instance of Bucket
 
 ## obj metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."
 
 ### fn metadata.withAnnotations
 
@@ -126,7 +126,7 @@ ObjectMeta is metadata that all persisted resources must have, which includes al
 withAnnotations(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 ### fn metadata.withAnnotationsMixin
 
@@ -134,7 +134,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withAnnotationsMixin(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 **Note:** This function appends passed data to existing values
 
@@ -144,7 +144,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withClusterName(clusterName)
 ```
 
-The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
+"The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request."
 
 ### fn metadata.withCreationTimestamp
 
@@ -152,7 +152,7 @@ The name of the cluster which the object belongs to. This is used to distinguish
 withCreationTimestamp(creationTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withDeletionGracePeriodSeconds
 
@@ -160,7 +160,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withDeletionGracePeriodSeconds(deletionGracePeriodSeconds)
 ```
 
-Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
+"Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only."
 
 ### fn metadata.withDeletionTimestamp
 
@@ -168,7 +168,7 @@ Number of seconds allowed for this object to gracefully terminate before it will
 withDeletionTimestamp(deletionTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withFinalizers
 
@@ -176,7 +176,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withFinalizers(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 ### fn metadata.withFinalizersMixin
 
@@ -184,7 +184,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withFinalizersMixin(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 **Note:** This function appends passed data to existing values
 
@@ -194,11 +194,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withGenerateName(generateName)
 ```
 
-GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
-
-If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
-
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
+"GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency"
 
 ### fn metadata.withGeneration
 
@@ -206,7 +202,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 withGeneration(generation)
 ```
 
-A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
+"A sequence number representing a specific generation of the desired state. Populated by the system. Read-only."
 
 ### fn metadata.withLabels
 
@@ -214,7 +210,7 @@ A sequence number representing a specific generation of the desired state. Popul
 withLabels(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 ### fn metadata.withLabelsMixin
 
@@ -222,7 +218,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withLabelsMixin(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
 
@@ -232,7 +228,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withManagedFields(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 ### fn metadata.withManagedFieldsMixin
 
@@ -240,7 +236,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withManagedFieldsMixin(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -250,7 +246,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withName(name)
 ```
 
-Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"
 
 ### fn metadata.withNamespace
 
@@ -258,9 +254,7 @@ Name must be unique within a namespace. Is required when creating resources, alt
 withNamespace(namespace)
 ```
 
-Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
-
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\n\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"
 
 ### fn metadata.withOwnerReferences
 
@@ -268,7 +262,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 withOwnerReferences(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 ### fn metadata.withOwnerReferencesMixin
 
@@ -276,7 +270,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withOwnerReferencesMixin(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 **Note:** This function appends passed data to existing values
 
@@ -286,9 +280,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withResourceVersion(resourceVersion)
 ```
 
-An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
-
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+"An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency"
 
 ### fn metadata.withSelfLink
 
@@ -296,9 +288,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 withSelfLink(selfLink)
 ```
 
-SelfLink is a URL representing this object. Populated by the system. Read-only.
-
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+"SelfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release."
 
 ### fn metadata.withUid
 
@@ -306,13 +296,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 withUid(uid)
 ```
 
-UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
-
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+"UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
 
 ## obj spec
 
-BucketSpec represents the desired state of the Bucket.
+"BucketSpec represents the desired state of the Bucket."
 
 ### fn spec.withDeletionPolicy
 
@@ -320,11 +308,11 @@ BucketSpec represents the desired state of the Bucket.
 withDeletionPolicy(deletionPolicy)
 ```
 
-DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. The "Delete" policy is the default when no policy is specified.
+"DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either \"Delete\" or \"Orphan\" the external resource. The \"Delete\" policy is the default when no policy is specified."
 
 ## obj spec.forProvider
 
-BucketParameters are parameters for configuring the calls made to AWS Bucket API.
+"BucketParameters are parameters for configuring the calls made to AWS Bucket API."
 
 ### fn spec.forProvider.withAcl
 
@@ -332,7 +320,7 @@ BucketParameters are parameters for configuring the calls made to AWS Bucket API
 withAcl(acl)
 ```
 
-The canned ACL to apply to the bucket. Note that either canned ACL or specific access permissions are required. If neither (or both) are provided, the creation of the bucket will fail.
+"The canned ACL to apply to the bucket. Note that either canned ACL or specific access permissions are required. If neither (or both) are provided, the creation of the bucket will fail."
 
 ### fn spec.forProvider.withGrantFullControl
 
@@ -340,7 +328,7 @@ The canned ACL to apply to the bucket. Note that either canned ACL or specific a
 withGrantFullControl(grantFullControl)
 ```
 
-Allows grantee the read, write, read ACP, and write ACP permissions on the bucket.
+"Allows grantee the read, write, read ACP, and write ACP permissions on the bucket."
 
 ### fn spec.forProvider.withGrantRead
 
@@ -348,7 +336,7 @@ Allows grantee the read, write, read ACP, and write ACP permissions on the bucke
 withGrantRead(grantRead)
 ```
 
-Allows grantee to list the objects in the bucket.
+"Allows grantee to list the objects in the bucket."
 
 ### fn spec.forProvider.withGrantReadAcp
 
@@ -356,7 +344,7 @@ Allows grantee to list the objects in the bucket.
 withGrantReadAcp(grantReadAcp)
 ```
 
-Allows grantee to read the bucket ACL.
+"Allows grantee to read the bucket ACL."
 
 ### fn spec.forProvider.withGrantWrite
 
@@ -364,7 +352,7 @@ Allows grantee to read the bucket ACL.
 withGrantWrite(grantWrite)
 ```
 
-Allows grantee to create, overwrite, and delete any object in the bucket.
+"Allows grantee to create, overwrite, and delete any object in the bucket."
 
 ### fn spec.forProvider.withGrantWriteAcp
 
@@ -372,7 +360,7 @@ Allows grantee to create, overwrite, and delete any object in the bucket.
 withGrantWriteAcp(grantWriteAcp)
 ```
 
-Allows grantee to write the ACL for the applicable bucket.
+"Allows grantee to write the ACL for the applicable bucket."
 
 ### fn spec.forProvider.withLocationConstraint
 
@@ -380,7 +368,7 @@ Allows grantee to write the ACL for the applicable bucket.
 withLocationConstraint(locationConstraint)
 ```
 
-LocationConstraint specifies the Region where the bucket will be created. It is a required field.
+"LocationConstraint specifies the Region where the bucket will be created. It is a required field."
 
 ### fn spec.forProvider.withObjectLockEnabledForBucket
 
@@ -388,15 +376,15 @@ LocationConstraint specifies the Region where the bucket will be created. It is 
 withObjectLockEnabledForBucket(objectLockEnabledForBucket)
 ```
 
-Specifies whether you want S3 Object Lock to be enabled for the new bucket.
+"Specifies whether you want S3 Object Lock to be enabled for the new bucket."
 
 ## obj spec.forProvider.accelerateConfiguration
 
-AccelerateConfiguration configures the transfer acceleration state for an Amazon S3 bucket. For more information, see Amazon S3 Transfer Acceleration (https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html) in the Amazon Simple Storage Service Developer Guide.
+"AccelerateConfiguration configures the transfer acceleration state for an Amazon S3 bucket. For more information, see Amazon S3 Transfer Acceleration (https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html) in the Amazon Simple Storage Service Developer Guide."
 
 ## obj spec.forProvider.corsConfiguration
 
-Describes the cross-origin access configuration for objects in an Amazon S3 bucket. For more information, see Enabling Cross-Origin Resource Sharing (https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the Amazon Simple Storage Service Developer Guide.
+"Describes the cross-origin access configuration for objects in an Amazon S3 bucket. For more information, see Enabling Cross-Origin Resource Sharing (https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the Amazon Simple Storage Service Developer Guide."
 
 ### fn spec.forProvider.corsConfiguration.withCorsRules
 
@@ -404,7 +392,7 @@ Describes the cross-origin access configuration for objects in an Amazon S3 buck
 withCorsRules(corsRules)
 ```
 
-A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration.
+"A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration."
 
 ### fn spec.forProvider.corsConfiguration.withCorsRulesMixin
 
@@ -412,13 +400,13 @@ A set of origins and methods (cross-origin access that you want to allow). You c
 withCorsRulesMixin(corsRules)
 ```
 
-A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration.
+"A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.lifecycleConfiguration
 
-Creates a new lifecycle configuration for the bucket or replaces an existing lifecycle configuration. For information about lifecycle configuration, see Managing Access Permissions to Your Amazon S3 Resources (https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html).
+"Creates a new lifecycle configuration for the bucket or replaces an existing lifecycle configuration. For information about lifecycle configuration, see Managing Access Permissions to Your Amazon S3 Resources (https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html)."
 
 ### fn spec.forProvider.lifecycleConfiguration.withRules
 
@@ -426,8 +414,7 @@ Creates a new lifecycle configuration for the bucket or replaces an existing lif
 withRules(rules)
 ```
 
-A lifecycle rule for individual objects in an Amazon S3 bucket. 
- Rules is a required field
+"A lifecycle rule for individual objects in an Amazon S3 bucket. \n Rules is a required field"
 
 ### fn spec.forProvider.lifecycleConfiguration.withRulesMixin
 
@@ -435,14 +422,13 @@ A lifecycle rule for individual objects in an Amazon S3 bucket.
 withRulesMixin(rules)
 ```
 
-A lifecycle rule for individual objects in an Amazon S3 bucket. 
- Rules is a required field
+"A lifecycle rule for individual objects in an Amazon S3 bucket. \n Rules is a required field"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.loggingConfiguration
 
-Specifies logging parameters for an Amazon S3 bucket. Set the logging parameters for a bucket and to specify permissions for who can view and modify the logging parameters. See the AWS API reference guide for Amazon Simple Storage Service's API operation PutBucketLogging for usage and error information. See also, https://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketLogging
+"Specifies logging parameters for an Amazon S3 bucket. Set the logging parameters for a bucket and to specify permissions for who can view and modify the logging parameters. See the AWS API reference guide for Amazon Simple Storage Service's API operation PutBucketLogging for usage and error information. See also, https://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketLogging"
 
 ### fn spec.forProvider.loggingConfiguration.withTargetBucket
 
@@ -450,7 +436,7 @@ Specifies logging parameters for an Amazon S3 bucket. Set the logging parameters
 withTargetBucket(targetBucket)
 ```
 
-TargetBucket where logs will be stored, it can be the same bucket. At least one of targetBucket, targetBucketRef or targetBucketSelector is required.
+"TargetBucket where logs will be stored, it can be the same bucket. At least one of targetBucket, targetBucketRef or targetBucketSelector is required."
 
 ### fn spec.forProvider.loggingConfiguration.withTargetGrants
 
@@ -458,7 +444,7 @@ TargetBucket where logs will be stored, it can be the same bucket. At least one 
 withTargetGrants(targetGrants)
 ```
 
-Container for granting information.
+"Container for granting information."
 
 ### fn spec.forProvider.loggingConfiguration.withTargetGrantsMixin
 
@@ -466,7 +452,7 @@ Container for granting information.
 withTargetGrantsMixin(targetGrants)
 ```
 
-Container for granting information.
+"Container for granting information."
 
 **Note:** This function appends passed data to existing values
 
@@ -476,11 +462,11 @@ Container for granting information.
 withTargetPrefix(targetPrefix)
 ```
 
-A prefix for all log object keys.
+"A prefix for all log object keys."
 
 ## obj spec.forProvider.loggingConfiguration.targetBucketRef
 
-TargetBucketRef references an S3Bucket to retrieve its name
+"TargetBucketRef references an S3Bucket to retrieve its name"
 
 ### fn spec.forProvider.loggingConfiguration.targetBucketRef.withName
 
@@ -488,11 +474,11 @@ TargetBucketRef references an S3Bucket to retrieve its name
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.loggingConfiguration.targetBucketSelector
 
-TargetBucketSelector selects a reference to an S3Bucket to retrieve its name
+"TargetBucketSelector selects a reference to an S3Bucket to retrieve its name"
 
 ### fn spec.forProvider.loggingConfiguration.targetBucketSelector.withMatchControllerRef
 
@@ -500,7 +486,7 @@ TargetBucketSelector selects a reference to an S3Bucket to retrieve its name
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.loggingConfiguration.targetBucketSelector.withMatchLabels
 
@@ -508,7 +494,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.loggingConfiguration.targetBucketSelector.withMatchLabelsMixin
 
@@ -516,13 +502,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.notificationConfiguration
 
-Enables notifications of specified events for a bucket. For more information about event notifications, see Configuring Event Notifications (https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html).
+"Enables notifications of specified events for a bucket. For more information about event notifications, see Configuring Event Notifications (https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html)."
 
 ### fn spec.forProvider.notificationConfiguration.withLambdaFunctionConfigurations
 
@@ -530,7 +516,7 @@ Enables notifications of specified events for a bucket. For more information abo
 withLambdaFunctionConfigurations(lambdaFunctionConfigurations)
 ```
 
-Describes the AWS Lambda functions to invoke and the events for which to invoke them.
+"Describes the AWS Lambda functions to invoke and the events for which to invoke them."
 
 ### fn spec.forProvider.notificationConfiguration.withLambdaFunctionConfigurationsMixin
 
@@ -538,7 +524,7 @@ Describes the AWS Lambda functions to invoke and the events for which to invoke 
 withLambdaFunctionConfigurationsMixin(lambdaFunctionConfigurations)
 ```
 
-Describes the AWS Lambda functions to invoke and the events for which to invoke them.
+"Describes the AWS Lambda functions to invoke and the events for which to invoke them."
 
 **Note:** This function appends passed data to existing values
 
@@ -548,7 +534,7 @@ Describes the AWS Lambda functions to invoke and the events for which to invoke 
 withQueueConfigurations(queueConfigurations)
 ```
 
-The Amazon Simple Queue Service queues to publish messages to and the events for which to publish messages.
+"The Amazon Simple Queue Service queues to publish messages to and the events for which to publish messages."
 
 ### fn spec.forProvider.notificationConfiguration.withQueueConfigurationsMixin
 
@@ -556,7 +542,7 @@ The Amazon Simple Queue Service queues to publish messages to and the events for
 withQueueConfigurationsMixin(queueConfigurations)
 ```
 
-The Amazon Simple Queue Service queues to publish messages to and the events for which to publish messages.
+"The Amazon Simple Queue Service queues to publish messages to and the events for which to publish messages."
 
 **Note:** This function appends passed data to existing values
 
@@ -566,7 +552,7 @@ The Amazon Simple Queue Service queues to publish messages to and the events for
 withTopicConfigurations(topicConfigurations)
 ```
 
-The topic to which notifications are sent and the events for which notifications are generated.
+"The topic to which notifications are sent and the events for which notifications are generated."
 
 ### fn spec.forProvider.notificationConfiguration.withTopicConfigurationsMixin
 
@@ -574,13 +560,13 @@ The topic to which notifications are sent and the events for which notifications
 withTopicConfigurationsMixin(topicConfigurations)
 ```
 
-The topic to which notifications are sent and the events for which notifications are generated.
+"The topic to which notifications are sent and the events for which notifications are generated."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.paymentConfiguration
 
-Specifies payer parameters for an Amazon S3 bucket. For more information, see Request Pays buckets (https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
+"Specifies payer parameters for an Amazon S3 bucket. For more information, see Request Pays buckets (https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide."
 
 ### fn spec.forProvider.paymentConfiguration.withPayer
 
@@ -588,11 +574,11 @@ Specifies payer parameters for an Amazon S3 bucket. For more information, see Re
 withPayer(payer)
 ```
 
-Payer is a required field, detailing who pays Valid values are "Requester" and "BucketOwner"
+"Payer is a required field, detailing who pays Valid values are \"Requester\" and \"BucketOwner\
 
 ## obj spec.forProvider.replicationConfiguration
 
-Creates a replication configuration or replaces an existing one. For more information, see Replication (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the Amazon S3 Developer Guide.
+"Creates a replication configuration or replaces an existing one. For more information, see Replication (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the Amazon S3 Developer Guide."
 
 ### fn spec.forProvider.replicationConfiguration.withRole
 
@@ -600,8 +586,7 @@ Creates a replication configuration or replaces an existing one. For more inform
 withRole(role)
 ```
 
-The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects. For more information, see How to Set Up Replication (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-how-setup.html) in the Amazon Simple Storage Service Developer Guide. 
- At least one of role, roleRef or roleSelector fields is required.
+"The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects. For more information, see How to Set Up Replication (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-how-setup.html) in the Amazon Simple Storage Service Developer Guide. \n At least one of role, roleRef or roleSelector fields is required."
 
 ### fn spec.forProvider.replicationConfiguration.withRules
 
@@ -609,8 +594,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
 withRules(rules)
 ```
 
-A container for one or more replication rules. A replication configuration must have at least one rule and can contain a maximum of 1,000 rules. 
- Rules is a required field
+"A container for one or more replication rules. A replication configuration must have at least one rule and can contain a maximum of 1,000 rules. \n Rules is a required field"
 
 ### fn spec.forProvider.replicationConfiguration.withRulesMixin
 
@@ -618,14 +602,13 @@ A container for one or more replication rules. A replication configuration must 
 withRulesMixin(rules)
 ```
 
-A container for one or more replication rules. A replication configuration must have at least one rule and can contain a maximum of 1,000 rules. 
- Rules is a required field
+"A container for one or more replication rules. A replication configuration must have at least one rule and can contain a maximum of 1,000 rules. \n Rules is a required field"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.replicationConfiguration.roleRef
 
-RoleRef references an IAMRole to retrieve its Name
+"RoleRef references an IAMRole to retrieve its Name"
 
 ### fn spec.forProvider.replicationConfiguration.roleRef.withName
 
@@ -633,11 +616,11 @@ RoleRef references an IAMRole to retrieve its Name
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.replicationConfiguration.roleSelector
 
-RoleSelector selects a reference to an IAMRole to retrieve its Name
+"RoleSelector selects a reference to an IAMRole to retrieve its Name"
 
 ### fn spec.forProvider.replicationConfiguration.roleSelector.withMatchControllerRef
 
@@ -645,7 +628,7 @@ RoleSelector selects a reference to an IAMRole to retrieve its Name
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.replicationConfiguration.roleSelector.withMatchLabels
 
@@ -653,7 +636,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.replicationConfiguration.roleSelector.withMatchLabelsMixin
 
@@ -661,13 +644,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.serverSideEncryptionConfiguration
 
-Specifies default encryption for a bucket using server-side encryption with Amazon S3-managed keys (SSE-S3) or customer master keys stored in AWS KMS (SSE-KMS). For information about the Amazon S3 default encryption feature, see Amazon S3 Default Bucket Encryption (https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the Amazon Simple Storage Service Developer Guide.
+"Specifies default encryption for a bucket using server-side encryption with Amazon S3-managed keys (SSE-S3) or customer master keys stored in AWS KMS (SSE-KMS). For information about the Amazon S3 default encryption feature, see Amazon S3 Default Bucket Encryption (https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the Amazon Simple Storage Service Developer Guide."
 
 ### fn spec.forProvider.serverSideEncryptionConfiguration.withRules
 
@@ -675,7 +658,7 @@ Specifies default encryption for a bucket using server-side encryption with Amaz
 withRules(rules)
 ```
 
-Container for information about a particular server-side encryption configuration rule.
+"Container for information about a particular server-side encryption configuration rule."
 
 ### fn spec.forProvider.serverSideEncryptionConfiguration.withRulesMixin
 
@@ -683,13 +666,13 @@ Container for information about a particular server-side encryption configuratio
 withRulesMixin(rules)
 ```
 
-Container for information about a particular server-side encryption configuration rule.
+"Container for information about a particular server-side encryption configuration rule."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.tagging
 
-Sets the tags for a bucket. Use tags to organize your AWS bill to reflect your own cost structure. For more information, see Billing and usage reporting for S3 buckets. (https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketBilling.html) in the Amazon Simple Storage Service Developer Guide.
+"Sets the tags for a bucket. Use tags to organize your AWS bill to reflect your own cost structure. For more information, see Billing and usage reporting for S3 buckets. (https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketBilling.html) in the Amazon Simple Storage Service Developer Guide."
 
 ### fn spec.forProvider.tagging.withTagSet
 
@@ -697,7 +680,7 @@ Sets the tags for a bucket. Use tags to organize your AWS bill to reflect your o
 withTagSet(tagSet)
 ```
 
-A collection for a set of tags TagSet is a required field
+"A collection for a set of tags TagSet is a required field"
 
 ### fn spec.forProvider.tagging.withTagSetMixin
 
@@ -705,13 +688,13 @@ A collection for a set of tags TagSet is a required field
 withTagSetMixin(tagSet)
 ```
 
-A collection for a set of tags TagSet is a required field
+"A collection for a set of tags TagSet is a required field"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.versioningConfiguration
 
-VersioningConfiguration describes the versioning state of an Amazon S3 bucket. See the AWS API reference guide for Amazon Simple Storage Service's API operation PutBucketVersioning for usage and error information. See also, https://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketVersioning
+"VersioningConfiguration describes the versioning state of an Amazon S3 bucket. See the AWS API reference guide for Amazon Simple Storage Service's API operation PutBucketVersioning for usage and error information. See also, https://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketVersioning"
 
 ### fn spec.forProvider.versioningConfiguration.withMfaDelete
 
@@ -719,11 +702,11 @@ VersioningConfiguration describes the versioning state of an Amazon S3 bucket. S
 withMfaDelete(mfaDelete)
 ```
 
-MFADelete specifies whether MFA delete is enabled in the bucket versioning configuration. This element is only returned if the bucket has been configured with MFA delete. If the bucket has never been so configured, this element is not returned.
+"MFADelete specifies whether MFA delete is enabled in the bucket versioning configuration. This element is only returned if the bucket has been configured with MFA delete. If the bucket has never been so configured, this element is not returned."
 
 ## obj spec.forProvider.websiteConfiguration
 
-Specifies website configuration parameters for an Amazon S3 bucket. See the AWS API reference guide for Amazon Simple Storage Service's API operation PutBucketWebsite for usage and error information. See also, https://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketWebsite
+"Specifies website configuration parameters for an Amazon S3 bucket. See the AWS API reference guide for Amazon Simple Storage Service's API operation PutBucketWebsite for usage and error information. See also, https://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketWebsite"
 
 ### fn spec.forProvider.websiteConfiguration.withRoutingRules
 
@@ -731,7 +714,7 @@ Specifies website configuration parameters for an Amazon S3 bucket. See the AWS 
 withRoutingRules(routingRules)
 ```
 
-Rules that define when a redirect is applied and the redirect behavior.
+"Rules that define when a redirect is applied and the redirect behavior."
 
 ### fn spec.forProvider.websiteConfiguration.withRoutingRulesMixin
 
@@ -739,13 +722,13 @@ Rules that define when a redirect is applied and the redirect behavior.
 withRoutingRulesMixin(routingRules)
 ```
 
-Rules that define when a redirect is applied and the redirect behavior.
+"Rules that define when a redirect is applied and the redirect behavior."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.websiteConfiguration.errorDocument
 
-The name of the error document for the website.
+"The name of the error document for the website."
 
 ### fn spec.forProvider.websiteConfiguration.errorDocument.withKey
 
@@ -753,11 +736,11 @@ The name of the error document for the website.
 withKey(key)
 ```
 
-The object key name to use when a 4XX class error occurs.
+"The object key name to use when a 4XX class error occurs."
 
 ## obj spec.forProvider.websiteConfiguration.indexDocument
 
-The name of the index document for the website.
+"The name of the index document for the website."
 
 ### fn spec.forProvider.websiteConfiguration.indexDocument.withSuffix
 
@@ -765,11 +748,11 @@ The name of the index document for the website.
 withSuffix(suffix)
 ```
 
-A suffix that is appended to a request that is for a directory on the website endpoint (for example,if the suffix is index.html and you make a request to samplebucket/images/ the data that is returned will be for the object with the key name images/index.html) The suffix must not be empty and must not include a slash character.
+"A suffix that is appended to a request that is for a directory on the website endpoint (for example,if the suffix is index.html and you make a request to samplebucket/images/ the data that is returned will be for the object with the key name images/index.html) The suffix must not be empty and must not include a slash character."
 
 ## obj spec.forProvider.websiteConfiguration.redirectAllRequestsTo
 
-The redirect behavior for every request to this bucket's website endpoint. If you specify this property, you can't specify any other property.
+"The redirect behavior for every request to this bucket's website endpoint. If you specify this property, you can't specify any other property."
 
 ### fn spec.forProvider.websiteConfiguration.redirectAllRequestsTo.withHostName
 
@@ -777,7 +760,7 @@ The redirect behavior for every request to this bucket's website endpoint. If yo
 withHostName(hostName)
 ```
 
-Name of the host where requests are redirected.
+"Name of the host where requests are redirected."
 
 ### fn spec.forProvider.websiteConfiguration.redirectAllRequestsTo.withProtocol
 
@@ -785,11 +768,11 @@ Name of the host where requests are redirected.
 withProtocol(protocol)
 ```
 
-Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+"Protocol to use when redirecting requests. The default is the protocol that is used in the original request."
 
 ## obj spec.providerConfigRef
 
-ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.
+"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."
 
 ### fn spec.providerConfigRef.withName
 
@@ -797,11 +780,11 @@ ProviderConfigReference specifies how the provider that will be used to create, 
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.providerRef
 
-ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`
+"ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`"
 
 ### fn spec.providerRef.withName
 
@@ -809,11 +792,11 @@ ProviderReference specifies the provider that will be used to create, observe, u
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.writeConnectionSecretToRef
 
-WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.
+"WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource."
 
 ### fn spec.writeConnectionSecretToRef.withName
 
@@ -821,7 +804,7 @@ WriteConnectionSecretToReference specifies the namespace and name of a Secret to
 withName(name)
 ```
 
-Name of the secret.
+"Name of the secret."
 
 ### fn spec.writeConnectionSecretToRef.withNamespace
 
@@ -829,4 +812,4 @@ Name of the secret.
 withNamespace(namespace)
 ```
 
-Namespace of the secret.
+"Namespace of the secret."

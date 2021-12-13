@@ -4,7 +4,7 @@ permalink: /provider-aws/0.19/rds/v1alpha1/dbCluster/
 
 # rds.v1alpha1.dbCluster
 
-DBCluster is the Schema for the DBClusters API
+"DBCluster is the Schema for the DBClusters API"
 
 ## Index
 
@@ -123,11 +123,11 @@ DBCluster is the Schema for the DBClusters API
 new(name)
 ```
 
-new returns an instance of Dbcluster
+new returns an instance of DBCluster
 
 ## obj metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."
 
 ### fn metadata.withAnnotations
 
@@ -135,7 +135,7 @@ ObjectMeta is metadata that all persisted resources must have, which includes al
 withAnnotations(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 ### fn metadata.withAnnotationsMixin
 
@@ -143,7 +143,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withAnnotationsMixin(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 **Note:** This function appends passed data to existing values
 
@@ -153,7 +153,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withClusterName(clusterName)
 ```
 
-The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
+"The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request."
 
 ### fn metadata.withCreationTimestamp
 
@@ -161,7 +161,7 @@ The name of the cluster which the object belongs to. This is used to distinguish
 withCreationTimestamp(creationTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withDeletionGracePeriodSeconds
 
@@ -169,7 +169,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withDeletionGracePeriodSeconds(deletionGracePeriodSeconds)
 ```
 
-Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
+"Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only."
 
 ### fn metadata.withDeletionTimestamp
 
@@ -177,7 +177,7 @@ Number of seconds allowed for this object to gracefully terminate before it will
 withDeletionTimestamp(deletionTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withFinalizers
 
@@ -185,7 +185,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withFinalizers(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 ### fn metadata.withFinalizersMixin
 
@@ -193,7 +193,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withFinalizersMixin(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 **Note:** This function appends passed data to existing values
 
@@ -203,11 +203,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withGenerateName(generateName)
 ```
 
-GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
-
-If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
-
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
+"GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency"
 
 ### fn metadata.withGeneration
 
@@ -215,7 +211,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 withGeneration(generation)
 ```
 
-A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
+"A sequence number representing a specific generation of the desired state. Populated by the system. Read-only."
 
 ### fn metadata.withLabels
 
@@ -223,7 +219,7 @@ A sequence number representing a specific generation of the desired state. Popul
 withLabels(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 ### fn metadata.withLabelsMixin
 
@@ -231,7 +227,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withLabelsMixin(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
 
@@ -241,7 +237,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withManagedFields(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 ### fn metadata.withManagedFieldsMixin
 
@@ -249,7 +245,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withManagedFieldsMixin(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -259,7 +255,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withName(name)
 ```
 
-Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"
 
 ### fn metadata.withNamespace
 
@@ -267,9 +263,7 @@ Name must be unique within a namespace. Is required when creating resources, alt
 withNamespace(namespace)
 ```
 
-Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
-
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\n\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"
 
 ### fn metadata.withOwnerReferences
 
@@ -277,7 +271,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 withOwnerReferences(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 ### fn metadata.withOwnerReferencesMixin
 
@@ -285,7 +279,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withOwnerReferencesMixin(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 **Note:** This function appends passed data to existing values
 
@@ -295,9 +289,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withResourceVersion(resourceVersion)
 ```
 
-An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
-
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+"An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency"
 
 ### fn metadata.withSelfLink
 
@@ -305,9 +297,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 withSelfLink(selfLink)
 ```
 
-SelfLink is a URL representing this object. Populated by the system. Read-only.
-
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+"SelfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release."
 
 ### fn metadata.withUid
 
@@ -315,13 +305,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 withUid(uid)
 ```
 
-UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
-
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+"UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
 
 ## obj spec
 
-DBClusterSpec defines the desired state of DBCluster
+"DBClusterSpec defines the desired state of DBCluster"
 
 ### fn spec.withDeletionPolicy
 
@@ -329,11 +317,11 @@ DBClusterSpec defines the desired state of DBCluster
 withDeletionPolicy(deletionPolicy)
 ```
 
-DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource.
+"DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either \"Delete\" or \"Orphan\" the external resource."
 
 ## obj spec.forProvider
 
-DBClusterParameters defines the desired state of DBCluster
+"DBClusterParameters defines the desired state of DBCluster"
 
 ### fn spec.forProvider.withAvailabilityZones
 
@@ -341,7 +329,7 @@ DBClusterParameters defines the desired state of DBCluster
 withAvailabilityZones(availabilityZones)
 ```
 
-A list of Availability Zones (AZs) where instances in the DB cluster can be created. For information on AWS Regions and Availability Zones, see Choosing the Regions and Availability Zones (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.RegionsAndAvailabilityZones.html) in the Amazon Aurora User Guide.
+"A list of Availability Zones (AZs) where instances in the DB cluster can be created. For information on AWS Regions and Availability Zones, see Choosing the Regions and Availability Zones (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.RegionsAndAvailabilityZones.html) in the Amazon Aurora User Guide."
 
 ### fn spec.forProvider.withAvailabilityZonesMixin
 
@@ -349,7 +337,7 @@ A list of Availability Zones (AZs) where instances in the DB cluster can be crea
 withAvailabilityZonesMixin(availabilityZones)
 ```
 
-A list of Availability Zones (AZs) where instances in the DB cluster can be created. For information on AWS Regions and Availability Zones, see Choosing the Regions and Availability Zones (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.RegionsAndAvailabilityZones.html) in the Amazon Aurora User Guide.
+"A list of Availability Zones (AZs) where instances in the DB cluster can be created. For information on AWS Regions and Availability Zones, see Choosing the Regions and Availability Zones (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.RegionsAndAvailabilityZones.html) in the Amazon Aurora User Guide."
 
 **Note:** This function appends passed data to existing values
 
@@ -359,11 +347,7 @@ A list of Availability Zones (AZs) where instances in the DB cluster can be crea
 withBacktrackWindow(backtrackWindow)
 ```
 
-The target backtrack window, in seconds. To disable backtracking, set this value to 0. 
- Currently, Backtrack is only supported for Aurora MySQL DB clusters. 
- Default: 0 
- Constraints: 
-    * If specified, this value must be set to a number from 0 to 259,200 (72    hours).
+"The target backtrack window, in seconds. To disable backtracking, set this value to 0. \n Currently, Backtrack is only supported for Aurora MySQL DB clusters. \n Default: 0 \n Constraints: \n    * If specified, this value must be set to a number from 0 to 259,200 (72    hours)."
 
 ### fn spec.forProvider.withBackupRetentionPeriod
 
@@ -371,10 +355,7 @@ The target backtrack window, in seconds. To disable backtracking, set this value
 withBackupRetentionPeriod(backupRetentionPeriod)
 ```
 
-The number of days for which automated backups are retained. 
- Default: 1 
- Constraints: 
-    * Must be a value from 1 to 35
+"The number of days for which automated backups are retained. \n Default: 1 \n Constraints: \n    * Must be a value from 1 to 35"
 
 ### fn spec.forProvider.withCharacterSetName
 
@@ -382,7 +363,7 @@ The number of days for which automated backups are retained.
 withCharacterSetName(characterSetName)
 ```
 
-A value that indicates that the DB cluster should be associated with the specified CharacterSet.
+"A value that indicates that the DB cluster should be associated with the specified CharacterSet."
 
 ### fn spec.forProvider.withCopyTagsToSnapshot
 
@@ -390,7 +371,7 @@ A value that indicates that the DB cluster should be associated with the specifi
 withCopyTagsToSnapshot(copyTagsToSnapshot)
 ```
 
-A value that indicates whether to copy all tags from the DB cluster to snapshots of the DB cluster. The default is not to copy them.
+"A value that indicates whether to copy all tags from the DB cluster to snapshots of the DB cluster. The default is not to copy them."
 
 ### fn spec.forProvider.withDatabaseName
 
@@ -398,7 +379,7 @@ A value that indicates whether to copy all tags from the DB cluster to snapshots
 withDatabaseName(databaseName)
 ```
 
-The name for your database of up to 64 alphanumeric characters. If you do not provide a name, Amazon RDS doesn't create a database in the DB cluster you are creating.
+"The name for your database of up to 64 alphanumeric characters. If you do not provide a name, Amazon RDS doesn't create a database in the DB cluster you are creating."
 
 ### fn spec.forProvider.withDbClusterParameterGroupName
 
@@ -406,9 +387,7 @@ The name for your database of up to 64 alphanumeric characters. If you do not pr
 withDbClusterParameterGroupName(dbClusterParameterGroupName)
 ```
 
-The name of the DB cluster parameter group to associate with this DB cluster. If you do not specify a value, then the default DB cluster parameter group for the specified DB engine and version is used. 
- Constraints: 
-    * If supplied, must match the name of an existing DB cluster parameter    group.
+"The name of the DB cluster parameter group to associate with this DB cluster. If you do not specify a value, then the default DB cluster parameter group for the specified DB engine and version is used. \n Constraints: \n    * If supplied, must match the name of an existing DB cluster parameter    group."
 
 ### fn spec.forProvider.withDbSubnetGroupName
 
@@ -416,9 +395,7 @@ The name of the DB cluster parameter group to associate with this DB cluster. If
 withDbSubnetGroupName(dbSubnetGroupName)
 ```
 
-A DB subnet group to associate with this DB cluster. 
- Constraints: Must match the name of an existing DBSubnetGroup. Must not be default. 
- Example: mySubnetgroup
+"A DB subnet group to associate with this DB cluster. \n Constraints: Must match the name of an existing DBSubnetGroup. Must not be default. \n Example: mySubnetgroup"
 
 ### fn spec.forProvider.withDeletionProtection
 
@@ -426,7 +403,7 @@ A DB subnet group to associate with this DB cluster.
 withDeletionProtection(deletionProtection)
 ```
 
-A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
+"A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled."
 
 ### fn spec.forProvider.withDestinationRegion
 
@@ -434,7 +411,7 @@ A value that indicates whether the DB cluster has deletion protection enabled. T
 withDestinationRegion(destinationRegion)
 ```
 
-DestinationRegion is used for presigning the request to a given region.
+"DestinationRegion is used for presigning the request to a given region."
 
 ### fn spec.forProvider.withDomain
 
@@ -442,8 +419,7 @@ DestinationRegion is used for presigning the request to a given region.
 withDomain(domain)
 ```
 
-The Active Directory directory ID to create the DB cluster in. 
- For Amazon Aurora DB clusters, Amazon RDS can use Kerberos Authentication to authenticate users that connect to the DB cluster. For more information, see Kerberos Authentication (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/kerberos-authentication.html) in the Amazon Aurora User Guide.
+"The Active Directory directory ID to create the DB cluster in. \n For Amazon Aurora DB clusters, Amazon RDS can use Kerberos Authentication to authenticate users that connect to the DB cluster. For more information, see Kerberos Authentication (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/kerberos-authentication.html) in the Amazon Aurora User Guide."
 
 ### fn spec.forProvider.withDomainIAMRoleName
 
@@ -451,7 +427,7 @@ The Active Directory directory ID to create the DB cluster in.
 withDomainIAMRoleName(domainIAMRoleName)
 ```
 
-Specify the name of the IAM role to be used when making API calls to the Directory Service.
+"Specify the name of the IAM role to be used when making API calls to the Directory Service."
 
 ### fn spec.forProvider.withEnableCloudwatchLogsExports
 
@@ -459,11 +435,7 @@ Specify the name of the IAM role to be used when making API calls to the Directo
 withEnableCloudwatchLogsExports(enableCloudwatchLogsExports)
 ```
 
-The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on the DB engine being used. For more information, see Publishing Database Logs to Amazon CloudWatch Logs (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch) in the Amazon Aurora User Guide. 
- Aurora MySQL 
- Possible values are audit, error, general, and slowquery. 
- Aurora PostgreSQL 
- Possible values are postgresql and upgrade.
+"The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on the DB engine being used. For more information, see Publishing Database Logs to Amazon CloudWatch Logs (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch) in the Amazon Aurora User Guide. \n Aurora MySQL \n Possible values are audit, error, general, and slowquery. \n Aurora PostgreSQL \n Possible values are postgresql and upgrade."
 
 ### fn spec.forProvider.withEnableCloudwatchLogsExportsMixin
 
@@ -471,11 +443,7 @@ The list of log types that need to be enabled for exporting to CloudWatch Logs. 
 withEnableCloudwatchLogsExportsMixin(enableCloudwatchLogsExports)
 ```
 
-The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on the DB engine being used. For more information, see Publishing Database Logs to Amazon CloudWatch Logs (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch) in the Amazon Aurora User Guide. 
- Aurora MySQL 
- Possible values are audit, error, general, and slowquery. 
- Aurora PostgreSQL 
- Possible values are postgresql and upgrade.
+"The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on the DB engine being used. For more information, see Publishing Database Logs to Amazon CloudWatch Logs (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch) in the Amazon Aurora User Guide. \n Aurora MySQL \n Possible values are audit, error, general, and slowquery. \n Aurora PostgreSQL \n Possible values are postgresql and upgrade."
 
 **Note:** This function appends passed data to existing values
 
@@ -485,7 +453,7 @@ The list of log types that need to be enabled for exporting to CloudWatch Logs. 
 withEnableGlobalWriteForwarding(enableGlobalWriteForwarding)
 ```
 
-A value that indicates whether to enable write operations to be forwarded from this cluster to the primary cluster in an Aurora global database. The resulting changes are replicated back to this cluster. This parameter only applies to DB clusters that are secondary clusters in an Aurora global database. By default, Aurora disallows write operations for secondary clusters.
+"A value that indicates whether to enable write operations to be forwarded from this cluster to the primary cluster in an Aurora global database. The resulting changes are replicated back to this cluster. This parameter only applies to DB clusters that are secondary clusters in an Aurora global database. By default, Aurora disallows write operations for secondary clusters."
 
 ### fn spec.forProvider.withEnableHTTPEndpoint
 
@@ -493,9 +461,7 @@ A value that indicates whether to enable write operations to be forwarded from t
 withEnableHTTPEndpoint(enableHTTPEndpoint)
 ```
 
-A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster. By default, the HTTP endpoint is disabled. 
- When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora Serverless DB cluster. You can also query your database from inside the RDS console with the query editor. 
- For more information, see Using the Data API for Aurora Serverless (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the Amazon Aurora User Guide.
+"A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster. By default, the HTTP endpoint is disabled. \n When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora Serverless DB cluster. You can also query your database from inside the RDS console with the query editor. \n For more information, see Using the Data API for Aurora Serverless (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the Amazon Aurora User Guide."
 
 ### fn spec.forProvider.withEnableIAMDatabaseAuthentication
 
@@ -503,8 +469,7 @@ A value that indicates whether to enable the HTTP endpoint for an Aurora Serverl
 withEnableIAMDatabaseAuthentication(enableIAMDatabaseAuthentication)
 ```
 
-A value that indicates whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts. By default, mapping is disabled. 
- For more information, see IAM Database Authentication (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) in the Amazon Aurora User Guide.
+"A value that indicates whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts. By default, mapping is disabled. \n For more information, see IAM Database Authentication (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) in the Amazon Aurora User Guide."
 
 ### fn spec.forProvider.withEngine
 
@@ -512,8 +477,7 @@ A value that indicates whether to enable mapping of AWS Identity and Access Mana
 withEngine(engine)
 ```
 
-The name of the database engine to be used for this DB cluster. 
- Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora), and aurora-postgresql
+"The name of the database engine to be used for this DB cluster. \n Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora), and aurora-postgresql"
 
 ### fn spec.forProvider.withEngineMode
 
@@ -521,16 +485,7 @@ The name of the database engine to be used for this DB cluster.
 withEngineMode(engineMode)
 ```
 
-The DB engine mode of the DB cluster, either provisioned, serverless, parallelquery, global, or multimaster. 
- The parallelquery engine mode isn't required for Aurora MySQL version 1.23 and higher 1.x versions, and version 2.09 and higher 2.x versions. 
- The global engine mode isn't required for Aurora MySQL version 1.22 and higher 1.x versions, and global engine mode isn't required for any 2.x versions. 
- The multimaster engine mode only applies for DB clusters created with Aurora MySQL version 5.6.10a. 
- For Aurora PostgreSQL, the global engine mode isn't required, and both the parallelquery and the multimaster engine modes currently aren't supported. 
- Limitations and requirements apply to some DB engine modes. For more information, see the following sections in the Amazon Aurora User Guide: 
-    * Limitations of Aurora Serverless (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations) 
-    * Limitations of Parallel Query (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations) 
-    * Limitations of Aurora Global Databases (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations) 
-    * Limitations of Multi-Master Clusters (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations)
+"The DB engine mode of the DB cluster, either provisioned, serverless, parallelquery, global, or multimaster. \n The parallelquery engine mode isn't required for Aurora MySQL version 1.23 and higher 1.x versions, and version 2.09 and higher 2.x versions. \n The global engine mode isn't required for Aurora MySQL version 1.22 and higher 1.x versions, and global engine mode isn't required for any 2.x versions. \n The multimaster engine mode only applies for DB clusters created with Aurora MySQL version 5.6.10a. \n For Aurora PostgreSQL, the global engine mode isn't required, and both the parallelquery and the multimaster engine modes currently aren't supported. \n Limitations and requirements apply to some DB engine modes. For more information, see the following sections in the Amazon Aurora User Guide: \n    * Limitations of Aurora Serverless (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations) \n    * Limitations of Parallel Query (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations) \n    * Limitations of Aurora Global Databases (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations) \n    * Limitations of Multi-Master Clusters (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations)"
 
 ### fn spec.forProvider.withEngineVersion
 
@@ -538,17 +493,7 @@ The DB engine mode of the DB cluster, either provisioned, serverless, parallelqu
 withEngineVersion(engineVersion)
 ```
 
-The version number of the database engine to use. 
- To list all of the available engine versions for aurora (for MySQL 5.6-compatible Aurora), use the following command: 
- aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion" 
- To list all of the available engine versions for aurora-mysql (for MySQL 5.7-compatible Aurora), use the following command: 
- aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion" 
- To list all of the available engine versions for aurora-postgresql, use the following command: 
- aws rds describe-db-engine-versions --engine aurora-postgresql --query "DBEngineVersions[].EngineVersion" 
- Aurora MySQL 
- Example: 5.6.10a, 5.6.mysql_aurora.1.19.2, 5.7.12, 5.7.mysql_aurora.2.04.5 
- Aurora PostgreSQL 
- Example: 9.6.3, 10.7
+"The version number of the database engine to use. \n To list all of the available engine versions for aurora (for MySQL 5.6-compatible Aurora), use the following command: \n aws rds describe-db-engine-versions --engine aurora --query \"DBEngineVersions[].EngineVersion\" \n To list all of the available engine versions for aurora-mysql (for MySQL 5.7-compatible Aurora), use the following command: \n aws rds describe-db-engine-versions --engine aurora-mysql --query \"DBEngineVersions[].EngineVersion\" \n To list all of the available engine versions for aurora-postgresql, use the following command: \n aws rds describe-db-engine-versions --engine aurora-postgresql --query \"DBEngineVersions[].EngineVersion\" \n Aurora MySQL \n Example: 5.6.10a, 5.6.mysql_aurora.1.19.2, 5.7.12, 5.7.mysql_aurora.2.04.5 \n Aurora PostgreSQL \n Example: 9.6.3, 10.7"
 
 ### fn spec.forProvider.withFinalDBSnapshotIdentifier
 
@@ -556,12 +501,7 @@ The version number of the database engine to use.
 withFinalDBSnapshotIdentifier(finalDBSnapshotIdentifier)
 ```
 
-The DB cluster snapshot identifier of the new DB cluster snapshot created when SkipFinalSnapshot is disabled. 
- Specifying this parameter and also skipping the creation of a final DB cluster snapshot with the SkipFinalShapshot parameter results in an error. 
- Constraints: 
-    * Must be 1 to 255 letters, numbers, or hyphens. 
-    * First character must be a letter 
-    * Can't end with a hyphen or contain two consecutive hyphens
+"The DB cluster snapshot identifier of the new DB cluster snapshot created when SkipFinalSnapshot is disabled. \n Specifying this parameter and also skipping the creation of a final DB cluster snapshot with the SkipFinalShapshot parameter results in an error. \n Constraints: \n    * Must be 1 to 255 letters, numbers, or hyphens. \n    * First character must be a letter \n    * Can't end with a hyphen or contain two consecutive hyphens"
 
 ### fn spec.forProvider.withGlobalClusterIdentifier
 
@@ -569,7 +509,7 @@ The DB cluster snapshot identifier of the new DB cluster snapshot created when S
 withGlobalClusterIdentifier(globalClusterIdentifier)
 ```
 
-The global cluster ID of an Aurora cluster that becomes the primary cluster in the new global database cluster.
+"The global cluster ID of an Aurora cluster that becomes the primary cluster in the new global database cluster."
 
 ### fn spec.forProvider.withKmsKeyID
 
@@ -577,13 +517,7 @@ The global cluster ID of an Aurora cluster that becomes the primary cluster in t
 withKmsKeyID(kmsKeyID)
 ```
 
-The AWS KMS key identifier for an encrypted DB cluster. 
- The AWS KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the AWS KMS customer master key (CMK). To use a CMK in a different AWS account, specify the key ARN or alias ARN. 
- When a CMK isn't specified in KmsKeyId: 
-    * If ReplicationSourceIdentifier identifies an encrypted source, then    Amazon RDS will use the CMK used to encrypt the source. Otherwise, Amazon    RDS will use your default CMK. 
-    * If the StorageEncrypted parameter is enabled and ReplicationSourceIdentifier    isn't specified, then Amazon RDS will use your default CMK. 
- There is a default CMK for your AWS account. Your AWS account has a different default CMK for each AWS Region. 
- If you create a read replica of an encrypted DB cluster in another AWS Region, you must set KmsKeyId to a AWS KMS key identifier that is valid in the destination AWS Region. This CMK is used to encrypt the read replica in that AWS Region.
+"The AWS KMS key identifier for an encrypted DB cluster. \n The AWS KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the AWS KMS customer master key (CMK). To use a CMK in a different AWS account, specify the key ARN or alias ARN. \n When a CMK isn't specified in KmsKeyId: \n    * If ReplicationSourceIdentifier identifies an encrypted source, then    Amazon RDS will use the CMK used to encrypt the source. Otherwise, Amazon    RDS will use your default CMK. \n    * If the StorageEncrypted parameter is enabled and ReplicationSourceIdentifier    isn't specified, then Amazon RDS will use your default CMK. \n There is a default CMK for your AWS account. Your AWS account has a different default CMK for each AWS Region. \n If you create a read replica of an encrypted DB cluster in another AWS Region, you must set KmsKeyId to a AWS KMS key identifier that is valid in the destination AWS Region. This CMK is used to encrypt the read replica in that AWS Region."
 
 ### fn spec.forProvider.withMasterUsername
 
@@ -591,11 +525,7 @@ The AWS KMS key identifier for an encrypted DB cluster.
 withMasterUsername(masterUsername)
 ```
 
-The name of the master user for the DB cluster. 
- Constraints: 
-    * Must be 1 to 16 letters or numbers. 
-    * First character must be a letter. 
-    * Can't be a reserved word for the chosen database engine.
+"The name of the master user for the DB cluster. \n Constraints: \n    * Must be 1 to 16 letters or numbers. \n    * First character must be a letter. \n    * Can't be a reserved word for the chosen database engine."
 
 ### fn spec.forProvider.withOptionGroupName
 
@@ -603,8 +533,7 @@ The name of the master user for the DB cluster.
 withOptionGroupName(optionGroupName)
 ```
 
-A value that indicates that the DB cluster should be associated with the specified option group. 
- Permanent options can't be removed from an option group. The option group can't be removed from a DB cluster once it is associated with a DB cluster.
+"A value that indicates that the DB cluster should be associated with the specified option group. \n Permanent options can't be removed from an option group. The option group can't be removed from a DB cluster once it is associated with a DB cluster."
 
 ### fn spec.forProvider.withPort
 
@@ -612,8 +541,7 @@ A value that indicates that the DB cluster should be associated with the specifi
 withPort(port)
 ```
 
-The port number on which the instances in the DB cluster accept connections. 
- Default: 3306 if engine is set as aurora or 5432 if set to aurora-postgresql.
+"The port number on which the instances in the DB cluster accept connections. \n Default: 3306 if engine is set as aurora or 5432 if set to aurora-postgresql."
 
 ### fn spec.forProvider.withPreSignedURL
 
@@ -621,14 +549,7 @@ The port number on which the instances in the DB cluster accept connections.
 withPreSignedURL(preSignedURL)
 ```
 
-A URL that contains a Signature Version 4 signed request for the CreateDBCluster action to be called in the source AWS Region where the DB cluster is replicated from. You only need to specify PreSignedUrl when you are performing cross-region replication from an encrypted DB cluster. 
- The pre-signed URL must be a valid request for the CreateDBCluster API action that can be executed in the source AWS Region that contains the encrypted DB cluster to be copied. 
- The pre-signed URL request must contain the following parameter values: 
-    * KmsKeyId - The AWS KMS key identifier for the key to use to encrypt    the copy of the DB cluster in the destination AWS Region. This should    refer to the same AWS KMS CMK for both the CreateDBCluster action that    is called in the destination AWS Region, and the action contained in the    pre-signed URL. 
-    * DestinationRegion - The name of the AWS Region that Aurora read replica    will be created in. 
-    * ReplicationSourceIdentifier - The DB cluster identifier for the encrypted    DB cluster to be copied. This identifier must be in the Amazon Resource    Name (ARN) format for the source AWS Region. For example, if you are copying    an encrypted DB cluster from the us-west-2 AWS Region, then your ReplicationSourceIdentifier    would look like Example: arn:aws:rds:us-west-2:123456789012:cluster:aurora-cluster1. 
- To learn how to generate a Signature Version 4 signed request, see Authenticating Requests: Using Query Parameters (AWS Signature Version 4) (https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html) and Signature Version 4 Signing Process (https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html). 
- If you are using an AWS SDK tool or the AWS CLI, you can specify SourceRegion (or --source-region for the AWS CLI) instead of specifying PreSignedUrl manually. Specifying SourceRegion autogenerates a pre-signed URL that is a valid request for the operation that can be executed in the source AWS Region.
+"A URL that contains a Signature Version 4 signed request for the CreateDBCluster action to be called in the source AWS Region where the DB cluster is replicated from. You only need to specify PreSignedUrl when you are performing cross-region replication from an encrypted DB cluster. \n The pre-signed URL must be a valid request for the CreateDBCluster API action that can be executed in the source AWS Region that contains the encrypted DB cluster to be copied. \n The pre-signed URL request must contain the following parameter values: \n    * KmsKeyId - The AWS KMS key identifier for the key to use to encrypt    the copy of the DB cluster in the destination AWS Region. This should    refer to the same AWS KMS CMK for both the CreateDBCluster action that    is called in the destination AWS Region, and the action contained in the    pre-signed URL. \n    * DestinationRegion - The name of the AWS Region that Aurora read replica    will be created in. \n    * ReplicationSourceIdentifier - The DB cluster identifier for the encrypted    DB cluster to be copied. This identifier must be in the Amazon Resource    Name (ARN) format for the source AWS Region. For example, if you are copying    an encrypted DB cluster from the us-west-2 AWS Region, then your ReplicationSourceIdentifier    would look like Example: arn:aws:rds:us-west-2:123456789012:cluster:aurora-cluster1. \n To learn how to generate a Signature Version 4 signed request, see Authenticating Requests: Using Query Parameters (AWS Signature Version 4) (https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html) and Signature Version 4 Signing Process (https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html). \n If you are using an AWS SDK tool or the AWS CLI, you can specify SourceRegion (or --source-region for the AWS CLI) instead of specifying PreSignedUrl manually. Specifying SourceRegion autogenerates a pre-signed URL that is a valid request for the operation that can be executed in the source AWS Region."
 
 ### fn spec.forProvider.withPreferredBackupWindow
 
@@ -636,13 +557,7 @@ A URL that contains a Signature Version 4 signed request for the CreateDBCluster
 withPreferredBackupWindow(preferredBackupWindow)
 ```
 
-The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. 
- The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region. To see the time blocks available, see Adjusting the Preferred DB Cluster Maintenance Window (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora) in the Amazon Aurora User Guide. 
- Constraints: 
-    * Must be in the format hh24:mi-hh24:mi. 
-    * Must be in Universal Coordinated Time (UTC). 
-    * Must not conflict with the preferred maintenance window. 
-    * Must be at least 30 minutes.
+"The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. \n The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region. To see the time blocks available, see Adjusting the Preferred DB Cluster Maintenance Window (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora) in the Amazon Aurora User Guide. \n Constraints: \n    * Must be in the format hh24:mi-hh24:mi. \n    * Must be in Universal Coordinated Time (UTC). \n    * Must not conflict with the preferred maintenance window. \n    * Must be at least 30 minutes."
 
 ### fn spec.forProvider.withPreferredMaintenanceWindow
 
@@ -650,11 +565,7 @@ The daily time range during which automated backups are created if automated bac
 withPreferredMaintenanceWindow(preferredMaintenanceWindow)
 ```
 
-The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC). 
- Format: ddd:hh24:mi-ddd:hh24:mi 
- The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region, occurring on a random day of the week. To see the time blocks available, see Adjusting the Preferred DB Cluster Maintenance Window (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora) in the Amazon Aurora User Guide. 
- Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun. 
- Constraints: Minimum 30-minute window.
+"The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC). \n Format: ddd:hh24:mi-ddd:hh24:mi \n The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region, occurring on a random day of the week. To see the time blocks available, see Adjusting the Preferred DB Cluster Maintenance Window (https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora) in the Amazon Aurora User Guide. \n Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun. \n Constraints: Minimum 30-minute window."
 
 ### fn spec.forProvider.withRegion
 
@@ -662,7 +573,7 @@ The weekly time range during which system maintenance can occur, in Universal Co
 withRegion(region)
 ```
 
-Region is which region the DBCluster will be created.
+"Region is which region the DBCluster will be created."
 
 ### fn spec.forProvider.withReplicationSourceIdentifier
 
@@ -670,7 +581,7 @@ Region is which region the DBCluster will be created.
 withReplicationSourceIdentifier(replicationSourceIdentifier)
 ```
 
-The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this DB cluster is created as a read replica.
+"The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this DB cluster is created as a read replica."
 
 ### fn spec.forProvider.withSkipFinalSnapshot
 
@@ -678,8 +589,7 @@ The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this D
 withSkipFinalSnapshot(skipFinalSnapshot)
 ```
 
-A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is created. By default, this parameter is disabled. 
- You must specify a FinalDBSnapshotIdentifier parameter if SkipFinalSnapshot is disabled.
+"A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is created. By default, this parameter is disabled. \n You must specify a FinalDBSnapshotIdentifier parameter if SkipFinalSnapshot is disabled."
 
 ### fn spec.forProvider.withSourceRegion
 
@@ -687,7 +597,7 @@ A value that indicates whether to skip the creation of a final DB cluster snapsh
 withSourceRegion(sourceRegion)
 ```
 
-SourceRegion is the source region where the resource exists. This is not sent over the wire and is only used for presigning. This value should always have the same region as the source ARN.
+"SourceRegion is the source region where the resource exists. This is not sent over the wire and is only used for presigning. This value should always have the same region as the source ARN."
 
 ### fn spec.forProvider.withStorageEncrypted
 
@@ -695,7 +605,7 @@ SourceRegion is the source region where the resource exists. This is not sent ov
 withStorageEncrypted(storageEncrypted)
 ```
 
-A value that indicates whether the DB cluster is encrypted.
+"A value that indicates whether the DB cluster is encrypted."
 
 ### fn spec.forProvider.withTags
 
@@ -703,7 +613,7 @@ A value that indicates whether the DB cluster is encrypted.
 withTags(tags)
 ```
 
-Tags to assign to the DB cluster.
+"Tags to assign to the DB cluster."
 
 ### fn spec.forProvider.withTagsMixin
 
@@ -711,7 +621,7 @@ Tags to assign to the DB cluster.
 withTagsMixin(tags)
 ```
 
-Tags to assign to the DB cluster.
+"Tags to assign to the DB cluster."
 
 **Note:** This function appends passed data to existing values
 
@@ -721,7 +631,7 @@ Tags to assign to the DB cluster.
 withVpcSecurityGroupIDRefs(vpcSecurityGroupIDRefs)
 ```
 
-VPCSecurityGroupIDRefs are references to VPCSecurityGroups used to set the VPCSecurityGroupIDs.
+"VPCSecurityGroupIDRefs are references to VPCSecurityGroups used to set the VPCSecurityGroupIDs."
 
 ### fn spec.forProvider.withVpcSecurityGroupIDRefsMixin
 
@@ -729,7 +639,7 @@ VPCSecurityGroupIDRefs are references to VPCSecurityGroups used to set the VPCSe
 withVpcSecurityGroupIDRefsMixin(vpcSecurityGroupIDRefs)
 ```
 
-VPCSecurityGroupIDRefs are references to VPCSecurityGroups used to set the VPCSecurityGroupIDs.
+"VPCSecurityGroupIDRefs are references to VPCSecurityGroups used to set the VPCSecurityGroupIDs."
 
 **Note:** This function appends passed data to existing values
 
@@ -739,7 +649,7 @@ VPCSecurityGroupIDRefs are references to VPCSecurityGroups used to set the VPCSe
 withVpcSecurityGroupIDs(vpcSecurityGroupIDs)
 ```
 
-A list of EC2 VPC security groups to associate with this DB cluster.
+"A list of EC2 VPC security groups to associate with this DB cluster."
 
 ### fn spec.forProvider.withVpcSecurityGroupIDsMixin
 
@@ -747,13 +657,13 @@ A list of EC2 VPC security groups to associate with this DB cluster.
 withVpcSecurityGroupIDsMixin(vpcSecurityGroupIDs)
 ```
 
-A list of EC2 VPC security groups to associate with this DB cluster.
+"A list of EC2 VPC security groups to associate with this DB cluster."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.dbSubnetGroupNameRef
 
-DBSubnetGroupNameRef is a reference to a DBSubnetGroup used to set DBSubnetGroupName.
+"DBSubnetGroupNameRef is a reference to a DBSubnetGroup used to set DBSubnetGroupName."
 
 ### fn spec.forProvider.dbSubnetGroupNameRef.withName
 
@@ -761,11 +671,11 @@ DBSubnetGroupNameRef is a reference to a DBSubnetGroup used to set DBSubnetGroup
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.dbSubnetGroupNameSelector
 
-DBSubnetGroupNameSelector selects a reference to a DBSubnetGroup used to set DBSubnetGroupName.
+"DBSubnetGroupNameSelector selects a reference to a DBSubnetGroup used to set DBSubnetGroupName."
 
 ### fn spec.forProvider.dbSubnetGroupNameSelector.withMatchControllerRef
 
@@ -773,7 +683,7 @@ DBSubnetGroupNameSelector selects a reference to a DBSubnetGroup used to set DBS
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.dbSubnetGroupNameSelector.withMatchLabels
 
@@ -781,7 +691,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.dbSubnetGroupNameSelector.withMatchLabelsMixin
 
@@ -789,13 +699,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.domainIAMRoleNameRef
 
-DomainIAMRoleNameRef is a reference to an IAMRole used to set DomainIAMRoleName.
+"DomainIAMRoleNameRef is a reference to an IAMRole used to set DomainIAMRoleName."
 
 ### fn spec.forProvider.domainIAMRoleNameRef.withName
 
@@ -803,11 +713,11 @@ DomainIAMRoleNameRef is a reference to an IAMRole used to set DomainIAMRoleName.
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.domainIAMRoleNameSelector
 
-DomainIAMRoleNameSelector selects a reference to an IAMRole used to set DomainIAMRoleName.
+"DomainIAMRoleNameSelector selects a reference to an IAMRole used to set DomainIAMRoleName."
 
 ### fn spec.forProvider.domainIAMRoleNameSelector.withMatchControllerRef
 
@@ -815,7 +725,7 @@ DomainIAMRoleNameSelector selects a reference to an IAMRole used to set DomainIA
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.domainIAMRoleNameSelector.withMatchLabels
 
@@ -823,7 +733,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.domainIAMRoleNameSelector.withMatchLabelsMixin
 
@@ -831,13 +741,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.kmsKeyIDRef
 
-KMSKeyIDRef is a reference to a KMS Key used to set KMSKeyID.
+"KMSKeyIDRef is a reference to a KMS Key used to set KMSKeyID."
 
 ### fn spec.forProvider.kmsKeyIDRef.withName
 
@@ -845,11 +755,11 @@ KMSKeyIDRef is a reference to a KMS Key used to set KMSKeyID.
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.kmsKeyIDSelector
 
-KMSKeyIDSelector selects a reference to a KMS Key used to set KMSKeyID.
+"KMSKeyIDSelector selects a reference to a KMS Key used to set KMSKeyID."
 
 ### fn spec.forProvider.kmsKeyIDSelector.withMatchControllerRef
 
@@ -857,7 +767,7 @@ KMSKeyIDSelector selects a reference to a KMS Key used to set KMSKeyID.
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.kmsKeyIDSelector.withMatchLabels
 
@@ -865,7 +775,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.kmsKeyIDSelector.withMatchLabelsMixin
 
@@ -873,14 +783,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.masterUserPasswordSecretRef
 
-The password for the master database user. This password can contain any printable ASCII character except "/", """, or "@". 
- Constraints: Must contain from 8 to 41 characters. Required.
+"The password for the master database user. This password can contain any printable ASCII character except \"/\", \"\"\", or \"@\". \n Constraints: Must contain from 8 to 41 characters. Required."
 
 ### fn spec.forProvider.masterUserPasswordSecretRef.withKey
 
@@ -888,7 +797,7 @@ The password for the master database user. This password can contain any printab
 withKey(key)
 ```
 
-The key to select.
+"The key to select."
 
 ### fn spec.forProvider.masterUserPasswordSecretRef.withName
 
@@ -896,7 +805,7 @@ The key to select.
 withName(name)
 ```
 
-Name of the secret.
+"Name of the secret."
 
 ### fn spec.forProvider.masterUserPasswordSecretRef.withNamespace
 
@@ -904,11 +813,11 @@ Name of the secret.
 withNamespace(namespace)
 ```
 
-Namespace of the secret.
+"Namespace of the secret."
 
 ## obj spec.forProvider.scalingConfiguration
 
-For DB clusters in serverless DB engine mode, the scaling properties of the DB cluster.
+"For DB clusters in serverless DB engine mode, the scaling properties of the DB cluster."
 
 ### fn spec.forProvider.scalingConfiguration.withAutoPause
 
@@ -952,7 +861,7 @@ withTimeoutAction(timeoutAction)
 
 ## obj spec.forProvider.vpcSecurityGroupIDSelector
 
-VPCSecurityGroupIDSelector selects references to VPCSecurityGroups used to set the VPCSecurityGroupIDs.
+"VPCSecurityGroupIDSelector selects references to VPCSecurityGroups used to set the VPCSecurityGroupIDs."
 
 ### fn spec.forProvider.vpcSecurityGroupIDSelector.withMatchControllerRef
 
@@ -960,7 +869,7 @@ VPCSecurityGroupIDSelector selects references to VPCSecurityGroups used to set t
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.vpcSecurityGroupIDSelector.withMatchLabels
 
@@ -968,7 +877,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.vpcSecurityGroupIDSelector.withMatchLabelsMixin
 
@@ -976,13 +885,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 
-ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.
+"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."
 
 ### fn spec.providerConfigRef.withName
 
@@ -990,11 +899,11 @@ ProviderConfigReference specifies how the provider that will be used to create, 
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.providerRef
 
-ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`
+"ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`"
 
 ### fn spec.providerRef.withName
 
@@ -1002,11 +911,11 @@ ProviderReference specifies the provider that will be used to create, observe, u
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.writeConnectionSecretToRef
 
-WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.
+"WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource."
 
 ### fn spec.writeConnectionSecretToRef.withName
 
@@ -1014,7 +923,7 @@ WriteConnectionSecretToReference specifies the namespace and name of a Secret to
 withName(name)
 ```
 
-Name of the secret.
+"Name of the secret."
 
 ### fn spec.writeConnectionSecretToRef.withNamespace
 
@@ -1022,4 +931,4 @@ Name of the secret.
 withNamespace(namespace)
 ```
 
-Namespace of the secret.
+"Namespace of the secret."

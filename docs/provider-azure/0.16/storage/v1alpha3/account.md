@@ -4,7 +4,7 @@ permalink: /provider-azure/0.16/storage/v1alpha3/account/
 
 # storage.v1alpha3.account
 
-An Account is a managed resource that represents an Azure Blob Service Account.
+"An Account is a managed resource that represents an Azure Blob Service Account."
 
 ## Index
 
@@ -94,7 +94,7 @@ new returns an instance of Account
 
 ## obj metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."
 
 ### fn metadata.withAnnotations
 
@@ -102,7 +102,7 @@ ObjectMeta is metadata that all persisted resources must have, which includes al
 withAnnotations(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 ### fn metadata.withAnnotationsMixin
 
@@ -110,7 +110,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withAnnotationsMixin(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 **Note:** This function appends passed data to existing values
 
@@ -120,7 +120,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withClusterName(clusterName)
 ```
 
-The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
+"The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request."
 
 ### fn metadata.withCreationTimestamp
 
@@ -128,7 +128,7 @@ The name of the cluster which the object belongs to. This is used to distinguish
 withCreationTimestamp(creationTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withDeletionGracePeriodSeconds
 
@@ -136,7 +136,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withDeletionGracePeriodSeconds(deletionGracePeriodSeconds)
 ```
 
-Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
+"Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only."
 
 ### fn metadata.withDeletionTimestamp
 
@@ -144,7 +144,7 @@ Number of seconds allowed for this object to gracefully terminate before it will
 withDeletionTimestamp(deletionTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withFinalizers
 
@@ -152,7 +152,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withFinalizers(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 ### fn metadata.withFinalizersMixin
 
@@ -160,7 +160,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withFinalizersMixin(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 **Note:** This function appends passed data to existing values
 
@@ -170,11 +170,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withGenerateName(generateName)
 ```
 
-GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
-
-If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
-
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
+"GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency"
 
 ### fn metadata.withGeneration
 
@@ -182,7 +178,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 withGeneration(generation)
 ```
 
-A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
+"A sequence number representing a specific generation of the desired state. Populated by the system. Read-only."
 
 ### fn metadata.withLabels
 
@@ -190,7 +186,7 @@ A sequence number representing a specific generation of the desired state. Popul
 withLabels(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 ### fn metadata.withLabelsMixin
 
@@ -198,7 +194,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withLabelsMixin(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
 
@@ -208,7 +204,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withManagedFields(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 ### fn metadata.withManagedFieldsMixin
 
@@ -216,7 +212,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withManagedFieldsMixin(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -226,7 +222,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withName(name)
 ```
 
-Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"
 
 ### fn metadata.withNamespace
 
@@ -234,9 +230,7 @@ Name must be unique within a namespace. Is required when creating resources, alt
 withNamespace(namespace)
 ```
 
-Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
-
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\n\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"
 
 ### fn metadata.withOwnerReferences
 
@@ -244,7 +238,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 withOwnerReferences(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 ### fn metadata.withOwnerReferencesMixin
 
@@ -252,7 +246,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withOwnerReferencesMixin(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 **Note:** This function appends passed data to existing values
 
@@ -262,9 +256,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withResourceVersion(resourceVersion)
 ```
 
-An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
-
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+"An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency"
 
 ### fn metadata.withSelfLink
 
@@ -272,9 +264,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 withSelfLink(selfLink)
 ```
 
-SelfLink is a URL representing this object. Populated by the system. Read-only.
-
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+"SelfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release."
 
 ### fn metadata.withUid
 
@@ -282,13 +272,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 withUid(uid)
 ```
 
-UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
-
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+"UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
 
 ## obj spec
 
-An AccountSpec defines the desired state of an Account.
+"An AccountSpec defines the desired state of an Account."
 
 ### fn spec.withDeletionPolicy
 
@@ -296,7 +284,7 @@ An AccountSpec defines the desired state of an Account.
 withDeletionPolicy(deletionPolicy)
 ```
 
-DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. The "Delete" policy is the default when no policy is specified.
+"DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either \"Delete\" or \"Orphan\" the external resource. The \"Delete\" policy is the default when no policy is specified."
 
 ### fn spec.withResourceGroupName
 
@@ -304,11 +292,11 @@ DeletionPolicy specifies what will happen to the underlying external when this m
 withResourceGroupName(resourceGroupName)
 ```
 
-ResourceGroupName specifies the resource group for this Account.
+"ResourceGroupName specifies the resource group for this Account."
 
 ## obj spec.providerConfigRef
 
-ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.
+"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."
 
 ### fn spec.providerConfigRef.withName
 
@@ -316,11 +304,11 @@ ProviderConfigReference specifies how the provider that will be used to create, 
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.providerRef
 
-ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`
+"ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`"
 
 ### fn spec.providerRef.withName
 
@@ -328,11 +316,11 @@ ProviderReference specifies the provider that will be used to create, observe, u
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.storageAccountSpec
 
-StorageAccountSpec specifies the desired state of this Account.
+"StorageAccountSpec specifies the desired state of this Account."
 
 ### fn spec.storageAccountSpec.withKind
 
@@ -340,7 +328,7 @@ StorageAccountSpec specifies the desired state of this Account.
 withKind(kind)
 ```
 
-Kind - Indicates the type of storage account. Possible values include: 'Storage', 'BlobStorage'
+"Kind - Indicates the type of storage account. Possible values include: 'Storage', 'BlobStorage'"
 
 ### fn spec.storageAccountSpec.withLocation
 
@@ -348,7 +336,7 @@ Kind - Indicates the type of storage account. Possible values include: 'Storage'
 withLocation(location)
 ```
 
-Location - The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.).
+"Location - The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.)."
 
 ### fn spec.storageAccountSpec.withTags
 
@@ -356,7 +344,7 @@ Location - The location of the resource. This will be one of the supported and r
 withTags(tags)
 ```
 
-Tags - A list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+"Tags - A list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters."
 
 ### fn spec.storageAccountSpec.withTagsMixin
 
@@ -364,13 +352,13 @@ Tags - A list of key value pairs that describe the resource. These tags can be u
 withTagsMixin(tags)
 ```
 
-Tags - A list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+"Tags - A list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.storageAccountSpec.identity
 
-Identity - The identity of the resource.
+"Identity - The identity of the resource."
 
 ### fn spec.storageAccountSpec.identity.withPrincipalId
 
@@ -378,7 +366,7 @@ Identity - The identity of the resource.
 withPrincipalId(principalId)
 ```
 
-PrincipalID - The principal ID of resource identity.
+"PrincipalID - The principal ID of resource identity."
 
 ### fn spec.storageAccountSpec.identity.withTenantId
 
@@ -386,7 +374,7 @@ PrincipalID - The principal ID of resource identity.
 withTenantId(tenantId)
 ```
 
-TenantID - The tenant ID of resource.
+"TenantID - The tenant ID of resource."
 
 ### fn spec.storageAccountSpec.identity.withType
 
@@ -394,11 +382,11 @@ TenantID - The tenant ID of resource.
 withType(type)
 ```
 
-Type - The identity type.
+"Type - The identity type."
 
 ## obj spec.storageAccountSpec.properties
 
-StorageAccountSpecProperties - The parameters used to create the storage account.
+"StorageAccountSpecProperties - The parameters used to create the storage account."
 
 ### fn spec.storageAccountSpec.properties.withAccessTier
 
@@ -406,7 +394,7 @@ StorageAccountSpecProperties - The parameters used to create the storage account
 withAccessTier(accessTier)
 ```
 
-AccessTier - Required for storage accounts where kind = BlobStorage. The access tier used for billing. Possible values include: 'Hot', 'Cool'
+"AccessTier - Required for storage accounts where kind = BlobStorage. The access tier used for billing. Possible values include: 'Hot', 'Cool'"
 
 ### fn spec.storageAccountSpec.properties.withSupportsHttpsTrafficOnly
 
@@ -414,11 +402,11 @@ AccessTier - Required for storage accounts where kind = BlobStorage. The access 
 withSupportsHttpsTrafficOnly(supportsHttpsTrafficOnly)
 ```
 
-EnableHTTPSTrafficOnly - Allows https traffic only to storage service if sets to true.
+"EnableHTTPSTrafficOnly - Allows https traffic only to storage service if sets to true."
 
 ## obj spec.storageAccountSpec.properties.customDomain
 
-CustomDomain - User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. to clear the existing custom domain, use an empty string for the custom domain name property.
+"CustomDomain - User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. to clear the existing custom domain, use an empty string for the custom domain name property."
 
 ### fn spec.storageAccountSpec.properties.customDomain.withName
 
@@ -426,7 +414,7 @@ CustomDomain - User domain assigned to the storage account. Name is the CNAME so
 withName(name)
 ```
 
-Name - custom domain name assigned to the storage account. Name is the CNAME source.
+"Name - custom domain name assigned to the storage account. Name is the CNAME source."
 
 ### fn spec.storageAccountSpec.properties.customDomain.withUseSubDomainName
 
@@ -434,11 +422,11 @@ Name - custom domain name assigned to the storage account. Name is the CNAME sou
 withUseSubDomainName(useSubDomainName)
 ```
 
-UseSubDomainName - Indicates whether indirect CNAME validation is enabled.
+"UseSubDomainName - Indicates whether indirect CNAME validation is enabled."
 
 ## obj spec.storageAccountSpec.properties.encryption
 
-Encryption - Provides the encryption settings on the account. If left unspecified the account encryption settings will remain the same. The default setting is unencrypted.
+"Encryption - Provides the encryption settings on the account. If left unspecified the account encryption settings will remain the same. The default setting is unencrypted."
 
 ### fn spec.storageAccountSpec.properties.encryption.withKeySource
 
@@ -446,12 +434,11 @@ Encryption - Provides the encryption settings on the account. If left unspecifie
 withKeySource(keySource)
 ```
 
-KeySource - The encryption keySource (provider). 
- Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
+"KeySource - The encryption keySource (provider). \n Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault"
 
 ## obj spec.storageAccountSpec.properties.encryption.keyvaultproperties
 
-KeyVaultProperties - Properties provided by key vault.
+"KeyVaultProperties - Properties provided by key vault."
 
 ### fn spec.storageAccountSpec.properties.encryption.keyvaultproperties.withKeyname
 
@@ -459,7 +446,7 @@ KeyVaultProperties - Properties provided by key vault.
 withKeyname(keyname)
 ```
 
-KeyName - The name of KeyVault key.
+"KeyName - The name of KeyVault key."
 
 ### fn spec.storageAccountSpec.properties.encryption.keyvaultproperties.withKeyvaulturi
 
@@ -467,7 +454,7 @@ KeyName - The name of KeyVault key.
 withKeyvaulturi(keyvaulturi)
 ```
 
-KeyVaultURI - The Uri of KeyVault.
+"KeyVaultURI - The Uri of KeyVault."
 
 ### fn spec.storageAccountSpec.properties.encryption.keyvaultproperties.withKeyversion
 
@@ -475,11 +462,11 @@ KeyVaultURI - The Uri of KeyVault.
 withKeyversion(keyversion)
 ```
 
-KeyVersion - The version of KeyVault key.
+"KeyVersion - The version of KeyVault key."
 
 ## obj spec.storageAccountSpec.properties.encryption.services
 
-Services - List of services which support encryption.
+"Services - List of services which support encryption."
 
 ### fn spec.storageAccountSpec.properties.encryption.services.withBlob
 
@@ -487,7 +474,7 @@ Services - List of services which support encryption.
 withBlob(blob)
 ```
 
-Blob - The encryption function of the blob storage service.
+"Blob - The encryption function of the blob storage service."
 
 ### fn spec.storageAccountSpec.properties.encryption.services.withFile
 
@@ -495,11 +482,11 @@ Blob - The encryption function of the blob storage service.
 withFile(file)
 ```
 
-File - The encryption function of the file storage service.
+"File - The encryption function of the file storage service."
 
 ## obj spec.storageAccountSpec.properties.networkAcls
 
-NetworkRuleSet - Network rule set
+"NetworkRuleSet - Network rule set"
 
 ### fn spec.storageAccountSpec.properties.networkAcls.withBypass
 
@@ -507,7 +494,7 @@ NetworkRuleSet - Network rule set
 withBypass(bypass)
 ```
 
-Bypass - Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, 'Logging, Metrics'), or None to bypass none of those traffics. Possible values include: 'None', 'Logging', 'Metrics', 'AzureServices'
+"Bypass - Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, \"Logging, Metrics\"), or None to bypass none of those traffics. Possible values include: 'None', 'Logging', 'Metrics', 'AzureServices'"
 
 ### fn spec.storageAccountSpec.properties.networkAcls.withDefaultAction
 
@@ -515,8 +502,7 @@ Bypass - Specifies whether traffic is bypassed for Logging/Metrics/AzureServices
 withDefaultAction(defaultAction)
 ```
 
-DefaultAction - Specifies the default action of allow or deny when no other rules match. 
- Possible values include: 'Allow', 'Deny'
+"DefaultAction - Specifies the default action of allow or deny when no other rules match. \n Possible values include: 'Allow', 'Deny'"
 
 ### fn spec.storageAccountSpec.properties.networkAcls.withIpRules
 
@@ -524,7 +510,7 @@ DefaultAction - Specifies the default action of allow or deny when no other rule
 withIpRules(ipRules)
 ```
 
-IPRules - Sets the IP ACL rules
+"IPRules - Sets the IP ACL rules"
 
 ### fn spec.storageAccountSpec.properties.networkAcls.withIpRulesMixin
 
@@ -532,7 +518,7 @@ IPRules - Sets the IP ACL rules
 withIpRulesMixin(ipRules)
 ```
 
-IPRules - Sets the IP ACL rules
+"IPRules - Sets the IP ACL rules"
 
 **Note:** This function appends passed data to existing values
 
@@ -542,7 +528,7 @@ IPRules - Sets the IP ACL rules
 withVirtualNetworkRules(virtualNetworkRules)
 ```
 
-VirtualNetworkRules - Sets the virtual network rules
+"VirtualNetworkRules - Sets the virtual network rules"
 
 ### fn spec.storageAccountSpec.properties.networkAcls.withVirtualNetworkRulesMixin
 
@@ -550,13 +536,13 @@ VirtualNetworkRules - Sets the virtual network rules
 withVirtualNetworkRulesMixin(virtualNetworkRules)
 ```
 
-VirtualNetworkRules - Sets the virtual network rules
+"VirtualNetworkRules - Sets the virtual network rules"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.storageAccountSpec.sku
 
-Sku of the storage account.
+"Sku of the storage account."
 
 ### fn spec.storageAccountSpec.sku.withCapabilities
 
@@ -564,7 +550,7 @@ Sku of the storage account.
 withCapabilities(capabilities)
 ```
 
-Capabilities - The capability information in the specified sku, including file encryption, network acls, change notification, etc.
+"Capabilities - The capability information in the specified sku, including file encryption, network acls, change notification, etc."
 
 ### fn spec.storageAccountSpec.sku.withCapabilitiesMixin
 
@@ -572,7 +558,7 @@ Capabilities - The capability information in the specified sku, including file e
 withCapabilitiesMixin(capabilities)
 ```
 
-Capabilities - The capability information in the specified sku, including file encryption, network acls, change notification, etc.
+"Capabilities - The capability information in the specified sku, including file encryption, network acls, change notification, etc."
 
 **Note:** This function appends passed data to existing values
 
@@ -582,8 +568,7 @@ Capabilities - The capability information in the specified sku, including file e
 withKind(kind)
 ```
 
-Kind - Indicates the type of storage account. 
- Possible values include: 'Storage', 'BlobStorage'
+"Kind - Indicates the type of storage account. \n Possible values include: 'Storage', 'BlobStorage'"
 
 ### fn spec.storageAccountSpec.sku.withLocations
 
@@ -591,7 +576,7 @@ Kind - Indicates the type of storage account.
 withLocations(locations)
 ```
 
-Locations - The set of locations that the Sku is available. This will be supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.).
+"Locations - The set of locations that the Sku is available. This will be supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.)."
 
 ### fn spec.storageAccountSpec.sku.withLocationsMixin
 
@@ -599,7 +584,7 @@ Locations - The set of locations that the Sku is available. This will be support
 withLocationsMixin(locations)
 ```
 
-Locations - The set of locations that the Sku is available. This will be supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.).
+"Locations - The set of locations that the Sku is available. This will be supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.)."
 
 **Note:** This function appends passed data to existing values
 
@@ -609,8 +594,7 @@ Locations - The set of locations that the Sku is available. This will be support
 withName(name)
 ```
 
-Name - Gets or sets the sku name. Required for account creation; optional for update. Note that in older versions, sku name was called accountType. 
- Possible values include: 'Standard_LRS', 'Standard_GRS', 'Standard_RAGRS', 'Standard_ZRS', 'Premium_LRS'
+"Name - Gets or sets the sku name. Required for account creation; optional for update. Note that in older versions, sku name was called accountType. \n Possible values include: 'Standard_LRS', 'Standard_GRS', 'Standard_RAGRS', 'Standard_ZRS', 'Premium_LRS'"
 
 ### fn spec.storageAccountSpec.sku.withResourceType
 
@@ -618,7 +602,7 @@ Name - Gets or sets the sku name. Required for account creation; optional for up
 withResourceType(resourceType)
 ```
 
-ResourceType - The type of the resource, usually it is 'storageAccounts'.
+"ResourceType - The type of the resource, usually it is 'storageAccounts'."
 
 ### fn spec.storageAccountSpec.sku.withTier
 
@@ -626,12 +610,11 @@ ResourceType - The type of the resource, usually it is 'storageAccounts'.
 withTier(tier)
 ```
 
-Tier - Gets the sku tier. This is based on the Sku name. 
- Possible values include: 'Standard', 'Premium'
+"Tier - Gets the sku tier. This is based on the Sku name. \n Possible values include: 'Standard', 'Premium'"
 
 ## obj spec.writeConnectionSecretToRef
 
-WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.
+"WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource."
 
 ### fn spec.writeConnectionSecretToRef.withName
 
@@ -639,7 +622,7 @@ WriteConnectionSecretToReference specifies the namespace and name of a Secret to
 withName(name)
 ```
 
-Name of the secret.
+"Name of the secret."
 
 ### fn spec.writeConnectionSecretToRef.withNamespace
 
@@ -647,4 +630,4 @@ Name of the secret.
 withNamespace(namespace)
 ```
 
-Namespace of the secret.
+"Namespace of the secret."

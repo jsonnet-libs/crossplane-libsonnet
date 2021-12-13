@@ -4,7 +4,7 @@ permalink: /provider-aws/0.20/eks/v1alpha1/nodeGroup/
 
 # eks.v1alpha1.nodeGroup
 
-A NodeGroup is a managed resource that represents an AWS Elastic Kubernetes Service NodeGroup.
+"A NodeGroup is a managed resource that represents an AWS Elastic Kubernetes Service NodeGroup."
 
 ## Index
 
@@ -104,11 +104,11 @@ A NodeGroup is a managed resource that represents an AWS Elastic Kubernetes Serv
 new(name)
 ```
 
-new returns an instance of Nodegroup
+new returns an instance of NodeGroup
 
 ## obj metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."
 
 ### fn metadata.withAnnotations
 
@@ -116,7 +116,7 @@ ObjectMeta is metadata that all persisted resources must have, which includes al
 withAnnotations(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 ### fn metadata.withAnnotationsMixin
 
@@ -124,7 +124,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withAnnotationsMixin(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 **Note:** This function appends passed data to existing values
 
@@ -134,7 +134,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withClusterName(clusterName)
 ```
 
-The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
+"The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request."
 
 ### fn metadata.withCreationTimestamp
 
@@ -142,7 +142,7 @@ The name of the cluster which the object belongs to. This is used to distinguish
 withCreationTimestamp(creationTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withDeletionGracePeriodSeconds
 
@@ -150,7 +150,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withDeletionGracePeriodSeconds(deletionGracePeriodSeconds)
 ```
 
-Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
+"Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only."
 
 ### fn metadata.withDeletionTimestamp
 
@@ -158,7 +158,7 @@ Number of seconds allowed for this object to gracefully terminate before it will
 withDeletionTimestamp(deletionTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withFinalizers
 
@@ -166,7 +166,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withFinalizers(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 ### fn metadata.withFinalizersMixin
 
@@ -174,7 +174,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withFinalizersMixin(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 **Note:** This function appends passed data to existing values
 
@@ -184,11 +184,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withGenerateName(generateName)
 ```
 
-GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
-
-If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
-
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
+"GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency"
 
 ### fn metadata.withGeneration
 
@@ -196,7 +192,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 withGeneration(generation)
 ```
 
-A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
+"A sequence number representing a specific generation of the desired state. Populated by the system. Read-only."
 
 ### fn metadata.withLabels
 
@@ -204,7 +200,7 @@ A sequence number representing a specific generation of the desired state. Popul
 withLabels(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 ### fn metadata.withLabelsMixin
 
@@ -212,7 +208,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withLabelsMixin(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
 
@@ -222,7 +218,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withManagedFields(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 ### fn metadata.withManagedFieldsMixin
 
@@ -230,7 +226,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withManagedFieldsMixin(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -240,7 +236,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withName(name)
 ```
 
-Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"
 
 ### fn metadata.withNamespace
 
@@ -248,9 +244,7 @@ Name must be unique within a namespace. Is required when creating resources, alt
 withNamespace(namespace)
 ```
 
-Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
-
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\n\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"
 
 ### fn metadata.withOwnerReferences
 
@@ -258,7 +252,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 withOwnerReferences(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 ### fn metadata.withOwnerReferencesMixin
 
@@ -266,7 +260,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withOwnerReferencesMixin(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 **Note:** This function appends passed data to existing values
 
@@ -276,9 +270,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withResourceVersion(resourceVersion)
 ```
 
-An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
-
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+"An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency"
 
 ### fn metadata.withSelfLink
 
@@ -286,9 +278,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 withSelfLink(selfLink)
 ```
 
-SelfLink is a URL representing this object. Populated by the system. Read-only.
-
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+"SelfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release."
 
 ### fn metadata.withUid
 
@@ -296,13 +286,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 withUid(uid)
 ```
 
-UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
-
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+"UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
 
 ## obj spec
 
-A NodeGroupSpec defines the desired state of an EKS NodeGroup.
+"A NodeGroupSpec defines the desired state of an EKS NodeGroup."
 
 ### fn spec.withDeletionPolicy
 
@@ -310,11 +298,11 @@ A NodeGroupSpec defines the desired state of an EKS NodeGroup.
 withDeletionPolicy(deletionPolicy)
 ```
 
-DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource.
+"DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either \"Delete\" or \"Orphan\" the external resource."
 
 ## obj spec.forProvider
 
-NodeGroupParameters define the desired state of an AWS Elastic Kubernetes Service NodeGroup.
+"NodeGroupParameters define the desired state of an AWS Elastic Kubernetes Service NodeGroup."
 
 ### fn spec.forProvider.withAmiType
 
@@ -322,7 +310,7 @@ NodeGroupParameters define the desired state of an AWS Elastic Kubernetes Servic
 withAmiType(amiType)
 ```
 
-The AMI type for your node group. GPU instance types should use the AL2_x86_64_GPU AMI type, which uses the Amazon EKS-optimized Linux AMI with GPU support. Non-GPU instances should use the AL2_x86_64 AMI type, which uses the Amazon EKS-optimized Linux AMI.
+"The AMI type for your node group. GPU instance types should use the AL2_x86_64_GPU AMI type, which uses the Amazon EKS-optimized Linux AMI with GPU support. Non-GPU instances should use the AL2_x86_64 AMI type, which uses the Amazon EKS-optimized Linux AMI."
 
 ### fn spec.forProvider.withCapacityType
 
@@ -330,7 +318,7 @@ The AMI type for your node group. GPU instance types should use the AL2_x86_64_G
 withCapacityType(capacityType)
 ```
 
-CapacityType for your node group.
+"CapacityType for your node group."
 
 ### fn spec.forProvider.withClusterName
 
@@ -338,8 +326,7 @@ CapacityType for your node group.
 withClusterName(clusterName)
 ```
 
-The name of the cluster to create the node group in. 
- ClusterName is a required field
+"The name of the cluster to create the node group in. \n ClusterName is a required field"
 
 ### fn spec.forProvider.withDiskSize
 
@@ -347,7 +334,7 @@ The name of the cluster to create the node group in.
 withDiskSize(diskSize)
 ```
 
-The root device disk size (in GiB) for your node group instances. The default disk size is 20 GiB.
+"The root device disk size (in GiB) for your node group instances. The default disk size is 20 GiB."
 
 ### fn spec.forProvider.withInstanceTypes
 
@@ -355,7 +342,7 @@ The root device disk size (in GiB) for your node group instances. The default di
 withInstanceTypes(instanceTypes)
 ```
 
-The instance type to use for your node group. Currently, you can specify a single instance type for a node group. The default value for this parameter is t3.medium. If you choose a GPU instance type, be sure to specify the AL2_x86_64_GPU with the amiType parameter.
+"The instance type to use for your node group. Currently, you can specify a single instance type for a node group. The default value for this parameter is t3.medium. If you choose a GPU instance type, be sure to specify the AL2_x86_64_GPU with the amiType parameter."
 
 ### fn spec.forProvider.withInstanceTypesMixin
 
@@ -363,7 +350,7 @@ The instance type to use for your node group. Currently, you can specify a singl
 withInstanceTypesMixin(instanceTypes)
 ```
 
-The instance type to use for your node group. Currently, you can specify a single instance type for a node group. The default value for this parameter is t3.medium. If you choose a GPU instance type, be sure to specify the AL2_x86_64_GPU with the amiType parameter.
+"The instance type to use for your node group. Currently, you can specify a single instance type for a node group. The default value for this parameter is t3.medium. If you choose a GPU instance type, be sure to specify the AL2_x86_64_GPU with the amiType parameter."
 
 **Note:** This function appends passed data to existing values
 
@@ -373,7 +360,7 @@ The instance type to use for your node group. Currently, you can specify a singl
 withLabels(labels)
 ```
 
-The Kubernetes labels to be applied to the nodes in the node group when they are created.
+"The Kubernetes labels to be applied to the nodes in the node group when they are created."
 
 ### fn spec.forProvider.withLabelsMixin
 
@@ -381,7 +368,7 @@ The Kubernetes labels to be applied to the nodes in the node group when they are
 withLabelsMixin(labels)
 ```
 
-The Kubernetes labels to be applied to the nodes in the node group when they are created.
+"The Kubernetes labels to be applied to the nodes in the node group when they are created."
 
 **Note:** This function appends passed data to existing values
 
@@ -391,8 +378,7 @@ The Kubernetes labels to be applied to the nodes in the node group when they are
 withNodeRole(nodeRole)
 ```
 
-The Amazon Resource Name (ARN) of the IAM role to associate with your node group. The Amazon EKS worker node kubelet daemon makes calls to AWS APIs on your behalf. Worker nodes receive permissions for these API calls through an IAM instance profile and associated policies. Before you can launch worker nodes and register them into a cluster, you must create an IAM role for those worker nodes to use when they are launched. For more information, see Amazon EKS Worker Node IAM Role (https://docs.aws.amazon.com/eks/latest/userguide/worker_node_IAM_role.html) in the Amazon EKS User Guide . 
- NodeRole is a required field
+"The Amazon Resource Name (ARN) of the IAM role to associate with your node group. The Amazon EKS worker node kubelet daemon makes calls to AWS APIs on your behalf. Worker nodes receive permissions for these API calls through an IAM instance profile and associated policies. Before you can launch worker nodes and register them into a cluster, you must create an IAM role for those worker nodes to use when they are launched. For more information, see Amazon EKS Worker Node IAM Role (https://docs.aws.amazon.com/eks/latest/userguide/worker_node_IAM_role.html) in the Amazon EKS User Guide . \n NodeRole is a required field"
 
 ### fn spec.forProvider.withRegion
 
@@ -400,7 +386,7 @@ The Amazon Resource Name (ARN) of the IAM role to associate with your node group
 withRegion(region)
 ```
 
-Region is the region you'd like  the NodeGroup to be created in.
+"Region is the region you'd like  the NodeGroup to be created in."
 
 ### fn spec.forProvider.withReleaseVersion
 
@@ -408,7 +394,7 @@ Region is the region you'd like  the NodeGroup to be created in.
 withReleaseVersion(releaseVersion)
 ```
 
-The AMI version of the Amazon EKS-optimized AMI to use with your node group. By default, the latest available AMI version for the node group's current Kubernetes version is used. For more information, see Amazon EKS-Optimized Linux AMI Versions (https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html) in the Amazon EKS User Guide.
+"The AMI version of the Amazon EKS-optimized AMI to use with your node group. By default, the latest available AMI version for the node group's current Kubernetes version is used. For more information, see Amazon EKS-Optimized Linux AMI Versions (https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html) in the Amazon EKS User Guide."
 
 ### fn spec.forProvider.withSubnetRefs
 
@@ -416,7 +402,7 @@ The AMI version of the Amazon EKS-optimized AMI to use with your node group. By 
 withSubnetRefs(subnetRefs)
 ```
 
-SubnetRefs are references to Subnets used to set the Subnets.
+"SubnetRefs are references to Subnets used to set the Subnets."
 
 ### fn spec.forProvider.withSubnetRefsMixin
 
@@ -424,7 +410,7 @@ SubnetRefs are references to Subnets used to set the Subnets.
 withSubnetRefsMixin(subnetRefs)
 ```
 
-SubnetRefs are references to Subnets used to set the Subnets.
+"SubnetRefs are references to Subnets used to set the Subnets."
 
 **Note:** This function appends passed data to existing values
 
@@ -434,8 +420,7 @@ SubnetRefs are references to Subnets used to set the Subnets.
 withSubnets(subnets)
 ```
 
-The subnets to use for the Auto Scaling group that is created for your node group. These subnets must have the tag key kubernetes.io/cluster/CLUSTER_NAME with a value of shared, where CLUSTER_NAME is replaced with the name of your cluster. 
- Subnets is a required field
+"The subnets to use for the Auto Scaling group that is created for your node group. These subnets must have the tag key kubernetes.io/cluster/CLUSTER_NAME with a value of shared, where CLUSTER_NAME is replaced with the name of your cluster. \n Subnets is a required field"
 
 ### fn spec.forProvider.withSubnetsMixin
 
@@ -443,8 +428,7 @@ The subnets to use for the Auto Scaling group that is created for your node grou
 withSubnetsMixin(subnets)
 ```
 
-The subnets to use for the Auto Scaling group that is created for your node group. These subnets must have the tag key kubernetes.io/cluster/CLUSTER_NAME with a value of shared, where CLUSTER_NAME is replaced with the name of your cluster. 
- Subnets is a required field
+"The subnets to use for the Auto Scaling group that is created for your node group. These subnets must have the tag key kubernetes.io/cluster/CLUSTER_NAME with a value of shared, where CLUSTER_NAME is replaced with the name of your cluster. \n Subnets is a required field"
 
 **Note:** This function appends passed data to existing values
 
@@ -454,7 +438,7 @@ The subnets to use for the Auto Scaling group that is created for your node grou
 withTags(tags)
 ```
 
-The metadata to apply to the node group to assist with categorization and organization. Each tag consists of a key and an optional value, both of which you define. Node group tags do not propagate to any other resources associated with the node group, such as the Amazon EC2 instances or subnets.
+"The metadata to apply to the node group to assist with categorization and organization. Each tag consists of a key and an optional value, both of which you define. Node group tags do not propagate to any other resources associated with the node group, such as the Amazon EC2 instances or subnets."
 
 ### fn spec.forProvider.withTagsMixin
 
@@ -462,7 +446,7 @@ The metadata to apply to the node group to assist with categorization and organi
 withTagsMixin(tags)
 ```
 
-The metadata to apply to the node group to assist with categorization and organization. Each tag consists of a key and an optional value, both of which you define. Node group tags do not propagate to any other resources associated with the node group, such as the Amazon EC2 instances or subnets.
+"The metadata to apply to the node group to assist with categorization and organization. Each tag consists of a key and an optional value, both of which you define. Node group tags do not propagate to any other resources associated with the node group, such as the Amazon EC2 instances or subnets."
 
 **Note:** This function appends passed data to existing values
 
@@ -472,7 +456,7 @@ The metadata to apply to the node group to assist with categorization and organi
 withTaints(taints)
 ```
 
-The Kubernetes taints to be applied to the nodes in the node group.
+"The Kubernetes taints to be applied to the nodes in the node group."
 
 ### fn spec.forProvider.withTaintsMixin
 
@@ -480,7 +464,7 @@ The Kubernetes taints to be applied to the nodes in the node group.
 withTaintsMixin(taints)
 ```
 
-The Kubernetes taints to be applied to the nodes in the node group.
+"The Kubernetes taints to be applied to the nodes in the node group."
 
 **Note:** This function appends passed data to existing values
 
@@ -490,11 +474,11 @@ The Kubernetes taints to be applied to the nodes in the node group.
 withVersion(version)
 ```
 
-The Kubernetes version to use for your managed nodes. By default, the Kubernetes version of the cluster is used, and this is the only accepted specified value.
+"The Kubernetes version to use for your managed nodes. By default, the Kubernetes version of the cluster is used, and this is the only accepted specified value."
 
 ## obj spec.forProvider.clusterNameRef
 
-ClusterNameRef is a reference to a Cluster used to set the ClusterName.
+"ClusterNameRef is a reference to a Cluster used to set the ClusterName."
 
 ### fn spec.forProvider.clusterNameRef.withName
 
@@ -502,11 +486,11 @@ ClusterNameRef is a reference to a Cluster used to set the ClusterName.
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.clusterNameSelector
 
-ClusterNameSelector selects references to a Cluster used to set the ClusterName.
+"ClusterNameSelector selects references to a Cluster used to set the ClusterName."
 
 ### fn spec.forProvider.clusterNameSelector.withMatchControllerRef
 
@@ -514,7 +498,7 @@ ClusterNameSelector selects references to a Cluster used to set the ClusterName.
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.clusterNameSelector.withMatchLabels
 
@@ -522,7 +506,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.clusterNameSelector.withMatchLabelsMixin
 
@@ -530,13 +514,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.launchTemplate
 
-An object representing a node group's launch template specification. If specified, then do not specify instanceTypes, diskSize, or remoteAccess and make sure that the launch template meets the requirements in launchTemplateSpecification.
+"An object representing a node group's launch template specification. If specified, then do not specify instanceTypes, diskSize, or remoteAccess and make sure that the launch template meets the requirements in launchTemplateSpecification."
 
 ### fn spec.forProvider.launchTemplate.withId
 
@@ -544,7 +528,7 @@ An object representing a node group's launch template specification. If specifie
 withId(id)
 ```
 
-The ID of the launch template.
+"The ID of the launch template."
 
 ### fn spec.forProvider.launchTemplate.withName
 
@@ -552,7 +536,7 @@ The ID of the launch template.
 withName(name)
 ```
 
-The name of the launch template.
+"The name of the launch template."
 
 ### fn spec.forProvider.launchTemplate.withVersion
 
@@ -560,11 +544,11 @@ The name of the launch template.
 withVersion(version)
 ```
 
-The version of the launch template to use. If no version is specified, then the template's default version is used.
+"The version of the launch template to use. If no version is specified, then the template's default version is used."
 
 ## obj spec.forProvider.nodeRoleRef
 
-NodeRoleRef is a reference to a Cluster used to set the NodeRole.
+"NodeRoleRef is a reference to a Cluster used to set the NodeRole."
 
 ### fn spec.forProvider.nodeRoleRef.withName
 
@@ -572,11 +556,11 @@ NodeRoleRef is a reference to a Cluster used to set the NodeRole.
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.nodeRoleSelector
 
-NodeRoleSelector selects references to a Cluster used to set the NodeRole.
+"NodeRoleSelector selects references to a Cluster used to set the NodeRole."
 
 ### fn spec.forProvider.nodeRoleSelector.withMatchControllerRef
 
@@ -584,7 +568,7 @@ NodeRoleSelector selects references to a Cluster used to set the NodeRole.
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.nodeRoleSelector.withMatchLabels
 
@@ -592,7 +576,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.nodeRoleSelector.withMatchLabelsMixin
 
@@ -600,13 +584,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.remoteAccess
 
-The remote access (SSH) configuration to use with your node group.
+"The remote access (SSH) configuration to use with your node group."
 
 ### fn spec.forProvider.remoteAccess.withEc2SSHKey
 
@@ -614,7 +598,7 @@ The remote access (SSH) configuration to use with your node group.
 withEc2SSHKey(ec2SSHKey)
 ```
 
-The Amazon EC2 SSH key that provides access for SSH communication with the worker nodes in the managed node group. For more information, see Amazon EC2 Key Pairs (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the Amazon Elastic Compute Cloud User Guide for Linux Instances.
+"The Amazon EC2 SSH key that provides access for SSH communication with the worker nodes in the managed node group. For more information, see Amazon EC2 Key Pairs (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the Amazon Elastic Compute Cloud User Guide for Linux Instances."
 
 ### fn spec.forProvider.remoteAccess.withSourceSecurityGroupRefs
 
@@ -622,7 +606,7 @@ The Amazon EC2 SSH key that provides access for SSH communication with the worke
 withSourceSecurityGroupRefs(sourceSecurityGroupRefs)
 ```
 
-SourceSecurityGroupRefs are references to SecurityGroups used to set the SourceSecurityGroups.
+"SourceSecurityGroupRefs are references to SecurityGroups used to set the SourceSecurityGroups."
 
 ### fn spec.forProvider.remoteAccess.withSourceSecurityGroupRefsMixin
 
@@ -630,7 +614,7 @@ SourceSecurityGroupRefs are references to SecurityGroups used to set the SourceS
 withSourceSecurityGroupRefsMixin(sourceSecurityGroupRefs)
 ```
 
-SourceSecurityGroupRefs are references to SecurityGroups used to set the SourceSecurityGroups.
+"SourceSecurityGroupRefs are references to SecurityGroups used to set the SourceSecurityGroups."
 
 **Note:** This function appends passed data to existing values
 
@@ -640,7 +624,7 @@ SourceSecurityGroupRefs are references to SecurityGroups used to set the SourceS
 withSourceSecurityGroups(sourceSecurityGroups)
 ```
 
-The security groups that are allowed SSH access (port 22) to the worker nodes. If you specify an Amazon EC2 SSH key but do not specify a source security group when you create a managed node group, then port 22 on the worker nodes is opened to the internet (0.0.0.0/0). For more information, see Security Groups for Your VPC (https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the Amazon Virtual Private Cloud User Guide.
+"The security groups that are allowed SSH access (port 22) to the worker nodes. If you specify an Amazon EC2 SSH key but do not specify a source security group when you create a managed node group, then port 22 on the worker nodes is opened to the internet (0.0.0.0/0). For more information, see Security Groups for Your VPC (https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the Amazon Virtual Private Cloud User Guide."
 
 ### fn spec.forProvider.remoteAccess.withSourceSecurityGroupsMixin
 
@@ -648,13 +632,13 @@ The security groups that are allowed SSH access (port 22) to the worker nodes. I
 withSourceSecurityGroupsMixin(sourceSecurityGroups)
 ```
 
-The security groups that are allowed SSH access (port 22) to the worker nodes. If you specify an Amazon EC2 SSH key but do not specify a source security group when you create a managed node group, then port 22 on the worker nodes is opened to the internet (0.0.0.0/0). For more information, see Security Groups for Your VPC (https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the Amazon Virtual Private Cloud User Guide.
+"The security groups that are allowed SSH access (port 22) to the worker nodes. If you specify an Amazon EC2 SSH key but do not specify a source security group when you create a managed node group, then port 22 on the worker nodes is opened to the internet (0.0.0.0/0). For more information, see Security Groups for Your VPC (https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the Amazon Virtual Private Cloud User Guide."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.remoteAccess.sourceSecurityGroupSelector
 
-SourceSecurityGroupSelector selects references to SecurityGroups used to set the SourceSecurityGroups.
+"SourceSecurityGroupSelector selects references to SecurityGroups used to set the SourceSecurityGroups."
 
 ### fn spec.forProvider.remoteAccess.sourceSecurityGroupSelector.withMatchControllerRef
 
@@ -662,7 +646,7 @@ SourceSecurityGroupSelector selects references to SecurityGroups used to set the
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.remoteAccess.sourceSecurityGroupSelector.withMatchLabels
 
@@ -670,7 +654,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.remoteAccess.sourceSecurityGroupSelector.withMatchLabelsMixin
 
@@ -678,13 +662,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.scalingConfig
 
-The scaling configuration details for the Auto Scaling group that is created for your node group.
+"The scaling configuration details for the Auto Scaling group that is created for your node group."
 
 ### fn spec.forProvider.scalingConfig.withDesiredSize
 
@@ -692,7 +676,7 @@ The scaling configuration details for the Auto Scaling group that is created for
 withDesiredSize(desiredSize)
 ```
 
-The current number of worker nodes that the managed node group should maintain. This value should be left unset if another controller, such as cluster-autoscaler, is expected to manage the desired size of the node group. If not set, the initial desired size will be the configured minimum size of the node group.
+"The current number of worker nodes that the managed node group should maintain. This value should be left unset if another controller, such as cluster-autoscaler, is expected to manage the desired size of the node group. If not set, the initial desired size will be the configured minimum size of the node group."
 
 ### fn spec.forProvider.scalingConfig.withMaxSize
 
@@ -700,7 +684,7 @@ The current number of worker nodes that the managed node group should maintain. 
 withMaxSize(maxSize)
 ```
 
-The maximum number of worker nodes that the managed node group can scale out to. Managed node groups can support up to 100 nodes by default.
+"The maximum number of worker nodes that the managed node group can scale out to. Managed node groups can support up to 100 nodes by default."
 
 ### fn spec.forProvider.scalingConfig.withMinSize
 
@@ -708,11 +692,11 @@ The maximum number of worker nodes that the managed node group can scale out to.
 withMinSize(minSize)
 ```
 
-The minimum number of worker nodes that the managed node group can scale in to. This number must be greater than zero.
+"The minimum number of worker nodes that the managed node group can scale in to. This number must be greater than zero."
 
 ## obj spec.forProvider.subnetSelector
 
-SubnetSelector selects references to Subnets used to set the Subnets.
+"SubnetSelector selects references to Subnets used to set the Subnets."
 
 ### fn spec.forProvider.subnetSelector.withMatchControllerRef
 
@@ -720,7 +704,7 @@ SubnetSelector selects references to Subnets used to set the Subnets.
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.subnetSelector.withMatchLabels
 
@@ -728,7 +712,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.subnetSelector.withMatchLabelsMixin
 
@@ -736,13 +720,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 
-ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.
+"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."
 
 ### fn spec.providerConfigRef.withName
 
@@ -750,11 +734,11 @@ ProviderConfigReference specifies how the provider that will be used to create, 
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.providerRef
 
-ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`
+"ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`"
 
 ### fn spec.providerRef.withName
 
@@ -762,11 +746,11 @@ ProviderReference specifies the provider that will be used to create, observe, u
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.writeConnectionSecretToRef
 
-WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.
+"WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource."
 
 ### fn spec.writeConnectionSecretToRef.withName
 
@@ -774,7 +758,7 @@ WriteConnectionSecretToReference specifies the namespace and name of a Secret to
 withName(name)
 ```
 
-Name of the secret.
+"Name of the secret."
 
 ### fn spec.writeConnectionSecretToRef.withNamespace
 
@@ -782,4 +766,4 @@ Name of the secret.
 withNamespace(namespace)
 ```
 
-Namespace of the secret.
+"Namespace of the secret."

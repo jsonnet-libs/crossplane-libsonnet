@@ -4,7 +4,7 @@ permalink: /provider-gcp/0.18/container/v1beta2/cluster/
 
 # container.v1beta2.cluster
 
-A Cluster is a managed resource that represents a Google Kubernetes Engine cluster.
+"A Cluster is a managed resource that represents a Google Kubernetes Engine cluster."
 
 ## Index
 
@@ -199,7 +199,7 @@ new returns an instance of Cluster
 
 ## obj metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."
 
 ### fn metadata.withAnnotations
 
@@ -207,7 +207,7 @@ ObjectMeta is metadata that all persisted resources must have, which includes al
 withAnnotations(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 ### fn metadata.withAnnotationsMixin
 
@@ -215,7 +215,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withAnnotationsMixin(annotations)
 ```
 
-Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
 
 **Note:** This function appends passed data to existing values
 
@@ -225,7 +225,7 @@ Annotations is an unstructured key value map stored with a resource that may be 
 withClusterName(clusterName)
 ```
 
-The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
+"The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request."
 
 ### fn metadata.withCreationTimestamp
 
@@ -233,7 +233,7 @@ The name of the cluster which the object belongs to. This is used to distinguish
 withCreationTimestamp(creationTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withDeletionGracePeriodSeconds
 
@@ -241,7 +241,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withDeletionGracePeriodSeconds(deletionGracePeriodSeconds)
 ```
 
-Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
+"Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only."
 
 ### fn metadata.withDeletionTimestamp
 
@@ -249,7 +249,7 @@ Number of seconds allowed for this object to gracefully terminate before it will
 withDeletionTimestamp(deletionTimestamp)
 ```
 
-Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
+"Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers."
 
 ### fn metadata.withFinalizers
 
@@ -257,7 +257,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 withFinalizers(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 ### fn metadata.withFinalizersMixin
 
@@ -265,7 +265,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withFinalizersMixin(finalizers)
 ```
 
-Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
+"Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list."
 
 **Note:** This function appends passed data to existing values
 
@@ -275,11 +275,7 @@ Must be empty before the object is deleted from the registry. Each entry is an i
 withGenerateName(generateName)
 ```
 
-GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
-
-If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
-
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
+"GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency"
 
 ### fn metadata.withGeneration
 
@@ -287,7 +283,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 withGeneration(generation)
 ```
 
-A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
+"A sequence number representing a specific generation of the desired state. Populated by the system. Read-only."
 
 ### fn metadata.withLabels
 
@@ -295,7 +291,7 @@ A sequence number representing a specific generation of the desired state. Popul
 withLabels(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 ### fn metadata.withLabelsMixin
 
@@ -303,7 +299,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withLabelsMixin(labels)
 ```
 
-Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
 
@@ -313,7 +309,7 @@ Map of string keys and values that can be used to organize and categorize (scope
 withManagedFields(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 ### fn metadata.withManagedFieldsMixin
 
@@ -321,7 +317,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withManagedFieldsMixin(managedFields)
 ```
 
-ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like 'ci-cd'. The set of fields is always in the version that the workflow used when modifying the object.
+"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -331,7 +327,7 @@ ManagedFields maps workflow-id and version to the set of fields that are managed
 withName(name)
 ```
 
-Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"
 
 ### fn metadata.withNamespace
 
@@ -339,9 +335,7 @@ Name must be unique within a namespace. Is required when creating resources, alt
 withNamespace(namespace)
 ```
 
-Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
-
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\n\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"
 
 ### fn metadata.withOwnerReferences
 
@@ -349,7 +343,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 withOwnerReferences(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 ### fn metadata.withOwnerReferencesMixin
 
@@ -357,7 +351,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withOwnerReferencesMixin(ownerReferences)
 ```
 
-List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.
+"List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
 
 **Note:** This function appends passed data to existing values
 
@@ -367,9 +361,7 @@ List of objects depended by this object. If ALL objects in the list have been de
 withResourceVersion(resourceVersion)
 ```
 
-An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
-
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+"An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency"
 
 ### fn metadata.withSelfLink
 
@@ -377,9 +369,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 withSelfLink(selfLink)
 ```
 
-SelfLink is a URL representing this object. Populated by the system. Read-only.
-
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+"SelfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release."
 
 ### fn metadata.withUid
 
@@ -387,13 +377,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 withUid(uid)
 ```
 
-UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
-
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+"UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
 
 ## obj spec
 
-A ClusterSpec defines the desired state of a Cluster.
+"A ClusterSpec defines the desired state of a Cluster."
 
 ### fn spec.withDeletionPolicy
 
@@ -401,11 +389,11 @@ A ClusterSpec defines the desired state of a Cluster.
 withDeletionPolicy(deletionPolicy)
 ```
 
-DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource.
+"DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either \"Delete\" or \"Orphan\" the external resource."
 
 ## obj spec.forProvider
 
-ClusterParameters define the desired state of a Google Kubernetes Engine cluster. Most of its fields are direct mirror of GCP Cluster object. See https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster
+"ClusterParameters define the desired state of a Google Kubernetes Engine cluster. Most of its fields are direct mirror of GCP Cluster object. See https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster"
 
 ### fn spec.forProvider.withClusterIpv4Cidr
 
@@ -413,8 +401,7 @@ ClusterParameters define the desired state of a Google Kubernetes Engine cluster
 withClusterIpv4Cidr(clusterIpv4Cidr)
 ```
 
-ClusterIpv4Cidr: The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) 
- notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in `10.0.0.0/8`.
+"ClusterIpv4Cidr: The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) \n notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in `10.0.0.0/8`."
 
 ### fn spec.forProvider.withDescription
 
@@ -422,7 +409,7 @@ ClusterIpv4Cidr: The IP address range of the container pods in this cluster, in 
 withDescription(description)
 ```
 
-Description: An optional description of this cluster.
+"Description: An optional description of this cluster."
 
 ### fn spec.forProvider.withEnableKubernetesAlpha
 
@@ -430,7 +417,7 @@ Description: An optional description of this cluster.
 withEnableKubernetesAlpha(enableKubernetesAlpha)
 ```
 
-EnableKubernetesAlpha: Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g. v1alpha1) and features that may not be production ready in the kubernetes version of the master and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are automatically deleted thirty days after creation.
+"EnableKubernetesAlpha: Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g. v1alpha1) and features that may not be production ready in the kubernetes version of the master and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are automatically deleted thirty days after creation."
 
 ### fn spec.forProvider.withEnableTpu
 
@@ -438,7 +425,7 @@ EnableKubernetesAlpha: Kubernetes alpha features are enabled on this cluster. Th
 withEnableTpu(enableTpu)
 ```
 
-EnableTpu: Enable the ability to use Cloud TPUs in this cluster.
+"EnableTpu: Enable the ability to use Cloud TPUs in this cluster."
 
 ### fn spec.forProvider.withInitialClusterVersion
 
@@ -446,9 +433,7 @@ EnableTpu: Enable the ability to use Cloud TPUs in this cluster.
 withInitialClusterVersion(initialClusterVersion)
 ```
 
-InitialClusterVersion: The initial Kubernetes version for this cluster.  Valid versions are those found in validMasterVersions returned by getServerConfig.  The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. 
- Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: 
- - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default Kubernetes version
+"InitialClusterVersion: The initial Kubernetes version for this cluster.  Valid versions are those found in validMasterVersions returned by getServerConfig.  The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. \n Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: \n - \"latest\": picks the highest valid Kubernetes version - \"1.X\": picks the highest valid patch+gke.N patch in the 1.X version - \"1.X.Y\": picks the highest valid gke.N patch in the 1.X.Y version - \"1.X.Y-gke.N\": picks an explicit Kubernetes version - \"\",\"-\": picks the default Kubernetes version"
 
 ### fn spec.forProvider.withLabelFingerprint
 
@@ -456,7 +441,7 @@ InitialClusterVersion: The initial Kubernetes version for this cluster.  Valid v
 withLabelFingerprint(labelFingerprint)
 ```
 
-LabelFingerprint: The fingerprint of the set of labels for this cluster.
+"LabelFingerprint: The fingerprint of the set of labels for this cluster."
 
 ### fn spec.forProvider.withLocation
 
@@ -464,7 +449,7 @@ LabelFingerprint: The fingerprint of the set of labels for this cluster.
 withLocation(location)
 ```
 
-Location: The name of the Google Compute Engine [zone](/compute/docs/regions-zones/regions-zones#available) or [region](/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.
+"Location: The name of the Google Compute Engine [zone](/compute/docs/regions-zones/regions-zones#available) or [region](/compute/docs/regions-zones/regions-zones#available) in which the cluster resides."
 
 ### fn spec.forProvider.withLocations
 
@@ -472,7 +457,7 @@ Location: The name of the Google Compute Engine [zone](/compute/docs/regions-zon
 withLocations(locations)
 ```
 
-Locations: The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the cluster's nodes should be located.
+"Locations: The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the cluster's nodes should be located."
 
 ### fn spec.forProvider.withLocationsMixin
 
@@ -480,7 +465,7 @@ Locations: The list of Google Compute Engine [zones](/compute/docs/zones#availab
 withLocationsMixin(locations)
 ```
 
-Locations: The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the cluster's nodes should be located.
+"Locations: The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the cluster's nodes should be located."
 
 **Note:** This function appends passed data to existing values
 
@@ -490,8 +475,7 @@ Locations: The list of Google Compute Engine [zones](/compute/docs/zones#availab
 withLoggingService(loggingService)
 ```
 
-LoggingService: The logging service the cluster should use to write logs. Currently available options: 
- * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native resource model in Stackdriver * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no logs will be exported from the cluster. * if left as an empty string,`logging.googleapis.com` will be used.
+"LoggingService: The logging service the cluster should use to write logs. Currently available options: \n * \"logging.googleapis.com/kubernetes\" - the Google Cloud Logging service with Kubernetes-native resource model in Stackdriver * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no logs will be exported from the cluster. * if left as an empty string,`logging.googleapis.com` will be used."
 
 ### fn spec.forProvider.withMonitoringService
 
@@ -499,8 +483,7 @@ LoggingService: The logging service the cluster should use to write logs. Curren
 withMonitoringService(monitoringService)
 ```
 
-MonitoringService: The monitoring service the cluster should use to write metrics. Currently available options: 
- * `monitoring.googleapis.com` - the Google Cloud Monitoring service. * `none` - no metrics will be exported from the cluster. * if left as an empty string, `monitoring.googleapis.com` will be used.
+"MonitoringService: The monitoring service the cluster should use to write metrics. Currently available options: \n * `monitoring.googleapis.com` - the Google Cloud Monitoring service. * `none` - no metrics will be exported from the cluster. * if left as an empty string, `monitoring.googleapis.com` will be used."
 
 ### fn spec.forProvider.withNetwork
 
@@ -508,7 +491,7 @@ MonitoringService: The monitoring service the cluster should use to write metric
 withNetwork(network)
 ```
 
-Network: The name of the Google Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default` network will be used.
+"Network: The name of the Google Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default` network will be used."
 
 ### fn spec.forProvider.withResourceLabels
 
@@ -516,7 +499,7 @@ Network: The name of the Google Compute Engine [network](/compute/docs/networks-
 withResourceLabels(resourceLabels)
 ```
 
-ResourceLabels: The resource labels for the cluster to use to annotate any related Google Compute Engine resources.
+"ResourceLabels: The resource labels for the cluster to use to annotate any related Google Compute Engine resources."
 
 ### fn spec.forProvider.withResourceLabelsMixin
 
@@ -524,7 +507,7 @@ ResourceLabels: The resource labels for the cluster to use to annotate any relat
 withResourceLabelsMixin(resourceLabels)
 ```
 
-ResourceLabels: The resource labels for the cluster to use to annotate any related Google Compute Engine resources.
+"ResourceLabels: The resource labels for the cluster to use to annotate any related Google Compute Engine resources."
 
 **Note:** This function appends passed data to existing values
 
@@ -534,15 +517,15 @@ ResourceLabels: The resource labels for the cluster to use to annotate any relat
 withSubnetwork(subnetwork)
 ```
 
-Subnetwork: The name of the Google Compute Engine [subnetwork](/compute/docs/subnetworks) to which the cluster is connected.
+"Subnetwork: The name of the Google Compute Engine [subnetwork](/compute/docs/subnetworks) to which the cluster is connected."
 
 ## obj spec.forProvider.addonsConfig
 
-AddonsConfig: Configurations for the various addons available to run in the cluster.
+"AddonsConfig: Configurations for the various addons available to run in the cluster."
 
 ## obj spec.forProvider.addonsConfig.cloudRunConfig
 
-CloudRunConfig: Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to enable Cloud Run addon. This option can only be enabled at cluster creation time.
+"CloudRunConfig: Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to enable Cloud Run addon. This option can only be enabled at cluster creation time."
 
 ### fn spec.forProvider.addonsConfig.cloudRunConfig.withDisabled
 
@@ -550,7 +533,7 @@ CloudRunConfig: Configuration for the Cloud Run addon. The `IstioConfig` addon m
 withDisabled(disabled)
 ```
 
-Disabled: Whether Cloud Run addon is enabled for this cluster.
+"Disabled: Whether Cloud Run addon is enabled for this cluster."
 
 ### fn spec.forProvider.addonsConfig.cloudRunConfig.withLoadBalancerType
 
@@ -558,12 +541,11 @@ Disabled: Whether Cloud Run addon is enabled for this cluster.
 withLoadBalancerType(loadBalancerType)
 ```
 
-LoadBalancerType: Which load balancer type is installed for Cloud Run. 
- Possible values:   "LOAD_BALANCER_TYPE_UNSPECIFIED" - Load balancer type for Cloud Run is unspecified.   "LOAD_BALANCER_TYPE_EXTERNAL" - Install external load balancer for Cloud Run.   "LOAD_BALANCER_TYPE_INTERNAL" - Install internal load balancer for Cloud Run.
+"LoadBalancerType: Which load balancer type is installed for Cloud Run. \n Possible values:   \"LOAD_BALANCER_TYPE_UNSPECIFIED\" - Load balancer type for Cloud Run is unspecified.   \"LOAD_BALANCER_TYPE_EXTERNAL\" - Install external load balancer for Cloud Run.   \"LOAD_BALANCER_TYPE_INTERNAL\" - Install internal load balancer for Cloud Run."
 
 ## obj spec.forProvider.addonsConfig.configConnectorConfig
 
-ConfigConnectorConfig: Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
+"ConfigConnectorConfig: Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API"
 
 ### fn spec.forProvider.addonsConfig.configConnectorConfig.withEnabled
 
@@ -571,11 +553,11 @@ ConfigConnectorConfig: Configuration for the ConfigConnector add-on, a Kubernete
 withEnabled(enabled)
 ```
 
-Enabled: Whether Cloud Connector is enabled for this cluster.
+"Enabled: Whether Cloud Connector is enabled for this cluster."
 
 ## obj spec.forProvider.addonsConfig.dnsCacheConfig
 
-DNSCacheConfig: Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+"DNSCacheConfig: Configuration for NodeLocalDNS, a dns cache running on cluster nodes"
 
 ### fn spec.forProvider.addonsConfig.dnsCacheConfig.withEnabled
 
@@ -583,11 +565,11 @@ DNSCacheConfig: Configuration for NodeLocalDNS, a dns cache running on cluster n
 withEnabled(enabled)
 ```
 
-Enabled: Whether NodeLocal DNSCache is enabled for this cluster.
+"Enabled: Whether NodeLocal DNSCache is enabled for this cluster."
 
 ## obj spec.forProvider.addonsConfig.gcePersistentDiskCsiDriverConfig
 
-GCEPersistentDiskCSIDriverConfig: Configuration for the GCP Compute Persistent Disk CSI driver.
+"GCEPersistentDiskCSIDriverConfig: Configuration for the GCP Compute Persistent Disk CSI driver."
 
 ### fn spec.forProvider.addonsConfig.gcePersistentDiskCsiDriverConfig.withEnabled
 
@@ -595,11 +577,11 @@ GCEPersistentDiskCSIDriverConfig: Configuration for the GCP Compute Persistent D
 withEnabled(enabled)
 ```
 
-Enabled: Whether the GCE PD CSI driver is enabled for this cluster.
+"Enabled: Whether the GCE PD CSI driver is enabled for this cluster."
 
 ## obj spec.forProvider.addonsConfig.horizontalPodAutoscaling
 
-HorizontalPodAutoscaling: Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
+"HorizontalPodAutoscaling: Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods."
 
 ### fn spec.forProvider.addonsConfig.horizontalPodAutoscaling.withDisabled
 
@@ -607,11 +589,11 @@ HorizontalPodAutoscaling: Configuration for the horizontal pod autoscaling featu
 withDisabled(disabled)
 ```
 
-Disabled: Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
+"Disabled: Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service."
 
 ## obj spec.forProvider.addonsConfig.httpLoadBalancing
 
-HTTpLoadBalancing: Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
+"HTTpLoadBalancing: Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster."
 
 ### fn spec.forProvider.addonsConfig.httpLoadBalancing.withDisabled
 
@@ -619,11 +601,11 @@ HTTpLoadBalancing: Configuration for the HTTP (L7) load balancing controller add
 withDisabled(disabled)
 ```
 
-Disabled: Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
+"Disabled: Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers."
 
 ## obj spec.forProvider.addonsConfig.kubernetesDashboard
 
-KubernetesDashboard: Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
+"KubernetesDashboard: Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards"
 
 ### fn spec.forProvider.addonsConfig.kubernetesDashboard.withDisabled
 
@@ -631,11 +613,11 @@ KubernetesDashboard: Configuration for the Kubernetes Dashboard. This addon is d
 withDisabled(disabled)
 ```
 
-Disabled: Whether the Kubernetes Dashboard is enabled for this cluster.
+"Disabled: Whether the Kubernetes Dashboard is enabled for this cluster."
 
 ## obj spec.forProvider.addonsConfig.networkPolicyConfig
 
-NetworkPolicyConfig: Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
+"NetworkPolicyConfig: Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes."
 
 ### fn spec.forProvider.addonsConfig.networkPolicyConfig.withDisabled
 
@@ -643,11 +625,11 @@ NetworkPolicyConfig: Configuration for NetworkPolicy. This only tracks whether t
 withDisabled(disabled)
 ```
 
-Disabled: Whether NetworkPolicy is enabled for this cluster.
+"Disabled: Whether NetworkPolicy is enabled for this cluster."
 
 ## obj spec.forProvider.authenticatorGroupsConfig
 
-AuthenticatorGroupsConfig: Configuration controlling RBAC group membership information.
+"AuthenticatorGroupsConfig: Configuration controlling RBAC group membership information."
 
 ### fn spec.forProvider.authenticatorGroupsConfig.withEnabled
 
@@ -655,7 +637,7 @@ AuthenticatorGroupsConfig: Configuration controlling RBAC group membership infor
 withEnabled(enabled)
 ```
 
-Enabled: Whether this cluster should return group membership lookups during authentication using a group of security groups.
+"Enabled: Whether this cluster should return group membership lookups during authentication using a group of security groups."
 
 ### fn spec.forProvider.authenticatorGroupsConfig.withSecurityGroup
 
@@ -663,11 +645,11 @@ Enabled: Whether this cluster should return group membership lookups during auth
 withSecurityGroup(securityGroup)
 ```
 
-SecurityGroup: The name of the security group-of-groups to be used. Only relevant if enabled = true.
+"SecurityGroup: The name of the security group-of-groups to be used. Only relevant if enabled = true."
 
 ## obj spec.forProvider.autopilot
 
-Autopilot: Autopilot configuration for the cluster.
+"Autopilot: Autopilot configuration for the cluster."
 
 ### fn spec.forProvider.autopilot.withEnabled
 
@@ -675,11 +657,11 @@ Autopilot: Autopilot configuration for the cluster.
 withEnabled(enabled)
 ```
 
-Enabled: Enable Autopilot
+"Enabled: Enable Autopilot"
 
 ## obj spec.forProvider.autoscaling
 
-Autoscaling: Cluster-level autoscaling configuration.
+"Autoscaling: Cluster-level autoscaling configuration."
 
 ### fn spec.forProvider.autoscaling.withAutoprovisioningLocations
 
@@ -687,7 +669,7 @@ Autoscaling: Cluster-level autoscaling configuration.
 withAutoprovisioningLocations(autoprovisioningLocations)
 ```
 
-AutoprovisioningLocations: The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
+"AutoprovisioningLocations: The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP."
 
 ### fn spec.forProvider.autoscaling.withAutoprovisioningLocationsMixin
 
@@ -695,7 +677,7 @@ AutoprovisioningLocations: The list of Google Compute Engine [zones](/compute/do
 withAutoprovisioningLocationsMixin(autoprovisioningLocations)
 ```
 
-AutoprovisioningLocations: The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
+"AutoprovisioningLocations: The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP."
 
 **Note:** This function appends passed data to existing values
 
@@ -705,7 +687,7 @@ AutoprovisioningLocations: The list of Google Compute Engine [zones](/compute/do
 withEnableNodeAutoprovisioning(enableNodeAutoprovisioning)
 ```
 
-EnableNodeAutoprovisioning: Enables automatic node pool creation and deletion.
+"EnableNodeAutoprovisioning: Enables automatic node pool creation and deletion."
 
 ### fn spec.forProvider.autoscaling.withResourceLimits
 
@@ -713,7 +695,7 @@ EnableNodeAutoprovisioning: Enables automatic node pool creation and deletion.
 withResourceLimits(resourceLimits)
 ```
 
-ResourceLimits: Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+"ResourceLimits: Contains global constraints regarding minimum and maximum amount of resources in the cluster."
 
 ### fn spec.forProvider.autoscaling.withResourceLimitsMixin
 
@@ -721,13 +703,13 @@ ResourceLimits: Contains global constraints regarding minimum and maximum amount
 withResourceLimitsMixin(resourceLimits)
 ```
 
-ResourceLimits: Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+"ResourceLimits: Contains global constraints regarding minimum and maximum amount of resources in the cluster."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults
 
-AutoprovisioningNodePoolDefaults: AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+"AutoprovisioningNodePoolDefaults: AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP."
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.withBootDiskKmsKey
 
@@ -735,7 +717,7 @@ AutoprovisioningNodePoolDefaults: AutoprovisioningNodePoolDefaults contains defa
 withBootDiskKmsKey(bootDiskKmsKey)
 ```
 
-BootDiskKmsKey: The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cr yptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+"BootDiskKmsKey: The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cr yptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption"
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.withDiskSizeGb
 
@@ -743,7 +725,7 @@ BootDiskKmsKey: The Customer Managed Encryption Key used to encrypt the boot dis
 withDiskSizeGb(diskSizeGb)
 ```
 
-DiskSizeGb: Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+"DiskSizeGb: Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB."
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.withDiskType
 
@@ -751,7 +733,7 @@ DiskSizeGb: Size of the disk attached to each node, specified in GB. The smalles
 withDiskType(diskType)
 ```
 
-DiskType: Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'
+"DiskType: Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'"
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.withMinCpuPlatform
 
@@ -759,7 +741,7 @@ DiskType: Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' o
 withMinCpuPlatform(minCpuPlatform)
 ```
 
-MinCpuPlatform: Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read how to specify min CPU platform (https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass "automatic" as field value.
+"MinCpuPlatform: Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read how to specify min CPU platform (https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass \"automatic\" as field value."
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.withOauthScopes
 
@@ -767,7 +749,7 @@ MinCpuPlatform: Minimum CPU platform to be used for NAP created node pools. The 
 withOauthScopes(oauthScopes)
 ```
 
-OauthScopes: Scopes that are used by NAP when creating node pools. If oauth_scopes are specified, service_account should be empty.
+"OauthScopes: Scopes that are used by NAP when creating node pools. If oauth_scopes are specified, service_account should be empty."
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.withOauthScopesMixin
 
@@ -775,7 +757,7 @@ OauthScopes: Scopes that are used by NAP when creating node pools. If oauth_scop
 withOauthScopesMixin(oauthScopes)
 ```
 
-OauthScopes: Scopes that are used by NAP when creating node pools. If oauth_scopes are specified, service_account should be empty.
+"OauthScopes: Scopes that are used by NAP when creating node pools. If oauth_scopes are specified, service_account should be empty."
 
 **Note:** This function appends passed data to existing values
 
@@ -785,11 +767,11 @@ OauthScopes: Scopes that are used by NAP when creating node pools. If oauth_scop
 withServiceAccount(serviceAccount)
 ```
 
-ServiceAccount: The Google Cloud Platform Service Account to be used by the node VMs. If service_account is specified, scopes should be empty.
+"ServiceAccount: The Google Cloud Platform Service Account to be used by the node VMs. If service_account is specified, scopes should be empty."
 
 ## obj spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.management
 
-Management: Specifies the node management options for NAP created node-pools.
+"Management: Specifies the node management options for NAP created node-pools."
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.management.withAutoRepair
 
@@ -797,7 +779,7 @@ Management: Specifies the node management options for NAP created node-pools.
 withAutoRepair(autoRepair)
 ```
 
-AutoRepair: A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
+"AutoRepair: A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered."
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.management.withAutoUpgrade
 
@@ -805,11 +787,11 @@ AutoRepair: A flag that specifies whether the node auto-repair is enabled for th
 withAutoUpgrade(autoUpgrade)
 ```
 
-AutoUpgrade: A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.
+"AutoUpgrade: A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes."
 
 ## obj spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.shieldedInstanceConfig
 
-ShieldedInstanceConfig: Shielded Instance options.
+"ShieldedInstanceConfig: Shielded Instance options."
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.shieldedInstanceConfig.withEnableIntegrityMonitoring
 
@@ -817,7 +799,7 @@ ShieldedInstanceConfig: Shielded Instance options.
 withEnableIntegrityMonitoring(enableIntegrityMonitoring)
 ```
 
-EnableIntegrityMonitoring: Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created.
+"EnableIntegrityMonitoring: Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created."
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.shieldedInstanceConfig.withEnableSecureBoot
 
@@ -825,11 +807,11 @@ EnableIntegrityMonitoring: Defines whether the instance has integrity monitoring
 withEnableSecureBoot(enableSecureBoot)
 ```
 
-EnableSecureBoot: Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails.
+"EnableSecureBoot: Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails."
 
 ## obj spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.upgradeSettings
 
-UpgradeSettings: Specifies the upgrade settings for NAP created node pools
+"UpgradeSettings: Specifies the upgrade settings for NAP created node pools"
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.upgradeSettings.withMaxSurge
 
@@ -837,7 +819,7 @@ UpgradeSettings: Specifies the upgrade settings for NAP created node pools
 withMaxSurge(maxSurge)
 ```
 
-MaxSurge: The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
+"MaxSurge: The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process."
 
 ### fn spec.forProvider.autoscaling.autoprovisioningNodePoolDefaults.upgradeSettings.withMaxUnavailable
 
@@ -845,11 +827,11 @@ MaxSurge: The maximum number of nodes that can be created beyond the current siz
 withMaxUnavailable(maxUnavailable)
 ```
 
-MaxUnavailable: The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
+"MaxUnavailable: The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready."
 
 ## obj spec.forProvider.binaryAuthorization
 
-BinaryAuthorization: Configuration for Binary Authorization.
+"BinaryAuthorization: Configuration for Binary Authorization."
 
 ### fn spec.forProvider.binaryAuthorization.withEnabled
 
@@ -857,11 +839,11 @@ BinaryAuthorization: Configuration for Binary Authorization.
 withEnabled(enabled)
 ```
 
-Enabled: Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
+"Enabled: Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz."
 
 ## obj spec.forProvider.confidentialNodes
 
-ConfidentialNodes: Configuration of Confidential Nodes
+"ConfidentialNodes: Configuration of Confidential Nodes"
 
 ### fn spec.forProvider.confidentialNodes.withEnabled
 
@@ -869,11 +851,11 @@ ConfidentialNodes: Configuration of Confidential Nodes
 withEnabled(enabled)
 ```
 
-Enabled: Whether Confidential Nodes feature is enabled for all nodes in this cluster.
+"Enabled: Whether Confidential Nodes feature is enabled for all nodes in this cluster."
 
 ## obj spec.forProvider.databaseEncryption
 
-DatabaseEncryption: Configuration of etcd encryption.
+"DatabaseEncryption: Configuration of etcd encryption."
 
 ### fn spec.forProvider.databaseEncryption.withKeyName
 
@@ -881,7 +863,7 @@ DatabaseEncryption: Configuration of etcd encryption.
 withKeyName(keyName)
 ```
 
-KeyName: Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-ke y
+"KeyName: Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-ke y"
 
 ### fn spec.forProvider.databaseEncryption.withState
 
@@ -889,12 +871,11 @@ KeyName: Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. 
 withState(state)
 ```
 
-State: Denotes the state of etcd encryption. 
- Possible values:   "UNKNOWN" - Should never be set   "ENCRYPTED" - Secrets in etcd are encrypted.   "DECRYPTED" - Secrets in etcd are stored in plain text (at etcd level) - this is unrelated to Google Compute Engine level full disk encryption.
+"State: Denotes the state of etcd encryption. \n Possible values:   \"UNKNOWN\" - Should never be set   \"ENCRYPTED\" - Secrets in etcd are encrypted.   \"DECRYPTED\" - Secrets in etcd are stored in plain text (at etcd level) - this is unrelated to Google Compute Engine level full disk encryption."
 
 ## obj spec.forProvider.defaultMaxPodsConstraint
 
-DefaultMaxPodsConstraint: The default constraint on the maximum number of pods that can be run simultaneously on a node in the node pool of this cluster. Only honored if cluster created with IP Alias support.
+"DefaultMaxPodsConstraint: The default constraint on the maximum number of pods that can be run simultaneously on a node in the node pool of this cluster. Only honored if cluster created with IP Alias support."
 
 ### fn spec.forProvider.defaultMaxPodsConstraint.withMaxPodsPerNode
 
@@ -902,11 +883,11 @@ DefaultMaxPodsConstraint: The default constraint on the maximum number of pods t
 withMaxPodsPerNode(maxPodsPerNode)
 ```
 
-MaxPodsPerNode: Constraint enforced on the max num of pods per node.
+"MaxPodsPerNode: Constraint enforced on the max num of pods per node."
 
 ## obj spec.forProvider.ipAllocationPolicy
 
-IPAllocationPolicy: Configuration for cluster IP allocation.
+"IPAllocationPolicy: Configuration for cluster IP allocation."
 
 ### fn spec.forProvider.ipAllocationPolicy.withClusterIpv4CidrBlock
 
@@ -914,12 +895,7 @@ IPAllocationPolicy: Configuration for cluster IP allocation.
 withClusterIpv4CidrBlock(clusterIpv4CidrBlock)
 ```
 
-ClusterIpv4CidrBlock: The IP address range for the cluster pod IPs. If this field is set, then `cluster.cluster_ipv4_cidr` must be left blank. 
- This field is only applicable when `use_ip_aliases` is true. 
- Set to blank to have a range chosen with the default size. 
- Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. 
- Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) 
- notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+"ClusterIpv4CidrBlock: The IP address range for the cluster pod IPs. If this field is set, then `cluster.cluster_ipv4_cidr` must be left blank. \n This field is only applicable when `use_ip_aliases` is true. \n Set to blank to have a range chosen with the default size. \n Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. \n Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) \n notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use."
 
 ### fn spec.forProvider.ipAllocationPolicy.withClusterSecondaryRangeName
 
@@ -927,8 +903,7 @@ ClusterIpv4CidrBlock: The IP address range for the cluster pod IPs. If this fiel
 withClusterSecondaryRangeName(clusterSecondaryRangeName)
 ```
 
-ClusterSecondaryRangeName: The name of the secondary range to be used for the cluster CIDR block.  The secondary range will be used for pod IP addresses. This must be an existing secondary range associated with the cluster subnetwork. 
- This field is only applicable with use_ip_aliases is true and create_subnetwork is false.
+"ClusterSecondaryRangeName: The name of the secondary range to be used for the cluster CIDR block.  The secondary range will be used for pod IP addresses. This must be an existing secondary range associated with the cluster subnetwork. \n This field is only applicable with use_ip_aliases is true and create_subnetwork is false."
 
 ### fn spec.forProvider.ipAllocationPolicy.withCreateSubnetwork
 
@@ -936,8 +911,7 @@ ClusterSecondaryRangeName: The name of the secondary range to be used for the cl
 withCreateSubnetwork(createSubnetwork)
 ```
 
-CreateSubnetwork: Whether a new subnetwork will be created automatically for the cluster. 
- This field is only applicable when `use_ip_aliases` is true.
+"CreateSubnetwork: Whether a new subnetwork will be created automatically for the cluster. \n This field is only applicable when `use_ip_aliases` is true."
 
 ### fn spec.forProvider.ipAllocationPolicy.withNodeIpv4CidrBlock
 
@@ -945,12 +919,7 @@ CreateSubnetwork: Whether a new subnetwork will be created automatically for the
 withNodeIpv4CidrBlock(nodeIpv4CidrBlock)
 ```
 
-NodeIpv4CidrBlock: The IP address range of the instance IPs in this cluster. 
- This is applicable only if `create_subnetwork` is true. 
- Set to blank to have a range chosen with the default size. 
- Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. 
- Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) 
- notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+"NodeIpv4CidrBlock: The IP address range of the instance IPs in this cluster. \n This is applicable only if `create_subnetwork` is true. \n Set to blank to have a range chosen with the default size. \n Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. \n Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) \n notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use."
 
 ### fn spec.forProvider.ipAllocationPolicy.withServicesIpv4CidrBlock
 
@@ -958,12 +927,7 @@ NodeIpv4CidrBlock: The IP address range of the instance IPs in this cluster.
 withServicesIpv4CidrBlock(servicesIpv4CidrBlock)
 ```
 
-ServicesIpv4CidrBlock: The IP address range of the services IPs in this cluster. If blank, a range will be automatically chosen with the default size. 
- This field is only applicable when `use_ip_aliases` is true. 
- Set to blank to have a range chosen with the default size. 
- Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. 
- Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) 
- notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+"ServicesIpv4CidrBlock: The IP address range of the services IPs in this cluster. If blank, a range will be automatically chosen with the default size. \n This field is only applicable when `use_ip_aliases` is true. \n Set to blank to have a range chosen with the default size. \n Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. \n Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) \n notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use."
 
 ### fn spec.forProvider.ipAllocationPolicy.withServicesSecondaryRangeName
 
@@ -971,8 +935,7 @@ ServicesIpv4CidrBlock: The IP address range of the services IPs in this cluster.
 withServicesSecondaryRangeName(servicesSecondaryRangeName)
 ```
 
-ServicesSecondaryRangeName: The name of the secondary range to be used as for the services CIDR block.  The secondary range will be used for service ClusterIPs. This must be an existing secondary range associated with the cluster subnetwork. 
- This field is only applicable with use_ip_aliases is true and create_subnetwork is false.
+"ServicesSecondaryRangeName: The name of the secondary range to be used as for the services CIDR block.  The secondary range will be used for service ClusterIPs. This must be an existing secondary range associated with the cluster subnetwork. \n This field is only applicable with use_ip_aliases is true and create_subnetwork is false."
 
 ### fn spec.forProvider.ipAllocationPolicy.withSubnetworkName
 
@@ -980,7 +943,7 @@ ServicesSecondaryRangeName: The name of the secondary range to be used as for th
 withSubnetworkName(subnetworkName)
 ```
 
-SubnetworkName: A custom subnetwork name to be used if `create_subnetwork` is true.  If this field is empty, then an automatic name will be chosen for the new subnetwork.
+"SubnetworkName: A custom subnetwork name to be used if `create_subnetwork` is true.  If this field is empty, then an automatic name will be chosen for the new subnetwork."
 
 ### fn spec.forProvider.ipAllocationPolicy.withTpuIpv4CidrBlock
 
@@ -988,12 +951,7 @@ SubnetworkName: A custom subnetwork name to be used if `create_subnetwork` is tr
 withTpuIpv4CidrBlock(tpuIpv4CidrBlock)
 ```
 
-TpuIpv4CidrBlock: The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. 
- This field is only applicable when `use_ip_aliases` is true. 
- If unspecified, the range will use the default size. 
- Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. 
- Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) 
- notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+"TpuIpv4CidrBlock: The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. \n This field is only applicable when `use_ip_aliases` is true. \n If unspecified, the range will use the default size. \n Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. \n Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) \n notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use."
 
 ### fn spec.forProvider.ipAllocationPolicy.withUseIpAliases
 
@@ -1001,7 +959,7 @@ TpuIpv4CidrBlock: The IP address range of the Cloud TPUs in this cluster. If uns
 withUseIpAliases(useIpAliases)
 ```
 
-UseIPAliases: Whether alias IPs will be used for pod IPs in the cluster.
+"UseIPAliases: Whether alias IPs will be used for pod IPs in the cluster."
 
 ### fn spec.forProvider.ipAllocationPolicy.withUseRoutes
 
@@ -1009,11 +967,11 @@ UseIPAliases: Whether alias IPs will be used for pod IPs in the cluster.
 withUseRoutes(useRoutes)
 ```
 
-UseRoutes: Whether routes will be used for pod IPs in the cluster. This is used in conjunction with use_ip_aliases. It cannot be true if use_ip_aliases is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode
+"UseRoutes: Whether routes will be used for pod IPs in the cluster. This is used in conjunction with use_ip_aliases. It cannot be true if use_ip_aliases is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode"
 
 ## obj spec.forProvider.legacyAbac
 
-LegacyAbac: Configuration for the legacy ABAC authorization mode.
+"LegacyAbac: Configuration for the legacy ABAC authorization mode."
 
 ### fn spec.forProvider.legacyAbac.withEnabled
 
@@ -1021,15 +979,15 @@ LegacyAbac: Configuration for the legacy ABAC authorization mode.
 withEnabled(enabled)
 ```
 
-Enabled: Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
+"Enabled: Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM."
 
 ## obj spec.forProvider.maintenancePolicy
 
-MaintenancePolicy: Configure the maintenance policy for this cluster.
+"MaintenancePolicy: Configure the maintenance policy for this cluster."
 
 ## obj spec.forProvider.maintenancePolicy.window
 
-Window: Specifies the maintenance window in which maintenance may be performed.
+"Window: Specifies the maintenance window in which maintenance may be performed."
 
 ### fn spec.forProvider.maintenancePolicy.window.withMaintenanceExclusions
 
@@ -1037,7 +995,7 @@ Window: Specifies the maintenance window in which maintenance may be performed.
 withMaintenanceExclusions(maintenanceExclusions)
 ```
 
-MaintenanceExclusions: Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+"MaintenanceExclusions: Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows."
 
 ### fn spec.forProvider.maintenancePolicy.window.withMaintenanceExclusionsMixin
 
@@ -1045,13 +1003,13 @@ MaintenanceExclusions: Exceptions to maintenance window. Non-emergency maintenan
 withMaintenanceExclusionsMixin(maintenanceExclusions)
 ```
 
-MaintenanceExclusions: Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+"MaintenanceExclusions: Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.maintenancePolicy.window.dailyMaintenanceWindow
 
-DailyMaintenanceWindow: DailyMaintenanceWindow specifies a daily maintenance operation window.
+"DailyMaintenanceWindow: DailyMaintenanceWindow specifies a daily maintenance operation window."
 
 ### fn spec.forProvider.maintenancePolicy.window.dailyMaintenanceWindow.withStartTime
 
@@ -1059,11 +1017,11 @@ DailyMaintenanceWindow: DailyMaintenanceWindow specifies a daily maintenance ope
 withStartTime(startTime)
 ```
 
-StartTime: Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
+"StartTime: Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format \"HH:MM\", where HH : [00-23] and MM : [00-59] GMT."
 
 ## obj spec.forProvider.maintenancePolicy.window.recurringWindow
 
-RecurringWindow: RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
+"RecurringWindow: RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time."
 
 ### fn spec.forProvider.maintenancePolicy.window.recurringWindow.withRecurrence
 
@@ -1071,11 +1029,11 @@ RecurringWindow: RecurringWindow specifies some number of recurring time periods
 withRecurrence(recurrence)
 ```
 
-Recurrence: An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how this window reccurs. They go on for the span of time between the start and end time. For example, to have something repeat every weekday, you'd use: `FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR` To repeat some window daily (equivalent to the DailyMaintenanceWindow): `FREQ=DAILY` For the first weekend of every month: `FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA,SU` This specifies how frequently the window starts. Eg, if you wanted to have a 9-5 UTC-4 window every weekday, you'd use something like: “` start time = 2019-01-01T09:00:00-0400 end time = 2019-01-01T17:00:00-0400 recurrence = FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR “` Windows can span multiple days. Eg, to make the window encompass every weekend from midnight Saturday till the last minute of Sunday UTC: “` start time = 2019-01-05T00:00:00Z end time = 2019-01-07T23:59:00Z recurrence = FREQ=WEEKLY;BYDAY=SA “` Note the start and end time's specific dates are largely arbitrary except to specify duration of the window and when it first starts. The FREQ values of HOURLY, MINUTELY, and SECONDLY are not supported.
+"Recurrence: An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how this window reccurs. They go on for the span of time between the start and end time. For example, to have something repeat every weekday, you'd use: `FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR` To repeat some window daily (equivalent to the DailyMaintenanceWindow): `FREQ=DAILY` For the first weekend of every month: `FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA,SU` This specifies how frequently the window starts. Eg, if you wanted to have a 9-5 UTC-4 window every weekday, you'd use something like: “` start time = 2019-01-01T09:00:00-0400 end time = 2019-01-01T17:00:00-0400 recurrence = FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR “` Windows can span multiple days. Eg, to make the window encompass every weekend from midnight Saturday till the last minute of Sunday UTC: “` start time = 2019-01-05T00:00:00Z end time = 2019-01-07T23:59:00Z recurrence = FREQ=WEEKLY;BYDAY=SA “` Note the start and end time's specific dates are largely arbitrary except to specify duration of the window and when it first starts. The FREQ values of HOURLY, MINUTELY, and SECONDLY are not supported."
 
 ## obj spec.forProvider.maintenancePolicy.window.recurringWindow.window
 
-Window: The window of the first recurrence.
+"Window: The window of the first recurrence."
 
 ### fn spec.forProvider.maintenancePolicy.window.recurringWindow.window.withEndTime
 
@@ -1083,7 +1041,7 @@ Window: The window of the first recurrence.
 withEndTime(endTime)
 ```
 
-EndTime: The time that the window ends. The end time should take place after the start time.
+"EndTime: The time that the window ends. The end time should take place after the start time."
 
 ### fn spec.forProvider.maintenancePolicy.window.recurringWindow.window.withStartTime
 
@@ -1091,11 +1049,11 @@ EndTime: The time that the window ends. The end time should take place after the
 withStartTime(startTime)
 ```
 
-StartTime: The time that the window first starts.
+"StartTime: The time that the window first starts."
 
 ## obj spec.forProvider.masterAuth
 
-MasterAuth: The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to "admin", a random password will be generated, and a client certificate will be issued.
+"MasterAuth: The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to \"admin\", a random password will be generated, and a client certificate will be issued."
 
 ### fn spec.forProvider.masterAuth.withUsername
 
@@ -1103,11 +1061,11 @@ MasterAuth: The authentication information for accessing the master endpoint. If
 withUsername(username)
 ```
 
-Username: The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string).
+"Username: The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string)."
 
 ## obj spec.forProvider.masterAuth.clientCertificateConfig
 
-ClientCertificateConfig: Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued.
+"ClientCertificateConfig: Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued."
 
 ### fn spec.forProvider.masterAuth.clientCertificateConfig.withIssueClientCertificate
 
@@ -1115,11 +1073,11 @@ ClientCertificateConfig: Configuration for client certificate authentication on 
 withIssueClientCertificate(issueClientCertificate)
 ```
 
-IssueClientCertificate: Issue a client certificate.
+"IssueClientCertificate: Issue a client certificate."
 
 ## obj spec.forProvider.masterAuthorizedNetworksConfig
 
-MasterAuthorizedNetworksConfig: The configuration options for master authorized networks feature.
+"MasterAuthorizedNetworksConfig: The configuration options for master authorized networks feature."
 
 ### fn spec.forProvider.masterAuthorizedNetworksConfig.withCidrBlocks
 
@@ -1127,7 +1085,7 @@ MasterAuthorizedNetworksConfig: The configuration options for master authorized 
 withCidrBlocks(cidrBlocks)
 ```
 
-CidrBlocks: cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
+"CidrBlocks: cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS."
 
 ### fn spec.forProvider.masterAuthorizedNetworksConfig.withCidrBlocksMixin
 
@@ -1135,7 +1093,7 @@ CidrBlocks: cidr_blocks define up to 50 external networks that could access Kube
 withCidrBlocksMixin(cidrBlocks)
 ```
 
-CidrBlocks: cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
+"CidrBlocks: cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS."
 
 **Note:** This function appends passed data to existing values
 
@@ -1145,11 +1103,11 @@ CidrBlocks: cidr_blocks define up to 50 external networks that could access Kube
 withEnabled(enabled)
 ```
 
-Enabled: Whether or not master authorized networks is enabled.
+"Enabled: Whether or not master authorized networks is enabled."
 
 ## obj spec.forProvider.networkConfig
 
-NetworkConfig: Configuration for cluster networking.
+"NetworkConfig: Configuration for cluster networking."
 
 ### fn spec.forProvider.networkConfig.withDatapathProvider
 
@@ -1157,8 +1115,7 @@ NetworkConfig: Configuration for cluster networking.
 withDatapathProvider(datapathProvider)
 ```
 
-DatapathProvider: The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation. 
- Possible values:   "DATAPATH_PROVIDER_UNSPECIFIED" - Default value.   "LEGACY_DATAPATH" - Use the IPTables implementation based on kube-proxy.   "ADVANCED_DATAPATH" - Use the eBPF based GKE Dataplane V2 with additional features. See the [GKE Dataplane V2 documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/ dataplane-v2) for more.
+"DatapathProvider: The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation. \n Possible values:   \"DATAPATH_PROVIDER_UNSPECIFIED\" - Default value.   \"LEGACY_DATAPATH\" - Use the IPTables implementation based on kube-proxy.   \"ADVANCED_DATAPATH\" - Use the eBPF based GKE Dataplane V2 with additional features. See the [GKE Dataplane V2 documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/ dataplane-v2) for more."
 
 ### fn spec.forProvider.networkConfig.withEnableIntraNodeVisibility
 
@@ -1166,7 +1123,7 @@ DatapathProvider: The desired datapath provider for this cluster. By default, us
 withEnableIntraNodeVisibility(enableIntraNodeVisibility)
 ```
 
-EnableIntraNodeVisibility: Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+"EnableIntraNodeVisibility: Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network."
 
 ### fn spec.forProvider.networkConfig.withPrivateIpv6GoogleAccess
 
@@ -1174,12 +1131,11 @@ EnableIntraNodeVisibility: Whether Intra-node visibility is enabled for this clu
 withPrivateIpv6GoogleAccess(privateIpv6GoogleAccess)
 ```
 
-PrivateIpv6GoogleAccess: The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4) 
- Possible values:   "PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED" - Default value. Same as DISABLED   "PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED" - No private access to or from Google Services   "PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE" - Enables private IPv6 access to Google Services from GKE   "PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL" - Enables priate IPv6 access to and from Google Services
+"PrivateIpv6GoogleAccess: The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4) \n Possible values:   \"PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED\" - Default value. Same as DISABLED   \"PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED\" - No private access to or from Google Services   \"PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE\" - Enables private IPv6 access to Google Services from GKE   \"PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL\" - Enables priate IPv6 access to and from Google Services"
 
 ## obj spec.forProvider.networkConfig.defaultSnatStatus
 
-DefaultSnatStatus: Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+"DefaultSnatStatus: Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic."
 
 ### fn spec.forProvider.networkConfig.defaultSnatStatus.withDisabled
 
@@ -1187,11 +1143,11 @@ DefaultSnatStatus: Whether the cluster disables default in-node sNAT rules. In-n
 withDisabled(disabled)
 ```
 
-Disabled: Disables cluster default sNAT rules.
+"Disabled: Disables cluster default sNAT rules."
 
 ## obj spec.forProvider.networkPolicy
 
-NetworkPolicy: Configuration options for the NetworkPolicy feature.
+"NetworkPolicy: Configuration options for the NetworkPolicy feature."
 
 ### fn spec.forProvider.networkPolicy.withEnabled
 
@@ -1199,7 +1155,7 @@ NetworkPolicy: Configuration options for the NetworkPolicy feature.
 withEnabled(enabled)
 ```
 
-Enabled: Whether network policy is enabled on the cluster.
+"Enabled: Whether network policy is enabled on the cluster."
 
 ### fn spec.forProvider.networkPolicy.withProvider
 
@@ -1207,12 +1163,11 @@ Enabled: Whether network policy is enabled on the cluster.
 withProvider(provider)
 ```
 
-Provider: The selected network policy provider. 
- Possible values:   "PROVIDER_UNSPECIFIED" - Not set   "CALICO" - Tigera (Calico Felix).
+"Provider: The selected network policy provider. \n Possible values:   \"PROVIDER_UNSPECIFIED\" - Not set   \"CALICO\" - Tigera (Calico Felix)."
 
 ## obj spec.forProvider.networkRef
 
-NetworkRef references to a Network and retrieves its URI
+"NetworkRef references to a Network and retrieves its URI"
 
 ### fn spec.forProvider.networkRef.withName
 
@@ -1220,11 +1175,11 @@ NetworkRef references to a Network and retrieves its URI
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.networkSelector
 
-NetworkSelector selects a reference to a Network and retrieves its URI
+"NetworkSelector selects a reference to a Network and retrieves its URI"
 
 ### fn spec.forProvider.networkSelector.withMatchControllerRef
 
@@ -1232,7 +1187,7 @@ NetworkSelector selects a reference to a Network and retrieves its URI
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.networkSelector.withMatchLabels
 
@@ -1240,7 +1195,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.networkSelector.withMatchLabelsMixin
 
@@ -1248,17 +1203,17 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.notificationConfig
 
-NotificationConfig: Notification configuration of the cluster.
+"NotificationConfig: Notification configuration of the cluster."
 
 ## obj spec.forProvider.notificationConfig.pubsub
 
-Pubsub: Notification config for Pub/Sub.
+"Pubsub: Notification config for Pub/Sub."
 
 ### fn spec.forProvider.notificationConfig.pubsub.withEnabled
 
@@ -1266,7 +1221,7 @@ Pubsub: Notification config for Pub/Sub.
 withEnabled(enabled)
 ```
 
-Enabled: Enable notifications for Pub/Sub.
+"Enabled: Enable notifications for Pub/Sub."
 
 ### fn spec.forProvider.notificationConfig.pubsub.withTopic
 
@@ -1274,11 +1229,11 @@ Enabled: Enable notifications for Pub/Sub.
 withTopic(topic)
 ```
 
-Topic: The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
+"Topic: The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`."
 
 ## obj spec.forProvider.privateClusterConfig
 
-PrivateClusterConfig: Configuration for private cluster.
+"PrivateClusterConfig: Configuration for private cluster."
 
 ### fn spec.forProvider.privateClusterConfig.withEnablePrivateEndpoint
 
@@ -1286,7 +1241,7 @@ PrivateClusterConfig: Configuration for private cluster.
 withEnablePrivateEndpoint(enablePrivateEndpoint)
 ```
 
-EnablePrivateEndpoint: Whether the master's internal IP address is used as the cluster endpoint.
+"EnablePrivateEndpoint: Whether the master's internal IP address is used as the cluster endpoint."
 
 ### fn spec.forProvider.privateClusterConfig.withEnablePrivateNodes
 
@@ -1294,7 +1249,7 @@ EnablePrivateEndpoint: Whether the master's internal IP address is used as the c
 withEnablePrivateNodes(enablePrivateNodes)
 ```
 
-EnablePrivateNodes: Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
+"EnablePrivateNodes: Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking."
 
 ### fn spec.forProvider.privateClusterConfig.withMasterIpv4CidrBlock
 
@@ -1302,11 +1257,11 @@ EnablePrivateNodes: Whether nodes have internal IP addresses only. If enabled, a
 withMasterIpv4CidrBlock(masterIpv4CidrBlock)
 ```
 
-MasterIpv4CidrBlock: The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network.
+"MasterIpv4CidrBlock: The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network."
 
 ## obj spec.forProvider.privateClusterConfig.masterGlobalAccessConfig
 
-MasterGlobalAccessConfig: Controls master global access settings.
+"MasterGlobalAccessConfig: Controls master global access settings."
 
 ### fn spec.forProvider.privateClusterConfig.masterGlobalAccessConfig.withEnabled
 
@@ -1314,11 +1269,11 @@ MasterGlobalAccessConfig: Controls master global access settings.
 withEnabled(enabled)
 ```
 
-Enabled: Whenever master is accessible globally or not.
+"Enabled: Whenever master is accessible globally or not."
 
 ## obj spec.forProvider.releaseChannel
 
-ReleaseChannel: Release channel configuration.
+"ReleaseChannel: Release channel configuration."
 
 ### fn spec.forProvider.releaseChannel.withChannel
 
@@ -1326,12 +1281,11 @@ ReleaseChannel: Release channel configuration.
 withChannel(channel)
 ```
 
-Channel: channel specifies which release channel the cluster is subscribed to. 
- Possible values:   "UNSPECIFIED" - No channel specified.   "RAPID" - RAPID channel is offered on an early access basis for customers who want to test new releases. WARNING: Versions available in the RAPID Channel may be subject to unresolved issues with no known workaround and are not subject to any SLAs.   "REGULAR" - Clusters subscribed to REGULAR receive versions that are considered GA quality. REGULAR is intended for production users who want to take advantage of new features.   "STABLE" - Clusters subscribed to STABLE receive versions that are known to be stable and reliable in production.
+"Channel: channel specifies which release channel the cluster is subscribed to. \n Possible values:   \"UNSPECIFIED\" - No channel specified.   \"RAPID\" - RAPID channel is offered on an early access basis for customers who want to test new releases. WARNING: Versions available in the RAPID Channel may be subject to unresolved issues with no known workaround and are not subject to any SLAs.   \"REGULAR\" - Clusters subscribed to REGULAR receive versions that are considered GA quality. REGULAR is intended for production users who want to take advantage of new features.   \"STABLE\" - Clusters subscribed to STABLE receive versions that are known to be stable and reliable in production."
 
 ## obj spec.forProvider.resourceUsageExportConfig
 
-ResourceUsageExportConfig: Configuration for exporting resource usages. Resource usage export is disabled when this config is unspecified.
+"ResourceUsageExportConfig: Configuration for exporting resource usages. Resource usage export is disabled when this config is unspecified."
 
 ### fn spec.forProvider.resourceUsageExportConfig.withEnableNetworkEgressMetering
 
@@ -1339,11 +1293,11 @@ ResourceUsageExportConfig: Configuration for exporting resource usages. Resource
 withEnableNetworkEgressMetering(enableNetworkEgressMetering)
 ```
 
-EnableNetworkEgressMetering: Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
+"EnableNetworkEgressMetering: Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic."
 
 ## obj spec.forProvider.resourceUsageExportConfig.bigqueryDestination
 
-BigqueryDestination: Configuration to use BigQuery as usage export destination.
+"BigqueryDestination: Configuration to use BigQuery as usage export destination."
 
 ### fn spec.forProvider.resourceUsageExportConfig.bigqueryDestination.withDatasetId
 
@@ -1351,11 +1305,11 @@ BigqueryDestination: Configuration to use BigQuery as usage export destination.
 withDatasetId(datasetId)
 ```
 
-DatasetId: The ID of a BigQuery Dataset.
+"DatasetId: The ID of a BigQuery Dataset."
 
 ## obj spec.forProvider.resourceUsageExportConfig.consumptionMeteringConfig
 
-ConsumptionMeteringConfig: Configuration to enable resource consumption metering.
+"ConsumptionMeteringConfig: Configuration to enable resource consumption metering."
 
 ### fn spec.forProvider.resourceUsageExportConfig.consumptionMeteringConfig.withEnabled
 
@@ -1363,11 +1317,11 @@ ConsumptionMeteringConfig: Configuration to enable resource consumption metering
 withEnabled(enabled)
 ```
 
-Enabled: Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records.
+"Enabled: Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records."
 
 ## obj spec.forProvider.subnetworkRef
 
-SubnetworkRef references to a Subnetwork and retrieves its URI
+"SubnetworkRef references to a Subnetwork and retrieves its URI"
 
 ### fn spec.forProvider.subnetworkRef.withName
 
@@ -1375,11 +1329,11 @@ SubnetworkRef references to a Subnetwork and retrieves its URI
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.forProvider.subnetworkSelector
 
-SubnetworkSelector selects a reference to a Subnetwork and retrieves its URI
+"SubnetworkSelector selects a reference to a Subnetwork and retrieves its URI"
 
 ### fn spec.forProvider.subnetworkSelector.withMatchControllerRef
 
@@ -1387,7 +1341,7 @@ SubnetworkSelector selects a reference to a Subnetwork and retrieves its URI
 withMatchControllerRef(matchControllerRef)
 ```
 
-MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
 ### fn spec.forProvider.subnetworkSelector.withMatchLabels
 
@@ -1395,7 +1349,7 @@ MatchControllerRef ensures an object with the same controller reference as the s
 withMatchLabels(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.subnetworkSelector.withMatchLabelsMixin
 
@@ -1403,13 +1357,13 @@ MatchLabels ensures an object with matching labels is selected.
 withMatchLabelsMixin(matchLabels)
 ```
 
-MatchLabels ensures an object with matching labels is selected.
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.verticalPodAutoscaling
 
-VerticalPodAutoscaling: Cluster-level Vertical Pod Autoscaling configuration.
+"VerticalPodAutoscaling: Cluster-level Vertical Pod Autoscaling configuration."
 
 ### fn spec.forProvider.verticalPodAutoscaling.withEnabled
 
@@ -1417,11 +1371,11 @@ VerticalPodAutoscaling: Cluster-level Vertical Pod Autoscaling configuration.
 withEnabled(enabled)
 ```
 
-Enabled: Enables vertical pod autoscaling.
+"Enabled: Enables vertical pod autoscaling."
 
 ## obj spec.forProvider.workloadIdentityConfig
 
-WorkloadIdentityConfig: Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+"WorkloadIdentityConfig: Configuration for the use of Kubernetes Service Accounts in GCP IAM policies."
 
 ### fn spec.forProvider.workloadIdentityConfig.withWorkloadPool
 
@@ -1429,11 +1383,11 @@ WorkloadIdentityConfig: Configuration for the use of Kubernetes Service Accounts
 withWorkloadPool(workloadPool)
 ```
 
-WorkloadPool: The workload pool to attach all Kubernetes service accounts to.
+"WorkloadPool: The workload pool to attach all Kubernetes service accounts to."
 
 ## obj spec.providerConfigRef
 
-ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.
+"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."
 
 ### fn spec.providerConfigRef.withName
 
@@ -1441,11 +1395,11 @@ ProviderConfigReference specifies how the provider that will be used to create, 
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.providerRef
 
-ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`
+"ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`"
 
 ### fn spec.providerRef.withName
 
@@ -1453,11 +1407,11 @@ ProviderReference specifies the provider that will be used to create, observe, u
 withName(name)
 ```
 
-Name of the referenced object.
+"Name of the referenced object."
 
 ## obj spec.writeConnectionSecretToRef
 
-WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.
+"WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource."
 
 ### fn spec.writeConnectionSecretToRef.withName
 
@@ -1465,7 +1419,7 @@ WriteConnectionSecretToReference specifies the namespace and name of a Secret to
 withName(name)
 ```
 
-Name of the secret.
+"Name of the secret."
 
 ### fn spec.writeConnectionSecretToRef.withNamespace
 
@@ -1473,4 +1427,4 @@ Name of the secret.
 withNamespace(namespace)
 ```
 
-Namespace of the secret.
+"Namespace of the secret."
