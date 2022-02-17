@@ -96,6 +96,7 @@ permalink: /crossplane/1.6/pkg/v1alpha1/controllerConfig/
     * [`obj spec.podSecurityContext.windowsOptions`](#obj-specpodsecuritycontextwindowsoptions)
       * [`fn withGmsaCredentialSpec(gmsaCredentialSpec)`](#fn-specpodsecuritycontextwindowsoptionswithgmsacredentialspec)
       * [`fn withGmsaCredentialSpecName(gmsaCredentialSpecName)`](#fn-specpodsecuritycontextwindowsoptionswithgmsacredentialspecname)
+      * [`fn withHostProcess(hostProcess)`](#fn-specpodsecuritycontextwindowsoptionswithhostprocess)
       * [`fn withRunAsUserName(runAsUserName)`](#fn-specpodsecuritycontextwindowsoptionswithrunasusername)
   * [`obj spec.resources`](#obj-specresources)
     * [`fn withLimits(limits)`](#fn-specresourceswithlimits)
@@ -126,6 +127,7 @@ permalink: /crossplane/1.6/pkg/v1alpha1/controllerConfig/
     * [`obj spec.securityContext.windowsOptions`](#obj-specsecuritycontextwindowsoptions)
       * [`fn withGmsaCredentialSpec(gmsaCredentialSpec)`](#fn-specsecuritycontextwindowsoptionswithgmsacredentialspec)
       * [`fn withGmsaCredentialSpecName(gmsaCredentialSpecName)`](#fn-specsecuritycontextwindowsoptionswithgmsacredentialspecname)
+      * [`fn withHostProcess(hostProcess)`](#fn-specsecuritycontextwindowsoptionswithhostprocess)
       * [`fn withRunAsUserName(runAsUserName)`](#fn-specsecuritycontextwindowsoptionswithrunasusername)
 
 ## Fields
@@ -684,7 +686,7 @@ withLabelsMixin(labels)
 withFsGroup(fsGroup)
 ```
 
-"A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod: \n 1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw---- \n If unset, the Kubelet will not modify the ownership and permissions of any volume."
+"A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod: \n 1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw---- \n If unset, the Kubelet will not modify the ownership and permissions of any volume. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.podSecurityContext.withFsGroupChangePolicy
 
@@ -692,7 +694,7 @@ withFsGroup(fsGroup)
 withFsGroupChangePolicy(fsGroupChangePolicy)
 ```
 
-"fsGroupChangePolicy defines behavior of changing ownership and permission of the volume before being exposed inside Pod. This field will only apply to volume types which support fsGroup based ownership(and permissions). It will have no effect on ephemeral volume types such as: secret, configmaps and emptydir. Valid values are \"OnRootMismatch\" and \"Always\". If not specified, \"Always\" is used."
+"fsGroupChangePolicy defines behavior of changing ownership and permission of the volume before being exposed inside Pod. This field will only apply to volume types which support fsGroup based ownership(and permissions). It will have no effect on ephemeral volume types such as: secret, configmaps and emptydir. Valid values are \"OnRootMismatch\" and \"Always\". If not specified, \"Always\" is used. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.podSecurityContext.withRunAsGroup
 
@@ -700,7 +702,7 @@ withFsGroupChangePolicy(fsGroupChangePolicy)
 withRunAsGroup(runAsGroup)
 ```
 
-"The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container."
+"The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.podSecurityContext.withRunAsNonRoot
 
@@ -716,7 +718,7 @@ withRunAsNonRoot(runAsNonRoot)
 withRunAsUser(runAsUser)
 ```
 
-"The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container."
+"The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.podSecurityContext.withSupplementalGroups
 
@@ -724,7 +726,7 @@ withRunAsUser(runAsUser)
 withSupplementalGroups(supplementalGroups)
 ```
 
-"A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container."
+"A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.podSecurityContext.withSupplementalGroupsMixin
 
@@ -732,7 +734,7 @@ withSupplementalGroups(supplementalGroups)
 withSupplementalGroupsMixin(supplementalGroups)
 ```
 
-"A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container."
+"A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container. Note that this field cannot be set when spec.os.name is windows."
 
 **Note:** This function appends passed data to existing values
 
@@ -742,7 +744,7 @@ withSupplementalGroupsMixin(supplementalGroups)
 withSysctls(sysctls)
 ```
 
-"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch."
+"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.podSecurityContext.withSysctlsMixin
 
@@ -750,13 +752,13 @@ withSysctls(sysctls)
 withSysctlsMixin(sysctls)
 ```
 
-"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch."
+"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch. Note that this field cannot be set when spec.os.name is windows."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.podSecurityContext.seLinuxOptions
 
-"The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container."
+"The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.podSecurityContext.seLinuxOptions.withLevel
 
@@ -792,7 +794,7 @@ withUser(user)
 
 ## obj spec.podSecurityContext.seccompProfile
 
-"The seccomp options to use by the containers in this pod."
+"The seccomp options to use by the containers in this pod. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.podSecurityContext.seccompProfile.withLocalhostProfile
 
@@ -812,7 +814,7 @@ withType(type)
 
 ## obj spec.podSecurityContext.windowsOptions
 
-"The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux."
 
 ### fn spec.podSecurityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -829,6 +831,14 @@ withGmsaCredentialSpecName(gmsaCredentialSpecName)
 ```
 
 "GMSACredentialSpecName is the name of the GMSA credential spec to use."
+
+### fn spec.podSecurityContext.windowsOptions.withHostProcess
+
+```ts
+withHostProcess(hostProcess)
+```
+
+"HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true."
 
 ### fn spec.podSecurityContext.windowsOptions.withRunAsUserName
 
@@ -888,7 +898,7 @@ withRequestsMixin(requests)
 withAllowPrivilegeEscalation(allowPrivilegeEscalation)
 ```
 
-"AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN"
+"AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.securityContext.withPrivileged
 
@@ -896,7 +906,7 @@ withAllowPrivilegeEscalation(allowPrivilegeEscalation)
 withPrivileged(privileged)
 ```
 
-"Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false."
+"Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.securityContext.withProcMount
 
@@ -904,7 +914,7 @@ withPrivileged(privileged)
 withProcMount(procMount)
 ```
 
-"procMount denotes the type of proc mount to use for the containers. The default is DefaultProcMount which uses the container runtime defaults for readonly paths and masked paths. This requires the ProcMountType feature flag to be enabled."
+"procMount denotes the type of proc mount to use for the containers. The default is DefaultProcMount which uses the container runtime defaults for readonly paths and masked paths. This requires the ProcMountType feature flag to be enabled. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.securityContext.withReadOnlyRootFilesystem
 
@@ -912,7 +922,7 @@ withProcMount(procMount)
 withReadOnlyRootFilesystem(readOnlyRootFilesystem)
 ```
 
-"Whether this container has a read-only root filesystem. Default is false."
+"Whether this container has a read-only root filesystem. Default is false. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.securityContext.withRunAsGroup
 
@@ -920,7 +930,7 @@ withReadOnlyRootFilesystem(readOnlyRootFilesystem)
 withRunAsGroup(runAsGroup)
 ```
 
-"The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.securityContext.withRunAsNonRoot
 
@@ -936,11 +946,11 @@ withRunAsNonRoot(runAsNonRoot)
 withRunAsUser(runAsUser)
 ```
 
-"The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
 
 ## obj spec.securityContext.capabilities
 
-"The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime."
+"The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.securityContext.capabilities.withAdd
 
@@ -980,7 +990,7 @@ withDropMixin(drop)
 
 ## obj spec.securityContext.seLinuxOptions
 
-"The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.securityContext.seLinuxOptions.withLevel
 
@@ -1016,7 +1026,7 @@ withUser(user)
 
 ## obj spec.securityContext.seccompProfile
 
-"The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options."
+"The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.securityContext.seccompProfile.withLocalhostProfile
 
@@ -1036,7 +1046,7 @@ withType(type)
 
 ## obj spec.securityContext.windowsOptions
 
-"The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux."
 
 ### fn spec.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -1053,6 +1063,14 @@ withGmsaCredentialSpecName(gmsaCredentialSpecName)
 ```
 
 "GMSACredentialSpecName is the name of the GMSA credential spec to use."
+
+### fn spec.securityContext.windowsOptions.withHostProcess
+
+```ts
+withHostProcess(hostProcess)
+```
+
+"HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true."
 
 ### fn spec.securityContext.windowsOptions.withRunAsUserName
 
