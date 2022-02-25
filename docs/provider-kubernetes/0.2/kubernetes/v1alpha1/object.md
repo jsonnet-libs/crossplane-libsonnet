@@ -35,6 +35,7 @@ permalink: /provider-kubernetes/0.2/kubernetes/v1alpha1/object/
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`obj spec.forProvider`](#obj-specforprovider)
     * [`fn withManifest(manifest)`](#fn-specforproviderwithmanifest)
+    * [`fn withManifestMixin(manifest)`](#fn-specforproviderwithmanifestmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -258,6 +259,16 @@ withManifest(manifest)
 ```
 
 "Raw JSON representation of the kubernetes object to be created."
+
+### fn spec.forProvider.withManifestMixin
+
+```ts
+withManifestMixin(manifest)
+```
+
+"Raw JSON representation of the kubernetes object to be created."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 

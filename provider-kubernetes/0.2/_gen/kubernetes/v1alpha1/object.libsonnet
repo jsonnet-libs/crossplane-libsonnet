@@ -55,8 +55,10 @@
   spec: {
     '#forProvider':: d.obj(help='"ObjectParameters are the configurable fields of a Object."'),
     forProvider: {
-      '#withManifest':: d.fn(help='"Raw JSON representation of the kubernetes object to be created."', args=[d.arg(name='manifest', type=d.T.any)]),
+      '#withManifest':: d.fn(help='"Raw JSON representation of the kubernetes object to be created."', args=[d.arg(name='manifest', type=d.T.object)]),
       withManifest(manifest): { spec+: { forProvider+: { manifest: manifest } } },
+      '#withManifestMixin':: d.fn(help='"Raw JSON representation of the kubernetes object to be created."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='manifest', type=d.T.object)]),
+      withManifestMixin(manifest): { spec+: { forProvider+: { manifest+: manifest } } },
     },
     '#providerConfigRef':: d.obj(help='"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."'),
     providerConfigRef: {
