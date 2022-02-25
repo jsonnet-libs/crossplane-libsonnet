@@ -2,2037 +2,2037 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/apiextensions/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/apiextensions/v1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/apiextensions/v1/compositeResourceDefinition/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/apiextensions/v1/composition/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/apiextensions/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/apiextensions/v1alpha1/compositionRevision/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/apiextensions/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/apiextensions/v1beta1/compositeResourceDefinition/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/apiextensions/v1beta1/composition/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/meta/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/meta/v1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/meta/v1/configuration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/meta/v1/provider/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/meta/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/meta/v1alpha1/configuration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/meta/v1alpha1/provider/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1/configuration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1/configurationRevision/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1/provider/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1/providerRevision/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1alpha1/controllerConfig/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1alpha1/lock/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1beta1/configuration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1beta1/configurationRevision/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1beta1/lock/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1beta1/provider/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.5/pkg/v1beta1/providerRevision/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/apiextensions/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/apiextensions/v1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/apiextensions/v1/compositeResourceDefinition/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/apiextensions/v1/composition/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/apiextensions/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/apiextensions/v1alpha1/compositionRevision/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/meta/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/meta/v1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/meta/v1/configuration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/meta/v1/provider/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/meta/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/meta/v1alpha1/configuration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/meta/v1alpha1/provider/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/pkg/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/pkg/v1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/pkg/v1/configuration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/pkg/v1/configurationRevision/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/pkg/v1/provider/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/pkg/v1/providerRevision/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/pkg/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/pkg/v1alpha1/controllerConfig/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/pkg/v1alpha1/lock/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/pkg/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/crossplane/1.6/pkg/v1beta1/lock/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acm/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acm/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acm/v1alpha1/certificate/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acm/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acm/v1beta1/certificate/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acmpca/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acmpca/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acmpca/v1alpha1/certificateAuthority/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acmpca/v1alpha1/certificateAuthorityPermission/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acmpca/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acmpca/v1beta1/certificateAuthority/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/acmpca/v1beta1/certificateAuthorityPermission/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/api/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/apiMapping/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/authorizer/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/deployment/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/domainName/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/integration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/integrationResponse/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/model/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/route/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/routeResponse/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/stage/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1alpha1/vpcLink/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/apigatewayv2/v1beta1/vpcLink/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/athena/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/athena/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/athena/v1alpha1/workGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/aws/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/aws/v1alpha3/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/aws/v1alpha3/provider/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/aws/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/aws/v1beta1/providerConfig/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/aws/v1beta1/providerConfigUsage/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cache/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cache/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cache/v1alpha1/cacheCluster/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cache/v1alpha1/cacheSubnetGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cache/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cache/v1beta1/replicationGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cloudfront/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cloudfront/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cloudfront/v1alpha1/cachePolicy/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cloudfront/v1alpha1/cloudFrontOriginAccessIdentity/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cloudfront/v1alpha1/distribution/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cloudwatchlogs/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cloudwatchlogs/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/cloudwatchlogs/v1alpha1/logGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/database/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/database/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/database/v1beta1/dbSubnetGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/database/v1beta1/rdsInstance/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/docdb/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/docdb/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/docdb/v1alpha1/dbCluster/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/docdb/v1alpha1/dbClusterParameterGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/docdb/v1alpha1/dbInstance/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/docdb/v1alpha1/dbSubnetGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/dynamodb/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/dynamodb/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/dynamodb/v1alpha1/backup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/dynamodb/v1alpha1/globalTable/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/dynamodb/v1alpha1/table/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/instance/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/launchTemplate/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/launchTemplateVersion/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/route/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/transitGateway/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/transitGatewayRoute/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/transitGatewayRouteTable/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/transitGatewayVPCAttachment/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/volume/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/vpcEndpoint/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/vpcEndpointServiceConfiguration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/vpcPeeringConnection/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1alpha1/vpccidrBlock/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1beta1/address/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1beta1/internetGateway/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1beta1/natGateway/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1beta1/routeTable/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1beta1/securityGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1beta1/subnet/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1beta1/vpc/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ec2/v1beta1/vpccidrBlock/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ecr/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ecr/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ecr/v1alpha1/repository/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ecr/v1alpha1/repositoryPolicy/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ecr/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ecr/v1beta1/repository/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ecr/v1beta1/repositoryPolicy/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/efs/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/efs/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/efs/v1alpha1/fileSystem/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/efs/v1alpha1/mountTarget/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/eks/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/eks/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/eks/v1alpha1/addon/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/eks/v1alpha1/fargateProfile/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/eks/v1alpha1/identityProviderConfig/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/eks/v1alpha1/nodeGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/eks/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/eks/v1beta1/cluster/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/eks/v1beta1/fargateProfile/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elasticache/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elasticache/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elasticache/v1alpha1/cacheParameterGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elasticloadbalancing/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elasticloadbalancing/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elasticloadbalancing/v1alpha1/elb/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elasticloadbalancing/v1alpha1/elbAttachment/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elbv2/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elbv2/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elbv2/v1alpha1/listener/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elbv2/v1alpha1/loadBalancer/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/elbv2/v1alpha1/targetGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/glue/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/glue/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/glue/v1alpha1/classifier/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/glue/v1alpha1/connection/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/glue/v1alpha1/crawler/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/glue/v1alpha1/database/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/glue/v1alpha1/job/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/glue/v1alpha1/securityConfiguration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/v1beta1/accessKey/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/v1beta1/group/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/v1beta1/groupPolicyAttachment/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/v1beta1/groupUserMembership/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/v1beta1/openIDConnectProvider/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/v1beta1/policy/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/v1beta1/role/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/v1beta1/rolePolicyAttachment/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/v1beta1/user/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iam/v1beta1/userPolicyAttachment/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iot/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iot/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iot/v1alpha1/policy/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/iot/v1alpha1/thing/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/kafka/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/kafka/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/kafka/v1alpha1/cluster/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/kafka/v1alpha1/configuration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/kinesis/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/kinesis/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/kinesis/v1alpha1/stream/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/kms/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/kms/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/kms/v1alpha1/alias/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/kms/v1alpha1/key/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/lambda/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/lambda/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/lambda/v1alpha1/function/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/lambda/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/lambda/v1beta1/function/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/mq/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/mq/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/mq/v1alpha1/broker/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/mq/v1alpha1/user/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/neptune/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/neptune/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/neptune/v1alpha1/dbCluster/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/notification/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/notification/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/notification/v1alpha1/snsSubscription/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/notification/v1alpha1/snsTopic/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ram/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ram/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/ram/v1alpha1/resourceShare/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/rds/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/rds/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/rds/v1alpha1/dbCluster/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/rds/v1alpha1/dbClusterParameterGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/rds/v1alpha1/dbInstance/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/rds/v1alpha1/dbParameterGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/rds/v1alpha1/globalCluster/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/redshift/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/redshift/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/redshift/v1alpha1/cluster/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/route53/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/route53/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/route53/v1alpha1/hostedZone/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/route53/v1alpha1/resourceRecordSet/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/route53resolver/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/route53resolver/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/route53resolver/v1alpha1/resolverEndpoint/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/route53resolver/v1alpha1/resolverRule/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/route53resolver/v1alpha1/resolverRuleAssociation/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/s3/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/s3/v1alpha3/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/s3/v1alpha3/bucketPolicy/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/s3/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/s3/v1beta1/bucket/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/secretsmanager/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/secretsmanager/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/secretsmanager/v1alpha1/secret/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/secretsmanager/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/secretsmanager/v1beta1/secret/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/servicediscovery/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/servicediscovery/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/servicediscovery/v1alpha1/httpNamespace/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/servicediscovery/v1alpha1/privateDNSNamespace/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/servicediscovery/v1alpha1/publicDNSNamespace/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/sfn/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/sfn/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/sfn/v1alpha1/activity/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/sfn/v1alpha1/stateMachine/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/sns/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/sns/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/sns/v1beta1/subscription/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/sns/v1beta1/topic/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/sqs/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/sqs/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/sqs/v1beta1/queue/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/transfer/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/transfer/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/transfer/v1alpha1/server/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-aws/0.24/transfer/v1alpha1/user/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/azure/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/azure/v1alpha3/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/azure/v1alpha3/provider/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/azure/v1alpha3/resourceGroup/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/azure/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/azure/v1beta1/providerConfig/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/azure/v1beta1/providerConfigUsage/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/cache/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/cache/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/cache/v1beta1/redis/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/compute/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/compute/v1alpha3/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/compute/v1alpha3/aksCluster/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/v1alpha3/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/v1alpha3/cosmosDBAccount/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/v1alpha3/mySQLServerFirewallRule/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/v1alpha3/mySQLServerVirtualNetworkRule/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/v1alpha3/postgreSQLServerFirewallRule/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/v1alpha3/postgreSQLServerVirtualNetworkRule/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/v1beta1/mySQLServer/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/v1beta1/mySQLServerConfiguration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/v1beta1/postgreSQLServer/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/database/v1beta1/postgreSQLServerConfiguration/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/keyvault/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/keyvault/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/keyvault/v1alpha1/keyVaultSecret/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/network/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/network/v1alpha3/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/network/v1alpha3/publicIPAddress/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/network/v1alpha3/subnet/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/network/v1alpha3/virtualNetwork/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/storage/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/storage/v1alpha3/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/storage/v1alpha3/account/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-azure/0.18/storage/v1alpha3/container/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/cache/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/cache/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/cache/v1beta1/cloudMemorystoreInstance/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/compute/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/compute/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/compute/v1alpha1/firewall/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/compute/v1alpha1/router/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/compute/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/compute/v1beta1/address/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/compute/v1beta1/globalAddress/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/compute/v1beta1/network/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/compute/v1beta1/subnetwork/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/container/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/container/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/container/v1beta1/nodePool/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/container/v1beta2/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/container/v1beta2/cluster/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/database/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/database/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/database/v1beta1/cloudSQLInstance/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/dns/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/dns/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/dns/v1alpha1/resourceRecordSet/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/gcp/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/gcp/v1alpha3/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/gcp/v1alpha3/provider/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/gcp/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/gcp/v1beta1/providerConfig/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/gcp/v1beta1/providerConfigUsage/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/iam/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/iam/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/iam/v1alpha1/serviceAccount/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/iam/v1alpha1/serviceAccountKey/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/iam/v1alpha1/serviceAccountPolicy/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/kms/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/kms/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/kms/v1alpha1/cryptoKey/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/kms/v1alpha1/cryptoKeyPolicy/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/kms/v1alpha1/keyRing/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/pubsub/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/pubsub/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/pubsub/v1alpha1/subscription/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/pubsub/v1alpha1/topic/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/registry/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/registry/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/registry/v1alpha1/containerRegistry/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/servicenetworking/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/servicenetworking/v1beta1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/servicenetworking/v1beta1/connection/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/storage/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/storage/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/storage/v1alpha1/bucketPolicy/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/storage/v1alpha1/bucketPolicyMember/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/storage/v1alpha3/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-gcp/0.20/storage/v1alpha3/bucket/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-kubernetes/0.2/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-kubernetes/0.2/kubernetes/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-kubernetes/0.2/kubernetes/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-kubernetes/0.2/kubernetes/v1alpha1/object/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-kubernetes/0.2/kubernetes/v1alpha1/providerConfig/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-kubernetes/0.2/kubernetes/v1alpha1/providerConfigUsage/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mssql/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mssql/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mssql/v1alpha1/database/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mssql/v1alpha1/grant/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mssql/v1alpha1/providerConfig/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mssql/v1alpha1/providerConfigUsage/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mssql/v1alpha1/user/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mysql/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mysql/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mysql/v1alpha1/database/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mysql/v1alpha1/grant/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mysql/v1alpha1/providerConfig/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mysql/v1alpha1/providerConfigUsage/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/mysql/v1alpha1/user/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/postgresql/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/postgresql/v1alpha1/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/postgresql/v1alpha1/database/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/postgresql/v1alpha1/extension/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/postgresql/v1alpha1/grant/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/postgresql/v1alpha1/providerConfig/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/postgresql/v1alpha1/providerConfigUsage/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-sql/0.3/postgresql/v1alpha1/role/</loc>
-         <lastmod>2022-02-17</lastmod>
+         <lastmod>2022-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
