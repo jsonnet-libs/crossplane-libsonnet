@@ -1,0 +1,15 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1alpha1', url='', help=''),
+  bucketACL: (import 'bucketACL.libsonnet'),
+  bucketAccessControl: (import 'bucketAccessControl.libsonnet'),
+  bucketIAMBinding: (import 'bucketIAMBinding.libsonnet'),
+  bucketIAMMember: (import 'bucketIAMMember.libsonnet'),
+  bucketIAMPolicy: (import 'bucketIAMPolicy.libsonnet'),
+  defaultObjectACL: (import 'defaultObjectACL.libsonnet'),
+  defaultObjectAccessControl: (import 'defaultObjectAccessControl.libsonnet'),
+  hmacKey: (import 'hmacKey.libsonnet'),
+  notification: (import 'notification.libsonnet'),
+  objectACL: (import 'objectACL.libsonnet'),
+  objectAccessControl: (import 'objectAccessControl.libsonnet'),
+}
