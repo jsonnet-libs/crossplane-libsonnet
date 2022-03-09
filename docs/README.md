@@ -10,3 +10,4 @@ This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 - [provider-azure/0.18](provider-azure/0.18/README.md)
 - [provider-sql/0.3](provider-sql/0.3/README.md)
 - [provider-kubernetes/0.2](provider-kubernetes/0.2/README.md)
+- [provider-grafana/0.0](provider-grafana/0.0/README.md)
