@@ -55,19 +55,19 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
-      '#cloudStackSlugRef':: d.obj(help='"A Reference to a named object."'),
-      cloudStackSlugRef: {
+      '#cloudStackRef':: d.obj(help='"A Reference to a named object."'),
+      cloudStackRef: {
         '#withName':: d.fn(help='"Name of the referenced object."', args=[d.arg(name='name', type=d.T.string)]),
-        withName(name): { spec+: { forProvider+: { cloudStackSlugRef+: { name: name } } } },
+        withName(name): { spec+: { forProvider+: { cloudStackRef+: { name: name } } } },
       },
-      '#cloudStackSlugSelector':: d.obj(help='"A Selector selects an object."'),
-      cloudStackSlugSelector: {
+      '#cloudStackSelector':: d.obj(help='"A Selector selects an object."'),
+      cloudStackSelector: {
         '#withMatchControllerRef':: d.fn(help='"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."', args=[d.arg(name='matchControllerRef', type=d.T.boolean)]),
-        withMatchControllerRef(matchControllerRef): { spec+: { forProvider+: { cloudStackSlugSelector+: { matchControllerRef: matchControllerRef } } } },
+        withMatchControllerRef(matchControllerRef): { spec+: { forProvider+: { cloudStackSelector+: { matchControllerRef: matchControllerRef } } } },
         '#withMatchLabels':: d.fn(help='"MatchLabels ensures an object with matching labels is selected."', args=[d.arg(name='matchLabels', type=d.T.object)]),
-        withMatchLabels(matchLabels): { spec+: { forProvider+: { cloudStackSlugSelector+: { matchLabels: matchLabels } } } },
+        withMatchLabels(matchLabels): { spec+: { forProvider+: { cloudStackSelector+: { matchLabels: matchLabels } } } },
         '#withMatchLabelsMixin':: d.fn(help='"MatchLabels ensures an object with matching labels is selected."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
-        withMatchLabelsMixin(matchLabels): { spec+: { forProvider+: { cloudStackSlugSelector+: { matchLabels+: matchLabels } } } },
+        withMatchLabelsMixin(matchLabels): { spec+: { forProvider+: { cloudStackSelector+: { matchLabels+: matchLabels } } } },
       },
       '#withCloudStackSlug':: d.fn(help='"If set, the API key will be created for the given Cloud stack. This can be used to bootstrap a management API key for a new stack. **Note**: This requires a cloud token to be configured."', args=[d.arg(name='cloudStackSlug', type=d.T.string)]),
       withCloudStackSlug(cloudStackSlug): { spec+: { forProvider+: { cloudStackSlug: cloudStackSlug } } },

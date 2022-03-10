@@ -38,12 +38,12 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/apiKey/
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withRole(role)`](#fn-specforproviderwithrole)
     * [`fn withSecondsToLive(secondsToLive)`](#fn-specforproviderwithsecondstolive)
-    * [`obj spec.forProvider.cloudStackSlugRef`](#obj-specforprovidercloudstackslugref)
-      * [`fn withName(name)`](#fn-specforprovidercloudstackslugrefwithname)
-    * [`obj spec.forProvider.cloudStackSlugSelector`](#obj-specforprovidercloudstackslugselector)
-      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidercloudstackslugselectorwithmatchcontrollerref)
-      * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidercloudstackslugselectorwithmatchlabels)
-      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidercloudstackslugselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.cloudStackRef`](#obj-specforprovidercloudstackref)
+      * [`fn withName(name)`](#fn-specforprovidercloudstackrefwithname)
+    * [`obj spec.forProvider.cloudStackSelector`](#obj-specforprovidercloudstackselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidercloudstackselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidercloudstackselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidercloudstackselectorwithmatchlabelsmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -292,11 +292,11 @@ withSecondsToLive(secondsToLive)
 
 
 
-## obj spec.forProvider.cloudStackSlugRef
+## obj spec.forProvider.cloudStackRef
 
 "A Reference to a named object."
 
-### fn spec.forProvider.cloudStackSlugRef.withName
+### fn spec.forProvider.cloudStackRef.withName
 
 ```ts
 withName(name)
@@ -304,11 +304,11 @@ withName(name)
 
 "Name of the referenced object."
 
-## obj spec.forProvider.cloudStackSlugSelector
+## obj spec.forProvider.cloudStackSelector
 
 "A Selector selects an object."
 
-### fn spec.forProvider.cloudStackSlugSelector.withMatchControllerRef
+### fn spec.forProvider.cloudStackSelector.withMatchControllerRef
 
 ```ts
 withMatchControllerRef(matchControllerRef)
@@ -316,7 +316,7 @@ withMatchControllerRef(matchControllerRef)
 
 "MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
 
-### fn spec.forProvider.cloudStackSlugSelector.withMatchLabels
+### fn spec.forProvider.cloudStackSelector.withMatchLabels
 
 ```ts
 withMatchLabels(matchLabels)
@@ -324,7 +324,7 @@ withMatchLabels(matchLabels)
 
 "MatchLabels ensures an object with matching labels is selected."
 
-### fn spec.forProvider.cloudStackSlugSelector.withMatchLabelsMixin
+### fn spec.forProvider.cloudStackSelector.withMatchLabelsMixin
 
 ```ts
 withMatchLabelsMixin(matchLabels)
