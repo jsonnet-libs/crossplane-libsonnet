@@ -55,9 +55,23 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#folderRef':: d.obj(help='"A Reference to a named object."'),
+      folderRef: {
+        '#withName':: d.fn(help='"Name of the referenced object."', args=[d.arg(name='name', type=d.T.string)]),
+        withName(name): { spec+: { forProvider+: { folderRef+: { name: name } } } },
+      },
+      '#folderSelector':: d.obj(help='"A Selector selects an object."'),
+      folderSelector: {
+        '#withMatchControllerRef':: d.fn(help='"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."', args=[d.arg(name='matchControllerRef', type=d.T.boolean)]),
+        withMatchControllerRef(matchControllerRef): { spec+: { forProvider+: { folderSelector+: { matchControllerRef: matchControllerRef } } } },
+        '#withMatchLabels':: d.fn(help='"MatchLabels ensures an object with matching labels is selected."', args=[d.arg(name='matchLabels', type=d.T.object)]),
+        withMatchLabels(matchLabels): { spec+: { forProvider+: { folderSelector+: { matchLabels: matchLabels } } } },
+        '#withMatchLabelsMixin':: d.fn(help='"MatchLabels ensures an object with matching labels is selected."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
+        withMatchLabelsMixin(matchLabels): { spec+: { forProvider+: { folderSelector+: { matchLabels+: matchLabels } } } },
+      },
       '#withConfigJson':: d.fn(help='"The complete dashboard model JSON."', args=[d.arg(name='configJson', type=d.T.string)]),
       withConfigJson(configJson): { spec+: { forProvider+: { configJson: configJson } } },
-      '#withFolder':: d.fn(help='"The id of the folder to save the dashboard in."', args=[d.arg(name='folder', type=d.T.number)]),
+      '#withFolder':: d.fn(help="\"The id of the folder to save the dashboard in. This attribute is a string to reflect the type of the folder's id.\"", args=[d.arg(name='folder', type=d.T.string)]),
       withFolder(folder): { spec+: { forProvider+: { folder: folder } } },
       '#withMessage':: d.fn(help='"Set a commit message for the version history."', args=[d.arg(name='message', type=d.T.string)]),
       withMessage(message): { spec+: { forProvider+: { message: message } } },

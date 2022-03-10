@@ -38,6 +38,12 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/dashboard/
     * [`fn withFolder(folder)`](#fn-specforproviderwithfolder)
     * [`fn withMessage(message)`](#fn-specforproviderwithmessage)
     * [`fn withOverwrite(overwrite)`](#fn-specforproviderwithoverwrite)
+    * [`obj spec.forProvider.folderRef`](#obj-specforproviderfolderref)
+      * [`fn withName(name)`](#fn-specforproviderfolderrefwithname)
+    * [`obj spec.forProvider.folderSelector`](#obj-specforproviderfolderselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderfolderselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderfolderselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderfolderselectorwithmatchlabelsmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -268,7 +274,7 @@ withConfigJson(configJson)
 withFolder(folder)
 ```
 
-"The id of the folder to save the dashboard in."
+"The id of the folder to save the dashboard in. This attribute is a string to reflect the type of the folder's id."
 
 ### fn spec.forProvider.withMessage
 
@@ -285,6 +291,48 @@ withOverwrite(overwrite)
 ```
 
 "Set to true if you want to overwrite existing dashboard with newer version, same dashboard title in folder or same dashboard uid."
+
+## obj spec.forProvider.folderRef
+
+"A Reference to a named object."
+
+### fn spec.forProvider.folderRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.folderSelector
+
+"A Selector selects an object."
+
+### fn spec.forProvider.folderSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.folderSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.folderSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 

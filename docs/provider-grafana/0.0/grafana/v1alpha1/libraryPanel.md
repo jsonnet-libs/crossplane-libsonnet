@@ -1,10 +1,10 @@
 ---
-permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
+permalink: /provider-grafana/0.0/grafana/v1alpha1/libraryPanel/
 ---
 
-# grafana.v1alpha1.team
+# grafana.v1alpha1.libraryPanel
 
-"Team is the Schema for the Teams API"
+"LibraryPanel is the Schema for the LibraryPanels API"
 
 ## Index
 
@@ -34,10 +34,10 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
 * [`obj spec`](#obj-spec)
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`obj spec.forProvider`](#obj-specforprovider)
-    * [`fn withEmail(email)`](#fn-specforproviderwithemail)
-    * [`fn withMembers(members)`](#fn-specforproviderwithmembers)
-    * [`fn withMembersMixin(members)`](#fn-specforproviderwithmembersmixin)
+    * [`fn withFolderId(folderId)`](#fn-specforproviderwithfolderid)
+    * [`fn withModelJson(modelJson)`](#fn-specforproviderwithmodeljson)
     * [`fn withName(name)`](#fn-specforproviderwithname)
+    * [`fn withUid(uid)`](#fn-specforproviderwithuid)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -54,7 +54,7 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
 new(name)
 ```
 
-new returns an instance of Team
+new returns an instance of LibraryPanel
 
 ## obj metadata
 
@@ -240,7 +240,7 @@ withUid(uid)
 
 ## obj spec
 
-"TeamSpec defines the desired state of Team"
+"LibraryPanelSpec defines the desired state of LibraryPanel"
 
 ### fn spec.withDeletionPolicy
 
@@ -254,31 +254,21 @@ withDeletionPolicy(deletionPolicy)
 
 
 
-### fn spec.forProvider.withEmail
+### fn spec.forProvider.withFolderId
 
 ```ts
-withEmail(email)
+withFolderId(folderId)
 ```
 
-"An email address for the team."
+"ID of the folder where the library panel is stored."
 
-### fn spec.forProvider.withMembers
+### fn spec.forProvider.withModelJson
 
 ```ts
-withMembers(members)
+withModelJson(modelJson)
 ```
 
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
-
-### fn spec.forProvider.withMembersMixin
-
-```ts
-withMembersMixin(members)
-```
-
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
-
-**Note:** This function appends passed data to existing values
+"The JSON model for the library panel."
 
 ### fn spec.forProvider.withName
 
@@ -286,7 +276,15 @@ withMembersMixin(members)
 withName(name)
 ```
 
-"The display name for the Grafana team created."
+"Name of the library panel."
+
+### fn spec.forProvider.withUid
+
+```ts
+withUid(uid)
+```
+
+"The unique identifier (UID) of a library panel uniquely identifies library panels between multiple Grafana installs. It’s automatically generated unless you specify it during library panel creation.The UID provides consistent URLs for accessing library panels and when syncing library panels between multiple Grafana installs."
 
 ## obj spec.providerConfigRef
 

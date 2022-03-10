@@ -1,10 +1,10 @@
 ---
-permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
+permalink: /provider-grafana/0.0/grafana/v1alpha1/cloudAPIKey/
 ---
 
-# grafana.v1alpha1.team
+# grafana.v1alpha1.cloudAPIKey
 
-"Team is the Schema for the Teams API"
+"CloudAPIKey is the Schema for the CloudAPIKeys API"
 
 ## Index
 
@@ -34,10 +34,9 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
 * [`obj spec`](#obj-spec)
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`obj spec.forProvider`](#obj-specforprovider)
-    * [`fn withEmail(email)`](#fn-specforproviderwithemail)
-    * [`fn withMembers(members)`](#fn-specforproviderwithmembers)
-    * [`fn withMembersMixin(members)`](#fn-specforproviderwithmembersmixin)
+    * [`fn withCloudOrgSlug(cloudOrgSlug)`](#fn-specforproviderwithcloudorgslug)
     * [`fn withName(name)`](#fn-specforproviderwithname)
+    * [`fn withRole(role)`](#fn-specforproviderwithrole)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -54,7 +53,7 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
 new(name)
 ```
 
-new returns an instance of Team
+new returns an instance of CloudAPIKey
 
 ## obj metadata
 
@@ -240,7 +239,7 @@ withUid(uid)
 
 ## obj spec
 
-"TeamSpec defines the desired state of Team"
+"CloudAPIKeySpec defines the desired state of CloudAPIKey"
 
 ### fn spec.withDeletionPolicy
 
@@ -254,31 +253,13 @@ withDeletionPolicy(deletionPolicy)
 
 
 
-### fn spec.forProvider.withEmail
+### fn spec.forProvider.withCloudOrgSlug
 
 ```ts
-withEmail(email)
+withCloudOrgSlug(cloudOrgSlug)
 ```
 
-"An email address for the team."
-
-### fn spec.forProvider.withMembers
-
-```ts
-withMembers(members)
-```
-
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
-
-### fn spec.forProvider.withMembersMixin
-
-```ts
-withMembersMixin(members)
-```
-
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
-
-**Note:** This function appends passed data to existing values
+"The slug of the organization to create the API key in. This is the same slug as the organization name in the URL."
 
 ### fn spec.forProvider.withName
 
@@ -286,7 +267,15 @@ withMembersMixin(members)
 withName(name)
 ```
 
-"The display name for the Grafana team created."
+"Name of the API key."
+
+### fn spec.forProvider.withRole
+
+```ts
+withRole(role)
+```
+
+"Role of the API key. Should be one of [Viewer Editor Admin MetricsPublisher PluginPublisher]. See https://grafana.com/docs/grafana-cloud/api/#create-api-key for details."
 
 ## obj spec.providerConfigRef
 

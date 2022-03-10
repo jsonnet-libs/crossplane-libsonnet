@@ -57,9 +57,9 @@
     forProvider: {
       '#withEmail':: d.fn(help='"An email address for the team."', args=[d.arg(name='email', type=d.T.string)]),
       withEmail(email): { spec+: { forProvider+: { email: email } } },
-      '#withMembers':: d.fn(help='"A list of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."', args=[d.arg(name='members', type=d.T.array)]),
+      '#withMembers':: d.fn(help='"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."', args=[d.arg(name='members', type=d.T.array)]),
       withMembers(members): { spec+: { forProvider+: { members: if std.isArray(v=members) then members else [members] } } },
-      '#withMembersMixin':: d.fn(help='"A list of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='members', type=d.T.array)]),
+      '#withMembersMixin':: d.fn(help='"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='members', type=d.T.array)]),
       withMembersMixin(members): { spec+: { forProvider+: { members+: if std.isArray(v=members) then members else [members] } } },
       '#withName':: d.fn(help='"The display name for the Grafana team created."', args=[d.arg(name='name', type=d.T.string)]),
       withName(name): { spec+: { forProvider+: { name: name } } },

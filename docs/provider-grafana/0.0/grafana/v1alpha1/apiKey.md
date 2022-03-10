@@ -34,9 +34,16 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/apiKey/
 * [`obj spec`](#obj-spec)
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`obj spec.forProvider`](#obj-specforprovider)
+    * [`fn withCloudStackSlug(cloudStackSlug)`](#fn-specforproviderwithcloudstackslug)
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withRole(role)`](#fn-specforproviderwithrole)
     * [`fn withSecondsToLive(secondsToLive)`](#fn-specforproviderwithsecondstolive)
+    * [`obj spec.forProvider.cloudStackSlugRef`](#obj-specforprovidercloudstackslugref)
+      * [`fn withName(name)`](#fn-specforprovidercloudstackslugrefwithname)
+    * [`obj spec.forProvider.cloudStackSlugSelector`](#obj-specforprovidercloudstackslugselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidercloudstackslugselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidercloudstackslugselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidercloudstackslugselectorwithmatchlabelsmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -253,6 +260,14 @@ withDeletionPolicy(deletionPolicy)
 
 
 
+### fn spec.forProvider.withCloudStackSlug
+
+```ts
+withCloudStackSlug(cloudStackSlug)
+```
+
+"If set, the API key will be created for the given Cloud stack. This can be used to bootstrap a management API key for a new stack. **Note**: This requires a cloud token to be configured."
+
 ### fn spec.forProvider.withName
 
 ```ts
@@ -276,6 +291,48 @@ withSecondsToLive(secondsToLive)
 ```
 
 
+
+## obj spec.forProvider.cloudStackSlugRef
+
+"A Reference to a named object."
+
+### fn spec.forProvider.cloudStackSlugRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.cloudStackSlugSelector
+
+"A Selector selects an object."
+
+### fn spec.forProvider.cloudStackSlugSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.cloudStackSlugSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.cloudStackSlugSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 

@@ -1,10 +1,10 @@
 ---
-permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
+permalink: /provider-grafana/0.0/grafana/v1alpha1/cloudStack/
 ---
 
-# grafana.v1alpha1.team
+# grafana.v1alpha1.cloudStack
 
-"Team is the Schema for the Teams API"
+"CloudStack is the Schema for the CloudStacks API"
 
 ## Index
 
@@ -34,10 +34,12 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
 * [`obj spec`](#obj-spec)
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`obj spec.forProvider`](#obj-specforprovider)
-    * [`fn withEmail(email)`](#fn-specforproviderwithemail)
-    * [`fn withMembers(members)`](#fn-specforproviderwithmembers)
-    * [`fn withMembersMixin(members)`](#fn-specforproviderwithmembersmixin)
+    * [`fn withDescription(description)`](#fn-specforproviderwithdescription)
     * [`fn withName(name)`](#fn-specforproviderwithname)
+    * [`fn withRegionSlug(regionSlug)`](#fn-specforproviderwithregionslug)
+    * [`fn withSlug(slug)`](#fn-specforproviderwithslug)
+    * [`fn withUrl(url)`](#fn-specforproviderwithurl)
+    * [`fn withWaitForReadiness(waitForReadiness)`](#fn-specforproviderwithwaitforreadiness)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -54,7 +56,7 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
 new(name)
 ```
 
-new returns an instance of Team
+new returns an instance of CloudStack
 
 ## obj metadata
 
@@ -240,7 +242,7 @@ withUid(uid)
 
 ## obj spec
 
-"TeamSpec defines the desired state of Team"
+"CloudStackSpec defines the desired state of CloudStack"
 
 ### fn spec.withDeletionPolicy
 
@@ -254,31 +256,13 @@ withDeletionPolicy(deletionPolicy)
 
 
 
-### fn spec.forProvider.withEmail
+### fn spec.forProvider.withDescription
 
 ```ts
-withEmail(email)
+withDescription(description)
 ```
 
-"An email address for the team."
-
-### fn spec.forProvider.withMembers
-
-```ts
-withMembers(members)
-```
-
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
-
-### fn spec.forProvider.withMembersMixin
-
-```ts
-withMembersMixin(members)
-```
-
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
-
-**Note:** This function appends passed data to existing values
+"Description of stack."
 
 ### fn spec.forProvider.withName
 
@@ -286,7 +270,39 @@ withMembersMixin(members)
 withName(name)
 ```
 
-"The display name for the Grafana team created."
+"Name of stack. Conventionally matches the url of the instance (e.g. “<stack_slug>.grafana.net”)."
+
+### fn spec.forProvider.withRegionSlug
+
+```ts
+withRegionSlug(regionSlug)
+```
+
+"Region slug to assign to this stack. Changing region will destroy the existing stack and create a new one in the desired region"
+
+### fn spec.forProvider.withSlug
+
+```ts
+withSlug(slug)
+```
+
+"Subdomain that the Grafana instance will be available at (i.e. setting slug to “<stack_slug>” will make the instance available at “https://<stack_slug>.grafana.net\"."
+
+### fn spec.forProvider.withUrl
+
+```ts
+withUrl(url)
+```
+
+"Custom URL for the Grafana instance. Must have a CNAME setup to point to `.grafana.net` before creating the stack"
+
+### fn spec.forProvider.withWaitForReadiness
+
+```ts
+withWaitForReadiness(waitForReadiness)
+```
+
+"Whether to wait for readiness of the stack after creating it. The check is a HEAD request to the stack URL (Grafana instance). Defaults to `true`."
 
 ## obj spec.providerConfigRef
 

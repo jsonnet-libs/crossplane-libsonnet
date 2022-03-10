@@ -1,10 +1,10 @@
 ---
-permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
+permalink: /provider-grafana/0.0/grafana/v1alpha1/report/
 ---
 
-# grafana.v1alpha1.team
+# grafana.v1alpha1.report
 
-"Team is the Schema for the Teams API"
+"Report is the Schema for the Reports API"
 
 ## Index
 
@@ -34,10 +34,20 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
 * [`obj spec`](#obj-spec)
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`obj spec.forProvider`](#obj-specforprovider)
-    * [`fn withEmail(email)`](#fn-specforproviderwithemail)
-    * [`fn withMembers(members)`](#fn-specforproviderwithmembers)
-    * [`fn withMembersMixin(members)`](#fn-specforproviderwithmembersmixin)
+    * [`fn withDashboardId(dashboardId)`](#fn-specforproviderwithdashboardid)
+    * [`fn withIncludeDashboardLink(includeDashboardLink)`](#fn-specforproviderwithincludedashboardlink)
+    * [`fn withIncludeTableCsv(includeTableCsv)`](#fn-specforproviderwithincludetablecsv)
+    * [`fn withLayout(layout)`](#fn-specforproviderwithlayout)
+    * [`fn withMessage(message)`](#fn-specforproviderwithmessage)
     * [`fn withName(name)`](#fn-specforproviderwithname)
+    * [`fn withOrientation(orientation)`](#fn-specforproviderwithorientation)
+    * [`fn withRecipients(recipients)`](#fn-specforproviderwithrecipients)
+    * [`fn withRecipientsMixin(recipients)`](#fn-specforproviderwithrecipientsmixin)
+    * [`fn withReplyTo(replyTo)`](#fn-specforproviderwithreplyto)
+    * [`fn withSchedule(schedule)`](#fn-specforproviderwithschedule)
+    * [`fn withScheduleMixin(schedule)`](#fn-specforproviderwithschedulemixin)
+    * [`fn withTimeRange(timeRange)`](#fn-specforproviderwithtimerange)
+    * [`fn withTimeRangeMixin(timeRange)`](#fn-specforproviderwithtimerangemixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -54,7 +64,7 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
 new(name)
 ```
 
-new returns an instance of Team
+new returns an instance of Report
 
 ## obj metadata
 
@@ -240,7 +250,7 @@ withUid(uid)
 
 ## obj spec
 
-"TeamSpec defines the desired state of Team"
+"ReportSpec defines the desired state of Report"
 
 ### fn spec.withDeletionPolicy
 
@@ -254,31 +264,45 @@ withDeletionPolicy(deletionPolicy)
 
 
 
-### fn spec.forProvider.withEmail
+### fn spec.forProvider.withDashboardId
 
 ```ts
-withEmail(email)
+withDashboardId(dashboardId)
 ```
 
-"An email address for the team."
+"Dashboard to be sent in the report."
 
-### fn spec.forProvider.withMembers
+### fn spec.forProvider.withIncludeDashboardLink
 
 ```ts
-withMembers(members)
+withIncludeDashboardLink(includeDashboardLink)
 ```
 
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
+"Whether to include a link to the dashboard in the report. Defaults to `true`."
 
-### fn spec.forProvider.withMembersMixin
+### fn spec.forProvider.withIncludeTableCsv
 
 ```ts
-withMembersMixin(members)
+withIncludeTableCsv(includeTableCsv)
 ```
 
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
+"Whether to include a CSV file of table panel data. Defaults to `false`."
 
-**Note:** This function appends passed data to existing values
+### fn spec.forProvider.withLayout
+
+```ts
+withLayout(layout)
+```
+
+"Layout of the report. `simple` or `grid` Defaults to `grid`."
+
+### fn spec.forProvider.withMessage
+
+```ts
+withMessage(message)
+```
+
+"Message to be sent in the report."
 
 ### fn spec.forProvider.withName
 
@@ -286,7 +310,77 @@ withMembersMixin(members)
 withName(name)
 ```
 
-"The display name for the Grafana team created."
+"Name of the report."
+
+### fn spec.forProvider.withOrientation
+
+```ts
+withOrientation(orientation)
+```
+
+"Orientation of the report. `landscape` or `portrait` Defaults to `landscape`."
+
+### fn spec.forProvider.withRecipients
+
+```ts
+withRecipients(recipients)
+```
+
+"List of recipients of the report."
+
+### fn spec.forProvider.withRecipientsMixin
+
+```ts
+withRecipientsMixin(recipients)
+```
+
+"List of recipients of the report."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.withReplyTo
+
+```ts
+withReplyTo(replyTo)
+```
+
+"Reply-to email address of the report."
+
+### fn spec.forProvider.withSchedule
+
+```ts
+withSchedule(schedule)
+```
+
+"Schedule of the report."
+
+### fn spec.forProvider.withScheduleMixin
+
+```ts
+withScheduleMixin(schedule)
+```
+
+"Schedule of the report."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.withTimeRange
+
+```ts
+withTimeRange(timeRange)
+```
+
+"Time range of the report."
+
+### fn spec.forProvider.withTimeRangeMixin
+
+```ts
+withTimeRangeMixin(timeRange)
+```
+
+"Time range of the report."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 

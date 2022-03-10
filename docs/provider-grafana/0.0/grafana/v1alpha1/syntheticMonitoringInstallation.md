@@ -1,10 +1,10 @@
 ---
-permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
+permalink: /provider-grafana/0.0/grafana/v1alpha1/syntheticMonitoringInstallation/
 ---
 
-# grafana.v1alpha1.team
+# grafana.v1alpha1.syntheticMonitoringInstallation
 
-"Team is the Schema for the Teams API"
+"SyntheticMonitoringInstallation is the Schema for the SyntheticMonitoringInstallations API"
 
 ## Index
 
@@ -34,10 +34,13 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
 * [`obj spec`](#obj-spec)
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`obj spec.forProvider`](#obj-specforprovider)
-    * [`fn withEmail(email)`](#fn-specforproviderwithemail)
-    * [`fn withMembers(members)`](#fn-specforproviderwithmembers)
-    * [`fn withMembersMixin(members)`](#fn-specforproviderwithmembersmixin)
-    * [`fn withName(name)`](#fn-specforproviderwithname)
+    * [`fn withLogsInstanceId(logsInstanceId)`](#fn-specforproviderwithlogsinstanceid)
+    * [`fn withMetricsInstanceId(metricsInstanceId)`](#fn-specforproviderwithmetricsinstanceid)
+    * [`fn withStackId(stackId)`](#fn-specforproviderwithstackid)
+    * [`obj spec.forProvider.metricsPublisherKeySecretRef`](#obj-specforprovidermetricspublisherkeysecretref)
+      * [`fn withKey(key)`](#fn-specforprovidermetricspublisherkeysecretrefwithkey)
+      * [`fn withName(name)`](#fn-specforprovidermetricspublisherkeysecretrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specforprovidermetricspublisherkeysecretrefwithnamespace)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -54,7 +57,7 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
 new(name)
 ```
 
-new returns an instance of Team
+new returns an instance of SyntheticMonitoringInstallation
 
 ## obj metadata
 
@@ -240,7 +243,7 @@ withUid(uid)
 
 ## obj spec
 
-"TeamSpec defines the desired state of Team"
+"SyntheticMonitoringInstallationSpec defines the desired state of SyntheticMonitoringInstallation"
 
 ### fn spec.withDeletionPolicy
 
@@ -254,39 +257,57 @@ withDeletionPolicy(deletionPolicy)
 
 
 
-### fn spec.forProvider.withEmail
+### fn spec.forProvider.withLogsInstanceId
 
 ```ts
-withEmail(email)
+withLogsInstanceId(logsInstanceId)
 ```
 
-"An email address for the team."
+"The ID of the logs instance to install SM on (stack's `logs_user_id` attribute)."
 
-### fn spec.forProvider.withMembers
+### fn spec.forProvider.withMetricsInstanceId
 
 ```ts
-withMembers(members)
+withMetricsInstanceId(metricsInstanceId)
 ```
 
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
+"The ID of the metrics instance to install SM on (stack's `prometheus_user_id` attribute)."
 
-### fn spec.forProvider.withMembersMixin
+### fn spec.forProvider.withStackId
 
 ```ts
-withMembersMixin(members)
+withStackId(stackId)
 ```
 
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
+"The ID of the stack to install SM on."
 
-**Note:** This function appends passed data to existing values
+## obj spec.forProvider.metricsPublisherKeySecretRef
 
-### fn spec.forProvider.withName
+"The Cloud API Key with the `MetricsPublisher` role used to publish metrics to the SM API"
+
+### fn spec.forProvider.metricsPublisherKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.metricsPublisherKeySecretRef.withName
 
 ```ts
 withName(name)
 ```
 
-"The display name for the Grafana team created."
+"Name of the secret."
+
+### fn spec.forProvider.metricsPublisherKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
 
 ## obj spec.providerConfigRef
 
