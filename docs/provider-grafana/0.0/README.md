@@ -8,3 +8,6 @@ permalink: /provider-grafana/0.0/
 local crossplane_grafana = import "github.com/jsonnet-libs/crossplane-libsonnet/provider-grafana/0.0/main.libsonnet"
 ```
 
+
+
+* [grafana](grafana/index.md)
