@@ -1,5 +1,5 @@
 ---
-permalink: /provider-helm/10.0/helm/v1beta1/
+permalink: /provider-helm/0.10/helm/v1beta1/
 ---
 
 # helm.v1beta1

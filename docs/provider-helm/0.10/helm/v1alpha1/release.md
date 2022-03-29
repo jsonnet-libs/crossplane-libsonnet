@@ -1,8 +1,8 @@
 ---
-permalink: /provider-helm/10.0/helm/v1beta1/release/
+permalink: /provider-helm/0.10/helm/v1alpha1/release/
 ---
 
-# helm.v1beta1.release
+# helm.v1alpha1.release
 
 "A Release is an example API type"
 
@@ -32,29 +32,22 @@ permalink: /provider-helm/10.0/helm/v1beta1/release/
   * [`fn withSelfLink(selfLink)`](#fn-metadatawithselflink)
   * [`fn withUid(uid)`](#fn-metadatawithuid)
 * [`obj spec`](#obj-spec)
-  * [`fn withConnectionDetails(connectionDetails)`](#fn-specwithconnectiondetails)
-  * [`fn withConnectionDetailsMixin(connectionDetails)`](#fn-specwithconnectiondetailsmixin)
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`fn withRollbackLimit(rollbackLimit)`](#fn-specwithrollbacklimit)
   * [`obj spec.forProvider`](#obj-specforprovider)
-    * [`fn withInsecureSkipTLSVerify(insecureSkipTLSVerify)`](#fn-specforproviderwithinsecureskiptlsverify)
     * [`fn withNamespace(namespace)`](#fn-specforproviderwithnamespace)
     * [`fn withPatchesFrom(patchesFrom)`](#fn-specforproviderwithpatchesfrom)
     * [`fn withPatchesFromMixin(patchesFrom)`](#fn-specforproviderwithpatchesfrommixin)
     * [`fn withSet(set)`](#fn-specforproviderwithset)
     * [`fn withSetMixin(set)`](#fn-specforproviderwithsetmixin)
-    * [`fn withSkipCRDs(skipCRDs)`](#fn-specforproviderwithskipcrds)
-    * [`fn withSkipCreateNamespace(skipCreateNamespace)`](#fn-specforproviderwithskipcreatenamespace)
     * [`fn withValues(values)`](#fn-specforproviderwithvalues)
     * [`fn withValuesFrom(valuesFrom)`](#fn-specforproviderwithvaluesfrom)
     * [`fn withValuesFromMixin(valuesFrom)`](#fn-specforproviderwithvaluesfrommixin)
     * [`fn withValuesMixin(values)`](#fn-specforproviderwithvaluesmixin)
     * [`fn withWait(wait)`](#fn-specforproviderwithwait)
-    * [`fn withWaitTimeout(waitTimeout)`](#fn-specforproviderwithwaittimeout)
     * [`obj spec.forProvider.chart`](#obj-specforproviderchart)
       * [`fn withName(name)`](#fn-specforproviderchartwithname)
       * [`fn withRepository(repository)`](#fn-specforproviderchartwithrepository)
-      * [`fn withUrl(url)`](#fn-specforproviderchartwithurl)
       * [`fn withVersion(version)`](#fn-specforproviderchartwithversion)
       * [`obj spec.forProvider.chart.pullSecretRef`](#obj-specforproviderchartpullsecretref)
         * [`fn withName(name)`](#fn-specforproviderchartpullsecretrefwithname)
@@ -263,24 +256,6 @@ withUid(uid)
 
 "A ReleaseSpec defines the desired state of a Release."
 
-### fn spec.withConnectionDetails
-
-```ts
-withConnectionDetails(connectionDetails)
-```
-
-
-
-### fn spec.withConnectionDetailsMixin
-
-```ts
-withConnectionDetailsMixin(connectionDetails)
-```
-
-
-
-**Note:** This function appends passed data to existing values
-
 ### fn spec.withDeletionPolicy
 
 ```ts
@@ -301,21 +276,13 @@ withRollbackLimit(rollbackLimit)
 
 "ReleaseParameters are the configurable fields of a Release."
 
-### fn spec.forProvider.withInsecureSkipTLSVerify
-
-```ts
-withInsecureSkipTLSVerify(insecureSkipTLSVerify)
-```
-
-"InsecureSkipTLSVerify skips tls certificate checks for the chart download"
-
 ### fn spec.forProvider.withNamespace
 
 ```ts
 withNamespace(namespace)
 ```
 
-"Namespace to install the release into."
+
 
 ### fn spec.forProvider.withPatchesFrom
 
@@ -323,7 +290,7 @@ withNamespace(namespace)
 withPatchesFrom(patchesFrom)
 ```
 
-"PatchesFrom describe patches to be applied to the rendered manifests."
+
 
 ### fn spec.forProvider.withPatchesFromMixin
 
@@ -331,7 +298,7 @@ withPatchesFrom(patchesFrom)
 withPatchesFromMixin(patchesFrom)
 ```
 
-"PatchesFrom describe patches to be applied to the rendered manifests."
+
 
 **Note:** This function appends passed data to existing values
 
@@ -352,22 +319,6 @@ withSetMixin(set)
 
 
 **Note:** This function appends passed data to existing values
-
-### fn spec.forProvider.withSkipCRDs
-
-```ts
-withSkipCRDs(skipCRDs)
-```
-
-"SkipCRDs skips installation of CRDs for the release."
-
-### fn spec.forProvider.withSkipCreateNamespace
-
-```ts
-withSkipCreateNamespace(skipCreateNamespace)
-```
-
-"SkipCreateNamespace won't create the namespace for the release. This requires the namespace to already exist."
 
 ### fn spec.forProvider.withValues
 
@@ -411,15 +362,7 @@ withValuesMixin(values)
 withWait(wait)
 ```
 
-"Wait for the release to become ready."
 
-### fn spec.forProvider.withWaitTimeout
-
-```ts
-withWaitTimeout(waitTimeout)
-```
-
-"WaitTimeout is the duration Helm will wait for the release to become ready. Only applies if wait is also set. Defaults to 5m."
 
 ## obj spec.forProvider.chart
 
@@ -431,7 +374,7 @@ withWaitTimeout(waitTimeout)
 withName(name)
 ```
 
-"Name of Helm chart, required if ChartSpec.URL not set"
+
 
 ### fn spec.forProvider.chart.withRepository
 
@@ -439,15 +382,7 @@ withName(name)
 withRepository(repository)
 ```
 
-"Repository: Helm repository URL, required if ChartSpec.URL not set"
 
-### fn spec.forProvider.chart.withUrl
-
-```ts
-withUrl(url)
-```
-
-"URL to chart package (typically .tgz), optional and overrides others fields in the spec"
 
 ### fn spec.forProvider.chart.withVersion
 
@@ -455,11 +390,11 @@ withUrl(url)
 withVersion(version)
 ```
 
-"Version of Helm chart, late initialized with latest version if not set"
+
 
 ## obj spec.forProvider.chart.pullSecretRef
 
-"PullSecretRef is reference to the secret containing credentials to helm repository"
+"A SecretReference is a reference to a secret in an arbitrary namespace."
 
 ### fn spec.forProvider.chart.pullSecretRef.withName
 

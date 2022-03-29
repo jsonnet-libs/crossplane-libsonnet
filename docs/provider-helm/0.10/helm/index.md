@@ -1,5 +1,5 @@
 ---
-permalink: /provider-helm/10.0/helm/
+permalink: /provider-helm/0.10/helm/
 ---
 
 # helm

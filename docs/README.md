@@ -12,4 +12,4 @@ This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 - [provider-sql/0.4](provider-sql/0.4/README.md)
 - [provider-kubernetes/0.3](provider-kubernetes/0.3/README.md)
 - [provider-grafana/0.0](provider-grafana/0.0/README.md)
-- [provider-helm/10.0](provider-helm/10.0/README.md)
+- [provider-helm/0.10](provider-helm/0.10/README.md)

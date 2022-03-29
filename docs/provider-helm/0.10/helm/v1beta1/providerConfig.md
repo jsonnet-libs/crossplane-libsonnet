@@ -1,5 +1,5 @@
 ---
-permalink: /provider-helm/10.0/helm/v1beta1/providerConfig/
+permalink: /provider-helm/0.10/helm/v1beta1/providerConfig/
 ---
 
 # helm.v1beta1.providerConfig
