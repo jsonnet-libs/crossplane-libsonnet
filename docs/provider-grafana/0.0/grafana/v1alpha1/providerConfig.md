@@ -1,10 +1,10 @@
 ---
-permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
+permalink: /provider-grafana/0.0/grafana/v1alpha1/providerConfig/
 ---
 
-# grafana.v1alpha1.team
+# grafana.v1alpha1.providerConfig
 
-"Team is the Schema for the Teams API"
+"A ProviderConfig configures a Grafana JET provider."
 
 ## Index
 
@@ -32,19 +32,20 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
   * [`fn withSelfLink(selfLink)`](#fn-metadatawithselflink)
   * [`fn withUid(uid)`](#fn-metadatawithuid)
 * [`obj spec`](#obj-spec)
-  * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
-  * [`obj spec.forProvider`](#obj-specforprovider)
-    * [`fn withEmail(email)`](#fn-specforproviderwithemail)
-    * [`fn withMembers(members)`](#fn-specforproviderwithmembers)
-    * [`fn withMembersMixin(members)`](#fn-specforproviderwithmembersmixin)
-    * [`fn withName(name)`](#fn-specforproviderwithname)
-  * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
-    * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
-  * [`obj spec.providerRef`](#obj-specproviderref)
-    * [`fn withName(name)`](#fn-specproviderrefwithname)
-  * [`obj spec.writeConnectionSecretToRef`](#obj-specwriteconnectionsecrettoref)
-    * [`fn withName(name)`](#fn-specwriteconnectionsecrettorefwithname)
-    * [`fn withNamespace(namespace)`](#fn-specwriteconnectionsecrettorefwithnamespace)
+  * [`fn withOrgID(orgID)`](#fn-specwithorgid)
+  * [`obj spec.credentials`](#obj-speccredentials)
+    * [`fn withSource(source)`](#fn-speccredentialswithsource)
+    * [`obj spec.credentials.connectionSecretRef`](#obj-speccredentialsconnectionsecretref)
+      * [`fn withName(name)`](#fn-speccredentialsconnectionsecretrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-speccredentialsconnectionsecretrefwithnamespace)
+    * [`obj spec.credentials.env`](#obj-speccredentialsenv)
+      * [`fn withName(name)`](#fn-speccredentialsenvwithname)
+    * [`obj spec.credentials.fs`](#obj-speccredentialsfs)
+      * [`fn withPath(path)`](#fn-speccredentialsfswithpath)
+    * [`obj spec.credentials.secretRef`](#obj-speccredentialssecretref)
+      * [`fn withKey(key)`](#fn-speccredentialssecretrefwithkey)
+      * [`fn withName(name)`](#fn-speccredentialssecretrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-speccredentialssecretrefwithnamespace)
 
 ## Fields
 
@@ -54,7 +55,7 @@ permalink: /provider-grafana/0.0/grafana/v1alpha1/team/
 new(name)
 ```
 
-new returns an instance of Team
+new returns an instance of ProviderConfig
 
 ## obj metadata
 
@@ -240,83 +241,33 @@ withUid(uid)
 
 ## obj spec
 
-"TeamSpec defines the desired state of Team"
+"A ProviderConfigSpec defines the desired state of a ProviderConfig."
 
-### fn spec.withDeletionPolicy
-
-```ts
-withDeletionPolicy(deletionPolicy)
-```
-
-"DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either \"Delete\" or \"Orphan\" the external resource."
-
-## obj spec.forProvider
-
-
-
-### fn spec.forProvider.withEmail
+### fn spec.withOrgID
 
 ```ts
-withEmail(email)
+withOrgID(orgID)
 ```
 
-"An email address for the team."
+"OrgID of the organization in which to reconcile resources."
 
-### fn spec.forProvider.withMembers
+## obj spec.credentials
+
+"Credentials required to authenticate to this provider."
+
+### fn spec.credentials.withSource
 
 ```ts
-withMembers(members)
+withSource(source)
 ```
 
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
+"Source of the provider credentials."
 
-### fn spec.forProvider.withMembersMixin
+## obj spec.credentials.connectionSecretRef
 
-```ts
-withMembersMixin(members)
-```
+"A SecretReference is a reference to a secret in an arbitrary namespace."
 
-"A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.forProvider.withName
-
-```ts
-withName(name)
-```
-
-"The display name for the Grafana team created."
-
-## obj spec.providerConfigRef
-
-"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."
-
-### fn spec.providerConfigRef.withName
-
-```ts
-withName(name)
-```
-
-"Name of the referenced object."
-
-## obj spec.providerRef
-
-"ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`"
-
-### fn spec.providerRef.withName
-
-```ts
-withName(name)
-```
-
-"Name of the referenced object."
-
-## obj spec.writeConnectionSecretToRef
-
-"WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource."
-
-### fn spec.writeConnectionSecretToRef.withName
+### fn spec.credentials.connectionSecretRef.withName
 
 ```ts
 withName(name)
@@ -324,7 +275,59 @@ withName(name)
 
 "Name of the secret."
 
-### fn spec.writeConnectionSecretToRef.withNamespace
+### fn spec.credentials.connectionSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.credentials.env
+
+"Env is a reference to an environment variable that contains credentials that must be used to connect to the provider."
+
+### fn spec.credentials.env.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of an environment variable."
+
+## obj spec.credentials.fs
+
+"Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider."
+
+### fn spec.credentials.fs.withPath
+
+```ts
+withPath(path)
+```
+
+"Path is a filesystem path."
+
+## obj spec.credentials.secretRef
+
+"A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider."
+
+### fn spec.credentials.secretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.credentials.secretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.credentials.secretRef.withNamespace
 
 ```ts
 withNamespace(namespace)
