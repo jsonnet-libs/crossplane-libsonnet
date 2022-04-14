@@ -9,6 +9,7 @@ permalink: /crossplane/1.5/apiextensions/v1/composition/
 ## Index
 
 * [`fn new(name)`](#fn-new)
+* [`fn fromXRD(name, resource)`](#fn-fromxrd)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -50,6 +51,23 @@ new(name)
 ```
 
 new returns an instance of Composition
+
+### fn fromXRD
+
+```ts
+fromXRD(name, resource)
+```
+
+Create a Composition based on an XRD.
+
+Attributes:
+- <name> of the composition
+- <namespace> where connectionDetails are propagated too, commonly the the
+  management namespace (ie. crossplane)
+- <provider> of the resources in this composition
+- <xrdRef> XRD object with which this composition is compatible
+- <xrdVersion> Version of XRD object with which this composition is compatible
+
 
 ## obj metadata
 

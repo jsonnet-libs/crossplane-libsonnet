@@ -8,7 +8,9 @@ permalink: /crossplane/1.7/apiextensions/v1/compositeResourceDefinition/
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(kind, plural, group)`](#fn-new)
+* [`fn mapVersions(kind, plural)`](#fn-mapversions)
+* [`fn withClaimNames(kind, plural)`](#fn-withclaimnames)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -65,10 +67,55 @@ permalink: /crossplane/1.7/apiextensions/v1/compositeResourceDefinition/
 ### fn new
 
 ```ts
-new(name)
+new(kind, plural, group)
 ```
 
-new returns an instance of CompositeResourceDefinition
+new returns an instance of CompositeResourceDefinition=
+
+For example: xpostgresqlinstances.example.org
+
+- <kind>: XPostgreSQLInstance
+- <plural>: xpostgresqlinstances
+- <group>: example.org
+
+A common convention is that the XR (composite resource) are prefixed with 'X'
+while claim names are not. This lets app team members think of creating a claim
+as (e.g.) 'creating a PostgreSQLInstance'. Use `withClaimNames` to set this.
+
+
+### fn mapVersions
+
+```ts
+mapVersions(kind, plural)
+```
+
+Sets the ClaimNames attribute.
+
+Example:
+- <kind>: PostgreSQLInstance
+- <plural>: postgresqlinstances
+
+A common convention is that the XR (composite resource) are prefixed with 'X'
+while claim names are not. This lets app team members think of creating a claim
+as (e.g.) 'creating a PostgreSQLInstance'.
+
+
+### fn withClaimNames
+
+```ts
+withClaimNames(kind, plural)
+```
+
+Sets the ClaimNames attribute.
+
+Example:
+- <kind>: PostgreSQLInstance
+- <plural>: postgresqlinstances
+
+A common convention is that the XR (composite resource) are prefixed with 'X'
+while claim names are not. This lets app team members think of creating a claim
+as (e.g.) 'creating a PostgreSQLInstance'.
+
 
 ## obj metadata
 
