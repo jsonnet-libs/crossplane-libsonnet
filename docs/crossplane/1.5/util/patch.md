@@ -1,8 +1,8 @@
 ---
-permalink: /crossplane/1.7/util/patches/
+permalink: /crossplane/1.5/util/patch/
 ---
 
-# util.patches
+# util.patch
 
 Create patches for Composition resources.
 

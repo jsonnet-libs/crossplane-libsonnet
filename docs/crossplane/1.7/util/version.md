@@ -20,13 +20,13 @@ Create versions for CompositeResourceDefinitions.
 new(version, served='true', referenceable='true')
 ```
 
-Create a new <version> (e.g. v1alpha1, v1beta1 and v1) schema for an XRD.
+Create a new `version` (e.g. v1alpha1, v1beta1 and v1) schema for an XRD.
 
-<served> specifies that XRs should be served at this version. It can be set to
+`served` specifies that XRs should be served at this version. It can be set to
 false to temporarily disable a version, for example to test whether doing so
 breaks anything before a version is removed wholesale.
 
-<referenceable> denotes the version of a type of XR that Compositions may use.
+`referenceable` denotes the version of a type of XR that Compositions may use.
 Only one version may be referenceable.
 
 
@@ -42,11 +42,11 @@ This shortcut enables to quickly extend the 'parameters' property of a version.
 
 Attributes:
 
-- <name> of the property
-- <type> eg. string, number, array, object
-- <description> for documentation
-- <required> is this a required property?
-- <mixin> can be used to add enums or the type of an array member for validation.
+- `name` of the property
+- `type` eg. string, number, array, object
+- `description` for documentation
+- `required` is this a required property?
+- `mixin` can be used to add enums or the type of an array member for validation.
 
 
 ### fn withPropertiesMixin

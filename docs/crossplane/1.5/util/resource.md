@@ -62,7 +62,7 @@ withConnectionSecretMixin(suffix, namespace)
 
 withConnectionSecretMixin ensures connectionSecrets are propagated to the
 management (ie. crossplane) namespace, the name of the secret will be
-<metadata.uid>-<suffix>.
+&lt;metadata.uid&gt;-&lt;suffix&gt;.
 
 
 ### fn withDeleteProtectionPatch

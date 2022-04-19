@@ -6,7 +6,7 @@ permalink: /crossplane/1.5/util/
 
 A util library for Crossplane.
 
-* [connectionDetails](connectionDetails.md)
-* [patches](patches.md)
+* [connectionDetail](connectionDetail.md)
+* [patch](patch.md)
 * [resource](resource.md)
 * [version](version.md)

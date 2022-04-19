@@ -74,9 +74,9 @@ new returns an instance of CompositeResourceDefinition=
 
 For example: xpostgresqlinstances.example.org
 
-- <kind>: XPostgreSQLInstance
-- <plural>: xpostgresqlinstances
-- <group>: example.org
+- `kind`: XPostgreSQLInstance
+- `plural`: xpostgresqlinstances
+- `group`: example.org
 
 A common convention is that the XR (composite resource) are prefixed with 'X'
 while claim names are not. This lets app team members think of creating a claim
@@ -92,8 +92,8 @@ mapVersions(kind, plural)
 Sets the ClaimNames attribute.
 
 Example:
-- <kind>: PostgreSQLInstance
-- <plural>: postgresqlinstances
+- `kind`: PostgreSQLInstance
+- `plural`: postgresqlinstances
 
 A common convention is that the XR (composite resource) are prefixed with 'X'
 while claim names are not. This lets app team members think of creating a claim
@@ -109,8 +109,8 @@ withClaimNames(kind, plural)
 Sets the ClaimNames attribute.
 
 Example:
-- <kind>: PostgreSQLInstance
-- <plural>: postgresqlinstances
+- `kind`: PostgreSQLInstance
+- `plural`: postgresqlinstances
 
 A common convention is that the XR (composite resource) are prefixed with 'X'
 while claim names are not. This lets app team members think of creating a claim
