@@ -9,7 +9,7 @@ Create versions for CompositeResourceDefinitions.
 ## Index
 
 * [`fn new(version, served='true', referenceable='true')`](#fn-new)
-* [`fn addParameterProperty(value)`](#fn-addparameterproperty)
+* [`fn addParameterProperty(name, type='string|number|array|object', description='', required, mixin)`](#fn-addparameterproperty)
 * [`fn withPropertiesMixin(properties)`](#fn-withpropertiesmixin)
 
 ## Fields
@@ -33,7 +33,7 @@ Only one version may be referenceable.
 ### fn addParameterProperty
 
 ```ts
-addParameterProperty(value)
+addParameterProperty(name, type='string|number|array|object', description='', required, mixin)
 ```
 
 Add properties to the Schema.
