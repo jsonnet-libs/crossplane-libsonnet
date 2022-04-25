@@ -1,0 +1,7 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1alpha1', url='', help=''),
+  endpoint: (import 'endpoint.libsonnet'),
+  endpointService: (import 'endpointService.libsonnet'),
+  endpointServiceAdl: (import 'endpointServiceAdl.libsonnet'),
+}
