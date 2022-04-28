@@ -10,7 +10,7 @@ Create resources for Compositions.
 
 * [`fn new(name, resource)`](#fn-new)
 * [`fn withBaseMixin(baseFunc)`](#fn-withbasemixin)
-* [`fn withConnectionDetailsMixin(connectionDetails)`](#fn-withconnectiondetailsmixin)
+* [`fn withConnectionDetailsMixin(namespace, connectionDetails)`](#fn-withconnectiondetailsmixin)
 * [`fn withConnectionSecretMixin(suffix, namespace)`](#fn-withconnectionsecretmixin)
 * [`fn withDeleteProtectionPatch(default='Orphan')`](#fn-withdeleteprotectionpatch)
 * [`fn withExternalNamePatch()`](#fn-withexternalnamepatch)
@@ -48,10 +48,14 @@ argument:
 ### fn withConnectionDetailsMixin
 
 ```ts
-withConnectionDetailsMixin(connectionDetails)
+withConnectionDetailsMixin(namespace, connectionDetails)
 ```
 
 Add connectionDetails that will be provided by this resource.
+
+This also configures the writeConnectionSecretToRef to properly propagate the
+connectionDetails. The `namespace` attribute conventionally matches the Crossplane
+system namespace.
 
 
 ### fn withConnectionSecretMixin
