@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iam.aws.crossplane.io/v1beta1',
     kind: 'AccessKey',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"An AccessKeySpec defines the desired state of an IAM Access Key."'),
   spec: {
     '#forProvider':: d.obj(help='"AccessKeyParameters define the desired state of an AWS IAM Access Key."'),

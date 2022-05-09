@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'mq.aws.crossplane.io/v1alpha1',
     kind: 'Broker',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"BrokerSpec defines the desired state of Broker"'),
   spec: {
     '#forProvider':: d.obj(help='"BrokerParameters defines the desired state of Broker"'),

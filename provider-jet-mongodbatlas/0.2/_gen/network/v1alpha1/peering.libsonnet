@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'network.mongodbatlas.jet.crossplane.io/v1alpha1',
     kind: 'Peering',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"PeeringSpec defines the desired state of Peering"'),
   spec: {
     '#forProvider':: d.obj(help=''),

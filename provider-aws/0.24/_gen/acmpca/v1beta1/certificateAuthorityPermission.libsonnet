@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'acmpca.aws.crossplane.io/v1beta1',
     kind: 'CertificateAuthorityPermission',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"CertificateAuthorityPermissionSpec defines the desired state of CertificateAuthorityPermission"'),
   spec: {
     '#forProvider':: d.obj(help='"CertificateAuthorityPermissionParameters defines the desired state of an AWS CertificateAuthority."'),

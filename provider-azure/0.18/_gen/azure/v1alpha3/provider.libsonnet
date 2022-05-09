@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'azure.crossplane.io/v1alpha3',
     kind: 'Provider',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A ProviderSpec defines the desired state of a Provider."'),
   spec: {
     '#credentialsSecretRef':: d.obj(help="\"CredentialsSecretRef references a specific secret's key that contains the credentials that are used to connect to the Azure API.\""),

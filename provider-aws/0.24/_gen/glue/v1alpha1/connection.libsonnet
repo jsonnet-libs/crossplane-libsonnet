@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'glue.aws.crossplane.io/v1alpha1',
     kind: 'Connection',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ConnectionSpec defines the desired state of Connection"'),
   spec: {
     '#forProvider':: d.obj(help='"ConnectionParameters defines the desired state of Connection"'),

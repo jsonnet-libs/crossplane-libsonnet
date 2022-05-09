@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'elbv2.aws.crossplane.io/v1alpha1',
     kind: 'LoadBalancer',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"LoadBalancerSpec defines the desired state of LoadBalancer"'),
   spec: {
     '#forProvider':: d.obj(help='"LoadBalancerParameters defines the desired state of LoadBalancer"'),

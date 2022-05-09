@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cache.aws.crossplane.io/v1alpha1',
     kind: 'CacheSubnetGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A CacheSubnetGroupSpec defines the desired state of a CacheSubnetGroup."'),
   spec: {
     '#forProvider':: d.obj(help='"CacheSubnetGroupParameters define the desired state of an AWS ElasticCache Subnet Group."'),

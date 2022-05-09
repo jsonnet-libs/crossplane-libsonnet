@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'network.azure.crossplane.io/v1alpha3',
     kind: 'Subnet',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A SubnetSpec defines the desired state of a Subnet."'),
   spec: {
     '#properties':: d.obj(help='"SubnetPropertiesFormat - Properties of the subnet."'),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'athena.aws.crossplane.io/v1alpha1',
     kind: 'WorkGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"WorkGroupSpec defines the desired state of WorkGroup"'),
   spec: {
     '#forProvider':: d.obj(help='"WorkGroupParameters defines the desired state of WorkGroup"'),

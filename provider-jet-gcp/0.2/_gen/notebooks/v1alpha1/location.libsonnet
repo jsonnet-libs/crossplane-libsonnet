@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'notebooks.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Location',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"LocationSpec defines the desired state of Location"'),
   spec: {
     '#forProvider':: d.obj(help=''),

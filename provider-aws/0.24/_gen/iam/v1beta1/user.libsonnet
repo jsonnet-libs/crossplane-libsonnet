@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iam.aws.crossplane.io/v1beta1',
     kind: 'User',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"An UserSpec defines the desired state of an IAM User."'),
   spec: {
     '#forProvider':: d.obj(help='"UserParameters define the desired state of an AWS IAM User."'),

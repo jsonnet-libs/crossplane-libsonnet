@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'servicediscovery.aws.crossplane.io/v1alpha1',
     kind: 'HTTPNamespace',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"HTTPNamespaceSpec defines the desired state of HTTPNamespace"'),
   spec: {
     '#forProvider':: d.obj(help='"HTTPNamespaceParameters defines the desired state of HTTPNamespace"'),

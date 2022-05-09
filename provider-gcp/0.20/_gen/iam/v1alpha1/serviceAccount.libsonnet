@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iam.gcp.crossplane.io/v1alpha1',
     kind: 'ServiceAccount',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ServiceAccountSpec defines the desired state of a ServiceAccount."'),
   spec: {
     '#forProvider':: d.obj(help='"ServiceAccountParameters defines parameters for a desired IAM ServiceAccount https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts The name of the service account (ie the `accountId` parameter of the Create call) is determined by the value of the `crossplane.io/external-name` annotation. Unless overridden by the user, this annotation is automatically populated with the value of the `metadata.name` attribute."'),

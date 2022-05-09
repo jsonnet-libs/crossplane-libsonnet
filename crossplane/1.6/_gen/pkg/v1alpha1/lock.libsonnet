@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'pkg.crossplane.io/v1alpha1',
     kind: 'Lock',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#withPackages':: d.fn(help='', args=[d.arg(name='packages', type=d.T.array)]),
   withPackages(packages): { packages: if std.isArray(v=packages) then packages else [packages] },
   '#withPackagesMixin':: d.fn(help='\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='packages', type=d.T.array)]),

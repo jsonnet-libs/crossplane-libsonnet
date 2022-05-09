@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'sqs.aws.crossplane.io/v1beta1',
     kind: 'Queue',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"QueueSpec defines the desired state of a Queue."'),
   spec: {
     '#forProvider':: d.obj(help='"QueueParameters define the desired state of an AWS Queue"'),

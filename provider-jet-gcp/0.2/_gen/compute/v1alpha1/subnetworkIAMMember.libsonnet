@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.jet.crossplane.io/v1alpha1',
     kind: 'SubnetworkIAMMember',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"SubnetworkIAMMemberSpec defines the desired state of SubnetworkIAMMember"'),
   spec: {
     '#forProvider':: d.obj(help=''),

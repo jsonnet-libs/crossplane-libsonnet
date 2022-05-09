@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cache.aws.crossplane.io/v1alpha1',
     kind: 'CacheCluster',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A CacheClusterSpec defines the desired state of a CacheCluster."'),
   spec: {
     '#forProvider':: d.obj(help='"CacheClusterParameters define the desired state of an AWS ElastiCache Cache Cluster. Most fields map directly to an AWS ReplicationGroup: https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateReplicationGroup.html#API_CreateReplicationGroup_RequestParameters"'),

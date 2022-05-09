@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'container.gcp.jet.crossplane.io/v1alpha2',
     kind: 'NodePool',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"NodePoolSpec defines the desired state of NodePool"'),
   spec: {
     '#forProvider':: d.obj(help=''),

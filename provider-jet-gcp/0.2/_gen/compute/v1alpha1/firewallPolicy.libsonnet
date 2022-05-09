@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.jet.crossplane.io/v1alpha1',
     kind: 'FirewallPolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"FirewallPolicySpec defines the desired state of FirewallPolicy"'),
   spec: {
     '#forProvider':: d.obj(help=''),

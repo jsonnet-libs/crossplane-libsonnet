@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'servicenetworking.gcp.crossplane.io/v1beta1',
     kind: 'Connection',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A ConnectionSpec defines the desired state of a Connection."'),
   spec: {
     '#forProvider':: d.obj(help='"ConnectionParameters define the desired state of a Google Cloud Service Networking Connection. Most fields map direct to a Connection: https://cloud.google.com/service-infrastructure/docs/service-networking/reference/rest/v1/services.connections#Connection"'),

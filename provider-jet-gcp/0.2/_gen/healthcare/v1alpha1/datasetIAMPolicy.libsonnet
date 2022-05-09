@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'healthcare.gcp.jet.crossplane.io/v1alpha1',
     kind: 'DatasetIAMPolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"DatasetIAMPolicySpec defines the desired state of DatasetIAMPolicy"'),
   spec: {
     '#forProvider':: d.obj(help=''),

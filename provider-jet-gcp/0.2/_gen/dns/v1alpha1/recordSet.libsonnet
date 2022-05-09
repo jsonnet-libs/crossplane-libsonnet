@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'dns.gcp.jet.crossplane.io/v1alpha1',
     kind: 'RecordSet',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"RecordSetSpec defines the desired state of RecordSet"'),
   spec: {
     '#forProvider':: d.obj(help=''),

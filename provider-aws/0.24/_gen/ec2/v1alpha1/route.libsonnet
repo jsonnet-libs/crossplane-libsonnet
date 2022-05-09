@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1alpha1',
     kind: 'Route',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"RouteSpec defines the desired state of Route"'),
   spec: {
     '#forProvider':: d.obj(help='"RouteParameters defines the desired state of Route"'),

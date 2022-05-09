@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'mq.aws.crossplane.io/v1alpha1',
     kind: 'User',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"UserSpec defines the desired state of User"'),
   spec: {
     '#forProvider':: d.obj(help='"UserParameters defines the desired state of User"'),

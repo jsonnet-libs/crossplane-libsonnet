@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'tpu.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Node',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"NodeSpec defines the desired state of Node"'),
   spec: {
     '#forProvider':: d.obj(help=''),

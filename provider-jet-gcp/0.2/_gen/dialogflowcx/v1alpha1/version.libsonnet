@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'dialogflowcx.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Version',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"VersionSpec defines the desired state of Version"'),
   spec: {
     '#forProvider':: d.obj(help=''),

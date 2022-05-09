@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'pubsub.gcp.jet.crossplane.io/v1alpha1',
     kind: 'TopicIAMMember',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"TopicIAMMemberSpec defines the desired state of TopicIAMMember"'),
   spec: {
     '#forProvider':: d.obj(help=''),

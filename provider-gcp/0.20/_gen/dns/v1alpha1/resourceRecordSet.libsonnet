@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'dns.gcp.crossplane.io/v1alpha1',
     kind: 'ResourceRecordSet',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ResourceRecordSetSpec defines the desired state of a ResourceRecordSet."'),
   spec: {
     '#forProvider':: d.obj(help='"ResourceRecordSetParameters define the desired state of a ResourceRecordSet"'),

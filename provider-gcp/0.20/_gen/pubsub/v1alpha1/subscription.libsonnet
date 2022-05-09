@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'pubsub.gcp.crossplane.io/v1alpha1',
     kind: 'Subscription',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"SubscriptionSpec defines the desired state of a Subscription."'),
   spec: {
     '#forProvider':: d.obj(help='"SubscriptionParameters defines parameters for a desired Subscription."'),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'elasticloadbalancing.aws.crossplane.io/v1alpha1',
     kind: 'ELBAttachment',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"An ELBAttachmentSpec defines the desired state of an ELBAttachment."'),
   spec: {
     '#forProvider':: d.obj(help='"ELBAttachmentParameters define the desired state of an AWS ELBAttachment."'),

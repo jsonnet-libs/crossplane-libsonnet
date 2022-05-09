@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1alpha1',
     kind: 'Instance',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"An InstanceSpec defines the desired state of Instances."'),
   spec: {
     '#forProvider':: d.obj(help='"InstanceParameters define the desired state of the Instances"'),

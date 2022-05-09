@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'elbv2.aws.crossplane.io/v1alpha1',
     kind: 'TargetGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"TargetGroupSpec defines the desired state of TargetGroup"'),
   spec: {
     '#forProvider':: d.obj(help='"TargetGroupParameters defines the desired state of TargetGroup"'),

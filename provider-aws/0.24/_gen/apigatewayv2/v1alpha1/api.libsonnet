@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'apigatewayv2.aws.crossplane.io/v1alpha1',
     kind: 'API',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"APISpec defines the desired state of API"'),
   spec: {
     '#forProvider':: d.obj(help='"APIParameters defines the desired state of API"'),

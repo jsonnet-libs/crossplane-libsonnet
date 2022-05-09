@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'mysql.sql.crossplane.io/v1alpha1',
     kind: 'Database',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A DatabaseSpec defines the desired state of a Database."'),
   spec: {
     '#providerConfigRef':: d.obj(help='"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."'),

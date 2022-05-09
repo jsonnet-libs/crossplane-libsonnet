@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 's3.aws.crossplane.io/v1beta1',
     kind: 'Bucket',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"BucketSpec represents the desired state of the Bucket."'),
   spec: {
     '#forProvider':: d.obj(help='"BucketParameters are parameters for configuring the calls made to AWS Bucket API."'),

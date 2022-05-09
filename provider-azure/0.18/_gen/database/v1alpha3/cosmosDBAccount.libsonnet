@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'database.azure.crossplane.io/v1alpha3',
     kind: 'CosmosDBAccount',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A CosmosDBAccountSpec defines the desired state of a CosmosDB Account."'),
   spec: {
     '#forProvider':: d.obj(help='"CosmosDBAccountParameters define the desired state of an Azure CosmosDB account."'),

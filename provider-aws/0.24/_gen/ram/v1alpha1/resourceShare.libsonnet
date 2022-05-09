@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ram.aws.crossplane.io/v1alpha1',
     kind: 'ResourceShare',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ResourceShareSpec defines the desired state of ResourceShare"'),
   spec: {
     '#forProvider':: d.obj(help='"ResourceShareParameters defines the desired state of ResourceShare"'),

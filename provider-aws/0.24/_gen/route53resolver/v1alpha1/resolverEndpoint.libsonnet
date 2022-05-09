@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'route53resolver.aws.crossplane.io/v1alpha1',
     kind: 'ResolverEndpoint',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ResolverEndpointSpec defines the desired state of ResolverEndpoint"'),
   spec: {
     '#forProvider':: d.obj(help='"ResolverEndpointParameters defines the desired state of ResolverEndpoint"'),

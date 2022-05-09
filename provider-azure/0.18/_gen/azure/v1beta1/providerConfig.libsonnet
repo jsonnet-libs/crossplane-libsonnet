@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'azure.crossplane.io/v1beta1',
     kind: 'ProviderConfig',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A ProviderConfigSpec defines the desired state of a ProviderConfig."'),
   spec: {
     '#credentials':: d.obj(help='"Credentials required to authenticate to this provider."'),

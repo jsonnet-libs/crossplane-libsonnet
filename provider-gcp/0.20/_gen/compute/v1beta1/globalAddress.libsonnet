@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.crossplane.io/v1beta1',
     kind: 'GlobalAddress',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A GlobalAddressSpec defines the desired state of a GlobalAddress."'),
   spec: {
     '#forProvider':: d.obj(help='"GlobalAddressParameters define the desired state of a Google Compute Engine Global Address. Most fields map directly to an Address: https://cloud.google.com/compute/docs/reference/rest/v1/globalAddresses"'),

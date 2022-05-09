@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1alpha1',
     kind: 'VPCCIDRBlock',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A VPCCIDRBlockSpec defines the desired state of a VPCCIDRBlock."'),
   spec: {
     '#forProvider':: d.obj(help='"VPCCIDRBlockParameters define the desired state of an VPC CIDR Block"'),

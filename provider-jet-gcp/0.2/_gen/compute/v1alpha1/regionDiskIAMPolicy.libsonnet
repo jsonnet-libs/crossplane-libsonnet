@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.jet.crossplane.io/v1alpha1',
     kind: 'RegionDiskIAMPolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"RegionDiskIAMPolicySpec defines the desired state of RegionDiskIAMPolicy"'),
   spec: {
     '#forProvider':: d.obj(help=''),

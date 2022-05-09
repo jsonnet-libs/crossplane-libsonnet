@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1beta1',
     kind: 'InternetGateway',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"An InternetGatewaySpec defines the desired state of an InternetGateway."'),
   spec: {
     '#forProvider':: d.obj(help='"InternetGatewayParameters define the desired state of an AWS VPC Internet Gateway."'),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iam.gcp.crossplane.io/v1alpha1',
     kind: 'ServiceAccountKey',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ServiceAccountKeySpec defines the desired state of a ServiceAccountKey."'),
   spec: {
     '#forProvider':: d.obj(help='"ServiceAccountKeyParameters defines parameters for a desired IAM ServiceAccountKey https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts.keys"'),

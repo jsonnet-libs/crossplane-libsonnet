@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'kms.gcp.crossplane.io/v1alpha1',
     kind: 'KeyRing',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"KeyRingSpec defines the desired state of a KeyRing."'),
   spec: {
     '#forProvider':: d.obj(help='"KeyRingParameters defines parameters for a desired KMS KeyRing https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings The name of the key ring (ie the `keyRingId` parameter of the Create call) is determined by the value of the `crossplane.io/external-name` annotation. Unless overridden by the user, this annotation is automatically populated with the value of the `metadata.name` attribute."'),

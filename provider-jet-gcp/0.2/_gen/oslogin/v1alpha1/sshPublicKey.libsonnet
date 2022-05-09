@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'oslogin.gcp.jet.crossplane.io/v1alpha1',
     kind: 'SSHPublicKey',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"SSHPublicKeySpec defines the desired state of SSHPublicKey"'),
   spec: {
     '#forProvider':: d.obj(help=''),

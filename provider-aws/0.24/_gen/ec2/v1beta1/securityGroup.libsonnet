@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1beta1',
     kind: 'SecurityGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A SecurityGroupSpec defines the desired state of a SecurityGroup."'),
   spec: {
     '#forProvider':: d.obj(help='"SecurityGroupParameters define the desired state of an AWS VPC Security Group."'),

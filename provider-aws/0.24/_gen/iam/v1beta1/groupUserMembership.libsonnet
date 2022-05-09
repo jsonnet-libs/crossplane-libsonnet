@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iam.aws.crossplane.io/v1beta1',
     kind: 'GroupUserMembership',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"An GroupUserMembershipSpec defines the desired state of an GroupUserMembership."'),
   spec: {
     '#forProvider':: d.obj(help='"GroupUserMembershipParameters define the desired state of an AWS GroupUserMembership."'),

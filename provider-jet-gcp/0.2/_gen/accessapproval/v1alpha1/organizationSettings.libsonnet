@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'accessapproval.gcp.jet.crossplane.io/v1alpha1',
     kind: 'OrganizationSettings',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"OrganizationSettingsSpec defines the desired state of OrganizationSettings"'),
   spec: {
     '#forProvider':: d.obj(help=''),

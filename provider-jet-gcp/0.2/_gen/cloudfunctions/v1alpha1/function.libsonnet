@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cloudfunctions.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Function',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"FunctionSpec defines the desired state of Function"'),
   spec: {
     '#forProvider':: d.obj(help=''),

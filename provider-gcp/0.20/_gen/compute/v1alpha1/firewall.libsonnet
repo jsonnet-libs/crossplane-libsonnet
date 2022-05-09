@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.crossplane.io/v1alpha1',
     kind: 'Firewall',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A FirewallSpec defines the desired state of a Firewall."'),
   spec: {
     '#forProvider':: d.obj(help='"FirewallParameters define the desired state of a Google Compute Engine Firewall rule. Most fields map directly to a Firewall: https://cloud.google.com/compute/docs/reference/rest/v1/firewalls/"'),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'dynamodb.aws.crossplane.io/v1alpha1',
     kind: 'GlobalTable',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"GlobalTableSpec defines the desired state of GlobalTable"'),
   spec: {
     '#forProvider':: d.obj(help='"GlobalTableParameters defines the desired state of GlobalTable"'),

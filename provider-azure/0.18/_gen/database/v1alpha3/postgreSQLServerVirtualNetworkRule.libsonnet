@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'database.azure.crossplane.io/v1alpha3',
     kind: 'PostgreSQLServerVirtualNetworkRule',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A PostgreSQLVirtualNetworkRuleSpec defines the desired state of a PostgreSQLVirtualNetworkRule."'),
   spec: {
     '#properties':: d.obj(help='"VirtualNetworkRuleProperties - Resource properties."'),

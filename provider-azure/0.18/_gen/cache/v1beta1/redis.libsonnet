@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cache.azure.crossplane.io/v1beta1',
     kind: 'Redis',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A RedisSpec defines the desired state of a Redis."'),
   spec: {
     '#forProvider':: d.obj(help='"RedisParameters define the desired state of an Azure Redis cluster. https://docs.microsoft.com/en-us/rest/api/redis/redis/create#redisresource"'),

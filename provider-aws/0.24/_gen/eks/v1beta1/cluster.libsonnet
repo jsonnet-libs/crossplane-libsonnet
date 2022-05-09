@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'eks.aws.crossplane.io/v1beta1',
     kind: 'Cluster',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A ClusterSpec defines the desired state of an EKS Cluster."'),
   spec: {
     '#forProvider':: d.obj(help='"ClusterParameters define the desired state of an AWS Elastic Kubernetes Service cluster."'),

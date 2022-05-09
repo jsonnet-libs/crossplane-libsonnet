@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'grafana.jet.crossplane.io/v1alpha1',
     kind: 'LibraryPanel',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"LibraryPanelSpec defines the desired state of LibraryPanel"'),
   spec: {
     '#forProvider':: d.obj(help=''),

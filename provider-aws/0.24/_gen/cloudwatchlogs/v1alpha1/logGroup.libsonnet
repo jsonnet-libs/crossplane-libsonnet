@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cloudwatchlogs.aws.crossplane.io/v1alpha1',
     kind: 'LogGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"LogGroupSpec defines the desired state of LogGroup"'),
   spec: {
     '#forProvider':: d.obj(help='"LogGroupParameters defines the desired state of LogGroup"'),

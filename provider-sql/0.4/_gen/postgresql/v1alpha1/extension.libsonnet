@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'postgresql.sql.crossplane.io/v1alpha1',
     kind: 'Extension',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ExtensionSpec defines the desired state of an Extension."'),
   spec: {
     '#forProvider':: d.obj(help='"ExtensionParameters are the configurable fields of a Extension."'),

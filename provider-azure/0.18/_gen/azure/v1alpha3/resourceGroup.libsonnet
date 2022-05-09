@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'azure.crossplane.io/v1alpha3',
     kind: 'ResourceGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A ResourceGroupSpec defines the desired state of a ResourceGroup."'),
   spec: {
     '#providerConfigRef':: d.obj(help='"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."'),

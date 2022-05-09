@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'docdb.aws.crossplane.io/v1alpha1',
     kind: 'DBInstance',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"DBInstanceSpec defines the desired state of DBInstance"'),
   spec: {
     '#forProvider':: d.obj(help='"DBInstanceParameters defines the desired state of DBInstance"'),

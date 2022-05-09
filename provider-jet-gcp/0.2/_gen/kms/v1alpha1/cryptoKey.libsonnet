@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'kms.gcp.jet.crossplane.io/v1alpha1',
     kind: 'CryptoKey',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"CryptoKeySpec defines the desired state of CryptoKey"'),
   spec: {
     '#forProvider':: d.obj(help=''),

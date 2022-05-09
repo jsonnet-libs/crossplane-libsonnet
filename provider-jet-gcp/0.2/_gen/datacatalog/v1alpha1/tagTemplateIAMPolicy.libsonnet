@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'datacatalog.gcp.jet.crossplane.io/v1alpha1',
     kind: 'TagTemplateIAMPolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"TagTemplateIAMPolicySpec defines the desired state of TagTemplateIAMPolicy"'),
   spec: {
     '#forProvider':: d.obj(help=''),

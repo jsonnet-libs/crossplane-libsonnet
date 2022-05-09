@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'pkg.crossplane.io/v1beta1',
     kind: 'Provider',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ProviderSpec specifies details about a request to install a provider to Crossplane."'),
   spec: {
     '#controllerConfigRef':: d.obj(help='"ControllerConfigRef references a ControllerConfig resource that will be used to configure the packaged controller Deployment."'),

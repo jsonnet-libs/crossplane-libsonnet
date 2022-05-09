@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ecr.aws.crossplane.io/v1beta1',
     kind: 'Repository',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A RepositorySpec defines the desired state of a Elastic Container Repository."'),
   spec: {
     '#forProvider':: d.obj(help='"RepositoryParameters define the desired state of an AWS Elastic Container Repository"'),

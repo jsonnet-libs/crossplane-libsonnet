@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cloudidentity.gcp.jet.crossplane.io/v1alpha1',
     kind: 'GroupMembership',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"GroupMembershipSpec defines the desired state of GroupMembership"'),
   spec: {
     '#forProvider':: d.obj(help=''),

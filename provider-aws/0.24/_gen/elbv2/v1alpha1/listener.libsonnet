@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'elbv2.aws.crossplane.io/v1alpha1',
     kind: 'Listener',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ListenerSpec defines the desired state of Listener"'),
   spec: {
     '#forProvider':: d.obj(help='"ListenerParameters defines the desired state of Listener"'),

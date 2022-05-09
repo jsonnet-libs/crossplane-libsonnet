@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'servicediscovery.aws.crossplane.io/v1alpha1',
     kind: 'PrivateDNSNamespace',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"PrivateDNSNamespaceSpec defines the desired state of PrivateDNSNamespace"'),
   spec: {
     '#forProvider':: d.obj(help='"PrivateDNSNamespaceParameters defines the desired state of PrivateDNSNamespace"'),

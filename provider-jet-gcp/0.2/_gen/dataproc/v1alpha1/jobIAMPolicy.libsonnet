@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'dataproc.gcp.jet.crossplane.io/v1alpha1',
     kind: 'JobIAMPolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"JobIAMPolicySpec defines the desired state of JobIAMPolicy"'),
   spec: {
     '#forProvider':: d.obj(help=''),

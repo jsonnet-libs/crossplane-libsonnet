@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'eks.aws.crossplane.io/v1beta1',
     kind: 'FargateProfile',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A FargateProfileSpec defines the desired state of an EKS FargateProfile."'),
   spec: {
     '#forProvider':: d.obj(help='"FargateProfileParameters define the desired state of an AWS Elastic Kubernetes Service FargateProfile. All fields are immutable as it is not possible to update a Fargate profile."'),

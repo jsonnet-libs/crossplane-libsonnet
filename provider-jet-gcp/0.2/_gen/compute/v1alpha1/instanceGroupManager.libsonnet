@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.jet.crossplane.io/v1alpha1',
     kind: 'InstanceGroupManager',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"InstanceGroupManagerSpec defines the desired state of InstanceGroupManager"'),
   spec: {
     '#forProvider':: d.obj(help=''),

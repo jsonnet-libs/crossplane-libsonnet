@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iam.gcp.crossplane.io/v1alpha1',
     kind: 'ServiceAccountPolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ServiceAccountPolicySpec defines the desired state of a ServiceAccountPolicy."'),
   spec: {
     '#forProvider':: d.obj(help='"ServiceAccountPolicyParameters defines parameters for a desired IAM ServiceAccountPolicy"'),

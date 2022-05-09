@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'sql.gcp.jet.crossplane.io/v1alpha2',
     kind: 'SSLCert',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"SSLCertSpec defines the desired state of SSLCert"'),
   spec: {
     '#forProvider':: d.obj(help=''),

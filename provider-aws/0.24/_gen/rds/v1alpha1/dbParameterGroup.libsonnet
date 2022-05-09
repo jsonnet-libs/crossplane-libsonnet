@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'rds.aws.crossplane.io/v1alpha1',
     kind: 'DBParameterGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"DBParameterGroupSpec defines the desired state of DBParameterGroup"'),
   spec: {
     '#forProvider':: d.obj(help='"DBParameterGroupParameters defines the desired state of DBParameterGroup"'),

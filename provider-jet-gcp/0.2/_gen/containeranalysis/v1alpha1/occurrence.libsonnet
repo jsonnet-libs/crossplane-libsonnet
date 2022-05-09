@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'containeranalysis.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Occurrence',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"OccurrenceSpec defines the desired state of Occurrence"'),
   spec: {
     '#forProvider':: d.obj(help=''),

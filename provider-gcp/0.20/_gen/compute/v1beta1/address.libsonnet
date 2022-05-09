@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.crossplane.io/v1beta1',
     kind: 'Address',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A AddressSpec defines the desired state of anAddress."'),
   spec: {
     '#forProvider':: d.obj(help='"AddressParameters define the desired state of a Google Compute Engine Address. Most fields map directly to an Address: https://cloud.google.com/compute/docs/reference/rest/v1/addresses"'),

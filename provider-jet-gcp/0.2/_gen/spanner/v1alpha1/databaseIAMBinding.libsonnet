@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'spanner.gcp.jet.crossplane.io/v1alpha1',
     kind: 'DatabaseIAMBinding',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"DatabaseIAMBindingSpec defines the desired state of DatabaseIAMBinding"'),
   spec: {
     '#forProvider':: d.obj(help=''),

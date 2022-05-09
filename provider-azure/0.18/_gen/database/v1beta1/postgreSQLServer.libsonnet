@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'database.azure.crossplane.io/v1beta1',
     kind: 'PostgreSQLServer',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A SQLServerSpec defines the desired state of a SQLServer."'),
   spec: {
     '#forProvider':: d.obj(help='"SQLServerParameters define the desired state of an Azure SQL Database, either PostgreSQL or MySQL."'),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iap.gcp.jet.crossplane.io/v1alpha1',
     kind: 'WebTypeComputeIAMBinding',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"WebTypeComputeIAMBindingSpec defines the desired state of WebTypeComputeIAMBinding"'),
   spec: {
     '#forProvider':: d.obj(help=''),

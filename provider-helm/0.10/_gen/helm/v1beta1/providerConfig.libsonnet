@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'helm.crossplane.io/v1beta1',
     kind: 'ProviderConfig',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A ProviderConfigSpec defines the desired state of a Provider."'),
   spec: {
     '#credentials':: d.obj(help='"Credentials used to connect to the Kubernetes API. Typically a kubeconfig file. Use InjectedIdentity for in-cluster config."'),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'aws.crossplane.io/v1beta1',
     kind: 'ProviderConfigUsage',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#providerConfigRef':: d.obj(help='"ProviderConfigReference to the provider config being used."'),
   providerConfigRef: {
     '#withName':: d.fn(help='"Name of the referenced object."', args=[d.arg(name='name', type=d.T.string)]),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'pkg.crossplane.io/v1beta1',
     kind: 'ConfigurationRevision',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"PackageRevisionSpec specifies the desired state of a PackageRevision."'),
   spec: {
     '#controllerConfigRef':: d.obj(help='"ControllerConfigRef references a ControllerConfig resource that will be used to configure the packaged controller Deployment."'),

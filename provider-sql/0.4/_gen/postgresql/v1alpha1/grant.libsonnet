@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'postgresql.sql.crossplane.io/v1alpha1',
     kind: 'Grant',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A GrantSpec defines the desired state of a Grant."'),
   spec: {
     '#forProvider':: d.obj(help='"GrantParameters define the desired state of a PostgreSQL grant instance."'),

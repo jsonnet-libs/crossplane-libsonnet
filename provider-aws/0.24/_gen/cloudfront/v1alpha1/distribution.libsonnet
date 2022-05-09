@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cloudfront.aws.crossplane.io/v1alpha1',
     kind: 'Distribution',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"DistributionSpec defines the desired state of Distribution"'),
   spec: {
     '#forProvider':: d.obj(help='"DistributionParameters defines the desired state of Distribution"'),

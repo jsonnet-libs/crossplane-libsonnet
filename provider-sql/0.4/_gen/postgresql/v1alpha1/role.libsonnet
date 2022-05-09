@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'postgresql.sql.crossplane.io/v1alpha1',
     kind: 'Role',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A RoleSpec defines the desired state of a Role."'),
   spec: {
     '#forProvider':: d.obj(help='"RoleParameters define the desired state of a PostgreSQL role instance."'),

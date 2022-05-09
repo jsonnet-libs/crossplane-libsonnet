@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'acm.aws.crossplane.io/v1beta1',
     kind: 'Certificate',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"CertificateSpec defines the desired state of Certificate"'),
   spec: {
     '#forProvider':: d.obj(help='"CertificateParameters defines the desired state of an AWS Certificate."'),

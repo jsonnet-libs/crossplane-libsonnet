@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'efs.aws.crossplane.io/v1alpha1',
     kind: 'FileSystem',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"FileSystemSpec defines the desired state of FileSystem"'),
   spec: {
     '#forProvider':: d.obj(help='"FileSystemParameters defines the desired state of FileSystem"'),

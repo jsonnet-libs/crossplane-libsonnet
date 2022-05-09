@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'eks.aws.crossplane.io/v1alpha1',
     kind: 'NodeGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A NodeGroupSpec defines the desired state of an EKS NodeGroup."'),
   spec: {
     '#forProvider':: d.obj(help='"NodeGroupParameters define the desired state of an AWS Elastic Kubernetes Service NodeGroup."'),

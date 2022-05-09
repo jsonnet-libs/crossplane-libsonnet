@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'redshift.aws.crossplane.io/v1alpha1',
     kind: 'Cluster',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ClusterSpec defines the desired state of an AWS Redshift Cluster."'),
   spec: {
     '#forProvider':: d.obj(help='"ClusterParameters define the parameters available for an AWS Redshift cluster"'),

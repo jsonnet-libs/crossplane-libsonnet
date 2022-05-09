@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'bigtable.gcp.jet.crossplane.io/v1alpha1',
     kind: 'TableIAMMember',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"TableIAMMemberSpec defines the desired state of TableIAMMember"'),
   spec: {
     '#forProvider':: d.obj(help=''),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1beta1',
     kind: 'Address',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"An AddressSpec defines the desired state of an Address."'),
   spec: {
     '#forProvider':: d.obj(help='"AddressParameters define the desired state of an AWS Elastic IP"'),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'storage.gcp.crossplane.io/v1alpha3',
     kind: 'Bucket',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A BucketSpec defines the desired state of a Bucket."'),
   spec: {
     '#bucketPolicyOnly':: d.obj(help='"BucketPolicyOnly configures access checks to use only bucket-level IAM policies."'),

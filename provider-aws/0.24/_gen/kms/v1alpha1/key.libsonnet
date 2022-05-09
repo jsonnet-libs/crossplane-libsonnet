@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'kms.aws.crossplane.io/v1alpha1',
     kind: 'Key',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"KeySpec defines the desired state of Key"'),
   spec: {
     '#forProvider':: d.obj(help='"KeyParameters defines the desired state of Key"'),

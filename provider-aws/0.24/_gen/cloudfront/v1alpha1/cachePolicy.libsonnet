@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cloudfront.aws.crossplane.io/v1alpha1',
     kind: 'CachePolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"CachePolicySpec defines the desired state of CachePolicy"'),
   spec: {
     '#forProvider':: d.obj(help='"CachePolicyParameters defines the desired state of CachePolicy"'),

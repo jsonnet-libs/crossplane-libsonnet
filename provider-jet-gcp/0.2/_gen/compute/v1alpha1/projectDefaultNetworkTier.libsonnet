@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.jet.crossplane.io/v1alpha1',
     kind: 'ProjectDefaultNetworkTier',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ProjectDefaultNetworkTierSpec defines the desired state of ProjectDefaultNetworkTier"'),
   spec: {
     '#forProvider':: d.obj(help=''),

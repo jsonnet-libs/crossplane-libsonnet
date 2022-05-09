@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'container.gcp.crossplane.io/v1beta1',
     kind: 'NodePool',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A NodePoolSpec defines the desired state of a NodePool."'),
   spec: {
     '#forProvider':: d.obj(help='"NodePoolParameters define the desired state of a Google Kubernetes Engine node pool."'),

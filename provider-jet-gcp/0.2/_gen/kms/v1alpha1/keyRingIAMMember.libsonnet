@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'kms.gcp.jet.crossplane.io/v1alpha1',
     kind: 'KeyRingIAMMember',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"KeyRingIAMMemberSpec defines the desired state of KeyRingIAMMember"'),
   spec: {
     '#forProvider':: d.obj(help=''),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'private.mongodbatlas.jet.crossplane.io/v1alpha1',
     kind: 'IPMode',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"IPModeSpec defines the desired state of IPMode"'),
   spec: {
     '#forProvider':: d.obj(help=''),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cache.aws.crossplane.io/v1beta1',
     kind: 'ReplicationGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A ReplicationGroupSpec defines the desired state of a ReplicationGroup."'),
   spec: {
     '#forProvider':: d.obj(help='"ReplicationGroupParameters define the desired state of an AWS ElastiCache Replication Group. Most fields map directly to an AWS ReplicationGroup: https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateReplicationGroup.html#API_CreateReplicationGroup_RequestParameters"'),

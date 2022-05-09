@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'logging.gcp.jet.crossplane.io/v1alpha1',
     kind: 'OrganizationSink',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"OrganizationSinkSpec defines the desired state of OrganizationSink"'),
   spec: {
     '#forProvider':: d.obj(help=''),

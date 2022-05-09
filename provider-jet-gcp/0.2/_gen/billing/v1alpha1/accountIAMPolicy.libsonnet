@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'billing.gcp.jet.crossplane.io/v1alpha1',
     kind: 'AccountIAMPolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"AccountIAMPolicySpec defines the desired state of AccountIAMPolicy"'),
   spec: {
     '#forProvider':: d.obj(help=''),

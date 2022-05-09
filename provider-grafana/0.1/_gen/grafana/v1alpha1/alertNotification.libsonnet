@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'grafana.jet.crossplane.io/v1alpha1',
     kind: 'AlertNotification',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"AlertNotificationSpec defines the desired state of AlertNotification"'),
   spec: {
     '#forProvider':: d.obj(help=''),

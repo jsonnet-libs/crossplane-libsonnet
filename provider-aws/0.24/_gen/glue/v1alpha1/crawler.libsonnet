@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'glue.aws.crossplane.io/v1alpha1',
     kind: 'Crawler',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"CrawlerSpec defines the desired state of Crawler"'),
   spec: {
     '#forProvider':: d.obj(help='"CrawlerParameters defines the desired state of Crawler"'),

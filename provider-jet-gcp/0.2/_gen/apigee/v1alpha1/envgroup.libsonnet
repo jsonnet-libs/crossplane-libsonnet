@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'apigee.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Envgroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"EnvgroupSpec defines the desired state of Envgroup"'),
   spec: {
     '#forProvider':: d.obj(help=''),

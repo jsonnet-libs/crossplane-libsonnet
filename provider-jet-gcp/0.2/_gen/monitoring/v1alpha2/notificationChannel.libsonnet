@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'monitoring.gcp.jet.crossplane.io/v1alpha2',
     kind: 'NotificationChannel',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"NotificationChannelSpec defines the desired state of NotificationChannel"'),
   spec: {
     '#forProvider':: d.obj(help=''),

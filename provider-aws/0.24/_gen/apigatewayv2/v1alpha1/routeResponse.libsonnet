@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'apigatewayv2.aws.crossplane.io/v1alpha1',
     kind: 'RouteResponse',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"RouteResponseSpec defines the desired state of RouteResponse"'),
   spec: {
     '#forProvider':: d.obj(help='"RouteResponseParameters defines the desired state of RouteResponse"'),

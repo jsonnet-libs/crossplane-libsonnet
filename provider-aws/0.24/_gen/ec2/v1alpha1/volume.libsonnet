@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1alpha1',
     kind: 'Volume',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"VolumeSpec defines the desired state of Volume"'),
   spec: {
     '#forProvider':: d.obj(help='"VolumeParameters defines the desired state of Volume"'),

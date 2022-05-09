@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'network.azure.crossplane.io/v1alpha3',
     kind: 'PublicIPAddress',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A PublicIPAddressSpec defines the desired state of a PublicIPAddress."'),
   spec: {
     '#forProvider':: d.obj(help='"PublicIPAddressProperties defines properties of the PublicIPAddress."'),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1alpha1',
     kind: 'VPCPeeringConnection',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"VPCPeeringConnectionSpec defines the desired state of VPCPeeringConnection"'),
   spec: {
     '#forProvider':: d.obj(help='"VPCPeeringConnectionParameters defines the desired state of VPCPeeringConnection"'),

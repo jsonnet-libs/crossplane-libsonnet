@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cloudplatform.gcp.jet.crossplane.io/v1alpha1',
     kind: 'OrganizationIAMCustomRole',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"OrganizationIAMCustomRoleSpec defines the desired state of OrganizationIAMCustomRole"'),
   spec: {
     '#forProvider':: d.obj(help=''),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'postgresql.sql.crossplane.io/v1alpha1',
     kind: 'Database',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A DatabaseSpec defines the desired state of a Database."'),
   spec: {
     '#forProvider':: d.obj(help='"DatabaseParameters are the configurable fields of a Database."'),

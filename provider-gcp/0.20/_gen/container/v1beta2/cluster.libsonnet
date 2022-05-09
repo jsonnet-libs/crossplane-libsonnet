@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'container.gcp.crossplane.io/v1beta2',
     kind: 'Cluster',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A ClusterSpec defines the desired state of a Cluster."'),
   spec: {
     '#forProvider':: d.obj(help='"ClusterParameters define the desired state of a Google Kubernetes Engine cluster. Most of its fields are direct mirror of GCP Cluster object. See https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster"'),

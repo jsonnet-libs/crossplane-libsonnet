@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cloudasset.gcp.jet.crossplane.io/v1alpha1',
     kind: 'OrganizationFeed',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"OrganizationFeedSpec defines the desired state of OrganizationFeed"'),
   spec: {
     '#forProvider':: d.obj(help=''),

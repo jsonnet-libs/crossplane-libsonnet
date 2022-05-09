@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'eks.aws.crossplane.io/v1alpha1',
     kind: 'IdentityProviderConfig',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A IdentityProviderConfigSpec defines the desired state of an EKS identity provider."'),
   spec: {
     '#forProvider':: d.obj(help='"IdentityProviderConfigParameters define the desired state of an AWS Elastic Kubernetes Service Identity Provider."'),

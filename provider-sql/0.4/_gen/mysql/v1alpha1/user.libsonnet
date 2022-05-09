@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'mysql.sql.crossplane.io/v1alpha1',
     kind: 'User',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A UserSpec defines the desired state of a Database."'),
   spec: {
     '#forProvider':: d.obj(help='"UserParameters define the desired state of a MySQL user instance."'),

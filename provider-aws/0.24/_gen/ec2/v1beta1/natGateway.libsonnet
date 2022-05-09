@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1beta1',
     kind: 'NATGateway',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"NATGatewaySpec defines the desired state of a NAT Gateway"'),
   spec: {
     '#forProvider':: d.obj(help='"NATGatewayParameters defined the desired state of an AWS VPC NAT Gateway"'),

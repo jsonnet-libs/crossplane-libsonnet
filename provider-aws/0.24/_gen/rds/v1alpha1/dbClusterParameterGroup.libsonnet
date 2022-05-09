@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'rds.aws.crossplane.io/v1alpha1',
     kind: 'DBClusterParameterGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"DBClusterParameterGroupSpec defines the desired state of DBClusterParameterGroup"'),
   spec: {
     '#forProvider':: d.obj(help='"DBClusterParameterGroupParameters defines the desired state of DBClusterParameterGroup"'),

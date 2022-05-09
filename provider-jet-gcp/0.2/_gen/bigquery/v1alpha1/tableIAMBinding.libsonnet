@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'bigquery.gcp.jet.crossplane.io/v1alpha1',
     kind: 'TableIAMBinding',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"TableIAMBindingSpec defines the desired state of TableIAMBinding"'),
   spec: {
     '#forProvider':: d.obj(help=''),

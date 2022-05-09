@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 's3.aws.crossplane.io/v1alpha3',
     kind: 'BucketPolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"An BucketPolicySpec defines the desired state of an BucketPolicy."'),
   spec: {
     '#forProvider':: d.obj(help='"BucketPolicyParameters define the desired state of an AWS BucketPolicy."'),

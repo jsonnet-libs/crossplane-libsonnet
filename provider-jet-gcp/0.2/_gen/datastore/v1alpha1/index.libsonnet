@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'datastore.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Index',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"IndexSpec defines the desired state of Index"'),
   spec: {
     '#forProvider':: d.obj(help=''),

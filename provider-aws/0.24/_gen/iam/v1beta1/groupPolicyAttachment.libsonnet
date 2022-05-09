@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iam.aws.crossplane.io/v1beta1',
     kind: 'GroupPolicyAttachment',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"An GroupPolicyAttachmentSpec defines the desired state of an GroupPolicyAttachment."'),
   spec: {
     '#forProvider':: d.obj(help='"GroupPolicyAttachmentParameters define the desired state of an AWS GroupPolicyAttachment."'),

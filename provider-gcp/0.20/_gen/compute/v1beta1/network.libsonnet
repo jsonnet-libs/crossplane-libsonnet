@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.crossplane.io/v1beta1',
     kind: 'Network',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A NetworkSpec defines the desired state of a Network."'),
   spec: {
     '#forProvider':: d.obj(help='"NetworkParameters define the desired state of a Google Compute Engine VPC Network. Most fields map directly to a Network: https://cloud.google.com/compute/docs/reference/rest/v1/networks"'),

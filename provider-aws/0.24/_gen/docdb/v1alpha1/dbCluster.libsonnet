@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'docdb.aws.crossplane.io/v1alpha1',
     kind: 'DBCluster',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"DBClusterSpec defines the desired state of DBCluster"'),
   spec: {
     '#forProvider':: d.obj(help='"DBClusterParameters defines the desired state of DBCluster"'),

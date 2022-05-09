@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'docdb.aws.crossplane.io/v1alpha1',
     kind: 'DBSubnetGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"DBSubnetGroupSpec defines the desired state of DBSubnetGroup"'),
   spec: {
     '#forProvider':: d.obj(help='"DBSubnetGroupParameters defines the desired state of DBSubnetGroup"'),

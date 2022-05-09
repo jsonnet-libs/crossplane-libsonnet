@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cloudplatform.gcp.jet.crossplane.io/v1alpha1',
     kind: 'ProjectOrganizationPolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ProjectOrganizationPolicySpec defines the desired state of ProjectOrganizationPolicy"'),
   spec: {
     '#forProvider':: d.obj(help=''),

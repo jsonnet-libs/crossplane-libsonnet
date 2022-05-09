@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.jet.crossplane.io/v1alpha1',
     kind: 'GlobalForwardingRule',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"GlobalForwardingRuleSpec defines the desired state of GlobalForwardingRule"'),
   spec: {
     '#forProvider':: d.obj(help=''),

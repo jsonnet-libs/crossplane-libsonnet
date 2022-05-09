@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.jet.crossplane.io/v1alpha1',
     kind: 'GlobalNetworkEndpoint',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"GlobalNetworkEndpointSpec defines the desired state of GlobalNetworkEndpoint"'),
   spec: {
     '#forProvider':: d.obj(help=''),

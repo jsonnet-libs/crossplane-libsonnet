@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'privateca.gcp.jet.crossplane.io/v1alpha1',
     kind: 'CAPool',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"CAPoolSpec defines the desired state of CAPool"'),
   spec: {
     '#forProvider':: d.obj(help=''),

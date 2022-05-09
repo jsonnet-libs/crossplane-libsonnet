@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'database.gcp.crossplane.io/v1beta1',
     kind: 'CloudSQLInstance',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A CloudSQLInstanceSpec defines the desired state of a CloudSQLInstance."'),
   spec: {
     '#forProvider':: d.obj(help='"CloudSQLInstanceParameters define the desired state of a Google CloudSQL instance. Most of its fields are direct mirror of GCP DatabaseInstance object. See https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances#DatabaseInstance"'),

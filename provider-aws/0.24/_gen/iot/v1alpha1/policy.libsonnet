@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iot.aws.crossplane.io/v1alpha1',
     kind: 'Policy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"PolicySpec defines the desired state of Policy"'),
   spec: {
     '#forProvider':: d.obj(help='"PolicyParameters defines the desired state of Policy"'),

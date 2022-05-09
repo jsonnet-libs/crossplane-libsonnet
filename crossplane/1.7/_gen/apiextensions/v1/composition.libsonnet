@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'apiextensions.crossplane.io/v1',
     kind: 'Composition',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"CompositionSpec specifies desired state of a composition."'),
   spec: {
     '#compositeTypeRef':: d.obj(help='"CompositeTypeRef specifies the type of composite resource that this composition is compatible with."'),

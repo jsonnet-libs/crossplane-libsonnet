@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'secretsmanager.aws.crossplane.io/v1beta1',
     kind: 'Secret',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"SecretSpec defines the desired state of Secret"'),
   spec: {
     '#forProvider':: d.obj(help='"SecretParameters defines the desired state of Secret"'),

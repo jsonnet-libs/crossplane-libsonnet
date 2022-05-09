@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'bigquery.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Table',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"TableSpec defines the desired state of Table"'),
   spec: {
     '#forProvider':: d.obj(help=''),

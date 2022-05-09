@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'grafana.jet.crossplane.io/v1alpha1',
     kind: 'SyntheticMonitoringCheck',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"SyntheticMonitoringCheckSpec defines the desired state of SyntheticMonitoringCheck"'),
   spec: {
     '#forProvider':: d.obj(help=''),

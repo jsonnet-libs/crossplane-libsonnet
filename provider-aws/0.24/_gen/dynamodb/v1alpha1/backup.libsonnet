@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'dynamodb.aws.crossplane.io/v1alpha1',
     kind: 'Backup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"BackupSpec defines the desired state of Backup"'),
   spec: {
     '#forProvider':: d.obj(help='"BackupParameters defines the desired state of Backup"'),

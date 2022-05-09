@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'appengine.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Application',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ApplicationSpec defines the desired state of Application"'),
   spec: {
     '#forProvider':: d.obj(help=''),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'notification.aws.crossplane.io/v1alpha1',
     kind: 'SNSSubscription',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"SNSSubscriptionSpec defined the desired state of a AWS SNS Topic"'),
   spec: {
     '#forProvider':: d.obj(help='"SNSSubscriptionParameters define the desired state of a AWS SNS Topic"'),

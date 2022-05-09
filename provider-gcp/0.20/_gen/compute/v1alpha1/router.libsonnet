@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.crossplane.io/v1alpha1',
     kind: 'Router',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A RouterSpec defines the desired state of a Router."'),
   spec: {
     '#forProvider':: d.obj(help='"RouterParameters define the desired state of a Google Compute Engine Router. Most fields map directly to a Router: https://cloud.google.com/compute/docs/reference/rest/v1/routers/"'),

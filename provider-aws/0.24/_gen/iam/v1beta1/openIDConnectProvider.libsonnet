@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iam.aws.crossplane.io/v1beta1',
     kind: 'OpenIDConnectProvider',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"OpenIDConnectProviderSpec defines the desired state of OpenIDConnectProvider"'),
   spec: {
     '#forProvider':: d.obj(help='"OpenIDConnectProviderParameters defines the desired state of OpenIDConnectProvider"'),

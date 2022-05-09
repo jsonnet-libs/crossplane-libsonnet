@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'notebooks.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Instance',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"InstanceSpec defines the desired state of Instance"'),
   spec: {
     '#forProvider':: d.obj(help=''),

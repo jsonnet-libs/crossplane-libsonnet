@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'storage.gcp.jet.crossplane.io/v1alpha2',
     kind: 'BucketObject',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"BucketObjectSpec defines the desired state of BucketObject"'),
   spec: {
     '#forProvider':: d.obj(help=''),

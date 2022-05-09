@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'compute.gcp.crossplane.io/v1beta1',
     kind: 'Subnetwork',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A SubnetworkSpec defines the desired state of a Subnetwork."'),
   spec: {
     '#forProvider':: d.obj(help='"SubnetworkParameters define the desired state of a Google Compute Engine VPC Subnetwork. Most fields map directly to a Subnetwork: https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks"'),

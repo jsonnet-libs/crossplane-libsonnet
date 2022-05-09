@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'apiextensions.crossplane.io/v1',
     kind: 'CompositeResourceDefinition',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"CompositeResourceDefinitionSpec specifies the desired state of the definition."'),
   spec: {
     '#claimNames':: d.obj(help="\"ClaimNames specifies the names of an optional composite resource claim. When claim names are specified Crossplane will create a namespaced 'composite resource claim' CRD that corresponds to the defined composite resource. This composite resource claim acts as a namespaced proxy for the composite resource; creating, updating, or deleting the claim will create, update, or delete a corresponding composite resource. You may add claim names to an existing CompositeResourceDefinition, but they cannot be changed or removed once they have been set.\""),

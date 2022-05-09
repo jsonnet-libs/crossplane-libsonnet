@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iam.aws.crossplane.io/v1beta1',
     kind: 'RolePolicyAttachment',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"An RolePolicyAttachmentSpec defines the desired state of an RolePolicyAttachment."'),
   spec: {
     '#forProvider':: d.obj(help='"RolePolicyAttachmentParameters define the desired state of an AWS IAM Role policy attachment."'),

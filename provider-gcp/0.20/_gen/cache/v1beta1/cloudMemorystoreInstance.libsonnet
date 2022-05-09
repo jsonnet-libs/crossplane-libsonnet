@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'cache.gcp.crossplane.io/v1beta1',
     kind: 'CloudMemorystoreInstance',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A CloudMemorystoreInstanceSpec defines the desired state of a CloudMemorystoreInstance."'),
   spec: {
     '#forProvider':: d.obj(help='"CloudMemorystoreInstanceParameters define the desired state of an Google Cloud Memorystore instance. Most fields map directly to an Instance: https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance"'),

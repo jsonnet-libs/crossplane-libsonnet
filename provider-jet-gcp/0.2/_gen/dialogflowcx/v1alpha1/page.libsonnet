@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'dialogflowcx.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Page',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"PageSpec defines the desired state of Page"'),
   spec: {
     '#forProvider':: d.obj(help=''),

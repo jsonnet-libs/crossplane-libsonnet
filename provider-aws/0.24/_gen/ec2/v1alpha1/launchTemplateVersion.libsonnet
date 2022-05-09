@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1alpha1',
     kind: 'LaunchTemplateVersion',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"LaunchTemplateVersionSpec defines the desired state of LaunchTemplateVersion"'),
   spec: {
     '#forProvider':: d.obj(help='"LaunchTemplateVersionParameters defines the desired state of LaunchTemplateVersion"'),

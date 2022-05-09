@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'sfn.aws.crossplane.io/v1alpha1',
     kind: 'StateMachine',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"StateMachineSpec defines the desired state of StateMachine"'),
   spec: {
     '#forProvider':: d.obj(help='"StateMachineParameters defines the desired state of StateMachine"'),

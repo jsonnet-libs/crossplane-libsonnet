@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'apigatewayv2.aws.crossplane.io/v1alpha1',
     kind: 'DomainName',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"DomainNameSpec defines the desired state of DomainName"'),
   spec: {
     '#forProvider':: d.obj(help='"DomainNameParameters defines the desired state of DomainName"'),

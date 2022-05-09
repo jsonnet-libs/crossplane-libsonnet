@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'storage.gcp.crossplane.io/v1alpha1',
     kind: 'BucketPolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"BucketPolicySpec defines the desired state of a BucketPolicy."'),
   spec: {
     '#forProvider':: d.obj(help='"BucketPolicyParameters defines parameters for a desired KMS BucketPolicy"'),

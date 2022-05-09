@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'kubernetes.crossplane.io/v1alpha1',
     kind: 'Object',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A ObjectSpec defines the desired state of a Object."'),
   spec: {
     '#forProvider':: d.obj(help='"ObjectParameters are the configurable fields of a Object."'),

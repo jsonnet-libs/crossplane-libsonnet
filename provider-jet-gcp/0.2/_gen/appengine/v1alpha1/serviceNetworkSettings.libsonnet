@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'appengine.gcp.jet.crossplane.io/v1alpha1',
     kind: 'ServiceNetworkSettings',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ServiceNetworkSettingsSpec defines the desired state of ServiceNetworkSettings"'),
   spec: {
     '#forProvider':: d.obj(help=''),

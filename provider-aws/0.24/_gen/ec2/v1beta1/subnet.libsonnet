@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1beta1',
     kind: 'Subnet',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A SubnetSpec defines the desired state of a Subnet."'),
   spec: {
     '#forProvider':: d.obj(help='"SubnetParameters define the desired state of an AWS VPC Subnet."'),

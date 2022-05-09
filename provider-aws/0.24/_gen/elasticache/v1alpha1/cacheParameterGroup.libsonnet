@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'elasticache.aws.crossplane.io/v1alpha1',
     kind: 'CacheParameterGroup',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"CacheParameterGroupSpec defines the desired state of CacheParameterGroup"'),
   spec: {
     '#forProvider':: d.obj(help='"CacheParameterGroupParameters defines the desired state of CacheParameterGroup"'),

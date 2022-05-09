@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1alpha1',
     kind: 'TransitGatewayVPCAttachment',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"TransitGatewayVPCAttachmentSpec defines the desired state of TransitGatewayVPCAttachment"'),
   spec: {
     '#forProvider':: d.obj(help='"TransitGatewayVPCAttachmentParameters defines the desired state of TransitGatewayVPCAttachment"'),

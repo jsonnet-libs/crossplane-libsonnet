@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'sourcerepo.gcp.jet.crossplane.io/v1alpha1',
     kind: 'RepositoryIAMBinding',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"RepositoryIAMBindingSpec defines the desired state of RepositoryIAMBinding"'),
   spec: {
     '#forProvider':: d.obj(help=''),

@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'storage.azure.crossplane.io/v1alpha3',
     kind: 'Container',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A ContainerSpec defines the desired state of a Container."'),
   spec: {
     '#providerConfigRef':: d.obj(help='"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."'),

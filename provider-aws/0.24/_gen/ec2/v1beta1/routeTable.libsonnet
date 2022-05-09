@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'ec2.aws.crossplane.io/v1beta1',
     kind: 'RouteTable',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"A RouteTableSpec defines the desired state of a RouteTable."'),
   spec: {
     '#forProvider':: d.obj(help='"RouteTableParameters define the desired state of an AWS VPC Route Table."'),

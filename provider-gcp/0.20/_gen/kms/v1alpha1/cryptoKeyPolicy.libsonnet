@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'kms.gcp.crossplane.io/v1alpha1',
     kind: 'CryptoKeyPolicy',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"CryptoKeyPolicySpec defines the desired state of a CryptoKeyPolicy."'),
   spec: {
     '#forProvider':: d.obj(help='"CryptoKeyPolicyParameters defines parameters for a desired KMS CryptoKeyPolicy https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys"'),

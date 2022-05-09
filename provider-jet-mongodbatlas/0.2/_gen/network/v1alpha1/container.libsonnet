@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'network.mongodbatlas.jet.crossplane.io/v1alpha1',
     kind: 'Container',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"ContainerSpec defines the desired state of Container"'),
   spec: {
     '#forProvider':: d.obj(help=''),

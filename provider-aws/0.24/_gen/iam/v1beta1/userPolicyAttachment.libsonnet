@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'iam.aws.crossplane.io/v1beta1',
     kind: 'UserPolicyAttachment',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"An UserPolicyAttachmentSpec defines the desired state of an UserPolicyAttachment."'),
   spec: {
     '#forProvider':: d.obj(help='"UserPolicyAttachmentParameters define the desired state of an AWS UserPolicyAttachment."'),
