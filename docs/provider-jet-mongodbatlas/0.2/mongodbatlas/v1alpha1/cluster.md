@@ -22,8 +22,6 @@ permalink: /provider-jet-mongodbatlas/0.2/mongodbatlas/v1alpha1/cluster/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -71,12 +69,40 @@ permalink: /provider-jet-mongodbatlas/0.2/mongodbatlas/v1alpha1/cluster/
     * [`fn withReplicationSpecs(replicationSpecs)`](#fn-specforproviderwithreplicationspecs)
     * [`fn withReplicationSpecsMixin(replicationSpecs)`](#fn-specforproviderwithreplicationspecsmixin)
     * [`fn withVersionReleaseSystem(versionReleaseSystem)`](#fn-specforproviderwithversionreleasesystem)
+    * [`obj spec.forProvider.advancedConfiguration`](#obj-specforprovideradvancedconfiguration)
+      * [`fn withDefaultReadConcern(defaultReadConcern)`](#fn-specforprovideradvancedconfigurationwithdefaultreadconcern)
+      * [`fn withDefaultWriteConcern(defaultWriteConcern)`](#fn-specforprovideradvancedconfigurationwithdefaultwriteconcern)
+      * [`fn withFailIndexKeyTooLong(failIndexKeyTooLong)`](#fn-specforprovideradvancedconfigurationwithfailindexkeytoolong)
+      * [`fn withJavascriptEnabled(javascriptEnabled)`](#fn-specforprovideradvancedconfigurationwithjavascriptenabled)
+      * [`fn withMinimumEnabledTlsProtocol(minimumEnabledTlsProtocol)`](#fn-specforprovideradvancedconfigurationwithminimumenabledtlsprotocol)
+      * [`fn withNoTableScan(noTableScan)`](#fn-specforprovideradvancedconfigurationwithnotablescan)
+      * [`fn withOplogSizeMb(oplogSizeMb)`](#fn-specforprovideradvancedconfigurationwithoplogsizemb)
+      * [`fn withSampleRefreshIntervalBiConnector(sampleRefreshIntervalBiConnector)`](#fn-specforprovideradvancedconfigurationwithsamplerefreshintervalbiconnector)
+      * [`fn withSampleSizeBiConnector(sampleSizeBiConnector)`](#fn-specforprovideradvancedconfigurationwithsamplesizebiconnector)
+    * [`obj spec.forProvider.biConnectorConfig`](#obj-specforproviderbiconnectorconfig)
+      * [`fn withEnabled(enabled)`](#fn-specforproviderbiconnectorconfigwithenabled)
+      * [`fn withReadPreference(readPreference)`](#fn-specforproviderbiconnectorconfigwithreadpreference)
+    * [`obj spec.forProvider.labels`](#obj-specforproviderlabels)
+      * [`fn withKey(key)`](#fn-specforproviderlabelswithkey)
+      * [`fn withValue(value)`](#fn-specforproviderlabelswithvalue)
     * [`obj spec.forProvider.projectIdRef`](#obj-specforproviderprojectidref)
       * [`fn withName(name)`](#fn-specforproviderprojectidrefwithname)
     * [`obj spec.forProvider.projectIdSelector`](#obj-specforproviderprojectidselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderprojectidselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderprojectidselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderprojectidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.replicationSpecs`](#obj-specforproviderreplicationspecs)
+      * [`fn withId(id)`](#fn-specforproviderreplicationspecswithid)
+      * [`fn withNumShards(numShards)`](#fn-specforproviderreplicationspecswithnumshards)
+      * [`fn withRegionsConfig(regionsConfig)`](#fn-specforproviderreplicationspecswithregionsconfig)
+      * [`fn withRegionsConfigMixin(regionsConfig)`](#fn-specforproviderreplicationspecswithregionsconfigmixin)
+      * [`fn withZoneName(zoneName)`](#fn-specforproviderreplicationspecswithzonename)
+      * [`obj spec.forProvider.replicationSpecs.regionsConfig`](#obj-specforproviderreplicationspecsregionsconfig)
+        * [`fn withAnalyticsNodes(analyticsNodes)`](#fn-specforproviderreplicationspecsregionsconfigwithanalyticsnodes)
+        * [`fn withElectableNodes(electableNodes)`](#fn-specforproviderreplicationspecsregionsconfigwithelectablenodes)
+        * [`fn withPriority(priority)`](#fn-specforproviderreplicationspecsregionsconfigwithpriority)
+        * [`fn withReadOnlyNodes(readOnlyNodes)`](#fn-specforproviderreplicationspecsregionsconfigwithreadonlynodes)
+        * [`fn withRegionName(regionName)`](#fn-specforproviderreplicationspecsregionsconfigwithregionname)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -198,24 +224,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -599,6 +607,122 @@ withVersionReleaseSystem(versionReleaseSystem)
 
 
 
+## obj spec.forProvider.advancedConfiguration
+
+
+
+### fn spec.forProvider.advancedConfiguration.withDefaultReadConcern
+
+```ts
+withDefaultReadConcern(defaultReadConcern)
+```
+
+
+
+### fn spec.forProvider.advancedConfiguration.withDefaultWriteConcern
+
+```ts
+withDefaultWriteConcern(defaultWriteConcern)
+```
+
+
+
+### fn spec.forProvider.advancedConfiguration.withFailIndexKeyTooLong
+
+```ts
+withFailIndexKeyTooLong(failIndexKeyTooLong)
+```
+
+
+
+### fn spec.forProvider.advancedConfiguration.withJavascriptEnabled
+
+```ts
+withJavascriptEnabled(javascriptEnabled)
+```
+
+
+
+### fn spec.forProvider.advancedConfiguration.withMinimumEnabledTlsProtocol
+
+```ts
+withMinimumEnabledTlsProtocol(minimumEnabledTlsProtocol)
+```
+
+
+
+### fn spec.forProvider.advancedConfiguration.withNoTableScan
+
+```ts
+withNoTableScan(noTableScan)
+```
+
+
+
+### fn spec.forProvider.advancedConfiguration.withOplogSizeMb
+
+```ts
+withOplogSizeMb(oplogSizeMb)
+```
+
+
+
+### fn spec.forProvider.advancedConfiguration.withSampleRefreshIntervalBiConnector
+
+```ts
+withSampleRefreshIntervalBiConnector(sampleRefreshIntervalBiConnector)
+```
+
+
+
+### fn spec.forProvider.advancedConfiguration.withSampleSizeBiConnector
+
+```ts
+withSampleSizeBiConnector(sampleSizeBiConnector)
+```
+
+
+
+## obj spec.forProvider.biConnectorConfig
+
+
+
+### fn spec.forProvider.biConnectorConfig.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
+### fn spec.forProvider.biConnectorConfig.withReadPreference
+
+```ts
+withReadPreference(readPreference)
+```
+
+
+
+## obj spec.forProvider.labels
+
+
+
+### fn spec.forProvider.labels.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.labels.withValue
+
+```ts
+withValue(value)
+```
+
+
+
 ## obj spec.forProvider.projectIdRef
 
 "A Reference to a named object."
@@ -640,6 +764,96 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.replicationSpecs
+
+
+
+### fn spec.forProvider.replicationSpecs.withId
+
+```ts
+withId(id)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.withNumShards
+
+```ts
+withNumShards(numShards)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.withRegionsConfig
+
+```ts
+withRegionsConfig(regionsConfig)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.withRegionsConfigMixin
+
+```ts
+withRegionsConfigMixin(regionsConfig)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.replicationSpecs.withZoneName
+
+```ts
+withZoneName(zoneName)
+```
+
+
+
+## obj spec.forProvider.replicationSpecs.regionsConfig
+
+
+
+### fn spec.forProvider.replicationSpecs.regionsConfig.withAnalyticsNodes
+
+```ts
+withAnalyticsNodes(analyticsNodes)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionsConfig.withElectableNodes
+
+```ts
+withElectableNodes(electableNodes)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionsConfig.withPriority
+
+```ts
+withPriority(priority)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionsConfig.withReadOnlyNodes
+
+```ts
+withReadOnlyNodes(readOnlyNodes)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionsConfig.withRegionName
+
+```ts
+withRegionName(regionName)
+```
+
+
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-gcp/0.20/compute/v1alpha1/firewall/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -55,6 +53,14 @@ permalink: /provider-gcp/0.20/compute/v1alpha1/firewall/
     * [`fn withTargetServiceAccountsMixin(targetServiceAccounts)`](#fn-specforproviderwithtargetserviceaccountsmixin)
     * [`fn withTargetTags(targetTags)`](#fn-specforproviderwithtargettags)
     * [`fn withTargetTagsMixin(targetTags)`](#fn-specforproviderwithtargettagsmixin)
+    * [`obj spec.forProvider.allowed`](#obj-specforproviderallowed)
+      * [`fn withIpProtocol(ipProtocol)`](#fn-specforproviderallowedwithipprotocol)
+      * [`fn withPorts(ports)`](#fn-specforproviderallowedwithports)
+      * [`fn withPortsMixin(ports)`](#fn-specforproviderallowedwithportsmixin)
+    * [`obj spec.forProvider.denied`](#obj-specforproviderdenied)
+      * [`fn withIpProtocol(ipProtocol)`](#fn-specforproviderdeniedwithipprotocol)
+      * [`fn withPorts(ports)`](#fn-specforproviderdeniedwithports)
+      * [`fn withPortsMixin(ports)`](#fn-specforproviderdeniedwithportsmixin)
     * [`obj spec.forProvider.logConfig`](#obj-specforproviderlogconfig)
       * [`fn withEnable(enable)`](#fn-specforproviderlogconfigwithenable)
     * [`obj spec.forProvider.networkRef`](#obj-specforprovidernetworkref)
@@ -184,24 +190,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -460,6 +448,66 @@ withTargetTagsMixin(targetTags)
 ```
 
 "TargetTags: A list of tags that controls which instances the firewall rule applies to. If targetTags are specified, then the firewall rule applies only to instances in the VPC network that have one of those tags. If no targetTags are specified, the firewall rule applies to all instances on the specified network."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.allowed
+
+"Allowed: The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection."
+
+### fn spec.forProvider.allowed.withIpProtocol
+
+```ts
+withIpProtocol(ipProtocol)
+```
+
+"IPProtocol: The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp) or the IP protocol number."
+
+### fn spec.forProvider.allowed.withPorts
+
+```ts
+withPorts(ports)
+```
+
+"Ports: An optional list of ports to which this rule applies. This field is only applicable for the UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. \n Example inputs include: [\"22\"], [\"80\",\"443\"], and [\"12345-12349\"]."
+
+### fn spec.forProvider.allowed.withPortsMixin
+
+```ts
+withPortsMixin(ports)
+```
+
+"Ports: An optional list of ports to which this rule applies. This field is only applicable for the UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. \n Example inputs include: [\"22\"], [\"80\",\"443\"], and [\"12345-12349\"]."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.denied
+
+"Denied: The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a denied connection."
+
+### fn spec.forProvider.denied.withIpProtocol
+
+```ts
+withIpProtocol(ipProtocol)
+```
+
+"IPProtocol: The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp) or the IP protocol number."
+
+### fn spec.forProvider.denied.withPorts
+
+```ts
+withPorts(ports)
+```
+
+"Ports: An optional list of ports to which this rule applies. This field is only applicable for the UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. \n Example inputs include: [\"22\"], [\"80\",\"443\"], and [\"12345-12349\"]."
+
+### fn spec.forProvider.denied.withPortsMixin
+
+```ts
+withPortsMixin(ports)
+```
+
+"Ports: An optional list of ports to which this rule applies. This field is only applicable for the UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. \n Example inputs include: [\"22\"], [\"80\",\"443\"], and [\"12345-12349\"]."
 
 **Note:** This function appends passed data to existing values
 

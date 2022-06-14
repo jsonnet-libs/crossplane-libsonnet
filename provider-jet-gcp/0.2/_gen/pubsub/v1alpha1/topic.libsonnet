@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,20 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#messageStoragePolicy':: d.obj(help='"Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not present, then no constraints are in effect."'),
+      messageStoragePolicy: {
+        '#withAllowedPersistenceRegions':: d.fn(help='"A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration."', args=[d.arg(name='allowedPersistenceRegions', type=d.T.array)]),
+        withAllowedPersistenceRegions(allowedPersistenceRegions): { allowedPersistenceRegions: if std.isArray(v=allowedPersistenceRegions) then allowedPersistenceRegions else [allowedPersistenceRegions] },
+        '#withAllowedPersistenceRegionsMixin':: d.fn(help='"A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='allowedPersistenceRegions', type=d.T.array)]),
+        withAllowedPersistenceRegionsMixin(allowedPersistenceRegions): { allowedPersistenceRegions+: if std.isArray(v=allowedPersistenceRegions) then allowedPersistenceRegions else [allowedPersistenceRegions] },
+      },
+      '#schemaSettings':: d.obj(help='"Settings for validating messages published against a schema."'),
+      schemaSettings: {
+        '#withEncoding':: d.fn(help='"The encoding of messages validated against schema. Default value: \\"ENCODING_UNSPECIFIED\\" Possible values: [\\"ENCODING_UNSPECIFIED\\", \\"JSON\\", \\"BINARY\\"]"', args=[d.arg(name='encoding', type=d.T.string)]),
+        withEncoding(encoding): { encoding: encoding },
+        '#withSchema':: d.fn(help='"The name of the schema that messages published should be validated against. Format is projects/{project}/schemas/{schema}. The value of this field will be _deleted-schema_ if the schema has been deleted."', args=[d.arg(name='schema', type=d.T.string)]),
+        withSchema(schema): { schema: schema },
+      },
       '#withKmsKeyName':: d.fn(help="\"The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. Your project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. The expected format is 'projects/*/locations/*/keyRings/*/cryptoKeys/*'\"", args=[d.arg(name='kmsKeyName', type=d.T.string)]),
       withKmsKeyName(kmsKeyName): { spec+: { forProvider+: { kmsKeyName: kmsKeyName } } },
       '#withLabels':: d.fn(help='"A set of key/value label pairs to assign to this Topic."', args=[d.arg(name='labels', type=d.T.object)]),

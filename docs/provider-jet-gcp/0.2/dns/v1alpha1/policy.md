@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/dns/v1alpha1/policy/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,14 @@ permalink: /provider-jet-gcp/0.2/dns/v1alpha1/policy/
     * [`fn withNetworks(networks)`](#fn-specforproviderwithnetworks)
     * [`fn withNetworksMixin(networks)`](#fn-specforproviderwithnetworksmixin)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.alternativeNameServerConfig`](#obj-specforprovideralternativenameserverconfig)
+      * [`fn withTargetNameServers(targetNameServers)`](#fn-specforprovideralternativenameserverconfigwithtargetnameservers)
+      * [`fn withTargetNameServersMixin(targetNameServers)`](#fn-specforprovideralternativenameserverconfigwithtargetnameserversmixin)
+      * [`obj spec.forProvider.alternativeNameServerConfig.targetNameServers`](#obj-specforprovideralternativenameserverconfigtargetnameservers)
+        * [`fn withForwardingPath(forwardingPath)`](#fn-specforprovideralternativenameserverconfigtargetnameserverswithforwardingpath)
+        * [`fn withIpv4Address(ipv4Address)`](#fn-specforprovideralternativenameserverconfigtargetnameserverswithipv4address)
+    * [`obj spec.forProvider.networks`](#obj-specforprovidernetworks)
+      * [`fn withNetworkUrl(networkUrl)`](#fn-specforprovidernetworkswithnetworkurl)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -164,24 +170,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -334,6 +322,60 @@ withProject(project)
 ```
 
 
+
+## obj spec.forProvider.alternativeNameServerConfig
+
+"Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified."
+
+### fn spec.forProvider.alternativeNameServerConfig.withTargetNameServers
+
+```ts
+withTargetNameServers(targetNameServers)
+```
+
+"Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified."
+
+### fn spec.forProvider.alternativeNameServerConfig.withTargetNameServersMixin
+
+```ts
+withTargetNameServersMixin(targetNameServers)
+```
+
+"Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.alternativeNameServerConfig.targetNameServers
+
+"Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified."
+
+### fn spec.forProvider.alternativeNameServerConfig.targetNameServers.withForwardingPath
+
+```ts
+withForwardingPath(forwardingPath)
+```
+
+"Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: [\"default\", \"private\"]"
+
+### fn spec.forProvider.alternativeNameServerConfig.targetNameServers.withIpv4Address
+
+```ts
+withIpv4Address(ipv4Address)
+```
+
+"IPv4 address to forward to."
+
+## obj spec.forProvider.networks
+
+"List of network names specifying networks to which this policy is applied."
+
+### fn spec.forProvider.networks.withNetworkUrl
+
+```ts
+withNetworkUrl(networkUrl)
+```
+
+"The id or fully qualified URL of the VPC network to forward queries to. This should be formatted like 'projects/{project}/global/networks/{network}' or 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'"
 
 ## obj spec.providerConfigRef
 

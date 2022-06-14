@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/privateca/v1alpha1/certificateTemplate/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,76 @@ permalink: /provider-jet-gcp/0.2/privateca/v1alpha1/certificateTemplate/
     * [`fn withPredefinedValues(predefinedValues)`](#fn-specforproviderwithpredefinedvalues)
     * [`fn withPredefinedValuesMixin(predefinedValues)`](#fn-specforproviderwithpredefinedvaluesmixin)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.identityConstraints`](#obj-specforprovideridentityconstraints)
+      * [`fn withAllowSubjectAltNamesPassthrough(allowSubjectAltNamesPassthrough)`](#fn-specforprovideridentityconstraintswithallowsubjectaltnamespassthrough)
+      * [`fn withAllowSubjectPassthrough(allowSubjectPassthrough)`](#fn-specforprovideridentityconstraintswithallowsubjectpassthrough)
+      * [`fn withCelExpression(celExpression)`](#fn-specforprovideridentityconstraintswithcelexpression)
+      * [`fn withCelExpressionMixin(celExpression)`](#fn-specforprovideridentityconstraintswithcelexpressionmixin)
+      * [`obj spec.forProvider.identityConstraints.celExpression`](#obj-specforprovideridentityconstraintscelexpression)
+        * [`fn withDescription(description)`](#fn-specforprovideridentityconstraintscelexpressionwithdescription)
+        * [`fn withExpression(expression)`](#fn-specforprovideridentityconstraintscelexpressionwithexpression)
+        * [`fn withLocation(location)`](#fn-specforprovideridentityconstraintscelexpressionwithlocation)
+        * [`fn withTitle(title)`](#fn-specforprovideridentityconstraintscelexpressionwithtitle)
+    * [`obj spec.forProvider.passthroughExtensions`](#obj-specforproviderpassthroughextensions)
+      * [`fn withAdditionalExtensions(additionalExtensions)`](#fn-specforproviderpassthroughextensionswithadditionalextensions)
+      * [`fn withAdditionalExtensionsMixin(additionalExtensions)`](#fn-specforproviderpassthroughextensionswithadditionalextensionsmixin)
+      * [`fn withKnownExtensions(knownExtensions)`](#fn-specforproviderpassthroughextensionswithknownextensions)
+      * [`fn withKnownExtensionsMixin(knownExtensions)`](#fn-specforproviderpassthroughextensionswithknownextensionsmixin)
+      * [`obj spec.forProvider.passthroughExtensions.additionalExtensions`](#obj-specforproviderpassthroughextensionsadditionalextensions)
+        * [`fn withObjectIdPath(objectIdPath)`](#fn-specforproviderpassthroughextensionsadditionalextensionswithobjectidpath)
+        * [`fn withObjectIdPathMixin(objectIdPath)`](#fn-specforproviderpassthroughextensionsadditionalextensionswithobjectidpathmixin)
+    * [`obj spec.forProvider.predefinedValues`](#obj-specforproviderpredefinedvalues)
+      * [`fn withAdditionalExtensions(additionalExtensions)`](#fn-specforproviderpredefinedvalueswithadditionalextensions)
+      * [`fn withAdditionalExtensionsMixin(additionalExtensions)`](#fn-specforproviderpredefinedvalueswithadditionalextensionsmixin)
+      * [`fn withAiaOcspServers(aiaOcspServers)`](#fn-specforproviderpredefinedvalueswithaiaocspservers)
+      * [`fn withAiaOcspServersMixin(aiaOcspServers)`](#fn-specforproviderpredefinedvalueswithaiaocspserversmixin)
+      * [`fn withCaOptions(caOptions)`](#fn-specforproviderpredefinedvalueswithcaoptions)
+      * [`fn withCaOptionsMixin(caOptions)`](#fn-specforproviderpredefinedvalueswithcaoptionsmixin)
+      * [`fn withKeyUsage(keyUsage)`](#fn-specforproviderpredefinedvalueswithkeyusage)
+      * [`fn withKeyUsageMixin(keyUsage)`](#fn-specforproviderpredefinedvalueswithkeyusagemixin)
+      * [`fn withPolicyIds(policyIds)`](#fn-specforproviderpredefinedvalueswithpolicyids)
+      * [`fn withPolicyIdsMixin(policyIds)`](#fn-specforproviderpredefinedvalueswithpolicyidsmixin)
+      * [`obj spec.forProvider.predefinedValues.additionalExtensions`](#obj-specforproviderpredefinedvaluesadditionalextensions)
+        * [`fn withCritical(critical)`](#fn-specforproviderpredefinedvaluesadditionalextensionswithcritical)
+        * [`fn withObjectId(objectId)`](#fn-specforproviderpredefinedvaluesadditionalextensionswithobjectid)
+        * [`fn withObjectIdMixin(objectId)`](#fn-specforproviderpredefinedvaluesadditionalextensionswithobjectidmixin)
+        * [`fn withValue(value)`](#fn-specforproviderpredefinedvaluesadditionalextensionswithvalue)
+        * [`obj spec.forProvider.predefinedValues.additionalExtensions.objectId`](#obj-specforproviderpredefinedvaluesadditionalextensionsobjectid)
+          * [`fn withObjectIdPath(objectIdPath)`](#fn-specforproviderpredefinedvaluesadditionalextensionsobjectidwithobjectidpath)
+          * [`fn withObjectIdPathMixin(objectIdPath)`](#fn-specforproviderpredefinedvaluesadditionalextensionsobjectidwithobjectidpathmixin)
+      * [`obj spec.forProvider.predefinedValues.caOptions`](#obj-specforproviderpredefinedvaluescaoptions)
+        * [`fn withIsCa(isCa)`](#fn-specforproviderpredefinedvaluescaoptionswithisca)
+        * [`fn withMaxIssuerPathLength(maxIssuerPathLength)`](#fn-specforproviderpredefinedvaluescaoptionswithmaxissuerpathlength)
+      * [`obj spec.forProvider.predefinedValues.keyUsage`](#obj-specforproviderpredefinedvalueskeyusage)
+        * [`fn withBaseKeyUsage(baseKeyUsage)`](#fn-specforproviderpredefinedvalueskeyusagewithbasekeyusage)
+        * [`fn withBaseKeyUsageMixin(baseKeyUsage)`](#fn-specforproviderpredefinedvalueskeyusagewithbasekeyusagemixin)
+        * [`fn withExtendedKeyUsage(extendedKeyUsage)`](#fn-specforproviderpredefinedvalueskeyusagewithextendedkeyusage)
+        * [`fn withExtendedKeyUsageMixin(extendedKeyUsage)`](#fn-specforproviderpredefinedvalueskeyusagewithextendedkeyusagemixin)
+        * [`fn withUnknownExtendedKeyUsages(unknownExtendedKeyUsages)`](#fn-specforproviderpredefinedvalueskeyusagewithunknownextendedkeyusages)
+        * [`fn withUnknownExtendedKeyUsagesMixin(unknownExtendedKeyUsages)`](#fn-specforproviderpredefinedvalueskeyusagewithunknownextendedkeyusagesmixin)
+        * [`obj spec.forProvider.predefinedValues.keyUsage.baseKeyUsage`](#obj-specforproviderpredefinedvalueskeyusagebasekeyusage)
+          * [`fn withCertSign(certSign)`](#fn-specforproviderpredefinedvalueskeyusagebasekeyusagewithcertsign)
+          * [`fn withContentCommitment(contentCommitment)`](#fn-specforproviderpredefinedvalueskeyusagebasekeyusagewithcontentcommitment)
+          * [`fn withCrlSign(crlSign)`](#fn-specforproviderpredefinedvalueskeyusagebasekeyusagewithcrlsign)
+          * [`fn withDataEncipherment(dataEncipherment)`](#fn-specforproviderpredefinedvalueskeyusagebasekeyusagewithdataencipherment)
+          * [`fn withDecipherOnly(decipherOnly)`](#fn-specforproviderpredefinedvalueskeyusagebasekeyusagewithdecipheronly)
+          * [`fn withDigitalSignature(digitalSignature)`](#fn-specforproviderpredefinedvalueskeyusagebasekeyusagewithdigitalsignature)
+          * [`fn withEncipherOnly(encipherOnly)`](#fn-specforproviderpredefinedvalueskeyusagebasekeyusagewithencipheronly)
+          * [`fn withKeyAgreement(keyAgreement)`](#fn-specforproviderpredefinedvalueskeyusagebasekeyusagewithkeyagreement)
+          * [`fn withKeyEncipherment(keyEncipherment)`](#fn-specforproviderpredefinedvalueskeyusagebasekeyusagewithkeyencipherment)
+        * [`obj spec.forProvider.predefinedValues.keyUsage.extendedKeyUsage`](#obj-specforproviderpredefinedvalueskeyusageextendedkeyusage)
+          * [`fn withClientAuth(clientAuth)`](#fn-specforproviderpredefinedvalueskeyusageextendedkeyusagewithclientauth)
+          * [`fn withCodeSigning(codeSigning)`](#fn-specforproviderpredefinedvalueskeyusageextendedkeyusagewithcodesigning)
+          * [`fn withEmailProtection(emailProtection)`](#fn-specforproviderpredefinedvalueskeyusageextendedkeyusagewithemailprotection)
+          * [`fn withOcspSigning(ocspSigning)`](#fn-specforproviderpredefinedvalueskeyusageextendedkeyusagewithocspsigning)
+          * [`fn withServerAuth(serverAuth)`](#fn-specforproviderpredefinedvalueskeyusageextendedkeyusagewithserverauth)
+          * [`fn withTimeStamping(timeStamping)`](#fn-specforproviderpredefinedvalueskeyusageextendedkeyusagewithtimestamping)
+        * [`obj spec.forProvider.predefinedValues.keyUsage.unknownExtendedKeyUsages`](#obj-specforproviderpredefinedvalueskeyusageunknownextendedkeyusages)
+          * [`fn withObjectIdPath(objectIdPath)`](#fn-specforproviderpredefinedvalueskeyusageunknownextendedkeyusageswithobjectidpath)
+          * [`fn withObjectIdPathMixin(objectIdPath)`](#fn-specforproviderpredefinedvalueskeyusageunknownextendedkeyusageswithobjectidpathmixin)
+      * [`obj spec.forProvider.predefinedValues.policyIds`](#obj-specforproviderpredefinedvaluespolicyids)
+        * [`fn withObjectIdPath(objectIdPath)`](#fn-specforproviderpredefinedvaluespolicyidswithobjectidpath)
+        * [`fn withObjectIdPathMixin(objectIdPath)`](#fn-specforproviderpredefinedvaluespolicyidswithobjectidpathmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +235,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -365,6 +415,546 @@ withProject(project)
 ```
 
 "The project for the resource"
+
+## obj spec.forProvider.identityConstraints
+
+"Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity."
+
+### fn spec.forProvider.identityConstraints.withAllowSubjectAltNamesPassthrough
+
+```ts
+withAllowSubjectAltNamesPassthrough(allowSubjectAltNamesPassthrough)
+```
+
+"Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded."
+
+### fn spec.forProvider.identityConstraints.withAllowSubjectPassthrough
+
+```ts
+withAllowSubjectPassthrough(allowSubjectPassthrough)
+```
+
+"Required. If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded."
+
+### fn spec.forProvider.identityConstraints.withCelExpression
+
+```ts
+withCelExpression(celExpression)
+```
+
+"Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel"
+
+### fn spec.forProvider.identityConstraints.withCelExpressionMixin
+
+```ts
+withCelExpressionMixin(celExpression)
+```
+
+"Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.identityConstraints.celExpression
+
+"Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel"
+
+### fn spec.forProvider.identityConstraints.celExpression.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI."
+
+### fn spec.forProvider.identityConstraints.celExpression.withExpression
+
+```ts
+withExpression(expression)
+```
+
+"Textual representation of an expression in Common Expression Language syntax."
+
+### fn spec.forProvider.identityConstraints.celExpression.withLocation
+
+```ts
+withLocation(location)
+```
+
+"Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file."
+
+### fn spec.forProvider.identityConstraints.celExpression.withTitle
+
+```ts
+withTitle(title)
+```
+
+"Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression."
+
+## obj spec.forProvider.passthroughExtensions
+
+"Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values."
+
+### fn spec.forProvider.passthroughExtensions.withAdditionalExtensions
+
+```ts
+withAdditionalExtensions(additionalExtensions)
+```
+
+"Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions."
+
+### fn spec.forProvider.passthroughExtensions.withAdditionalExtensionsMixin
+
+```ts
+withAdditionalExtensionsMixin(additionalExtensions)
+```
+
+"Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.passthroughExtensions.withKnownExtensions
+
+```ts
+withKnownExtensions(knownExtensions)
+```
+
+"Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions."
+
+### fn spec.forProvider.passthroughExtensions.withKnownExtensionsMixin
+
+```ts
+withKnownExtensionsMixin(knownExtensions)
+```
+
+"Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.passthroughExtensions.additionalExtensions
+
+"Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions."
+
+### fn spec.forProvider.passthroughExtensions.additionalExtensions.withObjectIdPath
+
+```ts
+withObjectIdPath(objectIdPath)
+```
+
+"Required. The parts of an OID path. The most significant parts of the path come first."
+
+### fn spec.forProvider.passthroughExtensions.additionalExtensions.withObjectIdPathMixin
+
+```ts
+withObjectIdPathMixin(objectIdPath)
+```
+
+"Required. The parts of an OID path. The most significant parts of the path come first."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.predefinedValues
+
+"Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail."
+
+### fn spec.forProvider.predefinedValues.withAdditionalExtensions
+
+```ts
+withAdditionalExtensions(additionalExtensions)
+```
+
+"Optional. Describes custom X.509 extensions."
+
+### fn spec.forProvider.predefinedValues.withAdditionalExtensionsMixin
+
+```ts
+withAdditionalExtensionsMixin(additionalExtensions)
+```
+
+"Optional. Describes custom X.509 extensions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.predefinedValues.withAiaOcspServers
+
+```ts
+withAiaOcspServers(aiaOcspServers)
+```
+
+"Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the \"Authority Information Access\" extension in the certificate."
+
+### fn spec.forProvider.predefinedValues.withAiaOcspServersMixin
+
+```ts
+withAiaOcspServersMixin(aiaOcspServers)
+```
+
+"Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the \"Authority Information Access\" extension in the certificate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.predefinedValues.withCaOptions
+
+```ts
+withCaOptions(caOptions)
+```
+
+"Optional. Describes options in this X509Parameters that are relevant in a CA certificate."
+
+### fn spec.forProvider.predefinedValues.withCaOptionsMixin
+
+```ts
+withCaOptionsMixin(caOptions)
+```
+
+"Optional. Describes options in this X509Parameters that are relevant in a CA certificate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.predefinedValues.withKeyUsage
+
+```ts
+withKeyUsage(keyUsage)
+```
+
+"Optional. Indicates the intended use for keys that correspond to a certificate."
+
+### fn spec.forProvider.predefinedValues.withKeyUsageMixin
+
+```ts
+withKeyUsageMixin(keyUsage)
+```
+
+"Optional. Indicates the intended use for keys that correspond to a certificate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.predefinedValues.withPolicyIds
+
+```ts
+withPolicyIds(policyIds)
+```
+
+"Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4."
+
+### fn spec.forProvider.predefinedValues.withPolicyIdsMixin
+
+```ts
+withPolicyIdsMixin(policyIds)
+```
+
+"Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.predefinedValues.additionalExtensions
+
+"Optional. Describes custom X.509 extensions."
+
+### fn spec.forProvider.predefinedValues.additionalExtensions.withCritical
+
+```ts
+withCritical(critical)
+```
+
+"Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error)."
+
+### fn spec.forProvider.predefinedValues.additionalExtensions.withObjectId
+
+```ts
+withObjectId(objectId)
+```
+
+"Required. The OID for this X.509 extension."
+
+### fn spec.forProvider.predefinedValues.additionalExtensions.withObjectIdMixin
+
+```ts
+withObjectIdMixin(objectId)
+```
+
+"Required. The OID for this X.509 extension."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.predefinedValues.additionalExtensions.withValue
+
+```ts
+withValue(value)
+```
+
+"Required. The value of this X.509 extension."
+
+## obj spec.forProvider.predefinedValues.additionalExtensions.objectId
+
+"Required. The OID for this X.509 extension."
+
+### fn spec.forProvider.predefinedValues.additionalExtensions.objectId.withObjectIdPath
+
+```ts
+withObjectIdPath(objectIdPath)
+```
+
+"Required. The parts of an OID path. The most significant parts of the path come first."
+
+### fn spec.forProvider.predefinedValues.additionalExtensions.objectId.withObjectIdPathMixin
+
+```ts
+withObjectIdPathMixin(objectIdPath)
+```
+
+"Required. The parts of an OID path. The most significant parts of the path come first."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.predefinedValues.caOptions
+
+"Optional. Describes options in this X509Parameters that are relevant in a CA certificate."
+
+### fn spec.forProvider.predefinedValues.caOptions.withIsCa
+
+```ts
+withIsCa(isCa)
+```
+
+"Optional. Refers to the \"CA\" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate."
+
+### fn spec.forProvider.predefinedValues.caOptions.withMaxIssuerPathLength
+
+```ts
+withMaxIssuerPathLength(maxIssuerPathLength)
+```
+
+"Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate."
+
+## obj spec.forProvider.predefinedValues.keyUsage
+
+"Optional. Indicates the intended use for keys that correspond to a certificate."
+
+### fn spec.forProvider.predefinedValues.keyUsage.withBaseKeyUsage
+
+```ts
+withBaseKeyUsage(baseKeyUsage)
+```
+
+"Describes high-level ways in which a key may be used."
+
+### fn spec.forProvider.predefinedValues.keyUsage.withBaseKeyUsageMixin
+
+```ts
+withBaseKeyUsageMixin(baseKeyUsage)
+```
+
+"Describes high-level ways in which a key may be used."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.predefinedValues.keyUsage.withExtendedKeyUsage
+
+```ts
+withExtendedKeyUsage(extendedKeyUsage)
+```
+
+"Detailed scenarios in which a key may be used."
+
+### fn spec.forProvider.predefinedValues.keyUsage.withExtendedKeyUsageMixin
+
+```ts
+withExtendedKeyUsageMixin(extendedKeyUsage)
+```
+
+"Detailed scenarios in which a key may be used."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.predefinedValues.keyUsage.withUnknownExtendedKeyUsages
+
+```ts
+withUnknownExtendedKeyUsages(unknownExtendedKeyUsages)
+```
+
+"Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message."
+
+### fn spec.forProvider.predefinedValues.keyUsage.withUnknownExtendedKeyUsagesMixin
+
+```ts
+withUnknownExtendedKeyUsagesMixin(unknownExtendedKeyUsages)
+```
+
+"Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.predefinedValues.keyUsage.baseKeyUsage
+
+"Describes high-level ways in which a key may be used."
+
+### fn spec.forProvider.predefinedValues.keyUsage.baseKeyUsage.withCertSign
+
+```ts
+withCertSign(certSign)
+```
+
+"The key may be used to sign certificates."
+
+### fn spec.forProvider.predefinedValues.keyUsage.baseKeyUsage.withContentCommitment
+
+```ts
+withContentCommitment(contentCommitment)
+```
+
+"The key may be used for cryptographic commitments. Note that this may also be referred to as \"non-repudiation\"."
+
+### fn spec.forProvider.predefinedValues.keyUsage.baseKeyUsage.withCrlSign
+
+```ts
+withCrlSign(crlSign)
+```
+
+"The key may be used sign certificate revocation lists."
+
+### fn spec.forProvider.predefinedValues.keyUsage.baseKeyUsage.withDataEncipherment
+
+```ts
+withDataEncipherment(dataEncipherment)
+```
+
+"The key may be used to encipher data."
+
+### fn spec.forProvider.predefinedValues.keyUsage.baseKeyUsage.withDecipherOnly
+
+```ts
+withDecipherOnly(decipherOnly)
+```
+
+"The key may be used to decipher only."
+
+### fn spec.forProvider.predefinedValues.keyUsage.baseKeyUsage.withDigitalSignature
+
+```ts
+withDigitalSignature(digitalSignature)
+```
+
+"The key may be used for digital signatures."
+
+### fn spec.forProvider.predefinedValues.keyUsage.baseKeyUsage.withEncipherOnly
+
+```ts
+withEncipherOnly(encipherOnly)
+```
+
+"The key may be used to encipher only."
+
+### fn spec.forProvider.predefinedValues.keyUsage.baseKeyUsage.withKeyAgreement
+
+```ts
+withKeyAgreement(keyAgreement)
+```
+
+"The key may be used in a key agreement protocol."
+
+### fn spec.forProvider.predefinedValues.keyUsage.baseKeyUsage.withKeyEncipherment
+
+```ts
+withKeyEncipherment(keyEncipherment)
+```
+
+"The key may be used to encipher other keys."
+
+## obj spec.forProvider.predefinedValues.keyUsage.extendedKeyUsage
+
+"Detailed scenarios in which a key may be used."
+
+### fn spec.forProvider.predefinedValues.keyUsage.extendedKeyUsage.withClientAuth
+
+```ts
+withClientAuth(clientAuth)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as \"TLS WWW client authentication\", though regularly used for non-WWW TLS."
+
+### fn spec.forProvider.predefinedValues.keyUsage.extendedKeyUsage.withCodeSigning
+
+```ts
+withCodeSigning(codeSigning)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as \"Signing of downloadable executable code client authentication\"."
+
+### fn spec.forProvider.predefinedValues.keyUsage.extendedKeyUsage.withEmailProtection
+
+```ts
+withEmailProtection(emailProtection)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as \"Email protection\"."
+
+### fn spec.forProvider.predefinedValues.keyUsage.extendedKeyUsage.withOcspSigning
+
+```ts
+withOcspSigning(ocspSigning)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as \"Signing OCSP responses\"."
+
+### fn spec.forProvider.predefinedValues.keyUsage.extendedKeyUsage.withServerAuth
+
+```ts
+withServerAuth(serverAuth)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as \"TLS WWW server authentication\", though regularly used for non-WWW TLS."
+
+### fn spec.forProvider.predefinedValues.keyUsage.extendedKeyUsage.withTimeStamping
+
+```ts
+withTimeStamping(timeStamping)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as \"Binding the hash of an object to a time\"."
+
+## obj spec.forProvider.predefinedValues.keyUsage.unknownExtendedKeyUsages
+
+"Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message."
+
+### fn spec.forProvider.predefinedValues.keyUsage.unknownExtendedKeyUsages.withObjectIdPath
+
+```ts
+withObjectIdPath(objectIdPath)
+```
+
+"Required. The parts of an OID path. The most significant parts of the path come first."
+
+### fn spec.forProvider.predefinedValues.keyUsage.unknownExtendedKeyUsages.withObjectIdPathMixin
+
+```ts
+withObjectIdPathMixin(objectIdPath)
+```
+
+"Required. The parts of an OID path. The most significant parts of the path come first."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.predefinedValues.policyIds
+
+"Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4."
+
+### fn spec.forProvider.predefinedValues.policyIds.withObjectIdPath
+
+```ts
+withObjectIdPath(objectIdPath)
+```
+
+"Required. The parts of an OID path. The most significant parts of the path come first."
+
+### fn spec.forProvider.predefinedValues.policyIds.withObjectIdPathMixin
+
+```ts
+withObjectIdPathMixin(objectIdPath)
+```
+
+"Required. The parts of an OID path. The most significant parts of the path come first."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 

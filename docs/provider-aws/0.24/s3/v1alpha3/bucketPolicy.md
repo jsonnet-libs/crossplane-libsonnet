@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/s3/v1alpha3/bucketPolicy/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -48,6 +46,77 @@ permalink: /provider-aws/0.24/s3/v1alpha3/bucketPolicy/
       * [`fn withStatements(statements)`](#fn-specforproviderpolicywithstatements)
       * [`fn withStatementsMixin(statements)`](#fn-specforproviderpolicywithstatementsmixin)
       * [`fn withVersion(version)`](#fn-specforproviderpolicywithversion)
+      * [`obj spec.forProvider.policy.statements`](#obj-specforproviderpolicystatements)
+        * [`fn withAction(action)`](#fn-specforproviderpolicystatementswithaction)
+        * [`fn withActionMixin(action)`](#fn-specforproviderpolicystatementswithactionmixin)
+        * [`fn withCondition(condition)`](#fn-specforproviderpolicystatementswithcondition)
+        * [`fn withConditionMixin(condition)`](#fn-specforproviderpolicystatementswithconditionmixin)
+        * [`fn withEffect(effect)`](#fn-specforproviderpolicystatementswitheffect)
+        * [`fn withNotAction(notAction)`](#fn-specforproviderpolicystatementswithnotaction)
+        * [`fn withNotActionMixin(notAction)`](#fn-specforproviderpolicystatementswithnotactionmixin)
+        * [`fn withNotResource(notResource)`](#fn-specforproviderpolicystatementswithnotresource)
+        * [`fn withNotResourceMixin(notResource)`](#fn-specforproviderpolicystatementswithnotresourcemixin)
+        * [`fn withResource(resource)`](#fn-specforproviderpolicystatementswithresource)
+        * [`fn withResourceMixin(resource)`](#fn-specforproviderpolicystatementswithresourcemixin)
+        * [`fn withSid(sid)`](#fn-specforproviderpolicystatementswithsid)
+        * [`obj spec.forProvider.policy.statements.condition`](#obj-specforproviderpolicystatementscondition)
+          * [`fn withConditions(conditions)`](#fn-specforproviderpolicystatementsconditionwithconditions)
+          * [`fn withConditionsMixin(conditions)`](#fn-specforproviderpolicystatementsconditionwithconditionsmixin)
+          * [`fn withOperatorKey(operatorKey)`](#fn-specforproviderpolicystatementsconditionwithoperatorkey)
+          * [`obj spec.forProvider.policy.statements.condition.conditions`](#obj-specforproviderpolicystatementsconditionconditions)
+            * [`fn withBooleanValue(booleanValue)`](#fn-specforproviderpolicystatementsconditionconditionswithbooleanvalue)
+            * [`fn withDateValue(dateValue)`](#fn-specforproviderpolicystatementsconditionconditionswithdatevalue)
+            * [`fn withKey(key)`](#fn-specforproviderpolicystatementsconditionconditionswithkey)
+            * [`fn withListValue(listValue)`](#fn-specforproviderpolicystatementsconditionconditionswithlistvalue)
+            * [`fn withListValueMixin(listValue)`](#fn-specforproviderpolicystatementsconditionconditionswithlistvaluemixin)
+            * [`fn withNumericValue(numericValue)`](#fn-specforproviderpolicystatementsconditionconditionswithnumericvalue)
+            * [`fn withStringValue(stringValue)`](#fn-specforproviderpolicystatementsconditionconditionswithstringvalue)
+        * [`obj spec.forProvider.policy.statements.notPrincipal`](#obj-specforproviderpolicystatementsnotprincipal)
+          * [`fn withAllowAnon(allowAnon)`](#fn-specforproviderpolicystatementsnotprincipalwithallowanon)
+          * [`fn withAwsPrincipals(awsPrincipals)`](#fn-specforproviderpolicystatementsnotprincipalwithawsprincipals)
+          * [`fn withAwsPrincipalsMixin(awsPrincipals)`](#fn-specforproviderpolicystatementsnotprincipalwithawsprincipalsmixin)
+          * [`fn withFederated(federated)`](#fn-specforproviderpolicystatementsnotprincipalwithfederated)
+          * [`fn withService(service)`](#fn-specforproviderpolicystatementsnotprincipalwithservice)
+          * [`fn withServiceMixin(service)`](#fn-specforproviderpolicystatementsnotprincipalwithservicemixin)
+          * [`obj spec.forProvider.policy.statements.notPrincipal.awsPrincipals`](#obj-specforproviderpolicystatementsnotprincipalawsprincipals)
+            * [`fn withAwsAccountId(awsAccountId)`](#fn-specforproviderpolicystatementsnotprincipalawsprincipalswithawsaccountid)
+            * [`fn withIamRoleArn(iamRoleArn)`](#fn-specforproviderpolicystatementsnotprincipalawsprincipalswithiamrolearn)
+            * [`fn withIamUserArn(iamUserArn)`](#fn-specforproviderpolicystatementsnotprincipalawsprincipalswithiamuserarn)
+            * [`obj spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamRoleArnRef`](#obj-specforproviderpolicystatementsnotprincipalawsprincipalsiamrolearnref)
+              * [`fn withName(name)`](#fn-specforproviderpolicystatementsnotprincipalawsprincipalsiamrolearnrefwithname)
+            * [`obj spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamRoleArnSelector`](#obj-specforproviderpolicystatementsnotprincipalawsprincipalsiamrolearnselector)
+              * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderpolicystatementsnotprincipalawsprincipalsiamrolearnselectorwithmatchcontrollerref)
+              * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderpolicystatementsnotprincipalawsprincipalsiamrolearnselectorwithmatchlabels)
+              * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderpolicystatementsnotprincipalawsprincipalsiamrolearnselectorwithmatchlabelsmixin)
+            * [`obj spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamUserArnRef`](#obj-specforproviderpolicystatementsnotprincipalawsprincipalsiamuserarnref)
+              * [`fn withName(name)`](#fn-specforproviderpolicystatementsnotprincipalawsprincipalsiamuserarnrefwithname)
+            * [`obj spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamUserArnSelector`](#obj-specforproviderpolicystatementsnotprincipalawsprincipalsiamuserarnselector)
+              * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderpolicystatementsnotprincipalawsprincipalsiamuserarnselectorwithmatchcontrollerref)
+              * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderpolicystatementsnotprincipalawsprincipalsiamuserarnselectorwithmatchlabels)
+              * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderpolicystatementsnotprincipalawsprincipalsiamuserarnselectorwithmatchlabelsmixin)
+        * [`obj spec.forProvider.policy.statements.principal`](#obj-specforproviderpolicystatementsprincipal)
+          * [`fn withAllowAnon(allowAnon)`](#fn-specforproviderpolicystatementsprincipalwithallowanon)
+          * [`fn withAwsPrincipals(awsPrincipals)`](#fn-specforproviderpolicystatementsprincipalwithawsprincipals)
+          * [`fn withAwsPrincipalsMixin(awsPrincipals)`](#fn-specforproviderpolicystatementsprincipalwithawsprincipalsmixin)
+          * [`fn withFederated(federated)`](#fn-specforproviderpolicystatementsprincipalwithfederated)
+          * [`fn withService(service)`](#fn-specforproviderpolicystatementsprincipalwithservice)
+          * [`fn withServiceMixin(service)`](#fn-specforproviderpolicystatementsprincipalwithservicemixin)
+          * [`obj spec.forProvider.policy.statements.principal.awsPrincipals`](#obj-specforproviderpolicystatementsprincipalawsprincipals)
+            * [`fn withAwsAccountId(awsAccountId)`](#fn-specforproviderpolicystatementsprincipalawsprincipalswithawsaccountid)
+            * [`fn withIamRoleArn(iamRoleArn)`](#fn-specforproviderpolicystatementsprincipalawsprincipalswithiamrolearn)
+            * [`fn withIamUserArn(iamUserArn)`](#fn-specforproviderpolicystatementsprincipalawsprincipalswithiamuserarn)
+            * [`obj spec.forProvider.policy.statements.principal.awsPrincipals.iamRoleArnRef`](#obj-specforproviderpolicystatementsprincipalawsprincipalsiamrolearnref)
+              * [`fn withName(name)`](#fn-specforproviderpolicystatementsprincipalawsprincipalsiamrolearnrefwithname)
+            * [`obj spec.forProvider.policy.statements.principal.awsPrincipals.iamRoleArnSelector`](#obj-specforproviderpolicystatementsprincipalawsprincipalsiamrolearnselector)
+              * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderpolicystatementsprincipalawsprincipalsiamrolearnselectorwithmatchcontrollerref)
+              * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderpolicystatementsprincipalawsprincipalsiamrolearnselectorwithmatchlabels)
+              * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderpolicystatementsprincipalawsprincipalsiamrolearnselectorwithmatchlabelsmixin)
+            * [`obj spec.forProvider.policy.statements.principal.awsPrincipals.iamUserArnRef`](#obj-specforproviderpolicystatementsprincipalawsprincipalsiamuserarnref)
+              * [`fn withName(name)`](#fn-specforproviderpolicystatementsprincipalawsprincipalsiamuserarnrefwithname)
+            * [`obj spec.forProvider.policy.statements.principal.awsPrincipals.iamUserArnSelector`](#obj-specforproviderpolicystatementsprincipalawsprincipalsiamuserarnselector)
+              * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderpolicystatementsprincipalawsprincipalsiamuserarnselectorwithmatchcontrollerref)
+              * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderpolicystatementsprincipalawsprincipalsiamuserarnselectorwithmatchlabels)
+              * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderpolicystatementsprincipalawsprincipalsiamuserarnselectorwithmatchlabelsmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -169,24 +238,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -367,6 +418,544 @@ withVersion(version)
 ```
 
 "Version is the current IAM policy version"
+
+## obj spec.forProvider.policy.statements
+
+"Statements is the list of statement this policy applies either jsonStatements or statements must be specified in the policy"
+
+### fn spec.forProvider.policy.statements.withAction
+
+```ts
+withAction(action)
+```
+
+"Each element of the PolicyAction array describes the specific action or actions that will be allowed or denied with this PolicyStatement."
+
+### fn spec.forProvider.policy.statements.withActionMixin
+
+```ts
+withActionMixin(action)
+```
+
+"Each element of the PolicyAction array describes the specific action or actions that will be allowed or denied with this PolicyStatement."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.statements.withCondition
+
+```ts
+withCondition(condition)
+```
+
+"Condition specifies where conditions for policy are in effect. https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html"
+
+### fn spec.forProvider.policy.statements.withConditionMixin
+
+```ts
+withConditionMixin(condition)
+```
+
+"Condition specifies where conditions for policy are in effect. https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.statements.withEffect
+
+```ts
+withEffect(effect)
+```
+
+"The effect is required and specifies whether the statement results in an allow or an explicit deny. Valid values for Effect are Allow and Deny."
+
+### fn spec.forProvider.policy.statements.withNotAction
+
+```ts
+withNotAction(notAction)
+```
+
+"Each element of the NotPolicyAction array will allow the property to match all but the listed actions."
+
+### fn spec.forProvider.policy.statements.withNotActionMixin
+
+```ts
+withNotActionMixin(notAction)
+```
+
+"Each element of the NotPolicyAction array will allow the property to match all but the listed actions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.statements.withNotResource
+
+```ts
+withNotResource(notResource)
+```
+
+"This will explicitly match all resource paths except the ones specified in this array"
+
+### fn spec.forProvider.policy.statements.withNotResourceMixin
+
+```ts
+withNotResourceMixin(notResource)
+```
+
+"This will explicitly match all resource paths except the ones specified in this array"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.statements.withResource
+
+```ts
+withResource(resource)
+```
+
+"The paths on which this resource will apply"
+
+### fn spec.forProvider.policy.statements.withResourceMixin
+
+```ts
+withResourceMixin(resource)
+```
+
+"The paths on which this resource will apply"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.statements.withSid
+
+```ts
+withSid(sid)
+```
+
+"Optional identifier for this statement, must be unique within the policy if provided."
+
+## obj spec.forProvider.policy.statements.condition
+
+"Condition specifies where conditions for policy are in effect. https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html"
+
+### fn spec.forProvider.policy.statements.condition.withConditions
+
+```ts
+withConditions(conditions)
+```
+
+"Conditions represents each of the key/value pairs for the operator key"
+
+### fn spec.forProvider.policy.statements.condition.withConditionsMixin
+
+```ts
+withConditionsMixin(conditions)
+```
+
+"Conditions represents each of the key/value pairs for the operator key"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.statements.condition.withOperatorKey
+
+```ts
+withOperatorKey(operatorKey)
+```
+
+"OperatorKey matches the condition key and value in the policy against values in the request context"
+
+## obj spec.forProvider.policy.statements.condition.conditions
+
+"Conditions represents each of the key/value pairs for the operator key"
+
+### fn spec.forProvider.policy.statements.condition.conditions.withBooleanValue
+
+```ts
+withBooleanValue(booleanValue)
+```
+
+"ConditionBooleanValue is the expected boolean value of the key from the parent condition"
+
+### fn spec.forProvider.policy.statements.condition.conditions.withDateValue
+
+```ts
+withDateValue(dateValue)
+```
+
+"ConditionDateValue is the expected string value of the key from the parent condition. The date value must be in ISO 8601 format. The time is always midnight UTC."
+
+### fn spec.forProvider.policy.statements.condition.conditions.withKey
+
+```ts
+withKey(key)
+```
+
+"ConditionKey is the key condition being applied to the parent condition"
+
+### fn spec.forProvider.policy.statements.condition.conditions.withListValue
+
+```ts
+withListValue(listValue)
+```
+
+"ConditionListValue is the list value of the key from the parent condition"
+
+### fn spec.forProvider.policy.statements.condition.conditions.withListValueMixin
+
+```ts
+withListValueMixin(listValue)
+```
+
+"ConditionListValue is the list value of the key from the parent condition"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.statements.condition.conditions.withNumericValue
+
+```ts
+withNumericValue(numericValue)
+```
+
+"ConditionNumericValue is the expected string value of the key from the parent condition"
+
+### fn spec.forProvider.policy.statements.condition.conditions.withStringValue
+
+```ts
+withStringValue(stringValue)
+```
+
+"ConditionStringValue is the expected string value of the key from the parent condition"
+
+## obj spec.forProvider.policy.statements.notPrincipal
+
+"Used with the S3 policy to specify the users which are not included in this policy"
+
+### fn spec.forProvider.policy.statements.notPrincipal.withAllowAnon
+
+```ts
+withAllowAnon(allowAnon)
+```
+
+"This flag indicates if the policy should be made available to all anonymous users."
+
+### fn spec.forProvider.policy.statements.notPrincipal.withAwsPrincipals
+
+```ts
+withAwsPrincipals(awsPrincipals)
+```
+
+"This list contains the all of the AWS IAM users which are affected by the policy statement."
+
+### fn spec.forProvider.policy.statements.notPrincipal.withAwsPrincipalsMixin
+
+```ts
+withAwsPrincipalsMixin(awsPrincipals)
+```
+
+"This list contains the all of the AWS IAM users which are affected by the policy statement."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.statements.notPrincipal.withFederated
+
+```ts
+withFederated(federated)
+```
+
+"This string contains the identifier for any federated web identity provider."
+
+### fn spec.forProvider.policy.statements.notPrincipal.withService
+
+```ts
+withService(service)
+```
+
+"Service define the services which can have access to this bucket"
+
+### fn spec.forProvider.policy.statements.notPrincipal.withServiceMixin
+
+```ts
+withServiceMixin(service)
+```
+
+"Service define the services which can have access to this bucket"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.policy.statements.notPrincipal.awsPrincipals
+
+"This list contains the all of the AWS IAM users which are affected by the policy statement."
+
+### fn spec.forProvider.policy.statements.notPrincipal.awsPrincipals.withAwsAccountId
+
+```ts
+withAwsAccountId(awsAccountId)
+```
+
+"AWSAccountID identifies an AWS account as the principal"
+
+### fn spec.forProvider.policy.statements.notPrincipal.awsPrincipals.withIamRoleArn
+
+```ts
+withIamRoleArn(iamRoleArn)
+```
+
+"IAMRoleARN contains the ARN of an IAM role"
+
+### fn spec.forProvider.policy.statements.notPrincipal.awsPrincipals.withIamUserArn
+
+```ts
+withIamUserArn(iamUserArn)
+```
+
+"UserARN contains the ARN of an IAM user"
+
+## obj spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamRoleArnRef
+
+"IAMRoleARNRef contains the reference to an IAMRole"
+
+### fn spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamRoleArnRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamRoleArnSelector
+
+"IAMRoleARNSelector queries for an IAM role to retrieve its userName"
+
+### fn spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamRoleArnSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamRoleArnSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamRoleArnSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamUserArnRef
+
+"UserARNRef contains the reference to an User"
+
+### fn spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamUserArnRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamUserArnSelector
+
+"UserARNSelector queries for an User to retrieve its userName"
+
+### fn spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamUserArnSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamUserArnSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.policy.statements.notPrincipal.awsPrincipals.iamUserArnSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.policy.statements.principal
+
+"Used with the S3 policy to specify the principal that is allowed or denied access to a resource."
+
+### fn spec.forProvider.policy.statements.principal.withAllowAnon
+
+```ts
+withAllowAnon(allowAnon)
+```
+
+"This flag indicates if the policy should be made available to all anonymous users."
+
+### fn spec.forProvider.policy.statements.principal.withAwsPrincipals
+
+```ts
+withAwsPrincipals(awsPrincipals)
+```
+
+"This list contains the all of the AWS IAM users which are affected by the policy statement."
+
+### fn spec.forProvider.policy.statements.principal.withAwsPrincipalsMixin
+
+```ts
+withAwsPrincipalsMixin(awsPrincipals)
+```
+
+"This list contains the all of the AWS IAM users which are affected by the policy statement."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.statements.principal.withFederated
+
+```ts
+withFederated(federated)
+```
+
+"This string contains the identifier for any federated web identity provider."
+
+### fn spec.forProvider.policy.statements.principal.withService
+
+```ts
+withService(service)
+```
+
+"Service define the services which can have access to this bucket"
+
+### fn spec.forProvider.policy.statements.principal.withServiceMixin
+
+```ts
+withServiceMixin(service)
+```
+
+"Service define the services which can have access to this bucket"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.policy.statements.principal.awsPrincipals
+
+"This list contains the all of the AWS IAM users which are affected by the policy statement."
+
+### fn spec.forProvider.policy.statements.principal.awsPrincipals.withAwsAccountId
+
+```ts
+withAwsAccountId(awsAccountId)
+```
+
+"AWSAccountID identifies an AWS account as the principal"
+
+### fn spec.forProvider.policy.statements.principal.awsPrincipals.withIamRoleArn
+
+```ts
+withIamRoleArn(iamRoleArn)
+```
+
+"IAMRoleARN contains the ARN of an IAM role"
+
+### fn spec.forProvider.policy.statements.principal.awsPrincipals.withIamUserArn
+
+```ts
+withIamUserArn(iamUserArn)
+```
+
+"UserARN contains the ARN of an IAM user"
+
+## obj spec.forProvider.policy.statements.principal.awsPrincipals.iamRoleArnRef
+
+"IAMRoleARNRef contains the reference to an IAMRole"
+
+### fn spec.forProvider.policy.statements.principal.awsPrincipals.iamRoleArnRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.policy.statements.principal.awsPrincipals.iamRoleArnSelector
+
+"IAMRoleARNSelector queries for an IAM role to retrieve its userName"
+
+### fn spec.forProvider.policy.statements.principal.awsPrincipals.iamRoleArnSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.policy.statements.principal.awsPrincipals.iamRoleArnSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.policy.statements.principal.awsPrincipals.iamRoleArnSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.policy.statements.principal.awsPrincipals.iamUserArnRef
+
+"UserARNRef contains the reference to an User"
+
+### fn spec.forProvider.policy.statements.principal.awsPrincipals.iamUserArnRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.policy.statements.principal.awsPrincipals.iamUserArnSelector
+
+"UserARNSelector queries for an User to retrieve its userName"
+
+### fn spec.forProvider.policy.statements.principal.awsPrincipals.iamUserArnSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.policy.statements.principal.awsPrincipals.iamUserArnSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.policy.statements.principal.awsPrincipals.iamUserArnSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 

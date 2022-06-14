@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha2/router/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -41,6 +39,16 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha2/router/
     * [`fn withNetwork(network)`](#fn-specforproviderwithnetwork)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
+    * [`obj spec.forProvider.bgp`](#obj-specforproviderbgp)
+      * [`fn withAdvertiseMode(advertiseMode)`](#fn-specforproviderbgpwithadvertisemode)
+      * [`fn withAdvertisedGroups(advertisedGroups)`](#fn-specforproviderbgpwithadvertisedgroups)
+      * [`fn withAdvertisedGroupsMixin(advertisedGroups)`](#fn-specforproviderbgpwithadvertisedgroupsmixin)
+      * [`fn withAdvertisedIpRanges(advertisedIpRanges)`](#fn-specforproviderbgpwithadvertisedipranges)
+      * [`fn withAdvertisedIpRangesMixin(advertisedIpRanges)`](#fn-specforproviderbgpwithadvertisediprangesmixin)
+      * [`fn withAsn(asn)`](#fn-specforproviderbgpwithasn)
+      * [`obj spec.forProvider.bgp.advertisedIpRanges`](#obj-specforproviderbgpadvertisedipranges)
+        * [`fn withDescription(description)`](#fn-specforproviderbgpadvertisediprangeswithdescription)
+        * [`fn withRange(range)`](#fn-specforproviderbgpadvertisediprangeswithrange)
     * [`obj spec.forProvider.networkRef`](#obj-specforprovidernetworkref)
       * [`fn withName(name)`](#fn-specforprovidernetworkrefwithname)
     * [`obj spec.forProvider.networkSelector`](#obj-specforprovidernetworkselector)
@@ -168,24 +176,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -320,6 +310,82 @@ withRegion(region)
 ```
 
 "Region where the router resides."
+
+## obj spec.forProvider.bgp
+
+"BGP information specific to this router."
+
+### fn spec.forProvider.bgp.withAdvertiseMode
+
+```ts
+withAdvertiseMode(advertiseMode)
+```
+
+"User-specified flag to indicate which mode to use for advertisement. Default value: \"DEFAULT\" Possible values: [\"DEFAULT\", \"CUSTOM\"]"
+
+### fn spec.forProvider.bgp.withAdvertisedGroups
+
+```ts
+withAdvertisedGroups(advertisedGroups)
+```
+
+"User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertiseMode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups. \n This enum field has the one valid value: ALL_SUBNETS"
+
+### fn spec.forProvider.bgp.withAdvertisedGroupsMixin
+
+```ts
+withAdvertisedGroupsMixin(advertisedGroups)
+```
+
+"User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertiseMode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups. \n This enum field has the one valid value: ALL_SUBNETS"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.bgp.withAdvertisedIpRanges
+
+```ts
+withAdvertisedIpRanges(advertisedIpRanges)
+```
+
+"User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertiseMode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges."
+
+### fn spec.forProvider.bgp.withAdvertisedIpRangesMixin
+
+```ts
+withAdvertisedIpRangesMixin(advertisedIpRanges)
+```
+
+"User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertiseMode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.bgp.withAsn
+
+```ts
+withAsn(asn)
+```
+
+"Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN."
+
+## obj spec.forProvider.bgp.advertisedIpRanges
+
+"User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertiseMode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges."
+
+### fn spec.forProvider.bgp.advertisedIpRanges.withDescription
+
+```ts
+withDescription(description)
+```
+
+"User-specified description for the IP range."
+
+### fn spec.forProvider.bgp.advertisedIpRanges.withRange
+
+```ts
+withRange(range)
+```
+
+"The IP range to advertise. The value must be a CIDR-formatted string."
 
 ## obj spec.forProvider.networkRef
 

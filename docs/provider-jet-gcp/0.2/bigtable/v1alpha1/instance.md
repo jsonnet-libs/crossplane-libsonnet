@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/bigtable/v1alpha1/instance/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,12 @@ permalink: /provider-jet-gcp/0.2/bigtable/v1alpha1/instance/
     * [`fn withLabelsMixin(labels)`](#fn-specforproviderwithlabelsmixin)
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.cluster`](#obj-specforprovidercluster)
+      * [`fn withClusterId(clusterId)`](#fn-specforproviderclusterwithclusterid)
+      * [`fn withKmsKeyName(kmsKeyName)`](#fn-specforproviderclusterwithkmskeyname)
+      * [`fn withNumNodes(numNodes)`](#fn-specforproviderclusterwithnumnodes)
+      * [`fn withStorageType(storageType)`](#fn-specforproviderclusterwithstoragetype)
+      * [`fn withZone(zone)`](#fn-specforproviderclusterwithzone)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -164,24 +168,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -334,6 +320,50 @@ withProject(project)
 ```
 
 "The ID of the project in which the resource belongs. If it is not provided, the provider project is used."
+
+## obj spec.forProvider.cluster
+
+"A block of cluster configuration options. This can be specified at least once."
+
+### fn spec.forProvider.cluster.withClusterId
+
+```ts
+withClusterId(clusterId)
+```
+
+"The ID of the Cloud Bigtable cluster."
+
+### fn spec.forProvider.cluster.withKmsKeyName
+
+```ts
+withKmsKeyName(kmsKeyName)
+```
+
+"Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the cloudkms.cryptoKeyEncrypterDecrypter role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}"
+
+### fn spec.forProvider.cluster.withNumNodes
+
+```ts
+withNumNodes(numNodes)
+```
+
+"The number of nodes in your Cloud Bigtable cluster. Required, with a minimum of 1 for a PRODUCTION instance. Must be left unset for a DEVELOPMENT instance."
+
+### fn spec.forProvider.cluster.withStorageType
+
+```ts
+withStorageType(storageType)
+```
+
+"The storage type to use. One of \"SSD\" or \"HDD\". Defaults to \"SSD\"."
+
+### fn spec.forProvider.cluster.withZone
+
+```ts
+withZone(zone)
+```
+
+"The zone to create the Cloud Bigtable cluster in. Each cluster must have a different zone in the same region. Zones that support Bigtable instances are noted on the Cloud Bigtable locations page."
 
 ## obj spec.providerConfigRef
 

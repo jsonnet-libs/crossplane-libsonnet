@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha2/instance/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -76,6 +74,106 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha2/instance/
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
     * [`fn withZone(zone)`](#fn-specforproviderwithzone)
+    * [`obj spec.forProvider.advancedMachineFeatures`](#obj-specforprovideradvancedmachinefeatures)
+      * [`fn withEnableNestedVirtualization(enableNestedVirtualization)`](#fn-specforprovideradvancedmachinefeatureswithenablenestedvirtualization)
+      * [`fn withThreadsPerCore(threadsPerCore)`](#fn-specforprovideradvancedmachinefeatureswiththreadspercore)
+    * [`obj spec.forProvider.attachedDisk`](#obj-specforproviderattacheddisk)
+      * [`fn withDeviceName(deviceName)`](#fn-specforproviderattacheddiskwithdevicename)
+      * [`fn withKmsKeySelfLink(kmsKeySelfLink)`](#fn-specforproviderattacheddiskwithkmskeyselflink)
+      * [`fn withMode(mode)`](#fn-specforproviderattacheddiskwithmode)
+      * [`fn withSource(source)`](#fn-specforproviderattacheddiskwithsource)
+      * [`obj spec.forProvider.attachedDisk.diskEncryptionKeyRawSecretRef`](#obj-specforproviderattacheddiskdiskencryptionkeyrawsecretref)
+        * [`fn withKey(key)`](#fn-specforproviderattacheddiskdiskencryptionkeyrawsecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforproviderattacheddiskdiskencryptionkeyrawsecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforproviderattacheddiskdiskencryptionkeyrawsecretrefwithnamespace)
+    * [`obj spec.forProvider.bootDisk`](#obj-specforproviderbootdisk)
+      * [`fn withAutoDelete(autoDelete)`](#fn-specforproviderbootdiskwithautodelete)
+      * [`fn withDeviceName(deviceName)`](#fn-specforproviderbootdiskwithdevicename)
+      * [`fn withInitializeParams(initializeParams)`](#fn-specforproviderbootdiskwithinitializeparams)
+      * [`fn withInitializeParamsMixin(initializeParams)`](#fn-specforproviderbootdiskwithinitializeparamsmixin)
+      * [`fn withKmsKeySelfLink(kmsKeySelfLink)`](#fn-specforproviderbootdiskwithkmskeyselflink)
+      * [`fn withMode(mode)`](#fn-specforproviderbootdiskwithmode)
+      * [`fn withSource(source)`](#fn-specforproviderbootdiskwithsource)
+      * [`obj spec.forProvider.bootDisk.diskEncryptionKeyRawSecretRef`](#obj-specforproviderbootdiskdiskencryptionkeyrawsecretref)
+        * [`fn withKey(key)`](#fn-specforproviderbootdiskdiskencryptionkeyrawsecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforproviderbootdiskdiskencryptionkeyrawsecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforproviderbootdiskdiskencryptionkeyrawsecretrefwithnamespace)
+      * [`obj spec.forProvider.bootDisk.initializeParams`](#obj-specforproviderbootdiskinitializeparams)
+        * [`fn withImage(image)`](#fn-specforproviderbootdiskinitializeparamswithimage)
+        * [`fn withLabels(labels)`](#fn-specforproviderbootdiskinitializeparamswithlabels)
+        * [`fn withLabelsMixin(labels)`](#fn-specforproviderbootdiskinitializeparamswithlabelsmixin)
+        * [`fn withSize(size)`](#fn-specforproviderbootdiskinitializeparamswithsize)
+        * [`fn withType(type)`](#fn-specforproviderbootdiskinitializeparamswithtype)
+    * [`obj spec.forProvider.confidentialInstanceConfig`](#obj-specforproviderconfidentialinstanceconfig)
+      * [`fn withEnableConfidentialCompute(enableConfidentialCompute)`](#fn-specforproviderconfidentialinstanceconfigwithenableconfidentialcompute)
+    * [`obj spec.forProvider.guestAccelerator`](#obj-specforproviderguestaccelerator)
+      * [`fn withCount(count)`](#fn-specforproviderguestacceleratorwithcount)
+      * [`fn withType(type)`](#fn-specforproviderguestacceleratorwithtype)
+    * [`obj spec.forProvider.networkInterface`](#obj-specforprovidernetworkinterface)
+      * [`fn withAccessConfig(accessConfig)`](#fn-specforprovidernetworkinterfacewithaccessconfig)
+      * [`fn withAccessConfigMixin(accessConfig)`](#fn-specforprovidernetworkinterfacewithaccessconfigmixin)
+      * [`fn withAliasIpRange(aliasIpRange)`](#fn-specforprovidernetworkinterfacewithaliasiprange)
+      * [`fn withAliasIpRangeMixin(aliasIpRange)`](#fn-specforprovidernetworkinterfacewithaliasiprangemixin)
+      * [`fn withIpv6AccessConfig(ipv6AccessConfig)`](#fn-specforprovidernetworkinterfacewithipv6accessconfig)
+      * [`fn withIpv6AccessConfigMixin(ipv6AccessConfig)`](#fn-specforprovidernetworkinterfacewithipv6accessconfigmixin)
+      * [`fn withNetwork(network)`](#fn-specforprovidernetworkinterfacewithnetwork)
+      * [`fn withNetworkIp(networkIp)`](#fn-specforprovidernetworkinterfacewithnetworkip)
+      * [`fn withNicType(nicType)`](#fn-specforprovidernetworkinterfacewithnictype)
+      * [`fn withStackType(stackType)`](#fn-specforprovidernetworkinterfacewithstacktype)
+      * [`fn withSubnetwork(subnetwork)`](#fn-specforprovidernetworkinterfacewithsubnetwork)
+      * [`fn withSubnetworkProject(subnetworkProject)`](#fn-specforprovidernetworkinterfacewithsubnetworkproject)
+      * [`obj spec.forProvider.networkInterface.accessConfig`](#obj-specforprovidernetworkinterfaceaccessconfig)
+        * [`fn withNatIp(natIp)`](#fn-specforprovidernetworkinterfaceaccessconfigwithnatip)
+        * [`fn withNetworkTier(networkTier)`](#fn-specforprovidernetworkinterfaceaccessconfigwithnetworktier)
+        * [`fn withPublicPtrDomainName(publicPtrDomainName)`](#fn-specforprovidernetworkinterfaceaccessconfigwithpublicptrdomainname)
+      * [`obj spec.forProvider.networkInterface.aliasIpRange`](#obj-specforprovidernetworkinterfacealiasiprange)
+        * [`fn withIpCidrRange(ipCidrRange)`](#fn-specforprovidernetworkinterfacealiasiprangewithipcidrrange)
+        * [`fn withSubnetworkRangeName(subnetworkRangeName)`](#fn-specforprovidernetworkinterfacealiasiprangewithsubnetworkrangename)
+      * [`obj spec.forProvider.networkInterface.ipv6AccessConfig`](#obj-specforprovidernetworkinterfaceipv6accessconfig)
+        * [`fn withNetworkTier(networkTier)`](#fn-specforprovidernetworkinterfaceipv6accessconfigwithnetworktier)
+        * [`fn withPublicPtrDomainName(publicPtrDomainName)`](#fn-specforprovidernetworkinterfaceipv6accessconfigwithpublicptrdomainname)
+      * [`obj spec.forProvider.networkInterface.networkRef`](#obj-specforprovidernetworkinterfacenetworkref)
+        * [`fn withName(name)`](#fn-specforprovidernetworkinterfacenetworkrefwithname)
+      * [`obj spec.forProvider.networkInterface.networkSelector`](#obj-specforprovidernetworkinterfacenetworkselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidernetworkinterfacenetworkselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidernetworkinterfacenetworkselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidernetworkinterfacenetworkselectorwithmatchlabelsmixin)
+      * [`obj spec.forProvider.networkInterface.subnetworkRef`](#obj-specforprovidernetworkinterfacesubnetworkref)
+        * [`fn withName(name)`](#fn-specforprovidernetworkinterfacesubnetworkrefwithname)
+      * [`obj spec.forProvider.networkInterface.subnetworkSelector`](#obj-specforprovidernetworkinterfacesubnetworkselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidernetworkinterfacesubnetworkselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidernetworkinterfacesubnetworkselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidernetworkinterfacesubnetworkselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.reservationAffinity`](#obj-specforproviderreservationaffinity)
+      * [`fn withSpecificReservation(specificReservation)`](#fn-specforproviderreservationaffinitywithspecificreservation)
+      * [`fn withSpecificReservationMixin(specificReservation)`](#fn-specforproviderreservationaffinitywithspecificreservationmixin)
+      * [`fn withType(type)`](#fn-specforproviderreservationaffinitywithtype)
+      * [`obj spec.forProvider.reservationAffinity.specificReservation`](#obj-specforproviderreservationaffinityspecificreservation)
+        * [`fn withKey(key)`](#fn-specforproviderreservationaffinityspecificreservationwithkey)
+        * [`fn withValues(values)`](#fn-specforproviderreservationaffinityspecificreservationwithvalues)
+        * [`fn withValuesMixin(values)`](#fn-specforproviderreservationaffinityspecificreservationwithvaluesmixin)
+    * [`obj spec.forProvider.scheduling`](#obj-specforproviderscheduling)
+      * [`fn withAutomaticRestart(automaticRestart)`](#fn-specforproviderschedulingwithautomaticrestart)
+      * [`fn withMinNodeCpus(minNodeCpus)`](#fn-specforproviderschedulingwithminnodecpus)
+      * [`fn withNodeAffinities(nodeAffinities)`](#fn-specforproviderschedulingwithnodeaffinities)
+      * [`fn withNodeAffinitiesMixin(nodeAffinities)`](#fn-specforproviderschedulingwithnodeaffinitiesmixin)
+      * [`fn withOnHostMaintenance(onHostMaintenance)`](#fn-specforproviderschedulingwithonhostmaintenance)
+      * [`fn withPreemptible(preemptible)`](#fn-specforproviderschedulingwithpreemptible)
+      * [`obj spec.forProvider.scheduling.nodeAffinities`](#obj-specforproviderschedulingnodeaffinities)
+        * [`fn withKey(key)`](#fn-specforproviderschedulingnodeaffinitieswithkey)
+        * [`fn withOperator(operator)`](#fn-specforproviderschedulingnodeaffinitieswithoperator)
+        * [`fn withValues(values)`](#fn-specforproviderschedulingnodeaffinitieswithvalues)
+        * [`fn withValuesMixin(values)`](#fn-specforproviderschedulingnodeaffinitieswithvaluesmixin)
+    * [`obj spec.forProvider.scratchDisk`](#obj-specforproviderscratchdisk)
+      * [`fn withInterface(interface)`](#fn-specforproviderscratchdiskwithinterface)
+    * [`obj spec.forProvider.serviceAccount`](#obj-specforproviderserviceaccount)
+      * [`fn withEmail(email)`](#fn-specforproviderserviceaccountwithemail)
+      * [`fn withScopes(scopes)`](#fn-specforproviderserviceaccountwithscopes)
+      * [`fn withScopesMixin(scopes)`](#fn-specforproviderserviceaccountwithscopesmixin)
+    * [`obj spec.forProvider.shieldedInstanceConfig`](#obj-specforprovidershieldedinstanceconfig)
+      * [`fn withEnableIntegrityMonitoring(enableIntegrityMonitoring)`](#fn-specforprovidershieldedinstanceconfigwithenableintegritymonitoring)
+      * [`fn withEnableSecureBoot(enableSecureBoot)`](#fn-specforprovidershieldedinstanceconfigwithenablesecureboot)
+      * [`fn withEnableVtpm(enableVtpm)`](#fn-specforprovidershieldedinstanceconfigwithenablevtpm)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -197,24 +295,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -657,6 +737,738 @@ withZone(zone)
 ```
 
 "The zone of the instance. If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used."
+
+## obj spec.forProvider.advancedMachineFeatures
+
+"Controls for advanced machine-related behavior features."
+
+### fn spec.forProvider.advancedMachineFeatures.withEnableNestedVirtualization
+
+```ts
+withEnableNestedVirtualization(enableNestedVirtualization)
+```
+
+"Whether to enable nested virtualization or not."
+
+### fn spec.forProvider.advancedMachineFeatures.withThreadsPerCore
+
+```ts
+withThreadsPerCore(threadsPerCore)
+```
+
+"The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed."
+
+## obj spec.forProvider.attachedDisk
+
+"List of disks attached to the instance"
+
+### fn spec.forProvider.attachedDisk.withDeviceName
+
+```ts
+withDeviceName(deviceName)
+```
+
+"Name with which the attached disk is accessible under /dev/disk/by-id/"
+
+### fn spec.forProvider.attachedDisk.withKmsKeySelfLink
+
+```ts
+withKmsKeySelfLink(kmsKeySelfLink)
+```
+
+"The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set."
+
+### fn spec.forProvider.attachedDisk.withMode
+
+```ts
+withMode(mode)
+```
+
+"Read/write mode for the disk. One of \"READ_ONLY\" or \"READ_WRITE\"."
+
+### fn spec.forProvider.attachedDisk.withSource
+
+```ts
+withSource(source)
+```
+
+"The name or self_link of the disk attached to this instance."
+
+## obj spec.forProvider.attachedDisk.diskEncryptionKeyRawSecretRef
+
+"A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set."
+
+### fn spec.forProvider.attachedDisk.diskEncryptionKeyRawSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.attachedDisk.diskEncryptionKeyRawSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.attachedDisk.diskEncryptionKeyRawSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.bootDisk
+
+"The boot disk for the instance."
+
+### fn spec.forProvider.bootDisk.withAutoDelete
+
+```ts
+withAutoDelete(autoDelete)
+```
+
+"Whether the disk will be auto-deleted when the instance is deleted."
+
+### fn spec.forProvider.bootDisk.withDeviceName
+
+```ts
+withDeviceName(deviceName)
+```
+
+"Name with which attached disk will be accessible under /dev/disk/by-id/"
+
+### fn spec.forProvider.bootDisk.withInitializeParams
+
+```ts
+withInitializeParams(initializeParams)
+```
+
+"Parameters with which a disk was created alongside the instance."
+
+### fn spec.forProvider.bootDisk.withInitializeParamsMixin
+
+```ts
+withInitializeParamsMixin(initializeParams)
+```
+
+"Parameters with which a disk was created alongside the instance."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.bootDisk.withKmsKeySelfLink
+
+```ts
+withKmsKeySelfLink(kmsKeySelfLink)
+```
+
+"The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set."
+
+### fn spec.forProvider.bootDisk.withMode
+
+```ts
+withMode(mode)
+```
+
+"Read/write mode for the disk. One of \"READ_ONLY\" or \"READ_WRITE\"."
+
+### fn spec.forProvider.bootDisk.withSource
+
+```ts
+withSource(source)
+```
+
+"The name or self_link of the disk attached to this instance."
+
+## obj spec.forProvider.bootDisk.diskEncryptionKeyRawSecretRef
+
+"A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set."
+
+### fn spec.forProvider.bootDisk.diskEncryptionKeyRawSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.bootDisk.diskEncryptionKeyRawSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.bootDisk.diskEncryptionKeyRawSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.bootDisk.initializeParams
+
+"Parameters with which a disk was created alongside the instance."
+
+### fn spec.forProvider.bootDisk.initializeParams.withImage
+
+```ts
+withImage(image)
+```
+
+"The image from which this disk was initialised."
+
+### fn spec.forProvider.bootDisk.initializeParams.withLabels
+
+```ts
+withLabels(labels)
+```
+
+"A set of key/value label pairs assigned to the disk."
+
+### fn spec.forProvider.bootDisk.initializeParams.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+"A set of key/value label pairs assigned to the disk."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.bootDisk.initializeParams.withSize
+
+```ts
+withSize(size)
+```
+
+"The size of the image in gigabytes."
+
+### fn spec.forProvider.bootDisk.initializeParams.withType
+
+```ts
+withType(type)
+```
+
+"The Google Compute Engine disk type. One of pd-standard, pd-ssd or pd-balanced."
+
+## obj spec.forProvider.confidentialInstanceConfig
+
+"The Confidential VM config being used by the instance.  on_host_maintenance has to be set to TERMINATE or this will fail to create."
+
+### fn spec.forProvider.confidentialInstanceConfig.withEnableConfidentialCompute
+
+```ts
+withEnableConfidentialCompute(enableConfidentialCompute)
+```
+
+"Defines whether the instance should have confidential compute enabled."
+
+## obj spec.forProvider.guestAccelerator
+
+"List of the type and count of accelerator cards attached to the instance."
+
+### fn spec.forProvider.guestAccelerator.withCount
+
+```ts
+withCount(count)
+```
+
+"The number of the guest accelerator cards exposed to this instance."
+
+### fn spec.forProvider.guestAccelerator.withType
+
+```ts
+withType(type)
+```
+
+"The accelerator type resource exposed to this instance. E.g. nvidia-tesla-k80."
+
+## obj spec.forProvider.networkInterface
+
+"The networks attached to the instance."
+
+### fn spec.forProvider.networkInterface.withAccessConfig
+
+```ts
+withAccessConfig(accessConfig)
+```
+
+"Access configurations, i.e. IPs via which this instance can be accessed via the Internet."
+
+### fn spec.forProvider.networkInterface.withAccessConfigMixin
+
+```ts
+withAccessConfigMixin(accessConfig)
+```
+
+"Access configurations, i.e. IPs via which this instance can be accessed via the Internet."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.networkInterface.withAliasIpRange
+
+```ts
+withAliasIpRange(aliasIpRange)
+```
+
+"An array of alias IP ranges for this network interface."
+
+### fn spec.forProvider.networkInterface.withAliasIpRangeMixin
+
+```ts
+withAliasIpRangeMixin(aliasIpRange)
+```
+
+"An array of alias IP ranges for this network interface."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.networkInterface.withIpv6AccessConfig
+
+```ts
+withIpv6AccessConfig(ipv6AccessConfig)
+```
+
+"An array of IPv6 access configurations for this interface. Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this instance will have no external IPv6 Internet access."
+
+### fn spec.forProvider.networkInterface.withIpv6AccessConfigMixin
+
+```ts
+withIpv6AccessConfigMixin(ipv6AccessConfig)
+```
+
+"An array of IPv6 access configurations for this interface. Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this instance will have no external IPv6 Internet access."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.networkInterface.withNetwork
+
+```ts
+withNetwork(network)
+```
+
+"The name or self_link of the network attached to this interface."
+
+### fn spec.forProvider.networkInterface.withNetworkIp
+
+```ts
+withNetworkIp(networkIp)
+```
+
+"The private IP address assigned to the instance."
+
+### fn spec.forProvider.networkInterface.withNicType
+
+```ts
+withNicType(nicType)
+```
+
+"The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET"
+
+### fn spec.forProvider.networkInterface.withStackType
+
+```ts
+withStackType(stackType)
+```
+
+"The stack type for this network interface to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used."
+
+### fn spec.forProvider.networkInterface.withSubnetwork
+
+```ts
+withSubnetwork(subnetwork)
+```
+
+"The name or self_link of the subnetwork attached to this interface."
+
+### fn spec.forProvider.networkInterface.withSubnetworkProject
+
+```ts
+withSubnetworkProject(subnetworkProject)
+```
+
+"The project in which the subnetwork belongs."
+
+## obj spec.forProvider.networkInterface.accessConfig
+
+"Access configurations, i.e. IPs via which this instance can be accessed via the Internet."
+
+### fn spec.forProvider.networkInterface.accessConfig.withNatIp
+
+```ts
+withNatIp(natIp)
+```
+
+"The IP address that is be 1:1 mapped to the instance's network ip."
+
+### fn spec.forProvider.networkInterface.accessConfig.withNetworkTier
+
+```ts
+withNetworkTier(networkTier)
+```
+
+"The networking tier used for configuring this instance. One of PREMIUM or STANDARD."
+
+### fn spec.forProvider.networkInterface.accessConfig.withPublicPtrDomainName
+
+```ts
+withPublicPtrDomainName(publicPtrDomainName)
+```
+
+"The DNS domain name for the public PTR record."
+
+## obj spec.forProvider.networkInterface.aliasIpRange
+
+"An array of alias IP ranges for this network interface."
+
+### fn spec.forProvider.networkInterface.aliasIpRange.withIpCidrRange
+
+```ts
+withIpCidrRange(ipCidrRange)
+```
+
+"The IP CIDR range represented by this alias IP range."
+
+### fn spec.forProvider.networkInterface.aliasIpRange.withSubnetworkRangeName
+
+```ts
+withSubnetworkRangeName(subnetworkRangeName)
+```
+
+"The subnetwork secondary range name specifying the secondary range from which to allocate the IP CIDR range for this alias IP range."
+
+## obj spec.forProvider.networkInterface.ipv6AccessConfig
+
+"An array of IPv6 access configurations for this interface. Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this instance will have no external IPv6 Internet access."
+
+### fn spec.forProvider.networkInterface.ipv6AccessConfig.withNetworkTier
+
+```ts
+withNetworkTier(networkTier)
+```
+
+"The service-level to be provided for IPv6 traffic when the subnet has an external subnet. Only PREMIUM tier is valid for IPv6"
+
+### fn spec.forProvider.networkInterface.ipv6AccessConfig.withPublicPtrDomainName
+
+```ts
+withPublicPtrDomainName(publicPtrDomainName)
+```
+
+"The domain name to be used when creating DNSv6 records for the external IPv6 ranges."
+
+## obj spec.forProvider.networkInterface.networkRef
+
+"A Reference to a named object."
+
+### fn spec.forProvider.networkInterface.networkRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.networkInterface.networkSelector
+
+"A Selector selects an object."
+
+### fn spec.forProvider.networkInterface.networkSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.networkInterface.networkSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.networkInterface.networkSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.networkInterface.subnetworkRef
+
+"A Reference to a named object."
+
+### fn spec.forProvider.networkInterface.subnetworkRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.networkInterface.subnetworkSelector
+
+"A Selector selects an object."
+
+### fn spec.forProvider.networkInterface.subnetworkSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.networkInterface.subnetworkSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.networkInterface.subnetworkSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.reservationAffinity
+
+"Specifies the reservations that this instance can consume from."
+
+### fn spec.forProvider.reservationAffinity.withSpecificReservation
+
+```ts
+withSpecificReservation(specificReservation)
+```
+
+"Specifies the label selector for the reservation to use."
+
+### fn spec.forProvider.reservationAffinity.withSpecificReservationMixin
+
+```ts
+withSpecificReservationMixin(specificReservation)
+```
+
+"Specifies the label selector for the reservation to use."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.reservationAffinity.withType
+
+```ts
+withType(type)
+```
+
+"The type of reservation from which this instance can consume resources."
+
+## obj spec.forProvider.reservationAffinity.specificReservation
+
+"Specifies the label selector for the reservation to use."
+
+### fn spec.forProvider.reservationAffinity.specificReservation.withKey
+
+```ts
+withKey(key)
+```
+
+"Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value."
+
+### fn spec.forProvider.reservationAffinity.specificReservation.withValues
+
+```ts
+withValues(values)
+```
+
+"Corresponds to the label values of a reservation resource."
+
+### fn spec.forProvider.reservationAffinity.specificReservation.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"Corresponds to the label values of a reservation resource."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.scheduling
+
+"The scheduling strategy being used by the instance."
+
+### fn spec.forProvider.scheduling.withAutomaticRestart
+
+```ts
+withAutomaticRestart(automaticRestart)
+```
+
+"Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user)."
+
+### fn spec.forProvider.scheduling.withMinNodeCpus
+
+```ts
+withMinNodeCpus(minNodeCpus)
+```
+
+
+
+### fn spec.forProvider.scheduling.withNodeAffinities
+
+```ts
+withNodeAffinities(nodeAffinities)
+```
+
+"Specifies node affinities or anti-affinities to determine which sole-tenant nodes your instances and managed instance groups will use as host systems."
+
+### fn spec.forProvider.scheduling.withNodeAffinitiesMixin
+
+```ts
+withNodeAffinitiesMixin(nodeAffinities)
+```
+
+"Specifies node affinities or anti-affinities to determine which sole-tenant nodes your instances and managed instance groups will use as host systems."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.scheduling.withOnHostMaintenance
+
+```ts
+withOnHostMaintenance(onHostMaintenance)
+```
+
+"Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE,"
+
+### fn spec.forProvider.scheduling.withPreemptible
+
+```ts
+withPreemptible(preemptible)
+```
+
+"Whether the instance is preemptible."
+
+## obj spec.forProvider.scheduling.nodeAffinities
+
+"Specifies node affinities or anti-affinities to determine which sole-tenant nodes your instances and managed instance groups will use as host systems."
+
+### fn spec.forProvider.scheduling.nodeAffinities.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.scheduling.nodeAffinities.withOperator
+
+```ts
+withOperator(operator)
+```
+
+
+
+### fn spec.forProvider.scheduling.nodeAffinities.withValues
+
+```ts
+withValues(values)
+```
+
+
+
+### fn spec.forProvider.scheduling.nodeAffinities.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.scratchDisk
+
+"The scratch disks attached to the instance."
+
+### fn spec.forProvider.scratchDisk.withInterface
+
+```ts
+withInterface(interface)
+```
+
+"The disk interface used for attaching this disk. One of SCSI or NVME."
+
+## obj spec.forProvider.serviceAccount
+
+"The service account to attach to the instance."
+
+### fn spec.forProvider.serviceAccount.withEmail
+
+```ts
+withEmail(email)
+```
+
+"The service account e-mail address."
+
+### fn spec.forProvider.serviceAccount.withScopes
+
+```ts
+withScopes(scopes)
+```
+
+"A list of service scopes."
+
+### fn spec.forProvider.serviceAccount.withScopesMixin
+
+```ts
+withScopesMixin(scopes)
+```
+
+"A list of service scopes."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.shieldedInstanceConfig
+
+"The shielded vm config being used by the instance."
+
+### fn spec.forProvider.shieldedInstanceConfig.withEnableIntegrityMonitoring
+
+```ts
+withEnableIntegrityMonitoring(enableIntegrityMonitoring)
+```
+
+"Whether integrity monitoring is enabled for the instance."
+
+### fn spec.forProvider.shieldedInstanceConfig.withEnableSecureBoot
+
+```ts
+withEnableSecureBoot(enableSecureBoot)
+```
+
+"Whether secure boot is enabled for the instance."
+
+### fn spec.forProvider.shieldedInstanceConfig.withEnableVtpm
+
+```ts
+withEnableVtpm(enableVtpm)
+```
+
+"Whether the instance uses vTPM."
 
 ## obj spec.providerConfigRef
 

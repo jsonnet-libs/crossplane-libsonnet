@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/applicationURLDispatchRules/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -37,6 +35,10 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/applicationURLDispatchRules/
     * [`fn withDispatchRules(dispatchRules)`](#fn-specforproviderwithdispatchrules)
     * [`fn withDispatchRulesMixin(dispatchRules)`](#fn-specforproviderwithdispatchrulesmixin)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.dispatchRules`](#obj-specforproviderdispatchrules)
+      * [`fn withDomain(domain)`](#fn-specforproviderdispatchruleswithdomain)
+      * [`fn withPath(path)`](#fn-specforproviderdispatchruleswithpath)
+      * [`fn withService(service)`](#fn-specforproviderdispatchruleswithservice)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -161,24 +163,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -278,6 +262,34 @@ withProject(project)
 ```
 
 
+
+## obj spec.forProvider.dispatchRules
+
+"Rules to match an HTTP request and dispatch that request to a service."
+
+### fn spec.forProvider.dispatchRules.withDomain
+
+```ts
+withDomain(domain)
+```
+
+"Domain name to match against. The wildcard \"*\" is supported if specified before a period: \"*.\". Defaults to matching all domains: \"*\"."
+
+### fn spec.forProvider.dispatchRules.withPath
+
+```ts
+withPath(path)
+```
+
+"Pathname within the host. Must start with a \"/\". A single \"*\" can be included at the end of the path. The sum of the lengths of the domain and path may not exceed 100 characters."
+
+### fn spec.forProvider.dispatchRules.withService
+
+```ts
+withService(service)
+```
+
+"Pathname within the host. Must start with a \"/\". A single \"*\" can be included at the end of the path. The sum of the lengths of the domain and path may not exceed 100 characters."
 
 ## obj spec.providerConfigRef
 

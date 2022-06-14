@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/ec2/v1alpha1/instance/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -68,6 +66,18 @@ permalink: /provider-aws/0.24/ec2/v1alpha1/instance/
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
     * [`fn withUserData(userData)`](#fn-specforproviderwithuserdata)
+    * [`obj spec.forProvider.blockDeviceMappings`](#obj-specforproviderblockdevicemappings)
+      * [`fn withDeviceName(deviceName)`](#fn-specforproviderblockdevicemappingswithdevicename)
+      * [`fn withNoDevice(noDevice)`](#fn-specforproviderblockdevicemappingswithnodevice)
+      * [`fn withVirtualName(virtualName)`](#fn-specforproviderblockdevicemappingswithvirtualname)
+      * [`obj spec.forProvider.blockDeviceMappings.ebs`](#obj-specforproviderblockdevicemappingsebs)
+        * [`fn withDeleteOnTermination(deleteOnTermination)`](#fn-specforproviderblockdevicemappingsebswithdeleteontermination)
+        * [`fn withEncrypted(encrypted)`](#fn-specforproviderblockdevicemappingsebswithencrypted)
+        * [`fn withIops(iops)`](#fn-specforproviderblockdevicemappingsebswithiops)
+        * [`fn withKmsKeyId(kmsKeyId)`](#fn-specforproviderblockdevicemappingsebswithkmskeyid)
+        * [`fn withSnapshotId(snapshotId)`](#fn-specforproviderblockdevicemappingsebswithsnapshotid)
+        * [`fn withVolumeSize(volumeSize)`](#fn-specforproviderblockdevicemappingsebswithvolumesize)
+        * [`fn withVolumeType(volumeType)`](#fn-specforproviderblockdevicemappingsebswithvolumetype)
     * [`obj spec.forProvider.capacityReservationSpecification`](#obj-specforprovidercapacityreservationspecification)
       * [`fn withCapacityReservationsPreference(capacityReservationsPreference)`](#fn-specforprovidercapacityreservationspecificationwithcapacityreservationspreference)
       * [`obj spec.forProvider.capacityReservationSpecification.capacityReservationTarget`](#obj-specforprovidercapacityreservationspecificationcapacityreservationtarget)
@@ -77,6 +87,11 @@ permalink: /provider-aws/0.24/ec2/v1alpha1/instance/
       * [`fn withThreadsPerCore(threadsPerCore)`](#fn-specforprovidercpuoptionswiththreadspercore)
     * [`obj spec.forProvider.creditSpecification`](#obj-specforprovidercreditspecification)
       * [`fn withCpuCredits(cpuCredits)`](#fn-specforprovidercreditspecificationwithcpucredits)
+    * [`obj spec.forProvider.elasticGpuSpecification`](#obj-specforproviderelasticgpuspecification)
+      * [`fn withType(type)`](#fn-specforproviderelasticgpuspecificationwithtype)
+    * [`obj spec.forProvider.elasticInferenceAccelerators`](#obj-specforproviderelasticinferenceaccelerators)
+      * [`fn withCount(count)`](#fn-specforproviderelasticinferenceacceleratorswithcount)
+      * [`fn withType(type)`](#fn-specforproviderelasticinferenceacceleratorswithtype)
     * [`obj spec.forProvider.hibernationOptions`](#obj-specforproviderhibernationoptions)
       * [`fn withConfigured(configured)`](#fn-specforproviderhibernationoptionswithconfigured)
     * [`obj spec.forProvider.iamInstanceProfile`](#obj-specforprovideriaminstanceprofile)
@@ -90,16 +105,42 @@ permalink: /provider-aws/0.24/ec2/v1alpha1/instance/
         * [`fn withMaxPrice(maxPrice)`](#fn-specforproviderinstancemarketoptionsspotoptionswithmaxprice)
         * [`fn withSpotInstanceType(spotInstanceType)`](#fn-specforproviderinstancemarketoptionsspotoptionswithspotinstancetype)
         * [`fn withValidUntil(validUntil)`](#fn-specforproviderinstancemarketoptionsspotoptionswithvaliduntil)
+    * [`obj spec.forProvider.ipv6Addresses`](#obj-specforprovideripv6addresses)
+      * [`fn withIpv6Address(ipv6Address)`](#fn-specforprovideripv6addresseswithipv6address)
     * [`obj spec.forProvider.launchTemplate`](#obj-specforproviderlaunchtemplate)
       * [`fn withLaunchTemplateId(launchTemplateId)`](#fn-specforproviderlaunchtemplatewithlaunchtemplateid)
       * [`fn withLaunchTemplateName(launchTemplateName)`](#fn-specforproviderlaunchtemplatewithlaunchtemplatename)
       * [`fn withVersion(version)`](#fn-specforproviderlaunchtemplatewithversion)
+    * [`obj spec.forProvider.licenseSpecifications`](#obj-specforproviderlicensespecifications)
+      * [`fn withLicenseConfigurationArn(licenseConfigurationArn)`](#fn-specforproviderlicensespecificationswithlicenseconfigurationarn)
     * [`obj spec.forProvider.metadataOptions`](#obj-specforprovidermetadataoptions)
       * [`fn withHttpEndpoint(httpEndpoint)`](#fn-specforprovidermetadataoptionswithhttpendpoint)
       * [`fn withHttpPutResponseHopLimit(httpPutResponseHopLimit)`](#fn-specforprovidermetadataoptionswithhttpputresponsehoplimit)
       * [`fn withHttpTokens(httpTokens)`](#fn-specforprovidermetadataoptionswithhttptokens)
     * [`obj spec.forProvider.monitoring`](#obj-specforprovidermonitoring)
       * [`fn withEnabled(enabled)`](#fn-specforprovidermonitoringwithenabled)
+    * [`obj spec.forProvider.networkInterfaces`](#obj-specforprovidernetworkinterfaces)
+      * [`fn withAssociatePublicIpAddress(associatePublicIpAddress)`](#fn-specforprovidernetworkinterfaceswithassociatepublicipaddress)
+      * [`fn withDeleteOnTermination(deleteOnTermination)`](#fn-specforprovidernetworkinterfaceswithdeleteontermination)
+      * [`fn withDescription(description)`](#fn-specforprovidernetworkinterfaceswithdescription)
+      * [`fn withDeviceIndex(deviceIndex)`](#fn-specforprovidernetworkinterfaceswithdeviceindex)
+      * [`fn withGroups(groups)`](#fn-specforprovidernetworkinterfaceswithgroups)
+      * [`fn withGroupsMixin(groups)`](#fn-specforprovidernetworkinterfaceswithgroupsmixin)
+      * [`fn withInterfaceType(interfaceType)`](#fn-specforprovidernetworkinterfaceswithinterfacetype)
+      * [`fn withIpv6AddressCount(ipv6AddressCount)`](#fn-specforprovidernetworkinterfaceswithipv6addresscount)
+      * [`fn withIpv6Addresses(ipv6Addresses)`](#fn-specforprovidernetworkinterfaceswithipv6addresses)
+      * [`fn withIpv6AddressesMixin(ipv6Addresses)`](#fn-specforprovidernetworkinterfaceswithipv6addressesmixin)
+      * [`fn withNetworkInterfaceId(networkInterfaceId)`](#fn-specforprovidernetworkinterfaceswithnetworkinterfaceid)
+      * [`fn withPrivateIpAddress(privateIpAddress)`](#fn-specforprovidernetworkinterfaceswithprivateipaddress)
+      * [`fn withPrivateIpAddresses(privateIpAddresses)`](#fn-specforprovidernetworkinterfaceswithprivateipaddresses)
+      * [`fn withPrivateIpAddressesMixin(privateIpAddresses)`](#fn-specforprovidernetworkinterfaceswithprivateipaddressesmixin)
+      * [`fn withSecondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)`](#fn-specforprovidernetworkinterfaceswithsecondaryprivateipaddresscount)
+      * [`fn withSubnetId(subnetId)`](#fn-specforprovidernetworkinterfaceswithsubnetid)
+      * [`obj spec.forProvider.networkInterfaces.ipv6Addresses`](#obj-specforprovidernetworkinterfacesipv6addresses)
+        * [`fn withIpv6Address(ipv6Address)`](#fn-specforprovidernetworkinterfacesipv6addresseswithipv6address)
+      * [`obj spec.forProvider.networkInterfaces.privateIpAddresses`](#obj-specforprovidernetworkinterfacesprivateipaddresses)
+        * [`fn withPrimary(primary)`](#fn-specforprovidernetworkinterfacesprivateipaddresseswithprimary)
+        * [`fn withPrivateIPAddress(privateIPAddress)`](#fn-specforprovidernetworkinterfacesprivateipaddresseswithprivateipaddress)
     * [`obj spec.forProvider.placement`](#obj-specforproviderplacement)
       * [`fn withAffinity(affinity)`](#fn-specforproviderplacementwithaffinity)
       * [`fn withAvailabilityZone(availabilityZone)`](#fn-specforproviderplacementwithavailabilityzone)
@@ -109,6 +150,8 @@ permalink: /provider-aws/0.24/ec2/v1alpha1/instance/
       * [`fn withPartitionNumber(partitionNumber)`](#fn-specforproviderplacementwithpartitionnumber)
       * [`fn withSpreadDomain(spreadDomain)`](#fn-specforproviderplacementwithspreaddomain)
       * [`fn withTenancy(tenancy)`](#fn-specforproviderplacementwithtenancy)
+    * [`obj spec.forProvider.securityGroupRefs`](#obj-specforprovidersecuritygrouprefs)
+      * [`fn withName(name)`](#fn-specforprovidersecuritygrouprefswithname)
     * [`obj spec.forProvider.securityGroupSelector`](#obj-specforprovidersecuritygroupselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidersecuritygroupselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidersecuritygroupselectorwithmatchlabels)
@@ -119,6 +162,16 @@ permalink: /provider-aws/0.24/ec2/v1alpha1/instance/
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidersubnetidselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidersubnetidselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidersubnetidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.tagSpecifications`](#obj-specforprovidertagspecifications)
+      * [`fn withResourceType(resourceType)`](#fn-specforprovidertagspecificationswithresourcetype)
+      * [`fn withTags(tags)`](#fn-specforprovidertagspecificationswithtags)
+      * [`fn withTagsMixin(tags)`](#fn-specforprovidertagspecificationswithtagsmixin)
+      * [`obj spec.forProvider.tagSpecifications.tags`](#obj-specforprovidertagspecificationstags)
+        * [`fn withKey(key)`](#fn-specforprovidertagspecificationstagswithkey)
+        * [`fn withValue(value)`](#fn-specforprovidertagspecificationstagswithvalue)
+    * [`obj spec.forProvider.tags`](#obj-specforprovidertags)
+      * [`fn withKey(key)`](#fn-specforprovidertagswithkey)
+      * [`fn withValue(value)`](#fn-specforprovidertagswithvalue)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -240,24 +293,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -627,6 +662,94 @@ withUserData(userData)
 
 "The user data to make available to the instance. For more information, see Running Commands on Your Linux Instance at Launch (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) (Linux) and Adding User Data (https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data) (Windows). If you are using a command line tool, base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User data is limited to 16 KB."
 
+## obj spec.forProvider.blockDeviceMappings
+
+"The block device mapping entries."
+
+### fn spec.forProvider.blockDeviceMappings.withDeviceName
+
+```ts
+withDeviceName(deviceName)
+```
+
+"The device name (for example, /dev/sdh or xvdh)."
+
+### fn spec.forProvider.blockDeviceMappings.withNoDevice
+
+```ts
+withNoDevice(noDevice)
+```
+
+"Suppresses the specified device included in the block device mapping of the AMI."
+
+### fn spec.forProvider.blockDeviceMappings.withVirtualName
+
+```ts
+withVirtualName(virtualName)
+```
+
+"The virtual device name (ephemeralN). Instance store volumes are numbered starting from 0. An instance type with 2 available instance store volumes can specify mappings for ephemeral0 and ephemeral1. The number of available instance store volumes depends on the instance type. After you connect to the instance, you must mount the volume. \n NVMe instance store volumes are automatically enumerated and assigned a device name. Including them in your block device mapping has no effect. \n Constraints: For M3 instances, you must specify instance store volumes in the block device mapping for the instance. When you launch an M3 instance, we ignore any instance store volumes specified in the block device mapping for the AMI."
+
+## obj spec.forProvider.blockDeviceMappings.ebs
+
+"Parameters used to automatically set up EBS volumes when the instance is launched."
+
+### fn spec.forProvider.blockDeviceMappings.ebs.withDeleteOnTermination
+
+```ts
+withDeleteOnTermination(deleteOnTermination)
+```
+
+"Indicates whether the EBS volume is deleted on instance termination. For more information, see Preserving Amazon EBS Volumes on Instance Termination (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) in the Amazon Elastic Compute Cloud User Guide."
+
+### fn spec.forProvider.blockDeviceMappings.ebs.withEncrypted
+
+```ts
+withEncrypted(encrypted)
+```
+
+"Indicates whether the encryption state of an EBS volume is changed while being restored from a backing snapshot. The effect of setting the encryption state to true depends on the volume origin (new or from a snapshot), starting encryption state, ownership, and whether encryption by default is enabled. For more information, see Amazon EBS Encryption (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters) in the Amazon Elastic Compute Cloud User Guide. \n In no case can you remove encryption from an encrypted volume. \n Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For more information, see Supported Instance Types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances). \n This parameter is not returned by ."
+
+### fn spec.forProvider.blockDeviceMappings.ebs.withIops
+
+```ts
+withIops(iops)
+```
+
+"The number of I/O operations per second (IOPS) that the volume supports. For io1 volumes, this represents the number of IOPS that are provisioned for the volume. For gp2 volumes, this represents the baseline performance of the volume and the rate at which the volume accumulates I/O credits for bursting. For more information, see Amazon EBS Volume Types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the Amazon Elastic Compute Cloud User Guide. \n Constraints: Range is 100-16,000 IOPS for gp2 volumes and 100 to 64,000IOPS for io1 volumes in most Regions. Maximum io1 IOPS of 64,000 is guaranteed only on Nitro-based instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances). Other instance families guarantee performance up to 32,000 IOPS. For more information, see Amazon EBS Volume Types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the Amazon Elastic Compute Cloud User Guide. \n Condition: This parameter is required for requests to create io1 volumes; it is not used in requests to create gp2, st1, sc1, or standard volumes."
+
+### fn spec.forProvider.blockDeviceMappings.ebs.withKmsKeyId
+
+```ts
+withKmsKeyId(kmsKeyId)
+```
+
+"Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer managed CMK under which the EBS volume is encrypted. \n This parameter is only supported on BlockDeviceMapping objects called by RunInstances (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html), RequestSpotFleet (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html), and RequestSpotInstances (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotInstances.html)."
+
+### fn spec.forProvider.blockDeviceMappings.ebs.withSnapshotId
+
+```ts
+withSnapshotId(snapshotId)
+```
+
+"The ID of the snapshot."
+
+### fn spec.forProvider.blockDeviceMappings.ebs.withVolumeSize
+
+```ts
+withVolumeSize(volumeSize)
+```
+
+"The size of the volume, in GiB. \n Default: If you're creating the volume from a snapshot and don't specify a volume size, the default is the snapshot size. \n Constraints: 1-16384 for General Purpose SSD (gp2), 4-16384 for Provisioned IOPS SSD (io1), 500-16384 for Throughput Optimized HDD (st1), 500-16384 for Cold HDD (sc1), and 1-1024 for Magnetic (standard) volumes. If you specify a snapshot, the volume size must be equal to or larger than the snapshot size."
+
+### fn spec.forProvider.blockDeviceMappings.ebs.withVolumeType
+
+```ts
+withVolumeType(volumeType)
+```
+
+"The volume type. If you set the type to io1, you must also specify the Iops parameter. If you set the type to gp2, st1, sc1, or standard, you must omit the Iops parameter. \n Default: gp2"
+
 ## obj spec.forProvider.capacityReservationSpecification
 
 "Information about the Capacity Reservation targeting option. If you do not specify this parameter, the instance's Capacity Reservation preference defaults to open, which enables it to run in any open Capacity Reservation that has matching attributes (instance type, platform, Availability Zone)."
@@ -682,6 +805,38 @@ withCpuCredits(cpuCredits)
 ```
 
 "The credit option for CPU usage of a T2 or T3 instance. Valid values are standard and unlimited. \n CPUCredits is a required field"
+
+## obj spec.forProvider.elasticGpuSpecification
+
+"An elastic GPU to associate with the instance. An Elastic GPU is a GPU resource that you can attach to your Windows instance to accelerate the graphics performance of your applications. For more information, see Amazon EC2 Elastic GPUs (https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html) in the Amazon Elastic Compute Cloud User Guide."
+
+### fn spec.forProvider.elasticGpuSpecification.withType
+
+```ts
+withType(type)
+```
+
+"The type of Elastic Graphics accelerator. For more information about the values to specify for Type, see Elastic Graphics Basics (https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics), specifically the Elastic Graphics accelerator column, in the Amazon Elastic Compute Cloud User Guide for Windows Instances. \n Type is a required field"
+
+## obj spec.forProvider.elasticInferenceAccelerators
+
+"An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference workloads. \n You cannot specify accelerators from different generations in the same request."
+
+### fn spec.forProvider.elasticInferenceAccelerators.withCount
+
+```ts
+withCount(count)
+```
+
+"The number of elastic inference accelerators to attach to the instance. \n Default: 1"
+
+### fn spec.forProvider.elasticInferenceAccelerators.withType
+
+```ts
+withType(type)
+```
+
+"The type of elastic inference accelerator. The possible values are eia1.medium, eia1.large, and eia1.xlarge. \n Type is a required field"
 
 ## obj spec.forProvider.hibernationOptions
 
@@ -771,6 +926,18 @@ withValidUntil(validUntil)
 
 "The end date of the request. For a one-time request, the request remains active until all instances launch, the request is canceled, or this date is reached. If the request is persistent, it remains active until it is canceled or this date and time is reached. The default end date is 7 days from the current date. Must be in UTC format (YYYY-MM-DDTHH:MM:SSZ)"
 
+## obj spec.forProvider.ipv6Addresses
+
+"[EC2-VPC] The IPv6 addresses from the range of the subnet to associate with the primary network interface. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number of instances to launch. \n You cannot specify this option and the network interfaces option in the same request."
+
+### fn spec.forProvider.ipv6Addresses.withIpv6Address
+
+```ts
+withIpv6Address(ipv6Address)
+```
+
+"The IPv6 address."
+
 ## obj spec.forProvider.launchTemplate
 
 "The launch template to use to launch the instances. Any parameters that you specify in RunInstances override the same parameters in the launch template. You can specify either the name or ID of a launch template, but not both."
@@ -798,6 +965,18 @@ withVersion(version)
 ```
 
 "The version number of the launch template. \n Default: The default version for the launch template."
+
+## obj spec.forProvider.licenseSpecifications
+
+"The Amazon Resource Name (ARN) of the license configuration"
+
+### fn spec.forProvider.licenseSpecifications.withLicenseConfigurationArn
+
+```ts
+withLicenseConfigurationArn(licenseConfigurationArn)
+```
+
+"Amazon Resource Name (ARN) of the license configuration"
 
 ## obj spec.forProvider.metadataOptions
 
@@ -838,6 +1017,176 @@ withEnabled(enabled)
 ```
 
 "Indicates whether detailed monitoring is enabled. Otherwise, basic monitoring is enabled. \n Enabled is a required field"
+
+## obj spec.forProvider.networkInterfaces
+
+"The network interfaces to associate with the instance. If you specify a network interface, you must specify any security groups and subnets as part of the network interface."
+
+### fn spec.forProvider.networkInterfaces.withAssociatePublicIpAddress
+
+```ts
+withAssociatePublicIpAddress(associatePublicIpAddress)
+```
+
+"Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one. You cannot specify more than one network interface in the request. If launching into a default subnet, the default value is true."
+
+### fn spec.forProvider.networkInterfaces.withDeleteOnTermination
+
+```ts
+withDeleteOnTermination(deleteOnTermination)
+```
+
+"If set to true, the interface is deleted when the instance is terminated. You can specify true only if creating a new network interface when launching an instance."
+
+### fn spec.forProvider.networkInterfaces.withDescription
+
+```ts
+withDescription(description)
+```
+
+"The description of the network interface. Applies only if creating a network interface when launching an instance."
+
+### fn spec.forProvider.networkInterfaces.withDeviceIndex
+
+```ts
+withDeviceIndex(deviceIndex)
+```
+
+"The position of the network interface in the attachment order. A primary network interface has a device index of 0. \n If you specify a network interface when launching an instance, you must specify the device index."
+
+### fn spec.forProvider.networkInterfaces.withGroups
+
+```ts
+withGroups(groups)
+```
+
+"The IDs of the security groups for the network interface. Applies only if creating a network interface when launching an instance."
+
+### fn spec.forProvider.networkInterfaces.withGroupsMixin
+
+```ts
+withGroupsMixin(groups)
+```
+
+"The IDs of the security groups for the network interface. Applies only if creating a network interface when launching an instance."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.networkInterfaces.withInterfaceType
+
+```ts
+withInterfaceType(interfaceType)
+```
+
+"The type of network interface. To create an Elastic Fabric Adapter (EFA), specify efa. For more information, see Elastic Fabric Adapter (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the Amazon Elastic Compute Cloud User Guide. \n If you are not creating an EFA, specify interface or omit this parameter. \n Valid values: interface | efa"
+
+### fn spec.forProvider.networkInterfaces.withIpv6AddressCount
+
+```ts
+withIpv6AddressCount(ipv6AddressCount)
+```
+
+"A number of IPv6 addresses to assign to the network interface. Amazon EC2 chooses the IPv6 addresses from the range of the subnet. You cannot specify this option and the option to assign specific IPv6 addresses in the same request. You can specify this option if you've specified a minimum number of instances to launch."
+
+### fn spec.forProvider.networkInterfaces.withIpv6Addresses
+
+```ts
+withIpv6Addresses(ipv6Addresses)
+```
+
+"One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number of instances to launch."
+
+### fn spec.forProvider.networkInterfaces.withIpv6AddressesMixin
+
+```ts
+withIpv6AddressesMixin(ipv6Addresses)
+```
+
+"One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number of instances to launch."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.networkInterfaces.withNetworkInterfaceId
+
+```ts
+withNetworkInterfaceId(networkInterfaceId)
+```
+
+"The ID of the network interface. \n If you are creating a Spot Fleet, omit this parameter because you can’t specify a network interface ID in a launch specification."
+
+### fn spec.forProvider.networkInterfaces.withPrivateIpAddress
+
+```ts
+withPrivateIpAddress(privateIpAddress)
+```
+
+"The private IPv4 address of the network interface. Applies only if creating a network interface when launching an instance. You cannot specify this option if you're launching more than one instance in a RunInstances (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request."
+
+### fn spec.forProvider.networkInterfaces.withPrivateIpAddresses
+
+```ts
+withPrivateIpAddresses(privateIpAddresses)
+```
+
+"One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be designated as primary. You cannot specify this option if you're launching more than one instance in a RunInstances (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request."
+
+### fn spec.forProvider.networkInterfaces.withPrivateIpAddressesMixin
+
+```ts
+withPrivateIpAddressesMixin(privateIpAddresses)
+```
+
+"One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be designated as primary. You cannot specify this option if you're launching more than one instance in a RunInstances (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.networkInterfaces.withSecondaryPrivateIpAddressCount
+
+```ts
+withSecondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
+```
+
+"The number of secondary private IPv4 addresses. You can't specify this option and specify more than one private IP address using the private IP addresses option. You cannot specify this option if you're launching more than one instance in a RunInstances (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request."
+
+### fn spec.forProvider.networkInterfaces.withSubnetId
+
+```ts
+withSubnetId(subnetId)
+```
+
+"The ID of the subnet associated with the network interface. Applies only if creating a network interface when launching an instance."
+
+## obj spec.forProvider.networkInterfaces.ipv6Addresses
+
+"One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number of instances to launch."
+
+### fn spec.forProvider.networkInterfaces.ipv6Addresses.withIpv6Address
+
+```ts
+withIpv6Address(ipv6Address)
+```
+
+"The IPv6 address."
+
+## obj spec.forProvider.networkInterfaces.privateIpAddresses
+
+"One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be designated as primary. You cannot specify this option if you're launching more than one instance in a RunInstances (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request."
+
+### fn spec.forProvider.networkInterfaces.privateIpAddresses.withPrimary
+
+```ts
+withPrimary(primary)
+```
+
+"Indicates whether the private IPv4 address is the primary private IPv4 address. Only one IPv4 address can be designated as primary."
+
+### fn spec.forProvider.networkInterfaces.privateIpAddresses.withPrivateIPAddress
+
+```ts
+withPrivateIPAddress(privateIPAddress)
+```
+
+"The private IPv4 addresses."
 
 ## obj spec.forProvider.placement
 
@@ -906,6 +1255,18 @@ withTenancy(tenancy)
 ```
 
 "The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the ImportInstance (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html) command. \n This parameter is not supported by CreateFleet (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)."
+
+## obj spec.forProvider.securityGroupRefs
+
+"SecurityGroupsRefs is a list of references to SecurityGroups used to set the SecurityGroupIDs."
+
+### fn spec.forProvider.securityGroupRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
 
 ## obj spec.forProvider.securityGroupSelector
 
@@ -978,6 +1339,76 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.tagSpecifications
+
+"The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been created, see CreateTags (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html)."
+
+### fn spec.forProvider.tagSpecifications.withResourceType
+
+```ts
+withResourceType(resourceType)
+```
+
+"The type of resource to tag. Currently, the resource types that support tagging on creation are: capacity-reservation | client-vpn-endpoint | dedicated-host | fleet | fpga-image | instance | ipv4pool-ec2 | ipv6pool-ec2 | key-pair | launch-template | natgateway | spot-fleet-request | placement-group | snapshot | traffic-mirror-filter | traffic-mirror-session | traffic-mirror-target | transit-gateway | transit-gateway-attachment | transit-gateway-route-table | vpc-endpoint (for interface VPC endpoints)| vpc-endpoint-service (for gateway VPC endpoints) | volume | vpc-flow-log. \n To tag a resource after it has been created, see CreateTags (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html)."
+
+### fn spec.forProvider.tagSpecifications.withTags
+
+```ts
+withTags(tags)
+```
+
+"The tags to apply to the resource"
+
+### fn spec.forProvider.tagSpecifications.withTagsMixin
+
+```ts
+withTagsMixin(tags)
+```
+
+"The tags to apply to the resource"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.tagSpecifications.tags
+
+"The tags to apply to the resource"
+
+### fn spec.forProvider.tagSpecifications.tags.withKey
+
+```ts
+withKey(key)
+```
+
+"Key is the name of the tag."
+
+### fn spec.forProvider.tagSpecifications.tags.withValue
+
+```ts
+withValue(value)
+```
+
+"Value is the value of the tag."
+
+## obj spec.forProvider.tags
+
+"Tags are used as identification helpers between AWS resources."
+
+### fn spec.forProvider.tags.withKey
+
+```ts
+withKey(key)
+```
+
+"Key is the name of the tag."
+
+### fn spec.forProvider.tags.withValue
+
+```ts
+withValue(value)
+```
+
+"Value is the value of the tag."
 
 ## obj spec.providerConfigRef
 

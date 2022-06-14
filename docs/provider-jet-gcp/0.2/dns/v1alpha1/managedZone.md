@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/dns/v1alpha1/managedZone/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -50,6 +48,33 @@ permalink: /provider-jet-gcp/0.2/dns/v1alpha1/managedZone/
     * [`fn withPrivateVisibilityConfigMixin(privateVisibilityConfig)`](#fn-specforproviderwithprivatevisibilityconfigmixin)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withVisibility(visibility)`](#fn-specforproviderwithvisibility)
+    * [`obj spec.forProvider.dnssecConfig`](#obj-specforproviderdnssecconfig)
+      * [`fn withDefaultKeySpecs(defaultKeySpecs)`](#fn-specforproviderdnssecconfigwithdefaultkeyspecs)
+      * [`fn withDefaultKeySpecsMixin(defaultKeySpecs)`](#fn-specforproviderdnssecconfigwithdefaultkeyspecsmixin)
+      * [`fn withKind(kind)`](#fn-specforproviderdnssecconfigwithkind)
+      * [`fn withNonExistence(nonExistence)`](#fn-specforproviderdnssecconfigwithnonexistence)
+      * [`fn withState(state)`](#fn-specforproviderdnssecconfigwithstate)
+      * [`obj spec.forProvider.dnssecConfig.defaultKeySpecs`](#obj-specforproviderdnssecconfigdefaultkeyspecs)
+        * [`fn withAlgorithm(algorithm)`](#fn-specforproviderdnssecconfigdefaultkeyspecswithalgorithm)
+        * [`fn withKeyLength(keyLength)`](#fn-specforproviderdnssecconfigdefaultkeyspecswithkeylength)
+        * [`fn withKeyType(keyType)`](#fn-specforproviderdnssecconfigdefaultkeyspecswithkeytype)
+        * [`fn withKind(kind)`](#fn-specforproviderdnssecconfigdefaultkeyspecswithkind)
+    * [`obj spec.forProvider.forwardingConfig`](#obj-specforproviderforwardingconfig)
+      * [`fn withTargetNameServers(targetNameServers)`](#fn-specforproviderforwardingconfigwithtargetnameservers)
+      * [`fn withTargetNameServersMixin(targetNameServers)`](#fn-specforproviderforwardingconfigwithtargetnameserversmixin)
+      * [`obj spec.forProvider.forwardingConfig.targetNameServers`](#obj-specforproviderforwardingconfigtargetnameservers)
+        * [`fn withForwardingPath(forwardingPath)`](#fn-specforproviderforwardingconfigtargetnameserverswithforwardingpath)
+        * [`fn withIpv4Address(ipv4Address)`](#fn-specforproviderforwardingconfigtargetnameserverswithipv4address)
+    * [`obj spec.forProvider.peeringConfig`](#obj-specforproviderpeeringconfig)
+      * [`fn withTargetNetwork(targetNetwork)`](#fn-specforproviderpeeringconfigwithtargetnetwork)
+      * [`fn withTargetNetworkMixin(targetNetwork)`](#fn-specforproviderpeeringconfigwithtargetnetworkmixin)
+      * [`obj spec.forProvider.peeringConfig.targetNetwork`](#obj-specforproviderpeeringconfigtargetnetwork)
+        * [`fn withNetworkUrl(networkUrl)`](#fn-specforproviderpeeringconfigtargetnetworkwithnetworkurl)
+    * [`obj spec.forProvider.privateVisibilityConfig`](#obj-specforproviderprivatevisibilityconfig)
+      * [`fn withNetworks(networks)`](#fn-specforproviderprivatevisibilityconfigwithnetworks)
+      * [`fn withNetworksMixin(networks)`](#fn-specforproviderprivatevisibilityconfigwithnetworksmixin)
+      * [`obj spec.forProvider.privateVisibilityConfig.networks`](#obj-specforproviderprivatevisibilityconfignetworks)
+        * [`fn withNetworkUrl(networkUrl)`](#fn-specforproviderprivatevisibilityconfignetworkswithnetworkurl)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -171,24 +196,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -403,6 +410,198 @@ withVisibility(visibility)
 ```
 
 "The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources. Default value: \"public\" Possible values: [\"private\", \"public\"]"
+
+## obj spec.forProvider.dnssecConfig
+
+"DNSSEC configuration"
+
+### fn spec.forProvider.dnssecConfig.withDefaultKeySpecs
+
+```ts
+withDefaultKeySpecs(defaultKeySpecs)
+```
+
+"Specifies parameters that will be used for generating initial DnsKeys for this ManagedZone. If you provide a spec for keySigning or zoneSigning, you must also provide one for the other. default_key_specs can only be updated when the state is 'off'."
+
+### fn spec.forProvider.dnssecConfig.withDefaultKeySpecsMixin
+
+```ts
+withDefaultKeySpecsMixin(defaultKeySpecs)
+```
+
+"Specifies parameters that will be used for generating initial DnsKeys for this ManagedZone. If you provide a spec for keySigning or zoneSigning, you must also provide one for the other. default_key_specs can only be updated when the state is 'off'."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.dnssecConfig.withKind
+
+```ts
+withKind(kind)
+```
+
+"Identifies what kind of resource this is"
+
+### fn spec.forProvider.dnssecConfig.withNonExistence
+
+```ts
+withNonExistence(nonExistence)
+```
+
+"Specifies the mechanism used to provide authenticated denial-of-existence responses. non_existence can only be updated when the state is 'off'. Possible values: [\"nsec\", \"nsec3\"]"
+
+### fn spec.forProvider.dnssecConfig.withState
+
+```ts
+withState(state)
+```
+
+"Specifies whether DNSSEC is enabled, and what mode it is in Possible values: [\"off\", \"on\", \"transfer\"]"
+
+## obj spec.forProvider.dnssecConfig.defaultKeySpecs
+
+"Specifies parameters that will be used for generating initial DnsKeys for this ManagedZone. If you provide a spec for keySigning or zoneSigning, you must also provide one for the other. default_key_specs can only be updated when the state is 'off'."
+
+### fn spec.forProvider.dnssecConfig.defaultKeySpecs.withAlgorithm
+
+```ts
+withAlgorithm(algorithm)
+```
+
+"String mnemonic specifying the DNSSEC algorithm of this key Possible values: [\"ecdsap256sha256\", \"ecdsap384sha384\", \"rsasha1\", \"rsasha256\", \"rsasha512\"]"
+
+### fn spec.forProvider.dnssecConfig.defaultKeySpecs.withKeyLength
+
+```ts
+withKeyLength(keyLength)
+```
+
+"Length of the keys in bits"
+
+### fn spec.forProvider.dnssecConfig.defaultKeySpecs.withKeyType
+
+```ts
+withKeyType(keyType)
+```
+
+"Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, will only be used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and will be used to sign all other types of resource record sets. Possible values: [\"keySigning\", \"zoneSigning\"]"
+
+### fn spec.forProvider.dnssecConfig.defaultKeySpecs.withKind
+
+```ts
+withKind(kind)
+```
+
+"Identifies what kind of resource this is"
+
+## obj spec.forProvider.forwardingConfig
+
+"The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to."
+
+### fn spec.forProvider.forwardingConfig.withTargetNameServers
+
+```ts
+withTargetNameServers(targetNameServers)
+```
+
+"List of target name servers to forward to. Cloud DNS will select the best available name server if more than one target is given."
+
+### fn spec.forProvider.forwardingConfig.withTargetNameServersMixin
+
+```ts
+withTargetNameServersMixin(targetNameServers)
+```
+
+"List of target name servers to forward to. Cloud DNS will select the best available name server if more than one target is given."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.forwardingConfig.targetNameServers
+
+"List of target name servers to forward to. Cloud DNS will select the best available name server if more than one target is given."
+
+### fn spec.forProvider.forwardingConfig.targetNameServers.withForwardingPath
+
+```ts
+withForwardingPath(forwardingPath)
+```
+
+"Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: [\"default\", \"private\"]"
+
+### fn spec.forProvider.forwardingConfig.targetNameServers.withIpv4Address
+
+```ts
+withIpv4Address(ipv4Address)
+```
+
+"IPv4 address of a target name server."
+
+## obj spec.forProvider.peeringConfig
+
+"The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with."
+
+### fn spec.forProvider.peeringConfig.withTargetNetwork
+
+```ts
+withTargetNetwork(targetNetwork)
+```
+
+"The network with which to peer."
+
+### fn spec.forProvider.peeringConfig.withTargetNetworkMixin
+
+```ts
+withTargetNetworkMixin(targetNetwork)
+```
+
+"The network with which to peer."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.peeringConfig.targetNetwork
+
+"The network with which to peer."
+
+### fn spec.forProvider.peeringConfig.targetNetwork.withNetworkUrl
+
+```ts
+withNetworkUrl(networkUrl)
+```
+
+"The id or fully qualified URL of the VPC network to forward queries to. This should be formatted like 'projects/{project}/global/networks/{network}' or 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'"
+
+## obj spec.forProvider.privateVisibilityConfig
+
+"For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from."
+
+### fn spec.forProvider.privateVisibilityConfig.withNetworks
+
+```ts
+withNetworks(networks)
+```
+
+"The list of VPC networks that can see this zone. Until the provider updates to use the Terraform 0.12 SDK in a future release, you may experience issues with this resource while updating. If you've defined a 'networks' block and add another 'networks' block while keeping the old block, Terraform will see an incorrect diff and apply an incorrect update to the resource. If you encounter this issue, remove all 'networks' blocks in an update and then apply another update adding all of them back simultaneously."
+
+### fn spec.forProvider.privateVisibilityConfig.withNetworksMixin
+
+```ts
+withNetworksMixin(networks)
+```
+
+"The list of VPC networks that can see this zone. Until the provider updates to use the Terraform 0.12 SDK in a future release, you may experience issues with this resource while updating. If you've defined a 'networks' block and add another 'networks' block while keeping the old block, Terraform will see an incorrect diff and apply an incorrect update to the resource. If you encounter this issue, remove all 'networks' blocks in an update and then apply another update adding all of them back simultaneously."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.privateVisibilityConfig.networks
+
+"The list of VPC networks that can see this zone. Until the provider updates to use the Terraform 0.12 SDK in a future release, you may experience issues with this resource while updating. If you've defined a 'networks' block and add another 'networks' block while keeping the old block, Terraform will see an incorrect diff and apply an incorrect update to the resource. If you encounter this issue, remove all 'networks' blocks in an update and then apply another update adding all of them back simultaneously."
+
+### fn spec.forProvider.privateVisibilityConfig.networks.withNetworkUrl
+
+```ts
+withNetworkUrl(networkUrl)
+```
+
+"The id or fully qualified URL of the VPC network to bind to. This should be formatted like 'projects/{project}/global/networks/{network}' or 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'"
 
 ## obj spec.providerConfigRef
 

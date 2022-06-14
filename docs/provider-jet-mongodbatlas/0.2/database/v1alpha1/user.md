@@ -22,8 +22,6 @@ permalink: /provider-jet-mongodbatlas/0.2/database/v1alpha1/user/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -47,6 +45,9 @@ permalink: /provider-jet-mongodbatlas/0.2/database/v1alpha1/user/
     * [`fn withScopesMixin(scopes)`](#fn-specforproviderwithscopesmixin)
     * [`fn withUsername(username)`](#fn-specforproviderwithusername)
     * [`fn withX509Type(x509Type)`](#fn-specforproviderwithx509type)
+    * [`obj spec.forProvider.labels`](#obj-specforproviderlabels)
+      * [`fn withKey(key)`](#fn-specforproviderlabelswithkey)
+      * [`fn withValue(value)`](#fn-specforproviderlabelswithvalue)
     * [`obj spec.forProvider.passwordSecretRef`](#obj-specforproviderpasswordsecretref)
       * [`fn withKey(key)`](#fn-specforproviderpasswordsecretrefwithkey)
       * [`fn withName(name)`](#fn-specforproviderpasswordsecretrefwithname)
@@ -57,6 +58,13 @@ permalink: /provider-jet-mongodbatlas/0.2/database/v1alpha1/user/
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderprojectidselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderprojectidselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderprojectidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.roles`](#obj-specforproviderroles)
+      * [`fn withCollectionName(collectionName)`](#fn-specforproviderroleswithcollectionname)
+      * [`fn withDatabaseName(databaseName)`](#fn-specforproviderroleswithdatabasename)
+      * [`fn withRoleName(roleName)`](#fn-specforproviderroleswithrolename)
+    * [`obj spec.forProvider.scopes`](#obj-specforproviderscopes)
+      * [`fn withName(name)`](#fn-specforproviderscopeswithname)
+      * [`fn withType(type)`](#fn-specforproviderscopeswithtype)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -178,24 +186,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -383,6 +373,26 @@ withX509Type(x509Type)
 
 
 
+## obj spec.forProvider.labels
+
+
+
+### fn spec.forProvider.labels.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.labels.withValue
+
+```ts
+withValue(value)
+```
+
+
+
 ## obj spec.forProvider.passwordSecretRef
 
 "A SecretKeySelector is a reference to a secret key in an arbitrary namespace."
@@ -452,6 +462,54 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.roles
+
+
+
+### fn spec.forProvider.roles.withCollectionName
+
+```ts
+withCollectionName(collectionName)
+```
+
+
+
+### fn spec.forProvider.roles.withDatabaseName
+
+```ts
+withDatabaseName(databaseName)
+```
+
+
+
+### fn spec.forProvider.roles.withRoleName
+
+```ts
+withRoleName(roleName)
+```
+
+
+
+## obj spec.forProvider.scopes
+
+
+
+### fn spec.forProvider.scopes.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forProvider.scopes.withType
+
+```ts
+withType(type)
+```
+
+
 
 ## obj spec.providerConfigRef
 

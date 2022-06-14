@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/serviceNetworkSettings/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -38,6 +36,8 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/serviceNetworkSettings/
     * [`fn withNetworkSettingsMixin(networkSettings)`](#fn-specforproviderwithnetworksettingsmixin)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withService(service)`](#fn-specforproviderwithservice)
+    * [`obj spec.forProvider.networkSettings`](#obj-specforprovidernetworksettings)
+      * [`fn withIngressTrafficAllowed(ingressTrafficAllowed)`](#fn-specforprovidernetworksettingswithingresstrafficallowed)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -162,24 +162,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -287,6 +269,18 @@ withService(service)
 ```
 
 "The name of the service these settings apply to."
+
+## obj spec.forProvider.networkSettings
+
+"Ingress settings for this service. Will apply to all versions."
+
+### fn spec.forProvider.networkSettings.withIngressTrafficAllowed
+
+```ts
+withIngressTrafficAllowed(ingressTrafficAllowed)
+```
+
+"The ingress settings for version or service. Default value: \"INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED\" Possible values: [\"INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED\", \"INGRESS_TRAFFIC_ALLOWED_ALL\", \"INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY\", \"INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB\"]"
 
 ## obj spec.providerConfigRef
 

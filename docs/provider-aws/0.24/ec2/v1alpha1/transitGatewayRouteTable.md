@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/ec2/v1alpha1/transitGatewayRouteTable/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -40,6 +38,16 @@ permalink: /provider-aws/0.24/ec2/v1alpha1/transitGatewayRouteTable/
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
     * [`fn withTransitGatewayId(transitGatewayId)`](#fn-specforproviderwithtransitgatewayid)
+    * [`obj spec.forProvider.tagSpecifications`](#obj-specforprovidertagspecifications)
+      * [`fn withResourceType(resourceType)`](#fn-specforprovidertagspecificationswithresourcetype)
+      * [`fn withTags(tags)`](#fn-specforprovidertagspecificationswithtags)
+      * [`fn withTagsMixin(tags)`](#fn-specforprovidertagspecificationswithtagsmixin)
+      * [`obj spec.forProvider.tagSpecifications.tags`](#obj-specforprovidertagspecificationstags)
+        * [`fn withKey(key)`](#fn-specforprovidertagspecificationstagswithkey)
+        * [`fn withValue(value)`](#fn-specforprovidertagspecificationstagswithvalue)
+    * [`obj spec.forProvider.tags`](#obj-specforprovidertags)
+      * [`fn withKey(key)`](#fn-specforprovidertagswithkey)
+      * [`fn withValue(value)`](#fn-specforprovidertagswithvalue)
     * [`obj spec.forProvider.transitGatewayIdRef`](#obj-specforprovidertransitgatewayidref)
       * [`fn withName(name)`](#fn-specforprovidertransitgatewayidrefwithname)
     * [`obj spec.forProvider.transitGatewayIdSelector`](#obj-specforprovidertransitgatewayidselector)
@@ -170,24 +178,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -313,6 +303,76 @@ withTransitGatewayId(transitGatewayId)
 ```
 
 "The ID of the transit gateway."
+
+## obj spec.forProvider.tagSpecifications
+
+"The tags to apply to the transit gateway route table."
+
+### fn spec.forProvider.tagSpecifications.withResourceType
+
+```ts
+withResourceType(resourceType)
+```
+
+
+
+### fn spec.forProvider.tagSpecifications.withTags
+
+```ts
+withTags(tags)
+```
+
+
+
+### fn spec.forProvider.tagSpecifications.withTagsMixin
+
+```ts
+withTagsMixin(tags)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.tagSpecifications.tags
+
+
+
+### fn spec.forProvider.tagSpecifications.tags.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.tagSpecifications.tags.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.forProvider.tags
+
+"Metadata tagging key value pairs"
+
+### fn spec.forProvider.tags.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.tags.withValue
+
+```ts
+withValue(value)
+```
+
+
 
 ## obj spec.forProvider.transitGatewayIdRef
 

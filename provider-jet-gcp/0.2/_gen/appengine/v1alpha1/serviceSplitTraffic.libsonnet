@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,15 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#split':: d.obj(help='"Mapping that defines fractional HTTP traffic diversion to different versions within the service."'),
+      split: {
+        '#withAllocations':: d.fn(help='"Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits."', args=[d.arg(name='allocations', type=d.T.object)]),
+        withAllocations(allocations): { allocations: allocations },
+        '#withAllocationsMixin':: d.fn(help='"Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='allocations', type=d.T.object)]),
+        withAllocationsMixin(allocations): { allocations+: allocations },
+        '#withShardBy':: d.fn(help='"Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed. Possible values: [\\"UNSPECIFIED\\", \\"COOKIE\\", \\"IP\\", \\"RANDOM\\"]"', args=[d.arg(name='shardBy', type=d.T.string)]),
+        withShardBy(shardBy): { shardBy: shardBy },
+      },
       '#withMigrateTraffic':: d.fn(help='"If set to true traffic will be migrated to this version."', args=[d.arg(name='migrateTraffic', type=d.T.boolean)]),
       withMigrateTraffic(migrateTraffic): { spec+: { forProvider+: { migrateTraffic: migrateTraffic } } },
       '#withProject':: d.fn(help='', args=[d.arg(name='project', type=d.T.string)]),

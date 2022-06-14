@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,20 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#entities':: d.obj(help='"The collection of entity entries associated with the entity type."'),
+      entities: {
+        '#withSynonyms':: d.fn(help='"A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions. For KIND_LIST entity types: This collection must contain exactly one synonym equal to value."', args=[d.arg(name='synonyms', type=d.T.array)]),
+        withSynonyms(synonyms): { synonyms: if std.isArray(v=synonyms) then synonyms else [synonyms] },
+        '#withSynonymsMixin':: d.fn(help='"A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions. For KIND_LIST entity types: This collection must contain exactly one synonym equal to value."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='synonyms', type=d.T.array)]),
+        withSynonymsMixin(synonyms): { synonyms+: if std.isArray(v=synonyms) then synonyms else [synonyms] },
+        '#withValue':: d.fn(help='"The primary value associated with this entity entry. For example, if the entity type is vegetable, the value could be scallions. For KIND_MAP entity types: A canonical value to be used in place of synonyms. For KIND_LIST entity types: A string that can contain references to other entity types (with or without aliases)."', args=[d.arg(name='value', type=d.T.string)]),
+        withValue(value): { value: value },
+      },
+      '#excludedPhrases':: d.obj(help="\"Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion. If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive.\""),
+      excludedPhrases: {
+        '#withValue':: d.fn(help='"The word or phrase to be excluded."', args=[d.arg(name='value', type=d.T.string)]),
+        withValue(value): { value: value },
+      },
       '#withAutoExpansionMode':: d.fn(help='"Represents kinds of entities. * AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity. * AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity. Possible values: [\\"AUTO_EXPANSION_MODE_DEFAULT\\", \\"AUTO_EXPANSION_MODE_UNSPECIFIED\\"]"', args=[d.arg(name='autoExpansionMode', type=d.T.string)]),
       withAutoExpansionMode(autoExpansionMode): { spec+: { forProvider+: { autoExpansionMode: autoExpansionMode } } },
       '#withDisplayName':: d.fn(help='"The human-readable name of the entity type, unique within the agent."', args=[d.arg(name='displayName', type=d.T.string)]),

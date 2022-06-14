@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/bigquery/v1alpha1/routine/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -47,6 +45,11 @@ permalink: /provider-jet-gcp/0.2/bigquery/v1alpha1/routine/
     * [`fn withReturnType(returnType)`](#fn-specforproviderwithreturntype)
     * [`fn withRoutineId(routineId)`](#fn-specforproviderwithroutineid)
     * [`fn withRoutineType(routineType)`](#fn-specforproviderwithroutinetype)
+    * [`obj spec.forProvider.arguments`](#obj-specforproviderarguments)
+      * [`fn withArgumentKind(argumentKind)`](#fn-specforproviderargumentswithargumentkind)
+      * [`fn withDataType(dataType)`](#fn-specforproviderargumentswithdatatype)
+      * [`fn withMode(mode)`](#fn-specforproviderargumentswithmode)
+      * [`fn withName(name)`](#fn-specforproviderargumentswithname)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -168,24 +171,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -370,6 +355,42 @@ withRoutineType(routineType)
 ```
 
 "The type of routine. Possible values: [\"SCALAR_FUNCTION\", \"PROCEDURE\"]"
+
+## obj spec.forProvider.arguments
+
+"Input/output argument of a function or a stored procedure."
+
+### fn spec.forProvider.arguments.withArgumentKind
+
+```ts
+withArgumentKind(argumentKind)
+```
+
+"Defaults to FIXED_TYPE. Default value: \"FIXED_TYPE\" Possible values: [\"FIXED_TYPE\", \"ANY_TYPE\"]"
+
+### fn spec.forProvider.arguments.withDataType
+
+```ts
+withDataType(dataType)
+```
+
+"A JSON schema for the data type. Required unless argumentKind = ANY_TYPE. ~>**NOTE**: Because this field expects a JSON string, any changes to the string will create a diff, even if the JSON itself hasn't changed. If the API returns a different value for the same schema, e.g. it switched the order of values or replaced STRUCT field type with RECORD field type, we currently cannot suppress the recurring diff this causes. As a workaround, we recommend using the schema as returned by the API."
+
+### fn spec.forProvider.arguments.withMode
+
+```ts
+withMode(mode)
+```
+
+"Specifies whether the argument is input or output. Can be set for procedures only. Possible values: [\"IN\", \"OUT\", \"INOUT\"]"
+
+### fn spec.forProvider.arguments.withName
+
+```ts
+withName(name)
+```
+
+"The name of this argument. Can be absent for function return argument."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/firestore/v1alpha1/index/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -40,6 +38,10 @@ permalink: /provider-jet-gcp/0.2/firestore/v1alpha1/index/
     * [`fn withFieldsMixin(fields)`](#fn-specforproviderwithfieldsmixin)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withQueryScope(queryScope)`](#fn-specforproviderwithqueryscope)
+    * [`obj spec.forProvider.fields`](#obj-specforproviderfields)
+      * [`fn withArrayConfig(arrayConfig)`](#fn-specforproviderfieldswitharrayconfig)
+      * [`fn withFieldPath(fieldPath)`](#fn-specforproviderfieldswithfieldpath)
+      * [`fn withOrder(order)`](#fn-specforproviderfieldswithorder)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -161,24 +163,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -305,6 +289,34 @@ withQueryScope(queryScope)
 ```
 
 "The scope at which a query is run. Default value: \"COLLECTION\" Possible values: [\"COLLECTION\", \"COLLECTION_GROUP\"]"
+
+## obj spec.forProvider.fields
+
+"The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation, '__name__' was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered '\"ASCENDING\"' (unless explicitly specified otherwise)."
+
+### fn spec.forProvider.fields.withArrayConfig
+
+```ts
+withArrayConfig(arrayConfig)
+```
+
+"Indicates that this field supports operations on arrayValues. Only one of 'order' and 'arrayConfig' can be specified. Possible values: [\"CONTAINS\"]"
+
+### fn spec.forProvider.fields.withFieldPath
+
+```ts
+withFieldPath(fieldPath)
+```
+
+"Name of the field."
+
+### fn spec.forProvider.fields.withOrder
+
+```ts
+withOrder(order)
+```
+
+"Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=. Only one of 'order' and 'arrayConfig' can be specified. Possible values: [\"ASCENDING\", \"DESCENDING\"]"
 
 ## obj spec.providerConfigRef
 

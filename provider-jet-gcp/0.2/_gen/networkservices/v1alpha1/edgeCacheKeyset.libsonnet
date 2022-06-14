@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,20 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#publicKey':: d.obj(help='"An ordered list of Ed25519 public keys to use for validating signed requests. You must specify at least one (1) key, and may have up to three (3) keys. \\n Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key. You should ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset."'),
+      publicKey: {
+        '#valueSecretRef':: d.obj(help='"The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes). Representations or encodings of the public key other than this will be rejected with an error."'),
+        valueSecretRef: {
+          '#withKey':: d.fn(help='"The key to select."', args=[d.arg(name='key', type=d.T.string)]),
+          withKey(key): { valueSecretRef+: { key: key } },
+          '#withName':: d.fn(help='"Name of the secret."', args=[d.arg(name='name', type=d.T.string)]),
+          withName(name): { valueSecretRef+: { name: name } },
+          '#withNamespace':: d.fn(help='"Namespace of the secret."', args=[d.arg(name='namespace', type=d.T.string)]),
+          withNamespace(namespace): { valueSecretRef+: { namespace: namespace } },
+        },
+        '#withId':: d.fn(help='"The ID of the public key. The ID must be 1-63 characters long, and comply with RFC1035. The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit."', args=[d.arg(name='id', type=d.T.string)]),
+        withId(id): { id: id },
+      },
       '#withDescription':: d.fn(help='"A human-readable description of the resource."', args=[d.arg(name='description', type=d.T.string)]),
       withDescription(description): { spec+: { forProvider+: { description: description } } },
       '#withLabels':: d.fn(help='"Set of label tags associated with the EdgeCache resource."', args=[d.arg(name='labels', type=d.T.object)]),

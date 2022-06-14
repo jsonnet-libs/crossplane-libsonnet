@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha2/subnetwork/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -49,12 +47,22 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha2/subnetwork/
     * [`fn withSecondaryIpRange(secondaryIpRange)`](#fn-specforproviderwithsecondaryiprange)
     * [`fn withSecondaryIpRangeMixin(secondaryIpRange)`](#fn-specforproviderwithsecondaryiprangemixin)
     * [`fn withStackType(stackType)`](#fn-specforproviderwithstacktype)
+    * [`obj spec.forProvider.logConfig`](#obj-specforproviderlogconfig)
+      * [`fn withAggregationInterval(aggregationInterval)`](#fn-specforproviderlogconfigwithaggregationinterval)
+      * [`fn withFilterExpr(filterExpr)`](#fn-specforproviderlogconfigwithfilterexpr)
+      * [`fn withFlowSampling(flowSampling)`](#fn-specforproviderlogconfigwithflowsampling)
+      * [`fn withMetadata(metadata)`](#fn-specforproviderlogconfigwithmetadata)
+      * [`fn withMetadataFields(metadataFields)`](#fn-specforproviderlogconfigwithmetadatafields)
+      * [`fn withMetadataFieldsMixin(metadataFields)`](#fn-specforproviderlogconfigwithmetadatafieldsmixin)
     * [`obj spec.forProvider.networkRef`](#obj-specforprovidernetworkref)
       * [`fn withName(name)`](#fn-specforprovidernetworkrefwithname)
     * [`obj spec.forProvider.networkSelector`](#obj-specforprovidernetworkselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidernetworkselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidernetworkselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidernetworkselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.secondaryIpRange`](#obj-specforprovidersecondaryiprange)
+      * [`fn withIpCidrRange(ipCidrRange)`](#fn-specforprovidersecondaryiprangewithipcidrrange)
+      * [`fn withRangeName(rangeName)`](#fn-specforprovidersecondaryiprangewithrangename)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -176,24 +184,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -395,6 +385,60 @@ withStackType(stackType)
 
 "The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used. Possible values: [\"IPV4_ONLY\", \"IPV4_IPV6\"]"
 
+## obj spec.forProvider.logConfig
+
+"Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver. This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_LOAD_BALANCER'"
+
+### fn spec.forProvider.logConfig.withAggregationInterval
+
+```ts
+withAggregationInterval(aggregationInterval)
+```
+
+"Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection. Default value: \"INTERVAL_5_SEC\" Possible values: [\"INTERVAL_5_SEC\", \"INTERVAL_30_SEC\", \"INTERVAL_1_MIN\", \"INTERVAL_5_MIN\", \"INTERVAL_10_MIN\", \"INTERVAL_15_MIN\"]"
+
+### fn spec.forProvider.logConfig.withFilterExpr
+
+```ts
+withFilterExpr(filterExpr)
+```
+
+"Export filter used to define which VPC flow logs should be logged, as as CEL expression. See https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field. The default value is 'true', which evaluates to include everything."
+
+### fn spec.forProvider.logConfig.withFlowSampling
+
+```ts
+withFlowSampling(flowSampling)
+```
+
+"Can only be specified if VPC flow logging for this subnetwork is enabled. The value of the field must be in [0, 1]. Set the sampling rate of VPC flow logs within the subnetwork where 1.0 means all collected logs are reported and 0.0 means no logs are reported. Default is 0.5 which means half of all collected logs are reported."
+
+### fn spec.forProvider.logConfig.withMetadata
+
+```ts
+withMetadata(metadata)
+```
+
+"Can only be specified if VPC flow logging for this subnetwork is enabled. Configures whether metadata fields should be added to the reported VPC flow logs. Default value: \"INCLUDE_ALL_METADATA\" Possible values: [\"EXCLUDE_ALL_METADATA\", \"INCLUDE_ALL_METADATA\", \"CUSTOM_METADATA\"]"
+
+### fn spec.forProvider.logConfig.withMetadataFields
+
+```ts
+withMetadataFields(metadataFields)
+```
+
+"List of metadata fields that should be added to reported logs. Can only be specified if VPC flow logs for this subnetwork is enabled and \"metadata\" is set to CUSTOM_METADATA."
+
+### fn spec.forProvider.logConfig.withMetadataFieldsMixin
+
+```ts
+withMetadataFieldsMixin(metadataFields)
+```
+
+"List of metadata fields that should be added to reported logs. Can only be specified if VPC flow logs for this subnetwork is enabled and \"metadata\" is set to CUSTOM_METADATA."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.forProvider.networkRef
 
 "A Reference to a named object."
@@ -436,6 +480,26 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.secondaryIpRange
+
+"An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary ranges. \n **Note**: This field uses [attr-as-block mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html) to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following syntax: 'example=[]' For more details about this behavior, see [this section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value)."
+
+### fn spec.forProvider.secondaryIpRange.withIpCidrRange
+
+```ts
+withIpCidrRange(ipCidrRange)
+```
+
+"The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported."
+
+### fn spec.forProvider.secondaryIpRange.withRangeName
+
+```ts
+withRangeName(rangeName)
+```
+
+"The name associated with this subnetwork secondary range, used when adding an alias IP range to a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the subnetwork."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/dynamodb/v1alpha1/table/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,37 @@ permalink: /provider-aws/0.24/dynamodb/v1alpha1/table/
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
+    * [`obj spec.forProvider.attributeDefinitions`](#obj-specforproviderattributedefinitions)
+      * [`fn withAttributeName(attributeName)`](#fn-specforproviderattributedefinitionswithattributename)
+      * [`fn withAttributeType(attributeType)`](#fn-specforproviderattributedefinitionswithattributetype)
+    * [`obj spec.forProvider.globalSecondaryIndexes`](#obj-specforproviderglobalsecondaryindexes)
+      * [`fn withIndexName(indexName)`](#fn-specforproviderglobalsecondaryindexeswithindexname)
+      * [`fn withKeySchema(keySchema)`](#fn-specforproviderglobalsecondaryindexeswithkeyschema)
+      * [`fn withKeySchemaMixin(keySchema)`](#fn-specforproviderglobalsecondaryindexeswithkeyschemamixin)
+      * [`obj spec.forProvider.globalSecondaryIndexes.keySchema`](#obj-specforproviderglobalsecondaryindexeskeyschema)
+        * [`fn withAttributeName(attributeName)`](#fn-specforproviderglobalsecondaryindexeskeyschemawithattributename)
+        * [`fn withKeyType(keyType)`](#fn-specforproviderglobalsecondaryindexeskeyschemawithkeytype)
+      * [`obj spec.forProvider.globalSecondaryIndexes.projection`](#obj-specforproviderglobalsecondaryindexesprojection)
+        * [`fn withNonKeyAttributes(nonKeyAttributes)`](#fn-specforproviderglobalsecondaryindexesprojectionwithnonkeyattributes)
+        * [`fn withNonKeyAttributesMixin(nonKeyAttributes)`](#fn-specforproviderglobalsecondaryindexesprojectionwithnonkeyattributesmixin)
+        * [`fn withProjectionType(projectionType)`](#fn-specforproviderglobalsecondaryindexesprojectionwithprojectiontype)
+      * [`obj spec.forProvider.globalSecondaryIndexes.provisionedThroughput`](#obj-specforproviderglobalsecondaryindexesprovisionedthroughput)
+        * [`fn withReadCapacityUnits(readCapacityUnits)`](#fn-specforproviderglobalsecondaryindexesprovisionedthroughputwithreadcapacityunits)
+        * [`fn withWriteCapacityUnits(writeCapacityUnits)`](#fn-specforproviderglobalsecondaryindexesprovisionedthroughputwithwritecapacityunits)
+    * [`obj spec.forProvider.keySchema`](#obj-specforproviderkeyschema)
+      * [`fn withAttributeName(attributeName)`](#fn-specforproviderkeyschemawithattributename)
+      * [`fn withKeyType(keyType)`](#fn-specforproviderkeyschemawithkeytype)
+    * [`obj spec.forProvider.localSecondaryIndexes`](#obj-specforproviderlocalsecondaryindexes)
+      * [`fn withIndexName(indexName)`](#fn-specforproviderlocalsecondaryindexeswithindexname)
+      * [`fn withKeySchema(keySchema)`](#fn-specforproviderlocalsecondaryindexeswithkeyschema)
+      * [`fn withKeySchemaMixin(keySchema)`](#fn-specforproviderlocalsecondaryindexeswithkeyschemamixin)
+      * [`obj spec.forProvider.localSecondaryIndexes.keySchema`](#obj-specforproviderlocalsecondaryindexeskeyschema)
+        * [`fn withAttributeName(attributeName)`](#fn-specforproviderlocalsecondaryindexeskeyschemawithattributename)
+        * [`fn withKeyType(keyType)`](#fn-specforproviderlocalsecondaryindexeskeyschemawithkeytype)
+      * [`obj spec.forProvider.localSecondaryIndexes.projection`](#obj-specforproviderlocalsecondaryindexesprojection)
+        * [`fn withNonKeyAttributes(nonKeyAttributes)`](#fn-specforproviderlocalsecondaryindexesprojectionwithnonkeyattributes)
+        * [`fn withNonKeyAttributesMixin(nonKeyAttributes)`](#fn-specforproviderlocalsecondaryindexesprojectionwithnonkeyattributesmixin)
+        * [`fn withProjectionType(projectionType)`](#fn-specforproviderlocalsecondaryindexesprojectionwithprojectiontype)
     * [`obj spec.forProvider.provisionedThroughput`](#obj-specforproviderprovisionedthroughput)
       * [`fn withReadCapacityUnits(readCapacityUnits)`](#fn-specforproviderprovisionedthroughputwithreadcapacityunits)
       * [`fn withWriteCapacityUnits(writeCapacityUnits)`](#fn-specforproviderprovisionedthroughputwithwritecapacityunits)
@@ -56,6 +85,9 @@ permalink: /provider-aws/0.24/dynamodb/v1alpha1/table/
     * [`obj spec.forProvider.streamSpecification`](#obj-specforproviderstreamspecification)
       * [`fn withStreamEnabled(streamEnabled)`](#fn-specforproviderstreamspecificationwithstreamenabled)
       * [`fn withStreamViewType(streamViewType)`](#fn-specforproviderstreamspecificationwithstreamviewtype)
+    * [`obj spec.forProvider.tags`](#obj-specforprovidertags)
+      * [`fn withKey(key)`](#fn-specforprovidertagswithkey)
+      * [`fn withValue(value)`](#fn-specforprovidertagswithvalue)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -177,24 +209,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -378,6 +392,226 @@ withTagsMixin(tags)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.attributeDefinitions
+
+"An array of attributes that describe the key schema for the table and indexes."
+
+### fn spec.forProvider.attributeDefinitions.withAttributeName
+
+```ts
+withAttributeName(attributeName)
+```
+
+
+
+### fn spec.forProvider.attributeDefinitions.withAttributeType
+
+```ts
+withAttributeType(attributeType)
+```
+
+
+
+## obj spec.forProvider.globalSecondaryIndexes
+
+"One or more global secondary indexes (the maximum is 20) to be created on the table. Each global secondary index in the array includes the following: \n    * IndexName - The name of the global secondary index. Must be unique only    for this table. \n    * KeySchema - Specifies the key schema for the global secondary index. \n    * Projection - Specifies attributes that are copied (projected) from the    table into the index. These are in addition to the primary key attributes    and index key attributes, which are automatically projected. Each attribute    specification is composed of: ProjectionType - One of the following: KEYS_ONLY    - Only the index and primary keys are projected into the index. INCLUDE    - Only the specified table attributes are projected into the index. The    list of projected attributes is in NonKeyAttributes. ALL - All of the    table attributes are projected into the index. NonKeyAttributes - A list    of one or more non-key attribute names that are projected into the secondary    index. The total count of attributes provided in NonKeyAttributes, summed    across all of the secondary indexes, must not exceed 100. If you project    the same attribute into two different indexes, this counts as two distinct    attributes when determining the total. \n    * ProvisionedThroughput - The provisioned throughput settings for the    global secondary index, consisting of read and write capacity units."
+
+### fn spec.forProvider.globalSecondaryIndexes.withIndexName
+
+```ts
+withIndexName(indexName)
+```
+
+
+
+### fn spec.forProvider.globalSecondaryIndexes.withKeySchema
+
+```ts
+withKeySchema(keySchema)
+```
+
+
+
+### fn spec.forProvider.globalSecondaryIndexes.withKeySchemaMixin
+
+```ts
+withKeySchemaMixin(keySchema)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.globalSecondaryIndexes.keySchema
+
+
+
+### fn spec.forProvider.globalSecondaryIndexes.keySchema.withAttributeName
+
+```ts
+withAttributeName(attributeName)
+```
+
+
+
+### fn spec.forProvider.globalSecondaryIndexes.keySchema.withKeyType
+
+```ts
+withKeyType(keyType)
+```
+
+
+
+## obj spec.forProvider.globalSecondaryIndexes.projection
+
+"Represents attributes that are copied (projected) from the table into an index. These are in addition to the primary key attributes and index key attributes, which are automatically projected."
+
+### fn spec.forProvider.globalSecondaryIndexes.projection.withNonKeyAttributes
+
+```ts
+withNonKeyAttributes(nonKeyAttributes)
+```
+
+
+
+### fn spec.forProvider.globalSecondaryIndexes.projection.withNonKeyAttributesMixin
+
+```ts
+withNonKeyAttributesMixin(nonKeyAttributes)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.globalSecondaryIndexes.projection.withProjectionType
+
+```ts
+withProjectionType(projectionType)
+```
+
+
+
+## obj spec.forProvider.globalSecondaryIndexes.provisionedThroughput
+
+"Represents the provisioned throughput settings for a specified table or index. The settings can be modified using the UpdateTable operation. \n For current minimum and maximum provisioned throughput values, see Service, Account, and Table Quotas (https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the Amazon DynamoDB Developer Guide."
+
+### fn spec.forProvider.globalSecondaryIndexes.provisionedThroughput.withReadCapacityUnits
+
+```ts
+withReadCapacityUnits(readCapacityUnits)
+```
+
+
+
+### fn spec.forProvider.globalSecondaryIndexes.provisionedThroughput.withWriteCapacityUnits
+
+```ts
+withWriteCapacityUnits(writeCapacityUnits)
+```
+
+
+
+## obj spec.forProvider.keySchema
+
+"Specifies the attributes that make up the primary key for a table or an index. The attributes in KeySchema must also be defined in the AttributeDefinitions array. For more information, see Data Model (https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataModel.html) in the Amazon DynamoDB Developer Guide. \n Each KeySchemaElement in the array is composed of: \n    * AttributeName - The name of this key attribute. \n    * KeyType - The role that the key attribute will assume: HASH - partition    key RANGE - sort key \n The partition key of an item is also known as its hash attribute. The term \"hash attribute\" derives from the DynamoDB usage of an internal hash function to evenly distribute data items across partitions, based on their partition key values. \n The sort key of an item is also known as its range attribute. The term \"range attribute\" derives from the way DynamoDB stores items with the same partition key physically close together, in sorted order by the sort key value. \n For a simple primary key (partition key), you must provide exactly one element with a KeyType of HASH. \n For a composite primary key (partition key and sort key), you must provide exactly two elements, in this order: The first element must have a KeyType of HASH, and the second element must have a KeyType of RANGE. \n For more information, see Working with Tables (https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#WorkingWithTables.primary.key) in the Amazon DynamoDB Developer Guide."
+
+### fn spec.forProvider.keySchema.withAttributeName
+
+```ts
+withAttributeName(attributeName)
+```
+
+
+
+### fn spec.forProvider.keySchema.withKeyType
+
+```ts
+withKeyType(keyType)
+```
+
+
+
+## obj spec.forProvider.localSecondaryIndexes
+
+"One or more local secondary indexes (the maximum is 5) to be created on the table. Each index is scoped to a given partition key value. There is a 10 GB size limit per partition key value; otherwise, the size of a local secondary index is unconstrained. \n Each local secondary index in the array includes the following: \n    * IndexName - The name of the local secondary index. Must be unique only    for this table. \n    * KeySchema - Specifies the key schema for the local secondary index.    The key schema must begin with the same partition key as the table. \n    * Projection - Specifies attributes that are copied (projected) from the    table into the index. These are in addition to the primary key attributes    and index key attributes, which are automatically projected. Each attribute    specification is composed of: ProjectionType - One of the following: KEYS_ONLY    - Only the index and primary keys are projected into the index. INCLUDE    - Only the specified table attributes are projected into the index. The    list of projected attributes is in NonKeyAttributes. ALL - All of the    table attributes are projected into the index. NonKeyAttributes - A list    of one or more non-key attribute names that are projected into the secondary    index. The total count of attributes provided in NonKeyAttributes, summed    across all of the secondary indexes, must not exceed 100. If you project    the same attribute into two different indexes, this counts as two distinct    attributes when determining the total."
+
+### fn spec.forProvider.localSecondaryIndexes.withIndexName
+
+```ts
+withIndexName(indexName)
+```
+
+
+
+### fn spec.forProvider.localSecondaryIndexes.withKeySchema
+
+```ts
+withKeySchema(keySchema)
+```
+
+
+
+### fn spec.forProvider.localSecondaryIndexes.withKeySchemaMixin
+
+```ts
+withKeySchemaMixin(keySchema)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.localSecondaryIndexes.keySchema
+
+
+
+### fn spec.forProvider.localSecondaryIndexes.keySchema.withAttributeName
+
+```ts
+withAttributeName(attributeName)
+```
+
+
+
+### fn spec.forProvider.localSecondaryIndexes.keySchema.withKeyType
+
+```ts
+withKeyType(keyType)
+```
+
+
+
+## obj spec.forProvider.localSecondaryIndexes.projection
+
+"Represents attributes that are copied (projected) from the table into an index. These are in addition to the primary key attributes and index key attributes, which are automatically projected."
+
+### fn spec.forProvider.localSecondaryIndexes.projection.withNonKeyAttributes
+
+```ts
+withNonKeyAttributes(nonKeyAttributes)
+```
+
+
+
+### fn spec.forProvider.localSecondaryIndexes.projection.withNonKeyAttributesMixin
+
+```ts
+withNonKeyAttributesMixin(nonKeyAttributes)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.localSecondaryIndexes.projection.withProjectionType
+
+```ts
+withProjectionType(projectionType)
+```
+
+
+
 ## obj spec.forProvider.provisionedThroughput
 
 "Represents the provisioned throughput settings for a specified table or index. The settings can be modified using the UpdateTable operation. \n If you set BillingMode as PROVISIONED, you must specify this property. If you set BillingMode as PAY_PER_REQUEST, you cannot specify this property. \n For current minimum and maximum provisioned throughput values, see Service, Account, and Table Quotas (https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the Amazon DynamoDB Developer Guide."
@@ -442,6 +676,26 @@ withStreamEnabled(streamEnabled)
 
 ```ts
 withStreamViewType(streamViewType)
+```
+
+
+
+## obj spec.forProvider.tags
+
+"A list of key-value pairs to label the table. For more information, see Tagging for DynamoDB (https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html)."
+
+### fn spec.forProvider.tags.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.tags.withValue
+
+```ts
+withValue(value)
 ```
 
 

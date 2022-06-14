@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/domainMapping/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -39,6 +37,9 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/domainMapping/
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withSslSettings(sslSettings)`](#fn-specforproviderwithsslsettings)
     * [`fn withSslSettingsMixin(sslSettings)`](#fn-specforproviderwithsslsettingsmixin)
+    * [`obj spec.forProvider.sslSettings`](#obj-specforprovidersslsettings)
+      * [`fn withCertificateId(certificateId)`](#fn-specforprovidersslsettingswithcertificateid)
+      * [`fn withSslManagementType(sslManagementType)`](#fn-specforprovidersslsettingswithsslmanagementtype)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +164,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -296,6 +279,26 @@ withSslSettingsMixin(sslSettings)
 "SSL configuration for this domain. If unconfigured, this domain will not serve with SSL."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.sslSettings
+
+"SSL configuration for this domain. If unconfigured, this domain will not serve with SSL."
+
+### fn spec.forProvider.sslSettings.withCertificateId
+
+```ts
+withCertificateId(certificateId)
+```
+
+"ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support. By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify 'SslManagementType.MANUAL' on a 'CREATE' or 'UPDATE' request. You must be authorized to administer the 'AuthorizedCertificate' resource to manually map it to a DomainMapping resource. Example: 12345."
+
+### fn spec.forProvider.sslSettings.withSslManagementType
+
+```ts
+withSslManagementType(sslManagementType)
+```
+
+"SSL management type for this domain. If 'AUTOMATIC', a managed certificate is automatically provisioned. If 'MANUAL', 'certificateId' must be manually specified in order to configure SSL for this domain. Possible values: [\"AUTOMATIC\", \"MANUAL\"]"
 
 ## obj spec.providerConfigRef
 

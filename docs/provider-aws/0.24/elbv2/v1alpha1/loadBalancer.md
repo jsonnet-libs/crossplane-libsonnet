@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/elbv2/v1alpha1/loadBalancer/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -52,14 +50,26 @@ permalink: /provider-aws/0.24/elbv2/v1alpha1/loadBalancer/
     * [`fn withSubnetsMixin(subnets)`](#fn-specforproviderwithsubnetsmixin)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
+    * [`obj spec.forProvider.securityGroupRefs`](#obj-specforprovidersecuritygrouprefs)
+      * [`fn withName(name)`](#fn-specforprovidersecuritygrouprefswithname)
     * [`obj spec.forProvider.securityGroupSelector`](#obj-specforprovidersecuritygroupselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidersecuritygroupselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidersecuritygroupselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidersecuritygroupselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.subnetMappings`](#obj-specforprovidersubnetmappings)
+      * [`fn withAllocationID(allocationID)`](#fn-specforprovidersubnetmappingswithallocationid)
+      * [`fn withIPv6Address(iPv6Address)`](#fn-specforprovidersubnetmappingswithipv6address)
+      * [`fn withPrivateIPv4Address(privateIPv4Address)`](#fn-specforprovidersubnetmappingswithprivateipv4address)
+      * [`fn withSubnetID(subnetID)`](#fn-specforprovidersubnetmappingswithsubnetid)
+    * [`obj spec.forProvider.subnetRefs`](#obj-specforprovidersubnetrefs)
+      * [`fn withName(name)`](#fn-specforprovidersubnetrefswithname)
     * [`obj spec.forProvider.subnetSelector`](#obj-specforprovidersubnetselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidersubnetselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidersubnetselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidersubnetselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.tags`](#obj-specforprovidertags)
+      * [`fn withKey(key)`](#fn-specforprovidertagswithkey)
+      * [`fn withValue(value)`](#fn-specforprovidertagswithvalue)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -181,24 +191,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -432,6 +424,18 @@ withTagsMixin(tags)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.securityGroupRefs
+
+"Reference to Security Groups for SecurityGroups field"
+
+### fn spec.forProvider.securityGroupRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
 ## obj spec.forProvider.securityGroupSelector
 
 "Selector for references to SecurityGroups"
@@ -462,6 +466,54 @@ withMatchLabelsMixin(matchLabels)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.subnetMappings
+
+"The IDs of the public subnets. You can specify only one subnet per Availability Zone. You must specify either subnets or subnet mappings. \n [Application Load Balancers] You must specify subnets from at least two Availability Zones. You cannot specify Elastic IP addresses for your subnets. \n [Application Load Balancers on Outposts] You must specify one Outpost subnet. \n [Application Load Balancers on Local Zones] You can specify subnets from one or more Local Zones. \n [Network Load Balancers] You can specify subnets from one or more Availability Zones. You can specify one Elastic IP address per subnet if you need static IP addresses for your internet-facing load balancer. For internal load balancers, you can specify one private IP address per subnet from the IPv4 range of the subnet. For internet-facing load balancer, you can specify one IPv6 address per subnet. \n [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You cannot specify Elastic IP addresses for your subnets."
+
+### fn spec.forProvider.subnetMappings.withAllocationID
+
+```ts
+withAllocationID(allocationID)
+```
+
+
+
+### fn spec.forProvider.subnetMappings.withIPv6Address
+
+```ts
+withIPv6Address(iPv6Address)
+```
+
+
+
+### fn spec.forProvider.subnetMappings.withPrivateIPv4Address
+
+```ts
+withPrivateIPv4Address(privateIPv4Address)
+```
+
+
+
+### fn spec.forProvider.subnetMappings.withSubnetID
+
+```ts
+withSubnetID(subnetID)
+```
+
+
+
+## obj spec.forProvider.subnetRefs
+
+"Reference to Subnets for Subnets field"
+
+### fn spec.forProvider.subnetRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
 ## obj spec.forProvider.subnetSelector
 
 "Selector for references to Subnets"
@@ -491,6 +543,26 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.tags
+
+"The tags to assign to the load balancer."
+
+### fn spec.forProvider.tags.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.tags.withValue
+
+```ts
+withValue(value)
+```
+
+
 
 ## obj spec.providerConfigRef
 

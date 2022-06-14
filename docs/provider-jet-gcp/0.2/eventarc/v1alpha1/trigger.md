@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/eventarc/v1alpha1/trigger/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,22 @@ permalink: /provider-jet-gcp/0.2/eventarc/v1alpha1/trigger/
     * [`fn withServiceAccount(serviceAccount)`](#fn-specforproviderwithserviceaccount)
     * [`fn withTransport(transport)`](#fn-specforproviderwithtransport)
     * [`fn withTransportMixin(transport)`](#fn-specforproviderwithtransportmixin)
+    * [`obj spec.forProvider.destination`](#obj-specforproviderdestination)
+      * [`fn withCloudFunction(cloudFunction)`](#fn-specforproviderdestinationwithcloudfunction)
+      * [`fn withCloudRunService(cloudRunService)`](#fn-specforproviderdestinationwithcloudrunservice)
+      * [`fn withCloudRunServiceMixin(cloudRunService)`](#fn-specforproviderdestinationwithcloudrunservicemixin)
+      * [`obj spec.forProvider.destination.cloudRunService`](#obj-specforproviderdestinationcloudrunservice)
+        * [`fn withPath(path)`](#fn-specforproviderdestinationcloudrunservicewithpath)
+        * [`fn withRegion(region)`](#fn-specforproviderdestinationcloudrunservicewithregion)
+        * [`fn withService(service)`](#fn-specforproviderdestinationcloudrunservicewithservice)
+    * [`obj spec.forProvider.matchingCriteria`](#obj-specforprovidermatchingcriteria)
+      * [`fn withAttribute(attribute)`](#fn-specforprovidermatchingcriteriawithattribute)
+      * [`fn withValue(value)`](#fn-specforprovidermatchingcriteriawithvalue)
+    * [`obj spec.forProvider.transport`](#obj-specforprovidertransport)
+      * [`fn withPubsub(pubsub)`](#fn-specforprovidertransportwithpubsub)
+      * [`fn withPubsubMixin(pubsub)`](#fn-specforprovidertransportwithpubsubmixin)
+      * [`obj spec.forProvider.transport.pubsub`](#obj-specforprovidertransportpubsub)
+        * [`fn withTopic(topic)`](#fn-specforprovidertransportpubsubwithtopic)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +181,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -365,6 +361,118 @@ withTransportMixin(transport)
 "Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.destination
+
+"Required. Destination specifies where the events should be sent to."
+
+### fn spec.forProvider.destination.withCloudFunction
+
+```ts
+withCloudFunction(cloudFunction)
+```
+
+"The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}"
+
+### fn spec.forProvider.destination.withCloudRunService
+
+```ts
+withCloudRunService(cloudRunService)
+```
+
+"Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger."
+
+### fn spec.forProvider.destination.withCloudRunServiceMixin
+
+```ts
+withCloudRunServiceMixin(cloudRunService)
+```
+
+"Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.destination.cloudRunService
+
+"Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger."
+
+### fn spec.forProvider.destination.cloudRunService.withPath
+
+```ts
+withPath(path)
+```
+
+"Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: \"/route\", \"route\", \"route/subroute\"."
+
+### fn spec.forProvider.destination.cloudRunService.withRegion
+
+```ts
+withRegion(region)
+```
+
+"Required. The region the Cloud Run service is deployed in."
+
+### fn spec.forProvider.destination.cloudRunService.withService
+
+```ts
+withService(service)
+```
+
+"Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed."
+
+## obj spec.forProvider.matchingCriteria
+
+"Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination."
+
+### fn spec.forProvider.matchingCriteria.withAttribute
+
+```ts
+withAttribute(attribute)
+```
+
+"Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute."
+
+### fn spec.forProvider.matchingCriteria.withValue
+
+```ts
+withValue(value)
+```
+
+"Required. The value for the attribute."
+
+## obj spec.forProvider.transport
+
+"Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes."
+
+### fn spec.forProvider.transport.withPubsub
+
+```ts
+withPubsub(pubsub)
+```
+
+"The Pub/Sub topic and subscription used by Eventarc as delivery intermediary."
+
+### fn spec.forProvider.transport.withPubsubMixin
+
+```ts
+withPubsubMixin(pubsub)
+```
+
+"The Pub/Sub topic and subscription used by Eventarc as delivery intermediary."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.transport.pubsub
+
+"The Pub/Sub topic and subscription used by Eventarc as delivery intermediary."
+
+### fn spec.forProvider.transport.pubsub.withTopic
+
+```ts
+withTopic(topic)
+```
+
+"Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME You may set an existing topic for triggers of the type google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion."
 
 ## obj spec.providerConfigRef
 

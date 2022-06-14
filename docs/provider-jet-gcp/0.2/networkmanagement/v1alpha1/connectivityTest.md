@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/networkmanagement/v1alpha1/connectivityTest/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,19 @@ permalink: /provider-jet-gcp/0.2/networkmanagement/v1alpha1/connectivityTest/
     * [`fn withRelatedProjectsMixin(relatedProjects)`](#fn-specforproviderwithrelatedprojectsmixin)
     * [`fn withSource(source)`](#fn-specforproviderwithsource)
     * [`fn withSourceMixin(source)`](#fn-specforproviderwithsourcemixin)
+    * [`obj spec.forProvider.destination`](#obj-specforproviderdestination)
+      * [`fn withInstance(instance)`](#fn-specforproviderdestinationwithinstance)
+      * [`fn withIpAddress(ipAddress)`](#fn-specforproviderdestinationwithipaddress)
+      * [`fn withNetwork(network)`](#fn-specforproviderdestinationwithnetwork)
+      * [`fn withPort(port)`](#fn-specforproviderdestinationwithport)
+      * [`fn withProjectId(projectId)`](#fn-specforproviderdestinationwithprojectid)
+    * [`obj spec.forProvider.source`](#obj-specforprovidersource)
+      * [`fn withInstance(instance)`](#fn-specforprovidersourcewithinstance)
+      * [`fn withIpAddress(ipAddress)`](#fn-specforprovidersourcewithipaddress)
+      * [`fn withNetwork(network)`](#fn-specforprovidersourcewithnetwork)
+      * [`fn withNetworkType(networkType)`](#fn-specforprovidersourcewithnetworktype)
+      * [`fn withPort(port)`](#fn-specforprovidersourcewithport)
+      * [`fn withProjectId(projectId)`](#fn-specforprovidersourcewithprojectid)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +178,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -365,6 +358,102 @@ withSourceMixin(source)
 "Required. Source specification of the Connectivity Test. \n You can use a combination of source IP address, virtual machine (VM) instance, or Compute Engine network to uniquely identify the source location. \n Examples: If the source IP address is an internal IP address within a Google Cloud Virtual Private Cloud (VPC) network, then you must also specify the VPC network. Otherwise, specify the VM instance, which already contains its internal IP address and VPC network information. \n If the source of the test is within an on-premises network, then you must provide the destination VPC network. \n If the source endpoint is a Compute Engine VM instance with multiple network interfaces, the instance itself is not sufficient to identify the endpoint. So, you must also specify the source IP address or VPC network. \n A reachability analysis proceeds even if the source location is ambiguous. However, the test result may include endpoints that you don't intend to test."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.destination
+
+"Required. Destination specification of the Connectivity Test. \n You can use a combination of destination IP address, Compute Engine VM instance, or VPC network to uniquely identify the destination location. \n Even if the destination IP address is not unique, the source IP location is unique. Usually, the analysis can infer the destination endpoint from route information. \n If the destination you specify is a VM instance and the instance has multiple network interfaces, then you must also specify either a destination IP address or VPC network to identify the destination interface. \n A reachability analysis proceeds even if the destination location is ambiguous. However, the result can include endpoints that you don't intend to test."
+
+### fn spec.forProvider.destination.withInstance
+
+```ts
+withInstance(instance)
+```
+
+"A Compute Engine instance URI."
+
+### fn spec.forProvider.destination.withIpAddress
+
+```ts
+withIpAddress(ipAddress)
+```
+
+"The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a global load balancer VIP."
+
+### fn spec.forProvider.destination.withNetwork
+
+```ts
+withNetwork(network)
+```
+
+"A Compute Engine network URI."
+
+### fn spec.forProvider.destination.withPort
+
+```ts
+withPort(port)
+```
+
+"The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP."
+
+### fn spec.forProvider.destination.withProjectId
+
+```ts
+withProjectId(projectId)
+```
+
+"Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project."
+
+## obj spec.forProvider.source
+
+"Required. Source specification of the Connectivity Test. \n You can use a combination of source IP address, virtual machine (VM) instance, or Compute Engine network to uniquely identify the source location. \n Examples: If the source IP address is an internal IP address within a Google Cloud Virtual Private Cloud (VPC) network, then you must also specify the VPC network. Otherwise, specify the VM instance, which already contains its internal IP address and VPC network information. \n If the source of the test is within an on-premises network, then you must provide the destination VPC network. \n If the source endpoint is a Compute Engine VM instance with multiple network interfaces, the instance itself is not sufficient to identify the endpoint. So, you must also specify the source IP address or VPC network. \n A reachability analysis proceeds even if the source location is ambiguous. However, the test result may include endpoints that you don't intend to test."
+
+### fn spec.forProvider.source.withInstance
+
+```ts
+withInstance(instance)
+```
+
+"A Compute Engine instance URI."
+
+### fn spec.forProvider.source.withIpAddress
+
+```ts
+withIpAddress(ipAddress)
+```
+
+"The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a global load balancer VIP."
+
+### fn spec.forProvider.source.withNetwork
+
+```ts
+withNetwork(network)
+```
+
+"A Compute Engine network URI."
+
+### fn spec.forProvider.source.withNetworkType
+
+```ts
+withNetworkType(networkType)
+```
+
+"Type of the network where the endpoint is located. Possible values: [\"GCP_NETWORK\", \"NON_GCP_NETWORK\"]"
+
+### fn spec.forProvider.source.withPort
+
+```ts
+withPort(port)
+```
+
+"The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP."
+
+### fn spec.forProvider.source.withProjectId
+
+```ts
+withProjectId(projectId)
+```
+
+"Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: \n 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/accesscontextmanager/v1alpha1/servicePerimeter/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -42,6 +40,70 @@ permalink: /provider-jet-gcp/0.2/accesscontextmanager/v1alpha1/servicePerimeter/
     * [`fn withSpecMixin(spec)`](#fn-specforproviderwithspecmixin)
     * [`fn withTitle(title)`](#fn-specforproviderwithtitle)
     * [`fn withUseExplicitDryRunSpec(useExplicitDryRunSpec)`](#fn-specforproviderwithuseexplicitdryrunspec)
+    * [`obj spec.forProvider.spec`](#obj-specforproviderspec)
+      * [`fn withAccessLevels(accessLevels)`](#fn-specforproviderspecwithaccesslevels)
+      * [`fn withAccessLevelsMixin(accessLevels)`](#fn-specforproviderspecwithaccesslevelsmixin)
+      * [`fn withEgressPolicies(egressPolicies)`](#fn-specforproviderspecwithegresspolicies)
+      * [`fn withEgressPoliciesMixin(egressPolicies)`](#fn-specforproviderspecwithegresspoliciesmixin)
+      * [`fn withIngressPolicies(ingressPolicies)`](#fn-specforproviderspecwithingresspolicies)
+      * [`fn withIngressPoliciesMixin(ingressPolicies)`](#fn-specforproviderspecwithingresspoliciesmixin)
+      * [`fn withResources(resources)`](#fn-specforproviderspecwithresources)
+      * [`fn withResourcesMixin(resources)`](#fn-specforproviderspecwithresourcesmixin)
+      * [`fn withRestrictedServices(restrictedServices)`](#fn-specforproviderspecwithrestrictedservices)
+      * [`fn withRestrictedServicesMixin(restrictedServices)`](#fn-specforproviderspecwithrestrictedservicesmixin)
+      * [`fn withVpcAccessibleServices(vpcAccessibleServices)`](#fn-specforproviderspecwithvpcaccessibleservices)
+      * [`fn withVpcAccessibleServicesMixin(vpcAccessibleServices)`](#fn-specforproviderspecwithvpcaccessibleservicesmixin)
+      * [`obj spec.forProvider.spec.egressPolicies`](#obj-specforproviderspecegresspolicies)
+        * [`fn withEgressFrom(egressFrom)`](#fn-specforproviderspecegresspolicieswithegressfrom)
+        * [`fn withEgressFromMixin(egressFrom)`](#fn-specforproviderspecegresspolicieswithegressfrommixin)
+        * [`fn withEgressTo(egressTo)`](#fn-specforproviderspecegresspolicieswithegressto)
+        * [`fn withEgressToMixin(egressTo)`](#fn-specforproviderspecegresspolicieswithegresstomixin)
+        * [`obj spec.forProvider.spec.egressPolicies.egressFrom`](#obj-specforproviderspecegresspoliciesegressfrom)
+          * [`fn withIdentities(identities)`](#fn-specforproviderspecegresspoliciesegressfromwithidentities)
+          * [`fn withIdentitiesMixin(identities)`](#fn-specforproviderspecegresspoliciesegressfromwithidentitiesmixin)
+          * [`fn withIdentityType(identityType)`](#fn-specforproviderspecegresspoliciesegressfromwithidentitytype)
+        * [`obj spec.forProvider.spec.egressPolicies.egressTo`](#obj-specforproviderspecegresspoliciesegressto)
+          * [`fn withOperations(operations)`](#fn-specforproviderspecegresspoliciesegresstowithoperations)
+          * [`fn withOperationsMixin(operations)`](#fn-specforproviderspecegresspoliciesegresstowithoperationsmixin)
+          * [`fn withResources(resources)`](#fn-specforproviderspecegresspoliciesegresstowithresources)
+          * [`fn withResourcesMixin(resources)`](#fn-specforproviderspecegresspoliciesegresstowithresourcesmixin)
+          * [`obj spec.forProvider.spec.egressPolicies.egressTo.operations`](#obj-specforproviderspecegresspoliciesegresstooperations)
+            * [`fn withMethodSelectors(methodSelectors)`](#fn-specforproviderspecegresspoliciesegresstooperationswithmethodselectors)
+            * [`fn withMethodSelectorsMixin(methodSelectors)`](#fn-specforproviderspecegresspoliciesegresstooperationswithmethodselectorsmixin)
+            * [`fn withServiceName(serviceName)`](#fn-specforproviderspecegresspoliciesegresstooperationswithservicename)
+            * [`obj spec.forProvider.spec.egressPolicies.egressTo.operations.methodSelectors`](#obj-specforproviderspecegresspoliciesegresstooperationsmethodselectors)
+              * [`fn withMethod(method)`](#fn-specforproviderspecegresspoliciesegresstooperationsmethodselectorswithmethod)
+              * [`fn withPermission(permission)`](#fn-specforproviderspecegresspoliciesegresstooperationsmethodselectorswithpermission)
+      * [`obj spec.forProvider.spec.ingressPolicies`](#obj-specforproviderspecingresspolicies)
+        * [`fn withIngressFrom(ingressFrom)`](#fn-specforproviderspecingresspolicieswithingressfrom)
+        * [`fn withIngressFromMixin(ingressFrom)`](#fn-specforproviderspecingresspolicieswithingressfrommixin)
+        * [`fn withIngressTo(ingressTo)`](#fn-specforproviderspecingresspolicieswithingressto)
+        * [`fn withIngressToMixin(ingressTo)`](#fn-specforproviderspecingresspolicieswithingresstomixin)
+        * [`obj spec.forProvider.spec.ingressPolicies.ingressFrom`](#obj-specforproviderspecingresspoliciesingressfrom)
+          * [`fn withIdentities(identities)`](#fn-specforproviderspecingresspoliciesingressfromwithidentities)
+          * [`fn withIdentitiesMixin(identities)`](#fn-specforproviderspecingresspoliciesingressfromwithidentitiesmixin)
+          * [`fn withIdentityType(identityType)`](#fn-specforproviderspecingresspoliciesingressfromwithidentitytype)
+          * [`fn withSources(sources)`](#fn-specforproviderspecingresspoliciesingressfromwithsources)
+          * [`fn withSourcesMixin(sources)`](#fn-specforproviderspecingresspoliciesingressfromwithsourcesmixin)
+          * [`obj spec.forProvider.spec.ingressPolicies.ingressFrom.sources`](#obj-specforproviderspecingresspoliciesingressfromsources)
+            * [`fn withAccessLevel(accessLevel)`](#fn-specforproviderspecingresspoliciesingressfromsourceswithaccesslevel)
+            * [`fn withResource(resource)`](#fn-specforproviderspecingresspoliciesingressfromsourceswithresource)
+        * [`obj spec.forProvider.spec.ingressPolicies.ingressTo`](#obj-specforproviderspecingresspoliciesingressto)
+          * [`fn withOperations(operations)`](#fn-specforproviderspecingresspoliciesingresstowithoperations)
+          * [`fn withOperationsMixin(operations)`](#fn-specforproviderspecingresspoliciesingresstowithoperationsmixin)
+          * [`fn withResources(resources)`](#fn-specforproviderspecingresspoliciesingresstowithresources)
+          * [`fn withResourcesMixin(resources)`](#fn-specforproviderspecingresspoliciesingresstowithresourcesmixin)
+          * [`obj spec.forProvider.spec.ingressPolicies.ingressTo.operations`](#obj-specforproviderspecingresspoliciesingresstooperations)
+            * [`fn withMethodSelectors(methodSelectors)`](#fn-specforproviderspecingresspoliciesingresstooperationswithmethodselectors)
+            * [`fn withMethodSelectorsMixin(methodSelectors)`](#fn-specforproviderspecingresspoliciesingresstooperationswithmethodselectorsmixin)
+            * [`fn withServiceName(serviceName)`](#fn-specforproviderspecingresspoliciesingresstooperationswithservicename)
+            * [`obj spec.forProvider.spec.ingressPolicies.ingressTo.operations.methodSelectors`](#obj-specforproviderspecingresspoliciesingresstooperationsmethodselectors)
+              * [`fn withMethod(method)`](#fn-specforproviderspecingresspoliciesingresstooperationsmethodselectorswithmethod)
+              * [`fn withPermission(permission)`](#fn-specforproviderspecingresspoliciesingresstooperationsmethodselectorswithpermission)
+      * [`obj spec.forProvider.spec.vpcAccessibleServices`](#obj-specforproviderspecvpcaccessibleservices)
+        * [`fn withAllowedServices(allowedServices)`](#fn-specforproviderspecvpcaccessibleserviceswithallowedservices)
+        * [`fn withAllowedServicesMixin(allowedServices)`](#fn-specforproviderspecvpcaccessibleserviceswithallowedservicesmixin)
+        * [`fn withEnableRestriction(enableRestriction)`](#fn-specforproviderspecvpcaccessibleserviceswithenablerestriction)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +225,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -323,6 +367,506 @@ withUseExplicitDryRunSpec(useExplicitDryRunSpec)
 ```
 
 "Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to explicitly provide a configuration (\"spec\") to use in a dry-run version of the Service Perimeter. This allows the user to test changes to the enforced config (\"status\") without actually enforcing them. This testing is done through analyzing the differences between currently enforced and suggested restrictions. useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values."
+
+## obj spec.forProvider.spec
+
+"Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed to be set when the 'useExplicitDryRunSpec' flag is set."
+
+### fn spec.forProvider.spec.withAccessLevels
+
+```ts
+withAccessLevels(accessLevels)
+```
+
+"A list of AccessLevel resource names that allow resources within the ServicePerimeter to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel is a syntax error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via GCP calls with request origins within the perimeter. For Service Perimeter Bridge, must be empty. \n Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}"
+
+### fn spec.forProvider.spec.withAccessLevelsMixin
+
+```ts
+withAccessLevelsMixin(accessLevels)
+```
+
+"A list of AccessLevel resource names that allow resources within the ServicePerimeter to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel is a syntax error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via GCP calls with request origins within the perimeter. For Service Perimeter Bridge, must be empty. \n Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.withEgressPolicies
+
+```ts
+withEgressPolicies(egressPolicies)
+```
+
+"List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge."
+
+### fn spec.forProvider.spec.withEgressPoliciesMixin
+
+```ts
+withEgressPoliciesMixin(egressPolicies)
+```
+
+"List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.withIngressPolicies
+
+```ts
+withIngressPolicies(ingressPolicies)
+```
+
+"List of 'IngressPolicies' to apply to the perimeter. A perimeter may have multiple 'IngressPolicies', each of which is evaluated separately. Access is granted if any 'Ingress Policy' grants it. Must be empty for a perimeter bridge."
+
+### fn spec.forProvider.spec.withIngressPoliciesMixin
+
+```ts
+withIngressPoliciesMixin(ingressPolicies)
+```
+
+"List of 'IngressPolicies' to apply to the perimeter. A perimeter may have multiple 'IngressPolicies', each of which is evaluated separately. Access is granted if any 'Ingress Policy' grants it. Must be empty for a perimeter bridge."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.withResources
+
+```ts
+withResources(resources)
+```
+
+"A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}"
+
+### fn spec.forProvider.spec.withResourcesMixin
+
+```ts
+withResourcesMixin(resources)
+```
+
+"A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.withRestrictedServices
+
+```ts
+withRestrictedServices(restrictedServices)
+```
+
+"GCP services that are subject to the Service Perimeter restrictions. Must contain a list of services. For example, if 'storage.googleapis.com' is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions."
+
+### fn spec.forProvider.spec.withRestrictedServicesMixin
+
+```ts
+withRestrictedServicesMixin(restrictedServices)
+```
+
+"GCP services that are subject to the Service Perimeter restrictions. Must contain a list of services. For example, if 'storage.googleapis.com' is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.withVpcAccessibleServices
+
+```ts
+withVpcAccessibleServices(vpcAccessibleServices)
+```
+
+"Specifies how APIs are allowed to communicate within the Service Perimeter."
+
+### fn spec.forProvider.spec.withVpcAccessibleServicesMixin
+
+```ts
+withVpcAccessibleServicesMixin(vpcAccessibleServices)
+```
+
+"Specifies how APIs are allowed to communicate within the Service Perimeter."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.spec.egressPolicies
+
+"List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge."
+
+### fn spec.forProvider.spec.egressPolicies.withEgressFrom
+
+```ts
+withEgressFrom(egressFrom)
+```
+
+"Defines conditions on the source of a request causing this 'EgressPolicy' to apply."
+
+### fn spec.forProvider.spec.egressPolicies.withEgressFromMixin
+
+```ts
+withEgressFromMixin(egressFrom)
+```
+
+"Defines conditions on the source of a request causing this 'EgressPolicy' to apply."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.egressPolicies.withEgressTo
+
+```ts
+withEgressTo(egressTo)
+```
+
+"Defines the conditions on the 'ApiOperation' and destination resources that cause this 'EgressPolicy' to apply."
+
+### fn spec.forProvider.spec.egressPolicies.withEgressToMixin
+
+```ts
+withEgressToMixin(egressTo)
+```
+
+"Defines the conditions on the 'ApiOperation' and destination resources that cause this 'EgressPolicy' to apply."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.spec.egressPolicies.egressFrom
+
+"Defines conditions on the source of a request causing this 'EgressPolicy' to apply."
+
+### fn spec.forProvider.spec.egressPolicies.egressFrom.withIdentities
+
+```ts
+withIdentities(identities)
+```
+
+"A list of identities that are allowed access through this 'EgressPolicy'. Should be in the format of email address. The email address should represent individual user or service account only."
+
+### fn spec.forProvider.spec.egressPolicies.egressFrom.withIdentitiesMixin
+
+```ts
+withIdentitiesMixin(identities)
+```
+
+"A list of identities that are allowed access through this 'EgressPolicy'. Should be in the format of email address. The email address should represent individual user or service account only."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.egressPolicies.egressFrom.withIdentityType
+
+```ts
+withIdentityType(identityType)
+```
+
+"Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of 'identities' field will be allowed access. Possible values: [\"IDENTITY_TYPE_UNSPECIFIED\", \"ANY_IDENTITY\", \"ANY_USER_ACCOUNT\", \"ANY_SERVICE_ACCOUNT\"]"
+
+## obj spec.forProvider.spec.egressPolicies.egressTo
+
+"Defines the conditions on the 'ApiOperation' and destination resources that cause this 'EgressPolicy' to apply."
+
+### fn spec.forProvider.spec.egressPolicies.egressTo.withOperations
+
+```ts
+withOperations(operations)
+```
+
+"A list of 'ApiOperations' that this egress rule applies to. A request matches if it contains an operation/service in this list."
+
+### fn spec.forProvider.spec.egressPolicies.egressTo.withOperationsMixin
+
+```ts
+withOperationsMixin(operations)
+```
+
+"A list of 'ApiOperations' that this egress rule applies to. A request matches if it contains an operation/service in this list."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.egressPolicies.egressTo.withResources
+
+```ts
+withResources(resources)
+```
+
+"A list of resources, currently only projects in the form 'projects/<projectnumber>', that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this 'EgressTo' rule will authorize access to all resources outside the perimeter."
+
+### fn spec.forProvider.spec.egressPolicies.egressTo.withResourcesMixin
+
+```ts
+withResourcesMixin(resources)
+```
+
+"A list of resources, currently only projects in the form 'projects/<projectnumber>', that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this 'EgressTo' rule will authorize access to all resources outside the perimeter."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.spec.egressPolicies.egressTo.operations
+
+"A list of 'ApiOperations' that this egress rule applies to. A request matches if it contains an operation/service in this list."
+
+### fn spec.forProvider.spec.egressPolicies.egressTo.operations.withMethodSelectors
+
+```ts
+withMethodSelectors(methodSelectors)
+```
+
+"API methods or permissions to allow. Method or permission must belong to the service specified by 'serviceName' field. A single MethodSelector entry with '*' specified for the 'method' field will allow all methods AND permissions for the service specified in 'serviceName'."
+
+### fn spec.forProvider.spec.egressPolicies.egressTo.operations.withMethodSelectorsMixin
+
+```ts
+withMethodSelectorsMixin(methodSelectors)
+```
+
+"API methods or permissions to allow. Method or permission must belong to the service specified by 'serviceName' field. A single MethodSelector entry with '*' specified for the 'method' field will allow all methods AND permissions for the service specified in 'serviceName'."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.egressPolicies.egressTo.operations.withServiceName
+
+```ts
+withServiceName(serviceName)
+```
+
+"The name of the API whose methods or permissions the 'IngressPolicy' or 'EgressPolicy' want to allow. A single 'ApiOperation' with serviceName field set to '*' will allow all methods AND permissions for all services."
+
+## obj spec.forProvider.spec.egressPolicies.egressTo.operations.methodSelectors
+
+"API methods or permissions to allow. Method or permission must belong to the service specified by 'serviceName' field. A single MethodSelector entry with '*' specified for the 'method' field will allow all methods AND permissions for the service specified in 'serviceName'."
+
+### fn spec.forProvider.spec.egressPolicies.egressTo.operations.methodSelectors.withMethod
+
+```ts
+withMethod(method)
+```
+
+"Value for 'method' should be a valid method name for the corresponding 'serviceName' in 'ApiOperation'. If '*' used as value for method, then ALL methods and permissions are allowed."
+
+### fn spec.forProvider.spec.egressPolicies.egressTo.operations.methodSelectors.withPermission
+
+```ts
+withPermission(permission)
+```
+
+"Value for permission should be a valid Cloud IAM permission for the corresponding 'serviceName' in 'ApiOperation'."
+
+## obj spec.forProvider.spec.ingressPolicies
+
+"List of 'IngressPolicies' to apply to the perimeter. A perimeter may have multiple 'IngressPolicies', each of which is evaluated separately. Access is granted if any 'Ingress Policy' grants it. Must be empty for a perimeter bridge."
+
+### fn spec.forProvider.spec.ingressPolicies.withIngressFrom
+
+```ts
+withIngressFrom(ingressFrom)
+```
+
+"Defines the conditions on the source of a request causing this 'IngressPolicy' to apply."
+
+### fn spec.forProvider.spec.ingressPolicies.withIngressFromMixin
+
+```ts
+withIngressFromMixin(ingressFrom)
+```
+
+"Defines the conditions on the source of a request causing this 'IngressPolicy' to apply."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.ingressPolicies.withIngressTo
+
+```ts
+withIngressTo(ingressTo)
+```
+
+"Defines the conditions on the 'ApiOperation' and request destination that cause this 'IngressPolicy' to apply."
+
+### fn spec.forProvider.spec.ingressPolicies.withIngressToMixin
+
+```ts
+withIngressToMixin(ingressTo)
+```
+
+"Defines the conditions on the 'ApiOperation' and request destination that cause this 'IngressPolicy' to apply."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.spec.ingressPolicies.ingressFrom
+
+"Defines the conditions on the source of a request causing this 'IngressPolicy' to apply."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressFrom.withIdentities
+
+```ts
+withIdentities(identities)
+```
+
+"A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressFrom.withIdentitiesMixin
+
+```ts
+withIdentitiesMixin(identities)
+```
+
+"A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.ingressPolicies.ingressFrom.withIdentityType
+
+```ts
+withIdentityType(identityType)
+```
+
+"Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of 'identities' field will be allowed access. Possible values: [\"IDENTITY_TYPE_UNSPECIFIED\", \"ANY_IDENTITY\", \"ANY_USER_ACCOUNT\", \"ANY_SERVICE_ACCOUNT\"]"
+
+### fn spec.forProvider.spec.ingressPolicies.ingressFrom.withSources
+
+```ts
+withSources(sources)
+```
+
+"Sources that this 'IngressPolicy' authorizes access from."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressFrom.withSourcesMixin
+
+```ts
+withSourcesMixin(sources)
+```
+
+"Sources that this 'IngressPolicy' authorizes access from."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.spec.ingressPolicies.ingressFrom.sources
+
+"Sources that this 'IngressPolicy' authorizes access from."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressFrom.sources.withAccessLevel
+
+```ts
+withAccessLevel(accessLevel)
+```
+
+"An 'AccessLevel' resource name that allow resources within the 'ServicePerimeters' to be accessed from the internet. 'AccessLevels' listed must be in the same policy as this 'ServicePerimeter'. Referencing a nonexistent 'AccessLevel' will cause an error. If no 'AccessLevel' names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example 'accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.' If * is specified, then all IngressSources will be allowed."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressFrom.sources.withResource
+
+```ts
+withResource(resource)
+```
+
+"A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format 'projects/{project_number}' The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. '*' is not allowed, the case of allowing all Google Cloud resources only is not supported."
+
+## obj spec.forProvider.spec.ingressPolicies.ingressTo
+
+"Defines the conditions on the 'ApiOperation' and request destination that cause this 'IngressPolicy' to apply."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressTo.withOperations
+
+```ts
+withOperations(operations)
+```
+
+"A list of 'ApiOperations' the sources specified in corresponding 'IngressFrom' are allowed to perform in this 'ServicePerimeter'."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressTo.withOperationsMixin
+
+```ts
+withOperationsMixin(operations)
+```
+
+"A list of 'ApiOperations' the sources specified in corresponding 'IngressFrom' are allowed to perform in this 'ServicePerimeter'."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.ingressPolicies.ingressTo.withResources
+
+```ts
+withResources(resources)
+```
+
+"A list of resources, currently only projects in the form 'projects/<projectnumber>', protected by this 'ServicePerimeter' that are allowed to be accessed by sources defined in the corresponding 'IngressFrom'. A request matches if it contains a resource in this list. If '*' is specified for resources, then this 'IngressTo' rule will authorize access to all resources inside the perimeter, provided that the request also matches the 'operations' field."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressTo.withResourcesMixin
+
+```ts
+withResourcesMixin(resources)
+```
+
+"A list of resources, currently only projects in the form 'projects/<projectnumber>', protected by this 'ServicePerimeter' that are allowed to be accessed by sources defined in the corresponding 'IngressFrom'. A request matches if it contains a resource in this list. If '*' is specified for resources, then this 'IngressTo' rule will authorize access to all resources inside the perimeter, provided that the request also matches the 'operations' field."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.spec.ingressPolicies.ingressTo.operations
+
+"A list of 'ApiOperations' the sources specified in corresponding 'IngressFrom' are allowed to perform in this 'ServicePerimeter'."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressTo.operations.withMethodSelectors
+
+```ts
+withMethodSelectors(methodSelectors)
+```
+
+"API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single 'MethodSelector' entry with '*' specified for the method field will allow all methods AND permissions for the service specified in 'serviceName'."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressTo.operations.withMethodSelectorsMixin
+
+```ts
+withMethodSelectorsMixin(methodSelectors)
+```
+
+"API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single 'MethodSelector' entry with '*' specified for the method field will allow all methods AND permissions for the service specified in 'serviceName'."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.ingressPolicies.ingressTo.operations.withServiceName
+
+```ts
+withServiceName(serviceName)
+```
+
+"The name of the API whose methods or permissions the 'IngressPolicy' or 'EgressPolicy' want to allow. A single 'ApiOperation' with 'serviceName' field set to '*' will allow all methods AND permissions for all services."
+
+## obj spec.forProvider.spec.ingressPolicies.ingressTo.operations.methodSelectors
+
+"API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single 'MethodSelector' entry with '*' specified for the method field will allow all methods AND permissions for the service specified in 'serviceName'."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressTo.operations.methodSelectors.withMethod
+
+```ts
+withMethod(method)
+```
+
+"Value for method should be a valid method name for the corresponding serviceName in 'ApiOperation'. If '*' used as value for 'method', then ALL methods and permissions are allowed."
+
+### fn spec.forProvider.spec.ingressPolicies.ingressTo.operations.methodSelectors.withPermission
+
+```ts
+withPermission(permission)
+```
+
+"Value for permission should be a valid Cloud IAM permission for the corresponding 'serviceName' in 'ApiOperation'."
+
+## obj spec.forProvider.spec.vpcAccessibleServices
+
+"Specifies how APIs are allowed to communicate within the Service Perimeter."
+
+### fn spec.forProvider.spec.vpcAccessibleServices.withAllowedServices
+
+```ts
+withAllowedServices(allowedServices)
+```
+
+"The list of APIs usable within the Service Perimeter. Must be empty unless 'enableRestriction' is True."
+
+### fn spec.forProvider.spec.vpcAccessibleServices.withAllowedServicesMixin
+
+```ts
+withAllowedServicesMixin(allowedServices)
+```
+
+"The list of APIs usable within the Service Perimeter. Must be empty unless 'enableRestriction' is True."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.vpcAccessibleServices.withEnableRestriction
+
+```ts
+withEnableRestriction(enableRestriction)
+```
+
+"Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowedServices'."
 
 ## obj spec.providerConfigRef
 

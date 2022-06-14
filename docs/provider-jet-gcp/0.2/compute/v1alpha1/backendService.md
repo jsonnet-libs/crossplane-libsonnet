@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/backendService/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -67,6 +65,89 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/backendService/
     * [`fn withSecurityPolicy(securityPolicy)`](#fn-specforproviderwithsecuritypolicy)
     * [`fn withSessionAffinity(sessionAffinity)`](#fn-specforproviderwithsessionaffinity)
     * [`fn withTimeoutSec(timeoutSec)`](#fn-specforproviderwithtimeoutsec)
+    * [`obj spec.forProvider.backend`](#obj-specforproviderbackend)
+      * [`fn withBalancingMode(balancingMode)`](#fn-specforproviderbackendwithbalancingmode)
+      * [`fn withCapacityScaler(capacityScaler)`](#fn-specforproviderbackendwithcapacityscaler)
+      * [`fn withDescription(description)`](#fn-specforproviderbackendwithdescription)
+      * [`fn withGroup(group)`](#fn-specforproviderbackendwithgroup)
+      * [`fn withMaxConnections(maxConnections)`](#fn-specforproviderbackendwithmaxconnections)
+      * [`fn withMaxConnectionsPerEndpoint(maxConnectionsPerEndpoint)`](#fn-specforproviderbackendwithmaxconnectionsperendpoint)
+      * [`fn withMaxConnectionsPerInstance(maxConnectionsPerInstance)`](#fn-specforproviderbackendwithmaxconnectionsperinstance)
+      * [`fn withMaxRate(maxRate)`](#fn-specforproviderbackendwithmaxrate)
+      * [`fn withMaxRatePerEndpoint(maxRatePerEndpoint)`](#fn-specforproviderbackendwithmaxrateperendpoint)
+      * [`fn withMaxRatePerInstance(maxRatePerInstance)`](#fn-specforproviderbackendwithmaxrateperinstance)
+      * [`fn withMaxUtilization(maxUtilization)`](#fn-specforproviderbackendwithmaxutilization)
+    * [`obj spec.forProvider.cdnPolicy`](#obj-specforprovidercdnpolicy)
+      * [`fn withCacheKeyPolicy(cacheKeyPolicy)`](#fn-specforprovidercdnpolicywithcachekeypolicy)
+      * [`fn withCacheKeyPolicyMixin(cacheKeyPolicy)`](#fn-specforprovidercdnpolicywithcachekeypolicymixin)
+      * [`fn withCacheMode(cacheMode)`](#fn-specforprovidercdnpolicywithcachemode)
+      * [`fn withClientTtl(clientTtl)`](#fn-specforprovidercdnpolicywithclientttl)
+      * [`fn withDefaultTtl(defaultTtl)`](#fn-specforprovidercdnpolicywithdefaultttl)
+      * [`fn withMaxTtl(maxTtl)`](#fn-specforprovidercdnpolicywithmaxttl)
+      * [`fn withNegativeCaching(negativeCaching)`](#fn-specforprovidercdnpolicywithnegativecaching)
+      * [`fn withNegativeCachingPolicy(negativeCachingPolicy)`](#fn-specforprovidercdnpolicywithnegativecachingpolicy)
+      * [`fn withNegativeCachingPolicyMixin(negativeCachingPolicy)`](#fn-specforprovidercdnpolicywithnegativecachingpolicymixin)
+      * [`fn withServeWhileStale(serveWhileStale)`](#fn-specforprovidercdnpolicywithservewhilestale)
+      * [`fn withSignedUrlCacheMaxAgeSec(signedUrlCacheMaxAgeSec)`](#fn-specforprovidercdnpolicywithsignedurlcachemaxagesec)
+      * [`obj spec.forProvider.cdnPolicy.cacheKeyPolicy`](#obj-specforprovidercdnpolicycachekeypolicy)
+        * [`fn withIncludeHost(includeHost)`](#fn-specforprovidercdnpolicycachekeypolicywithincludehost)
+        * [`fn withIncludeProtocol(includeProtocol)`](#fn-specforprovidercdnpolicycachekeypolicywithincludeprotocol)
+        * [`fn withIncludeQueryString(includeQueryString)`](#fn-specforprovidercdnpolicycachekeypolicywithincludequerystring)
+        * [`fn withQueryStringBlacklist(queryStringBlacklist)`](#fn-specforprovidercdnpolicycachekeypolicywithquerystringblacklist)
+        * [`fn withQueryStringBlacklistMixin(queryStringBlacklist)`](#fn-specforprovidercdnpolicycachekeypolicywithquerystringblacklistmixin)
+        * [`fn withQueryStringWhitelist(queryStringWhitelist)`](#fn-specforprovidercdnpolicycachekeypolicywithquerystringwhitelist)
+        * [`fn withQueryStringWhitelistMixin(queryStringWhitelist)`](#fn-specforprovidercdnpolicycachekeypolicywithquerystringwhitelistmixin)
+      * [`obj spec.forProvider.cdnPolicy.negativeCachingPolicy`](#obj-specforprovidercdnpolicynegativecachingpolicy)
+        * [`fn withCode(code)`](#fn-specforprovidercdnpolicynegativecachingpolicywithcode)
+        * [`fn withTtl(ttl)`](#fn-specforprovidercdnpolicynegativecachingpolicywithttl)
+    * [`obj spec.forProvider.circuitBreakers`](#obj-specforprovidercircuitbreakers)
+      * [`fn withMaxConnections(maxConnections)`](#fn-specforprovidercircuitbreakerswithmaxconnections)
+      * [`fn withMaxPendingRequests(maxPendingRequests)`](#fn-specforprovidercircuitbreakerswithmaxpendingrequests)
+      * [`fn withMaxRequests(maxRequests)`](#fn-specforprovidercircuitbreakerswithmaxrequests)
+      * [`fn withMaxRequestsPerConnection(maxRequestsPerConnection)`](#fn-specforprovidercircuitbreakerswithmaxrequestsperconnection)
+      * [`fn withMaxRetries(maxRetries)`](#fn-specforprovidercircuitbreakerswithmaxretries)
+    * [`obj spec.forProvider.consistentHash`](#obj-specforproviderconsistenthash)
+      * [`fn withHttpCookie(httpCookie)`](#fn-specforproviderconsistenthashwithhttpcookie)
+      * [`fn withHttpCookieMixin(httpCookie)`](#fn-specforproviderconsistenthashwithhttpcookiemixin)
+      * [`fn withHttpHeaderName(httpHeaderName)`](#fn-specforproviderconsistenthashwithhttpheadername)
+      * [`fn withMinimumRingSize(minimumRingSize)`](#fn-specforproviderconsistenthashwithminimumringsize)
+      * [`obj spec.forProvider.consistentHash.httpCookie`](#obj-specforproviderconsistenthashhttpcookie)
+        * [`fn withName(name)`](#fn-specforproviderconsistenthashhttpcookiewithname)
+        * [`fn withPath(path)`](#fn-specforproviderconsistenthashhttpcookiewithpath)
+        * [`fn withTtl(ttl)`](#fn-specforproviderconsistenthashhttpcookiewithttl)
+        * [`fn withTtlMixin(ttl)`](#fn-specforproviderconsistenthashhttpcookiewithttlmixin)
+        * [`obj spec.forProvider.consistentHash.httpCookie.ttl`](#obj-specforproviderconsistenthashhttpcookiettl)
+          * [`fn withNanos(nanos)`](#fn-specforproviderconsistenthashhttpcookiettlwithnanos)
+          * [`fn withSeconds(seconds)`](#fn-specforproviderconsistenthashhttpcookiettlwithseconds)
+    * [`obj spec.forProvider.iap`](#obj-specforprovideriap)
+      * [`fn withOauth2ClientId(oauth2ClientId)`](#fn-specforprovideriapwithoauth2clientid)
+      * [`obj spec.forProvider.iap.oauth2ClientSecretSecretRef`](#obj-specforprovideriapoauth2clientsecretsecretref)
+        * [`fn withKey(key)`](#fn-specforprovideriapoauth2clientsecretsecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovideriapoauth2clientsecretsecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovideriapoauth2clientsecretsecretrefwithnamespace)
+    * [`obj spec.forProvider.logConfig`](#obj-specforproviderlogconfig)
+      * [`fn withEnable(enable)`](#fn-specforproviderlogconfigwithenable)
+      * [`fn withSampleRate(sampleRate)`](#fn-specforproviderlogconfigwithsamplerate)
+    * [`obj spec.forProvider.outlierDetection`](#obj-specforprovideroutlierdetection)
+      * [`fn withBaseEjectionTime(baseEjectionTime)`](#fn-specforprovideroutlierdetectionwithbaseejectiontime)
+      * [`fn withBaseEjectionTimeMixin(baseEjectionTime)`](#fn-specforprovideroutlierdetectionwithbaseejectiontimemixin)
+      * [`fn withConsecutiveErrors(consecutiveErrors)`](#fn-specforprovideroutlierdetectionwithconsecutiveerrors)
+      * [`fn withConsecutiveGatewayFailure(consecutiveGatewayFailure)`](#fn-specforprovideroutlierdetectionwithconsecutivegatewayfailure)
+      * [`fn withEnforcingConsecutiveErrors(enforcingConsecutiveErrors)`](#fn-specforprovideroutlierdetectionwithenforcingconsecutiveerrors)
+      * [`fn withEnforcingConsecutiveGatewayFailure(enforcingConsecutiveGatewayFailure)`](#fn-specforprovideroutlierdetectionwithenforcingconsecutivegatewayfailure)
+      * [`fn withEnforcingSuccessRate(enforcingSuccessRate)`](#fn-specforprovideroutlierdetectionwithenforcingsuccessrate)
+      * [`fn withInterval(interval)`](#fn-specforprovideroutlierdetectionwithinterval)
+      * [`fn withIntervalMixin(interval)`](#fn-specforprovideroutlierdetectionwithintervalmixin)
+      * [`fn withMaxEjectionPercent(maxEjectionPercent)`](#fn-specforprovideroutlierdetectionwithmaxejectionpercent)
+      * [`fn withSuccessRateMinimumHosts(successRateMinimumHosts)`](#fn-specforprovideroutlierdetectionwithsuccessrateminimumhosts)
+      * [`fn withSuccessRateRequestVolume(successRateRequestVolume)`](#fn-specforprovideroutlierdetectionwithsuccessraterequestvolume)
+      * [`fn withSuccessRateStdevFactor(successRateStdevFactor)`](#fn-specforprovideroutlierdetectionwithsuccessratestdevfactor)
+      * [`obj spec.forProvider.outlierDetection.baseEjectionTime`](#obj-specforprovideroutlierdetectionbaseejectiontime)
+        * [`fn withNanos(nanos)`](#fn-specforprovideroutlierdetectionbaseejectiontimewithnanos)
+        * [`fn withSeconds(seconds)`](#fn-specforprovideroutlierdetectionbaseejectiontimewithseconds)
+      * [`obj spec.forProvider.outlierDetection.interval`](#obj-specforprovideroutlierdetectioninterval)
+        * [`fn withNanos(nanos)`](#fn-specforprovideroutlierdetectionintervalwithnanos)
+        * [`fn withSeconds(seconds)`](#fn-specforprovideroutlierdetectionintervalwithseconds)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -188,24 +269,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -566,6 +629,630 @@ withTimeoutSec(timeoutSec)
 ```
 
 "How many seconds to wait for the backend before considering it a failed request. Default is 30 seconds. Valid range is [1, 86400]."
+
+## obj spec.forProvider.backend
+
+"The set of backends that serve this BackendService."
+
+### fn spec.forProvider.backend.withBalancingMode
+
+```ts
+withBalancingMode(balancingMode)
+```
+
+"Specifies the balancing mode for this backend. \n For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)) and CONNECTION (for TCP/SSL). Default value: \"UTILIZATION\" Possible values: [\"UTILIZATION\", \"RATE\", \"CONNECTION\"]"
+
+### fn spec.forProvider.backend.withCapacityScaler
+
+```ts
+withCapacityScaler(capacityScaler)
+```
+
+"A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or CONNECTION). \n Default value is 1, which means the group will serve up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available Capacity. Valid range is [0.0,1.0]."
+
+### fn spec.forProvider.backend.withDescription
+
+```ts
+withDescription(description)
+```
+
+"An optional description of this resource. Provide this property when you create the resource."
+
+### fn spec.forProvider.backend.withGroup
+
+```ts
+withGroup(group)
+```
+
+"The fully-qualified URL of an Instance Group or Network Endpoint Group resource. In case of instance group this defines the list of instances that serve traffic. Member virtual machine instances from each instance group must live in the same zone as the instance group itself. No two backends in a backend service are allowed to use same Instance Group resource. \n For Network Endpoint Groups this defines list of endpoints. All endpoints of Network Endpoint Group must be hosted on instances located in the same zone as the Network Endpoint Group. \n Backend services cannot mix Instance Group and Network Endpoint Group backends. \n Note that you must specify an Instance Group or Network Endpoint Group resource using the fully-qualified URL, rather than a partial URL."
+
+### fn spec.forProvider.backend.withMaxConnections
+
+```ts
+withMaxConnections(maxConnections)
+```
+
+"The max number of simultaneous connections for the group. Can be used with either CONNECTION or UTILIZATION balancing modes. \n For CONNECTION mode, either maxConnections or one of maxConnectionsPerInstance or maxConnectionsPerEndpoint, as appropriate for group type, must be set."
+
+### fn spec.forProvider.backend.withMaxConnectionsPerEndpoint
+
+```ts
+withMaxConnectionsPerEndpoint(maxConnectionsPerEndpoint)
+```
+
+"The max number of simultaneous connections that a single backend network endpoint can handle. This is used to calculate the capacity of the group. Can be used in either CONNECTION or UTILIZATION balancing modes. \n For CONNECTION mode, either maxConnections or maxConnectionsPerEndpoint must be set."
+
+### fn spec.forProvider.backend.withMaxConnectionsPerInstance
+
+```ts
+withMaxConnectionsPerInstance(maxConnectionsPerInstance)
+```
+
+"The max number of simultaneous connections that a single backend instance can handle. This is used to calculate the capacity of the group. Can be used in either CONNECTION or UTILIZATION balancing modes. \n For CONNECTION mode, either maxConnections or maxConnectionsPerInstance must be set."
+
+### fn spec.forProvider.backend.withMaxRate
+
+```ts
+withMaxRate(maxRate)
+```
+
+"The max requests per second (RPS) of the group. \n Can be used with either RATE or UTILIZATION balancing modes, but required if RATE mode. For RATE mode, either maxRate or one of maxRatePerInstance or maxRatePerEndpoint, as appropriate for group type, must be set."
+
+### fn spec.forProvider.backend.withMaxRatePerEndpoint
+
+```ts
+withMaxRatePerEndpoint(maxRatePerEndpoint)
+```
+
+"The max requests per second (RPS) that a single backend network endpoint can handle. This is used to calculate the capacity of the group. Can be used in either balancing mode. For RATE mode, either maxRate or maxRatePerEndpoint must be set."
+
+### fn spec.forProvider.backend.withMaxRatePerInstance
+
+```ts
+withMaxRatePerInstance(maxRatePerInstance)
+```
+
+"The max requests per second (RPS) that a single backend instance can handle. This is used to calculate the capacity of the group. Can be used in either balancing mode. For RATE mode, either maxRate or maxRatePerInstance must be set."
+
+### fn spec.forProvider.backend.withMaxUtilization
+
+```ts
+withMaxUtilization(maxUtilization)
+```
+
+"Used when balancingMode is UTILIZATION. This ratio defines the CPU utilization target for the group. Valid range is [0.0, 1.0]."
+
+## obj spec.forProvider.cdnPolicy
+
+"Cloud CDN configuration for this BackendService."
+
+### fn spec.forProvider.cdnPolicy.withCacheKeyPolicy
+
+```ts
+withCacheKeyPolicy(cacheKeyPolicy)
+```
+
+"The CacheKeyPolicy for this CdnPolicy."
+
+### fn spec.forProvider.cdnPolicy.withCacheKeyPolicyMixin
+
+```ts
+withCacheKeyPolicyMixin(cacheKeyPolicy)
+```
+
+"The CacheKeyPolicy for this CdnPolicy."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.cdnPolicy.withCacheMode
+
+```ts
+withCacheMode(cacheMode)
+```
+
+"Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values: [\"USE_ORIGIN_HEADERS\", \"FORCE_CACHE_ALL\", \"CACHE_ALL_STATIC\"]"
+
+### fn spec.forProvider.cdnPolicy.withClientTtl
+
+```ts
+withClientTtl(clientTtl)
+```
+
+"Specifies the maximum allowed TTL for cached content served by this origin."
+
+### fn spec.forProvider.cdnPolicy.withDefaultTtl
+
+```ts
+withDefaultTtl(defaultTtl)
+```
+
+"Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age)."
+
+### fn spec.forProvider.cdnPolicy.withMaxTtl
+
+```ts
+withMaxTtl(maxTtl)
+```
+
+"Specifies the maximum allowed TTL for cached content served by this origin."
+
+### fn spec.forProvider.cdnPolicy.withNegativeCaching
+
+```ts
+withNegativeCaching(negativeCaching)
+```
+
+"Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects."
+
+### fn spec.forProvider.cdnPolicy.withNegativeCachingPolicy
+
+```ts
+withNegativeCachingPolicy(negativeCachingPolicy)
+```
+
+"Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy. Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs."
+
+### fn spec.forProvider.cdnPolicy.withNegativeCachingPolicyMixin
+
+```ts
+withNegativeCachingPolicyMixin(negativeCachingPolicy)
+```
+
+"Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy. Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.cdnPolicy.withServeWhileStale
+
+```ts
+withServeWhileStale(serveWhileStale)
+```
+
+"Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache."
+
+### fn spec.forProvider.cdnPolicy.withSignedUrlCacheMaxAgeSec
+
+```ts
+withSignedUrlCacheMaxAgeSec(signedUrlCacheMaxAgeSec)
+```
+
+"Maximum number of seconds the response to a signed URL request will be considered fresh, defaults to 1hr (3600s). After this time period, the response will be revalidated before being served. \n When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a \"Cache-Control: public, max-age=[TTL]\" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered."
+
+## obj spec.forProvider.cdnPolicy.cacheKeyPolicy
+
+"The CacheKeyPolicy for this CdnPolicy."
+
+### fn spec.forProvider.cdnPolicy.cacheKeyPolicy.withIncludeHost
+
+```ts
+withIncludeHost(includeHost)
+```
+
+"If true requests to different hosts will be cached separately."
+
+### fn spec.forProvider.cdnPolicy.cacheKeyPolicy.withIncludeProtocol
+
+```ts
+withIncludeProtocol(includeProtocol)
+```
+
+"If true, http and https requests will be cached separately."
+
+### fn spec.forProvider.cdnPolicy.cacheKeyPolicy.withIncludeQueryString
+
+```ts
+withIncludeQueryString(includeQueryString)
+```
+
+"If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. \n If false, the query string will be excluded from the cache key entirely."
+
+### fn spec.forProvider.cdnPolicy.cacheKeyPolicy.withQueryStringBlacklist
+
+```ts
+withQueryStringBlacklist(queryStringBlacklist)
+```
+
+"Names of query string parameters to exclude in cache keys. \n All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters."
+
+### fn spec.forProvider.cdnPolicy.cacheKeyPolicy.withQueryStringBlacklistMixin
+
+```ts
+withQueryStringBlacklistMixin(queryStringBlacklist)
+```
+
+"Names of query string parameters to exclude in cache keys. \n All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.cdnPolicy.cacheKeyPolicy.withQueryStringWhitelist
+
+```ts
+withQueryStringWhitelist(queryStringWhitelist)
+```
+
+"Names of query string parameters to include in cache keys. \n All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters."
+
+### fn spec.forProvider.cdnPolicy.cacheKeyPolicy.withQueryStringWhitelistMixin
+
+```ts
+withQueryStringWhitelistMixin(queryStringWhitelist)
+```
+
+"Names of query string parameters to include in cache keys. \n All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.cdnPolicy.negativeCachingPolicy
+
+"Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy. Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs."
+
+### fn spec.forProvider.cdnPolicy.negativeCachingPolicy.withCode
+
+```ts
+withCode(code)
+```
+
+"The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status code more than once."
+
+### fn spec.forProvider.cdnPolicy.negativeCachingPolicy.withTtl
+
+```ts
+withTtl(ttl)
+```
+
+"The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL."
+
+## obj spec.forProvider.circuitBreakers
+
+"Settings controlling the volume of connections to a backend service. This field is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED."
+
+### fn spec.forProvider.circuitBreakers.withMaxConnections
+
+```ts
+withMaxConnections(maxConnections)
+```
+
+"The maximum number of connections to the backend cluster. Defaults to 1024."
+
+### fn spec.forProvider.circuitBreakers.withMaxPendingRequests
+
+```ts
+withMaxPendingRequests(maxPendingRequests)
+```
+
+"The maximum number of pending requests to the backend cluster. Defaults to 1024."
+
+### fn spec.forProvider.circuitBreakers.withMaxRequests
+
+```ts
+withMaxRequests(maxRequests)
+```
+
+"The maximum number of parallel requests to the backend cluster. Defaults to 1024."
+
+### fn spec.forProvider.circuitBreakers.withMaxRequestsPerConnection
+
+```ts
+withMaxRequestsPerConnection(maxRequestsPerConnection)
+```
+
+"Maximum requests for a single backend connection. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive."
+
+### fn spec.forProvider.circuitBreakers.withMaxRetries
+
+```ts
+withMaxRetries(maxRetries)
+```
+
+"The maximum number of parallel retries to the backend cluster. Defaults to 3."
+
+## obj spec.forProvider.consistentHash
+
+"Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH."
+
+### fn spec.forProvider.consistentHash.withHttpCookie
+
+```ts
+withHttpCookie(httpCookie)
+```
+
+"Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE."
+
+### fn spec.forProvider.consistentHash.withHttpCookieMixin
+
+```ts
+withHttpCookieMixin(httpCookie)
+```
+
+"Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.consistentHash.withHttpHeaderName
+
+```ts
+withHttpHeaderName(httpHeaderName)
+```
+
+"The hash based on the value of the specified header field. This field is applicable if the sessionAffinity is set to HEADER_FIELD."
+
+### fn spec.forProvider.consistentHash.withMinimumRingSize
+
+```ts
+withMinimumRingSize(minimumRingSize)
+```
+
+"The minimum number of virtual nodes to use for the hash ring. Larger ring sizes result in more granular load distributions. If the number of hosts in the load balancing pool is larger than the ring size, each host will be assigned a single virtual node. Defaults to 1024."
+
+## obj spec.forProvider.consistentHash.httpCookie
+
+"Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE."
+
+### fn spec.forProvider.consistentHash.httpCookie.withName
+
+```ts
+withName(name)
+```
+
+"Name of the cookie."
+
+### fn spec.forProvider.consistentHash.httpCookie.withPath
+
+```ts
+withPath(path)
+```
+
+"Path to set for the cookie."
+
+### fn spec.forProvider.consistentHash.httpCookie.withTtl
+
+```ts
+withTtl(ttl)
+```
+
+"Lifetime of the cookie."
+
+### fn spec.forProvider.consistentHash.httpCookie.withTtlMixin
+
+```ts
+withTtlMixin(ttl)
+```
+
+"Lifetime of the cookie."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.consistentHash.httpCookie.ttl
+
+"Lifetime of the cookie."
+
+### fn spec.forProvider.consistentHash.httpCookie.ttl.withNanos
+
+```ts
+withNanos(nanos)
+```
+
+"Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive."
+
+### fn spec.forProvider.consistentHash.httpCookie.ttl.withSeconds
+
+```ts
+withSeconds(seconds)
+```
+
+"Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive."
+
+## obj spec.forProvider.iap
+
+"Settings for enabling Cloud Identity Aware Proxy"
+
+### fn spec.forProvider.iap.withOauth2ClientId
+
+```ts
+withOauth2ClientId(oauth2ClientId)
+```
+
+"OAuth2 Client ID for IAP"
+
+## obj spec.forProvider.iap.oauth2ClientSecretSecretRef
+
+"OAuth2 Client Secret for IAP"
+
+### fn spec.forProvider.iap.oauth2ClientSecretSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.iap.oauth2ClientSecretSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.iap.oauth2ClientSecretSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.logConfig
+
+"This field denotes the logging options for the load balancer traffic served by this backend service. If logging is enabled, logs will be exported to Stackdriver."
+
+### fn spec.forProvider.logConfig.withEnable
+
+```ts
+withEnable(enable)
+```
+
+"Whether to enable logging for the load balancer traffic served by this backend service."
+
+### fn spec.forProvider.logConfig.withSampleRate
+
+```ts
+withSampleRate(sampleRate)
+```
+
+"This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0."
+
+## obj spec.forProvider.outlierDetection
+
+"Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED."
+
+### fn spec.forProvider.outlierDetection.withBaseEjectionTime
+
+```ts
+withBaseEjectionTime(baseEjectionTime)
+```
+
+"The base time that a host is ejected for. The real time is equal to the base time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s."
+
+### fn spec.forProvider.outlierDetection.withBaseEjectionTimeMixin
+
+```ts
+withBaseEjectionTimeMixin(baseEjectionTime)
+```
+
+"The base time that a host is ejected for. The real time is equal to the base time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.outlierDetection.withConsecutiveErrors
+
+```ts
+withConsecutiveErrors(consecutiveErrors)
+```
+
+"Number of errors before a host is ejected from the connection pool. When the backend host is accessed over HTTP, a 5xx return code qualifies as an error. Defaults to 5."
+
+### fn spec.forProvider.outlierDetection.withConsecutiveGatewayFailure
+
+```ts
+withConsecutiveGatewayFailure(consecutiveGatewayFailure)
+```
+
+"The number of consecutive gateway failures (502, 503, 504 status or connection errors that are mapped to one of those status codes) before a consecutive gateway failure ejection occurs. Defaults to 5."
+
+### fn spec.forProvider.outlierDetection.withEnforcingConsecutiveErrors
+
+```ts
+withEnforcingConsecutiveErrors(enforcingConsecutiveErrors)
+```
+
+"The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100."
+
+### fn spec.forProvider.outlierDetection.withEnforcingConsecutiveGatewayFailure
+
+```ts
+withEnforcingConsecutiveGatewayFailure(enforcingConsecutiveGatewayFailure)
+```
+
+"The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive gateway failures. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 0."
+
+### fn spec.forProvider.outlierDetection.withEnforcingSuccessRate
+
+```ts
+withEnforcingSuccessRate(enforcingSuccessRate)
+```
+
+"The percentage chance that a host will be actually ejected when an outlier status is detected through success rate statistics. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100."
+
+### fn spec.forProvider.outlierDetection.withInterval
+
+```ts
+withInterval(interval)
+```
+
+"Time interval between ejection sweep analysis. This can result in both new ejections as well as hosts being returned to service. Defaults to 10 seconds."
+
+### fn spec.forProvider.outlierDetection.withIntervalMixin
+
+```ts
+withIntervalMixin(interval)
+```
+
+"Time interval between ejection sweep analysis. This can result in both new ejections as well as hosts being returned to service. Defaults to 10 seconds."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.outlierDetection.withMaxEjectionPercent
+
+```ts
+withMaxEjectionPercent(maxEjectionPercent)
+```
+
+"Maximum percentage of hosts in the load balancing pool for the backend service that can be ejected. Defaults to 10%."
+
+### fn spec.forProvider.outlierDetection.withSuccessRateMinimumHosts
+
+```ts
+withSuccessRateMinimumHosts(successRateMinimumHosts)
+```
+
+"The number of hosts in a cluster that must have enough request volume to detect success rate outliers. If the number of hosts is less than this setting, outlier detection via success rate statistics is not performed for any host in the cluster. Defaults to 5."
+
+### fn spec.forProvider.outlierDetection.withSuccessRateRequestVolume
+
+```ts
+withSuccessRateRequestVolume(successRateRequestVolume)
+```
+
+"The minimum number of total requests that must be collected in one interval (as defined by the interval duration above) to include this host in success rate based outlier detection. If the volume is lower than this setting, outlier detection via success rate statistics is not performed for that host. Defaults to 100."
+
+### fn spec.forProvider.outlierDetection.withSuccessRateStdevFactor
+
+```ts
+withSuccessRateStdevFactor(successRateStdevFactor)
+```
+
+"This factor is used to determine the ejection threshold for success rate outlier ejection. The ejection threshold is the difference between the mean success rate, and the product of this factor and the standard deviation of the mean success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided by a thousand to get a double. That is, if the desired factor is 1.9, the runtime value should be 1900. Defaults to 1900."
+
+## obj spec.forProvider.outlierDetection.baseEjectionTime
+
+"The base time that a host is ejected for. The real time is equal to the base time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s."
+
+### fn spec.forProvider.outlierDetection.baseEjectionTime.withNanos
+
+```ts
+withNanos(nanos)
+```
+
+"Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 'seconds' field and a positive 'nanos' field. Must be from 0 to 999,999,999 inclusive."
+
+### fn spec.forProvider.outlierDetection.baseEjectionTime.withSeconds
+
+```ts
+withSeconds(seconds)
+```
+
+"Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive."
+
+## obj spec.forProvider.outlierDetection.interval
+
+"Time interval between ejection sweep analysis. This can result in both new ejections as well as hosts being returned to service. Defaults to 10 seconds."
+
+### fn spec.forProvider.outlierDetection.interval.withNanos
+
+```ts
+withNanos(nanos)
+```
+
+"Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 'seconds' field and a positive 'nanos' field. Must be from 0 to 999,999,999 inclusive."
+
+### fn spec.forProvider.outlierDetection.interval.withSeconds
+
+```ts
+withSeconds(seconds)
+```
+
+"Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive."
 
 ## obj spec.providerConfigRef
 

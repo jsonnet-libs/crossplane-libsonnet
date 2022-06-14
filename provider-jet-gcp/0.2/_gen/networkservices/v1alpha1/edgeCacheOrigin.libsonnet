@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,15 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#timeout':: d.obj(help='"The connection and HTTP timeout configuration for this origin."'),
+      timeout: {
+        '#withConnectTimeout':: d.fn(help='"The maximum duration to wait for the origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment. \\n Defaults to 5 seconds. The timeout must be a value between 1s and 15s."', args=[d.arg(name='connectTimeout', type=d.T.string)]),
+        withConnectTimeout(connectTimeout): { connectTimeout: connectTimeout },
+        '#withMaxAttemptsTimeout':: d.fn(help='"The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 503 will be returned if the timeout is reached before a response is returned. \\n Defaults to 5 seconds. The timeout must be a value between 1s and 15s."', args=[d.arg(name='maxAttemptsTimeout', type=d.T.string)]),
+        withMaxAttemptsTimeout(maxAttemptsTimeout): { maxAttemptsTimeout: maxAttemptsTimeout },
+        '#withResponseTimeout':: d.fn(help='"The maximum duration to wait for data to arrive when reading from the HTTP connection/stream. \\n Defaults to 5 seconds. The timeout must be a value between 1s and 30s."', args=[d.arg(name='responseTimeout', type=d.T.string)]),
+        withResponseTimeout(responseTimeout): { responseTimeout: responseTimeout },
+      },
       '#withDescription':: d.fn(help='"A human-readable description of the resource."', args=[d.arg(name='description', type=d.T.string)]),
       withDescription(description): { spec+: { forProvider+: { description: description } } },
       '#withFailoverOrigin':: d.fn(help='"The Origin resource to try when the current origin cannot be reached. After maxAttempts is reached, the configured failoverOrigin will be used to fulfil the request. \\n The value of timeout.maxAttemptsTimeout dictates the timeout across all origins. A reference to a Topic resource."', args=[d.arg(name='failoverOrigin', type=d.T.string)]),

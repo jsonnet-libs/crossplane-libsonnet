@@ -22,8 +22,6 @@ permalink: /provider-kubernetes/0.3/kubernetes/v1alpha1/object/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,19 @@ permalink: /provider-kubernetes/0.3/kubernetes/v1alpha1/object/
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
     * [`fn withName(name)`](#fn-specproviderrefwithname)
+  * [`obj spec.references`](#obj-specreferences)
+    * [`fn withToFieldPath(toFieldPath)`](#fn-specreferenceswithtofieldpath)
+    * [`obj spec.references.dependsOn`](#obj-specreferencesdependson)
+      * [`fn withApiVersion(apiVersion)`](#fn-specreferencesdependsonwithapiversion)
+      * [`fn withKind(kind)`](#fn-specreferencesdependsonwithkind)
+      * [`fn withName(name)`](#fn-specreferencesdependsonwithname)
+      * [`fn withNamespace(namespace)`](#fn-specreferencesdependsonwithnamespace)
+    * [`obj spec.references.patchesFrom`](#obj-specreferencespatchesfrom)
+      * [`fn withApiVersion(apiVersion)`](#fn-specreferencespatchesfromwithapiversion)
+      * [`fn withFieldPath(fieldPath)`](#fn-specreferencespatchesfromwithfieldpath)
+      * [`fn withKind(kind)`](#fn-specreferencespatchesfromwithkind)
+      * [`fn withName(name)`](#fn-specreferencespatchesfromwithname)
+      * [`fn withNamespace(namespace)`](#fn-specreferencespatchesfromwithnamespace)
   * [`obj spec.writeConnectionSecretToRef`](#obj-specwriteconnectionsecrettoref)
     * [`fn withName(name)`](#fn-specwriteconnectionsecrettorefwithname)
     * [`fn withNamespace(namespace)`](#fn-specwriteconnectionsecrettorefwithnamespace)
@@ -160,24 +171,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -322,6 +315,98 @@ withName(name)
 ```
 
 "Name of the referenced object."
+
+## obj spec.references
+
+
+
+### fn spec.references.withToFieldPath
+
+```ts
+withToFieldPath(toFieldPath)
+```
+
+"ToFieldPath is the path of the field on the resource whose value will be changed with the result of transforms. Leave empty if you'd like to propagate to the same path as patchesFrom.fieldPath."
+
+## obj spec.references.dependsOn
+
+"DependsOn is used to declare dependency on other Object or arbitrary Kubernetes resource."
+
+### fn spec.references.dependsOn.withApiVersion
+
+```ts
+withApiVersion(apiVersion)
+```
+
+"APIVersion of the referenced object."
+
+### fn spec.references.dependsOn.withKind
+
+```ts
+withKind(kind)
+```
+
+"Kind of the referenced object."
+
+### fn spec.references.dependsOn.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.references.dependsOn.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object."
+
+## obj spec.references.patchesFrom
+
+"PatchesFrom is used to declare dependency on other Object or arbitrary Kubernetes resource, and also patch fields from this object."
+
+### fn spec.references.patchesFrom.withApiVersion
+
+```ts
+withApiVersion(apiVersion)
+```
+
+"APIVersion of the referenced object."
+
+### fn spec.references.patchesFrom.withFieldPath
+
+```ts
+withFieldPath(fieldPath)
+```
+
+"FieldPath is the path of the field on the resource whose value is to be used as input."
+
+### fn spec.references.patchesFrom.withKind
+
+```ts
+withKind(kind)
+```
+
+"Kind of the referenced object."
+
+### fn spec.references.patchesFrom.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.references.patchesFrom.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object."
 
 ## obj spec.writeConnectionSecretToRef
 

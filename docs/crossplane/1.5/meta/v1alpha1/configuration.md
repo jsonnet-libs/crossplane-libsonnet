@@ -22,8 +22,6 @@ permalink: /crossplane/1.5/meta/v1alpha1/configuration/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -36,6 +34,10 @@ permalink: /crossplane/1.5/meta/v1alpha1/configuration/
   * [`fn withDependsOnMixin(dependsOn)`](#fn-specwithdependsonmixin)
   * [`obj spec.crossplane`](#obj-speccrossplane)
     * [`fn withVersion(version)`](#fn-speccrossplanewithversion)
+  * [`obj spec.dependsOn`](#obj-specdependson)
+    * [`fn withConfiguration(configuration)`](#fn-specdependsonwithconfiguration)
+    * [`fn withProvider(provider)`](#fn-specdependsonwithprovider)
+    * [`fn withVersion(version)`](#fn-specdependsonwithversion)
 
 ## Fields
 
@@ -153,24 +155,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -262,3 +246,31 @@ withVersion(version)
 ```
 
 "Semantic version constraints of Crossplane that package is compatible with."
+
+## obj spec.dependsOn
+
+"Dependencies on other packages."
+
+### fn spec.dependsOn.withConfiguration
+
+```ts
+withConfiguration(configuration)
+```
+
+"Configuration is the name of a Configuration package image."
+
+### fn spec.dependsOn.withProvider
+
+```ts
+withProvider(provider)
+```
+
+"Provider is the name of a Provider package image."
+
+### fn spec.dependsOn.withVersion
+
+```ts
+withVersion(version)
+```
+
+"Version is the semantic version constraints of the dependency image."

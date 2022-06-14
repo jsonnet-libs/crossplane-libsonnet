@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/ec2/v1beta1/routeTable/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -42,6 +40,40 @@ permalink: /provider-aws/0.24/ec2/v1beta1/routeTable/
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
     * [`fn withVpcId(vpcId)`](#fn-specforproviderwithvpcid)
+    * [`obj spec.forProvider.associations`](#obj-specforproviderassociations)
+      * [`fn withSubnetId(subnetId)`](#fn-specforproviderassociationswithsubnetid)
+      * [`obj spec.forProvider.associations.subnetIdRef`](#obj-specforproviderassociationssubnetidref)
+        * [`fn withName(name)`](#fn-specforproviderassociationssubnetidrefwithname)
+      * [`obj spec.forProvider.associations.subnetIdSelector`](#obj-specforproviderassociationssubnetidselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderassociationssubnetidselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderassociationssubnetidselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderassociationssubnetidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.routes`](#obj-specforproviderroutes)
+      * [`fn withDestinationCidrBlock(destinationCidrBlock)`](#fn-specforproviderrouteswithdestinationcidrblock)
+      * [`fn withDestinationIpv6CidrBlock(destinationIpv6CidrBlock)`](#fn-specforproviderrouteswithdestinationipv6cidrblock)
+      * [`fn withEgressOnlyInternetGatewayId(egressOnlyInternetGatewayId)`](#fn-specforproviderrouteswithegressonlyinternetgatewayid)
+      * [`fn withGatewayId(gatewayId)`](#fn-specforproviderrouteswithgatewayid)
+      * [`fn withInstanceId(instanceId)`](#fn-specforproviderrouteswithinstanceid)
+      * [`fn withLocalGatewayId(localGatewayId)`](#fn-specforproviderrouteswithlocalgatewayid)
+      * [`fn withNatGatewayId(natGatewayId)`](#fn-specforproviderrouteswithnatgatewayid)
+      * [`fn withNetworkInterfaceId(networkInterfaceId)`](#fn-specforproviderrouteswithnetworkinterfaceid)
+      * [`fn withTransitGatewayId(transitGatewayId)`](#fn-specforproviderrouteswithtransitgatewayid)
+      * [`fn withVpcPeeringConnectionId(vpcPeeringConnectionId)`](#fn-specforproviderrouteswithvpcpeeringconnectionid)
+      * [`obj spec.forProvider.routes.gatewayIdRef`](#obj-specforproviderroutesgatewayidref)
+        * [`fn withName(name)`](#fn-specforproviderroutesgatewayidrefwithname)
+      * [`obj spec.forProvider.routes.gatewayIdSelector`](#obj-specforproviderroutesgatewayidselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderroutesgatewayidselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderroutesgatewayidselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderroutesgatewayidselectorwithmatchlabelsmixin)
+      * [`obj spec.forProvider.routes.natGatewayIdRef`](#obj-specforproviderroutesnatgatewayidref)
+        * [`fn withName(name)`](#fn-specforproviderroutesnatgatewayidrefwithname)
+      * [`obj spec.forProvider.routes.natGatewayIdSelector`](#obj-specforproviderroutesnatgatewayidselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderroutesnatgatewayidselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderroutesnatgatewayidselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderroutesnatgatewayidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.tags`](#obj-specforprovidertags)
+      * [`fn withKey(key)`](#fn-specforprovidertagswithkey)
+      * [`fn withValue(value)`](#fn-specforprovidertagswithvalue)
     * [`obj spec.forProvider.vpcIdRef`](#obj-specforprovidervpcidref)
       * [`fn withName(name)`](#fn-specforprovidervpcidrefwithname)
     * [`obj spec.forProvider.vpcIdSelector`](#obj-specforprovidervpcidselector)
@@ -169,24 +201,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -333,6 +347,248 @@ withVpcId(vpcId)
 ```
 
 "VPCID is the ID of the VPC."
+
+## obj spec.forProvider.associations
+
+"The associations between the route table and one or more subnets."
+
+### fn spec.forProvider.associations.withSubnetId
+
+```ts
+withSubnetId(subnetId)
+```
+
+"The ID of the subnet. A subnet ID is not returned for an implicit association."
+
+## obj spec.forProvider.associations.subnetIdRef
+
+"A referencer to retrieve the ID of a subnet"
+
+### fn spec.forProvider.associations.subnetIdRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.associations.subnetIdSelector
+
+"A selector to select a referencer to retrieve the ID of a subnet"
+
+### fn spec.forProvider.associations.subnetIdSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.associations.subnetIdSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.associations.subnetIdSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.routes
+
+"the routes in the route table"
+
+### fn spec.forProvider.routes.withDestinationCidrBlock
+
+```ts
+withDestinationCidrBlock(destinationCidrBlock)
+```
+
+"The IPv4 CIDR address block used for the destination match. Routing decisions are based on the most specific match."
+
+### fn spec.forProvider.routes.withDestinationIpv6CidrBlock
+
+```ts
+withDestinationIpv6CidrBlock(destinationIpv6CidrBlock)
+```
+
+"The IPv6 CIDR address block used for the destination match. Routing decisions are based on the most specific match."
+
+### fn spec.forProvider.routes.withEgressOnlyInternetGatewayId
+
+```ts
+withEgressOnlyInternetGatewayId(egressOnlyInternetGatewayId)
+```
+
+"[IPv6 traffic only] The ID of an egress-only internet gateway."
+
+### fn spec.forProvider.routes.withGatewayId
+
+```ts
+withGatewayId(gatewayId)
+```
+
+"The ID of an internet gateway or virtual private gateway attached to your VPC."
+
+### fn spec.forProvider.routes.withInstanceId
+
+```ts
+withInstanceId(instanceId)
+```
+
+"The ID of a NAT instance in your VPC. The operation fails if you specify an instance ID unless exactly one network interface is attached."
+
+### fn spec.forProvider.routes.withLocalGatewayId
+
+```ts
+withLocalGatewayId(localGatewayId)
+```
+
+"The ID of the local gateway."
+
+### fn spec.forProvider.routes.withNatGatewayId
+
+```ts
+withNatGatewayId(natGatewayId)
+```
+
+"[IPv4 traffic only] The ID of a NAT gateway."
+
+### fn spec.forProvider.routes.withNetworkInterfaceId
+
+```ts
+withNetworkInterfaceId(networkInterfaceId)
+```
+
+"The ID of a network interface."
+
+### fn spec.forProvider.routes.withTransitGatewayId
+
+```ts
+withTransitGatewayId(transitGatewayId)
+```
+
+"The ID of a transit gateway."
+
+### fn spec.forProvider.routes.withVpcPeeringConnectionId
+
+```ts
+withVpcPeeringConnectionId(vpcPeeringConnectionId)
+```
+
+"The ID of a VPC peering connection."
+
+## obj spec.forProvider.routes.gatewayIdRef
+
+"A referencer to retrieve the ID of a gateway"
+
+### fn spec.forProvider.routes.gatewayIdRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.routes.gatewayIdSelector
+
+"A selector to select a referencer to retrieve the ID of a gateway"
+
+### fn spec.forProvider.routes.gatewayIdSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.routes.gatewayIdSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.routes.gatewayIdSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.routes.natGatewayIdRef
+
+"A referencer to retrieve the ID of a NAT gateway"
+
+### fn spec.forProvider.routes.natGatewayIdRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.routes.natGatewayIdSelector
+
+"A selector to select a referencer to retrieve the ID of a NAT gateway"
+
+### fn spec.forProvider.routes.natGatewayIdSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.routes.natGatewayIdSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.routes.natGatewayIdSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.tags
+
+"Tags represents to current ec2 tags."
+
+### fn spec.forProvider.tags.withKey
+
+```ts
+withKey(key)
+```
+
+"Key is the name of the tag."
+
+### fn spec.forProvider.tags.withValue
+
+```ts
+withValue(value)
+```
+
+"Value is the value of the tag."
 
 ## obj spec.forProvider.vpcIdRef
 

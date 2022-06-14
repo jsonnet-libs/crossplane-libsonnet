@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,20 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#guestOsFeatures':: d.obj(help='"A list of features to enable on the guest operating system. Applicable only for bootable images."'),
+      guestOsFeatures: {
+        '#withType':: d.fn(help='"The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: [\\"MULTI_IP_SUBNET\\", \\"SECURE_BOOT\\", \\"SEV_CAPABLE\\", \\"UEFI_COMPATIBLE\\", \\"VIRTIO_SCSI_MULTIQUEUE\\", \\"WINDOWS\\", \\"GVNIC\\"]"', args=[d.arg(name='type', type=d.T.string)]),
+        withType(type): { type: type },
+      },
+      '#rawDisk':: d.obj(help='"The parameters of the raw disk image."'),
+      rawDisk: {
+        '#withContainerType':: d.fn(help='"The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created. Default value: \\"TAR\\" Possible values: [\\"TAR\\"]"', args=[d.arg(name='containerType', type=d.T.string)]),
+        withContainerType(containerType): { containerType: containerType },
+        '#withSha1':: d.fn(help='"An optional SHA1 checksum of the disk image before unpackaging. This is provided by the client when the disk image is created."', args=[d.arg(name='sha1', type=d.T.string)]),
+        withSha1(sha1): { sha1: sha1 },
+        '#withSource':: d.fn(help='"The full Google Cloud Storage URL where disk storage is stored You must provide either this property or the sourceDisk property but not both."', args=[d.arg(name='source', type=d.T.string)]),
+        withSource(source): { source: source },
+      },
       '#withDescription':: d.fn(help='"An optional description of this resource. Provide this property when you create the resource."', args=[d.arg(name='description', type=d.T.string)]),
       withDescription(description): { spec+: { forProvider+: { description: description } } },
       '#withDiskSizeGb':: d.fn(help='"Size of the image when restored onto a persistent disk (in GB)."', args=[d.arg(name='diskSizeGb', type=d.T.integer)]),

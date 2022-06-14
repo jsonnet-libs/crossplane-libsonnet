@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/pubsub/v1alpha1/subscription/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -52,6 +50,23 @@ permalink: /provider-jet-gcp/0.2/pubsub/v1alpha1/subscription/
     * [`fn withRetryPolicy(retryPolicy)`](#fn-specforproviderwithretrypolicy)
     * [`fn withRetryPolicyMixin(retryPolicy)`](#fn-specforproviderwithretrypolicymixin)
     * [`fn withTopic(topic)`](#fn-specforproviderwithtopic)
+    * [`obj spec.forProvider.deadLetterPolicy`](#obj-specforproviderdeadletterpolicy)
+      * [`fn withDeadLetterTopic(deadLetterTopic)`](#fn-specforproviderdeadletterpolicywithdeadlettertopic)
+      * [`fn withMaxDeliveryAttempts(maxDeliveryAttempts)`](#fn-specforproviderdeadletterpolicywithmaxdeliveryattempts)
+    * [`obj spec.forProvider.expirationPolicy`](#obj-specforproviderexpirationpolicy)
+      * [`fn withTtl(ttl)`](#fn-specforproviderexpirationpolicywithttl)
+    * [`obj spec.forProvider.pushConfig`](#obj-specforproviderpushconfig)
+      * [`fn withAttributes(attributes)`](#fn-specforproviderpushconfigwithattributes)
+      * [`fn withAttributesMixin(attributes)`](#fn-specforproviderpushconfigwithattributesmixin)
+      * [`fn withOidcToken(oidcToken)`](#fn-specforproviderpushconfigwithoidctoken)
+      * [`fn withOidcTokenMixin(oidcToken)`](#fn-specforproviderpushconfigwithoidctokenmixin)
+      * [`fn withPushEndpoint(pushEndpoint)`](#fn-specforproviderpushconfigwithpushendpoint)
+      * [`obj spec.forProvider.pushConfig.oidcToken`](#obj-specforproviderpushconfigoidctoken)
+        * [`fn withAudience(audience)`](#fn-specforproviderpushconfigoidctokenwithaudience)
+        * [`fn withServiceAccountEmail(serviceAccountEmail)`](#fn-specforproviderpushconfigoidctokenwithserviceaccountemail)
+    * [`obj spec.forProvider.retryPolicy`](#obj-specforproviderretrypolicy)
+      * [`fn withMaximumBackoff(maximumBackoff)`](#fn-specforproviderretrypolicywithmaximumbackoff)
+      * [`fn withMinimumBackoff(minimumBackoff)`](#fn-specforproviderretrypolicywithminimumbackoff)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -173,24 +188,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -421,6 +418,126 @@ withTopic(topic)
 ```
 
 "A reference to a Topic resource."
+
+## obj spec.forProvider.deadLetterPolicy
+
+"A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled. \n The Cloud Pub/Sub service account associated with this subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription."
+
+### fn spec.forProvider.deadLetterPolicy.withDeadLetterTopic
+
+```ts
+withDeadLetterTopic(deadLetterTopic)
+```
+
+"The name of the topic to which dead letter messages should be published. Format is 'projects/{project}/topics/{topic}'. \n The Cloud Pub/Sub service account associated with the enclosing subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Publish() to this topic. \n The operation will fail if the topic does not exist. Users should ensure that there is a subscription attached to this topic since messages published to a topic with no subscriptions are lost."
+
+### fn spec.forProvider.deadLetterPolicy.withMaxDeliveryAttempts
+
+```ts
+withMaxDeliveryAttempts(maxDeliveryAttempts)
+```
+
+"The maximum number of delivery attempts for any message. The value must be between 5 and 100. \n The number of delivery attempts is defined as 1 + (the sum of number of NACKs and number of times the acknowledgement deadline has been exceeded for the message). \n A NACK is any call to ModifyAckDeadline with a 0 deadline. Note that client libraries may automatically extend ack_deadlines. \n This field will be honored on a best effort basis. \n If this parameter is 0, a default value of 5 is used."
+
+## obj spec.forProvider.expirationPolicy
+
+"A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used.  If it is set but ttl is \"\", the resource never expires.  The minimum allowed value for expirationPolicy.ttl is 1 day."
+
+### fn spec.forProvider.expirationPolicy.withTtl
+
+```ts
+withTtl(ttl)
+```
+
+"Specifies the \"time-to-live\" duration for an associated resource. The resource expires if it is not active for a period of ttl. If ttl is not set, the associated resource never expires. A duration in seconds with up to nine fractional digits, terminated by 's'. Example - \"3.5s\"."
+
+## obj spec.forProvider.pushConfig
+
+"If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that the subscriber will pull and ack messages using API methods."
+
+### fn spec.forProvider.pushConfig.withAttributes
+
+```ts
+withAttributes(attributes)
+```
+
+"Endpoint configuration attributes. \n Every endpoint has a set of API supported attributes that can be used to control different aspects of the message delivery. \n The currently supported attribute is x-goog-version, which you can use to change the format of the pushed message. This attribute indicates the version of the data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The endpoint version is based on the version of the Pub/Sub API. \n If not present during the subscriptions.create call, it will default to the version of the API used to make such call. If not present during a subscriptions.modifyPushConfig call, its value will not be changed. subscriptions.get calls will always return a valid version, even if the subscription was created without this attribute. \n The possible values for this attribute are: \n - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API. - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API."
+
+### fn spec.forProvider.pushConfig.withAttributesMixin
+
+```ts
+withAttributesMixin(attributes)
+```
+
+"Endpoint configuration attributes. \n Every endpoint has a set of API supported attributes that can be used to control different aspects of the message delivery. \n The currently supported attribute is x-goog-version, which you can use to change the format of the pushed message. This attribute indicates the version of the data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The endpoint version is based on the version of the Pub/Sub API. \n If not present during the subscriptions.create call, it will default to the version of the API used to make such call. If not present during a subscriptions.modifyPushConfig call, its value will not be changed. subscriptions.get calls will always return a valid version, even if the subscription was created without this attribute. \n The possible values for this attribute are: \n - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API. - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.pushConfig.withOidcToken
+
+```ts
+withOidcToken(oidcToken)
+```
+
+"If specified, Pub/Sub will generate and attach an OIDC JWT token as an Authorization header in the HTTP request for every pushed message."
+
+### fn spec.forProvider.pushConfig.withOidcTokenMixin
+
+```ts
+withOidcTokenMixin(oidcToken)
+```
+
+"If specified, Pub/Sub will generate and attach an OIDC JWT token as an Authorization header in the HTTP request for every pushed message."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.pushConfig.withPushEndpoint
+
+```ts
+withPushEndpoint(pushEndpoint)
+```
+
+"A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use \"https://example.com/push\"."
+
+## obj spec.forProvider.pushConfig.oidcToken
+
+"If specified, Pub/Sub will generate and attach an OIDC JWT token as an Authorization header in the HTTP request for every pushed message."
+
+### fn spec.forProvider.pushConfig.oidcToken.withAudience
+
+```ts
+withAudience(audience)
+```
+
+"Audience to be used when generating OIDC token. The audience claim identifies the recipients that the JWT is intended for. The audience value is a single case-sensitive string. Having multiple values (array) for the audience field is not supported. More info about the OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified, the Push endpoint URL will be used."
+
+### fn spec.forProvider.pushConfig.oidcToken.withServiceAccountEmail
+
+```ts
+withServiceAccountEmail(serviceAccountEmail)
+```
+
+"Service account email to be used for generating the OIDC token. The caller (for subscriptions.create, subscriptions.patch, and subscriptions.modifyPushConfig RPCs) must have the iam.serviceAccounts.actAs permission for the service account."
+
+## obj spec.forProvider.retryPolicy
+
+"A policy that specifies how Pub/Sub retries message delivery for this subscription. \n If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message"
+
+### fn spec.forProvider.retryPolicy.withMaximumBackoff
+
+```ts
+withMaximumBackoff(maximumBackoff)
+```
+
+"The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"3.5s\"."
+
+### fn spec.forProvider.retryPolicy.withMinimumBackoff
+
+```ts
+withMinimumBackoff(minimumBackoff)
+```
+
+"The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"3.5s\"."
 
 ## obj spec.providerConfigRef
 

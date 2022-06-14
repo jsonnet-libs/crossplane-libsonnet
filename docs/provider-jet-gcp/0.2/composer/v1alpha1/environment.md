@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/composer/v1alpha1/environment/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -41,6 +39,48 @@ permalink: /provider-jet-gcp/0.2/composer/v1alpha1/environment/
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
+    * [`obj spec.forProvider.config`](#obj-specforproviderconfig)
+      * [`fn withNodeConfig(nodeConfig)`](#fn-specforproviderconfigwithnodeconfig)
+      * [`fn withNodeConfigMixin(nodeConfig)`](#fn-specforproviderconfigwithnodeconfigmixin)
+      * [`fn withNodeCount(nodeCount)`](#fn-specforproviderconfigwithnodecount)
+      * [`fn withPrivateEnvironmentConfig(privateEnvironmentConfig)`](#fn-specforproviderconfigwithprivateenvironmentconfig)
+      * [`fn withPrivateEnvironmentConfigMixin(privateEnvironmentConfig)`](#fn-specforproviderconfigwithprivateenvironmentconfigmixin)
+      * [`fn withSoftwareConfig(softwareConfig)`](#fn-specforproviderconfigwithsoftwareconfig)
+      * [`fn withSoftwareConfigMixin(softwareConfig)`](#fn-specforproviderconfigwithsoftwareconfigmixin)
+      * [`obj spec.forProvider.config.nodeConfig`](#obj-specforproviderconfignodeconfig)
+        * [`fn withDiskSizeGb(diskSizeGb)`](#fn-specforproviderconfignodeconfigwithdisksizegb)
+        * [`fn withIpAllocationPolicy(ipAllocationPolicy)`](#fn-specforproviderconfignodeconfigwithipallocationpolicy)
+        * [`fn withIpAllocationPolicyMixin(ipAllocationPolicy)`](#fn-specforproviderconfignodeconfigwithipallocationpolicymixin)
+        * [`fn withMachineType(machineType)`](#fn-specforproviderconfignodeconfigwithmachinetype)
+        * [`fn withNetwork(network)`](#fn-specforproviderconfignodeconfigwithnetwork)
+        * [`fn withOauthScopes(oauthScopes)`](#fn-specforproviderconfignodeconfigwithoauthscopes)
+        * [`fn withOauthScopesMixin(oauthScopes)`](#fn-specforproviderconfignodeconfigwithoauthscopesmixin)
+        * [`fn withServiceAccount(serviceAccount)`](#fn-specforproviderconfignodeconfigwithserviceaccount)
+        * [`fn withSubnetwork(subnetwork)`](#fn-specforproviderconfignodeconfigwithsubnetwork)
+        * [`fn withTags(tags)`](#fn-specforproviderconfignodeconfigwithtags)
+        * [`fn withTagsMixin(tags)`](#fn-specforproviderconfignodeconfigwithtagsmixin)
+        * [`fn withZone(zone)`](#fn-specforproviderconfignodeconfigwithzone)
+        * [`obj spec.forProvider.config.nodeConfig.ipAllocationPolicy`](#obj-specforproviderconfignodeconfigipallocationpolicy)
+          * [`fn withClusterIpv4CidrBlock(clusterIpv4CidrBlock)`](#fn-specforproviderconfignodeconfigipallocationpolicywithclusteripv4cidrblock)
+          * [`fn withClusterSecondaryRangeName(clusterSecondaryRangeName)`](#fn-specforproviderconfignodeconfigipallocationpolicywithclustersecondaryrangename)
+          * [`fn withServicesIpv4CidrBlock(servicesIpv4CidrBlock)`](#fn-specforproviderconfignodeconfigipallocationpolicywithservicesipv4cidrblock)
+          * [`fn withServicesSecondaryRangeName(servicesSecondaryRangeName)`](#fn-specforproviderconfignodeconfigipallocationpolicywithservicessecondaryrangename)
+          * [`fn withUseIpAliases(useIpAliases)`](#fn-specforproviderconfignodeconfigipallocationpolicywithuseipaliases)
+      * [`obj spec.forProvider.config.privateEnvironmentConfig`](#obj-specforproviderconfigprivateenvironmentconfig)
+        * [`fn withCloudSqlIpv4CidrBlock(cloudSqlIpv4CidrBlock)`](#fn-specforproviderconfigprivateenvironmentconfigwithcloudsqlipv4cidrblock)
+        * [`fn withEnablePrivateEndpoint(enablePrivateEndpoint)`](#fn-specforproviderconfigprivateenvironmentconfigwithenableprivateendpoint)
+        * [`fn withMasterIpv4CidrBlock(masterIpv4CidrBlock)`](#fn-specforproviderconfigprivateenvironmentconfigwithmasteripv4cidrblock)
+        * [`fn withWebServerIpv4CidrBlock(webServerIpv4CidrBlock)`](#fn-specforproviderconfigprivateenvironmentconfigwithwebserveripv4cidrblock)
+      * [`obj spec.forProvider.config.softwareConfig`](#obj-specforproviderconfigsoftwareconfig)
+        * [`fn withAirflowConfigOverrides(airflowConfigOverrides)`](#fn-specforproviderconfigsoftwareconfigwithairflowconfigoverrides)
+        * [`fn withAirflowConfigOverridesMixin(airflowConfigOverrides)`](#fn-specforproviderconfigsoftwareconfigwithairflowconfigoverridesmixin)
+        * [`fn withEnvVariables(envVariables)`](#fn-specforproviderconfigsoftwareconfigwithenvvariables)
+        * [`fn withEnvVariablesMixin(envVariables)`](#fn-specforproviderconfigsoftwareconfigwithenvvariablesmixin)
+        * [`fn withImageVersion(imageVersion)`](#fn-specforproviderconfigsoftwareconfigwithimageversion)
+        * [`fn withPypiPackages(pypiPackages)`](#fn-specforproviderconfigsoftwareconfigwithpypipackages)
+        * [`fn withPypiPackagesMixin(pypiPackages)`](#fn-specforproviderconfigsoftwareconfigwithpypipackagesmixin)
+        * [`fn withPythonVersion(pythonVersion)`](#fn-specforproviderconfigsoftwareconfigwithpythonversion)
+        * [`fn withSchedulerCount(schedulerCount)`](#fn-specforproviderconfigsoftwareconfigwithschedulercount)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -162,24 +202,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -316,6 +338,340 @@ withRegion(region)
 ```
 
 "The location or Compute Engine region for the environment."
+
+## obj spec.forProvider.config
+
+"Configuration parameters for this environment."
+
+### fn spec.forProvider.config.withNodeConfig
+
+```ts
+withNodeConfig(nodeConfig)
+```
+
+"The configuration used for the Kubernetes Engine cluster."
+
+### fn spec.forProvider.config.withNodeConfigMixin
+
+```ts
+withNodeConfigMixin(nodeConfig)
+```
+
+"The configuration used for the Kubernetes Engine cluster."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.withNodeCount
+
+```ts
+withNodeCount(nodeCount)
+```
+
+"The number of nodes in the Kubernetes Engine cluster that will be used to run this environment. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*."
+
+### fn spec.forProvider.config.withPrivateEnvironmentConfig
+
+```ts
+withPrivateEnvironmentConfig(privateEnvironmentConfig)
+```
+
+"The configuration used for the Private IP Cloud Composer environment."
+
+### fn spec.forProvider.config.withPrivateEnvironmentConfigMixin
+
+```ts
+withPrivateEnvironmentConfigMixin(privateEnvironmentConfig)
+```
+
+"The configuration used for the Private IP Cloud Composer environment."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.withSoftwareConfig
+
+```ts
+withSoftwareConfig(softwareConfig)
+```
+
+"The configuration settings for software inside the environment."
+
+### fn spec.forProvider.config.withSoftwareConfigMixin
+
+```ts
+withSoftwareConfigMixin(softwareConfig)
+```
+
+"The configuration settings for software inside the environment."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.config.nodeConfig
+
+"The configuration used for the Kubernetes Engine cluster."
+
+### fn spec.forProvider.config.nodeConfig.withDiskSizeGb
+
+```ts
+withDiskSizeGb(diskSizeGb)
+```
+
+"The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*."
+
+### fn spec.forProvider.config.nodeConfig.withIpAllocationPolicy
+
+```ts
+withIpAllocationPolicy(ipAllocationPolicy)
+```
+
+"Configuration for controlling how IPs are allocated in the GKE cluster. Cannot be updated."
+
+### fn spec.forProvider.config.nodeConfig.withIpAllocationPolicyMixin
+
+```ts
+withIpAllocationPolicyMixin(ipAllocationPolicy)
+```
+
+"Configuration for controlling how IPs are allocated in the GKE cluster. Cannot be updated."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.nodeConfig.withMachineType
+
+```ts
+withMachineType(machineType)
+```
+
+"The Compute Engine machine type used for cluster instances, specified as a name or relative resource name. For example: \"projects/{project}/zones/{zone}/machineTypes/{machineType}\". Must belong to the enclosing environment's project and region/zone. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*."
+
+### fn spec.forProvider.config.nodeConfig.withNetwork
+
+```ts
+withNetwork(network)
+```
+
+"The Compute Engine machine type used for cluster instances, specified as a name or relative resource name. For example: \"projects/{project}/zones/{zone}/machineTypes/{machineType}\". Must belong to the enclosing environment's project and region/zone. The network must belong to the environment's project. If unspecified, the \"default\" network ID in the environment's project is used. If a Custom Subnet Network is provided, subnetwork must also be provided."
+
+### fn spec.forProvider.config.nodeConfig.withOauthScopes
+
+```ts
+withOauthScopes(oauthScopes)
+```
+
+"The set of Google API scopes to be made available on all node VMs. Cannot be updated. If empty, defaults to [\"https://www.googleapis.com/auth/cloud-platform\"]. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*."
+
+### fn spec.forProvider.config.nodeConfig.withOauthScopesMixin
+
+```ts
+withOauthScopesMixin(oauthScopes)
+```
+
+"The set of Google API scopes to be made available on all node VMs. Cannot be updated. If empty, defaults to [\"https://www.googleapis.com/auth/cloud-platform\"]. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.nodeConfig.withServiceAccount
+
+```ts
+withServiceAccount(serviceAccount)
+```
+
+"The Google Cloud Platform Service Account to be used by the node VMs. If a service account is not specified, the \"default\" Compute Engine service account is used. Cannot be updated. If given, note that the service account must have roles/composer.worker for any GCP resources created under the Cloud Composer Environment."
+
+### fn spec.forProvider.config.nodeConfig.withSubnetwork
+
+```ts
+withSubnetwork(subnetwork)
+```
+
+"The Compute Engine subnetwork to be used for machine communications, , specified as a self-link, relative resource name (e.g. \"projects/{project}/regions/{region}/subnetworks/{subnetwork}\"), or by name. If subnetwork is provided, network must also be provided and the subnetwork must belong to the enclosing environment's project and region."
+
+### fn spec.forProvider.config.nodeConfig.withTags
+
+```ts
+withTags(tags)
+```
+
+"The list of instance tags applied to all node VMs. Tags are used to identify valid sources or targets for network firewalls. Each tag within the list must comply with RFC1035. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*."
+
+### fn spec.forProvider.config.nodeConfig.withTagsMixin
+
+```ts
+withTagsMixin(tags)
+```
+
+"The list of instance tags applied to all node VMs. Tags are used to identify valid sources or targets for network firewalls. Each tag within the list must comply with RFC1035. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.nodeConfig.withZone
+
+```ts
+withZone(zone)
+```
+
+"The Compute Engine zone in which to deploy the VMs running the Apache Airflow software, specified as the zone name or relative resource name (e.g. \"projects/{project}/zones/{zone}\"). Must belong to the enclosing environment's project and region. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*."
+
+## obj spec.forProvider.config.nodeConfig.ipAllocationPolicy
+
+"Configuration for controlling how IPs are allocated in the GKE cluster. Cannot be updated."
+
+### fn spec.forProvider.config.nodeConfig.ipAllocationPolicy.withClusterIpv4CidrBlock
+
+```ts
+withClusterIpv4CidrBlock(clusterIpv4CidrBlock)
+```
+
+"The IP address range used to allocate IP addresses to pods in the cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when use_ip_aliases is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use. Specify either cluster_secondary_range_name or cluster_ipv4_cidr_block but not both."
+
+### fn spec.forProvider.config.nodeConfig.ipAllocationPolicy.withClusterSecondaryRangeName
+
+```ts
+withClusterSecondaryRangeName(clusterSecondaryRangeName)
+```
+
+"The name of the cluster's secondary range used to allocate IP addresses to pods. Specify either cluster_secondary_range_name or cluster_ipv4_cidr_block but not both. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when use_ip_aliases is true."
+
+### fn spec.forProvider.config.nodeConfig.ipAllocationPolicy.withServicesIpv4CidrBlock
+
+```ts
+withServicesIpv4CidrBlock(servicesIpv4CidrBlock)
+```
+
+"The IP address range used to allocate IP addresses in this cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when use_ip_aliases is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use. Specify either services_secondary_range_name or services_ipv4_cidr_block but not both."
+
+### fn spec.forProvider.config.nodeConfig.ipAllocationPolicy.withServicesSecondaryRangeName
+
+```ts
+withServicesSecondaryRangeName(servicesSecondaryRangeName)
+```
+
+"The name of the services' secondary range used to allocate IP addresses to the cluster. Specify either services_secondary_range_name or services_ipv4_cidr_block but not both. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when use_ip_aliases is true."
+
+### fn spec.forProvider.config.nodeConfig.ipAllocationPolicy.withUseIpAliases
+
+```ts
+withUseIpAliases(useIpAliases)
+```
+
+"Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created. Defaults to true if the ip_allocation_policy block is present in config. This field is only supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. Environments in newer versions always use VPC-native GKE clusters."
+
+## obj spec.forProvider.config.privateEnvironmentConfig
+
+"The configuration used for the Private IP Cloud Composer environment."
+
+### fn spec.forProvider.config.privateEnvironmentConfig.withCloudSqlIpv4CidrBlock
+
+```ts
+withCloudSqlIpv4CidrBlock(cloudSqlIpv4CidrBlock)
+```
+
+"The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from web_server_ipv4_cidr_block."
+
+### fn spec.forProvider.config.privateEnvironmentConfig.withEnablePrivateEndpoint
+
+```ts
+withEnablePrivateEndpoint(enablePrivateEndpoint)
+```
+
+"If true, access to the public endpoint of the GKE cluster is denied. If this field is set to true, ip_allocation_policy.use_ip_aliases must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*."
+
+### fn spec.forProvider.config.privateEnvironmentConfig.withMasterIpv4CidrBlock
+
+```ts
+withMasterIpv4CidrBlock(masterIpv4CidrBlock)
+```
+
+"The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster's network. If left blank, the default value of '172.16.0.0/28' is used."
+
+### fn spec.forProvider.config.privateEnvironmentConfig.withWebServerIpv4CidrBlock
+
+```ts
+withWebServerIpv4CidrBlock(webServerIpv4CidrBlock)
+```
+
+"The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*."
+
+## obj spec.forProvider.config.softwareConfig
+
+"The configuration settings for software inside the environment."
+
+### fn spec.forProvider.config.softwareConfig.withAirflowConfigOverrides
+
+```ts
+withAirflowConfigOverrides(airflowConfigOverrides)
+```
+
+"Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example \"core-dags_are_paused_at_creation\". Section names must not contain hyphens (\"-\"), opening square brackets (\"[\"), or closing square brackets (\"]\"). The property name must not be empty and cannot contain \"=\" or \";\". Section and property names cannot contain characters: \".\" Apache Airflow configuration property names must be written in snake_case. Property values can contain any character, and can be written in any lower/upper case format. Certain Apache Airflow configuration property values are blacklisted, and cannot be overridden."
+
+### fn spec.forProvider.config.softwareConfig.withAirflowConfigOverridesMixin
+
+```ts
+withAirflowConfigOverridesMixin(airflowConfigOverrides)
+```
+
+"Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example \"core-dags_are_paused_at_creation\". Section names must not contain hyphens (\"-\"), opening square brackets (\"[\"), or closing square brackets (\"]\"). The property name must not be empty and cannot contain \"=\" or \";\". Section and property names cannot contain characters: \".\" Apache Airflow configuration property names must be written in snake_case. Property values can contain any character, and can be written in any lower/upper case format. Certain Apache Airflow configuration property values are blacklisted, and cannot be overridden."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.softwareConfig.withEnvVariables
+
+```ts
+withEnvVariables(envVariables)
+```
+
+"Additional environment variables to provide to the Apache Airflow schedulerf, worker, and webserver processes. Environment variable names must match the regular expression [a-zA-Z_][a-zA-Z0-9_]*. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+), and they cannot match any of the following reserved names: AIRFLOW_HOME C_FORCE_ROOT CONTAINER_NAME DAGS_FOLDER GCP_PROJECT GCS_BUCKET GKE_CLUSTER_NAME SQL_DATABASE SQL_INSTANCE SQL_PASSWORD SQL_PROJECT SQL_REGION SQL_USER."
+
+### fn spec.forProvider.config.softwareConfig.withEnvVariablesMixin
+
+```ts
+withEnvVariablesMixin(envVariables)
+```
+
+"Additional environment variables to provide to the Apache Airflow schedulerf, worker, and webserver processes. Environment variable names must match the regular expression [a-zA-Z_][a-zA-Z0-9_]*. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+), and they cannot match any of the following reserved names: AIRFLOW_HOME C_FORCE_ROOT CONTAINER_NAME DAGS_FOLDER GCP_PROJECT GCS_BUCKET GKE_CLUSTER_NAME SQL_DATABASE SQL_INSTANCE SQL_PASSWORD SQL_PROJECT SQL_REGION SQL_USER."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.softwareConfig.withImageVersion
+
+```ts
+withImageVersion(imageVersion)
+```
+
+"The version of the software running in the environment. This encapsulates both the version of Cloud Composer functionality and the version of Apache Airflow. It must match the regular expression composer-[0-9]+\\.[0-9]+(\\.[0-9]+)?-airflow-[0-9]+\\.[0-9]+(\\.[0-9]+.*)?. The Cloud Composer portion of the version is a semantic version. The portion of the image version following 'airflow-' is an official Apache Airflow repository release name. See documentation for allowed release names."
+
+### fn spec.forProvider.config.softwareConfig.withPypiPackages
+
+```ts
+withPypiPackages(pypiPackages)
+```
+
+"Custom Python Package Index (PyPI) packages to be installed in the environment. Keys refer to the lowercase package name (e.g. \"numpy\"). Values are the lowercase extras and version specifier (e.g. \"==1.12.0\", \"[devel,gcp_api]\", \"[devel]>=1.8.2, <1.9.2\"). To specify a package without pinning it to a version specifier, use the empty string as the value."
+
+### fn spec.forProvider.config.softwareConfig.withPypiPackagesMixin
+
+```ts
+withPypiPackagesMixin(pypiPackages)
+```
+
+"Custom Python Package Index (PyPI) packages to be installed in the environment. Keys refer to the lowercase package name (e.g. \"numpy\"). Values are the lowercase extras and version specifier (e.g. \"==1.12.0\", \"[devel,gcp_api]\", \"[devel]>=1.8.2, <1.9.2\"). To specify a package without pinning it to a version specifier, use the empty string as the value."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.softwareConfig.withPythonVersion
+
+```ts
+withPythonVersion(pythonVersion)
+```
+
+"The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. Environments in newer versions always use Python major version 3."
+
+### fn spec.forProvider.config.softwareConfig.withSchedulerCount
+
+```ts
+withSchedulerCount(schedulerCount)
+```
+
+"The number of schedulers for Airflow. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-2.*.*."
 
 ## obj spec.providerConfigRef
 

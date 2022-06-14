@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/datacatalog/v1alpha1/tag/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -39,6 +37,13 @@ permalink: /provider-jet-gcp/0.2/datacatalog/v1alpha1/tag/
     * [`fn withFieldsMixin(fields)`](#fn-specforproviderwithfieldsmixin)
     * [`fn withParent(parent)`](#fn-specforproviderwithparent)
     * [`fn withTemplate(template)`](#fn-specforproviderwithtemplate)
+    * [`obj spec.forProvider.fields`](#obj-specforproviderfields)
+      * [`fn withBoolValue(boolValue)`](#fn-specforproviderfieldswithboolvalue)
+      * [`fn withDoubleValue(doubleValue)`](#fn-specforproviderfieldswithdoublevalue)
+      * [`fn withEnumValue(enumValue)`](#fn-specforproviderfieldswithenumvalue)
+      * [`fn withFieldName(fieldName)`](#fn-specforproviderfieldswithfieldname)
+      * [`fn withStringValue(stringValue)`](#fn-specforproviderfieldswithstringvalue)
+      * [`fn withTimestampValue(timestampValue)`](#fn-specforproviderfieldswithtimestampvalue)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +168,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -296,6 +283,58 @@ withTemplate(template)
 ```
 
 "The resource name of the tag template that this tag uses. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId} This field cannot be modified after creation."
+
+## obj spec.forProvider.fields
+
+"This maps the ID of a tag field to the value of and additional information about that field. Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields."
+
+### fn spec.forProvider.fields.withBoolValue
+
+```ts
+withBoolValue(boolValue)
+```
+
+"Holds the value for a tag field with boolean type."
+
+### fn spec.forProvider.fields.withDoubleValue
+
+```ts
+withDoubleValue(doubleValue)
+```
+
+"Holds the value for a tag field with double type."
+
+### fn spec.forProvider.fields.withEnumValue
+
+```ts
+withEnumValue(enumValue)
+```
+
+"The display name of the enum value."
+
+### fn spec.forProvider.fields.withFieldName
+
+```ts
+withFieldName(fieldName)
+```
+
+
+
+### fn spec.forProvider.fields.withStringValue
+
+```ts
+withStringValue(stringValue)
+```
+
+"Holds the value for a tag field with string type."
+
+### fn spec.forProvider.fields.withTimestampValue
+
+```ts
+withTimestampValue(timestampValue)
+```
+
+"Holds the value for a tag field with timestamp type."
 
 ## obj spec.providerConfigRef
 

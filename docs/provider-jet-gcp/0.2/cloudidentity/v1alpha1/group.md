@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/cloudidentity/v1alpha1/group/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -42,6 +40,9 @@ permalink: /provider-jet-gcp/0.2/cloudidentity/v1alpha1/group/
     * [`fn withLabels(labels)`](#fn-specforproviderwithlabels)
     * [`fn withLabelsMixin(labels)`](#fn-specforproviderwithlabelsmixin)
     * [`fn withParent(parent)`](#fn-specforproviderwithparent)
+    * [`obj spec.forProvider.groupKey`](#obj-specforprovidergroupkey)
+      * [`fn withId(id)`](#fn-specforprovidergroupkeywithid)
+      * [`fn withNamespace(namespace)`](#fn-specforprovidergroupkeywithnamespace)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +164,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -325,6 +308,26 @@ withParent(parent)
 ```
 
 "The resource name of the entity under which this Group resides in the Cloud Identity resource hierarchy. \n Must be of the form identitysources/{identity_source_id} for external-identity-mapped groups or customers/{customer_id} for Google Groups."
+
+## obj spec.forProvider.groupKey
+
+"EntityKey of the Group."
+
+### fn spec.forProvider.groupKey.withId
+
+```ts
+withId(id)
+```
+
+"The ID of the entity. \n For Google-managed entities, the id must be the email address of an existing group or user. \n For external-identity-mapped entities, the id must be a string conforming to the Identity Source's requirements. \n Must be unique within a namespace."
+
+### fn spec.forProvider.groupKey.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"The namespace in which the entity exists. \n If not specified, the EntityKey represents a Google-managed entity such as a Google user or a Google Group. \n If specified, the EntityKey represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of 'identitysources/{identity_source_id}'."
 
 ## obj spec.providerConfigRef
 

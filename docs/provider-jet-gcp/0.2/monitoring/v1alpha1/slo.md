@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/monitoring/v1alpha1/slo/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -47,6 +45,97 @@ permalink: /provider-jet-gcp/0.2/monitoring/v1alpha1/slo/
     * [`fn withSloId(sloId)`](#fn-specforproviderwithsloid)
     * [`fn withWindowsBasedSli(windowsBasedSli)`](#fn-specforproviderwithwindowsbasedsli)
     * [`fn withWindowsBasedSliMixin(windowsBasedSli)`](#fn-specforproviderwithwindowsbasedslimixin)
+    * [`obj spec.forProvider.basicSli`](#obj-specforproviderbasicsli)
+      * [`fn withAvailability(availability)`](#fn-specforproviderbasicsliwithavailability)
+      * [`fn withAvailabilityMixin(availability)`](#fn-specforproviderbasicsliwithavailabilitymixin)
+      * [`fn withLatency(latency)`](#fn-specforproviderbasicsliwithlatency)
+      * [`fn withLatencyMixin(latency)`](#fn-specforproviderbasicsliwithlatencymixin)
+      * [`fn withLocation(location)`](#fn-specforproviderbasicsliwithlocation)
+      * [`fn withLocationMixin(location)`](#fn-specforproviderbasicsliwithlocationmixin)
+      * [`fn withMethod(method)`](#fn-specforproviderbasicsliwithmethod)
+      * [`fn withMethodMixin(method)`](#fn-specforproviderbasicsliwithmethodmixin)
+      * [`fn withVersion(version)`](#fn-specforproviderbasicsliwithversion)
+      * [`fn withVersionMixin(version)`](#fn-specforproviderbasicsliwithversionmixin)
+      * [`obj spec.forProvider.basicSli.availability`](#obj-specforproviderbasicsliavailability)
+        * [`fn withEnabled(enabled)`](#fn-specforproviderbasicsliavailabilitywithenabled)
+      * [`obj spec.forProvider.basicSli.latency`](#obj-specforproviderbasicslilatency)
+        * [`fn withThreshold(threshold)`](#fn-specforproviderbasicslilatencywiththreshold)
+    * [`obj spec.forProvider.requestBasedSli`](#obj-specforproviderrequestbasedsli)
+      * [`fn withDistributionCut(distributionCut)`](#fn-specforproviderrequestbasedsliwithdistributioncut)
+      * [`fn withDistributionCutMixin(distributionCut)`](#fn-specforproviderrequestbasedsliwithdistributioncutmixin)
+      * [`fn withGoodTotalRatio(goodTotalRatio)`](#fn-specforproviderrequestbasedsliwithgoodtotalratio)
+      * [`fn withGoodTotalRatioMixin(goodTotalRatio)`](#fn-specforproviderrequestbasedsliwithgoodtotalratiomixin)
+      * [`obj spec.forProvider.requestBasedSli.distributionCut`](#obj-specforproviderrequestbasedslidistributioncut)
+        * [`fn withDistributionFilter(distributionFilter)`](#fn-specforproviderrequestbasedslidistributioncutwithdistributionfilter)
+        * [`fn withRange(range)`](#fn-specforproviderrequestbasedslidistributioncutwithrange)
+        * [`fn withRangeMixin(range)`](#fn-specforproviderrequestbasedslidistributioncutwithrangemixin)
+        * [`obj spec.forProvider.requestBasedSli.distributionCut.range`](#obj-specforproviderrequestbasedslidistributioncutrange)
+          * [`fn withMax(max)`](#fn-specforproviderrequestbasedslidistributioncutrangewithmax)
+          * [`fn withMin(min)`](#fn-specforproviderrequestbasedslidistributioncutrangewithmin)
+      * [`obj spec.forProvider.requestBasedSli.goodTotalRatio`](#obj-specforproviderrequestbasedsligoodtotalratio)
+        * [`fn withBadServiceFilter(badServiceFilter)`](#fn-specforproviderrequestbasedsligoodtotalratiowithbadservicefilter)
+        * [`fn withGoodServiceFilter(goodServiceFilter)`](#fn-specforproviderrequestbasedsligoodtotalratiowithgoodservicefilter)
+        * [`fn withTotalServiceFilter(totalServiceFilter)`](#fn-specforproviderrequestbasedsligoodtotalratiowithtotalservicefilter)
+    * [`obj spec.forProvider.windowsBasedSli`](#obj-specforproviderwindowsbasedsli)
+      * [`fn withGoodBadMetricFilter(goodBadMetricFilter)`](#fn-specforproviderwindowsbasedsliwithgoodbadmetricfilter)
+      * [`fn withGoodTotalRatioThreshold(goodTotalRatioThreshold)`](#fn-specforproviderwindowsbasedsliwithgoodtotalratiothreshold)
+      * [`fn withGoodTotalRatioThresholdMixin(goodTotalRatioThreshold)`](#fn-specforproviderwindowsbasedsliwithgoodtotalratiothresholdmixin)
+      * [`fn withMetricMeanInRange(metricMeanInRange)`](#fn-specforproviderwindowsbasedsliwithmetricmeaninrange)
+      * [`fn withMetricMeanInRangeMixin(metricMeanInRange)`](#fn-specforproviderwindowsbasedsliwithmetricmeaninrangemixin)
+      * [`fn withMetricSumInRange(metricSumInRange)`](#fn-specforproviderwindowsbasedsliwithmetricsuminrange)
+      * [`fn withMetricSumInRangeMixin(metricSumInRange)`](#fn-specforproviderwindowsbasedsliwithmetricsuminrangemixin)
+      * [`fn withWindowPeriod(windowPeriod)`](#fn-specforproviderwindowsbasedsliwithwindowperiod)
+      * [`obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold`](#obj-specforproviderwindowsbasedsligoodtotalratiothreshold)
+        * [`fn withBasicSliPerformance(basicSliPerformance)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdwithbasicsliperformance)
+        * [`fn withBasicSliPerformanceMixin(basicSliPerformance)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdwithbasicsliperformancemixin)
+        * [`fn withPerformance(performance)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdwithperformance)
+        * [`fn withPerformanceMixin(performance)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdwithperformancemixin)
+        * [`fn withThreshold(threshold)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdwiththreshold)
+        * [`obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance`](#obj-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformance)
+          * [`fn withAvailability(availability)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancewithavailability)
+          * [`fn withAvailabilityMixin(availability)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancewithavailabilitymixin)
+          * [`fn withLatency(latency)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancewithlatency)
+          * [`fn withLatencyMixin(latency)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancewithlatencymixin)
+          * [`fn withLocation(location)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancewithlocation)
+          * [`fn withLocationMixin(location)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancewithlocationmixin)
+          * [`fn withMethod(method)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancewithmethod)
+          * [`fn withMethodMixin(method)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancewithmethodmixin)
+          * [`fn withVersion(version)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancewithversion)
+          * [`fn withVersionMixin(version)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancewithversionmixin)
+          * [`obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.availability`](#obj-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability)
+            * [`fn withEnabled(enabled)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailabilitywithenabled)
+          * [`obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.latency`](#obj-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency)
+            * [`fn withThreshold(threshold)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdbasicsliperformancelatencywiththreshold)
+        * [`obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance`](#obj-specforproviderwindowsbasedsligoodtotalratiothresholdperformance)
+          * [`fn withDistributionCut(distributionCut)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancewithdistributioncut)
+          * [`fn withDistributionCutMixin(distributionCut)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancewithdistributioncutmixin)
+          * [`fn withGoodTotalRatio(goodTotalRatio)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancewithgoodtotalratio)
+          * [`fn withGoodTotalRatioMixin(goodTotalRatio)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancewithgoodtotalratiomixin)
+          * [`obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.distributionCut`](#obj-specforproviderwindowsbasedsligoodtotalratiothresholdperformancedistributioncut)
+            * [`fn withDistributionFilter(distributionFilter)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancedistributioncutwithdistributionfilter)
+            * [`fn withRange(range)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancedistributioncutwithrange)
+            * [`fn withRangeMixin(range)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancedistributioncutwithrangemixin)
+            * [`obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.distributionCut.range`](#obj-specforproviderwindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange)
+              * [`fn withMax(max)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancedistributioncutrangewithmax)
+              * [`fn withMin(min)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancedistributioncutrangewithmin)
+          * [`obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.goodTotalRatio`](#obj-specforproviderwindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio)
+            * [`fn withBadServiceFilter(badServiceFilter)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancegoodtotalratiowithbadservicefilter)
+            * [`fn withGoodServiceFilter(goodServiceFilter)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancegoodtotalratiowithgoodservicefilter)
+            * [`fn withTotalServiceFilter(totalServiceFilter)`](#fn-specforproviderwindowsbasedsligoodtotalratiothresholdperformancegoodtotalratiowithtotalservicefilter)
+      * [`obj spec.forProvider.windowsBasedSli.metricMeanInRange`](#obj-specforproviderwindowsbasedslimetricmeaninrange)
+        * [`fn withRange(range)`](#fn-specforproviderwindowsbasedslimetricmeaninrangewithrange)
+        * [`fn withRangeMixin(range)`](#fn-specforproviderwindowsbasedslimetricmeaninrangewithrangemixin)
+        * [`fn withTimeSeries(timeSeries)`](#fn-specforproviderwindowsbasedslimetricmeaninrangewithtimeseries)
+        * [`obj spec.forProvider.windowsBasedSli.metricMeanInRange.range`](#obj-specforproviderwindowsbasedslimetricmeaninrangerange)
+          * [`fn withMax(max)`](#fn-specforproviderwindowsbasedslimetricmeaninrangerangewithmax)
+          * [`fn withMin(min)`](#fn-specforproviderwindowsbasedslimetricmeaninrangerangewithmin)
+      * [`obj spec.forProvider.windowsBasedSli.metricSumInRange`](#obj-specforproviderwindowsbasedslimetricsuminrange)
+        * [`fn withRange(range)`](#fn-specforproviderwindowsbasedslimetricsuminrangewithrange)
+        * [`fn withRangeMixin(range)`](#fn-specforproviderwindowsbasedslimetricsuminrangewithrangemixin)
+        * [`fn withTimeSeries(timeSeries)`](#fn-specforproviderwindowsbasedslimetricsuminrangewithtimeseries)
+        * [`obj spec.forProvider.windowsBasedSli.metricSumInRange.range`](#obj-specforproviderwindowsbasedslimetricsuminrangerange)
+          * [`fn withMax(max)`](#fn-specforproviderwindowsbasedslimetricsuminrangerangewithmax)
+          * [`fn withMin(min)`](#fn-specforproviderwindowsbasedslimetricsuminrangerangewithmin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -168,24 +257,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -372,6 +443,700 @@ withWindowsBasedSliMixin(windowsBasedSli)
 "A windows-based SLI defines the criteria for time windows. good_service is defined based off the count of these time windows for which the provided service was of good quality. \n A SLI describes a good service. It is used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. \n Exactly one of the following must be set: 'basic_sli', 'request_based_sli', 'windows_based_sli'"
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.basicSli
+
+"Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of pre-defined metrics. \n SLIs are used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. \n Exactly one of the following must be set: 'basic_sli', 'request_based_sli', 'windows_based_sli'"
+
+### fn spec.forProvider.basicSli.withAvailability
+
+```ts
+withAvailability(availability)
+```
+
+"Availability based SLI, dervied from count of requests made to this service that return successfully."
+
+### fn spec.forProvider.basicSli.withAvailabilityMixin
+
+```ts
+withAvailabilityMixin(availability)
+```
+
+"Availability based SLI, dervied from count of requests made to this service that return successfully."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.basicSli.withLatency
+
+```ts
+withLatency(latency)
+```
+
+"Parameters for a latency threshold SLI."
+
+### fn spec.forProvider.basicSli.withLatencyMixin
+
+```ts
+withLatencyMixin(latency)
+```
+
+"Parameters for a latency threshold SLI."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.basicSli.withLocation
+
+```ts
+withLocation(location)
+```
+
+"An optional set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error."
+
+### fn spec.forProvider.basicSli.withLocationMixin
+
+```ts
+withLocationMixin(location)
+```
+
+"An optional set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.basicSli.withMethod
+
+```ts
+withMethod(method)
+```
+
+"An optional set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service's methods. For service types that don't support breaking down by method, setting this field will result in an error."
+
+### fn spec.forProvider.basicSli.withMethodMixin
+
+```ts
+withMethodMixin(method)
+```
+
+"An optional set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service's methods. For service types that don't support breaking down by method, setting this field will result in an error."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.basicSli.withVersion
+
+```ts
+withVersion(version)
+```
+
+"The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error."
+
+### fn spec.forProvider.basicSli.withVersionMixin
+
+```ts
+withVersionMixin(version)
+```
+
+"The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.basicSli.availability
+
+"Availability based SLI, dervied from count of requests made to this service that return successfully."
+
+### fn spec.forProvider.basicSli.availability.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+"Whether an availability SLI is enabled or not. Must be set to true. Defaults to 'true'."
+
+## obj spec.forProvider.basicSli.latency
+
+"Parameters for a latency threshold SLI."
+
+### fn spec.forProvider.basicSli.latency.withThreshold
+
+```ts
+withThreshold(threshold)
+```
+
+"A duration string, e.g. 10s. Good service is defined to be the count of requests made to this service that return in no more than threshold."
+
+## obj spec.forProvider.requestBasedSli
+
+"A request-based SLI defines a SLI for which atomic units of service are counted directly. \n A SLI describes a good service. It is used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: 'basic_sli', 'request_based_sli', 'windows_based_sli'"
+
+### fn spec.forProvider.requestBasedSli.withDistributionCut
+
+```ts
+withDistributionCut(distributionCut)
+```
+
+"Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. \n Exactly one of 'distribution_cut' or 'good_total_ratio' can be set."
+
+### fn spec.forProvider.requestBasedSli.withDistributionCutMixin
+
+```ts
+withDistributionCutMixin(distributionCut)
+```
+
+"Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. \n Exactly one of 'distribution_cut' or 'good_total_ratio' can be set."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.requestBasedSli.withGoodTotalRatio
+
+```ts
+withGoodTotalRatio(goodTotalRatio)
+```
+
+"A means to compute a ratio of 'good_service' to 'total_service'. Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters) Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed. \n Exactly one of 'distribution_cut' or 'good_total_ratio' can be set."
+
+### fn spec.forProvider.requestBasedSli.withGoodTotalRatioMixin
+
+```ts
+withGoodTotalRatioMixin(goodTotalRatio)
+```
+
+"A means to compute a ratio of 'good_service' to 'total_service'. Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters) Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed. \n Exactly one of 'distribution_cut' or 'good_total_ratio' can be set."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.requestBasedSli.distributionCut
+
+"Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. \n Exactly one of 'distribution_cut' or 'good_total_ratio' can be set."
+
+### fn spec.forProvider.requestBasedSli.distributionCut.withDistributionFilter
+
+```ts
+withDistributionFilter(distributionFilter)
+```
+
+"A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) aggregating values to quantify the good service provided. \n Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE."
+
+### fn spec.forProvider.requestBasedSli.distributionCut.withRange
+
+```ts
+withRange(range)
+```
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max."
+
+### fn spec.forProvider.requestBasedSli.distributionCut.withRangeMixin
+
+```ts
+withRangeMixin(range)
+```
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.requestBasedSli.distributionCut.range
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max."
+
+### fn spec.forProvider.requestBasedSli.distributionCut.range.withMax
+
+```ts
+withMax(max)
+```
+
+"max value for the range (inclusive). If not given, will be set to \"infinity\", defining an open range \">= range.min\
+
+### fn spec.forProvider.requestBasedSli.distributionCut.range.withMin
+
+```ts
+withMin(min)
+```
+
+"Min value for the range (inclusive). If not given, will be set to \"-infinity\", defining an open range \"< range.max\
+
+## obj spec.forProvider.requestBasedSli.goodTotalRatio
+
+"A means to compute a ratio of 'good_service' to 'total_service'. Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters) Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed. \n Exactly one of 'distribution_cut' or 'good_total_ratio' can be set."
+
+### fn spec.forProvider.requestBasedSli.goodTotalRatio.withBadServiceFilter
+
+```ts
+withBadServiceFilter(badServiceFilter)
+```
+
+"A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) quantifying bad service provided, either demanded service that was not provided or demanded service that was of inadequate quality. \n Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE. \n Exactly two of 'good_service_filter','bad_service_filter','total_service_filter' must be set (good + bad = total is assumed)."
+
+### fn spec.forProvider.requestBasedSli.goodTotalRatio.withGoodServiceFilter
+
+```ts
+withGoodServiceFilter(goodServiceFilter)
+```
+
+"A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE. \n Exactly two of 'good_service_filter','bad_service_filter','total_service_filter' must be set (good + bad = total is assumed)."
+
+### fn spec.forProvider.requestBasedSli.goodTotalRatio.withTotalServiceFilter
+
+```ts
+withTotalServiceFilter(totalServiceFilter)
+```
+
+"A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) quantifying total demanded service. \n Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE. \n Exactly two of 'good_service_filter','bad_service_filter','total_service_filter' must be set (good + bad = total is assumed)."
+
+## obj spec.forProvider.windowsBasedSli
+
+"A windows-based SLI defines the criteria for time windows. good_service is defined based off the count of these time windows for which the provided service was of good quality. \n A SLI describes a good service. It is used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. \n Exactly one of the following must be set: 'basic_sli', 'request_based_sli', 'windows_based_sli'"
+
+### fn spec.forProvider.windowsBasedSli.withGoodBadMetricFilter
+
+```ts
+withGoodBadMetricFilter(goodBadMetricFilter)
+```
+
+"A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) with ValueType = BOOL. The window is good if any true values appear in the window. One of 'good_bad_metric_filter', 'good_total_ratio_threshold', 'metric_mean_in_range', 'metric_sum_in_range' must be set for 'windows_based_sli'."
+
+### fn spec.forProvider.windowsBasedSli.withGoodTotalRatioThreshold
+
+```ts
+withGoodTotalRatioThreshold(goodTotalRatioThreshold)
+```
+
+"Criterion that describes a window as good if its performance is high enough. One of 'good_bad_metric_filter', 'good_total_ratio_threshold', 'metric_mean_in_range', 'metric_sum_in_range' must be set for 'windows_based_sli'."
+
+### fn spec.forProvider.windowsBasedSli.withGoodTotalRatioThresholdMixin
+
+```ts
+withGoodTotalRatioThresholdMixin(goodTotalRatioThreshold)
+```
+
+"Criterion that describes a window as good if its performance is high enough. One of 'good_bad_metric_filter', 'good_total_ratio_threshold', 'metric_mean_in_range', 'metric_sum_in_range' must be set for 'windows_based_sli'."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.withMetricMeanInRange
+
+```ts
+withMetricMeanInRange(metricMeanInRange)
+```
+
+"Criterion that describes a window as good if the metric's value is in a good range, *averaged* across returned streams. One of 'good_bad_metric_filter', \n 'good_total_ratio_threshold', 'metric_mean_in_range', 'metric_sum_in_range' must be set for 'windows_based_sli'. Average value X of 'time_series' should satisfy 'range.min <= X <= range.max' for a good window."
+
+### fn spec.forProvider.windowsBasedSli.withMetricMeanInRangeMixin
+
+```ts
+withMetricMeanInRangeMixin(metricMeanInRange)
+```
+
+"Criterion that describes a window as good if the metric's value is in a good range, *averaged* across returned streams. One of 'good_bad_metric_filter', \n 'good_total_ratio_threshold', 'metric_mean_in_range', 'metric_sum_in_range' must be set for 'windows_based_sli'. Average value X of 'time_series' should satisfy 'range.min <= X <= range.max' for a good window."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.withMetricSumInRange
+
+```ts
+withMetricSumInRange(metricSumInRange)
+```
+
+"Criterion that describes a window as good if the metric's value is in a good range, *summed* across returned streams. Summed value 'X' of 'time_series' should satisfy 'range.min <= X <= range.max' for a good window. \n One of 'good_bad_metric_filter', 'good_total_ratio_threshold', 'metric_mean_in_range', 'metric_sum_in_range' must be set for 'windows_based_sli'."
+
+### fn spec.forProvider.windowsBasedSli.withMetricSumInRangeMixin
+
+```ts
+withMetricSumInRangeMixin(metricSumInRange)
+```
+
+"Criterion that describes a window as good if the metric's value is in a good range, *summed* across returned streams. Summed value 'X' of 'time_series' should satisfy 'range.min <= X <= range.max' for a good window. \n One of 'good_bad_metric_filter', 'good_total_ratio_threshold', 'metric_mean_in_range', 'metric_sum_in_range' must be set for 'windows_based_sli'."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.withWindowPeriod
+
+```ts
+withWindowPeriod(windowPeriod)
+```
+
+"Duration over which window quality is evaluated, given as a duration string \"{X}s\" representing X seconds. Must be an integer fraction of a day and at least 60s."
+
+## obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold
+
+"Criterion that describes a window as good if its performance is high enough. One of 'good_bad_metric_filter', 'good_total_ratio_threshold', 'metric_mean_in_range', 'metric_sum_in_range' must be set for 'windows_based_sli'."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.withBasicSliPerformance
+
+```ts
+withBasicSliPerformance(basicSliPerformance)
+```
+
+"Basic SLI to evaluate to judge window quality."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.withBasicSliPerformanceMixin
+
+```ts
+withBasicSliPerformanceMixin(basicSliPerformance)
+```
+
+"Basic SLI to evaluate to judge window quality."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.withPerformance
+
+```ts
+withPerformance(performance)
+```
+
+"Request-based SLI to evaluate to judge window quality."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.withPerformanceMixin
+
+```ts
+withPerformanceMixin(performance)
+```
+
+"Request-based SLI to evaluate to judge window quality."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.withThreshold
+
+```ts
+withThreshold(threshold)
+```
+
+"If window performance >= threshold, the window is counted as good."
+
+## obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance
+
+"Basic SLI to evaluate to judge window quality."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.withAvailability
+
+```ts
+withAvailability(availability)
+```
+
+"Availability based SLI, dervied from count of requests made to this service that return successfully."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.withAvailabilityMixin
+
+```ts
+withAvailabilityMixin(availability)
+```
+
+"Availability based SLI, dervied from count of requests made to this service that return successfully."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.withLatency
+
+```ts
+withLatency(latency)
+```
+
+"Parameters for a latency threshold SLI."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.withLatencyMixin
+
+```ts
+withLatencyMixin(latency)
+```
+
+"Parameters for a latency threshold SLI."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.withLocation
+
+```ts
+withLocation(location)
+```
+
+"An optional set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.withLocationMixin
+
+```ts
+withLocationMixin(location)
+```
+
+"An optional set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.withMethod
+
+```ts
+withMethod(method)
+```
+
+"An optional set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service's methods. For service types that don't support breaking down by method, setting this field will result in an error."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.withMethodMixin
+
+```ts
+withMethodMixin(method)
+```
+
+"An optional set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service's methods. For service types that don't support breaking down by method, setting this field will result in an error."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.withVersion
+
+```ts
+withVersion(version)
+```
+
+"The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.withVersionMixin
+
+```ts
+withVersionMixin(version)
+```
+
+"The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.availability
+
+"Availability based SLI, dervied from count of requests made to this service that return successfully."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.availability.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+"Whether an availability SLI is enabled or not. Must be set to 'true. Defaults to 'true'."
+
+## obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.latency
+
+"Parameters for a latency threshold SLI."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.basicSliPerformance.latency.withThreshold
+
+```ts
+withThreshold(threshold)
+```
+
+"A duration string, e.g. 10s. Good service is defined to be the count of requests made to this service that return in no more than threshold."
+
+## obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance
+
+"Request-based SLI to evaluate to judge window quality."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.withDistributionCut
+
+```ts
+withDistributionCut(distributionCut)
+```
+
+"Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.withDistributionCutMixin
+
+```ts
+withDistributionCutMixin(distributionCut)
+```
+
+"Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.withGoodTotalRatio
+
+```ts
+withGoodTotalRatio(goodTotalRatio)
+```
+
+"A means to compute a ratio of 'good_service' to 'total_service'. Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters) Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.withGoodTotalRatioMixin
+
+```ts
+withGoodTotalRatioMixin(goodTotalRatio)
+```
+
+"A means to compute a ratio of 'good_service' to 'total_service'. Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters) Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.distributionCut
+
+"Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.distributionCut.withDistributionFilter
+
+```ts
+withDistributionFilter(distributionFilter)
+```
+
+"A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) aggregating values to quantify the good service provided. \n Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.distributionCut.withRange
+
+```ts
+withRange(range)
+```
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.distributionCut.withRangeMixin
+
+```ts
+withRangeMixin(range)
+```
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.distributionCut.range
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.distributionCut.range.withMax
+
+```ts
+withMax(max)
+```
+
+"max value for the range (inclusive). If not given, will be set to \"infinity\", defining an open range \">= range.min\
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.distributionCut.range.withMin
+
+```ts
+withMin(min)
+```
+
+"Min value for the range (inclusive). If not given, will be set to \"-infinity\", defining an open range \"< range.max\
+
+## obj spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.goodTotalRatio
+
+"A means to compute a ratio of 'good_service' to 'total_service'. Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters) Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.goodTotalRatio.withBadServiceFilter
+
+```ts
+withBadServiceFilter(badServiceFilter)
+```
+
+"A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) quantifying bad service provided, either demanded service that was not provided or demanded service that was of inadequate quality. Exactly two of good, bad, or total service filter must be defined (where good + bad = total is assumed) \n Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.goodTotalRatio.withGoodServiceFilter
+
+```ts
+withGoodServiceFilter(goodServiceFilter)
+```
+
+"A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) quantifying good service provided. Exactly two of good, bad, or total service filter must be defined (where good + bad = total is assumed) \n Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE."
+
+### fn spec.forProvider.windowsBasedSli.goodTotalRatioThreshold.performance.goodTotalRatio.withTotalServiceFilter
+
+```ts
+withTotalServiceFilter(totalServiceFilter)
+```
+
+"A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) quantifying total demanded service. Exactly two of good, bad, or total service filter must be defined (where good + bad = total is assumed) \n Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE."
+
+## obj spec.forProvider.windowsBasedSli.metricMeanInRange
+
+"Criterion that describes a window as good if the metric's value is in a good range, *averaged* across returned streams. One of 'good_bad_metric_filter', \n 'good_total_ratio_threshold', 'metric_mean_in_range', 'metric_sum_in_range' must be set for 'windows_based_sli'. Average value X of 'time_series' should satisfy 'range.min <= X <= range.max' for a good window."
+
+### fn spec.forProvider.windowsBasedSli.metricMeanInRange.withRange
+
+```ts
+withRange(range)
+```
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Mean value 'X' of 'time_series' values should satisfy 'range.min <= X <= range.max' for a good service."
+
+### fn spec.forProvider.windowsBasedSli.metricMeanInRange.withRangeMixin
+
+```ts
+withRangeMixin(range)
+```
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Mean value 'X' of 'time_series' values should satisfy 'range.min <= X <= range.max' for a good service."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.metricMeanInRange.withTimeSeries
+
+```ts
+withTimeSeries(timeSeries)
+```
+
+"A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. Mean value 'X' should satisfy 'range.min <= X <= range.max' under good service."
+
+## obj spec.forProvider.windowsBasedSli.metricMeanInRange.range
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Mean value 'X' of 'time_series' values should satisfy 'range.min <= X <= range.max' for a good service."
+
+### fn spec.forProvider.windowsBasedSli.metricMeanInRange.range.withMax
+
+```ts
+withMax(max)
+```
+
+"max value for the range (inclusive). If not given, will be set to \"infinity\", defining an open range \">= range.min\
+
+### fn spec.forProvider.windowsBasedSli.metricMeanInRange.range.withMin
+
+```ts
+withMin(min)
+```
+
+"Min value for the range (inclusive). If not given, will be set to \"-infinity\", defining an open range \"< range.max\
+
+## obj spec.forProvider.windowsBasedSli.metricSumInRange
+
+"Criterion that describes a window as good if the metric's value is in a good range, *summed* across returned streams. Summed value 'X' of 'time_series' should satisfy 'range.min <= X <= range.max' for a good window. \n One of 'good_bad_metric_filter', 'good_total_ratio_threshold', 'metric_mean_in_range', 'metric_sum_in_range' must be set for 'windows_based_sli'."
+
+### fn spec.forProvider.windowsBasedSli.metricSumInRange.withRange
+
+```ts
+withRange(range)
+```
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value 'X' should satisfy 'range.min <= X <= range.max' for a good window."
+
+### fn spec.forProvider.windowsBasedSli.metricSumInRange.withRangeMixin
+
+```ts
+withRangeMixin(range)
+```
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value 'X' should satisfy 'range.min <= X <= range.max' for a good window."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.windowsBasedSli.metricSumInRange.withTimeSeries
+
+```ts
+withTimeSeries(timeSeries)
+```
+
+"A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE. \n Summed value 'X' should satisfy 'range.min <= X <= range.max' for a good window."
+
+## obj spec.forProvider.windowsBasedSli.metricSumInRange.range
+
+"Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min <= x <= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value 'X' should satisfy 'range.min <= X <= range.max' for a good window."
+
+### fn spec.forProvider.windowsBasedSli.metricSumInRange.range.withMax
+
+```ts
+withMax(max)
+```
+
+"max value for the range (inclusive). If not given, will be set to \"infinity\", defining an open range \">= range.min\
+
+### fn spec.forProvider.windowsBasedSli.metricSumInRange.range.withMin
+
+```ts
+withMin(min)
+```
+
+"Min value for the range (inclusive). If not given, will be set to \"-infinity\", defining an open range \"< range.max\
 
 ## obj spec.providerConfigRef
 

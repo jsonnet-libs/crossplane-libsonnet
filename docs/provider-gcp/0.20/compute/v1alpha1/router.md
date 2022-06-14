@@ -22,8 +22,6 @@ permalink: /provider-gcp/0.20/compute/v1alpha1/router/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -51,6 +49,54 @@ permalink: /provider-gcp/0.20/compute/v1alpha1/router/
       * [`fn withAdvertisedIpRanges(advertisedIpRanges)`](#fn-specforproviderbgpwithadvertisedipranges)
       * [`fn withAdvertisedIpRangesMixin(advertisedIpRanges)`](#fn-specforproviderbgpwithadvertisediprangesmixin)
       * [`fn withAsn(asn)`](#fn-specforproviderbgpwithasn)
+      * [`obj spec.forProvider.bgp.advertisedIpRanges`](#obj-specforproviderbgpadvertisedipranges)
+        * [`fn withDescription(description)`](#fn-specforproviderbgpadvertisediprangeswithdescription)
+        * [`fn withRange(range)`](#fn-specforproviderbgpadvertisediprangeswithrange)
+    * [`obj spec.forProvider.bgpPeers`](#obj-specforproviderbgppeers)
+      * [`fn withAdvertiseMode(advertiseMode)`](#fn-specforproviderbgppeerswithadvertisemode)
+      * [`fn withAdvertisedGroups(advertisedGroups)`](#fn-specforproviderbgppeerswithadvertisedgroups)
+      * [`fn withAdvertisedGroupsMixin(advertisedGroups)`](#fn-specforproviderbgppeerswithadvertisedgroupsmixin)
+      * [`fn withAdvertisedIpRanges(advertisedIpRanges)`](#fn-specforproviderbgppeerswithadvertisedipranges)
+      * [`fn withAdvertisedIpRangesMixin(advertisedIpRanges)`](#fn-specforproviderbgppeerswithadvertisediprangesmixin)
+      * [`fn withAdvertisedRoutePriority(advertisedRoutePriority)`](#fn-specforproviderbgppeerswithadvertisedroutepriority)
+      * [`fn withInterfaceName(interfaceName)`](#fn-specforproviderbgppeerswithinterfacename)
+      * [`fn withIpAddress(ipAddress)`](#fn-specforproviderbgppeerswithipaddress)
+      * [`fn withName(name)`](#fn-specforproviderbgppeerswithname)
+      * [`fn withPeerAsn(peerAsn)`](#fn-specforproviderbgppeerswithpeerasn)
+      * [`fn withPeerIpAddress(peerIpAddress)`](#fn-specforproviderbgppeerswithpeeripaddress)
+      * [`obj spec.forProvider.bgpPeers.advertisedIpRanges`](#obj-specforproviderbgppeersadvertisedipranges)
+        * [`fn withDescription(description)`](#fn-specforproviderbgppeersadvertisediprangeswithdescription)
+        * [`fn withRange(range)`](#fn-specforproviderbgppeersadvertisediprangeswithrange)
+    * [`obj spec.forProvider.interfaces`](#obj-specforproviderinterfaces)
+      * [`fn withIpRange(ipRange)`](#fn-specforproviderinterfaceswithiprange)
+      * [`fn withLinkedInterconnectAttachment(linkedInterconnectAttachment)`](#fn-specforproviderinterfaceswithlinkedinterconnectattachment)
+      * [`fn withLinkedVpnTunnel(linkedVpnTunnel)`](#fn-specforproviderinterfaceswithlinkedvpntunnel)
+      * [`fn withName(name)`](#fn-specforproviderinterfaceswithname)
+    * [`obj spec.forProvider.nats`](#obj-specforprovidernats)
+      * [`fn withDrainNatIps(drainNatIps)`](#fn-specforprovidernatswithdrainnatips)
+      * [`fn withDrainNatIpsMixin(drainNatIps)`](#fn-specforprovidernatswithdrainnatipsmixin)
+      * [`fn withEnableEndpointIndependentMapping(enableEndpointIndependentMapping)`](#fn-specforprovidernatswithenableendpointindependentmapping)
+      * [`fn withIcmpIdleTimeoutSec(icmpIdleTimeoutSec)`](#fn-specforprovidernatswithicmpidletimeoutsec)
+      * [`fn withMinPortsPerVm(minPortsPerVm)`](#fn-specforprovidernatswithminportspervm)
+      * [`fn withName(name)`](#fn-specforprovidernatswithname)
+      * [`fn withNatIpAllocateOption(natIpAllocateOption)`](#fn-specforprovidernatswithnatipallocateoption)
+      * [`fn withNatIps(natIps)`](#fn-specforprovidernatswithnatips)
+      * [`fn withNatIpsMixin(natIps)`](#fn-specforprovidernatswithnatipsmixin)
+      * [`fn withSourceSubnetworkIpRangesToNat(sourceSubnetworkIpRangesToNat)`](#fn-specforprovidernatswithsourcesubnetworkiprangestonat)
+      * [`fn withSubnetworks(subnetworks)`](#fn-specforprovidernatswithsubnetworks)
+      * [`fn withSubnetworksMixin(subnetworks)`](#fn-specforprovidernatswithsubnetworksmixin)
+      * [`fn withTcpEstablishedIdleTimeoutSec(tcpEstablishedIdleTimeoutSec)`](#fn-specforprovidernatswithtcpestablishedidletimeoutsec)
+      * [`fn withTcpTransitoryIdleTimeoutSec(tcpTransitoryIdleTimeoutSec)`](#fn-specforprovidernatswithtcptransitoryidletimeoutsec)
+      * [`fn withUdpIdleTimeoutSec(udpIdleTimeoutSec)`](#fn-specforprovidernatswithudpidletimeoutsec)
+      * [`obj spec.forProvider.nats.logConfig`](#obj-specforprovidernatslogconfig)
+        * [`fn withEnable(enable)`](#fn-specforprovidernatslogconfigwithenable)
+        * [`fn withFilter(filter)`](#fn-specforprovidernatslogconfigwithfilter)
+      * [`obj spec.forProvider.nats.subnetworks`](#obj-specforprovidernatssubnetworks)
+        * [`fn withName(name)`](#fn-specforprovidernatssubnetworkswithname)
+        * [`fn withSecondaryIpRangeNames(secondaryIpRangeNames)`](#fn-specforprovidernatssubnetworkswithsecondaryiprangenames)
+        * [`fn withSecondaryIpRangeNamesMixin(secondaryIpRangeNames)`](#fn-specforprovidernatssubnetworkswithsecondaryiprangenamesmixin)
+        * [`fn withSourceIpRangesToNat(sourceIpRangesToNat)`](#fn-specforprovidernatssubnetworkswithsourceiprangestonat)
+        * [`fn withSourceIpRangesToNatMixin(sourceIpRangesToNat)`](#fn-specforprovidernatssubnetworkswithsourceiprangestonatmixin)
     * [`obj spec.forProvider.networkRef`](#obj-specforprovidernetworkref)
       * [`fn withName(name)`](#fn-specforprovidernetworkrefwithname)
     * [`obj spec.forProvider.networkSelector`](#obj-specforprovidernetworkselector)
@@ -178,24 +224,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -414,6 +442,376 @@ withAsn(asn)
 ```
 
 "Asn: Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN."
+
+## obj spec.forProvider.bgp.advertisedIpRanges
+
+"AdvertisedIpRanges: User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges."
+
+### fn spec.forProvider.bgp.advertisedIpRanges.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Description: User-specified description for the IP range."
+
+### fn spec.forProvider.bgp.advertisedIpRanges.withRange
+
+```ts
+withRange(range)
+```
+
+"Range: The IP range to advertise. The value must be a CIDR-formatted string."
+
+## obj spec.forProvider.bgpPeers
+
+"BgpPeers: BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273."
+
+### fn spec.forProvider.bgpPeers.withAdvertiseMode
+
+```ts
+withAdvertiseMode(advertiseMode)
+```
+
+"AdvertiseMode: User-specified flag to indicate which mode to use for advertisement. \n Possible values:   \"CUSTOM\"   \"DEFAULT\
+
+### fn spec.forProvider.bgpPeers.withAdvertisedGroups
+
+```ts
+withAdvertisedGroups(advertisedGroups)
+```
+
+"AdvertisedGroups: User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router's own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the \"bgp\" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups. \n Possible values:   \"ALL_SUBNETS\
+
+### fn spec.forProvider.bgpPeers.withAdvertisedGroupsMixin
+
+```ts
+withAdvertisedGroupsMixin(advertisedGroups)
+```
+
+"AdvertisedGroups: User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router's own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the \"bgp\" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups. \n Possible values:   \"ALL_SUBNETS\
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.bgpPeers.withAdvertisedIpRanges
+
+```ts
+withAdvertisedIpRanges(advertisedIpRanges)
+```
+
+"AdvertisedIpRanges: User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the \"bgp\" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges."
+
+### fn spec.forProvider.bgpPeers.withAdvertisedIpRangesMixin
+
+```ts
+withAdvertisedIpRangesMixin(advertisedIpRanges)
+```
+
+"AdvertisedIpRanges: User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the \"bgp\" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.bgpPeers.withAdvertisedRoutePriority
+
+```ts
+withAdvertisedRoutePriority(advertisedRoutePriority)
+```
+
+"AdvertisedRoutePriority: The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win."
+
+### fn spec.forProvider.bgpPeers.withInterfaceName
+
+```ts
+withInterfaceName(interfaceName)
+```
+
+"InterfaceName: Name of the interface the BGP peer is associated with."
+
+### fn spec.forProvider.bgpPeers.withIpAddress
+
+```ts
+withIpAddress(ipAddress)
+```
+
+"IpAddress: IP address of the interface inside Google Cloud Platform. Only IPv4 is supported."
+
+### fn spec.forProvider.bgpPeers.withName
+
+```ts
+withName(name)
+```
+
+"Name: Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash."
+
+### fn spec.forProvider.bgpPeers.withPeerAsn
+
+```ts
+withPeerAsn(peerAsn)
+```
+
+"PeerAsn: Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value."
+
+### fn spec.forProvider.bgpPeers.withPeerIpAddress
+
+```ts
+withPeerIpAddress(peerIpAddress)
+```
+
+"PeerIpAddress: IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported."
+
+## obj spec.forProvider.bgpPeers.advertisedIpRanges
+
+"AdvertisedIpRanges: User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the \"bgp\" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges."
+
+### fn spec.forProvider.bgpPeers.advertisedIpRanges.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Description: User-specified description for the IP range."
+
+### fn spec.forProvider.bgpPeers.advertisedIpRanges.withRange
+
+```ts
+withRange(range)
+```
+
+"Range: The IP range to advertise. The value must be a CIDR-formatted string."
+
+## obj spec.forProvider.interfaces
+
+"Interfaces: Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both."
+
+### fn spec.forProvider.interfaces.withIpRange
+
+```ts
+withIpRange(ipRange)
+```
+
+"IpRange: IP address and range of the interface. The IP range must be in the RFC3927 link-local IP address space. The value must be a CIDR-formatted string, for example: 169.254.0.1/30. NOTE: Do not truncate the address as it represents the IP address of the interface."
+
+### fn spec.forProvider.interfaces.withLinkedInterconnectAttachment
+
+```ts
+withLinkedInterconnectAttachment(linkedInterconnectAttachment)
+```
+
+"LinkedInterconnectAttachment: URI of the linked Interconnect attachment. It must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a virtual machine instance."
+
+### fn spec.forProvider.interfaces.withLinkedVpnTunnel
+
+```ts
+withLinkedVpnTunnel(linkedVpnTunnel)
+```
+
+"LinkedVpnTunnel: URI of the linked VPN tunnel, which must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a virtual machine instance."
+
+### fn spec.forProvider.interfaces.withName
+
+```ts
+withName(name)
+```
+
+"Name: Name of this interface entry. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash."
+
+## obj spec.forProvider.nats
+
+"Nats: A list of NAT services created in this router."
+
+### fn spec.forProvider.nats.withDrainNatIps
+
+```ts
+withDrainNatIps(drainNatIps)
+```
+
+"DrainNatIps: A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only."
+
+### fn spec.forProvider.nats.withDrainNatIpsMixin
+
+```ts
+withDrainNatIpsMixin(drainNatIps)
+```
+
+"DrainNatIps: A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.nats.withEnableEndpointIndependentMapping
+
+```ts
+withEnableEndpointIndependentMapping(enableEndpointIndependentMapping)
+```
+
+
+
+### fn spec.forProvider.nats.withIcmpIdleTimeoutSec
+
+```ts
+withIcmpIdleTimeoutSec(icmpIdleTimeoutSec)
+```
+
+"IcmpIdleTimeoutSec: Timeout (in seconds) for ICMP connections. Defaults to 30s if not set."
+
+### fn spec.forProvider.nats.withMinPortsPerVm
+
+```ts
+withMinPortsPerVm(minPortsPerVm)
+```
+
+"MinPortsPerVm: Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM."
+
+### fn spec.forProvider.nats.withName
+
+```ts
+withName(name)
+```
+
+"Name: Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035."
+
+### fn spec.forProvider.nats.withNatIpAllocateOption
+
+```ts
+withNatIpAllocateOption(natIpAllocateOption)
+```
+
+"NatIpAllocateOption: Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform; customers can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be empty. \n Possible values:   \"AUTO_ONLY\"   \"MANUAL_ONLY\
+
+### fn spec.forProvider.nats.withNatIps
+
+```ts
+withNatIps(natIps)
+```
+
+"NatIps: A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project."
+
+### fn spec.forProvider.nats.withNatIpsMixin
+
+```ts
+withNatIpsMixin(natIps)
+```
+
+"NatIps: A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.nats.withSourceSubnetworkIpRangesToNat
+
+```ts
+withSourceSubnetworkIpRangesToNat(sourceSubnetworkIpRangesToNat)
+```
+
+"SourceSubnetworkIpRangesToNat: Specify the Nat option, which can take one of the following values: - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. - ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in any Router for this network in this region. \n Possible values:   \"ALL_SUBNETWORKS_ALL_IP_RANGES\"   \"ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES\"   \"LIST_OF_SUBNETWORKS\
+
+### fn spec.forProvider.nats.withSubnetworks
+
+```ts
+withSubnetworks(subnetworks)
+```
+
+"Subnetworks: A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above."
+
+### fn spec.forProvider.nats.withSubnetworksMixin
+
+```ts
+withSubnetworksMixin(subnetworks)
+```
+
+"Subnetworks: A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.nats.withTcpEstablishedIdleTimeoutSec
+
+```ts
+withTcpEstablishedIdleTimeoutSec(tcpEstablishedIdleTimeoutSec)
+```
+
+"TcpEstablishedIdleTimeoutSec: Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set."
+
+### fn spec.forProvider.nats.withTcpTransitoryIdleTimeoutSec
+
+```ts
+withTcpTransitoryIdleTimeoutSec(tcpTransitoryIdleTimeoutSec)
+```
+
+"TcpTransitoryIdleTimeoutSec: Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set."
+
+### fn spec.forProvider.nats.withUdpIdleTimeoutSec
+
+```ts
+withUdpIdleTimeoutSec(udpIdleTimeoutSec)
+```
+
+"UdpIdleTimeoutSec: Timeout (in seconds) for UDP connections. Defaults to 30s if not set."
+
+## obj spec.forProvider.nats.logConfig
+
+"LogConfig: Configure logging on this NAT."
+
+### fn spec.forProvider.nats.logConfig.withEnable
+
+```ts
+withEnable(enable)
+```
+
+"Enable: Indicates whether or not to export logs. This is false by default."
+
+### fn spec.forProvider.nats.logConfig.withFilter
+
+```ts
+withFilter(filter)
+```
+
+"Filter: Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful. \n Possible values:   \"ALL\"   \"ERRORS_ONLY\"   \"TRANSLATIONS_ONLY\
+
+## obj spec.forProvider.nats.subnetworks
+
+"Subnetworks: A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above."
+
+### fn spec.forProvider.nats.subnetworks.withName
+
+```ts
+withName(name)
+```
+
+"Name: URL for the subnetwork resource that will use NAT."
+
+### fn spec.forProvider.nats.subnetworks.withSecondaryIpRangeNames
+
+```ts
+withSecondaryIpRangeNames(secondaryIpRangeNames)
+```
+
+"SecondaryIpRangeNames: A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if \"LIST_OF_SECONDARY_IP_RANGES\" is one of the values in source_ip_ranges_to_nat."
+
+### fn spec.forProvider.nats.subnetworks.withSecondaryIpRangeNamesMixin
+
+```ts
+withSecondaryIpRangeNamesMixin(secondaryIpRangeNames)
+```
+
+"SecondaryIpRangeNames: A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if \"LIST_OF_SECONDARY_IP_RANGES\" is one of the values in source_ip_ranges_to_nat."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.nats.subnetworks.withSourceIpRangesToNat
+
+```ts
+withSourceIpRangesToNat(sourceIpRangesToNat)
+```
+
+"SourceIpRangesToNat: Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: [\"PRIMARY_IP_RANGE\", \"LIST_OF_SECONDARY_IP_RANGES\"] Default: [ALL_IP_RANGES] \n Possible values:   \"ALL_IP_RANGES\"   \"LIST_OF_SECONDARY_IP_RANGES\"   \"PRIMARY_IP_RANGE\
+
+### fn spec.forProvider.nats.subnetworks.withSourceIpRangesToNatMixin
+
+```ts
+withSourceIpRangesToNatMixin(sourceIpRangesToNat)
+```
+
+"SourceIpRangesToNat: Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: [\"PRIMARY_IP_RANGE\", \"LIST_OF_SECONDARY_IP_RANGES\"] Default: [ALL_IP_RANGES] \n Possible values:   \"ALL_IP_RANGES\"   \"LIST_OF_SECONDARY_IP_RANGES\"   \"PRIMARY_IP_RANGE\
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.forProvider.networkRef
 

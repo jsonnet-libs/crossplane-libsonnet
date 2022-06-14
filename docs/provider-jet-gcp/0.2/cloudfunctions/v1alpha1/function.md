@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/cloudfunctions/v1alpha1/function/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -61,6 +59,15 @@ permalink: /provider-jet-gcp/0.2/cloudfunctions/v1alpha1/function/
     * [`fn withTriggerHttp(triggerHttp)`](#fn-specforproviderwithtriggerhttp)
     * [`fn withVpcConnector(vpcConnector)`](#fn-specforproviderwithvpcconnector)
     * [`fn withVpcConnectorEgressSettings(vpcConnectorEgressSettings)`](#fn-specforproviderwithvpcconnectoregresssettings)
+    * [`obj spec.forProvider.eventTrigger`](#obj-specforprovidereventtrigger)
+      * [`fn withEventType(eventType)`](#fn-specforprovidereventtriggerwitheventtype)
+      * [`fn withFailurePolicy(failurePolicy)`](#fn-specforprovidereventtriggerwithfailurepolicy)
+      * [`fn withFailurePolicyMixin(failurePolicy)`](#fn-specforprovidereventtriggerwithfailurepolicymixin)
+      * [`fn withResource(resource)`](#fn-specforprovidereventtriggerwithresource)
+      * [`obj spec.forProvider.eventTrigger.failurePolicy`](#obj-specforprovidereventtriggerfailurepolicy)
+        * [`fn withRetry(retry)`](#fn-specforprovidereventtriggerfailurepolicywithretry)
+    * [`obj spec.forProvider.sourceRepository`](#obj-specforprovidersourcerepository)
+      * [`fn withUrl(url)`](#fn-specforprovidersourcerepositorywithurl)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -182,24 +189,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -502,6 +491,68 @@ withVpcConnectorEgressSettings(vpcConnectorEgressSettings)
 ```
 
 "The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are ALL_TRAFFIC and PRIVATE_RANGES_ONLY. Defaults to PRIVATE_RANGES_ONLY. If unset, this field preserves the previously set value."
+
+## obj spec.forProvider.eventTrigger
+
+"A source that fires events in response to a condition in another service. Cannot be used with trigger_http."
+
+### fn spec.forProvider.eventTrigger.withEventType
+
+```ts
+withEventType(eventType)
+```
+
+"The type of event to observe. For example: \"google.storage.object.finalize\". See the documentation on calling Cloud Functions for a full reference of accepted triggers."
+
+### fn spec.forProvider.eventTrigger.withFailurePolicy
+
+```ts
+withFailurePolicy(failurePolicy)
+```
+
+"Specifies policy for failed executions"
+
+### fn spec.forProvider.eventTrigger.withFailurePolicyMixin
+
+```ts
+withFailurePolicyMixin(failurePolicy)
+```
+
+"Specifies policy for failed executions"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.eventTrigger.withResource
+
+```ts
+withResource(resource)
+```
+
+"The name or partial URI of the resource from which to observe events. For example, \"myBucket\" or \"projects/my-project/topics/my-topic\
+
+## obj spec.forProvider.eventTrigger.failurePolicy
+
+"Specifies policy for failed executions"
+
+### fn spec.forProvider.eventTrigger.failurePolicy.withRetry
+
+```ts
+withRetry(retry)
+```
+
+"Whether the function should be retried on failure. Defaults to false."
+
+## obj spec.forProvider.sourceRepository
+
+"Represents parameters related to source repository where a function is hosted. Cannot be set alongside source_archive_bucket or source_archive_object."
+
+### fn spec.forProvider.sourceRepository.withUrl
+
+```ts
+withUrl(url)
+```
+
+"The URL pointing to the hosted repository where the function is defined."
 
 ## obj spec.providerConfigRef
 

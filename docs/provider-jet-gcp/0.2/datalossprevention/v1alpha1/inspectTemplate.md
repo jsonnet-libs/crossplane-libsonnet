@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/datalossprevention/v1alpha1/inspectTemplate/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -39,6 +37,118 @@ permalink: /provider-jet-gcp/0.2/datalossprevention/v1alpha1/inspectTemplate/
     * [`fn withInspectConfig(inspectConfig)`](#fn-specforproviderwithinspectconfig)
     * [`fn withInspectConfigMixin(inspectConfig)`](#fn-specforproviderwithinspectconfigmixin)
     * [`fn withParent(parent)`](#fn-specforproviderwithparent)
+    * [`obj spec.forProvider.inspectConfig`](#obj-specforproviderinspectconfig)
+      * [`fn withContentOptions(contentOptions)`](#fn-specforproviderinspectconfigwithcontentoptions)
+      * [`fn withContentOptionsMixin(contentOptions)`](#fn-specforproviderinspectconfigwithcontentoptionsmixin)
+      * [`fn withCustomInfoTypes(customInfoTypes)`](#fn-specforproviderinspectconfigwithcustominfotypes)
+      * [`fn withCustomInfoTypesMixin(customInfoTypes)`](#fn-specforproviderinspectconfigwithcustominfotypesmixin)
+      * [`fn withExcludeInfoTypes(excludeInfoTypes)`](#fn-specforproviderinspectconfigwithexcludeinfotypes)
+      * [`fn withIncludeQuote(includeQuote)`](#fn-specforproviderinspectconfigwithincludequote)
+      * [`fn withInfoTypes(infoTypes)`](#fn-specforproviderinspectconfigwithinfotypes)
+      * [`fn withInfoTypesMixin(infoTypes)`](#fn-specforproviderinspectconfigwithinfotypesmixin)
+      * [`fn withLimits(limits)`](#fn-specforproviderinspectconfigwithlimits)
+      * [`fn withLimitsMixin(limits)`](#fn-specforproviderinspectconfigwithlimitsmixin)
+      * [`fn withMinLikelihood(minLikelihood)`](#fn-specforproviderinspectconfigwithminlikelihood)
+      * [`fn withRuleSet(ruleSet)`](#fn-specforproviderinspectconfigwithruleset)
+      * [`fn withRuleSetMixin(ruleSet)`](#fn-specforproviderinspectconfigwithrulesetmixin)
+      * [`obj spec.forProvider.inspectConfig.customInfoTypes`](#obj-specforproviderinspectconfigcustominfotypes)
+        * [`fn withDictionary(dictionary)`](#fn-specforproviderinspectconfigcustominfotypeswithdictionary)
+        * [`fn withDictionaryMixin(dictionary)`](#fn-specforproviderinspectconfigcustominfotypeswithdictionarymixin)
+        * [`fn withExclusionType(exclusionType)`](#fn-specforproviderinspectconfigcustominfotypeswithexclusiontype)
+        * [`fn withInfoType(infoType)`](#fn-specforproviderinspectconfigcustominfotypeswithinfotype)
+        * [`fn withInfoTypeMixin(infoType)`](#fn-specforproviderinspectconfigcustominfotypeswithinfotypemixin)
+        * [`fn withLikelihood(likelihood)`](#fn-specforproviderinspectconfigcustominfotypeswithlikelihood)
+        * [`fn withRegex(regex)`](#fn-specforproviderinspectconfigcustominfotypeswithregex)
+        * [`fn withRegexMixin(regex)`](#fn-specforproviderinspectconfigcustominfotypeswithregexmixin)
+        * [`fn withStoredType(storedType)`](#fn-specforproviderinspectconfigcustominfotypeswithstoredtype)
+        * [`fn withStoredTypeMixin(storedType)`](#fn-specforproviderinspectconfigcustominfotypeswithstoredtypemixin)
+        * [`obj spec.forProvider.inspectConfig.customInfoTypes.dictionary`](#obj-specforproviderinspectconfigcustominfotypesdictionary)
+          * [`fn withCloudStoragePath(cloudStoragePath)`](#fn-specforproviderinspectconfigcustominfotypesdictionarywithcloudstoragepath)
+          * [`fn withCloudStoragePathMixin(cloudStoragePath)`](#fn-specforproviderinspectconfigcustominfotypesdictionarywithcloudstoragepathmixin)
+          * [`fn withWordList(wordList)`](#fn-specforproviderinspectconfigcustominfotypesdictionarywithwordlist)
+          * [`fn withWordListMixin(wordList)`](#fn-specforproviderinspectconfigcustominfotypesdictionarywithwordlistmixin)
+          * [`obj spec.forProvider.inspectConfig.customInfoTypes.dictionary.cloudStoragePath`](#obj-specforproviderinspectconfigcustominfotypesdictionarycloudstoragepath)
+            * [`fn withPath(path)`](#fn-specforproviderinspectconfigcustominfotypesdictionarycloudstoragepathwithpath)
+          * [`obj spec.forProvider.inspectConfig.customInfoTypes.dictionary.wordList`](#obj-specforproviderinspectconfigcustominfotypesdictionarywordlist)
+            * [`fn withWords(words)`](#fn-specforproviderinspectconfigcustominfotypesdictionarywordlistwithwords)
+            * [`fn withWordsMixin(words)`](#fn-specforproviderinspectconfigcustominfotypesdictionarywordlistwithwordsmixin)
+        * [`obj spec.forProvider.inspectConfig.customInfoTypes.infoType`](#obj-specforproviderinspectconfigcustominfotypesinfotype)
+          * [`fn withName(name)`](#fn-specforproviderinspectconfigcustominfotypesinfotypewithname)
+        * [`obj spec.forProvider.inspectConfig.customInfoTypes.regex`](#obj-specforproviderinspectconfigcustominfotypesregex)
+          * [`fn withGroupIndexes(groupIndexes)`](#fn-specforproviderinspectconfigcustominfotypesregexwithgroupindexes)
+          * [`fn withGroupIndexesMixin(groupIndexes)`](#fn-specforproviderinspectconfigcustominfotypesregexwithgroupindexesmixin)
+          * [`fn withPattern(pattern)`](#fn-specforproviderinspectconfigcustominfotypesregexwithpattern)
+        * [`obj spec.forProvider.inspectConfig.customInfoTypes.storedType`](#obj-specforproviderinspectconfigcustominfotypesstoredtype)
+          * [`fn withName(name)`](#fn-specforproviderinspectconfigcustominfotypesstoredtypewithname)
+      * [`obj spec.forProvider.inspectConfig.infoTypes`](#obj-specforproviderinspectconfiginfotypes)
+        * [`fn withName(name)`](#fn-specforproviderinspectconfiginfotypeswithname)
+      * [`obj spec.forProvider.inspectConfig.limits`](#obj-specforproviderinspectconfiglimits)
+        * [`fn withMaxFindingsPerInfoType(maxFindingsPerInfoType)`](#fn-specforproviderinspectconfiglimitswithmaxfindingsperinfotype)
+        * [`fn withMaxFindingsPerInfoTypeMixin(maxFindingsPerInfoType)`](#fn-specforproviderinspectconfiglimitswithmaxfindingsperinfotypemixin)
+        * [`fn withMaxFindingsPerItem(maxFindingsPerItem)`](#fn-specforproviderinspectconfiglimitswithmaxfindingsperitem)
+        * [`fn withMaxFindingsPerRequest(maxFindingsPerRequest)`](#fn-specforproviderinspectconfiglimitswithmaxfindingsperrequest)
+        * [`obj spec.forProvider.inspectConfig.limits.maxFindingsPerInfoType`](#obj-specforproviderinspectconfiglimitsmaxfindingsperinfotype)
+          * [`fn withInfoType(infoType)`](#fn-specforproviderinspectconfiglimitsmaxfindingsperinfotypewithinfotype)
+          * [`fn withInfoTypeMixin(infoType)`](#fn-specforproviderinspectconfiglimitsmaxfindingsperinfotypewithinfotypemixin)
+          * [`fn withMaxFindings(maxFindings)`](#fn-specforproviderinspectconfiglimitsmaxfindingsperinfotypewithmaxfindings)
+          * [`obj spec.forProvider.inspectConfig.limits.maxFindingsPerInfoType.infoType`](#obj-specforproviderinspectconfiglimitsmaxfindingsperinfotypeinfotype)
+            * [`fn withName(name)`](#fn-specforproviderinspectconfiglimitsmaxfindingsperinfotypeinfotypewithname)
+      * [`obj spec.forProvider.inspectConfig.ruleSet`](#obj-specforproviderinspectconfigruleset)
+        * [`fn withInfoTypes(infoTypes)`](#fn-specforproviderinspectconfigrulesetwithinfotypes)
+        * [`fn withInfoTypesMixin(infoTypes)`](#fn-specforproviderinspectconfigrulesetwithinfotypesmixin)
+        * [`fn withRules(rules)`](#fn-specforproviderinspectconfigrulesetwithrules)
+        * [`fn withRulesMixin(rules)`](#fn-specforproviderinspectconfigrulesetwithrulesmixin)
+        * [`obj spec.forProvider.inspectConfig.ruleSet.infoTypes`](#obj-specforproviderinspectconfigrulesetinfotypes)
+          * [`fn withName(name)`](#fn-specforproviderinspectconfigrulesetinfotypeswithname)
+        * [`obj spec.forProvider.inspectConfig.ruleSet.rules`](#obj-specforproviderinspectconfigrulesetrules)
+          * [`fn withExclusionRule(exclusionRule)`](#fn-specforproviderinspectconfigrulesetruleswithexclusionrule)
+          * [`fn withExclusionRuleMixin(exclusionRule)`](#fn-specforproviderinspectconfigrulesetruleswithexclusionrulemixin)
+          * [`fn withHotwordRule(hotwordRule)`](#fn-specforproviderinspectconfigrulesetruleswithhotwordrule)
+          * [`fn withHotwordRuleMixin(hotwordRule)`](#fn-specforproviderinspectconfigrulesetruleswithhotwordrulemixin)
+          * [`obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule`](#obj-specforproviderinspectconfigrulesetrulesexclusionrule)
+            * [`fn withDictionary(dictionary)`](#fn-specforproviderinspectconfigrulesetrulesexclusionrulewithdictionary)
+            * [`fn withDictionaryMixin(dictionary)`](#fn-specforproviderinspectconfigrulesetrulesexclusionrulewithdictionarymixin)
+            * [`fn withExcludeInfoTypes(excludeInfoTypes)`](#fn-specforproviderinspectconfigrulesetrulesexclusionrulewithexcludeinfotypes)
+            * [`fn withExcludeInfoTypesMixin(excludeInfoTypes)`](#fn-specforproviderinspectconfigrulesetrulesexclusionrulewithexcludeinfotypesmixin)
+            * [`fn withMatchingType(matchingType)`](#fn-specforproviderinspectconfigrulesetrulesexclusionrulewithmatchingtype)
+            * [`fn withRegex(regex)`](#fn-specforproviderinspectconfigrulesetrulesexclusionrulewithregex)
+            * [`fn withRegexMixin(regex)`](#fn-specforproviderinspectconfigrulesetrulesexclusionrulewithregexmixin)
+            * [`obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary`](#obj-specforproviderinspectconfigrulesetrulesexclusionruledictionary)
+              * [`fn withCloudStoragePath(cloudStoragePath)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruledictionarywithcloudstoragepath)
+              * [`fn withCloudStoragePathMixin(cloudStoragePath)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruledictionarywithcloudstoragepathmixin)
+              * [`fn withWordList(wordList)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruledictionarywithwordlist)
+              * [`fn withWordListMixin(wordList)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruledictionarywithwordlistmixin)
+              * [`obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary.cloudStoragePath`](#obj-specforproviderinspectconfigrulesetrulesexclusionruledictionarycloudstoragepath)
+                * [`fn withPath(path)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruledictionarycloudstoragepathwithpath)
+              * [`obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary.wordList`](#obj-specforproviderinspectconfigrulesetrulesexclusionruledictionarywordlist)
+                * [`fn withWords(words)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruledictionarywordlistwithwords)
+                * [`fn withWordsMixin(words)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruledictionarywordlistwithwordsmixin)
+            * [`obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.excludeInfoTypes`](#obj-specforproviderinspectconfigrulesetrulesexclusionruleexcludeinfotypes)
+              * [`fn withInfoTypes(infoTypes)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruleexcludeinfotypeswithinfotypes)
+              * [`fn withInfoTypesMixin(infoTypes)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruleexcludeinfotypeswithinfotypesmixin)
+              * [`obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.excludeInfoTypes.infoTypes`](#obj-specforproviderinspectconfigrulesetrulesexclusionruleexcludeinfotypesinfotypes)
+                * [`fn withName(name)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruleexcludeinfotypesinfotypeswithname)
+            * [`obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.regex`](#obj-specforproviderinspectconfigrulesetrulesexclusionruleregex)
+              * [`fn withGroupIndexes(groupIndexes)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruleregexwithgroupindexes)
+              * [`fn withGroupIndexesMixin(groupIndexes)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruleregexwithgroupindexesmixin)
+              * [`fn withPattern(pattern)`](#fn-specforproviderinspectconfigrulesetrulesexclusionruleregexwithpattern)
+          * [`obj spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule`](#obj-specforproviderinspectconfigrulesetruleshotwordrule)
+            * [`fn withHotwordRegex(hotwordRegex)`](#fn-specforproviderinspectconfigrulesetruleshotwordrulewithhotwordregex)
+            * [`fn withHotwordRegexMixin(hotwordRegex)`](#fn-specforproviderinspectconfigrulesetruleshotwordrulewithhotwordregexmixin)
+            * [`fn withLikelihoodAdjustment(likelihoodAdjustment)`](#fn-specforproviderinspectconfigrulesetruleshotwordrulewithlikelihoodadjustment)
+            * [`fn withLikelihoodAdjustmentMixin(likelihoodAdjustment)`](#fn-specforproviderinspectconfigrulesetruleshotwordrulewithlikelihoodadjustmentmixin)
+            * [`fn withProximity(proximity)`](#fn-specforproviderinspectconfigrulesetruleshotwordrulewithproximity)
+            * [`fn withProximityMixin(proximity)`](#fn-specforproviderinspectconfigrulesetruleshotwordrulewithproximitymixin)
+            * [`obj spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.hotwordRegex`](#obj-specforproviderinspectconfigrulesetruleshotwordrulehotwordregex)
+              * [`fn withGroupIndexes(groupIndexes)`](#fn-specforproviderinspectconfigrulesetruleshotwordrulehotwordregexwithgroupindexes)
+              * [`fn withGroupIndexesMixin(groupIndexes)`](#fn-specforproviderinspectconfigrulesetruleshotwordrulehotwordregexwithgroupindexesmixin)
+              * [`fn withPattern(pattern)`](#fn-specforproviderinspectconfigrulesetruleshotwordrulehotwordregexwithpattern)
+            * [`obj spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.likelihoodAdjustment`](#obj-specforproviderinspectconfigrulesetruleshotwordrulelikelihoodadjustment)
+              * [`fn withFixedLikelihood(fixedLikelihood)`](#fn-specforproviderinspectconfigrulesetruleshotwordrulelikelihoodadjustmentwithfixedlikelihood)
+              * [`fn withRelativeLikelihood(relativeLikelihood)`](#fn-specforproviderinspectconfigrulesetruleshotwordrulelikelihoodadjustmentwithrelativelikelihood)
+            * [`obj spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.proximity`](#obj-specforproviderinspectconfigrulesetruleshotwordruleproximity)
+              * [`fn withWindowAfter(windowAfter)`](#fn-specforproviderinspectconfigrulesetruleshotwordruleproximitywithwindowafter)
+              * [`fn withWindowBefore(windowBefore)`](#fn-specforproviderinspectconfigrulesetruleshotwordruleproximitywithwindowbefore)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +273,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -296,6 +388,860 @@ withParent(parent)
 ```
 
 "The parent of the inspect template in any of the following formats: \n * 'projects/{{project}}' * 'projects/{{project}}/locations/{{location}}' * 'organizations/{{organization_id}}' * 'organizations/{{organization_id}}/locations/{{location}}'"
+
+## obj spec.forProvider.inspectConfig
+
+"The core content of the template."
+
+### fn spec.forProvider.inspectConfig.withContentOptions
+
+```ts
+withContentOptions(contentOptions)
+```
+
+"List of options defining data content to scan. If empty, text, images, and other content will be included. Possible values: [\"CONTENT_TEXT\", \"CONTENT_IMAGE\"]"
+
+### fn spec.forProvider.inspectConfig.withContentOptionsMixin
+
+```ts
+withContentOptionsMixin(contentOptions)
+```
+
+"List of options defining data content to scan. If empty, text, images, and other content will be included. Possible values: [\"CONTENT_TEXT\", \"CONTENT_IMAGE\"]"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.withCustomInfoTypes
+
+```ts
+withCustomInfoTypes(customInfoTypes)
+```
+
+"Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more."
+
+### fn spec.forProvider.inspectConfig.withCustomInfoTypesMixin
+
+```ts
+withCustomInfoTypesMixin(customInfoTypes)
+```
+
+"Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.withExcludeInfoTypes
+
+```ts
+withExcludeInfoTypes(excludeInfoTypes)
+```
+
+"When true, excludes type information of the findings."
+
+### fn spec.forProvider.inspectConfig.withIncludeQuote
+
+```ts
+withIncludeQuote(includeQuote)
+```
+
+"When true, a contextual quote from the data that triggered a finding is included in the response."
+
+### fn spec.forProvider.inspectConfig.withInfoTypes
+
+```ts
+withInfoTypes(infoTypes)
+```
+
+"Restricts what infoTypes to look for. The values must correspond to InfoType values returned by infoTypes.list or listed at https://cloud.google.com/dlp/docs/infotypes-reference. \n When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated."
+
+### fn spec.forProvider.inspectConfig.withInfoTypesMixin
+
+```ts
+withInfoTypesMixin(infoTypes)
+```
+
+"Restricts what infoTypes to look for. The values must correspond to InfoType values returned by infoTypes.list or listed at https://cloud.google.com/dlp/docs/infotypes-reference. \n When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.withLimits
+
+```ts
+withLimits(limits)
+```
+
+"Configuration to control the number of findings returned."
+
+### fn spec.forProvider.inspectConfig.withLimitsMixin
+
+```ts
+withLimitsMixin(limits)
+```
+
+"Configuration to control the number of findings returned."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.withMinLikelihood
+
+```ts
+withMinLikelihood(minLikelihood)
+```
+
+"Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info Default value: \"POSSIBLE\" Possible values: [\"VERY_UNLIKELY\", \"UNLIKELY\", \"POSSIBLE\", \"LIKELY\", \"VERY_LIKELY\"]"
+
+### fn spec.forProvider.inspectConfig.withRuleSet
+
+```ts
+withRuleSet(ruleSet)
+```
+
+"Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type."
+
+### fn spec.forProvider.inspectConfig.withRuleSetMixin
+
+```ts
+withRuleSetMixin(ruleSet)
+```
+
+"Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.inspectConfig.customInfoTypes
+
+"Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.withDictionary
+
+```ts
+withDictionary(dictionary)
+```
+
+"Dictionary which defines the rule."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.withDictionaryMixin
+
+```ts
+withDictionaryMixin(dictionary)
+```
+
+"Dictionary which defines the rule."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.withExclusionType
+
+```ts
+withExclusionType(exclusionType)
+```
+
+"If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching. Possible values: [\"EXCLUSION_TYPE_EXCLUDE\"]"
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.withInfoType
+
+```ts
+withInfoType(infoType)
+```
+
+"CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in 'info_types' field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in 'info_types' list then the name is treated as a custom info type."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.withInfoTypeMixin
+
+```ts
+withInfoTypeMixin(infoType)
+```
+
+"CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in 'info_types' field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in 'info_types' list then the name is treated as a custom info type."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.withLikelihood
+
+```ts
+withLikelihood(likelihood)
+```
+
+"Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Default value: \"VERY_LIKELY\" Possible values: [\"VERY_UNLIKELY\", \"UNLIKELY\", \"POSSIBLE\", \"LIKELY\", \"VERY_LIKELY\"]"
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression which defines the rule."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.withRegexMixin
+
+```ts
+withRegexMixin(regex)
+```
+
+"Regular expression which defines the rule."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.withStoredType
+
+```ts
+withStoredType(storedType)
+```
+
+"A reference to a StoredInfoType to use with scanning."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.withStoredTypeMixin
+
+```ts
+withStoredTypeMixin(storedType)
+```
+
+"A reference to a StoredInfoType to use with scanning."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.inspectConfig.customInfoTypes.dictionary
+
+"Dictionary which defines the rule."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.dictionary.withCloudStoragePath
+
+```ts
+withCloudStoragePath(cloudStoragePath)
+```
+
+"Newline-delimited file of words in Cloud Storage. Only a single file is accepted."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.dictionary.withCloudStoragePathMixin
+
+```ts
+withCloudStoragePathMixin(cloudStoragePath)
+```
+
+"Newline-delimited file of words in Cloud Storage. Only a single file is accepted."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.dictionary.withWordList
+
+```ts
+withWordList(wordList)
+```
+
+"List of words or phrases to search for."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.dictionary.withWordListMixin
+
+```ts
+withWordListMixin(wordList)
+```
+
+"List of words or phrases to search for."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.inspectConfig.customInfoTypes.dictionary.cloudStoragePath
+
+"Newline-delimited file of words in Cloud Storage. Only a single file is accepted."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.dictionary.cloudStoragePath.withPath
+
+```ts
+withPath(path)
+```
+
+"A url representing a file or path (no wildcards) in Cloud Storage. Example: 'gs://[BUCKET_NAME]/dictionary.txt'"
+
+## obj spec.forProvider.inspectConfig.customInfoTypes.dictionary.wordList
+
+"List of words or phrases to search for."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.dictionary.wordList.withWords
+
+```ts
+withWords(words)
+```
+
+"Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.dictionary.wordList.withWordsMixin
+
+```ts
+withWordsMixin(words)
+```
+
+"Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.inspectConfig.customInfoTypes.infoType
+
+"CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in 'info_types' field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in 'info_types' list then the name is treated as a custom info type."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.infoType.withName
+
+```ts
+withName(name)
+```
+
+"Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type."
+
+## obj spec.forProvider.inspectConfig.customInfoTypes.regex
+
+"Regular expression which defines the rule."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.regex.withGroupIndexes
+
+```ts
+withGroupIndexes(groupIndexes)
+```
+
+"The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.regex.withGroupIndexesMixin
+
+```ts
+withGroupIndexesMixin(groupIndexes)
+```
+
+"The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.regex.withPattern
+
+```ts
+withPattern(pattern)
+```
+
+"Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub."
+
+## obj spec.forProvider.inspectConfig.customInfoTypes.storedType
+
+"A reference to a StoredInfoType to use with scanning."
+
+### fn spec.forProvider.inspectConfig.customInfoTypes.storedType.withName
+
+```ts
+withName(name)
+```
+
+"Resource name of the requested StoredInfoType, for example 'organizations/433245324/storedInfoTypes/432452342' or 'projects/project-id/storedInfoTypes/432452342'."
+
+## obj spec.forProvider.inspectConfig.infoTypes
+
+"Restricts what infoTypes to look for. The values must correspond to InfoType values returned by infoTypes.list or listed at https://cloud.google.com/dlp/docs/infotypes-reference. \n When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated."
+
+### fn spec.forProvider.inspectConfig.infoTypes.withName
+
+```ts
+withName(name)
+```
+
+"Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type."
+
+## obj spec.forProvider.inspectConfig.limits
+
+"Configuration to control the number of findings returned."
+
+### fn spec.forProvider.inspectConfig.limits.withMaxFindingsPerInfoType
+
+```ts
+withMaxFindingsPerInfoType(maxFindingsPerInfoType)
+```
+
+"Configuration of findings limit given for specified infoTypes."
+
+### fn spec.forProvider.inspectConfig.limits.withMaxFindingsPerInfoTypeMixin
+
+```ts
+withMaxFindingsPerInfoTypeMixin(maxFindingsPerInfoType)
+```
+
+"Configuration of findings limit given for specified infoTypes."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.limits.withMaxFindingsPerItem
+
+```ts
+withMaxFindingsPerItem(maxFindingsPerItem)
+```
+
+"Max number of findings that will be returned for each item scanned. The maximum returned is 2000."
+
+### fn spec.forProvider.inspectConfig.limits.withMaxFindingsPerRequest
+
+```ts
+withMaxFindingsPerRequest(maxFindingsPerRequest)
+```
+
+"Max number of findings that will be returned per request/job. The maximum returned is 2000."
+
+## obj spec.forProvider.inspectConfig.limits.maxFindingsPerInfoType
+
+"Configuration of findings limit given for specified infoTypes."
+
+### fn spec.forProvider.inspectConfig.limits.maxFindingsPerInfoType.withInfoType
+
+```ts
+withInfoType(infoType)
+```
+
+"Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit."
+
+### fn spec.forProvider.inspectConfig.limits.maxFindingsPerInfoType.withInfoTypeMixin
+
+```ts
+withInfoTypeMixin(infoType)
+```
+
+"Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.limits.maxFindingsPerInfoType.withMaxFindings
+
+```ts
+withMaxFindings(maxFindings)
+```
+
+"Max findings limit for the given infoType."
+
+## obj spec.forProvider.inspectConfig.limits.maxFindingsPerInfoType.infoType
+
+"Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit."
+
+### fn spec.forProvider.inspectConfig.limits.maxFindingsPerInfoType.infoType.withName
+
+```ts
+withName(name)
+```
+
+"Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type."
+
+## obj spec.forProvider.inspectConfig.ruleSet
+
+"Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type."
+
+### fn spec.forProvider.inspectConfig.ruleSet.withInfoTypes
+
+```ts
+withInfoTypes(infoTypes)
+```
+
+"List of infoTypes this rule set is applied to."
+
+### fn spec.forProvider.inspectConfig.ruleSet.withInfoTypesMixin
+
+```ts
+withInfoTypesMixin(infoTypes)
+```
+
+"List of infoTypes this rule set is applied to."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.ruleSet.withRules
+
+```ts
+withRules(rules)
+```
+
+"Set of rules to be applied to infoTypes. The rules are applied in order."
+
+### fn spec.forProvider.inspectConfig.ruleSet.withRulesMixin
+
+```ts
+withRulesMixin(rules)
+```
+
+"Set of rules to be applied to infoTypes. The rules are applied in order."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.inspectConfig.ruleSet.infoTypes
+
+"List of infoTypes this rule set is applied to."
+
+### fn spec.forProvider.inspectConfig.ruleSet.infoTypes.withName
+
+```ts
+withName(name)
+```
+
+"Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type."
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules
+
+"Set of rules to be applied to infoTypes. The rules are applied in order."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.withExclusionRule
+
+```ts
+withExclusionRule(exclusionRule)
+```
+
+"The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.withExclusionRuleMixin
+
+```ts
+withExclusionRuleMixin(exclusionRule)
+```
+
+"The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.withHotwordRule
+
+```ts
+withHotwordRule(hotwordRule)
+```
+
+"Hotword-based detection rule."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.withHotwordRuleMixin
+
+```ts
+withHotwordRuleMixin(hotwordRule)
+```
+
+"Hotword-based detection rule."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule
+
+"The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.withDictionary
+
+```ts
+withDictionary(dictionary)
+```
+
+"Dictionary which defines the rule."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.withDictionaryMixin
+
+```ts
+withDictionaryMixin(dictionary)
+```
+
+"Dictionary which defines the rule."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.withExcludeInfoTypes
+
+```ts
+withExcludeInfoTypes(excludeInfoTypes)
+```
+
+"Set of infoTypes for which findings would affect this rule."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.withExcludeInfoTypesMixin
+
+```ts
+withExcludeInfoTypesMixin(excludeInfoTypes)
+```
+
+"Set of infoTypes for which findings would affect this rule."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.withMatchingType
+
+```ts
+withMatchingType(matchingType)
+```
+
+"How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType Possible values: [\"MATCHING_TYPE_FULL_MATCH\", \"MATCHING_TYPE_PARTIAL_MATCH\", \"MATCHING_TYPE_INVERSE_MATCH\"]"
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression which defines the rule."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.withRegexMixin
+
+```ts
+withRegexMixin(regex)
+```
+
+"Regular expression which defines the rule."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary
+
+"Dictionary which defines the rule."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary.withCloudStoragePath
+
+```ts
+withCloudStoragePath(cloudStoragePath)
+```
+
+"Newline-delimited file of words in Cloud Storage. Only a single file is accepted."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary.withCloudStoragePathMixin
+
+```ts
+withCloudStoragePathMixin(cloudStoragePath)
+```
+
+"Newline-delimited file of words in Cloud Storage. Only a single file is accepted."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary.withWordList
+
+```ts
+withWordList(wordList)
+```
+
+"List of words or phrases to search for."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary.withWordListMixin
+
+```ts
+withWordListMixin(wordList)
+```
+
+"List of words or phrases to search for."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary.cloudStoragePath
+
+"Newline-delimited file of words in Cloud Storage. Only a single file is accepted."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary.cloudStoragePath.withPath
+
+```ts
+withPath(path)
+```
+
+"A url representing a file or path (no wildcards) in Cloud Storage. Example: 'gs://[BUCKET_NAME]/dictionary.txt'"
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary.wordList
+
+"List of words or phrases to search for."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary.wordList.withWords
+
+```ts
+withWords(words)
+```
+
+"Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.dictionary.wordList.withWordsMixin
+
+```ts
+withWordsMixin(words)
+```
+
+"Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.excludeInfoTypes
+
+"Set of infoTypes for which findings would affect this rule."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.excludeInfoTypes.withInfoTypes
+
+```ts
+withInfoTypes(infoTypes)
+```
+
+"If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.excludeInfoTypes.withInfoTypesMixin
+
+```ts
+withInfoTypesMixin(infoTypes)
+```
+
+"If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.excludeInfoTypes.infoTypes
+
+"If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.excludeInfoTypes.infoTypes.withName
+
+```ts
+withName(name)
+```
+
+"Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type."
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.regex
+
+"Regular expression which defines the rule."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.regex.withGroupIndexes
+
+```ts
+withGroupIndexes(groupIndexes)
+```
+
+"The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.regex.withGroupIndexesMixin
+
+```ts
+withGroupIndexesMixin(groupIndexes)
+```
+
+"The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.exclusionRule.regex.withPattern
+
+```ts
+withPattern(pattern)
+```
+
+"Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub."
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule
+
+"Hotword-based detection rule."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.withHotwordRegex
+
+```ts
+withHotwordRegex(hotwordRegex)
+```
+
+"Regular expression pattern defining what qualifies as a hotword."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.withHotwordRegexMixin
+
+```ts
+withHotwordRegexMixin(hotwordRegex)
+```
+
+"Regular expression pattern defining what qualifies as a hotword."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.withLikelihoodAdjustment
+
+```ts
+withLikelihoodAdjustment(likelihoodAdjustment)
+```
+
+"Likelihood adjustment to apply to all matching findings."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.withLikelihoodAdjustmentMixin
+
+```ts
+withLikelihoodAdjustmentMixin(likelihoodAdjustment)
+```
+
+"Likelihood adjustment to apply to all matching findings."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.withProximity
+
+```ts
+withProximity(proximity)
+```
+
+"Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex '(\\d{3}) \\d{3}-\\d{4}' could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex '(xxx)', where 'xxx' is the area code in question."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.withProximityMixin
+
+```ts
+withProximityMixin(proximity)
+```
+
+"Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex '(\\d{3}) \\d{3}-\\d{4}' could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex '(xxx)', where 'xxx' is the area code in question."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.hotwordRegex
+
+"Regular expression pattern defining what qualifies as a hotword."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.hotwordRegex.withGroupIndexes
+
+```ts
+withGroupIndexes(groupIndexes)
+```
+
+"The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.hotwordRegex.withGroupIndexesMixin
+
+```ts
+withGroupIndexesMixin(groupIndexes)
+```
+
+"The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.hotwordRegex.withPattern
+
+```ts
+withPattern(pattern)
+```
+
+"Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub."
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.likelihoodAdjustment
+
+"Likelihood adjustment to apply to all matching findings."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.likelihoodAdjustment.withFixedLikelihood
+
+```ts
+withFixedLikelihood(fixedLikelihood)
+```
+
+"Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values: [\"VERY_UNLIKELY\", \"UNLIKELY\", \"POSSIBLE\", \"LIKELY\", \"VERY_LIKELY\"]"
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.likelihoodAdjustment.withRelativeLikelihood
+
+```ts
+withRelativeLikelihood(relativeLikelihood)
+```
+
+"Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be POSSIBLE without the detection rule and relativeLikelihood is 1, then it is upgraded to LIKELY, while a value of -1 would downgrade it to UNLIKELY. Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set."
+
+## obj spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.proximity
+
+"Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex '(\\d{3}) \\d{3}-\\d{4}' could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex '(xxx)', where 'xxx' is the area code in question."
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.proximity.withWindowAfter
+
+```ts
+withWindowAfter(windowAfter)
+```
+
+"Number of characters after the finding to consider. Either this or window_before must be specified"
+
+### fn spec.forProvider.inspectConfig.ruleSet.rules.hotwordRule.proximity.withWindowBefore
+
+```ts
+withWindowBefore(windowBefore)
+```
+
+"Number of characters before the finding to consider. Either this or window_after must be specified"
 
 ## obj spec.providerConfigRef
 

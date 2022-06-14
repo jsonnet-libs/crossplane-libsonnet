@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,24 @@
   spec: {
     '#forProvider':: d.obj(help='"FirewallParameters define the desired state of a Google Compute Engine Firewall rule. Most fields map directly to a Firewall: https://cloud.google.com/compute/docs/reference/rest/v1/firewalls/"'),
     forProvider: {
+      '#allowed':: d.obj(help='"Allowed: The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection."'),
+      allowed: {
+        '#withIpProtocol':: d.fn(help='"IPProtocol: The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp) or the IP protocol number."', args=[d.arg(name='ipProtocol', type=d.T.string)]),
+        withIpProtocol(ipProtocol): { ipProtocol: ipProtocol },
+        '#withPorts':: d.fn(help='"Ports: An optional list of ports to which this rule applies. This field is only applicable for the UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. \\n Example inputs include: [\\"22\\"], [\\"80\\",\\"443\\"], and [\\"12345-12349\\"]."', args=[d.arg(name='ports', type=d.T.array)]),
+        withPorts(ports): { ports: if std.isArray(v=ports) then ports else [ports] },
+        '#withPortsMixin':: d.fn(help='"Ports: An optional list of ports to which this rule applies. This field is only applicable for the UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. \\n Example inputs include: [\\"22\\"], [\\"80\\",\\"443\\"], and [\\"12345-12349\\"]."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='ports', type=d.T.array)]),
+        withPortsMixin(ports): { ports+: if std.isArray(v=ports) then ports else [ports] },
+      },
+      '#denied':: d.obj(help='"Denied: The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a denied connection."'),
+      denied: {
+        '#withIpProtocol':: d.fn(help='"IPProtocol: The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp) or the IP protocol number."', args=[d.arg(name='ipProtocol', type=d.T.string)]),
+        withIpProtocol(ipProtocol): { ipProtocol: ipProtocol },
+        '#withPorts':: d.fn(help='"Ports: An optional list of ports to which this rule applies. This field is only applicable for the UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. \\n Example inputs include: [\\"22\\"], [\\"80\\",\\"443\\"], and [\\"12345-12349\\"]."', args=[d.arg(name='ports', type=d.T.array)]),
+        withPorts(ports): { ports: if std.isArray(v=ports) then ports else [ports] },
+        '#withPortsMixin':: d.fn(help='"Ports: An optional list of ports to which this rule applies. This field is only applicable for the UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. \\n Example inputs include: [\\"22\\"], [\\"80\\",\\"443\\"], and [\\"12345-12349\\"]."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='ports', type=d.T.array)]),
+        withPortsMixin(ports): { ports+: if std.isArray(v=ports) then ports else [ports] },
+      },
       '#logConfig':: d.obj(help='"LogConfig: This field denotes the logging options for a particular firewall rule. If logging is enabled, logs will be exported to Stackdriver."'),
       logConfig: {
         '#withEnable':: d.fn(help='"Enable: This field denotes whether to enable logging for a particular firewall rule."', args=[d.arg(name='enable', type=d.T.boolean)]),

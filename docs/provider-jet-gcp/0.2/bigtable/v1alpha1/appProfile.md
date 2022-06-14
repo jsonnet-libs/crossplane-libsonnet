@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/bigtable/v1alpha1/appProfile/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -42,6 +40,9 @@ permalink: /provider-jet-gcp/0.2/bigtable/v1alpha1/appProfile/
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withSingleClusterRouting(singleClusterRouting)`](#fn-specforproviderwithsingleclusterrouting)
     * [`fn withSingleClusterRoutingMixin(singleClusterRouting)`](#fn-specforproviderwithsingleclusterroutingmixin)
+    * [`obj spec.forProvider.singleClusterRouting`](#obj-specforprovidersingleclusterrouting)
+      * [`fn withAllowTransactionalWrites(allowTransactionalWrites)`](#fn-specforprovidersingleclusterroutingwithallowtransactionalwrites)
+      * [`fn withClusterId(clusterId)`](#fn-specforprovidersingleclusterroutingwithclusterid)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +164,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -323,6 +306,26 @@ withSingleClusterRoutingMixin(singleClusterRouting)
 "Use a single-cluster routing policy."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.singleClusterRouting
+
+"Use a single-cluster routing policy."
+
+### fn spec.forProvider.singleClusterRouting.withAllowTransactionalWrites
+
+```ts
+withAllowTransactionalWrites(allowTransactionalWrites)
+```
+
+"If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters."
+
+### fn spec.forProvider.singleClusterRouting.withClusterId
+
+```ts
+withClusterId(clusterId)
+```
+
+"The cluster to which read/write requests should be routed."
 
 ## obj spec.providerConfigRef
 

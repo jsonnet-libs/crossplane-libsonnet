@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/monitoring/v1alpha2/notificationChannel/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -45,6 +43,19 @@ permalink: /provider-jet-gcp/0.2/monitoring/v1alpha2/notificationChannel/
     * [`fn withType(type)`](#fn-specforproviderwithtype)
     * [`fn withUserLabels(userLabels)`](#fn-specforproviderwithuserlabels)
     * [`fn withUserLabelsMixin(userLabels)`](#fn-specforproviderwithuserlabelsmixin)
+    * [`obj spec.forProvider.sensitiveLabels`](#obj-specforprovidersensitivelabels)
+      * [`obj spec.forProvider.sensitiveLabels.authTokenSecretRef`](#obj-specforprovidersensitivelabelsauthtokensecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersensitivelabelsauthtokensecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersensitivelabelsauthtokensecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersensitivelabelsauthtokensecretrefwithnamespace)
+      * [`obj spec.forProvider.sensitiveLabels.passwordSecretRef`](#obj-specforprovidersensitivelabelspasswordsecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersensitivelabelspasswordsecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersensitivelabelspasswordsecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersensitivelabelspasswordsecretrefwithnamespace)
+      * [`obj spec.forProvider.sensitiveLabels.serviceKeySecretRef`](#obj-specforprovidersensitivelabelsservicekeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersensitivelabelsservicekeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersensitivelabelsservicekeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersensitivelabelsservicekeysecretrefwithnamespace)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -166,24 +177,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -354,6 +347,94 @@ withUserLabelsMixin(userLabels)
 "User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's schema, unlike the labels field. This field is intended to be used for organizing and identifying the NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.sensitiveLabels
+
+"Different notification type behaviors are configured primarily using the the 'labels' field on this resource. This block contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: password, will be the key in the 'labels' map in the api request. \n Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state."
+
+## obj spec.forProvider.sensitiveLabels.authTokenSecretRef
+
+"An authorization token for a notification channel. Channel types that support this field include: slack"
+
+### fn spec.forProvider.sensitiveLabels.authTokenSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.sensitiveLabels.authTokenSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.sensitiveLabels.authTokenSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.sensitiveLabels.passwordSecretRef
+
+"An password for a notification channel. Channel types that support this field include: webhook_basicauth"
+
+### fn spec.forProvider.sensitiveLabels.passwordSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.sensitiveLabels.passwordSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.sensitiveLabels.passwordSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.sensitiveLabels.serviceKeySecretRef
+
+"An servicekey token for a notification channel. Channel types that support this field include: pagerduty"
+
+### fn spec.forProvider.sensitiveLabels.serviceKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.sensitiveLabels.serviceKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.sensitiveLabels.serviceKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
 
 ## obj spec.providerConfigRef
 

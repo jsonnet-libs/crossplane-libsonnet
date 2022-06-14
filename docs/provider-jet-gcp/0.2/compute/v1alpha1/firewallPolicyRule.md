@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/firewallPolicyRule/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -47,6 +45,17 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/firewallPolicyRule/
     * [`fn withTargetResourcesMixin(targetResources)`](#fn-specforproviderwithtargetresourcesmixin)
     * [`fn withTargetServiceAccounts(targetServiceAccounts)`](#fn-specforproviderwithtargetserviceaccounts)
     * [`fn withTargetServiceAccountsMixin(targetServiceAccounts)`](#fn-specforproviderwithtargetserviceaccountsmixin)
+    * [`obj spec.forProvider.match`](#obj-specforprovidermatch)
+      * [`fn withDestIpRanges(destIpRanges)`](#fn-specforprovidermatchwithdestipranges)
+      * [`fn withDestIpRangesMixin(destIpRanges)`](#fn-specforprovidermatchwithdestiprangesmixin)
+      * [`fn withLayer4Configs(layer4Configs)`](#fn-specforprovidermatchwithlayer4configs)
+      * [`fn withLayer4ConfigsMixin(layer4Configs)`](#fn-specforprovidermatchwithlayer4configsmixin)
+      * [`fn withSrcIpRanges(srcIpRanges)`](#fn-specforprovidermatchwithsrcipranges)
+      * [`fn withSrcIpRangesMixin(srcIpRanges)`](#fn-specforprovidermatchwithsrciprangesmixin)
+      * [`obj spec.forProvider.match.layer4Configs`](#obj-specforprovidermatchlayer4configs)
+        * [`fn withIpProtocol(ipProtocol)`](#fn-specforprovidermatchlayer4configswithipprotocol)
+        * [`fn withPorts(ports)`](#fn-specforprovidermatchlayer4configswithports)
+        * [`fn withPortsMixin(ports)`](#fn-specforprovidermatchlayer4configswithportsmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -168,24 +177,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -370,6 +361,94 @@ withTargetServiceAccountsMixin(targetServiceAccounts)
 ```
 
 "A list of service accounts indicating the sets of instances that are applied with this rule."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.match
+
+"A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced."
+
+### fn spec.forProvider.match.withDestIpRanges
+
+```ts
+withDestIpRanges(destIpRanges)
+```
+
+"CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256."
+
+### fn spec.forProvider.match.withDestIpRangesMixin
+
+```ts
+withDestIpRangesMixin(destIpRanges)
+```
+
+"CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.match.withLayer4Configs
+
+```ts
+withLayer4Configs(layer4Configs)
+```
+
+"Pairs of IP protocols and ports that the rule should match."
+
+### fn spec.forProvider.match.withLayer4ConfigsMixin
+
+```ts
+withLayer4ConfigsMixin(layer4Configs)
+```
+
+"Pairs of IP protocols and ports that the rule should match."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.match.withSrcIpRanges
+
+```ts
+withSrcIpRanges(srcIpRanges)
+```
+
+"CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256."
+
+### fn spec.forProvider.match.withSrcIpRangesMixin
+
+```ts
+withSrcIpRangesMixin(srcIpRanges)
+```
+
+"CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.match.layer4Configs
+
+"Pairs of IP protocols and ports that the rule should match."
+
+### fn spec.forProvider.match.layer4Configs.withIpProtocol
+
+```ts
+withIpProtocol(ipProtocol)
+```
+
+"The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (`tcp`, `udp`, `icmp`, `esp`, `ah`, `ipip`, `sctp`), or the IP protocol number."
+
+### fn spec.forProvider.match.layer4Configs.withPorts
+
+```ts
+withPorts(ports)
+```
+
+"An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: ``."
+
+### fn spec.forProvider.match.layer4Configs.withPortsMixin
+
+```ts
+withPortsMixin(ports)
+```
+
+"An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: ``."
 
 **Note:** This function appends passed data to existing values
 

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/cloudidentity/v1alpha1/groupMembership/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -39,6 +37,11 @@ permalink: /provider-jet-gcp/0.2/cloudidentity/v1alpha1/groupMembership/
     * [`fn withPreferredMemberKeyMixin(preferredMemberKey)`](#fn-specforproviderwithpreferredmemberkeymixin)
     * [`fn withRoles(roles)`](#fn-specforproviderwithroles)
     * [`fn withRolesMixin(roles)`](#fn-specforproviderwithrolesmixin)
+    * [`obj spec.forProvider.preferredMemberKey`](#obj-specforproviderpreferredmemberkey)
+      * [`fn withId(id)`](#fn-specforproviderpreferredmemberkeywithid)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderpreferredmemberkeywithnamespace)
+    * [`obj spec.forProvider.roles`](#obj-specforproviderroles)
+      * [`fn withName(name)`](#fn-specforproviderroleswithname)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +166,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -298,6 +283,38 @@ withRolesMixin(roles)
 "The MembershipRoles that apply to the Membership. Must not contain duplicate MembershipRoles with the same name."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.preferredMemberKey
+
+"EntityKey of the member."
+
+### fn spec.forProvider.preferredMemberKey.withId
+
+```ts
+withId(id)
+```
+
+"The ID of the entity. \n For Google-managed entities, the id must be the email address of an existing group or user. \n For external-identity-mapped entities, the id must be a string conforming to the Identity Source's requirements. \n Must be unique within a namespace."
+
+### fn spec.forProvider.preferredMemberKey.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"The namespace in which the entity exists. \n If not specified, the EntityKey represents a Google-managed entity such as a Google user or a Google Group. \n If specified, the EntityKey represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of 'identitysources/{identity_source_id}'."
+
+## obj spec.forProvider.roles
+
+"The MembershipRoles that apply to the Membership. Must not contain duplicate MembershipRoles with the same name."
+
+### fn spec.forProvider.roles.withName
+
+```ts
+withName(name)
+```
+
+"The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER. Possible values: [\"OWNER\", \"MANAGER\", \"MEMBER\"]"
 
 ## obj spec.providerConfigRef
 

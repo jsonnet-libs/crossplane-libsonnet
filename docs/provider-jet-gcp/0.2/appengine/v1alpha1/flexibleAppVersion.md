@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/flexibleAppVersion/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -77,6 +75,131 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/flexibleAppVersion/
     * [`fn withVersionId(versionId)`](#fn-specforproviderwithversionid)
     * [`fn withVpcAccessConnector(vpcAccessConnector)`](#fn-specforproviderwithvpcaccessconnector)
     * [`fn withVpcAccessConnectorMixin(vpcAccessConnector)`](#fn-specforproviderwithvpcaccessconnectormixin)
+    * [`obj spec.forProvider.apiConfig`](#obj-specforproviderapiconfig)
+      * [`fn withAuthFailAction(authFailAction)`](#fn-specforproviderapiconfigwithauthfailaction)
+      * [`fn withLogin(login)`](#fn-specforproviderapiconfigwithlogin)
+      * [`fn withScript(script)`](#fn-specforproviderapiconfigwithscript)
+      * [`fn withSecurityLevel(securityLevel)`](#fn-specforproviderapiconfigwithsecuritylevel)
+      * [`fn withUrl(url)`](#fn-specforproviderapiconfigwithurl)
+    * [`obj spec.forProvider.automaticScaling`](#obj-specforproviderautomaticscaling)
+      * [`fn withCoolDownPeriod(coolDownPeriod)`](#fn-specforproviderautomaticscalingwithcooldownperiod)
+      * [`fn withCpuUtilization(cpuUtilization)`](#fn-specforproviderautomaticscalingwithcpuutilization)
+      * [`fn withCpuUtilizationMixin(cpuUtilization)`](#fn-specforproviderautomaticscalingwithcpuutilizationmixin)
+      * [`fn withDiskUtilization(diskUtilization)`](#fn-specforproviderautomaticscalingwithdiskutilization)
+      * [`fn withDiskUtilizationMixin(diskUtilization)`](#fn-specforproviderautomaticscalingwithdiskutilizationmixin)
+      * [`fn withMaxConcurrentRequests(maxConcurrentRequests)`](#fn-specforproviderautomaticscalingwithmaxconcurrentrequests)
+      * [`fn withMaxIdleInstances(maxIdleInstances)`](#fn-specforproviderautomaticscalingwithmaxidleinstances)
+      * [`fn withMaxPendingLatency(maxPendingLatency)`](#fn-specforproviderautomaticscalingwithmaxpendinglatency)
+      * [`fn withMaxTotalInstances(maxTotalInstances)`](#fn-specforproviderautomaticscalingwithmaxtotalinstances)
+      * [`fn withMinIdleInstances(minIdleInstances)`](#fn-specforproviderautomaticscalingwithminidleinstances)
+      * [`fn withMinPendingLatency(minPendingLatency)`](#fn-specforproviderautomaticscalingwithminpendinglatency)
+      * [`fn withMinTotalInstances(minTotalInstances)`](#fn-specforproviderautomaticscalingwithmintotalinstances)
+      * [`fn withNetworkUtilization(networkUtilization)`](#fn-specforproviderautomaticscalingwithnetworkutilization)
+      * [`fn withNetworkUtilizationMixin(networkUtilization)`](#fn-specforproviderautomaticscalingwithnetworkutilizationmixin)
+      * [`fn withRequestUtilization(requestUtilization)`](#fn-specforproviderautomaticscalingwithrequestutilization)
+      * [`fn withRequestUtilizationMixin(requestUtilization)`](#fn-specforproviderautomaticscalingwithrequestutilizationmixin)
+      * [`obj spec.forProvider.automaticScaling.cpuUtilization`](#obj-specforproviderautomaticscalingcpuutilization)
+        * [`fn withAggregationWindowLength(aggregationWindowLength)`](#fn-specforproviderautomaticscalingcpuutilizationwithaggregationwindowlength)
+        * [`fn withTargetUtilization(targetUtilization)`](#fn-specforproviderautomaticscalingcpuutilizationwithtargetutilization)
+      * [`obj spec.forProvider.automaticScaling.diskUtilization`](#obj-specforproviderautomaticscalingdiskutilization)
+        * [`fn withTargetReadBytesPerSecond(targetReadBytesPerSecond)`](#fn-specforproviderautomaticscalingdiskutilizationwithtargetreadbytespersecond)
+        * [`fn withTargetReadOpsPerSecond(targetReadOpsPerSecond)`](#fn-specforproviderautomaticscalingdiskutilizationwithtargetreadopspersecond)
+        * [`fn withTargetWriteBytesPerSecond(targetWriteBytesPerSecond)`](#fn-specforproviderautomaticscalingdiskutilizationwithtargetwritebytespersecond)
+        * [`fn withTargetWriteOpsPerSecond(targetWriteOpsPerSecond)`](#fn-specforproviderautomaticscalingdiskutilizationwithtargetwriteopspersecond)
+      * [`obj spec.forProvider.automaticScaling.networkUtilization`](#obj-specforproviderautomaticscalingnetworkutilization)
+        * [`fn withTargetReceivedBytesPerSecond(targetReceivedBytesPerSecond)`](#fn-specforproviderautomaticscalingnetworkutilizationwithtargetreceivedbytespersecond)
+        * [`fn withTargetReceivedPacketsPerSecond(targetReceivedPacketsPerSecond)`](#fn-specforproviderautomaticscalingnetworkutilizationwithtargetreceivedpacketspersecond)
+        * [`fn withTargetSentBytesPerSecond(targetSentBytesPerSecond)`](#fn-specforproviderautomaticscalingnetworkutilizationwithtargetsentbytespersecond)
+        * [`fn withTargetSentPacketsPerSecond(targetSentPacketsPerSecond)`](#fn-specforproviderautomaticscalingnetworkutilizationwithtargetsentpacketspersecond)
+      * [`obj spec.forProvider.automaticScaling.requestUtilization`](#obj-specforproviderautomaticscalingrequestutilization)
+        * [`fn withTargetConcurrentRequests(targetConcurrentRequests)`](#fn-specforproviderautomaticscalingrequestutilizationwithtargetconcurrentrequests)
+        * [`fn withTargetRequestCountPerSecond(targetRequestCountPerSecond)`](#fn-specforproviderautomaticscalingrequestutilizationwithtargetrequestcountpersecond)
+    * [`obj spec.forProvider.deployment`](#obj-specforproviderdeployment)
+      * [`fn withCloudBuildOptions(cloudBuildOptions)`](#fn-specforproviderdeploymentwithcloudbuildoptions)
+      * [`fn withCloudBuildOptionsMixin(cloudBuildOptions)`](#fn-specforproviderdeploymentwithcloudbuildoptionsmixin)
+      * [`fn withContainer(container)`](#fn-specforproviderdeploymentwithcontainer)
+      * [`fn withContainerMixin(container)`](#fn-specforproviderdeploymentwithcontainermixin)
+      * [`fn withFiles(files)`](#fn-specforproviderdeploymentwithfiles)
+      * [`fn withFilesMixin(files)`](#fn-specforproviderdeploymentwithfilesmixin)
+      * [`fn withZip(zip)`](#fn-specforproviderdeploymentwithzip)
+      * [`fn withZipMixin(zip)`](#fn-specforproviderdeploymentwithzipmixin)
+      * [`obj spec.forProvider.deployment.cloudBuildOptions`](#obj-specforproviderdeploymentcloudbuildoptions)
+        * [`fn withAppYamlPath(appYamlPath)`](#fn-specforproviderdeploymentcloudbuildoptionswithappyamlpath)
+        * [`fn withCloudBuildTimeout(cloudBuildTimeout)`](#fn-specforproviderdeploymentcloudbuildoptionswithcloudbuildtimeout)
+      * [`obj spec.forProvider.deployment.container`](#obj-specforproviderdeploymentcontainer)
+        * [`fn withImage(image)`](#fn-specforproviderdeploymentcontainerwithimage)
+      * [`obj spec.forProvider.deployment.files`](#obj-specforproviderdeploymentfiles)
+        * [`fn withName(name)`](#fn-specforproviderdeploymentfileswithname)
+        * [`fn withSha1Sum(sha1Sum)`](#fn-specforproviderdeploymentfileswithsha1sum)
+        * [`fn withSourceUrl(sourceUrl)`](#fn-specforproviderdeploymentfileswithsourceurl)
+      * [`obj spec.forProvider.deployment.zip`](#obj-specforproviderdeploymentzip)
+        * [`fn withFilesCount(filesCount)`](#fn-specforproviderdeploymentzipwithfilescount)
+        * [`fn withSourceUrl(sourceUrl)`](#fn-specforproviderdeploymentzipwithsourceurl)
+    * [`obj spec.forProvider.endpointsApiService`](#obj-specforproviderendpointsapiservice)
+      * [`fn withConfigId(configId)`](#fn-specforproviderendpointsapiservicewithconfigid)
+      * [`fn withDisableTraceSampling(disableTraceSampling)`](#fn-specforproviderendpointsapiservicewithdisabletracesampling)
+      * [`fn withName(name)`](#fn-specforproviderendpointsapiservicewithname)
+      * [`fn withRolloutStrategy(rolloutStrategy)`](#fn-specforproviderendpointsapiservicewithrolloutstrategy)
+    * [`obj spec.forProvider.entrypoint`](#obj-specforproviderentrypoint)
+      * [`fn withShell(shell)`](#fn-specforproviderentrypointwithshell)
+    * [`obj spec.forProvider.handlers`](#obj-specforproviderhandlers)
+      * [`fn withAuthFailAction(authFailAction)`](#fn-specforproviderhandlerswithauthfailaction)
+      * [`fn withLogin(login)`](#fn-specforproviderhandlerswithlogin)
+      * [`fn withRedirectHttpResponseCode(redirectHttpResponseCode)`](#fn-specforproviderhandlerswithredirecthttpresponsecode)
+      * [`fn withScript(script)`](#fn-specforproviderhandlerswithscript)
+      * [`fn withScriptMixin(script)`](#fn-specforproviderhandlerswithscriptmixin)
+      * [`fn withSecurityLevel(securityLevel)`](#fn-specforproviderhandlerswithsecuritylevel)
+      * [`fn withStaticFiles(staticFiles)`](#fn-specforproviderhandlerswithstaticfiles)
+      * [`fn withStaticFilesMixin(staticFiles)`](#fn-specforproviderhandlerswithstaticfilesmixin)
+      * [`fn withUrlRegex(urlRegex)`](#fn-specforproviderhandlerswithurlregex)
+      * [`obj spec.forProvider.handlers.script`](#obj-specforproviderhandlersscript)
+        * [`fn withScriptPath(scriptPath)`](#fn-specforproviderhandlersscriptwithscriptpath)
+      * [`obj spec.forProvider.handlers.staticFiles`](#obj-specforproviderhandlersstaticfiles)
+        * [`fn withApplicationReadable(applicationReadable)`](#fn-specforproviderhandlersstaticfileswithapplicationreadable)
+        * [`fn withExpiration(expiration)`](#fn-specforproviderhandlersstaticfileswithexpiration)
+        * [`fn withHttpHeaders(httpHeaders)`](#fn-specforproviderhandlersstaticfileswithhttpheaders)
+        * [`fn withHttpHeadersMixin(httpHeaders)`](#fn-specforproviderhandlersstaticfileswithhttpheadersmixin)
+        * [`fn withMimeType(mimeType)`](#fn-specforproviderhandlersstaticfileswithmimetype)
+        * [`fn withPath(path)`](#fn-specforproviderhandlersstaticfileswithpath)
+        * [`fn withRequireMatchingFile(requireMatchingFile)`](#fn-specforproviderhandlersstaticfileswithrequirematchingfile)
+        * [`fn withUploadPathRegex(uploadPathRegex)`](#fn-specforproviderhandlersstaticfileswithuploadpathregex)
+    * [`obj spec.forProvider.livenessCheck`](#obj-specforproviderlivenesscheck)
+      * [`fn withCheckInterval(checkInterval)`](#fn-specforproviderlivenesscheckwithcheckinterval)
+      * [`fn withFailureThreshold(failureThreshold)`](#fn-specforproviderlivenesscheckwithfailurethreshold)
+      * [`fn withHost(host)`](#fn-specforproviderlivenesscheckwithhost)
+      * [`fn withInitialDelay(initialDelay)`](#fn-specforproviderlivenesscheckwithinitialdelay)
+      * [`fn withPath(path)`](#fn-specforproviderlivenesscheckwithpath)
+      * [`fn withSuccessThreshold(successThreshold)`](#fn-specforproviderlivenesscheckwithsuccessthreshold)
+      * [`fn withTimeout(timeout)`](#fn-specforproviderlivenesscheckwithtimeout)
+    * [`obj spec.forProvider.manualScaling`](#obj-specforprovidermanualscaling)
+      * [`fn withInstances(instances)`](#fn-specforprovidermanualscalingwithinstances)
+    * [`obj spec.forProvider.network`](#obj-specforprovidernetwork)
+      * [`fn withForwardedPorts(forwardedPorts)`](#fn-specforprovidernetworkwithforwardedports)
+      * [`fn withForwardedPortsMixin(forwardedPorts)`](#fn-specforprovidernetworkwithforwardedportsmixin)
+      * [`fn withInstanceTag(instanceTag)`](#fn-specforprovidernetworkwithinstancetag)
+      * [`fn withName(name)`](#fn-specforprovidernetworkwithname)
+      * [`fn withSessionAffinity(sessionAffinity)`](#fn-specforprovidernetworkwithsessionaffinity)
+      * [`fn withSubnetwork(subnetwork)`](#fn-specforprovidernetworkwithsubnetwork)
+    * [`obj spec.forProvider.readinessCheck`](#obj-specforproviderreadinesscheck)
+      * [`fn withAppStartTimeout(appStartTimeout)`](#fn-specforproviderreadinesscheckwithappstarttimeout)
+      * [`fn withCheckInterval(checkInterval)`](#fn-specforproviderreadinesscheckwithcheckinterval)
+      * [`fn withFailureThreshold(failureThreshold)`](#fn-specforproviderreadinesscheckwithfailurethreshold)
+      * [`fn withHost(host)`](#fn-specforproviderreadinesscheckwithhost)
+      * [`fn withPath(path)`](#fn-specforproviderreadinesscheckwithpath)
+      * [`fn withSuccessThreshold(successThreshold)`](#fn-specforproviderreadinesscheckwithsuccessthreshold)
+      * [`fn withTimeout(timeout)`](#fn-specforproviderreadinesscheckwithtimeout)
+    * [`obj spec.forProvider.resources`](#obj-specforproviderresources)
+      * [`fn withCpu(cpu)`](#fn-specforproviderresourceswithcpu)
+      * [`fn withDiskGb(diskGb)`](#fn-specforproviderresourceswithdiskgb)
+      * [`fn withMemoryGb(memoryGb)`](#fn-specforproviderresourceswithmemorygb)
+      * [`fn withVolumes(volumes)`](#fn-specforproviderresourceswithvolumes)
+      * [`fn withVolumesMixin(volumes)`](#fn-specforproviderresourceswithvolumesmixin)
+      * [`obj spec.forProvider.resources.volumes`](#obj-specforproviderresourcesvolumes)
+        * [`fn withName(name)`](#fn-specforproviderresourcesvolumeswithname)
+        * [`fn withSizeGb(sizeGb)`](#fn-specforproviderresourcesvolumeswithsizegb)
+        * [`fn withVolumeType(volumeType)`](#fn-specforproviderresourcesvolumeswithvolumetype)
+    * [`obj spec.forProvider.vpcAccessConnector`](#obj-specforprovidervpcaccessconnector)
+      * [`fn withName(name)`](#fn-specforprovidervpcaccessconnectorwithname)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -198,24 +321,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -666,6 +771,940 @@ withVpcAccessConnectorMixin(vpcAccessConnector)
 "Enables VPC connectivity for standard apps."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.apiConfig
+
+"Serving configuration for Google Cloud Endpoints."
+
+### fn spec.forProvider.apiConfig.withAuthFailAction
+
+```ts
+withAuthFailAction(authFailAction)
+```
+
+"Action to take when users access resources that require authentication. Default value: \"AUTH_FAIL_ACTION_REDIRECT\" Possible values: [\"AUTH_FAIL_ACTION_REDIRECT\", \"AUTH_FAIL_ACTION_UNAUTHORIZED\"]"
+
+### fn spec.forProvider.apiConfig.withLogin
+
+```ts
+withLogin(login)
+```
+
+"Level of login required to access this resource. Default value: \"LOGIN_OPTIONAL\" Possible values: [\"LOGIN_OPTIONAL\", \"LOGIN_ADMIN\", \"LOGIN_REQUIRED\"]"
+
+### fn spec.forProvider.apiConfig.withScript
+
+```ts
+withScript(script)
+```
+
+"Path to the script from the application root directory."
+
+### fn spec.forProvider.apiConfig.withSecurityLevel
+
+```ts
+withSecurityLevel(securityLevel)
+```
+
+"Security (HTTPS) enforcement for this URL. Possible values: [\"SECURE_DEFAULT\", \"SECURE_NEVER\", \"SECURE_OPTIONAL\", \"SECURE_ALWAYS\"]"
+
+### fn spec.forProvider.apiConfig.withUrl
+
+```ts
+withUrl(url)
+```
+
+"URL to serve the endpoint at."
+
+## obj spec.forProvider.automaticScaling
+
+"Automatic scaling is based on request rate, response latencies, and other application metrics."
+
+### fn spec.forProvider.automaticScaling.withCoolDownPeriod
+
+```ts
+withCoolDownPeriod(coolDownPeriod)
+```
+
+"The time period that the Autoscaler should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Default: 120s"
+
+### fn spec.forProvider.automaticScaling.withCpuUtilization
+
+```ts
+withCpuUtilization(cpuUtilization)
+```
+
+"Target scaling by CPU usage."
+
+### fn spec.forProvider.automaticScaling.withCpuUtilizationMixin
+
+```ts
+withCpuUtilizationMixin(cpuUtilization)
+```
+
+"Target scaling by CPU usage."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.automaticScaling.withDiskUtilization
+
+```ts
+withDiskUtilization(diskUtilization)
+```
+
+"Target scaling by disk usage."
+
+### fn spec.forProvider.automaticScaling.withDiskUtilizationMixin
+
+```ts
+withDiskUtilizationMixin(diskUtilization)
+```
+
+"Target scaling by disk usage."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.automaticScaling.withMaxConcurrentRequests
+
+```ts
+withMaxConcurrentRequests(maxConcurrentRequests)
+```
+
+"Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance. \n Defaults to a runtime-specific value."
+
+### fn spec.forProvider.automaticScaling.withMaxIdleInstances
+
+```ts
+withMaxIdleInstances(maxIdleInstances)
+```
+
+"Maximum number of idle instances that should be maintained for this version."
+
+### fn spec.forProvider.automaticScaling.withMaxPendingLatency
+
+```ts
+withMaxPendingLatency(maxPendingLatency)
+```
+
+"Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it."
+
+### fn spec.forProvider.automaticScaling.withMaxTotalInstances
+
+```ts
+withMaxTotalInstances(maxTotalInstances)
+```
+
+"Maximum number of instances that should be started to handle requests for this version. Default: 20"
+
+### fn spec.forProvider.automaticScaling.withMinIdleInstances
+
+```ts
+withMinIdleInstances(minIdleInstances)
+```
+
+"Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service."
+
+### fn spec.forProvider.automaticScaling.withMinPendingLatency
+
+```ts
+withMinPendingLatency(minPendingLatency)
+```
+
+"Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it."
+
+### fn spec.forProvider.automaticScaling.withMinTotalInstances
+
+```ts
+withMinTotalInstances(minTotalInstances)
+```
+
+"Minimum number of running instances that should be maintained for this version. Default: 2"
+
+### fn spec.forProvider.automaticScaling.withNetworkUtilization
+
+```ts
+withNetworkUtilization(networkUtilization)
+```
+
+"Target scaling by network usage."
+
+### fn spec.forProvider.automaticScaling.withNetworkUtilizationMixin
+
+```ts
+withNetworkUtilizationMixin(networkUtilization)
+```
+
+"Target scaling by network usage."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.automaticScaling.withRequestUtilization
+
+```ts
+withRequestUtilization(requestUtilization)
+```
+
+"Target scaling by request utilization."
+
+### fn spec.forProvider.automaticScaling.withRequestUtilizationMixin
+
+```ts
+withRequestUtilizationMixin(requestUtilization)
+```
+
+"Target scaling by request utilization."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.automaticScaling.cpuUtilization
+
+"Target scaling by CPU usage."
+
+### fn spec.forProvider.automaticScaling.cpuUtilization.withAggregationWindowLength
+
+```ts
+withAggregationWindowLength(aggregationWindowLength)
+```
+
+"Period of time over which CPU utilization is calculated."
+
+### fn spec.forProvider.automaticScaling.cpuUtilization.withTargetUtilization
+
+```ts
+withTargetUtilization(targetUtilization)
+```
+
+"Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1."
+
+## obj spec.forProvider.automaticScaling.diskUtilization
+
+"Target scaling by disk usage."
+
+### fn spec.forProvider.automaticScaling.diskUtilization.withTargetReadBytesPerSecond
+
+```ts
+withTargetReadBytesPerSecond(targetReadBytesPerSecond)
+```
+
+"Target bytes read per second."
+
+### fn spec.forProvider.automaticScaling.diskUtilization.withTargetReadOpsPerSecond
+
+```ts
+withTargetReadOpsPerSecond(targetReadOpsPerSecond)
+```
+
+"Target ops read per seconds."
+
+### fn spec.forProvider.automaticScaling.diskUtilization.withTargetWriteBytesPerSecond
+
+```ts
+withTargetWriteBytesPerSecond(targetWriteBytesPerSecond)
+```
+
+"Target bytes written per second."
+
+### fn spec.forProvider.automaticScaling.diskUtilization.withTargetWriteOpsPerSecond
+
+```ts
+withTargetWriteOpsPerSecond(targetWriteOpsPerSecond)
+```
+
+"Target ops written per second."
+
+## obj spec.forProvider.automaticScaling.networkUtilization
+
+"Target scaling by network usage."
+
+### fn spec.forProvider.automaticScaling.networkUtilization.withTargetReceivedBytesPerSecond
+
+```ts
+withTargetReceivedBytesPerSecond(targetReceivedBytesPerSecond)
+```
+
+"Target bytes received per second."
+
+### fn spec.forProvider.automaticScaling.networkUtilization.withTargetReceivedPacketsPerSecond
+
+```ts
+withTargetReceivedPacketsPerSecond(targetReceivedPacketsPerSecond)
+```
+
+"Target packets received per second."
+
+### fn spec.forProvider.automaticScaling.networkUtilization.withTargetSentBytesPerSecond
+
+```ts
+withTargetSentBytesPerSecond(targetSentBytesPerSecond)
+```
+
+"Target bytes sent per second."
+
+### fn spec.forProvider.automaticScaling.networkUtilization.withTargetSentPacketsPerSecond
+
+```ts
+withTargetSentPacketsPerSecond(targetSentPacketsPerSecond)
+```
+
+"Target packets sent per second."
+
+## obj spec.forProvider.automaticScaling.requestUtilization
+
+"Target scaling by request utilization."
+
+### fn spec.forProvider.automaticScaling.requestUtilization.withTargetConcurrentRequests
+
+```ts
+withTargetConcurrentRequests(targetConcurrentRequests)
+```
+
+"Target number of concurrent requests."
+
+### fn spec.forProvider.automaticScaling.requestUtilization.withTargetRequestCountPerSecond
+
+```ts
+withTargetRequestCountPerSecond(targetRequestCountPerSecond)
+```
+
+"Target requests per second."
+
+## obj spec.forProvider.deployment
+
+"Code and application artifacts that make up this version."
+
+### fn spec.forProvider.deployment.withCloudBuildOptions
+
+```ts
+withCloudBuildOptions(cloudBuildOptions)
+```
+
+"Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly."
+
+### fn spec.forProvider.deployment.withCloudBuildOptionsMixin
+
+```ts
+withCloudBuildOptionsMixin(cloudBuildOptions)
+```
+
+"Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deployment.withContainer
+
+```ts
+withContainer(container)
+```
+
+"The Docker image for the container that runs the version."
+
+### fn spec.forProvider.deployment.withContainerMixin
+
+```ts
+withContainerMixin(container)
+```
+
+"The Docker image for the container that runs the version."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deployment.withFiles
+
+```ts
+withFiles(files)
+```
+
+"Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call."
+
+### fn spec.forProvider.deployment.withFilesMixin
+
+```ts
+withFilesMixin(files)
+```
+
+"Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deployment.withZip
+
+```ts
+withZip(zip)
+```
+
+"Zip File"
+
+### fn spec.forProvider.deployment.withZipMixin
+
+```ts
+withZipMixin(zip)
+```
+
+"Zip File"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.deployment.cloudBuildOptions
+
+"Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly."
+
+### fn spec.forProvider.deployment.cloudBuildOptions.withAppYamlPath
+
+```ts
+withAppYamlPath(appYamlPath)
+```
+
+"Path to the yaml file used in deployment, used to determine runtime configuration details."
+
+### fn spec.forProvider.deployment.cloudBuildOptions.withCloudBuildTimeout
+
+```ts
+withCloudBuildTimeout(cloudBuildTimeout)
+```
+
+"The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes. \n A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"3.5s\"."
+
+## obj spec.forProvider.deployment.container
+
+"The Docker image for the container that runs the version."
+
+### fn spec.forProvider.deployment.container.withImage
+
+```ts
+withImage(image)
+```
+
+"URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest. Examples: \"gcr.io/my-project/image:tag\" or \"gcr.io/my-project/image@digest\
+
+## obj spec.forProvider.deployment.files
+
+"Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call."
+
+### fn spec.forProvider.deployment.files.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forProvider.deployment.files.withSha1Sum
+
+```ts
+withSha1Sum(sha1Sum)
+```
+
+"SHA1 checksum of the file"
+
+### fn spec.forProvider.deployment.files.withSourceUrl
+
+```ts
+withSourceUrl(sourceUrl)
+```
+
+"Source URL"
+
+## obj spec.forProvider.deployment.zip
+
+"Zip File"
+
+### fn spec.forProvider.deployment.zip.withFilesCount
+
+```ts
+withFilesCount(filesCount)
+```
+
+"files count"
+
+### fn spec.forProvider.deployment.zip.withSourceUrl
+
+```ts
+withSourceUrl(sourceUrl)
+```
+
+"Source URL"
+
+## obj spec.forProvider.endpointsApiService
+
+"Code and application artifacts that make up this version."
+
+### fn spec.forProvider.endpointsApiService.withConfigId
+
+```ts
+withConfigId(configId)
+```
+
+"Endpoints service configuration ID as specified by the Service Management API. For example \"2016-09-19r1\". \n By default, the rollout strategy for Endpoints is \"FIXED\". This means that Endpoints starts up with a particular configuration ID. When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID and is required in this case. \n Endpoints also has a rollout strategy called \"MANAGED\". When using this, Endpoints fetches the latest configuration and does not need the configuration ID. In this case, configId must be omitted."
+
+### fn spec.forProvider.endpointsApiService.withDisableTraceSampling
+
+```ts
+withDisableTraceSampling(disableTraceSampling)
+```
+
+"Enable or disable trace sampling. By default, this is set to false for enabled."
+
+### fn spec.forProvider.endpointsApiService.withName
+
+```ts
+withName(name)
+```
+
+"Endpoints service name which is the name of the \"service\" resource in the Service Management API. For example \"myapi.endpoints.myproject.cloud.goog\
+
+### fn spec.forProvider.endpointsApiService.withRolloutStrategy
+
+```ts
+withRolloutStrategy(rolloutStrategy)
+```
+
+"Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default value: \"FIXED\" Possible values: [\"FIXED\", \"MANAGED\"]"
+
+## obj spec.forProvider.entrypoint
+
+"The entrypoint for the application."
+
+### fn spec.forProvider.entrypoint.withShell
+
+```ts
+withShell(shell)
+```
+
+"The format should be a shell command that can be fed to bash -c."
+
+## obj spec.forProvider.handlers
+
+"An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted."
+
+### fn spec.forProvider.handlers.withAuthFailAction
+
+```ts
+withAuthFailAction(authFailAction)
+```
+
+"Actions to take when the user is not logged in. Possible values: [\"AUTH_FAIL_ACTION_REDIRECT\", \"AUTH_FAIL_ACTION_UNAUTHORIZED\"]"
+
+### fn spec.forProvider.handlers.withLogin
+
+```ts
+withLogin(login)
+```
+
+"Methods to restrict access to a URL based on login status. Possible values: [\"LOGIN_OPTIONAL\", \"LOGIN_ADMIN\", \"LOGIN_REQUIRED\"]"
+
+### fn spec.forProvider.handlers.withRedirectHttpResponseCode
+
+```ts
+withRedirectHttpResponseCode(redirectHttpResponseCode)
+```
+
+"30x code to use when performing redirects for the secure field. Possible values: [\"REDIRECT_HTTP_RESPONSE_CODE_301\", \"REDIRECT_HTTP_RESPONSE_CODE_302\", \"REDIRECT_HTTP_RESPONSE_CODE_303\", \"REDIRECT_HTTP_RESPONSE_CODE_307\"]"
+
+### fn spec.forProvider.handlers.withScript
+
+```ts
+withScript(script)
+```
+
+"Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example \"script:\" \"auto\"."
+
+### fn spec.forProvider.handlers.withScriptMixin
+
+```ts
+withScriptMixin(script)
+```
+
+"Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example \"script:\" \"auto\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.handlers.withSecurityLevel
+
+```ts
+withSecurityLevel(securityLevel)
+```
+
+"Security (HTTPS) enforcement for this URL. Possible values: [\"SECURE_DEFAULT\", \"SECURE_NEVER\", \"SECURE_OPTIONAL\", \"SECURE_ALWAYS\"]"
+
+### fn spec.forProvider.handlers.withStaticFiles
+
+```ts
+withStaticFiles(staticFiles)
+```
+
+"Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them."
+
+### fn spec.forProvider.handlers.withStaticFilesMixin
+
+```ts
+withStaticFilesMixin(staticFiles)
+```
+
+"Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.handlers.withUrlRegex
+
+```ts
+withUrlRegex(urlRegex)
+```
+
+"URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path."
+
+## obj spec.forProvider.handlers.script
+
+"Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example \"script:\" \"auto\"."
+
+### fn spec.forProvider.handlers.script.withScriptPath
+
+```ts
+withScriptPath(scriptPath)
+```
+
+"Path to the script from the application root directory."
+
+## obj spec.forProvider.handlers.staticFiles
+
+"Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them."
+
+### fn spec.forProvider.handlers.staticFiles.withApplicationReadable
+
+```ts
+withApplicationReadable(applicationReadable)
+```
+
+"Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas."
+
+### fn spec.forProvider.handlers.staticFiles.withExpiration
+
+```ts
+withExpiration(expiration)
+```
+
+"Time a static file served by this handler should be cached by web proxies and browsers. A duration in seconds with up to nine fractional digits, terminated by 's'. Example \"3.5s\". Default is '0s'"
+
+### fn spec.forProvider.handlers.staticFiles.withHttpHeaders
+
+```ts
+withHttpHeaders(httpHeaders)
+```
+
+"HTTP headers to use for all responses from these URLs. An object containing a list of \"key:value\" value pairs.\"."
+
+### fn spec.forProvider.handlers.staticFiles.withHttpHeadersMixin
+
+```ts
+withHttpHeadersMixin(httpHeaders)
+```
+
+"HTTP headers to use for all responses from these URLs. An object containing a list of \"key:value\" value pairs.\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.handlers.staticFiles.withMimeType
+
+```ts
+withMimeType(mimeType)
+```
+
+"MIME type used to serve all files served by this handler. Defaults to file-specific MIME types, which are derived from each file's filename extension."
+
+### fn spec.forProvider.handlers.staticFiles.withPath
+
+```ts
+withPath(path)
+```
+
+"Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern."
+
+### fn spec.forProvider.handlers.staticFiles.withRequireMatchingFile
+
+```ts
+withRequireMatchingFile(requireMatchingFile)
+```
+
+"Whether this handler should match the request if the file referenced by the handler does not exist."
+
+### fn spec.forProvider.handlers.staticFiles.withUploadPathRegex
+
+```ts
+withUploadPathRegex(uploadPathRegex)
+```
+
+"Regular expression that matches the file paths for all files that should be referenced by this handler."
+
+## obj spec.forProvider.livenessCheck
+
+"Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances."
+
+### fn spec.forProvider.livenessCheck.withCheckInterval
+
+```ts
+withCheckInterval(checkInterval)
+```
+
+"Interval between health checks."
+
+### fn spec.forProvider.livenessCheck.withFailureThreshold
+
+```ts
+withFailureThreshold(failureThreshold)
+```
+
+"Number of consecutive failed checks required before considering the VM unhealthy. Default: 4."
+
+### fn spec.forProvider.livenessCheck.withHost
+
+```ts
+withHost(host)
+```
+
+"Host header to send when performing a HTTP Readiness check. Example: \"myapp.appspot.com\
+
+### fn spec.forProvider.livenessCheck.withInitialDelay
+
+```ts
+withInitialDelay(initialDelay)
+```
+
+"The initial delay before starting to execute the checks. Default: \"300s\
+
+### fn spec.forProvider.livenessCheck.withPath
+
+```ts
+withPath(path)
+```
+
+"The request path."
+
+### fn spec.forProvider.livenessCheck.withSuccessThreshold
+
+```ts
+withSuccessThreshold(successThreshold)
+```
+
+"Number of consecutive successful checks required before considering the VM healthy. Default: 2."
+
+### fn spec.forProvider.livenessCheck.withTimeout
+
+```ts
+withTimeout(timeout)
+```
+
+"Time before the check is considered failed. Default: \"4s\
+
+## obj spec.forProvider.manualScaling
+
+"A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time."
+
+### fn spec.forProvider.manualScaling.withInstances
+
+```ts
+withInstances(instances)
+```
+
+"Number of instances to assign to the service at the start. \n **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2 Modules API set_num_instances() you must use 'lifecycle.ignore_changes = [\"manual_scaling\"[0].instances]' to prevent drift detection."
+
+## obj spec.forProvider.network
+
+"Extra network settings"
+
+### fn spec.forProvider.network.withForwardedPorts
+
+```ts
+withForwardedPorts(forwardedPorts)
+```
+
+"List of ports, or port pairs, to forward from the virtual machine to the application container."
+
+### fn spec.forProvider.network.withForwardedPortsMixin
+
+```ts
+withForwardedPortsMixin(forwardedPorts)
+```
+
+"List of ports, or port pairs, to forward from the virtual machine to the application container."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.network.withInstanceTag
+
+```ts
+withInstanceTag(instanceTag)
+```
+
+"Tag to apply to the instance during creation."
+
+### fn spec.forProvider.network.withName
+
+```ts
+withName(name)
+```
+
+"Google Compute Engine network where the virtual machines are created. Specify the short name, not the resource path."
+
+### fn spec.forProvider.network.withSessionAffinity
+
+```ts
+withSessionAffinity(sessionAffinity)
+```
+
+"Enable session affinity."
+
+### fn spec.forProvider.network.withSubnetwork
+
+```ts
+withSubnetwork(subnetwork)
+```
+
+"Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path. \n If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range. If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetworkName) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network. If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork. If specified, the subnetwork must exist in the same region as the App Engine flexible environment application."
+
+## obj spec.forProvider.readinessCheck
+
+"Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation."
+
+### fn spec.forProvider.readinessCheck.withAppStartTimeout
+
+```ts
+withAppStartTimeout(appStartTimeout)
+```
+
+"A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic. Default: \"300s\
+
+### fn spec.forProvider.readinessCheck.withCheckInterval
+
+```ts
+withCheckInterval(checkInterval)
+```
+
+"Interval between health checks.  Default: \"5s\"."
+
+### fn spec.forProvider.readinessCheck.withFailureThreshold
+
+```ts
+withFailureThreshold(failureThreshold)
+```
+
+"Number of consecutive failed checks required before removing traffic. Default: 2."
+
+### fn spec.forProvider.readinessCheck.withHost
+
+```ts
+withHost(host)
+```
+
+"Host header to send when performing a HTTP Readiness check. Example: \"myapp.appspot.com\
+
+### fn spec.forProvider.readinessCheck.withPath
+
+```ts
+withPath(path)
+```
+
+"The request path."
+
+### fn spec.forProvider.readinessCheck.withSuccessThreshold
+
+```ts
+withSuccessThreshold(successThreshold)
+```
+
+"Number of consecutive successful checks required before receiving traffic. Default: 2."
+
+### fn spec.forProvider.readinessCheck.withTimeout
+
+```ts
+withTimeout(timeout)
+```
+
+"Time before the check is considered failed. Default: \"4s\
+
+## obj spec.forProvider.resources
+
+"Machine resources for a version."
+
+### fn spec.forProvider.resources.withCpu
+
+```ts
+withCpu(cpu)
+```
+
+"Number of CPU cores needed."
+
+### fn spec.forProvider.resources.withDiskGb
+
+```ts
+withDiskGb(diskGb)
+```
+
+"Disk size (GB) needed."
+
+### fn spec.forProvider.resources.withMemoryGb
+
+```ts
+withMemoryGb(memoryGb)
+```
+
+"Memory (GB) needed."
+
+### fn spec.forProvider.resources.withVolumes
+
+```ts
+withVolumes(volumes)
+```
+
+"List of ports, or port pairs, to forward from the virtual machine to the application container."
+
+### fn spec.forProvider.resources.withVolumesMixin
+
+```ts
+withVolumesMixin(volumes)
+```
+
+"List of ports, or port pairs, to forward from the virtual machine to the application container."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.resources.volumes
+
+"List of ports, or port pairs, to forward from the virtual machine to the application container."
+
+### fn spec.forProvider.resources.volumes.withName
+
+```ts
+withName(name)
+```
+
+"Unique name for the volume."
+
+### fn spec.forProvider.resources.volumes.withSizeGb
+
+```ts
+withSizeGb(sizeGb)
+```
+
+"Volume size in gigabytes."
+
+### fn spec.forProvider.resources.volumes.withVolumeType
+
+```ts
+withVolumeType(volumeType)
+```
+
+"Underlying volume type, e.g. 'tmpfs'."
+
+## obj spec.forProvider.vpcAccessConnector
+
+"Enables VPC connectivity for standard apps."
+
+### fn spec.forProvider.vpcAccessConnector.withName
+
+```ts
+withName(name)
+```
+
+"Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1."
 
 ## obj spec.providerConfigRef
 

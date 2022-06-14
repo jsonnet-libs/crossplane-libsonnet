@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/cloudasset/v1alpha1/folderFeed/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,16 @@ permalink: /provider-jet-gcp/0.2/cloudasset/v1alpha1/folderFeed/
     * [`fn withFeedOutputConfig(feedOutputConfig)`](#fn-specforproviderwithfeedoutputconfig)
     * [`fn withFeedOutputConfigMixin(feedOutputConfig)`](#fn-specforproviderwithfeedoutputconfigmixin)
     * [`fn withFolder(folder)`](#fn-specforproviderwithfolder)
+    * [`obj spec.forProvider.condition`](#obj-specforprovidercondition)
+      * [`fn withDescription(description)`](#fn-specforproviderconditionwithdescription)
+      * [`fn withExpression(expression)`](#fn-specforproviderconditionwithexpression)
+      * [`fn withLocation(location)`](#fn-specforproviderconditionwithlocation)
+      * [`fn withTitle(title)`](#fn-specforproviderconditionwithtitle)
+    * [`obj spec.forProvider.feedOutputConfig`](#obj-specforproviderfeedoutputconfig)
+      * [`fn withPubsubDestination(pubsubDestination)`](#fn-specforproviderfeedoutputconfigwithpubsubdestination)
+      * [`fn withPubsubDestinationMixin(pubsubDestination)`](#fn-specforproviderfeedoutputconfigwithpubsubdestinationmixin)
+      * [`obj spec.forProvider.feedOutputConfig.pubsubDestination`](#obj-specforproviderfeedoutputconfigpubsubdestination)
+        * [`fn withTopic(topic)`](#fn-specforproviderfeedoutputconfigpubsubdestinationwithtopic)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +175,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -365,6 +355,76 @@ withFolder(folder)
 ```
 
 "The folder this feed should be created in."
+
+## obj spec.forProvider.condition
+
+"A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, expression field must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with expression \"temporal_asset.deleted == true\" will only publish Asset deletions. Other fields of condition are optional."
+
+### fn spec.forProvider.condition.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI."
+
+### fn spec.forProvider.condition.withExpression
+
+```ts
+withExpression(expression)
+```
+
+"Textual representation of an expression in Common Expression Language syntax."
+
+### fn spec.forProvider.condition.withLocation
+
+```ts
+withLocation(location)
+```
+
+"String indicating the location of the expression for error reporting, e.g. a file name and a position in the file."
+
+### fn spec.forProvider.condition.withTitle
+
+```ts
+withTitle(title)
+```
+
+"Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression."
+
+## obj spec.forProvider.feedOutputConfig
+
+"Output configuration for asset feed destination."
+
+### fn spec.forProvider.feedOutputConfig.withPubsubDestination
+
+```ts
+withPubsubDestination(pubsubDestination)
+```
+
+"Destination on Cloud Pubsub."
+
+### fn spec.forProvider.feedOutputConfig.withPubsubDestinationMixin
+
+```ts
+withPubsubDestinationMixin(pubsubDestination)
+```
+
+"Destination on Cloud Pubsub."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.feedOutputConfig.pubsubDestination
+
+"Destination on Cloud Pubsub."
+
+### fn spec.forProvider.feedOutputConfig.pubsubDestination.withTopic
+
+```ts
+withTopic(topic)
+```
+
+"Destination on Cloud Pubsub topic."
 
 ## obj spec.providerConfigRef
 

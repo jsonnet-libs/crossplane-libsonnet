@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/reservation/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -41,6 +39,23 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/reservation/
     * [`fn withSpecificReservationMixin(specificReservation)`](#fn-specforproviderwithspecificreservationmixin)
     * [`fn withSpecificReservationRequired(specificReservationRequired)`](#fn-specforproviderwithspecificreservationrequired)
     * [`fn withZone(zone)`](#fn-specforproviderwithzone)
+    * [`obj spec.forProvider.specificReservation`](#obj-specforproviderspecificreservation)
+      * [`fn withCount(count)`](#fn-specforproviderspecificreservationwithcount)
+      * [`fn withInstanceProperties(instanceProperties)`](#fn-specforproviderspecificreservationwithinstanceproperties)
+      * [`fn withInstancePropertiesMixin(instanceProperties)`](#fn-specforproviderspecificreservationwithinstancepropertiesmixin)
+      * [`obj spec.forProvider.specificReservation.instanceProperties`](#obj-specforproviderspecificreservationinstanceproperties)
+        * [`fn withGuestAccelerators(guestAccelerators)`](#fn-specforproviderspecificreservationinstancepropertieswithguestaccelerators)
+        * [`fn withGuestAcceleratorsMixin(guestAccelerators)`](#fn-specforproviderspecificreservationinstancepropertieswithguestacceleratorsmixin)
+        * [`fn withLocalSsds(localSsds)`](#fn-specforproviderspecificreservationinstancepropertieswithlocalssds)
+        * [`fn withLocalSsdsMixin(localSsds)`](#fn-specforproviderspecificreservationinstancepropertieswithlocalssdsmixin)
+        * [`fn withMachineType(machineType)`](#fn-specforproviderspecificreservationinstancepropertieswithmachinetype)
+        * [`fn withMinCpuPlatform(minCpuPlatform)`](#fn-specforproviderspecificreservationinstancepropertieswithmincpuplatform)
+        * [`obj spec.forProvider.specificReservation.instanceProperties.guestAccelerators`](#obj-specforproviderspecificreservationinstancepropertiesguestaccelerators)
+          * [`fn withAcceleratorCount(acceleratorCount)`](#fn-specforproviderspecificreservationinstancepropertiesguestacceleratorswithacceleratorcount)
+          * [`fn withAcceleratorType(acceleratorType)`](#fn-specforproviderspecificreservationinstancepropertiesguestacceleratorswithacceleratortype)
+        * [`obj spec.forProvider.specificReservation.instanceProperties.localSsds`](#obj-specforproviderspecificreservationinstancepropertieslocalssds)
+          * [`fn withDiskSizeGb(diskSizeGb)`](#fn-specforproviderspecificreservationinstancepropertieslocalssdswithdisksizegb)
+          * [`fn withInterface(interface)`](#fn-specforproviderspecificreservationinstancepropertieslocalssdswithinterface)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -162,24 +177,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -314,6 +311,132 @@ withZone(zone)
 ```
 
 "The zone where the reservation is made."
+
+## obj spec.forProvider.specificReservation
+
+"Reservation for instances with specific machine shapes."
+
+### fn spec.forProvider.specificReservation.withCount
+
+```ts
+withCount(count)
+```
+
+"The number of resources that are allocated."
+
+### fn spec.forProvider.specificReservation.withInstanceProperties
+
+```ts
+withInstanceProperties(instanceProperties)
+```
+
+"The instance properties for the reservation."
+
+### fn spec.forProvider.specificReservation.withInstancePropertiesMixin
+
+```ts
+withInstancePropertiesMixin(instanceProperties)
+```
+
+"The instance properties for the reservation."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.specificReservation.instanceProperties
+
+"The instance properties for the reservation."
+
+### fn spec.forProvider.specificReservation.instanceProperties.withGuestAccelerators
+
+```ts
+withGuestAccelerators(guestAccelerators)
+```
+
+"Guest accelerator type and count."
+
+### fn spec.forProvider.specificReservation.instanceProperties.withGuestAcceleratorsMixin
+
+```ts
+withGuestAcceleratorsMixin(guestAccelerators)
+```
+
+"Guest accelerator type and count."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.specificReservation.instanceProperties.withLocalSsds
+
+```ts
+withLocalSsds(localSsds)
+```
+
+"The amount of local ssd to reserve with each instance. This reserves disks of type 'local-ssd'."
+
+### fn spec.forProvider.specificReservation.instanceProperties.withLocalSsdsMixin
+
+```ts
+withLocalSsdsMixin(localSsds)
+```
+
+"The amount of local ssd to reserve with each instance. This reserves disks of type 'local-ssd'."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.specificReservation.instanceProperties.withMachineType
+
+```ts
+withMachineType(machineType)
+```
+
+"The name of the machine type to reserve."
+
+### fn spec.forProvider.specificReservation.instanceProperties.withMinCpuPlatform
+
+```ts
+withMinCpuPlatform(minCpuPlatform)
+```
+
+"The minimum CPU platform for the reservation. For example, '\"Intel Skylake\"'. See the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones) for information on available CPU platforms."
+
+## obj spec.forProvider.specificReservation.instanceProperties.guestAccelerators
+
+"Guest accelerator type and count."
+
+### fn spec.forProvider.specificReservation.instanceProperties.guestAccelerators.withAcceleratorCount
+
+```ts
+withAcceleratorCount(acceleratorCount)
+```
+
+"The number of the guest accelerator cards exposed to this instance."
+
+### fn spec.forProvider.specificReservation.instanceProperties.guestAccelerators.withAcceleratorType
+
+```ts
+withAcceleratorType(acceleratorType)
+```
+
+"The full or partial URL of the accelerator type to attach to this instance. For example: 'projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100' \n If you are creating an instance template, specify only the accelerator name."
+
+## obj spec.forProvider.specificReservation.instanceProperties.localSsds
+
+"The amount of local ssd to reserve with each instance. This reserves disks of type 'local-ssd'."
+
+### fn spec.forProvider.specificReservation.instanceProperties.localSsds.withDiskSizeGb
+
+```ts
+withDiskSizeGb(diskSizeGb)
+```
+
+"The size of the disk in base-2 GB."
+
+### fn spec.forProvider.specificReservation.instanceProperties.localSsds.withInterface
+
+```ts
+withInterface(interface)
+```
+
+"The disk interface to use for attaching this disk. Default value: \"SCSI\" Possible values: [\"SCSI\", \"NVME\"]"
 
 ## obj spec.providerConfigRef
 

@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,25 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#alternativeNameServerConfig':: d.obj(help='"Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified."'),
+      alternativeNameServerConfig: {
+        '#targetNameServers':: d.obj(help='"Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified."'),
+        targetNameServers: {
+          '#withForwardingPath':: d.fn(help="\"Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: [\\\"default\\\", \\\"private\\\"]\"", args=[d.arg(name='forwardingPath', type=d.T.string)]),
+          withForwardingPath(forwardingPath): { forwardingPath: forwardingPath },
+          '#withIpv4Address':: d.fn(help='"IPv4 address to forward to."', args=[d.arg(name='ipv4Address', type=d.T.string)]),
+          withIpv4Address(ipv4Address): { ipv4Address: ipv4Address },
+        },
+        '#withTargetNameServers':: d.fn(help='"Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified."', args=[d.arg(name='targetNameServers', type=d.T.array)]),
+        withTargetNameServers(targetNameServers): { targetNameServers: if std.isArray(v=targetNameServers) then targetNameServers else [targetNameServers] },
+        '#withTargetNameServersMixin':: d.fn(help='"Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='targetNameServers', type=d.T.array)]),
+        withTargetNameServersMixin(targetNameServers): { targetNameServers+: if std.isArray(v=targetNameServers) then targetNameServers else [targetNameServers] },
+      },
+      '#networks':: d.obj(help='"List of network names specifying networks to which this policy is applied."'),
+      networks: {
+        '#withNetworkUrl':: d.fn(help="\"The id or fully qualified URL of the VPC network to forward queries to. This should be formatted like 'projects/{project}/global/networks/{network}' or 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'\"", args=[d.arg(name='networkUrl', type=d.T.string)]),
+        withNetworkUrl(networkUrl): { networkUrl: networkUrl },
+      },
       '#withAlternativeNameServerConfig':: d.fn(help='"Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified."', args=[d.arg(name='alternativeNameServerConfig', type=d.T.array)]),
       withAlternativeNameServerConfig(alternativeNameServerConfig): { spec+: { forProvider+: { alternativeNameServerConfig: if std.isArray(v=alternativeNameServerConfig) then alternativeNameServerConfig else [alternativeNameServerConfig] } } },
       '#withAlternativeNameServerConfigMixin':: d.fn(help='"Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='alternativeNameServerConfig', type=d.T.array)]),

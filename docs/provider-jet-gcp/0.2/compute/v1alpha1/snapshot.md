@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/snapshot/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -47,6 +45,19 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/snapshot/
     * [`fn withStorageLocations(storageLocations)`](#fn-specforproviderwithstoragelocations)
     * [`fn withStorageLocationsMixin(storageLocations)`](#fn-specforproviderwithstoragelocationsmixin)
     * [`fn withZone(zone)`](#fn-specforproviderwithzone)
+    * [`obj spec.forProvider.snapshotEncryptionKey`](#obj-specforprovidersnapshotencryptionkey)
+      * [`fn withKmsKeySelfLink(kmsKeySelfLink)`](#fn-specforprovidersnapshotencryptionkeywithkmskeyselflink)
+      * [`fn withKmsKeyServiceAccount(kmsKeyServiceAccount)`](#fn-specforprovidersnapshotencryptionkeywithkmskeyserviceaccount)
+      * [`obj spec.forProvider.snapshotEncryptionKey.rawKeySecretRef`](#obj-specforprovidersnapshotencryptionkeyrawkeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersnapshotencryptionkeyrawkeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersnapshotencryptionkeyrawkeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersnapshotencryptionkeyrawkeysecretrefwithnamespace)
+    * [`obj spec.forProvider.sourceDiskEncryptionKey`](#obj-specforprovidersourcediskencryptionkey)
+      * [`fn withKmsKeyServiceAccount(kmsKeyServiceAccount)`](#fn-specforprovidersourcediskencryptionkeywithkmskeyserviceaccount)
+      * [`obj spec.forProvider.sourceDiskEncryptionKey.rawKeySecretRef`](#obj-specforprovidersourcediskencryptionkeyrawkeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersourcediskencryptionkeyrawkeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersourcediskencryptionkeyrawkeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersourcediskencryptionkeyrawkeysecretrefwithnamespace)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -168,24 +179,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -374,6 +367,94 @@ withZone(zone)
 ```
 
 "A reference to the zone where the disk is hosted."
+
+## obj spec.forProvider.snapshotEncryptionKey
+
+"The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a customer-supplied encryption key."
+
+### fn spec.forProvider.snapshotEncryptionKey.withKmsKeySelfLink
+
+```ts
+withKmsKeySelfLink(kmsKeySelfLink)
+```
+
+"The name of the encryption key that is stored in Google Cloud KMS."
+
+### fn spec.forProvider.snapshotEncryptionKey.withKmsKeyServiceAccount
+
+```ts
+withKmsKeyServiceAccount(kmsKeyServiceAccount)
+```
+
+"The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used."
+
+## obj spec.forProvider.snapshotEncryptionKey.rawKeySecretRef
+
+"Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource."
+
+### fn spec.forProvider.snapshotEncryptionKey.rawKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.snapshotEncryptionKey.rawKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.snapshotEncryptionKey.rawKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.sourceDiskEncryptionKey
+
+"The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key."
+
+### fn spec.forProvider.sourceDiskEncryptionKey.withKmsKeyServiceAccount
+
+```ts
+withKmsKeyServiceAccount(kmsKeyServiceAccount)
+```
+
+"The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used."
+
+## obj spec.forProvider.sourceDiskEncryptionKey.rawKeySecretRef
+
+"Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource."
+
+### fn spec.forProvider.sourceDiskEncryptionKey.rawKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.sourceDiskEncryptionKey.rawKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.sourceDiskEncryptionKey.rawKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
 
 ## obj spec.providerConfigRef
 

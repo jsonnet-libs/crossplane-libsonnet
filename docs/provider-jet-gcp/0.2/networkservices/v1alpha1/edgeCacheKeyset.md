@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/networkservices/v1alpha1/edgeCacheKeyset/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -41,6 +39,12 @@ permalink: /provider-jet-gcp/0.2/networkservices/v1alpha1/edgeCacheKeyset/
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withPublicKey(publicKey)`](#fn-specforproviderwithpublickey)
     * [`fn withPublicKeyMixin(publicKey)`](#fn-specforproviderwithpublickeymixin)
+    * [`obj spec.forProvider.publicKey`](#obj-specforproviderpublickey)
+      * [`fn withId(id)`](#fn-specforproviderpublickeywithid)
+      * [`obj spec.forProvider.publicKey.valueSecretRef`](#obj-specforproviderpublickeyvaluesecretref)
+        * [`fn withKey(key)`](#fn-specforproviderpublickeyvaluesecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforproviderpublickeyvaluesecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforproviderpublickeyvaluesecretrefwithnamespace)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -162,24 +166,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -316,6 +302,46 @@ withPublicKeyMixin(publicKey)
 "An ordered list of Ed25519 public keys to use for validating signed requests. You must specify at least one (1) key, and may have up to three (3) keys. \n Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key. You should ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.publicKey
+
+"An ordered list of Ed25519 public keys to use for validating signed requests. You must specify at least one (1) key, and may have up to three (3) keys. \n Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key. You should ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset."
+
+### fn spec.forProvider.publicKey.withId
+
+```ts
+withId(id)
+```
+
+"The ID of the public key. The ID must be 1-63 characters long, and comply with RFC1035. The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit."
+
+## obj spec.forProvider.publicKey.valueSecretRef
+
+"The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes). Representations or encodings of the public key other than this will be rejected with an error."
+
+### fn spec.forProvider.publicKey.valueSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.publicKey.valueSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.publicKey.valueSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/image/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -50,6 +48,12 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/image/
     * [`fn withSourceDisk(sourceDisk)`](#fn-specforproviderwithsourcedisk)
     * [`fn withSourceImage(sourceImage)`](#fn-specforproviderwithsourceimage)
     * [`fn withSourceSnapshot(sourceSnapshot)`](#fn-specforproviderwithsourcesnapshot)
+    * [`obj spec.forProvider.guestOsFeatures`](#obj-specforproviderguestosfeatures)
+      * [`fn withType(type)`](#fn-specforproviderguestosfeatureswithtype)
+    * [`obj spec.forProvider.rawDisk`](#obj-specforproviderrawdisk)
+      * [`fn withContainerType(containerType)`](#fn-specforproviderrawdiskwithcontainertype)
+      * [`fn withSha1(sha1)`](#fn-specforproviderrawdiskwithsha1)
+      * [`fn withSource(source)`](#fn-specforproviderrawdiskwithsource)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -171,24 +175,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -401,6 +387,46 @@ withSourceSnapshot(sourceSnapshot)
 ```
 
 "URL of the source snapshot used to create this image. \n In order to create an image, you must provide the full or partial URL of one of the following: \n * The selfLink URL * This property * The sourceImage URL * The rawDisk.source URL * The sourceDisk URL"
+
+## obj spec.forProvider.guestOsFeatures
+
+"A list of features to enable on the guest operating system. Applicable only for bootable images."
+
+### fn spec.forProvider.guestOsFeatures.withType
+
+```ts
+withType(type)
+```
+
+"The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: [\"MULTI_IP_SUBNET\", \"SECURE_BOOT\", \"SEV_CAPABLE\", \"UEFI_COMPATIBLE\", \"VIRTIO_SCSI_MULTIQUEUE\", \"WINDOWS\", \"GVNIC\"]"
+
+## obj spec.forProvider.rawDisk
+
+"The parameters of the raw disk image."
+
+### fn spec.forProvider.rawDisk.withContainerType
+
+```ts
+withContainerType(containerType)
+```
+
+"The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created. Default value: \"TAR\" Possible values: [\"TAR\"]"
+
+### fn spec.forProvider.rawDisk.withSha1
+
+```ts
+withSha1(sha1)
+```
+
+"An optional SHA1 checksum of the disk image before unpackaging. This is provided by the client when the disk image is created."
+
+### fn spec.forProvider.rawDisk.withSource
+
+```ts
+withSource(source)
+```
+
+"The full Google Cloud Storage URL where disk storage is stored You must provide either this property or the sourceDisk property but not both."
 
 ## obj spec.providerConfigRef
 

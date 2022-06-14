@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha2/routerNAT/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -53,12 +51,27 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha2/routerNAT/
     * [`fn withTcpEstablishedIdleTimeoutSec(tcpEstablishedIdleTimeoutSec)`](#fn-specforproviderwithtcpestablishedidletimeoutsec)
     * [`fn withTcpTransitoryIdleTimeoutSec(tcpTransitoryIdleTimeoutSec)`](#fn-specforproviderwithtcptransitoryidletimeoutsec)
     * [`fn withUdpIdleTimeoutSec(udpIdleTimeoutSec)`](#fn-specforproviderwithudpidletimeoutsec)
+    * [`obj spec.forProvider.logConfig`](#obj-specforproviderlogconfig)
+      * [`fn withEnable(enable)`](#fn-specforproviderlogconfigwithenable)
+      * [`fn withFilter(filter)`](#fn-specforproviderlogconfigwithfilter)
     * [`obj spec.forProvider.routerRef`](#obj-specforproviderrouterref)
       * [`fn withName(name)`](#fn-specforproviderrouterrefwithname)
     * [`obj spec.forProvider.routerSelector`](#obj-specforproviderrouterselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderrouterselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderrouterselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderrouterselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.subnetwork`](#obj-specforprovidersubnetwork)
+      * [`fn withName(name)`](#fn-specforprovidersubnetworkwithname)
+      * [`fn withSecondaryIpRangeNames(secondaryIpRangeNames)`](#fn-specforprovidersubnetworkwithsecondaryiprangenames)
+      * [`fn withSecondaryIpRangeNamesMixin(secondaryIpRangeNames)`](#fn-specforprovidersubnetworkwithsecondaryiprangenamesmixin)
+      * [`fn withSourceIpRangesToNat(sourceIpRangesToNat)`](#fn-specforprovidersubnetworkwithsourceiprangestonat)
+      * [`fn withSourceIpRangesToNatMixin(sourceIpRangesToNat)`](#fn-specforprovidersubnetworkwithsourceiprangestonatmixin)
+      * [`obj spec.forProvider.subnetwork.nameRef`](#obj-specforprovidersubnetworknameref)
+        * [`fn withName(name)`](#fn-specforprovidersubnetworknamerefwithname)
+      * [`obj spec.forProvider.subnetwork.nameSelector`](#obj-specforprovidersubnetworknameselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidersubnetworknameselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidersubnetworknameselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidersubnetworknameselectorwithmatchlabelsmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -180,24 +193,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -435,6 +430,26 @@ withUdpIdleTimeoutSec(udpIdleTimeoutSec)
 
 "Timeout (in seconds) for UDP connections. Defaults to 30s if not set."
 
+## obj spec.forProvider.logConfig
+
+"Configuration for logging on NAT"
+
+### fn spec.forProvider.logConfig.withEnable
+
+```ts
+withEnable(enable)
+```
+
+"Indicates whether or not to export logs."
+
+### fn spec.forProvider.logConfig.withFilter
+
+```ts
+withFilter(filter)
+```
+
+"Specifies the desired filtering of logs on this NAT. Possible values: [\"ERRORS_ONLY\", \"TRANSLATIONS_ONLY\", \"ALL\"]"
+
 ## obj spec.forProvider.routerRef
 
 "A Reference to a named object."
@@ -468,6 +483,96 @@ withMatchLabels(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 ### fn spec.forProvider.routerSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.subnetwork
+
+"One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to 'LIST_OF_SUBNETWORKS'"
+
+### fn spec.forProvider.subnetwork.withName
+
+```ts
+withName(name)
+```
+
+"Self-link of subnetwork to NAT"
+
+### fn spec.forProvider.subnetwork.withSecondaryIpRangeNames
+
+```ts
+withSecondaryIpRangeNames(secondaryIpRangeNames)
+```
+
+"List of the secondary ranges of the subnetwork that are allowed to use NAT. This can be populated only if 'LIST_OF_SECONDARY_IP_RANGES' is one of the values in sourceIpRangesToNat"
+
+### fn spec.forProvider.subnetwork.withSecondaryIpRangeNamesMixin
+
+```ts
+withSecondaryIpRangeNamesMixin(secondaryIpRangeNames)
+```
+
+"List of the secondary ranges of the subnetwork that are allowed to use NAT. This can be populated only if 'LIST_OF_SECONDARY_IP_RANGES' is one of the values in sourceIpRangesToNat"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.subnetwork.withSourceIpRangesToNat
+
+```ts
+withSourceIpRangesToNat(sourceIpRangesToNat)
+```
+
+"List of options for which source IPs in the subnetwork should have NAT enabled. Supported values include: 'ALL_IP_RANGES', 'LIST_OF_SECONDARY_IP_RANGES', 'PRIMARY_IP_RANGE'."
+
+### fn spec.forProvider.subnetwork.withSourceIpRangesToNatMixin
+
+```ts
+withSourceIpRangesToNatMixin(sourceIpRangesToNat)
+```
+
+"List of options for which source IPs in the subnetwork should have NAT enabled. Supported values include: 'ALL_IP_RANGES', 'LIST_OF_SECONDARY_IP_RANGES', 'PRIMARY_IP_RANGE'."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.subnetwork.nameRef
+
+"A Reference to a named object."
+
+### fn spec.forProvider.subnetwork.nameRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.subnetwork.nameSelector
+
+"A Selector selects an object."
+
+### fn spec.forProvider.subnetwork.nameSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.subnetwork.nameSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.subnetwork.nameSelector.withMatchLabelsMixin
 
 ```ts
 withMatchLabelsMixin(matchLabels)

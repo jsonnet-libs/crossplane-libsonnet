@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,32 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#emailPreferences':: d.obj(help='"Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config."'),
+      emailPreferences: {
+        '#withEnableFailureEmail':: d.fn(help='"If true, email notifications will be sent on transfer run failures."', args=[d.arg(name='enableFailureEmail', type=d.T.boolean)]),
+        withEnableFailureEmail(enableFailureEmail): { enableFailureEmail: enableFailureEmail },
+      },
+      '#scheduleOptions':: d.obj(help='"Options customizing the data transfer schedule."'),
+      scheduleOptions: {
+        '#withDisableAutoScheduling':: d.fn(help='"If true, automatic scheduling of data transfer runs for this configuration will be disabled. The runs can be started on ad-hoc basis using transferConfigs.startManualRuns API. When automatic scheduling is disabled, the TransferConfig.schedule field will be ignored."', args=[d.arg(name='disableAutoScheduling', type=d.T.boolean)]),
+        withDisableAutoScheduling(disableAutoScheduling): { disableAutoScheduling: disableAutoScheduling },
+        '#withEndTime':: d.fn(help='"Defines time to stop scheduling transfer runs. A transfer run cannot be scheduled at or after the end time. The end time can be changed at any moment. The time when a data transfer can be triggered manually is not limited by this option."', args=[d.arg(name='endTime', type=d.T.string)]),
+        withEndTime(endTime): { endTime: endTime },
+        '#withStartTime':: d.fn(help='"Specifies time to start scheduling transfer runs. The first run will be scheduled at or after the start time according to a recurrence pattern defined in the schedule string. The start time can be changed at any moment. The time when a data transfer can be triggered manually is not limited by this option."', args=[d.arg(name='startTime', type=d.T.string)]),
+        withStartTime(startTime): { startTime: startTime },
+      },
+      '#sensitiveParams':: d.obj(help="\"Different parameters are configured primarily using the the 'params' field on this resource. This block contains the parameters which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key in the 'params' map in the api request. \\n Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state.\""),
+      sensitiveParams: {
+        '#secretAccessKeySecretRef':: d.obj(help='"The Secret Access Key of the AWS account transferring data from."'),
+        secretAccessKeySecretRef: {
+          '#withKey':: d.fn(help='"The key to select."', args=[d.arg(name='key', type=d.T.string)]),
+          withKey(key): { secretAccessKeySecretRef+: { key: key } },
+          '#withName':: d.fn(help='"Name of the secret."', args=[d.arg(name='name', type=d.T.string)]),
+          withName(name): { secretAccessKeySecretRef+: { name: name } },
+          '#withNamespace':: d.fn(help='"Namespace of the secret."', args=[d.arg(name='namespace', type=d.T.string)]),
+          withNamespace(namespace): { secretAccessKeySecretRef+: { namespace: namespace } },
+        },
+      },
       '#withDataRefreshWindowDays':: d.fn(help='"The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value."', args=[d.arg(name='dataRefreshWindowDays', type=d.T.integer)]),
       withDataRefreshWindowDays(dataRefreshWindowDays): { spec+: { forProvider+: { dataRefreshWindowDays: dataRefreshWindowDays } } },
       '#withDataSourceId':: d.fn(help='"The data source id. Cannot be changed once the transfer config is created."', args=[d.arg(name='dataSourceId', type=d.T.string)]),

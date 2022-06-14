@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,22 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#gameServerConfigOverrides':: d.obj(help='"The game_server_config_overrides contains the per game server config overrides. The overrides are processed in the order they are listed. As soon as a match is found for a cluster, the rest of the list is not processed."'),
+      gameServerConfigOverrides: {
+        '#realmsSelector':: d.obj(help='"Selection by realms."'),
+        realmsSelector: {
+          '#withRealms':: d.fn(help='"List of realms to match against."', args=[d.arg(name='realms', type=d.T.array)]),
+          withRealms(realms): { realms: if std.isArray(v=realms) then realms else [realms] },
+          '#withRealmsMixin':: d.fn(help='"List of realms to match against."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='realms', type=d.T.array)]),
+          withRealmsMixin(realms): { realms+: if std.isArray(v=realms) then realms else [realms] },
+        },
+        '#withConfigVersion':: d.fn(help='"Version of the configuration."', args=[d.arg(name='configVersion', type=d.T.string)]),
+        withConfigVersion(configVersion): { configVersion: configVersion },
+        '#withRealmsSelector':: d.fn(help='"Selection by realms."', args=[d.arg(name='realmsSelector', type=d.T.array)]),
+        withRealmsSelector(realmsSelector): { realmsSelector: if std.isArray(v=realmsSelector) then realmsSelector else [realmsSelector] },
+        '#withRealmsSelectorMixin':: d.fn(help='"Selection by realms."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='realmsSelector', type=d.T.array)]),
+        withRealmsSelectorMixin(realmsSelector): { realmsSelector+: if std.isArray(v=realmsSelector) then realmsSelector else [realmsSelector] },
+      },
       '#withDefaultGameServerConfig':: d.fn(help="\"This field points to the game server config that is applied by default to all realms and clusters. For example, \\n 'projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config'.\"", args=[d.arg(name='defaultGameServerConfig', type=d.T.string)]),
       withDefaultGameServerConfig(defaultGameServerConfig): { spec+: { forProvider+: { defaultGameServerConfig: defaultGameServerConfig } } },
       '#withDeploymentId':: d.fn(help='"The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment."', args=[d.arg(name='deploymentId', type=d.T.string)]),

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/pubsub/v1alpha1/topic/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,12 @@ permalink: /provider-jet-gcp/0.2/pubsub/v1alpha1/topic/
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withSchemaSettings(schemaSettings)`](#fn-specforproviderwithschemasettings)
     * [`fn withSchemaSettingsMixin(schemaSettings)`](#fn-specforproviderwithschemasettingsmixin)
+    * [`obj spec.forProvider.messageStoragePolicy`](#obj-specforprovidermessagestoragepolicy)
+      * [`fn withAllowedPersistenceRegions(allowedPersistenceRegions)`](#fn-specforprovidermessagestoragepolicywithallowedpersistenceregions)
+      * [`fn withAllowedPersistenceRegionsMixin(allowedPersistenceRegions)`](#fn-specforprovidermessagestoragepolicywithallowedpersistenceregionsmixin)
+    * [`obj spec.forProvider.schemaSettings`](#obj-specforproviderschemasettings)
+      * [`fn withEncoding(encoding)`](#fn-specforproviderschemasettingswithencoding)
+      * [`fn withSchema(schema)`](#fn-specforproviderschemasettingswithschema)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -164,24 +168,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -336,6 +322,48 @@ withSchemaSettingsMixin(schemaSettings)
 "Settings for validating messages published against a schema."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.messageStoragePolicy
+
+"Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not present, then no constraints are in effect."
+
+### fn spec.forProvider.messageStoragePolicy.withAllowedPersistenceRegions
+
+```ts
+withAllowedPersistenceRegions(allowedPersistenceRegions)
+```
+
+"A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration."
+
+### fn spec.forProvider.messageStoragePolicy.withAllowedPersistenceRegionsMixin
+
+```ts
+withAllowedPersistenceRegionsMixin(allowedPersistenceRegions)
+```
+
+"A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.schemaSettings
+
+"Settings for validating messages published against a schema."
+
+### fn spec.forProvider.schemaSettings.withEncoding
+
+```ts
+withEncoding(encoding)
+```
+
+"The encoding of messages validated against schema. Default value: \"ENCODING_UNSPECIFIED\" Possible values: [\"ENCODING_UNSPECIFIED\", \"JSON\", \"BINARY\"]"
+
+### fn spec.forProvider.schemaSettings.withSchema
+
+```ts
+withSchema(schema)
+```
+
+"The name of the schema that messages published should be validated against. Format is projects/{project}/schemas/{schema}. The value of this field will be _deleted-schema_ if the schema has been deleted."
 
 ## obj spec.providerConfigRef
 

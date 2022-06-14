@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/gameservices/v1alpha1/gameServerDeploymentRollo
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -39,6 +37,13 @@ permalink: /provider-jet-gcp/0.2/gameservices/v1alpha1/gameServerDeploymentRollo
     * [`fn withGameServerConfigOverrides(gameServerConfigOverrides)`](#fn-specforproviderwithgameserverconfigoverrides)
     * [`fn withGameServerConfigOverridesMixin(gameServerConfigOverrides)`](#fn-specforproviderwithgameserverconfigoverridesmixin)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.gameServerConfigOverrides`](#obj-specforprovidergameserverconfigoverrides)
+      * [`fn withConfigVersion(configVersion)`](#fn-specforprovidergameserverconfigoverrideswithconfigversion)
+      * [`fn withRealmsSelector(realmsSelector)`](#fn-specforprovidergameserverconfigoverrideswithrealmsselector)
+      * [`fn withRealmsSelectorMixin(realmsSelector)`](#fn-specforprovidergameserverconfigoverrideswithrealmsselectormixin)
+      * [`obj spec.forProvider.gameServerConfigOverrides.realmsSelector`](#obj-specforprovidergameserverconfigoverridesrealmsselector)
+        * [`fn withRealms(realms)`](#fn-specforprovidergameserverconfigoverridesrealmsselectorwithrealms)
+        * [`fn withRealmsMixin(realms)`](#fn-specforprovidergameserverconfigoverridesrealmsselectorwithrealmsmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +168,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -296,6 +283,58 @@ withProject(project)
 ```
 
 
+
+## obj spec.forProvider.gameServerConfigOverrides
+
+"The game_server_config_overrides contains the per game server config overrides. The overrides are processed in the order they are listed. As soon as a match is found for a cluster, the rest of the list is not processed."
+
+### fn spec.forProvider.gameServerConfigOverrides.withConfigVersion
+
+```ts
+withConfigVersion(configVersion)
+```
+
+"Version of the configuration."
+
+### fn spec.forProvider.gameServerConfigOverrides.withRealmsSelector
+
+```ts
+withRealmsSelector(realmsSelector)
+```
+
+"Selection by realms."
+
+### fn spec.forProvider.gameServerConfigOverrides.withRealmsSelectorMixin
+
+```ts
+withRealmsSelectorMixin(realmsSelector)
+```
+
+"Selection by realms."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.gameServerConfigOverrides.realmsSelector
+
+"Selection by realms."
+
+### fn spec.forProvider.gameServerConfigOverrides.realmsSelector.withRealms
+
+```ts
+withRealms(realms)
+```
+
+"List of realms to match against."
+
+### fn spec.forProvider.gameServerConfigOverrides.realmsSelector.withRealmsMixin
+
+```ts
+withRealmsMixin(realms)
+```
+
+"List of realms to match against."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 

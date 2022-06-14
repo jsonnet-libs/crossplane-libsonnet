@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/secretmanager/v1alpha1/secret/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,24 @@ permalink: /provider-jet-gcp/0.2/secretmanager/v1alpha1/secret/
     * [`fn withTopics(topics)`](#fn-specforproviderwithtopics)
     * [`fn withTopicsMixin(topics)`](#fn-specforproviderwithtopicsmixin)
     * [`fn withTtl(ttl)`](#fn-specforproviderwithttl)
+    * [`obj spec.forProvider.replication`](#obj-specforproviderreplication)
+      * [`fn withAutomatic(automatic)`](#fn-specforproviderreplicationwithautomatic)
+      * [`fn withUserManaged(userManaged)`](#fn-specforproviderreplicationwithusermanaged)
+      * [`fn withUserManagedMixin(userManaged)`](#fn-specforproviderreplicationwithusermanagedmixin)
+      * [`obj spec.forProvider.replication.userManaged`](#obj-specforproviderreplicationusermanaged)
+        * [`fn withReplicas(replicas)`](#fn-specforproviderreplicationusermanagedwithreplicas)
+        * [`fn withReplicasMixin(replicas)`](#fn-specforproviderreplicationusermanagedwithreplicasmixin)
+        * [`obj spec.forProvider.replication.userManaged.replicas`](#obj-specforproviderreplicationusermanagedreplicas)
+          * [`fn withCustomerManagedEncryption(customerManagedEncryption)`](#fn-specforproviderreplicationusermanagedreplicaswithcustomermanagedencryption)
+          * [`fn withCustomerManagedEncryptionMixin(customerManagedEncryption)`](#fn-specforproviderreplicationusermanagedreplicaswithcustomermanagedencryptionmixin)
+          * [`fn withLocation(location)`](#fn-specforproviderreplicationusermanagedreplicaswithlocation)
+          * [`obj spec.forProvider.replication.userManaged.replicas.customerManagedEncryption`](#obj-specforproviderreplicationusermanagedreplicascustomermanagedencryption)
+            * [`fn withKmsKeyName(kmsKeyName)`](#fn-specforproviderreplicationusermanagedreplicascustomermanagedencryptionwithkmskeyname)
+    * [`obj spec.forProvider.rotation`](#obj-specforproviderrotation)
+      * [`fn withNextRotationTime(nextRotationTime)`](#fn-specforproviderrotationwithnextrotationtime)
+      * [`fn withRotationPeriod(rotationPeriod)`](#fn-specforproviderrotationwithrotationperiod)
+    * [`obj spec.forProvider.topics`](#obj-specforprovidertopics)
+      * [`fn withName(name)`](#fn-specforprovidertopicswithname)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +183,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -365,6 +363,132 @@ withTtl(ttl)
 ```
 
 "The TTL for the Secret. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"3.5s\"."
+
+## obj spec.forProvider.replication
+
+"The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been created."
+
+### fn spec.forProvider.replication.withAutomatic
+
+```ts
+withAutomatic(automatic)
+```
+
+"The Secret will automatically be replicated without any restrictions."
+
+### fn spec.forProvider.replication.withUserManaged
+
+```ts
+withUserManaged(userManaged)
+```
+
+"The Secret will automatically be replicated without any restrictions."
+
+### fn spec.forProvider.replication.withUserManagedMixin
+
+```ts
+withUserManagedMixin(userManaged)
+```
+
+"The Secret will automatically be replicated without any restrictions."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.replication.userManaged
+
+"The Secret will automatically be replicated without any restrictions."
+
+### fn spec.forProvider.replication.userManaged.withReplicas
+
+```ts
+withReplicas(replicas)
+```
+
+"The list of Replicas for this Secret. Cannot be empty."
+
+### fn spec.forProvider.replication.userManaged.withReplicasMixin
+
+```ts
+withReplicasMixin(replicas)
+```
+
+"The list of Replicas for this Secret. Cannot be empty."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.replication.userManaged.replicas
+
+"The list of Replicas for this Secret. Cannot be empty."
+
+### fn spec.forProvider.replication.userManaged.replicas.withCustomerManagedEncryption
+
+```ts
+withCustomerManagedEncryption(customerManagedEncryption)
+```
+
+"Customer Managed Encryption for the secret."
+
+### fn spec.forProvider.replication.userManaged.replicas.withCustomerManagedEncryptionMixin
+
+```ts
+withCustomerManagedEncryptionMixin(customerManagedEncryption)
+```
+
+"Customer Managed Encryption for the secret."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.replication.userManaged.replicas.withLocation
+
+```ts
+withLocation(location)
+```
+
+"The canonical IDs of the location to replicate data. For example: \"us-east1\"."
+
+## obj spec.forProvider.replication.userManaged.replicas.customerManagedEncryption
+
+"Customer Managed Encryption for the secret."
+
+### fn spec.forProvider.replication.userManaged.replicas.customerManagedEncryption.withKmsKeyName
+
+```ts
+withKmsKeyName(kmsKeyName)
+```
+
+"Describes the Cloud KMS encryption key that will be used to protect destination secret."
+
+## obj spec.forProvider.rotation
+
+"The rotation time and period for a Secret. At 'next_rotation_time', Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. 'topics' must be set to configure rotation."
+
+### fn spec.forProvider.rotation.withNextRotationTime
+
+```ts
+withNextRotationTime(nextRotationTime)
+```
+
+"Timestamp in UTC at which the Secret is scheduled to rotate. A timestamp in RFC3339 UTC \"Zulu\" format, with nanosecond resolution and up to nine fractional digits. Examples: \"2014-10-02T15:01:23Z\" and \"2014-10-02T15:01:23.045123456Z\"."
+
+### fn spec.forProvider.rotation.withRotationPeriod
+
+```ts
+withRotationPeriod(rotationPeriod)
+```
+
+"The Duration between rotation notifications. Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years). If rotationPeriod is set, 'next_rotation_time' must be set. 'next_rotation_time' will be advanced by this period when the service automatically sends rotation notifications."
+
+## obj spec.forProvider.topics
+
+"A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions."
+
+### fn spec.forProvider.topics.withName
+
+```ts
+withName(name)
+```
+
+"The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*. For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic."
 
 ## obj spec.providerConfigRef
 

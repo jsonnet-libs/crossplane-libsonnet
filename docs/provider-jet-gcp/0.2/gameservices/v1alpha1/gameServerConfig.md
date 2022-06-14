@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/gameservices/v1alpha1/gameServerConfig/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -45,6 +43,24 @@ permalink: /provider-jet-gcp/0.2/gameservices/v1alpha1/gameServerConfig/
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withScalingConfigs(scalingConfigs)`](#fn-specforproviderwithscalingconfigs)
     * [`fn withScalingConfigsMixin(scalingConfigs)`](#fn-specforproviderwithscalingconfigsmixin)
+    * [`obj spec.forProvider.fleetConfigs`](#obj-specforproviderfleetconfigs)
+      * [`fn withFleetSpec(fleetSpec)`](#fn-specforproviderfleetconfigswithfleetspec)
+      * [`fn withName(name)`](#fn-specforproviderfleetconfigswithname)
+    * [`obj spec.forProvider.scalingConfigs`](#obj-specforproviderscalingconfigs)
+      * [`fn withFleetAutoscalerSpec(fleetAutoscalerSpec)`](#fn-specforproviderscalingconfigswithfleetautoscalerspec)
+      * [`fn withName(name)`](#fn-specforproviderscalingconfigswithname)
+      * [`fn withSchedules(schedules)`](#fn-specforproviderscalingconfigswithschedules)
+      * [`fn withSchedulesMixin(schedules)`](#fn-specforproviderscalingconfigswithschedulesmixin)
+      * [`fn withSelectors(selectors)`](#fn-specforproviderscalingconfigswithselectors)
+      * [`fn withSelectorsMixin(selectors)`](#fn-specforproviderscalingconfigswithselectorsmixin)
+      * [`obj spec.forProvider.scalingConfigs.schedules`](#obj-specforproviderscalingconfigsschedules)
+        * [`fn withCronJobDuration(cronJobDuration)`](#fn-specforproviderscalingconfigsscheduleswithcronjobduration)
+        * [`fn withCronSpec(cronSpec)`](#fn-specforproviderscalingconfigsscheduleswithcronspec)
+        * [`fn withEndTime(endTime)`](#fn-specforproviderscalingconfigsscheduleswithendtime)
+        * [`fn withStartTime(startTime)`](#fn-specforproviderscalingconfigsscheduleswithstarttime)
+      * [`obj spec.forProvider.scalingConfigs.selectors`](#obj-specforproviderscalingconfigsselectors)
+        * [`fn withLabels(labels)`](#fn-specforproviderscalingconfigsselectorswithlabels)
+        * [`fn withLabelsMixin(labels)`](#fn-specforproviderscalingconfigsselectorswithlabelsmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -166,24 +182,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -352,6 +350,140 @@ withScalingConfigsMixin(scalingConfigs)
 ```
 
 "Optional. This contains the autoscaling settings."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.fleetConfigs
+
+"The fleet config contains list of fleet specs. In the Single Cloud, there will be only one."
+
+### fn spec.forProvider.fleetConfigs.withFleetSpec
+
+```ts
+withFleetSpec(fleetSpec)
+```
+
+"The fleet spec, which is sent to Agones to configure fleet. The spec can be passed as inline json but it is recommended to use a file reference instead. File references can contain the json or yaml format of the fleet spec. Eg: \n * fleet_spec = jsonencode(yamldecode(file(\"fleet_configs.yaml\"))) * fleet_spec = file(\"fleet_configs.json\") \n The format of the spec can be found : 'https://agones.dev/site/docs/reference/fleet/'."
+
+### fn spec.forProvider.fleetConfigs.withName
+
+```ts
+withName(name)
+```
+
+"The name of the FleetConfig."
+
+## obj spec.forProvider.scalingConfigs
+
+"Optional. This contains the autoscaling settings."
+
+### fn spec.forProvider.scalingConfigs.withFleetAutoscalerSpec
+
+```ts
+withFleetAutoscalerSpec(fleetAutoscalerSpec)
+```
+
+"Fleet autoscaler spec, which is sent to Agones. Example spec can be found : https://agones.dev/site/docs/reference/fleetautoscaler/"
+
+### fn spec.forProvider.scalingConfigs.withName
+
+```ts
+withName(name)
+```
+
+"The name of the ScalingConfig"
+
+### fn spec.forProvider.scalingConfigs.withSchedules
+
+```ts
+withSchedules(schedules)
+```
+
+"The schedules to which this scaling config applies."
+
+### fn spec.forProvider.scalingConfigs.withSchedulesMixin
+
+```ts
+withSchedulesMixin(schedules)
+```
+
+"The schedules to which this scaling config applies."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.scalingConfigs.withSelectors
+
+```ts
+withSelectors(selectors)
+```
+
+"Labels used to identify the clusters to which this scaling config applies. A cluster is subject to this scaling config if its labels match any of the selector entries."
+
+### fn spec.forProvider.scalingConfigs.withSelectorsMixin
+
+```ts
+withSelectorsMixin(selectors)
+```
+
+"Labels used to identify the clusters to which this scaling config applies. A cluster is subject to this scaling config if its labels match any of the selector entries."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.scalingConfigs.schedules
+
+"The schedules to which this scaling config applies."
+
+### fn spec.forProvider.scalingConfigs.schedules.withCronJobDuration
+
+```ts
+withCronJobDuration(cronJobDuration)
+```
+
+"The duration for the cron job event. The duration of the event is effective after the cron job's start time. \n A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"3.5s\"."
+
+### fn spec.forProvider.scalingConfigs.schedules.withCronSpec
+
+```ts
+withCronSpec(cronSpec)
+```
+
+"The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm."
+
+### fn spec.forProvider.scalingConfigs.schedules.withEndTime
+
+```ts
+withEndTime(endTime)
+```
+
+"The end time of the event. \n A timestamp in RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example: \"2014-10-02T15:01:23.045123456Z\"."
+
+### fn spec.forProvider.scalingConfigs.schedules.withStartTime
+
+```ts
+withStartTime(startTime)
+```
+
+"The start time of the event. \n A timestamp in RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example: \"2014-10-02T15:01:23.045123456Z\"."
+
+## obj spec.forProvider.scalingConfigs.selectors
+
+"Labels used to identify the clusters to which this scaling config applies. A cluster is subject to this scaling config if its labels match any of the selector entries."
+
+### fn spec.forProvider.scalingConfigs.selectors.withLabels
+
+```ts
+withLabels(labels)
+```
+
+"Set of labels to group by."
+
+### fn spec.forProvider.scalingConfigs.selectors.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+"Set of labels to group by."
 
 **Note:** This function appends passed data to existing values
 

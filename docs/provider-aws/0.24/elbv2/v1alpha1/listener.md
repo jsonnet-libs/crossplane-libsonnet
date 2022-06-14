@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/elbv2/v1alpha1/listener/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -47,12 +45,78 @@ permalink: /provider-aws/0.24/elbv2/v1alpha1/listener/
     * [`fn withSslPolicy(sslPolicy)`](#fn-specforproviderwithsslpolicy)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
+    * [`obj spec.forProvider.certificates`](#obj-specforprovidercertificates)
+      * [`fn withCertificateARN(certificateARN)`](#fn-specforprovidercertificateswithcertificatearn)
+      * [`fn withIsDefault(isDefault)`](#fn-specforprovidercertificateswithisdefault)
+    * [`obj spec.forProvider.defaultActions`](#obj-specforproviderdefaultactions)
+      * [`fn withActionType(actionType)`](#fn-specforproviderdefaultactionswithactiontype)
+      * [`fn withOrder(order)`](#fn-specforproviderdefaultactionswithorder)
+      * [`fn withTargetGroupArn(targetGroupArn)`](#fn-specforproviderdefaultactionswithtargetgrouparn)
+      * [`obj spec.forProvider.defaultActions.authenticateCognitoConfig`](#obj-specforproviderdefaultactionsauthenticatecognitoconfig)
+        * [`fn withAuthenticationRequestExtraParams(authenticationRequestExtraParams)`](#fn-specforproviderdefaultactionsauthenticatecognitoconfigwithauthenticationrequestextraparams)
+        * [`fn withAuthenticationRequestExtraParamsMixin(authenticationRequestExtraParams)`](#fn-specforproviderdefaultactionsauthenticatecognitoconfigwithauthenticationrequestextraparamsmixin)
+        * [`fn withOnUnauthenticatedRequest(onUnauthenticatedRequest)`](#fn-specforproviderdefaultactionsauthenticatecognitoconfigwithonunauthenticatedrequest)
+        * [`fn withScope(scope)`](#fn-specforproviderdefaultactionsauthenticatecognitoconfigwithscope)
+        * [`fn withSessionCookieName(sessionCookieName)`](#fn-specforproviderdefaultactionsauthenticatecognitoconfigwithsessioncookiename)
+        * [`fn withSessionTimeout(sessionTimeout)`](#fn-specforproviderdefaultactionsauthenticatecognitoconfigwithsessiontimeout)
+        * [`fn withUserPoolARN(userPoolARN)`](#fn-specforproviderdefaultactionsauthenticatecognitoconfigwithuserpoolarn)
+        * [`fn withUserPoolClientID(userPoolClientID)`](#fn-specforproviderdefaultactionsauthenticatecognitoconfigwithuserpoolclientid)
+        * [`fn withUserPoolDomain(userPoolDomain)`](#fn-specforproviderdefaultactionsauthenticatecognitoconfigwithuserpooldomain)
+      * [`obj spec.forProvider.defaultActions.authenticateOidcConfig`](#obj-specforproviderdefaultactionsauthenticateoidcconfig)
+        * [`fn withAuthenticationRequestExtraParams(authenticationRequestExtraParams)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithauthenticationrequestextraparams)
+        * [`fn withAuthenticationRequestExtraParamsMixin(authenticationRequestExtraParams)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithauthenticationrequestextraparamsmixin)
+        * [`fn withAuthorizationEndpoint(authorizationEndpoint)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithauthorizationendpoint)
+        * [`fn withClientID(clientID)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithclientid)
+        * [`fn withClientSecret(clientSecret)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithclientsecret)
+        * [`fn withIssuer(issuer)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithissuer)
+        * [`fn withOnUnauthenticatedRequest(onUnauthenticatedRequest)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithonunauthenticatedrequest)
+        * [`fn withScope(scope)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithscope)
+        * [`fn withSessionCookieName(sessionCookieName)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithsessioncookiename)
+        * [`fn withSessionTimeout(sessionTimeout)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithsessiontimeout)
+        * [`fn withTokenEndpoint(tokenEndpoint)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithtokenendpoint)
+        * [`fn withUseExistingClientSecret(useExistingClientSecret)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithuseexistingclientsecret)
+        * [`fn withUserInfoEndpoint(userInfoEndpoint)`](#fn-specforproviderdefaultactionsauthenticateoidcconfigwithuserinfoendpoint)
+      * [`obj spec.forProvider.defaultActions.fixedResponseConfig`](#obj-specforproviderdefaultactionsfixedresponseconfig)
+        * [`fn withContentType(contentType)`](#fn-specforproviderdefaultactionsfixedresponseconfigwithcontenttype)
+        * [`fn withMessageBody(messageBody)`](#fn-specforproviderdefaultactionsfixedresponseconfigwithmessagebody)
+        * [`fn withStatusCode(statusCode)`](#fn-specforproviderdefaultactionsfixedresponseconfigwithstatuscode)
+      * [`obj spec.forProvider.defaultActions.forwardConfig`](#obj-specforproviderdefaultactionsforwardconfig)
+        * [`fn withTargetGroups(targetGroups)`](#fn-specforproviderdefaultactionsforwardconfigwithtargetgroups)
+        * [`fn withTargetGroupsMixin(targetGroups)`](#fn-specforproviderdefaultactionsforwardconfigwithtargetgroupsmixin)
+        * [`obj spec.forProvider.defaultActions.forwardConfig.targetGroupStickinessConfig`](#obj-specforproviderdefaultactionsforwardconfigtargetgroupstickinessconfig)
+          * [`fn withDurationSeconds(durationSeconds)`](#fn-specforproviderdefaultactionsforwardconfigtargetgroupstickinessconfigwithdurationseconds)
+          * [`fn withEnabled(enabled)`](#fn-specforproviderdefaultactionsforwardconfigtargetgroupstickinessconfigwithenabled)
+        * [`obj spec.forProvider.defaultActions.forwardConfig.targetGroups`](#obj-specforproviderdefaultactionsforwardconfigtargetgroups)
+          * [`fn withTargetGroupARN(targetGroupARN)`](#fn-specforproviderdefaultactionsforwardconfigtargetgroupswithtargetgrouparn)
+          * [`fn withWeight(weight)`](#fn-specforproviderdefaultactionsforwardconfigtargetgroupswithweight)
+          * [`obj spec.forProvider.defaultActions.forwardConfig.targetGroups.targetGroupArnRef`](#obj-specforproviderdefaultactionsforwardconfigtargetgroupstargetgrouparnref)
+            * [`fn withName(name)`](#fn-specforproviderdefaultactionsforwardconfigtargetgroupstargetgrouparnrefwithname)
+          * [`obj spec.forProvider.defaultActions.forwardConfig.targetGroups.targetGroupArnSelector`](#obj-specforproviderdefaultactionsforwardconfigtargetgroupstargetgrouparnselector)
+            * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderdefaultactionsforwardconfigtargetgroupstargetgrouparnselectorwithmatchcontrollerref)
+            * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderdefaultactionsforwardconfigtargetgroupstargetgrouparnselectorwithmatchlabels)
+            * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderdefaultactionsforwardconfigtargetgroupstargetgrouparnselectorwithmatchlabelsmixin)
+      * [`obj spec.forProvider.defaultActions.redirectConfig`](#obj-specforproviderdefaultactionsredirectconfig)
+        * [`fn withHost(host)`](#fn-specforproviderdefaultactionsredirectconfigwithhost)
+        * [`fn withPath(path)`](#fn-specforproviderdefaultactionsredirectconfigwithpath)
+        * [`fn withPort(port)`](#fn-specforproviderdefaultactionsredirectconfigwithport)
+        * [`fn withProtocol(protocol)`](#fn-specforproviderdefaultactionsredirectconfigwithprotocol)
+        * [`fn withQuery(query)`](#fn-specforproviderdefaultactionsredirectconfigwithquery)
+        * [`fn withStatusCode(statusCode)`](#fn-specforproviderdefaultactionsredirectconfigwithstatuscode)
+      * [`obj spec.forProvider.defaultActions.targetGroupArnRef`](#obj-specforproviderdefaultactionstargetgrouparnref)
+        * [`fn withName(name)`](#fn-specforproviderdefaultactionstargetgrouparnrefwithname)
+      * [`obj spec.forProvider.defaultActions.targetGroupArnSelector`](#obj-specforproviderdefaultactionstargetgrouparnselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderdefaultactionstargetgrouparnselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderdefaultactionstargetgrouparnselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderdefaultactionstargetgrouparnselectorwithmatchlabelsmixin)
     * [`obj spec.forProvider.loadBalancerArnRef`](#obj-specforproviderloadbalancerarnref)
       * [`fn withName(name)`](#fn-specforproviderloadbalancerarnrefwithname)
     * [`obj spec.forProvider.loadBalancerArnSelector`](#obj-specforproviderloadbalancerarnselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderloadbalancerarnselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderloadbalancerarnselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderloadbalancerarnselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.tags`](#obj-specforprovidertags)
+      * [`fn withKey(key)`](#fn-specforprovidertagswithkey)
+      * [`fn withValue(value)`](#fn-specforprovidertagswithvalue)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -174,24 +238,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -381,6 +427,468 @@ withTagsMixin(tags)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.certificates
+
+"[HTTPS and TLS listeners] The default certificate for the listener. You must provide exactly one certificate. Set CertificateArn to the certificate ARN but do not set IsDefault."
+
+### fn spec.forProvider.certificates.withCertificateARN
+
+```ts
+withCertificateARN(certificateARN)
+```
+
+
+
+### fn spec.forProvider.certificates.withIsDefault
+
+```ts
+withIsDefault(isDefault)
+```
+
+
+
+## obj spec.forProvider.defaultActions
+
+"The actions for the default rule."
+
+### fn spec.forProvider.defaultActions.withActionType
+
+```ts
+withActionType(actionType)
+```
+
+"The type of action."
+
+### fn spec.forProvider.defaultActions.withOrder
+
+```ts
+withOrder(order)
+```
+
+"The order for the action. This value is required for rules with multiple actions. The action with the lowest value for order is performed first."
+
+### fn spec.forProvider.defaultActions.withTargetGroupArn
+
+```ts
+withTargetGroupArn(targetGroupArn)
+```
+
+"The Amazon Resource Name (ARN) of the target group. Specify only when actionType is forward and you want to route to a single target group. To route to one or more target groups, use ForwardConfig instead."
+
+## obj spec.forProvider.defaultActions.authenticateCognitoConfig
+
+"Request parameters to use when integrating with Amazon Cognito to authenticate users."
+
+### fn spec.forProvider.defaultActions.authenticateCognitoConfig.withAuthenticationRequestExtraParams
+
+```ts
+withAuthenticationRequestExtraParams(authenticationRequestExtraParams)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateCognitoConfig.withAuthenticationRequestExtraParamsMixin
+
+```ts
+withAuthenticationRequestExtraParamsMixin(authenticationRequestExtraParams)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.defaultActions.authenticateCognitoConfig.withOnUnauthenticatedRequest
+
+```ts
+withOnUnauthenticatedRequest(onUnauthenticatedRequest)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateCognitoConfig.withScope
+
+```ts
+withScope(scope)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateCognitoConfig.withSessionCookieName
+
+```ts
+withSessionCookieName(sessionCookieName)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateCognitoConfig.withSessionTimeout
+
+```ts
+withSessionTimeout(sessionTimeout)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateCognitoConfig.withUserPoolARN
+
+```ts
+withUserPoolARN(userPoolARN)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateCognitoConfig.withUserPoolClientID
+
+```ts
+withUserPoolClientID(userPoolClientID)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateCognitoConfig.withUserPoolDomain
+
+```ts
+withUserPoolDomain(userPoolDomain)
+```
+
+
+
+## obj spec.forProvider.defaultActions.authenticateOidcConfig
+
+"Request parameters when using an identity provider (IdP) that is compliant with OpenID Connect (OIDC) to authenticate users."
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withAuthenticationRequestExtraParams
+
+```ts
+withAuthenticationRequestExtraParams(authenticationRequestExtraParams)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withAuthenticationRequestExtraParamsMixin
+
+```ts
+withAuthenticationRequestExtraParamsMixin(authenticationRequestExtraParams)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withAuthorizationEndpoint
+
+```ts
+withAuthorizationEndpoint(authorizationEndpoint)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withClientID
+
+```ts
+withClientID(clientID)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withClientSecret
+
+```ts
+withClientSecret(clientSecret)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withIssuer
+
+```ts
+withIssuer(issuer)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withOnUnauthenticatedRequest
+
+```ts
+withOnUnauthenticatedRequest(onUnauthenticatedRequest)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withScope
+
+```ts
+withScope(scope)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withSessionCookieName
+
+```ts
+withSessionCookieName(sessionCookieName)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withSessionTimeout
+
+```ts
+withSessionTimeout(sessionTimeout)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withTokenEndpoint
+
+```ts
+withTokenEndpoint(tokenEndpoint)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withUseExistingClientSecret
+
+```ts
+withUseExistingClientSecret(useExistingClientSecret)
+```
+
+
+
+### fn spec.forProvider.defaultActions.authenticateOidcConfig.withUserInfoEndpoint
+
+```ts
+withUserInfoEndpoint(userInfoEndpoint)
+```
+
+
+
+## obj spec.forProvider.defaultActions.fixedResponseConfig
+
+"Information about an action that returns a custom HTTP response."
+
+### fn spec.forProvider.defaultActions.fixedResponseConfig.withContentType
+
+```ts
+withContentType(contentType)
+```
+
+
+
+### fn spec.forProvider.defaultActions.fixedResponseConfig.withMessageBody
+
+```ts
+withMessageBody(messageBody)
+```
+
+
+
+### fn spec.forProvider.defaultActions.fixedResponseConfig.withStatusCode
+
+```ts
+withStatusCode(statusCode)
+```
+
+
+
+## obj spec.forProvider.defaultActions.forwardConfig
+
+"Information about a forward action."
+
+### fn spec.forProvider.defaultActions.forwardConfig.withTargetGroups
+
+```ts
+withTargetGroups(targetGroups)
+```
+
+"One or more target groups. For Network Load Balancers, you can specify a single target group."
+
+### fn spec.forProvider.defaultActions.forwardConfig.withTargetGroupsMixin
+
+```ts
+withTargetGroupsMixin(targetGroups)
+```
+
+"One or more target groups. For Network Load Balancers, you can specify a single target group."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.defaultActions.forwardConfig.targetGroupStickinessConfig
+
+"Information about the target group stickiness for a rule."
+
+### fn spec.forProvider.defaultActions.forwardConfig.targetGroupStickinessConfig.withDurationSeconds
+
+```ts
+withDurationSeconds(durationSeconds)
+```
+
+
+
+### fn spec.forProvider.defaultActions.forwardConfig.targetGroupStickinessConfig.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
+## obj spec.forProvider.defaultActions.forwardConfig.targetGroups
+
+"One or more target groups. For Network Load Balancers, you can specify a single target group."
+
+### fn spec.forProvider.defaultActions.forwardConfig.targetGroups.withTargetGroupARN
+
+```ts
+withTargetGroupARN(targetGroupARN)
+```
+
+
+
+### fn spec.forProvider.defaultActions.forwardConfig.targetGroups.withWeight
+
+```ts
+withWeight(weight)
+```
+
+
+
+## obj spec.forProvider.defaultActions.forwardConfig.targetGroups.targetGroupArnRef
+
+"Reference to TargetGroupARN used to set TargetGroupARN"
+
+### fn spec.forProvider.defaultActions.forwardConfig.targetGroups.targetGroupArnRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.defaultActions.forwardConfig.targetGroups.targetGroupArnSelector
+
+"Selector for references to TargetGroup for TargetGroupARN"
+
+### fn spec.forProvider.defaultActions.forwardConfig.targetGroups.targetGroupArnSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.defaultActions.forwardConfig.targetGroups.targetGroupArnSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.defaultActions.forwardConfig.targetGroups.targetGroupArnSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.defaultActions.redirectConfig
+
+"Information about a redirect action. \n A URI consists of the following components: protocol://hostname:port/path?query. You must modify at least one of the following components to avoid a redirect loop: protocol, hostname, port, or path. Any components that you do not modify retain their original values. \n You can reuse URI components using the following reserved keywords: \n    * #{protocol} \n    * #{host} \n    * #{port} \n    * #{path} (the leading \"/\" is removed) \n    * #{query} \n For example, you can change the path to \"/new/#{path}\", the hostname to \"example.#{host}\", or the query to \"#{query}&value=xyz\"."
+
+### fn spec.forProvider.defaultActions.redirectConfig.withHost
+
+```ts
+withHost(host)
+```
+
+
+
+### fn spec.forProvider.defaultActions.redirectConfig.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.forProvider.defaultActions.redirectConfig.withPort
+
+```ts
+withPort(port)
+```
+
+
+
+### fn spec.forProvider.defaultActions.redirectConfig.withProtocol
+
+```ts
+withProtocol(protocol)
+```
+
+
+
+### fn spec.forProvider.defaultActions.redirectConfig.withQuery
+
+```ts
+withQuery(query)
+```
+
+
+
+### fn spec.forProvider.defaultActions.redirectConfig.withStatusCode
+
+```ts
+withStatusCode(statusCode)
+```
+
+
+
+## obj spec.forProvider.defaultActions.targetGroupArnRef
+
+"Reference to TargetGroupARN used to set TargetGroupARN"
+
+### fn spec.forProvider.defaultActions.targetGroupArnRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.defaultActions.targetGroupArnSelector
+
+"Selector for references to TargetGroups for TargetGroupARNs"
+
+### fn spec.forProvider.defaultActions.targetGroupArnSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.defaultActions.targetGroupArnSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.defaultActions.targetGroupArnSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.forProvider.loadBalancerArnRef
 
 "Ref to loadbalancer ARN"
@@ -422,6 +930,26 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.tags
+
+"The tags to assign to the listener."
+
+### fn spec.forProvider.tags.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.tags.withValue
+
+```ts
+withValue(value)
+```
+
+
 
 ## obj spec.providerConfigRef
 

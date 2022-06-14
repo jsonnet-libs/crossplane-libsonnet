@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/bigquery/v1alpha1/dataTransferConfig/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -52,6 +50,17 @@ permalink: /provider-jet-gcp/0.2/bigquery/v1alpha1/dataTransferConfig/
     * [`fn withSensitiveParams(sensitiveParams)`](#fn-specforproviderwithsensitiveparams)
     * [`fn withSensitiveParamsMixin(sensitiveParams)`](#fn-specforproviderwithsensitiveparamsmixin)
     * [`fn withServiceAccountName(serviceAccountName)`](#fn-specforproviderwithserviceaccountname)
+    * [`obj spec.forProvider.emailPreferences`](#obj-specforprovideremailpreferences)
+      * [`fn withEnableFailureEmail(enableFailureEmail)`](#fn-specforprovideremailpreferenceswithenablefailureemail)
+    * [`obj spec.forProvider.scheduleOptions`](#obj-specforproviderscheduleoptions)
+      * [`fn withDisableAutoScheduling(disableAutoScheduling)`](#fn-specforproviderscheduleoptionswithdisableautoscheduling)
+      * [`fn withEndTime(endTime)`](#fn-specforproviderscheduleoptionswithendtime)
+      * [`fn withStartTime(startTime)`](#fn-specforproviderscheduleoptionswithstarttime)
+    * [`obj spec.forProvider.sensitiveParams`](#obj-specforprovidersensitiveparams)
+      * [`obj spec.forProvider.sensitiveParams.secretAccessKeySecretRef`](#obj-specforprovidersensitiveparamssecretaccesskeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersensitiveparamssecretaccesskeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersensitiveparamssecretaccesskeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersensitiveparamssecretaccesskeysecretrefwithnamespace)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -173,24 +182,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -419,6 +410,78 @@ withServiceAccountName(serviceAccountName)
 ```
 
 "Optional service account name. If this field is set, transfer config will be created with this service account credentials. It requires that requesting user calling this API has permissions to act as this service account."
+
+## obj spec.forProvider.emailPreferences
+
+"Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config."
+
+### fn spec.forProvider.emailPreferences.withEnableFailureEmail
+
+```ts
+withEnableFailureEmail(enableFailureEmail)
+```
+
+"If true, email notifications will be sent on transfer run failures."
+
+## obj spec.forProvider.scheduleOptions
+
+"Options customizing the data transfer schedule."
+
+### fn spec.forProvider.scheduleOptions.withDisableAutoScheduling
+
+```ts
+withDisableAutoScheduling(disableAutoScheduling)
+```
+
+"If true, automatic scheduling of data transfer runs for this configuration will be disabled. The runs can be started on ad-hoc basis using transferConfigs.startManualRuns API. When automatic scheduling is disabled, the TransferConfig.schedule field will be ignored."
+
+### fn spec.forProvider.scheduleOptions.withEndTime
+
+```ts
+withEndTime(endTime)
+```
+
+"Defines time to stop scheduling transfer runs. A transfer run cannot be scheduled at or after the end time. The end time can be changed at any moment. The time when a data transfer can be triggered manually is not limited by this option."
+
+### fn spec.forProvider.scheduleOptions.withStartTime
+
+```ts
+withStartTime(startTime)
+```
+
+"Specifies time to start scheduling transfer runs. The first run will be scheduled at or after the start time according to a recurrence pattern defined in the schedule string. The start time can be changed at any moment. The time when a data transfer can be triggered manually is not limited by this option."
+
+## obj spec.forProvider.sensitiveParams
+
+"Different parameters are configured primarily using the the 'params' field on this resource. This block contains the parameters which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key in the 'params' map in the api request. \n Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state."
+
+## obj spec.forProvider.sensitiveParams.secretAccessKeySecretRef
+
+"The Secret Access Key of the AWS account transferring data from."
+
+### fn spec.forProvider.sensitiveParams.secretAccessKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.sensitiveParams.secretAccessKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.sensitiveParams.secretAccessKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-grafana/0.1/grafana/v1alpha1/syntheticMonitoringCheck/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -47,6 +45,125 @@ permalink: /provider-grafana/0.1/grafana/v1alpha1/syntheticMonitoringCheck/
     * [`fn withSettingsMixin(settings)`](#fn-specforproviderwithsettingsmixin)
     * [`fn withTarget(target)`](#fn-specforproviderwithtarget)
     * [`fn withTimeout(timeout)`](#fn-specforproviderwithtimeout)
+    * [`obj spec.forProvider.settings`](#obj-specforprovidersettings)
+      * [`fn withDns(dns)`](#fn-specforprovidersettingswithdns)
+      * [`fn withDnsMixin(dns)`](#fn-specforprovidersettingswithdnsmixin)
+      * [`fn withHttp(http)`](#fn-specforprovidersettingswithhttp)
+      * [`fn withHttpMixin(http)`](#fn-specforprovidersettingswithhttpmixin)
+      * [`fn withPing(ping)`](#fn-specforprovidersettingswithping)
+      * [`fn withPingMixin(ping)`](#fn-specforprovidersettingswithpingmixin)
+      * [`fn withTcp(tcp)`](#fn-specforprovidersettingswithtcp)
+      * [`fn withTcpMixin(tcp)`](#fn-specforprovidersettingswithtcpmixin)
+      * [`fn withTraceroute(traceroute)`](#fn-specforprovidersettingswithtraceroute)
+      * [`fn withTracerouteMixin(traceroute)`](#fn-specforprovidersettingswithtraceroutemixin)
+      * [`obj spec.forProvider.settings.dns`](#obj-specforprovidersettingsdns)
+        * [`fn withIpVersion(ipVersion)`](#fn-specforprovidersettingsdnswithipversion)
+        * [`fn withPort(port)`](#fn-specforprovidersettingsdnswithport)
+        * [`fn withProtocol(protocol)`](#fn-specforprovidersettingsdnswithprotocol)
+        * [`fn withRecordType(recordType)`](#fn-specforprovidersettingsdnswithrecordtype)
+        * [`fn withServer(server)`](#fn-specforprovidersettingsdnswithserver)
+        * [`fn withSourceIpAddress(sourceIpAddress)`](#fn-specforprovidersettingsdnswithsourceipaddress)
+        * [`fn withValidRCodes(validRCodes)`](#fn-specforprovidersettingsdnswithvalidrcodes)
+        * [`fn withValidRCodesMixin(validRCodes)`](#fn-specforprovidersettingsdnswithvalidrcodesmixin)
+        * [`fn withValidateAdditionalRrs(validateAdditionalRrs)`](#fn-specforprovidersettingsdnswithvalidateadditionalrrs)
+        * [`fn withValidateAdditionalRrsMixin(validateAdditionalRrs)`](#fn-specforprovidersettingsdnswithvalidateadditionalrrsmixin)
+        * [`fn withValidateAnswerRrs(validateAnswerRrs)`](#fn-specforprovidersettingsdnswithvalidateanswerrrs)
+        * [`fn withValidateAnswerRrsMixin(validateAnswerRrs)`](#fn-specforprovidersettingsdnswithvalidateanswerrrsmixin)
+        * [`fn withValidateAuthorityRrs(validateAuthorityRrs)`](#fn-specforprovidersettingsdnswithvalidateauthorityrrs)
+        * [`fn withValidateAuthorityRrsMixin(validateAuthorityRrs)`](#fn-specforprovidersettingsdnswithvalidateauthorityrrsmixin)
+        * [`obj spec.forProvider.settings.dns.validateAdditionalRrs`](#obj-specforprovidersettingsdnsvalidateadditionalrrs)
+          * [`fn withFailIfMatchesRegexp(failIfMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateadditionalrrswithfailifmatchesregexp)
+          * [`fn withFailIfMatchesRegexpMixin(failIfMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateadditionalrrswithfailifmatchesregexpmixin)
+          * [`fn withFailIfNotMatchesRegexp(failIfNotMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateadditionalrrswithfailifnotmatchesregexp)
+          * [`fn withFailIfNotMatchesRegexpMixin(failIfNotMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateadditionalrrswithfailifnotmatchesregexpmixin)
+        * [`obj spec.forProvider.settings.dns.validateAnswerRrs`](#obj-specforprovidersettingsdnsvalidateanswerrrs)
+          * [`fn withFailIfMatchesRegexp(failIfMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateanswerrrswithfailifmatchesregexp)
+          * [`fn withFailIfMatchesRegexpMixin(failIfMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateanswerrrswithfailifmatchesregexpmixin)
+          * [`fn withFailIfNotMatchesRegexp(failIfNotMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateanswerrrswithfailifnotmatchesregexp)
+          * [`fn withFailIfNotMatchesRegexpMixin(failIfNotMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateanswerrrswithfailifnotmatchesregexpmixin)
+        * [`obj spec.forProvider.settings.dns.validateAuthorityRrs`](#obj-specforprovidersettingsdnsvalidateauthorityrrs)
+          * [`fn withFailIfMatchesRegexp(failIfMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateauthorityrrswithfailifmatchesregexp)
+          * [`fn withFailIfMatchesRegexpMixin(failIfMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateauthorityrrswithfailifmatchesregexpmixin)
+          * [`fn withFailIfNotMatchesRegexp(failIfNotMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateauthorityrrswithfailifnotmatchesregexp)
+          * [`fn withFailIfNotMatchesRegexpMixin(failIfNotMatchesRegexp)`](#fn-specforprovidersettingsdnsvalidateauthorityrrswithfailifnotmatchesregexpmixin)
+      * [`obj spec.forProvider.settings.http`](#obj-specforprovidersettingshttp)
+        * [`fn withBasicAuth(basicAuth)`](#fn-specforprovidersettingshttpwithbasicauth)
+        * [`fn withBasicAuthMixin(basicAuth)`](#fn-specforprovidersettingshttpwithbasicauthmixin)
+        * [`fn withBearerToken(bearerToken)`](#fn-specforprovidersettingshttpwithbearertoken)
+        * [`fn withBody(body)`](#fn-specforprovidersettingshttpwithbody)
+        * [`fn withCacheBustingQueryParamName(cacheBustingQueryParamName)`](#fn-specforprovidersettingshttpwithcachebustingqueryparamname)
+        * [`fn withFailIfBodyMatchesRegexp(failIfBodyMatchesRegexp)`](#fn-specforprovidersettingshttpwithfailifbodymatchesregexp)
+        * [`fn withFailIfBodyMatchesRegexpMixin(failIfBodyMatchesRegexp)`](#fn-specforprovidersettingshttpwithfailifbodymatchesregexpmixin)
+        * [`fn withFailIfBodyNotMatchesRegexp(failIfBodyNotMatchesRegexp)`](#fn-specforprovidersettingshttpwithfailifbodynotmatchesregexp)
+        * [`fn withFailIfBodyNotMatchesRegexpMixin(failIfBodyNotMatchesRegexp)`](#fn-specforprovidersettingshttpwithfailifbodynotmatchesregexpmixin)
+        * [`fn withFailIfHeaderMatchesRegexp(failIfHeaderMatchesRegexp)`](#fn-specforprovidersettingshttpwithfailifheadermatchesregexp)
+        * [`fn withFailIfHeaderMatchesRegexpMixin(failIfHeaderMatchesRegexp)`](#fn-specforprovidersettingshttpwithfailifheadermatchesregexpmixin)
+        * [`fn withFailIfHeaderNotMatchesRegexp(failIfHeaderNotMatchesRegexp)`](#fn-specforprovidersettingshttpwithfailifheadernotmatchesregexp)
+        * [`fn withFailIfHeaderNotMatchesRegexpMixin(failIfHeaderNotMatchesRegexp)`](#fn-specforprovidersettingshttpwithfailifheadernotmatchesregexpmixin)
+        * [`fn withFailIfNotSsl(failIfNotSsl)`](#fn-specforprovidersettingshttpwithfailifnotssl)
+        * [`fn withFailIfSsl(failIfSsl)`](#fn-specforprovidersettingshttpwithfailifssl)
+        * [`fn withHeaders(headers)`](#fn-specforprovidersettingshttpwithheaders)
+        * [`fn withHeadersMixin(headers)`](#fn-specforprovidersettingshttpwithheadersmixin)
+        * [`fn withIpVersion(ipVersion)`](#fn-specforprovidersettingshttpwithipversion)
+        * [`fn withMethod(method)`](#fn-specforprovidersettingshttpwithmethod)
+        * [`fn withNoFollowRedirects(noFollowRedirects)`](#fn-specforprovidersettingshttpwithnofollowredirects)
+        * [`fn withProxyUrl(proxyUrl)`](#fn-specforprovidersettingshttpwithproxyurl)
+        * [`fn withTlsConfig(tlsConfig)`](#fn-specforprovidersettingshttpwithtlsconfig)
+        * [`fn withTlsConfigMixin(tlsConfig)`](#fn-specforprovidersettingshttpwithtlsconfigmixin)
+        * [`fn withValidHttpVersions(validHttpVersions)`](#fn-specforprovidersettingshttpwithvalidhttpversions)
+        * [`fn withValidHttpVersionsMixin(validHttpVersions)`](#fn-specforprovidersettingshttpwithvalidhttpversionsmixin)
+        * [`fn withValidStatusCodes(validStatusCodes)`](#fn-specforprovidersettingshttpwithvalidstatuscodes)
+        * [`fn withValidStatusCodesMixin(validStatusCodes)`](#fn-specforprovidersettingshttpwithvalidstatuscodesmixin)
+        * [`obj spec.forProvider.settings.http.basicAuth`](#obj-specforprovidersettingshttpbasicauth)
+          * [`fn withPassword(password)`](#fn-specforprovidersettingshttpbasicauthwithpassword)
+          * [`fn withUsername(username)`](#fn-specforprovidersettingshttpbasicauthwithusername)
+        * [`obj spec.forProvider.settings.http.failIfHeaderMatchesRegexp`](#obj-specforprovidersettingshttpfailifheadermatchesregexp)
+          * [`fn withAllowMissing(allowMissing)`](#fn-specforprovidersettingshttpfailifheadermatchesregexpwithallowmissing)
+          * [`fn withHeader(header)`](#fn-specforprovidersettingshttpfailifheadermatchesregexpwithheader)
+          * [`fn withRegexp(regexp)`](#fn-specforprovidersettingshttpfailifheadermatchesregexpwithregexp)
+        * [`obj spec.forProvider.settings.http.failIfHeaderNotMatchesRegexp`](#obj-specforprovidersettingshttpfailifheadernotmatchesregexp)
+          * [`fn withAllowMissing(allowMissing)`](#fn-specforprovidersettingshttpfailifheadernotmatchesregexpwithallowmissing)
+          * [`fn withHeader(header)`](#fn-specforprovidersettingshttpfailifheadernotmatchesregexpwithheader)
+          * [`fn withRegexp(regexp)`](#fn-specforprovidersettingshttpfailifheadernotmatchesregexpwithregexp)
+        * [`obj spec.forProvider.settings.http.tlsConfig`](#obj-specforprovidersettingshttptlsconfig)
+          * [`fn withCaCert(caCert)`](#fn-specforprovidersettingshttptlsconfigwithcacert)
+          * [`fn withClientCert(clientCert)`](#fn-specforprovidersettingshttptlsconfigwithclientcert)
+          * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specforprovidersettingshttptlsconfigwithinsecureskipverify)
+          * [`fn withServerName(serverName)`](#fn-specforprovidersettingshttptlsconfigwithservername)
+          * [`obj spec.forProvider.settings.http.tlsConfig.clientKeySecretRef`](#obj-specforprovidersettingshttptlsconfigclientkeysecretref)
+            * [`fn withKey(key)`](#fn-specforprovidersettingshttptlsconfigclientkeysecretrefwithkey)
+            * [`fn withName(name)`](#fn-specforprovidersettingshttptlsconfigclientkeysecretrefwithname)
+            * [`fn withNamespace(namespace)`](#fn-specforprovidersettingshttptlsconfigclientkeysecretrefwithnamespace)
+      * [`obj spec.forProvider.settings.ping`](#obj-specforprovidersettingsping)
+        * [`fn withDontFragment(dontFragment)`](#fn-specforprovidersettingspingwithdontfragment)
+        * [`fn withIpVersion(ipVersion)`](#fn-specforprovidersettingspingwithipversion)
+        * [`fn withPayloadSize(payloadSize)`](#fn-specforprovidersettingspingwithpayloadsize)
+        * [`fn withSourceIpAddress(sourceIpAddress)`](#fn-specforprovidersettingspingwithsourceipaddress)
+      * [`obj spec.forProvider.settings.tcp`](#obj-specforprovidersettingstcp)
+        * [`fn withIpVersion(ipVersion)`](#fn-specforprovidersettingstcpwithipversion)
+        * [`fn withQueryResponse(queryResponse)`](#fn-specforprovidersettingstcpwithqueryresponse)
+        * [`fn withQueryResponseMixin(queryResponse)`](#fn-specforprovidersettingstcpwithqueryresponsemixin)
+        * [`fn withSourceIpAddress(sourceIpAddress)`](#fn-specforprovidersettingstcpwithsourceipaddress)
+        * [`fn withTls(tls)`](#fn-specforprovidersettingstcpwithtls)
+        * [`fn withTlsConfig(tlsConfig)`](#fn-specforprovidersettingstcpwithtlsconfig)
+        * [`fn withTlsConfigMixin(tlsConfig)`](#fn-specforprovidersettingstcpwithtlsconfigmixin)
+        * [`obj spec.forProvider.settings.tcp.queryResponse`](#obj-specforprovidersettingstcpqueryresponse)
+          * [`fn withExpect(expect)`](#fn-specforprovidersettingstcpqueryresponsewithexpect)
+          * [`fn withSend(send)`](#fn-specforprovidersettingstcpqueryresponsewithsend)
+          * [`fn withStartTls(startTls)`](#fn-specforprovidersettingstcpqueryresponsewithstarttls)
+        * [`obj spec.forProvider.settings.tcp.tlsConfig`](#obj-specforprovidersettingstcptlsconfig)
+          * [`fn withCaCert(caCert)`](#fn-specforprovidersettingstcptlsconfigwithcacert)
+          * [`fn withClientCert(clientCert)`](#fn-specforprovidersettingstcptlsconfigwithclientcert)
+          * [`fn withInsecureSkipVerify(insecureSkipVerify)`](#fn-specforprovidersettingstcptlsconfigwithinsecureskipverify)
+          * [`fn withServerName(serverName)`](#fn-specforprovidersettingstcptlsconfigwithservername)
+          * [`obj spec.forProvider.settings.tcp.tlsConfig.clientKeySecretRef`](#obj-specforprovidersettingstcptlsconfigclientkeysecretref)
+            * [`fn withKey(key)`](#fn-specforprovidersettingstcptlsconfigclientkeysecretrefwithkey)
+            * [`fn withName(name)`](#fn-specforprovidersettingstcptlsconfigclientkeysecretrefwithname)
+            * [`fn withNamespace(namespace)`](#fn-specforprovidersettingstcptlsconfigclientkeysecretrefwithnamespace)
+      * [`obj spec.forProvider.settings.traceroute`](#obj-specforprovidersettingstraceroute)
+        * [`fn withMaxHops(maxHops)`](#fn-specforprovidersettingstraceroutewithmaxhops)
+        * [`fn withMaxUnknownHops(maxUnknownHops)`](#fn-specforprovidersettingstraceroutewithmaxunknownhops)
+        * [`fn withPtrLookup(ptrLookup)`](#fn-specforprovidersettingstraceroutewithptrlookup)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -168,24 +285,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -372,6 +471,942 @@ withTimeout(timeout)
 ```
 
 "Specifies the maximum running time for the check in milliseconds. The minimum acceptable value is 1 second (1000 ms), and the maximum 10 seconds (10000 ms). Defaults to `3000`."
+
+## obj spec.forProvider.settings
+
+"Check settings. Should contain exactly one nested block."
+
+### fn spec.forProvider.settings.withDns
+
+```ts
+withDns(dns)
+```
+
+"Settings for DNS check. The target must be a valid hostname (or IP address for `PTR` records)."
+
+### fn spec.forProvider.settings.withDnsMixin
+
+```ts
+withDnsMixin(dns)
+```
+
+"Settings for DNS check. The target must be a valid hostname (or IP address for `PTR` records)."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.withHttp
+
+```ts
+withHttp(http)
+```
+
+"Settings for HTTP check. The target must be a URL (http or https)."
+
+### fn spec.forProvider.settings.withHttpMixin
+
+```ts
+withHttpMixin(http)
+```
+
+"Settings for HTTP check. The target must be a URL (http or https)."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.withPing
+
+```ts
+withPing(ping)
+```
+
+"Settings for ping (ICMP) check. The target must be a valid hostname or IP address."
+
+### fn spec.forProvider.settings.withPingMixin
+
+```ts
+withPingMixin(ping)
+```
+
+"Settings for ping (ICMP) check. The target must be a valid hostname or IP address."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.withTcp
+
+```ts
+withTcp(tcp)
+```
+
+"Settings for TCP check. The target must be of the form `<host>:<port>`, where the host portion must be a valid hostname or IP address."
+
+### fn spec.forProvider.settings.withTcpMixin
+
+```ts
+withTcpMixin(tcp)
+```
+
+"Settings for TCP check. The target must be of the form `<host>:<port>`, where the host portion must be a valid hostname or IP address."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.withTraceroute
+
+```ts
+withTraceroute(traceroute)
+```
+
+"Settings for traceroute check. The target must be a valid hostname or IP address"
+
+### fn spec.forProvider.settings.withTracerouteMixin
+
+```ts
+withTracerouteMixin(traceroute)
+```
+
+"Settings for traceroute check. The target must be a valid hostname or IP address"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.settings.dns
+
+"Settings for DNS check. The target must be a valid hostname (or IP address for `PTR` records)."
+
+### fn spec.forProvider.settings.dns.withIpVersion
+
+```ts
+withIpVersion(ipVersion)
+```
+
+"Options are `V4`, `V6`, `Any`. Specifies whether the corresponding check will be performed using IPv4 or IPv6. The `Any` value indicates that IPv6 should be used, falling back to IPv4 if that's not available. Defaults to `V4`."
+
+### fn spec.forProvider.settings.dns.withPort
+
+```ts
+withPort(port)
+```
+
+"Port to target. Defaults to `53`."
+
+### fn spec.forProvider.settings.dns.withProtocol
+
+```ts
+withProtocol(protocol)
+```
+
+"`TCP` or `UDP`. Defaults to `UDP`."
+
+### fn spec.forProvider.settings.dns.withRecordType
+
+```ts
+withRecordType(recordType)
+```
+
+"One of `ANY`, `A`, `AAAA`, `CNAME`, `MX`, `NS`, `PTR`, `SOA`, `SRV`, `TXT`. Defaults to `A`."
+
+### fn spec.forProvider.settings.dns.withServer
+
+```ts
+withServer(server)
+```
+
+"DNS server address to target. Defaults to `8.8.8.8`."
+
+### fn spec.forProvider.settings.dns.withSourceIpAddress
+
+```ts
+withSourceIpAddress(sourceIpAddress)
+```
+
+"Source IP address."
+
+### fn spec.forProvider.settings.dns.withValidRCodes
+
+```ts
+withValidRCodes(validRCodes)
+```
+
+"List of valid response codes. Options include `NOERROR`, `BADALG`, `BADMODE`, `BADKEY`, `BADCOOKIE`, `BADNAME`, `BADSIG`, `BADTIME`, `BADTRUNC`, `BADVERS`, `FORMERR`, `NOTIMP`, `NOTAUTH`, `NOTZONE`, `NXDOMAIN`, `NXRRSET`, `REFUSED`, `SERVFAIL`, `YXDOMAIN`, `YXRRSET`."
+
+### fn spec.forProvider.settings.dns.withValidRCodesMixin
+
+```ts
+withValidRCodesMixin(validRCodes)
+```
+
+"List of valid response codes. Options include `NOERROR`, `BADALG`, `BADMODE`, `BADKEY`, `BADCOOKIE`, `BADNAME`, `BADSIG`, `BADTIME`, `BADTRUNC`, `BADVERS`, `FORMERR`, `NOTIMP`, `NOTAUTH`, `NOTZONE`, `NXDOMAIN`, `NXRRSET`, `REFUSED`, `SERVFAIL`, `YXDOMAIN`, `YXRRSET`."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.dns.withValidateAdditionalRrs
+
+```ts
+withValidateAdditionalRrs(validateAdditionalRrs)
+```
+
+"Validate additional matches."
+
+### fn spec.forProvider.settings.dns.withValidateAdditionalRrsMixin
+
+```ts
+withValidateAdditionalRrsMixin(validateAdditionalRrs)
+```
+
+"Validate additional matches."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.dns.withValidateAnswerRrs
+
+```ts
+withValidateAnswerRrs(validateAnswerRrs)
+```
+
+"Validate response answer."
+
+### fn spec.forProvider.settings.dns.withValidateAnswerRrsMixin
+
+```ts
+withValidateAnswerRrsMixin(validateAnswerRrs)
+```
+
+"Validate response answer."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.dns.withValidateAuthorityRrs
+
+```ts
+withValidateAuthorityRrs(validateAuthorityRrs)
+```
+
+"Validate response authority."
+
+### fn spec.forProvider.settings.dns.withValidateAuthorityRrsMixin
+
+```ts
+withValidateAuthorityRrsMixin(validateAuthorityRrs)
+```
+
+"Validate response authority."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.settings.dns.validateAdditionalRrs
+
+"Validate additional matches."
+
+### fn spec.forProvider.settings.dns.validateAdditionalRrs.withFailIfMatchesRegexp
+
+```ts
+withFailIfMatchesRegexp(failIfMatchesRegexp)
+```
+
+"Fail if value matches regex."
+
+### fn spec.forProvider.settings.dns.validateAdditionalRrs.withFailIfMatchesRegexpMixin
+
+```ts
+withFailIfMatchesRegexpMixin(failIfMatchesRegexp)
+```
+
+"Fail if value matches regex."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.dns.validateAdditionalRrs.withFailIfNotMatchesRegexp
+
+```ts
+withFailIfNotMatchesRegexp(failIfNotMatchesRegexp)
+```
+
+"Fail if value does not match regex."
+
+### fn spec.forProvider.settings.dns.validateAdditionalRrs.withFailIfNotMatchesRegexpMixin
+
+```ts
+withFailIfNotMatchesRegexpMixin(failIfNotMatchesRegexp)
+```
+
+"Fail if value does not match regex."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.settings.dns.validateAnswerRrs
+
+"Validate response answer."
+
+### fn spec.forProvider.settings.dns.validateAnswerRrs.withFailIfMatchesRegexp
+
+```ts
+withFailIfMatchesRegexp(failIfMatchesRegexp)
+```
+
+"Fail if value matches regex."
+
+### fn spec.forProvider.settings.dns.validateAnswerRrs.withFailIfMatchesRegexpMixin
+
+```ts
+withFailIfMatchesRegexpMixin(failIfMatchesRegexp)
+```
+
+"Fail if value matches regex."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.dns.validateAnswerRrs.withFailIfNotMatchesRegexp
+
+```ts
+withFailIfNotMatchesRegexp(failIfNotMatchesRegexp)
+```
+
+"Fail if value does not match regex."
+
+### fn spec.forProvider.settings.dns.validateAnswerRrs.withFailIfNotMatchesRegexpMixin
+
+```ts
+withFailIfNotMatchesRegexpMixin(failIfNotMatchesRegexp)
+```
+
+"Fail if value does not match regex."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.settings.dns.validateAuthorityRrs
+
+"Validate response authority."
+
+### fn spec.forProvider.settings.dns.validateAuthorityRrs.withFailIfMatchesRegexp
+
+```ts
+withFailIfMatchesRegexp(failIfMatchesRegexp)
+```
+
+"Fail if value matches regex."
+
+### fn spec.forProvider.settings.dns.validateAuthorityRrs.withFailIfMatchesRegexpMixin
+
+```ts
+withFailIfMatchesRegexpMixin(failIfMatchesRegexp)
+```
+
+"Fail if value matches regex."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.dns.validateAuthorityRrs.withFailIfNotMatchesRegexp
+
+```ts
+withFailIfNotMatchesRegexp(failIfNotMatchesRegexp)
+```
+
+"Fail if value does not match regex."
+
+### fn spec.forProvider.settings.dns.validateAuthorityRrs.withFailIfNotMatchesRegexpMixin
+
+```ts
+withFailIfNotMatchesRegexpMixin(failIfNotMatchesRegexp)
+```
+
+"Fail if value does not match regex."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.settings.http
+
+"Settings for HTTP check. The target must be a URL (http or https)."
+
+### fn spec.forProvider.settings.http.withBasicAuth
+
+```ts
+withBasicAuth(basicAuth)
+```
+
+"Basic auth settings."
+
+### fn spec.forProvider.settings.http.withBasicAuthMixin
+
+```ts
+withBasicAuthMixin(basicAuth)
+```
+
+"Basic auth settings."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.http.withBearerToken
+
+```ts
+withBearerToken(bearerToken)
+```
+
+"Token for use with bearer authorization header."
+
+### fn spec.forProvider.settings.http.withBody
+
+```ts
+withBody(body)
+```
+
+"The body of the HTTP request used in probe."
+
+### fn spec.forProvider.settings.http.withCacheBustingQueryParamName
+
+```ts
+withCacheBustingQueryParamName(cacheBustingQueryParamName)
+```
+
+"The name of the query parameter used to prevent the server from using a cached response. Each probe will assign a random value to this parameter each time a request is made."
+
+### fn spec.forProvider.settings.http.withFailIfBodyMatchesRegexp
+
+```ts
+withFailIfBodyMatchesRegexp(failIfBodyMatchesRegexp)
+```
+
+"List of regexes. If any match the response body, the check will fail."
+
+### fn spec.forProvider.settings.http.withFailIfBodyMatchesRegexpMixin
+
+```ts
+withFailIfBodyMatchesRegexpMixin(failIfBodyMatchesRegexp)
+```
+
+"List of regexes. If any match the response body, the check will fail."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.http.withFailIfBodyNotMatchesRegexp
+
+```ts
+withFailIfBodyNotMatchesRegexp(failIfBodyNotMatchesRegexp)
+```
+
+"List of regexes. If any do not match the response body, the check will fail."
+
+### fn spec.forProvider.settings.http.withFailIfBodyNotMatchesRegexpMixin
+
+```ts
+withFailIfBodyNotMatchesRegexpMixin(failIfBodyNotMatchesRegexp)
+```
+
+"List of regexes. If any do not match the response body, the check will fail."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.http.withFailIfHeaderMatchesRegexp
+
+```ts
+withFailIfHeaderMatchesRegexp(failIfHeaderMatchesRegexp)
+```
+
+"Check fails if headers match."
+
+### fn spec.forProvider.settings.http.withFailIfHeaderMatchesRegexpMixin
+
+```ts
+withFailIfHeaderMatchesRegexpMixin(failIfHeaderMatchesRegexp)
+```
+
+"Check fails if headers match."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.http.withFailIfHeaderNotMatchesRegexp
+
+```ts
+withFailIfHeaderNotMatchesRegexp(failIfHeaderNotMatchesRegexp)
+```
+
+"Check fails if headers do not match."
+
+### fn spec.forProvider.settings.http.withFailIfHeaderNotMatchesRegexpMixin
+
+```ts
+withFailIfHeaderNotMatchesRegexpMixin(failIfHeaderNotMatchesRegexp)
+```
+
+"Check fails if headers do not match."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.http.withFailIfNotSsl
+
+```ts
+withFailIfNotSsl(failIfNotSsl)
+```
+
+"Fail if SSL is not present. Defaults to `false`."
+
+### fn spec.forProvider.settings.http.withFailIfSsl
+
+```ts
+withFailIfSsl(failIfSsl)
+```
+
+"Fail if SSL is present. Defaults to `false`."
+
+### fn spec.forProvider.settings.http.withHeaders
+
+```ts
+withHeaders(headers)
+```
+
+"The HTTP headers set for the probe."
+
+### fn spec.forProvider.settings.http.withHeadersMixin
+
+```ts
+withHeadersMixin(headers)
+```
+
+"The HTTP headers set for the probe."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.http.withIpVersion
+
+```ts
+withIpVersion(ipVersion)
+```
+
+"Options are `V4`, `V6`, `Any`. Specifies whether the corresponding check will be performed using IPv4 or IPv6. The `Any` value indicates that IPv6 should be used, falling back to IPv4 if that's not available. Defaults to `V4`."
+
+### fn spec.forProvider.settings.http.withMethod
+
+```ts
+withMethod(method)
+```
+
+"Request method. One of `GET`, `CONNECT`, `DELETE`, `HEAD`, `OPTIONS`, `POST`, `PUT`, `TRACE` Defaults to `GET`."
+
+### fn spec.forProvider.settings.http.withNoFollowRedirects
+
+```ts
+withNoFollowRedirects(noFollowRedirects)
+```
+
+"Do not follow redirects. Defaults to `false`."
+
+### fn spec.forProvider.settings.http.withProxyUrl
+
+```ts
+withProxyUrl(proxyUrl)
+```
+
+"Proxy URL."
+
+### fn spec.forProvider.settings.http.withTlsConfig
+
+```ts
+withTlsConfig(tlsConfig)
+```
+
+"TLS config."
+
+### fn spec.forProvider.settings.http.withTlsConfigMixin
+
+```ts
+withTlsConfigMixin(tlsConfig)
+```
+
+"TLS config."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.http.withValidHttpVersions
+
+```ts
+withValidHttpVersions(validHttpVersions)
+```
+
+"List of valid HTTP versions. Options include `HTTP/1.0`, `HTTP/1.1`, `HTTP/2`"
+
+### fn spec.forProvider.settings.http.withValidHttpVersionsMixin
+
+```ts
+withValidHttpVersionsMixin(validHttpVersions)
+```
+
+"List of valid HTTP versions. Options include `HTTP/1.0`, `HTTP/1.1`, `HTTP/2`"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.http.withValidStatusCodes
+
+```ts
+withValidStatusCodes(validStatusCodes)
+```
+
+"Accepted status codes. If unset, defaults to 2xx."
+
+### fn spec.forProvider.settings.http.withValidStatusCodesMixin
+
+```ts
+withValidStatusCodesMixin(validStatusCodes)
+```
+
+"Accepted status codes. If unset, defaults to 2xx."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.settings.http.basicAuth
+
+"Basic auth settings."
+
+### fn spec.forProvider.settings.http.basicAuth.withPassword
+
+```ts
+withPassword(password)
+```
+
+"Basic auth password."
+
+### fn spec.forProvider.settings.http.basicAuth.withUsername
+
+```ts
+withUsername(username)
+```
+
+"Basic auth username."
+
+## obj spec.forProvider.settings.http.failIfHeaderMatchesRegexp
+
+"Check fails if headers match."
+
+### fn spec.forProvider.settings.http.failIfHeaderMatchesRegexp.withAllowMissing
+
+```ts
+withAllowMissing(allowMissing)
+```
+
+"Allow header to be missing from responses. Defaults to `false`."
+
+### fn spec.forProvider.settings.http.failIfHeaderMatchesRegexp.withHeader
+
+```ts
+withHeader(header)
+```
+
+"Header name."
+
+### fn spec.forProvider.settings.http.failIfHeaderMatchesRegexp.withRegexp
+
+```ts
+withRegexp(regexp)
+```
+
+"Regex that header value should match."
+
+## obj spec.forProvider.settings.http.failIfHeaderNotMatchesRegexp
+
+"Check fails if headers do not match."
+
+### fn spec.forProvider.settings.http.failIfHeaderNotMatchesRegexp.withAllowMissing
+
+```ts
+withAllowMissing(allowMissing)
+```
+
+"Allow header to be missing from responses. Defaults to `false`."
+
+### fn spec.forProvider.settings.http.failIfHeaderNotMatchesRegexp.withHeader
+
+```ts
+withHeader(header)
+```
+
+"Header name."
+
+### fn spec.forProvider.settings.http.failIfHeaderNotMatchesRegexp.withRegexp
+
+```ts
+withRegexp(regexp)
+```
+
+"Regex that header value should match."
+
+## obj spec.forProvider.settings.http.tlsConfig
+
+"TLS config."
+
+### fn spec.forProvider.settings.http.tlsConfig.withCaCert
+
+```ts
+withCaCert(caCert)
+```
+
+"CA certificate in PEM format."
+
+### fn spec.forProvider.settings.http.tlsConfig.withClientCert
+
+```ts
+withClientCert(clientCert)
+```
+
+"Client certificate in PEM format."
+
+### fn spec.forProvider.settings.http.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation. Defaults to `false`."
+
+### fn spec.forProvider.settings.http.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.forProvider.settings.http.tlsConfig.clientKeySecretRef
+
+"Client key in PEM format."
+
+### fn spec.forProvider.settings.http.tlsConfig.clientKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.settings.http.tlsConfig.clientKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.settings.http.tlsConfig.clientKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.settings.ping
+
+"Settings for ping (ICMP) check. The target must be a valid hostname or IP address."
+
+### fn spec.forProvider.settings.ping.withDontFragment
+
+```ts
+withDontFragment(dontFragment)
+```
+
+"Set the DF-bit in the IP-header. Only works with ipV4. Defaults to `false`."
+
+### fn spec.forProvider.settings.ping.withIpVersion
+
+```ts
+withIpVersion(ipVersion)
+```
+
+"Options are `V4`, `V6`, `Any`. Specifies whether the corresponding check will be performed using IPv4 or IPv6. The `Any` value indicates that IPv6 should be used, falling back to IPv4 if that's not available. Defaults to `V4`."
+
+### fn spec.forProvider.settings.ping.withPayloadSize
+
+```ts
+withPayloadSize(payloadSize)
+```
+
+"Payload size. Defaults to `0`."
+
+### fn spec.forProvider.settings.ping.withSourceIpAddress
+
+```ts
+withSourceIpAddress(sourceIpAddress)
+```
+
+"Source IP address."
+
+## obj spec.forProvider.settings.tcp
+
+"Settings for TCP check. The target must be of the form `<host>:<port>`, where the host portion must be a valid hostname or IP address."
+
+### fn spec.forProvider.settings.tcp.withIpVersion
+
+```ts
+withIpVersion(ipVersion)
+```
+
+"Options are `V4`, `V6`, `Any`. Specifies whether the corresponding check will be performed using IPv4 or IPv6. The `Any` value indicates that IPv6 should be used, falling back to IPv4 if that's not available. Defaults to `V4`."
+
+### fn spec.forProvider.settings.tcp.withQueryResponse
+
+```ts
+withQueryResponse(queryResponse)
+```
+
+"The query sent in the TCP probe and the expected associated response."
+
+### fn spec.forProvider.settings.tcp.withQueryResponseMixin
+
+```ts
+withQueryResponseMixin(queryResponse)
+```
+
+"The query sent in the TCP probe and the expected associated response."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.settings.tcp.withSourceIpAddress
+
+```ts
+withSourceIpAddress(sourceIpAddress)
+```
+
+"Source IP address."
+
+### fn spec.forProvider.settings.tcp.withTls
+
+```ts
+withTls(tls)
+```
+
+"Whether or not TLS is used when the connection is initiated. Defaults to `false`."
+
+### fn spec.forProvider.settings.tcp.withTlsConfig
+
+```ts
+withTlsConfig(tlsConfig)
+```
+
+"TLS config."
+
+### fn spec.forProvider.settings.tcp.withTlsConfigMixin
+
+```ts
+withTlsConfigMixin(tlsConfig)
+```
+
+"TLS config."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.settings.tcp.queryResponse
+
+"The query sent in the TCP probe and the expected associated response."
+
+### fn spec.forProvider.settings.tcp.queryResponse.withExpect
+
+```ts
+withExpect(expect)
+```
+
+"Response to expect."
+
+### fn spec.forProvider.settings.tcp.queryResponse.withSend
+
+```ts
+withSend(send)
+```
+
+"Data to send."
+
+### fn spec.forProvider.settings.tcp.queryResponse.withStartTls
+
+```ts
+withStartTls(startTls)
+```
+
+"Upgrade TCP connection to TLS. Defaults to `false`."
+
+## obj spec.forProvider.settings.tcp.tlsConfig
+
+"TLS config."
+
+### fn spec.forProvider.settings.tcp.tlsConfig.withCaCert
+
+```ts
+withCaCert(caCert)
+```
+
+"CA certificate in PEM format."
+
+### fn spec.forProvider.settings.tcp.tlsConfig.withClientCert
+
+```ts
+withClientCert(clientCert)
+```
+
+"Client certificate in PEM format."
+
+### fn spec.forProvider.settings.tcp.tlsConfig.withInsecureSkipVerify
+
+```ts
+withInsecureSkipVerify(insecureSkipVerify)
+```
+
+"Disable target certificate validation. Defaults to `false`."
+
+### fn spec.forProvider.settings.tcp.tlsConfig.withServerName
+
+```ts
+withServerName(serverName)
+```
+
+"Used to verify the hostname for the targets."
+
+## obj spec.forProvider.settings.tcp.tlsConfig.clientKeySecretRef
+
+"Client key in PEM format."
+
+### fn spec.forProvider.settings.tcp.tlsConfig.clientKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.settings.tcp.tlsConfig.clientKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.settings.tcp.tlsConfig.clientKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.settings.traceroute
+
+"Settings for traceroute check. The target must be a valid hostname or IP address"
+
+### fn spec.forProvider.settings.traceroute.withMaxHops
+
+```ts
+withMaxHops(maxHops)
+```
+
+"Maximum TTL for the trace Defaults to `64`."
+
+### fn spec.forProvider.settings.traceroute.withMaxUnknownHops
+
+```ts
+withMaxUnknownHops(maxUnknownHops)
+```
+
+"Maximum number of hosts to travers that give no response Defaults to `15`."
+
+### fn spec.forProvider.settings.traceroute.withPtrLookup
+
+```ts
+withPtrLookup(ptrLookup)
+```
+
+"Reverse lookup hostnames from IP addresses Defaults to `true`."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/regionHealthCheck/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -56,6 +54,51 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/regionHealthCheck/
     * [`fn withTcpHealthCheckMixin(tcpHealthCheck)`](#fn-specforproviderwithtcphealthcheckmixin)
     * [`fn withTimeoutSec(timeoutSec)`](#fn-specforproviderwithtimeoutsec)
     * [`fn withUnhealthyThreshold(unhealthyThreshold)`](#fn-specforproviderwithunhealthythreshold)
+    * [`obj spec.forProvider.grpcHealthCheck`](#obj-specforprovidergrpchealthcheck)
+      * [`fn withGrpcServiceName(grpcServiceName)`](#fn-specforprovidergrpchealthcheckwithgrpcservicename)
+      * [`fn withPort(port)`](#fn-specforprovidergrpchealthcheckwithport)
+      * [`fn withPortName(portName)`](#fn-specforprovidergrpchealthcheckwithportname)
+      * [`fn withPortSpecification(portSpecification)`](#fn-specforprovidergrpchealthcheckwithportspecification)
+    * [`obj spec.forProvider.http2HealthCheck`](#obj-specforproviderhttp2healthcheck)
+      * [`fn withHost(host)`](#fn-specforproviderhttp2healthcheckwithhost)
+      * [`fn withPort(port)`](#fn-specforproviderhttp2healthcheckwithport)
+      * [`fn withPortName(portName)`](#fn-specforproviderhttp2healthcheckwithportname)
+      * [`fn withPortSpecification(portSpecification)`](#fn-specforproviderhttp2healthcheckwithportspecification)
+      * [`fn withProxyHeader(proxyHeader)`](#fn-specforproviderhttp2healthcheckwithproxyheader)
+      * [`fn withRequestPath(requestPath)`](#fn-specforproviderhttp2healthcheckwithrequestpath)
+      * [`fn withResponse(response)`](#fn-specforproviderhttp2healthcheckwithresponse)
+    * [`obj spec.forProvider.httpHealthCheck`](#obj-specforproviderhttphealthcheck)
+      * [`fn withHost(host)`](#fn-specforproviderhttphealthcheckwithhost)
+      * [`fn withPort(port)`](#fn-specforproviderhttphealthcheckwithport)
+      * [`fn withPortName(portName)`](#fn-specforproviderhttphealthcheckwithportname)
+      * [`fn withPortSpecification(portSpecification)`](#fn-specforproviderhttphealthcheckwithportspecification)
+      * [`fn withProxyHeader(proxyHeader)`](#fn-specforproviderhttphealthcheckwithproxyheader)
+      * [`fn withRequestPath(requestPath)`](#fn-specforproviderhttphealthcheckwithrequestpath)
+      * [`fn withResponse(response)`](#fn-specforproviderhttphealthcheckwithresponse)
+    * [`obj spec.forProvider.httpsHealthCheck`](#obj-specforproviderhttpshealthcheck)
+      * [`fn withHost(host)`](#fn-specforproviderhttpshealthcheckwithhost)
+      * [`fn withPort(port)`](#fn-specforproviderhttpshealthcheckwithport)
+      * [`fn withPortName(portName)`](#fn-specforproviderhttpshealthcheckwithportname)
+      * [`fn withPortSpecification(portSpecification)`](#fn-specforproviderhttpshealthcheckwithportspecification)
+      * [`fn withProxyHeader(proxyHeader)`](#fn-specforproviderhttpshealthcheckwithproxyheader)
+      * [`fn withRequestPath(requestPath)`](#fn-specforproviderhttpshealthcheckwithrequestpath)
+      * [`fn withResponse(response)`](#fn-specforproviderhttpshealthcheckwithresponse)
+    * [`obj spec.forProvider.logConfig`](#obj-specforproviderlogconfig)
+      * [`fn withEnable(enable)`](#fn-specforproviderlogconfigwithenable)
+    * [`obj spec.forProvider.sslHealthCheck`](#obj-specforprovidersslhealthcheck)
+      * [`fn withPort(port)`](#fn-specforprovidersslhealthcheckwithport)
+      * [`fn withPortName(portName)`](#fn-specforprovidersslhealthcheckwithportname)
+      * [`fn withPortSpecification(portSpecification)`](#fn-specforprovidersslhealthcheckwithportspecification)
+      * [`fn withProxyHeader(proxyHeader)`](#fn-specforprovidersslhealthcheckwithproxyheader)
+      * [`fn withRequest(request)`](#fn-specforprovidersslhealthcheckwithrequest)
+      * [`fn withResponse(response)`](#fn-specforprovidersslhealthcheckwithresponse)
+    * [`obj spec.forProvider.tcpHealthCheck`](#obj-specforprovidertcphealthcheck)
+      * [`fn withPort(port)`](#fn-specforprovidertcphealthcheckwithport)
+      * [`fn withPortName(portName)`](#fn-specforprovidertcphealthcheckwithportname)
+      * [`fn withPortSpecification(portSpecification)`](#fn-specforprovidertcphealthcheckwithportspecification)
+      * [`fn withProxyHeader(proxyHeader)`](#fn-specforprovidertcphealthcheckwithproxyheader)
+      * [`fn withRequest(request)`](#fn-specforprovidertcphealthcheckwithrequest)
+      * [`fn withResponse(response)`](#fn-specforprovidertcphealthcheckwithresponse)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -177,24 +220,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -461,6 +486,338 @@ withUnhealthyThreshold(unhealthyThreshold)
 ```
 
 "A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2."
+
+## obj spec.forProvider.grpcHealthCheck
+
+"A nested object resource"
+
+### fn spec.forProvider.grpcHealthCheck.withGrpcServiceName
+
+```ts
+withGrpcServiceName(grpcServiceName)
+```
+
+"The gRPC service name for the health check. The value of grpcServiceName has the following meanings by convention: \n * Empty serviceName means the overall status of all services at the backend. * Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service. \n The grpcServiceName can only be ASCII."
+
+### fn spec.forProvider.grpcHealthCheck.withPort
+
+```ts
+withPort(port)
+```
+
+"The port number for the health check request. Must be specified if portName and portSpecification are not set or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535."
+
+### fn spec.forProvider.grpcHealthCheck.withPortName
+
+```ts
+withPortName(portName)
+```
+
+"Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence."
+
+### fn spec.forProvider.grpcHealthCheck.withPortSpecification
+
+```ts
+withPortSpecification(portSpecification)
+```
+
+"Specifies how port is selected for health checking, can be one of the following values: \n * 'USE_FIXED_PORT': The port number in 'port' is used for health checking. \n * 'USE_NAMED_PORT': The 'portName' is used for health checking. \n * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. \n If not specified, gRPC health check follows behavior specified in 'port' and 'portName' fields. Possible values: [\"USE_FIXED_PORT\", \"USE_NAMED_PORT\", \"USE_SERVING_PORT\"]"
+
+## obj spec.forProvider.http2HealthCheck
+
+"A nested object resource"
+
+### fn spec.forProvider.http2HealthCheck.withHost
+
+```ts
+withHost(host)
+```
+
+"The value of the host header in the HTTP2 health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used."
+
+### fn spec.forProvider.http2HealthCheck.withPort
+
+```ts
+withPort(port)
+```
+
+"The TCP port number for the HTTP2 health check request. The default value is 443."
+
+### fn spec.forProvider.http2HealthCheck.withPortName
+
+```ts
+withPortName(portName)
+```
+
+"Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence."
+
+### fn spec.forProvider.http2HealthCheck.withPortSpecification
+
+```ts
+withPortSpecification(portSpecification)
+```
+
+"Specifies how port is selected for health checking, can be one of the following values: \n * 'USE_FIXED_PORT': The port number in 'port' is used for health checking. \n * 'USE_NAMED_PORT': The 'portName' is used for health checking. \n * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. \n If not specified, HTTP2 health check follows behavior specified in 'port' and 'portName' fields. Possible values: [\"USE_FIXED_PORT\", \"USE_NAMED_PORT\", \"USE_SERVING_PORT\"]"
+
+### fn spec.forProvider.http2HealthCheck.withProxyHeader
+
+```ts
+withProxyHeader(proxyHeader)
+```
+
+"Specifies the type of proxy header to append before sending data to the backend. Default value: \"NONE\" Possible values: [\"NONE\", \"PROXY_V1\"]"
+
+### fn spec.forProvider.http2HealthCheck.withRequestPath
+
+```ts
+withRequestPath(requestPath)
+```
+
+"The request path of the HTTP2 health check request. The default value is /."
+
+### fn spec.forProvider.http2HealthCheck.withResponse
+
+```ts
+withResponse(response)
+```
+
+"The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII."
+
+## obj spec.forProvider.httpHealthCheck
+
+"A nested object resource"
+
+### fn spec.forProvider.httpHealthCheck.withHost
+
+```ts
+withHost(host)
+```
+
+"The value of the host header in the HTTP health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used."
+
+### fn spec.forProvider.httpHealthCheck.withPort
+
+```ts
+withPort(port)
+```
+
+"The TCP port number for the HTTP health check request. The default value is 80."
+
+### fn spec.forProvider.httpHealthCheck.withPortName
+
+```ts
+withPortName(portName)
+```
+
+"Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence."
+
+### fn spec.forProvider.httpHealthCheck.withPortSpecification
+
+```ts
+withPortSpecification(portSpecification)
+```
+
+"Specifies how port is selected for health checking, can be one of the following values: \n * 'USE_FIXED_PORT': The port number in 'port' is used for health checking. \n * 'USE_NAMED_PORT': The 'portName' is used for health checking. \n * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. \n If not specified, HTTP health check follows behavior specified in 'port' and 'portName' fields. Possible values: [\"USE_FIXED_PORT\", \"USE_NAMED_PORT\", \"USE_SERVING_PORT\"]"
+
+### fn spec.forProvider.httpHealthCheck.withProxyHeader
+
+```ts
+withProxyHeader(proxyHeader)
+```
+
+"Specifies the type of proxy header to append before sending data to the backend. Default value: \"NONE\" Possible values: [\"NONE\", \"PROXY_V1\"]"
+
+### fn spec.forProvider.httpHealthCheck.withRequestPath
+
+```ts
+withRequestPath(requestPath)
+```
+
+"The request path of the HTTP health check request. The default value is /."
+
+### fn spec.forProvider.httpHealthCheck.withResponse
+
+```ts
+withResponse(response)
+```
+
+"The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII."
+
+## obj spec.forProvider.httpsHealthCheck
+
+"A nested object resource"
+
+### fn spec.forProvider.httpsHealthCheck.withHost
+
+```ts
+withHost(host)
+```
+
+"The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used."
+
+### fn spec.forProvider.httpsHealthCheck.withPort
+
+```ts
+withPort(port)
+```
+
+"The TCP port number for the HTTPS health check request. The default value is 443."
+
+### fn spec.forProvider.httpsHealthCheck.withPortName
+
+```ts
+withPortName(portName)
+```
+
+"Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence."
+
+### fn spec.forProvider.httpsHealthCheck.withPortSpecification
+
+```ts
+withPortSpecification(portSpecification)
+```
+
+"Specifies how port is selected for health checking, can be one of the following values: \n * 'USE_FIXED_PORT': The port number in 'port' is used for health checking. \n * 'USE_NAMED_PORT': The 'portName' is used for health checking. \n * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. \n If not specified, HTTPS health check follows behavior specified in 'port' and 'portName' fields. Possible values: [\"USE_FIXED_PORT\", \"USE_NAMED_PORT\", \"USE_SERVING_PORT\"]"
+
+### fn spec.forProvider.httpsHealthCheck.withProxyHeader
+
+```ts
+withProxyHeader(proxyHeader)
+```
+
+"Specifies the type of proxy header to append before sending data to the backend. Default value: \"NONE\" Possible values: [\"NONE\", \"PROXY_V1\"]"
+
+### fn spec.forProvider.httpsHealthCheck.withRequestPath
+
+```ts
+withRequestPath(requestPath)
+```
+
+"The request path of the HTTPS health check request. The default value is /."
+
+### fn spec.forProvider.httpsHealthCheck.withResponse
+
+```ts
+withResponse(response)
+```
+
+"The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII."
+
+## obj spec.forProvider.logConfig
+
+"Configure logging on this health check."
+
+### fn spec.forProvider.logConfig.withEnable
+
+```ts
+withEnable(enable)
+```
+
+"Indicates whether or not to export logs. This is false by default, which means no health check logging will be done."
+
+## obj spec.forProvider.sslHealthCheck
+
+"A nested object resource"
+
+### fn spec.forProvider.sslHealthCheck.withPort
+
+```ts
+withPort(port)
+```
+
+"The TCP port number for the SSL health check request. The default value is 443."
+
+### fn spec.forProvider.sslHealthCheck.withPortName
+
+```ts
+withPortName(portName)
+```
+
+"Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence."
+
+### fn spec.forProvider.sslHealthCheck.withPortSpecification
+
+```ts
+withPortSpecification(portSpecification)
+```
+
+"Specifies how port is selected for health checking, can be one of the following values: \n * 'USE_FIXED_PORT': The port number in 'port' is used for health checking. \n * 'USE_NAMED_PORT': The 'portName' is used for health checking. \n * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. \n If not specified, SSL health check follows behavior specified in 'port' and 'portName' fields. Possible values: [\"USE_FIXED_PORT\", \"USE_NAMED_PORT\", \"USE_SERVING_PORT\"]"
+
+### fn spec.forProvider.sslHealthCheck.withProxyHeader
+
+```ts
+withProxyHeader(proxyHeader)
+```
+
+"Specifies the type of proxy header to append before sending data to the backend. Default value: \"NONE\" Possible values: [\"NONE\", \"PROXY_V1\"]"
+
+### fn spec.forProvider.sslHealthCheck.withRequest
+
+```ts
+withRequest(request)
+```
+
+"The application data to send once the SSL connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII."
+
+### fn spec.forProvider.sslHealthCheck.withResponse
+
+```ts
+withResponse(response)
+```
+
+"The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII."
+
+## obj spec.forProvider.tcpHealthCheck
+
+"A nested object resource"
+
+### fn spec.forProvider.tcpHealthCheck.withPort
+
+```ts
+withPort(port)
+```
+
+"The TCP port number for the TCP health check request. The default value is 80."
+
+### fn spec.forProvider.tcpHealthCheck.withPortName
+
+```ts
+withPortName(portName)
+```
+
+"Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence."
+
+### fn spec.forProvider.tcpHealthCheck.withPortSpecification
+
+```ts
+withPortSpecification(portSpecification)
+```
+
+"Specifies how port is selected for health checking, can be one of the following values: \n * 'USE_FIXED_PORT': The port number in 'port' is used for health checking. \n * 'USE_NAMED_PORT': The 'portName' is used for health checking. \n * 'USE_SERVING_PORT': For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. \n If not specified, TCP health check follows behavior specified in 'port' and 'portName' fields. Possible values: [\"USE_FIXED_PORT\", \"USE_NAMED_PORT\", \"USE_SERVING_PORT\"]"
+
+### fn spec.forProvider.tcpHealthCheck.withProxyHeader
+
+```ts
+withProxyHeader(proxyHeader)
+```
+
+"Specifies the type of proxy header to append before sending data to the backend. Default value: \"NONE\" Possible values: [\"NONE\", \"PROXY_V1\"]"
+
+### fn spec.forProvider.tcpHealthCheck.withRequest
+
+```ts
+withRequest(request)
+```
+
+"The application data to send once the TCP connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII."
+
+### fn spec.forProvider.tcpHealthCheck.withResponse
+
+```ts
+withResponse(response)
+```
+
+"The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII."
 
 ## obj spec.providerConfigRef
 

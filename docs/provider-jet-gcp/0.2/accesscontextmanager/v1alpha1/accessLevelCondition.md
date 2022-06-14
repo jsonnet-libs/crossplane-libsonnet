@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/accesscontextmanager/v1alpha1/accessLevelCondit
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,19 @@ permalink: /provider-jet-gcp/0.2/accesscontextmanager/v1alpha1/accessLevelCondit
     * [`fn withRegionsMixin(regions)`](#fn-specforproviderwithregionsmixin)
     * [`fn withRequiredAccessLevels(requiredAccessLevels)`](#fn-specforproviderwithrequiredaccesslevels)
     * [`fn withRequiredAccessLevelsMixin(requiredAccessLevels)`](#fn-specforproviderwithrequiredaccesslevelsmixin)
+    * [`obj spec.forProvider.devicePolicy`](#obj-specforproviderdevicepolicy)
+      * [`fn withAllowedDeviceManagementLevels(allowedDeviceManagementLevels)`](#fn-specforproviderdevicepolicywithalloweddevicemanagementlevels)
+      * [`fn withAllowedDeviceManagementLevelsMixin(allowedDeviceManagementLevels)`](#fn-specforproviderdevicepolicywithalloweddevicemanagementlevelsmixin)
+      * [`fn withAllowedEncryptionStatuses(allowedEncryptionStatuses)`](#fn-specforproviderdevicepolicywithallowedencryptionstatuses)
+      * [`fn withAllowedEncryptionStatusesMixin(allowedEncryptionStatuses)`](#fn-specforproviderdevicepolicywithallowedencryptionstatusesmixin)
+      * [`fn withOsConstraints(osConstraints)`](#fn-specforproviderdevicepolicywithosconstraints)
+      * [`fn withOsConstraintsMixin(osConstraints)`](#fn-specforproviderdevicepolicywithosconstraintsmixin)
+      * [`fn withRequireAdminApproval(requireAdminApproval)`](#fn-specforproviderdevicepolicywithrequireadminapproval)
+      * [`fn withRequireCorpOwned(requireCorpOwned)`](#fn-specforproviderdevicepolicywithrequirecorpowned)
+      * [`fn withRequireScreenLock(requireScreenLock)`](#fn-specforproviderdevicepolicywithrequirescreenlock)
+      * [`obj spec.forProvider.devicePolicy.osConstraints`](#obj-specforproviderdevicepolicyosconstraints)
+        * [`fn withMinimumVersion(minimumVersion)`](#fn-specforproviderdevicepolicyosconstraintswithminimumversion)
+        * [`fn withOsType(osType)`](#fn-specforproviderdevicepolicyosconstraintswithostype)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +178,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -367,6 +360,108 @@ withRequiredAccessLevelsMixin(requiredAccessLevels)
 "A list of other access levels defined in the same Policy, referenced by resource name. Referencing an AccessLevel which does not exist is an error. All access levels listed must be granted for the Condition to be true. Format: accessPolicies/{policy_id}/accessLevels/{short_name}"
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.devicePolicy
+
+"Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed."
+
+### fn spec.forProvider.devicePolicy.withAllowedDeviceManagementLevels
+
+```ts
+withAllowedDeviceManagementLevels(allowedDeviceManagementLevels)
+```
+
+"A list of allowed device management levels. An empty list allows all management levels. Possible values: [\"MANAGEMENT_UNSPECIFIED\", \"NONE\", \"BASIC\", \"COMPLETE\"]"
+
+### fn spec.forProvider.devicePolicy.withAllowedDeviceManagementLevelsMixin
+
+```ts
+withAllowedDeviceManagementLevelsMixin(allowedDeviceManagementLevels)
+```
+
+"A list of allowed device management levels. An empty list allows all management levels. Possible values: [\"MANAGEMENT_UNSPECIFIED\", \"NONE\", \"BASIC\", \"COMPLETE\"]"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.devicePolicy.withAllowedEncryptionStatuses
+
+```ts
+withAllowedEncryptionStatuses(allowedEncryptionStatuses)
+```
+
+"A list of allowed encryptions statuses. An empty list allows all statuses. Possible values: [\"ENCRYPTION_UNSPECIFIED\", \"ENCRYPTION_UNSUPPORTED\", \"UNENCRYPTED\", \"ENCRYPTED\"]"
+
+### fn spec.forProvider.devicePolicy.withAllowedEncryptionStatusesMixin
+
+```ts
+withAllowedEncryptionStatusesMixin(allowedEncryptionStatuses)
+```
+
+"A list of allowed encryptions statuses. An empty list allows all statuses. Possible values: [\"ENCRYPTION_UNSPECIFIED\", \"ENCRYPTION_UNSUPPORTED\", \"UNENCRYPTED\", \"ENCRYPTED\"]"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.devicePolicy.withOsConstraints
+
+```ts
+withOsConstraints(osConstraints)
+```
+
+"A list of allowed OS versions. An empty list allows all types and all versions."
+
+### fn spec.forProvider.devicePolicy.withOsConstraintsMixin
+
+```ts
+withOsConstraintsMixin(osConstraints)
+```
+
+"A list of allowed OS versions. An empty list allows all types and all versions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.devicePolicy.withRequireAdminApproval
+
+```ts
+withRequireAdminApproval(requireAdminApproval)
+```
+
+"Whether the device needs to be approved by the customer admin."
+
+### fn spec.forProvider.devicePolicy.withRequireCorpOwned
+
+```ts
+withRequireCorpOwned(requireCorpOwned)
+```
+
+"Whether the device needs to be corp owned."
+
+### fn spec.forProvider.devicePolicy.withRequireScreenLock
+
+```ts
+withRequireScreenLock(requireScreenLock)
+```
+
+"Whether or not screenlock is required for the DevicePolicy to be true. Defaults to false."
+
+## obj spec.forProvider.devicePolicy.osConstraints
+
+"A list of allowed OS versions. An empty list allows all types and all versions."
+
+### fn spec.forProvider.devicePolicy.osConstraints.withMinimumVersion
+
+```ts
+withMinimumVersion(minimumVersion)
+```
+
+"The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: \"major.minor.patch\" such as \"10.5.301\", \"9.2.1\"."
+
+### fn spec.forProvider.devicePolicy.osConstraints.withOsType
+
+```ts
+withOsType(osType)
+```
+
+"The operating system type of the device. Possible values: [\"OS_UNSPECIFIED\", \"DESKTOP_MAC\", \"DESKTOP_WINDOWS\", \"DESKTOP_LINUX\", \"DESKTOP_CHROME_OS\", \"ANDROID\", \"IOS\"]"
 
 ## obj spec.providerConfigRef
 

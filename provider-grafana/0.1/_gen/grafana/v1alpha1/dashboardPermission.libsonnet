@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,17 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#permissions':: d.obj(help='"The permission items to add/update. Items that are omitted from the list will be removed."'),
+      permissions: {
+        '#withPermission':: d.fn(help='"Permission to associate with item. Must be one of `View`, `Edit`, or `Admin`."', args=[d.arg(name='permission', type=d.T.string)]),
+        withPermission(permission): { permission: permission },
+        '#withRole':: d.fn(help='"Manage permissions for `Viewer` or `Editor` roles."', args=[d.arg(name='role', type=d.T.string)]),
+        withRole(role): { role: role },
+        '#withTeamId':: d.fn(help='"ID of the team to manage permissions for. Defaults to `0`."', args=[d.arg(name='teamId', type=d.T.number)]),
+        withTeamId(teamId): { teamId: teamId },
+        '#withUserId':: d.fn(help='"ID of the user to manage permissions for. Defaults to `0`."', args=[d.arg(name='userId', type=d.T.number)]),
+        withUserId(userId): { userId: userId },
+      },
       '#withDashboardId':: d.fn(help='"ID of the dashboard to apply permissions to."', args=[d.arg(name='dashboardId', type=d.T.number)]),
       withDashboardId(dashboardId): { spec+: { forProvider+: { dashboardId: dashboardId } } },
       '#withPermissions':: d.fn(help='"The permission items to add/update. Items that are omitted from the list will be removed."', args=[d.arg(name='permissions', type=d.T.array)]),

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/containeranalysis/v1alpha1/occurrence/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -40,6 +38,13 @@ permalink: /provider-jet-gcp/0.2/containeranalysis/v1alpha1/occurrence/
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withRemediation(remediation)`](#fn-specforproviderwithremediation)
     * [`fn withResourceUri(resourceUri)`](#fn-specforproviderwithresourceuri)
+    * [`obj spec.forProvider.attestation`](#obj-specforproviderattestation)
+      * [`fn withSerializedPayload(serializedPayload)`](#fn-specforproviderattestationwithserializedpayload)
+      * [`fn withSignatures(signatures)`](#fn-specforproviderattestationwithsignatures)
+      * [`fn withSignaturesMixin(signatures)`](#fn-specforproviderattestationwithsignaturesmixin)
+      * [`obj spec.forProvider.attestation.signatures`](#obj-specforproviderattestationsignatures)
+        * [`fn withPublicKeyId(publicKeyId)`](#fn-specforproviderattestationsignatureswithpublickeyid)
+        * [`fn withSignature(signature)`](#fn-specforproviderattestationsignatureswithsignature)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -161,24 +166,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -305,6 +292,56 @@ withResourceUri(resourceUri)
 ```
 
 "Required. Immutable. A URI that represents the resource for which the occurrence applies. For example, https://gcr.io/project/image@sha256:123abc for a Docker image."
+
+## obj spec.forProvider.attestation
+
+"Occurrence that represents a single \"attestation\". The authenticity of an attestation can be verified using the attached signature. If the verifier trusts the public key of the signer, then verifying the signature is sufficient to establish trust. In this circumstance, the authority to which this attestation is attached is primarily useful for lookup (how to find this attestation if you already know the authority and artifact to be verified) and intent (for which authority this attestation was intended to sign."
+
+### fn spec.forProvider.attestation.withSerializedPayload
+
+```ts
+withSerializedPayload(serializedPayload)
+```
+
+"The serialized payload that is verified by one or more signatures. A base64-encoded string."
+
+### fn spec.forProvider.attestation.withSignatures
+
+```ts
+withSignatures(signatures)
+```
+
+"One or more signatures over serializedPayload. Verifier implementations should consider this attestation message verified if at least one signature verifies serializedPayload. See Signature in common.proto for more details on signature structure and verification."
+
+### fn spec.forProvider.attestation.withSignaturesMixin
+
+```ts
+withSignaturesMixin(signatures)
+```
+
+"One or more signatures over serializedPayload. Verifier implementations should consider this attestation message verified if at least one signature verifies serializedPayload. See Signature in common.proto for more details on signature structure and verification."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.attestation.signatures
+
+"One or more signatures over serializedPayload. Verifier implementations should consider this attestation message verified if at least one signature verifies serializedPayload. See Signature in common.proto for more details on signature structure and verification."
+
+### fn spec.forProvider.attestation.signatures.withPublicKeyId
+
+```ts
+withPublicKeyId(publicKeyId)
+```
+
+"The identifier for the public key that verifies this signature. MUST be an RFC3986 conformant URI. * When possible, the key id should be an immutable reference, such as a cryptographic digest. Examples of valid values: \n * OpenPGP V4 public key fingerprint. See https://www.iana.org/assignments/uri-schemes/prov/openpgp4fpr for more details on this scheme. * 'openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA' * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization): * \"ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU\
+
+### fn spec.forProvider.attestation.signatures.withSignature
+
+```ts
+withSignature(signature)
+```
+
+"The content of the signature, an opaque bytestring. The payload that this signature verifies MUST be unambiguously provided with the Signature during verification. A wrapper message might provide the payload explicitly. Alternatively, a message might have a canonical serialization that can always be unambiguously computed to derive the payload."
 
 ## obj spec.providerConfigRef
 

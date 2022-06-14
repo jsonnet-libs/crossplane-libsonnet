@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/dialogflowcx/v1alpha1/intent/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,18 @@ permalink: /provider-jet-gcp/0.2/dialogflowcx/v1alpha1/intent/
     * [`fn withPriority(priority)`](#fn-specforproviderwithpriority)
     * [`fn withTrainingPhrases(trainingPhrases)`](#fn-specforproviderwithtrainingphrases)
     * [`fn withTrainingPhrasesMixin(trainingPhrases)`](#fn-specforproviderwithtrainingphrasesmixin)
+    * [`obj spec.forProvider.parameters`](#obj-specforproviderparameters)
+      * [`fn withEntityType(entityType)`](#fn-specforproviderparameterswithentitytype)
+      * [`fn withId(id)`](#fn-specforproviderparameterswithid)
+      * [`fn withIsList(isList)`](#fn-specforproviderparameterswithislist)
+      * [`fn withRedact(redact)`](#fn-specforproviderparameterswithredact)
+    * [`obj spec.forProvider.trainingPhrases`](#obj-specforprovidertrainingphrases)
+      * [`fn withParts(parts)`](#fn-specforprovidertrainingphraseswithparts)
+      * [`fn withPartsMixin(parts)`](#fn-specforprovidertrainingphraseswithpartsmixin)
+      * [`fn withRepeatCount(repeatCount)`](#fn-specforprovidertrainingphraseswithrepeatcount)
+      * [`obj spec.forProvider.trainingPhrases.parts`](#obj-specforprovidertrainingphrasesparts)
+        * [`fn withParameterId(parameterId)`](#fn-specforprovidertrainingphrasespartswithparameterid)
+        * [`fn withText(text)`](#fn-specforprovidertrainingphrasespartswithtext)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +177,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -363,6 +355,92 @@ withTrainingPhrasesMixin(trainingPhrases)
 "The collection of training phrases the agent is trained on to identify the intent."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.parameters
+
+"The collection of parameters associated with the intent."
+
+### fn spec.forProvider.parameters.withEntityType
+
+```ts
+withEntityType(entityType)
+```
+
+"The entity type of the parameter. Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types."
+
+### fn spec.forProvider.parameters.withId
+
+```ts
+withId(id)
+```
+
+"The unique identifier of the parameter. This field is used by training phrases to annotate their parts."
+
+### fn spec.forProvider.parameters.withIsList
+
+```ts
+withIsList(isList)
+```
+
+"Indicates whether the parameter represents a list of values."
+
+### fn spec.forProvider.parameters.withRedact
+
+```ts
+withRedact(redact)
+```
+
+"Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled."
+
+## obj spec.forProvider.trainingPhrases
+
+"The collection of training phrases the agent is trained on to identify the intent."
+
+### fn spec.forProvider.trainingPhrases.withParts
+
+```ts
+withParts(parts)
+```
+
+"The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: Part.text is set to a part of the phrase that has no parameters. Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set."
+
+### fn spec.forProvider.trainingPhrases.withPartsMixin
+
+```ts
+withPartsMixin(parts)
+```
+
+"The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: Part.text is set to a part of the phrase that has no parameters. Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.trainingPhrases.withRepeatCount
+
+```ts
+withRepeatCount(repeatCount)
+```
+
+"Indicates how many times this example was added to the intent."
+
+## obj spec.forProvider.trainingPhrases.parts
+
+"The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: Part.text is set to a part of the phrase that has no parameters. Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set."
+
+### fn spec.forProvider.trainingPhrases.parts.withParameterId
+
+```ts
+withParameterId(parameterId)
+```
+
+"The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase."
+
+### fn spec.forProvider.trainingPhrases.parts.withText
+
+```ts
+withText(text)
+```
+
+"The text for this part."
 
 ## obj spec.providerConfigRef
 

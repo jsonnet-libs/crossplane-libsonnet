@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/lambda/v1beta1/function/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -67,6 +65,9 @@ permalink: /provider-aws/0.24/lambda/v1beta1/function/
     * [`obj spec.forProvider.environment`](#obj-specforproviderenvironment)
       * [`fn withVariables(variables)`](#fn-specforproviderenvironmentwithvariables)
       * [`fn withVariablesMixin(variables)`](#fn-specforproviderenvironmentwithvariablesmixin)
+    * [`obj spec.forProvider.fileSystemConfigs`](#obj-specforproviderfilesystemconfigs)
+      * [`fn withArn(arn)`](#fn-specforproviderfilesystemconfigswitharn)
+      * [`fn withLocalMountPath(localMountPath)`](#fn-specforproviderfilesystemconfigswithlocalmountpath)
     * [`obj spec.forProvider.imageConfig`](#obj-specforproviderimageconfig)
       * [`fn withCommand(command)`](#fn-specforproviderimageconfigwithcommand)
       * [`fn withCommandMixin(command)`](#fn-specforproviderimageconfigwithcommandmixin)
@@ -96,10 +97,14 @@ permalink: /provider-aws/0.24/lambda/v1beta1/function/
       * [`fn withSubnetIDRefsMixin(subnetIDRefs)`](#fn-specforprovidervpcconfigwithsubnetidrefsmixin)
       * [`fn withSubnetIDs(subnetIDs)`](#fn-specforprovidervpcconfigwithsubnetids)
       * [`fn withSubnetIDsMixin(subnetIDs)`](#fn-specforprovidervpcconfigwithsubnetidsmixin)
+      * [`obj spec.forProvider.vpcConfig.securityGroupIDRefs`](#obj-specforprovidervpcconfigsecuritygroupidrefs)
+        * [`fn withName(name)`](#fn-specforprovidervpcconfigsecuritygroupidrefswithname)
       * [`obj spec.forProvider.vpcConfig.securityGroupIDSelector`](#obj-specforprovidervpcconfigsecuritygroupidselector)
         * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidervpcconfigsecuritygroupidselectorwithmatchcontrollerref)
         * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidervpcconfigsecuritygroupidselectorwithmatchlabels)
         * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidervpcconfigsecuritygroupidselectorwithmatchlabelsmixin)
+      * [`obj spec.forProvider.vpcConfig.subnetIDRefs`](#obj-specforprovidervpcconfigsubnetidrefs)
+        * [`fn withName(name)`](#fn-specforprovidervpcconfigsubnetidrefswithname)
       * [`obj spec.forProvider.vpcConfig.subnetIDSelector`](#obj-specforprovidervpcconfigsubnetidselector)
         * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidervpcconfigsubnetidselectorwithmatchcontrollerref)
         * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidervpcconfigsubnetidselectorwithmatchlabels)
@@ -225,24 +230,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -574,6 +561,26 @@ withVariablesMixin(variables)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.fileSystemConfigs
+
+"Connection settings for an Amazon EFS file system."
+
+### fn spec.forProvider.fileSystemConfigs.withArn
+
+```ts
+withArn(arn)
+```
+
+
+
+### fn spec.forProvider.fileSystemConfigs.withLocalMountPath
+
+```ts
+withLocalMountPath(localMountPath)
+```
+
+
+
 ## obj spec.forProvider.imageConfig
 
 "Container image configuration values (https://docs.aws.amazon.com/lambda/latest/dg/images-parms.html) that override the values in the container image Dockerfile."
@@ -794,6 +801,18 @@ withSubnetIDsMixin(subnetIDs)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.vpcConfig.securityGroupIDRefs
+
+"SecurityGroupIDRefs is a list of references to SecurityGroups used to set the SecurityGroupIDs."
+
+### fn spec.forProvider.vpcConfig.securityGroupIDRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
 ## obj spec.forProvider.vpcConfig.securityGroupIDSelector
 
 "SecurityGroupIDsSelector selects references to SecurityGroupID used to set the SecurityGroupIDs."
@@ -823,6 +842,18 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.vpcConfig.subnetIDRefs
+
+"SubnetIDRefs is a list of references to Subnets used to set the SubnetIDs."
+
+### fn spec.forProvider.vpcConfig.subnetIDRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
 
 ## obj spec.forProvider.vpcConfig.subnetIDSelector
 

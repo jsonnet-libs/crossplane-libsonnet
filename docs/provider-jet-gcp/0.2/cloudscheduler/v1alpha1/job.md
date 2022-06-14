@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/cloudscheduler/v1alpha1/job/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -49,6 +47,45 @@ permalink: /provider-jet-gcp/0.2/cloudscheduler/v1alpha1/job/
     * [`fn withRetryConfigMixin(retryConfig)`](#fn-specforproviderwithretryconfigmixin)
     * [`fn withSchedule(schedule)`](#fn-specforproviderwithschedule)
     * [`fn withTimeZone(timeZone)`](#fn-specforproviderwithtimezone)
+    * [`obj spec.forProvider.appEngineHttpTarget`](#obj-specforproviderappenginehttptarget)
+      * [`fn withAppEngineRouting(appEngineRouting)`](#fn-specforproviderappenginehttptargetwithappenginerouting)
+      * [`fn withAppEngineRoutingMixin(appEngineRouting)`](#fn-specforproviderappenginehttptargetwithappengineroutingmixin)
+      * [`fn withBody(body)`](#fn-specforproviderappenginehttptargetwithbody)
+      * [`fn withHeaders(headers)`](#fn-specforproviderappenginehttptargetwithheaders)
+      * [`fn withHeadersMixin(headers)`](#fn-specforproviderappenginehttptargetwithheadersmixin)
+      * [`fn withHttpMethod(httpMethod)`](#fn-specforproviderappenginehttptargetwithhttpmethod)
+      * [`fn withRelativeUri(relativeUri)`](#fn-specforproviderappenginehttptargetwithrelativeuri)
+      * [`obj spec.forProvider.appEngineHttpTarget.appEngineRouting`](#obj-specforproviderappenginehttptargetappenginerouting)
+        * [`fn withInstance(instance)`](#fn-specforproviderappenginehttptargetappengineroutingwithinstance)
+        * [`fn withService(service)`](#fn-specforproviderappenginehttptargetappengineroutingwithservice)
+        * [`fn withVersion(version)`](#fn-specforproviderappenginehttptargetappengineroutingwithversion)
+    * [`obj spec.forProvider.httpTarget`](#obj-specforproviderhttptarget)
+      * [`fn withBody(body)`](#fn-specforproviderhttptargetwithbody)
+      * [`fn withHeaders(headers)`](#fn-specforproviderhttptargetwithheaders)
+      * [`fn withHeadersMixin(headers)`](#fn-specforproviderhttptargetwithheadersmixin)
+      * [`fn withHttpMethod(httpMethod)`](#fn-specforproviderhttptargetwithhttpmethod)
+      * [`fn withOauthToken(oauthToken)`](#fn-specforproviderhttptargetwithoauthtoken)
+      * [`fn withOauthTokenMixin(oauthToken)`](#fn-specforproviderhttptargetwithoauthtokenmixin)
+      * [`fn withOidcToken(oidcToken)`](#fn-specforproviderhttptargetwithoidctoken)
+      * [`fn withOidcTokenMixin(oidcToken)`](#fn-specforproviderhttptargetwithoidctokenmixin)
+      * [`fn withUri(uri)`](#fn-specforproviderhttptargetwithuri)
+      * [`obj spec.forProvider.httpTarget.oauthToken`](#obj-specforproviderhttptargetoauthtoken)
+        * [`fn withScope(scope)`](#fn-specforproviderhttptargetoauthtokenwithscope)
+        * [`fn withServiceAccountEmail(serviceAccountEmail)`](#fn-specforproviderhttptargetoauthtokenwithserviceaccountemail)
+      * [`obj spec.forProvider.httpTarget.oidcToken`](#obj-specforproviderhttptargetoidctoken)
+        * [`fn withAudience(audience)`](#fn-specforproviderhttptargetoidctokenwithaudience)
+        * [`fn withServiceAccountEmail(serviceAccountEmail)`](#fn-specforproviderhttptargetoidctokenwithserviceaccountemail)
+    * [`obj spec.forProvider.pubsubTarget`](#obj-specforproviderpubsubtarget)
+      * [`fn withAttributes(attributes)`](#fn-specforproviderpubsubtargetwithattributes)
+      * [`fn withAttributesMixin(attributes)`](#fn-specforproviderpubsubtargetwithattributesmixin)
+      * [`fn withData(data)`](#fn-specforproviderpubsubtargetwithdata)
+      * [`fn withTopicName(topicName)`](#fn-specforproviderpubsubtargetwithtopicname)
+    * [`obj spec.forProvider.retryConfig`](#obj-specforproviderretryconfig)
+      * [`fn withMaxBackoffDuration(maxBackoffDuration)`](#fn-specforproviderretryconfigwithmaxbackoffduration)
+      * [`fn withMaxDoublings(maxDoublings)`](#fn-specforproviderretryconfigwithmaxdoublings)
+      * [`fn withMaxRetryDuration(maxRetryDuration)`](#fn-specforproviderretryconfigwithmaxretryduration)
+      * [`fn withMinBackoffDuration(minBackoffDuration)`](#fn-specforproviderretryconfigwithminbackoffduration)
+      * [`fn withRetryCount(retryCount)`](#fn-specforproviderretryconfigwithretrycount)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -170,24 +207,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -392,6 +411,302 @@ withTimeZone(timeZone)
 ```
 
 "Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the tz database."
+
+## obj spec.forProvider.appEngineHttpTarget
+
+"App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service instance"
+
+### fn spec.forProvider.appEngineHttpTarget.withAppEngineRouting
+
+```ts
+withAppEngineRouting(appEngineRouting)
+```
+
+"App Engine Routing setting for the job."
+
+### fn spec.forProvider.appEngineHttpTarget.withAppEngineRoutingMixin
+
+```ts
+withAppEngineRoutingMixin(appEngineRouting)
+```
+
+"App Engine Routing setting for the job."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.appEngineHttpTarget.withBody
+
+```ts
+withBody(body)
+```
+
+"HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It will result in invalid argument error to set a body on a job with an incompatible HttpMethod. \n A base64-encoded string."
+
+### fn spec.forProvider.appEngineHttpTarget.withHeaders
+
+```ts
+withHeaders(headers)
+```
+
+"HTTP request headers. This map contains the header field names and values. Headers can be set when the job is created."
+
+### fn spec.forProvider.appEngineHttpTarget.withHeadersMixin
+
+```ts
+withHeadersMixin(headers)
+```
+
+"HTTP request headers. This map contains the header field names and values. Headers can be set when the job is created."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.appEngineHttpTarget.withHttpMethod
+
+```ts
+withHttpMethod(httpMethod)
+```
+
+"Which HTTP method to use for the request."
+
+### fn spec.forProvider.appEngineHttpTarget.withRelativeUri
+
+```ts
+withRelativeUri(relativeUri)
+```
+
+"The relative URI. The relative URL must begin with \"/\" and must be a valid HTTP relative URL. It can contain a path, query string arguments, and \\# fragments. If the relative URL is empty, then the root path \"/\" will be used. No spaces are allowed, and the maximum length allowed is 2083 characters"
+
+## obj spec.forProvider.appEngineHttpTarget.appEngineRouting
+
+"App Engine Routing setting for the job."
+
+### fn spec.forProvider.appEngineHttpTarget.appEngineRouting.withInstance
+
+```ts
+withInstance(instance)
+```
+
+"App instance. By default, the job is sent to an instance which is available when the job is attempted."
+
+### fn spec.forProvider.appEngineHttpTarget.appEngineRouting.withService
+
+```ts
+withService(service)
+```
+
+"App service. By default, the job is sent to the service which is the default service when the job is attempted."
+
+### fn spec.forProvider.appEngineHttpTarget.appEngineRouting.withVersion
+
+```ts
+withVersion(version)
+```
+
+"App version. By default, the job is sent to the version which is the default version when the job is attempted."
+
+## obj spec.forProvider.httpTarget
+
+"HTTP target. If the job providers a http_target the cron will send a request to the targeted url"
+
+### fn spec.forProvider.httpTarget.withBody
+
+```ts
+withBody(body)
+```
+
+"HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a job with an incompatible HttpMethod. \n A base64-encoded string."
+
+### fn spec.forProvider.httpTarget.withHeaders
+
+```ts
+withHeaders(headers)
+```
+
+"This map contains the header field names and values. Repeated headers are not supported, but a header value can contain commas."
+
+### fn spec.forProvider.httpTarget.withHeadersMixin
+
+```ts
+withHeadersMixin(headers)
+```
+
+"This map contains the header field names and values. Repeated headers are not supported, but a header value can contain commas."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.httpTarget.withHttpMethod
+
+```ts
+withHttpMethod(httpMethod)
+```
+
+"Which HTTP method to use for the request."
+
+### fn spec.forProvider.httpTarget.withOauthToken
+
+```ts
+withOauthToken(oauthToken)
+```
+
+"Contains information needed for generating an OAuth token. This type of authorization should be used when sending requests to a GCP endpoint."
+
+### fn spec.forProvider.httpTarget.withOauthTokenMixin
+
+```ts
+withOauthTokenMixin(oauthToken)
+```
+
+"Contains information needed for generating an OAuth token. This type of authorization should be used when sending requests to a GCP endpoint."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.httpTarget.withOidcToken
+
+```ts
+withOidcToken(oidcToken)
+```
+
+"Contains information needed for generating an OpenID Connect token. This type of authorization should be used when sending requests to third party endpoints or Cloud Run."
+
+### fn spec.forProvider.httpTarget.withOidcTokenMixin
+
+```ts
+withOidcTokenMixin(oidcToken)
+```
+
+"Contains information needed for generating an OpenID Connect token. This type of authorization should be used when sending requests to third party endpoints or Cloud Run."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.httpTarget.withUri
+
+```ts
+withUri(uri)
+```
+
+"The full URI path that the request will be sent to."
+
+## obj spec.forProvider.httpTarget.oauthToken
+
+"Contains information needed for generating an OAuth token. This type of authorization should be used when sending requests to a GCP endpoint."
+
+### fn spec.forProvider.httpTarget.oauthToken.withScope
+
+```ts
+withScope(scope)
+```
+
+"OAuth scope to be used for generating OAuth access token. If not specified, \"https://www.googleapis.com/auth/cloud-platform\" will be used."
+
+### fn spec.forProvider.httpTarget.oauthToken.withServiceAccountEmail
+
+```ts
+withServiceAccountEmail(serviceAccountEmail)
+```
+
+"Service account email to be used for generating OAuth token. The service account must be within the same project as the job."
+
+## obj spec.forProvider.httpTarget.oidcToken
+
+"Contains information needed for generating an OpenID Connect token. This type of authorization should be used when sending requests to third party endpoints or Cloud Run."
+
+### fn spec.forProvider.httpTarget.oidcToken.withAudience
+
+```ts
+withAudience(audience)
+```
+
+"Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used."
+
+### fn spec.forProvider.httpTarget.oidcToken.withServiceAccountEmail
+
+```ts
+withServiceAccountEmail(serviceAccountEmail)
+```
+
+"Service account email to be used for generating OAuth token. The service account must be within the same project as the job."
+
+## obj spec.forProvider.pubsubTarget
+
+"Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic"
+
+### fn spec.forProvider.pubsubTarget.withAttributes
+
+```ts
+withAttributes(attributes)
+```
+
+"Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute."
+
+### fn spec.forProvider.pubsubTarget.withAttributesMixin
+
+```ts
+withAttributesMixin(attributes)
+```
+
+"Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.pubsubTarget.withData
+
+```ts
+withData(data)
+```
+
+"The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute. \n A base64-encoded string."
+
+### fn spec.forProvider.pubsubTarget.withTopicName
+
+```ts
+withTopicName(topicName)
+```
+
+"The full resource name for the Cloud Pub/Sub topic to which messages will be published when a job is delivered. ~>**NOTE:** The topic name must be in the same format as required by PubSub's PublishRequest.name, e.g. 'projects/my-project/topics/my-topic'."
+
+## obj spec.forProvider.retryConfig
+
+"By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler, then it will be retried with exponential backoff according to the settings"
+
+### fn spec.forProvider.retryConfig.withMaxBackoffDuration
+
+```ts
+withMaxBackoffDuration(maxBackoffDuration)
+```
+
+"The maximum amount of time to wait before retrying a job after it fails. A duration in seconds with up to nine fractional digits, terminated by 's'."
+
+### fn spec.forProvider.retryConfig.withMaxDoublings
+
+```ts
+withMaxDoublings(maxDoublings)
+```
+
+"The time between retries will double maxDoublings times. A job's retry interval starts at minBackoffDuration, then doubles maxDoublings times, then increases linearly, and finally retries retries at intervals of maxBackoffDuration up to retryCount times."
+
+### fn spec.forProvider.retryConfig.withMaxRetryDuration
+
+```ts
+withMaxRetryDuration(maxRetryDuration)
+```
+
+"The time limit for retrying a failed job, measured from time when an execution was first attempted. If specified with retryCount, the job will be retried until both limits are reached. A duration in seconds with up to nine fractional digits, terminated by 's'."
+
+### fn spec.forProvider.retryConfig.withMinBackoffDuration
+
+```ts
+withMinBackoffDuration(minBackoffDuration)
+```
+
+"The minimum amount of time to wait before retrying a job after it fails. A duration in seconds with up to nine fractional digits, terminated by 's'."
+
+### fn spec.forProvider.retryConfig.withRetryCount
+
+```ts
+withRetryCount(retryCount)
+```
+
+"The number of attempts that the system will make to run a job using the exponential backoff procedure described by maxDoublings. Values greater than 5 and negative values are not allowed."
 
 ## obj spec.providerConfigRef
 

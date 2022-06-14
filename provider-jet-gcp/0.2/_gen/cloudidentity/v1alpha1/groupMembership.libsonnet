@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,18 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#preferredMemberKey':: d.obj(help='"EntityKey of the member."'),
+      preferredMemberKey: {
+        '#withId':: d.fn(help="\"The ID of the entity. \\n For Google-managed entities, the id must be the email address of an existing group or user. \\n For external-identity-mapped entities, the id must be a string conforming to the Identity Source's requirements. \\n Must be unique within a namespace.\"", args=[d.arg(name='id', type=d.T.string)]),
+        withId(id): { id: id },
+        '#withNamespace':: d.fn(help="\"The namespace in which the entity exists. \\n If not specified, the EntityKey represents a Google-managed entity such as a Google user or a Google Group. \\n If specified, the EntityKey represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of 'identitysources/{identity_source_id}'.\"", args=[d.arg(name='namespace', type=d.T.string)]),
+        withNamespace(namespace): { namespace: namespace },
+      },
+      '#roles':: d.obj(help='"The MembershipRoles that apply to the Membership. Must not contain duplicate MembershipRoles with the same name."'),
+      roles: {
+        '#withName':: d.fn(help='"The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER. Possible values: [\\"OWNER\\", \\"MANAGER\\", \\"MEMBER\\"]"', args=[d.arg(name='name', type=d.T.string)]),
+        withName(name): { name: name },
+      },
       '#withGroup':: d.fn(help='"The name of the Group to create this membership in."', args=[d.arg(name='group', type=d.T.string)]),
       withGroup(group): { spec+: { forProvider+: { group: group } } },
       '#withPreferredMemberKey':: d.fn(help='"EntityKey of the member."', args=[d.arg(name='preferredMemberKey', type=d.T.array)]),

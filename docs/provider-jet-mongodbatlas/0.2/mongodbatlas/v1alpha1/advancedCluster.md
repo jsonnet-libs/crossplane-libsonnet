@@ -22,8 +22,6 @@ permalink: /provider-jet-mongodbatlas/0.2/mongodbatlas/v1alpha1/advancedCluster/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -51,12 +49,57 @@ permalink: /provider-jet-mongodbatlas/0.2/mongodbatlas/v1alpha1/advancedCluster/
     * [`fn withReplicationSpecsMixin(replicationSpecs)`](#fn-specforproviderwithreplicationspecsmixin)
     * [`fn withRootCertType(rootCertType)`](#fn-specforproviderwithrootcerttype)
     * [`fn withVersionReleaseSystem(versionReleaseSystem)`](#fn-specforproviderwithversionreleasesystem)
+    * [`obj spec.forProvider.biConnector`](#obj-specforproviderbiconnector)
+      * [`fn withEnabled(enabled)`](#fn-specforproviderbiconnectorwithenabled)
+      * [`fn withReadPreference(readPreference)`](#fn-specforproviderbiconnectorwithreadpreference)
+    * [`obj spec.forProvider.labels`](#obj-specforproviderlabels)
+      * [`fn withKey(key)`](#fn-specforproviderlabelswithkey)
+      * [`fn withValue(value)`](#fn-specforproviderlabelswithvalue)
     * [`obj spec.forProvider.projectIdRef`](#obj-specforproviderprojectidref)
       * [`fn withName(name)`](#fn-specforproviderprojectidrefwithname)
     * [`obj spec.forProvider.projectIdSelector`](#obj-specforproviderprojectidselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderprojectidselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderprojectidselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderprojectidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.replicationSpecs`](#obj-specforproviderreplicationspecs)
+      * [`fn withNumShards(numShards)`](#fn-specforproviderreplicationspecswithnumshards)
+      * [`fn withRegionConfigs(regionConfigs)`](#fn-specforproviderreplicationspecswithregionconfigs)
+      * [`fn withRegionConfigsMixin(regionConfigs)`](#fn-specforproviderreplicationspecswithregionconfigsmixin)
+      * [`fn withZoneName(zoneName)`](#fn-specforproviderreplicationspecswithzonename)
+      * [`obj spec.forProvider.replicationSpecs.regionConfigs`](#obj-specforproviderreplicationspecsregionconfigs)
+        * [`fn withAnalyticsSpecs(analyticsSpecs)`](#fn-specforproviderreplicationspecsregionconfigswithanalyticsspecs)
+        * [`fn withAnalyticsSpecsMixin(analyticsSpecs)`](#fn-specforproviderreplicationspecsregionconfigswithanalyticsspecsmixin)
+        * [`fn withAutoScaling(autoScaling)`](#fn-specforproviderreplicationspecsregionconfigswithautoscaling)
+        * [`fn withAutoScalingMixin(autoScaling)`](#fn-specforproviderreplicationspecsregionconfigswithautoscalingmixin)
+        * [`fn withBackingProviderName(backingProviderName)`](#fn-specforproviderreplicationspecsregionconfigswithbackingprovidername)
+        * [`fn withElectableSpecs(electableSpecs)`](#fn-specforproviderreplicationspecsregionconfigswithelectablespecs)
+        * [`fn withElectableSpecsMixin(electableSpecs)`](#fn-specforproviderreplicationspecsregionconfigswithelectablespecsmixin)
+        * [`fn withPriority(priority)`](#fn-specforproviderreplicationspecsregionconfigswithpriority)
+        * [`fn withProviderName(providerName)`](#fn-specforproviderreplicationspecsregionconfigswithprovidername)
+        * [`fn withReadOnlySpecs(readOnlySpecs)`](#fn-specforproviderreplicationspecsregionconfigswithreadonlyspecs)
+        * [`fn withReadOnlySpecsMixin(readOnlySpecs)`](#fn-specforproviderreplicationspecsregionconfigswithreadonlyspecsmixin)
+        * [`fn withRegionName(regionName)`](#fn-specforproviderreplicationspecsregionconfigswithregionname)
+        * [`obj spec.forProvider.replicationSpecs.regionConfigs.analyticsSpecs`](#obj-specforproviderreplicationspecsregionconfigsanalyticsspecs)
+          * [`fn withDiskIops(diskIops)`](#fn-specforproviderreplicationspecsregionconfigsanalyticsspecswithdiskiops)
+          * [`fn withEbsVolumeType(ebsVolumeType)`](#fn-specforproviderreplicationspecsregionconfigsanalyticsspecswithebsvolumetype)
+          * [`fn withInstanceSize(instanceSize)`](#fn-specforproviderreplicationspecsregionconfigsanalyticsspecswithinstancesize)
+          * [`fn withNodeCount(nodeCount)`](#fn-specforproviderreplicationspecsregionconfigsanalyticsspecswithnodecount)
+        * [`obj spec.forProvider.replicationSpecs.regionConfigs.autoScaling`](#obj-specforproviderreplicationspecsregionconfigsautoscaling)
+          * [`fn withComputeEnabled(computeEnabled)`](#fn-specforproviderreplicationspecsregionconfigsautoscalingwithcomputeenabled)
+          * [`fn withComputeMaxInstanceSize(computeMaxInstanceSize)`](#fn-specforproviderreplicationspecsregionconfigsautoscalingwithcomputemaxinstancesize)
+          * [`fn withComputeMinInstanceSize(computeMinInstanceSize)`](#fn-specforproviderreplicationspecsregionconfigsautoscalingwithcomputemininstancesize)
+          * [`fn withComputeScaleDownEnabled(computeScaleDownEnabled)`](#fn-specforproviderreplicationspecsregionconfigsautoscalingwithcomputescaledownenabled)
+          * [`fn withDiskGbEnabled(diskGbEnabled)`](#fn-specforproviderreplicationspecsregionconfigsautoscalingwithdiskgbenabled)
+        * [`obj spec.forProvider.replicationSpecs.regionConfigs.electableSpecs`](#obj-specforproviderreplicationspecsregionconfigselectablespecs)
+          * [`fn withDiskIops(diskIops)`](#fn-specforproviderreplicationspecsregionconfigselectablespecswithdiskiops)
+          * [`fn withEbsVolumeType(ebsVolumeType)`](#fn-specforproviderreplicationspecsregionconfigselectablespecswithebsvolumetype)
+          * [`fn withInstanceSize(instanceSize)`](#fn-specforproviderreplicationspecsregionconfigselectablespecswithinstancesize)
+          * [`fn withNodeCount(nodeCount)`](#fn-specforproviderreplicationspecsregionconfigselectablespecswithnodecount)
+        * [`obj spec.forProvider.replicationSpecs.regionConfigs.readOnlySpecs`](#obj-specforproviderreplicationspecsregionconfigsreadonlyspecs)
+          * [`fn withDiskIops(diskIops)`](#fn-specforproviderreplicationspecsregionconfigsreadonlyspecswithdiskiops)
+          * [`fn withEbsVolumeType(ebsVolumeType)`](#fn-specforproviderreplicationspecsregionconfigsreadonlyspecswithebsvolumetype)
+          * [`fn withInstanceSize(instanceSize)`](#fn-specforproviderreplicationspecsregionconfigsreadonlyspecswithinstancesize)
+          * [`fn withNodeCount(nodeCount)`](#fn-specforproviderreplicationspecsregionconfigsreadonlyspecswithnodecount)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -178,24 +221,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -415,6 +440,46 @@ withVersionReleaseSystem(versionReleaseSystem)
 
 
 
+## obj spec.forProvider.biConnector
+
+
+
+### fn spec.forProvider.biConnector.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
+### fn spec.forProvider.biConnector.withReadPreference
+
+```ts
+withReadPreference(readPreference)
+```
+
+
+
+## obj spec.forProvider.labels
+
+
+
+### fn spec.forProvider.labels.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.labels.withValue
+
+```ts
+withValue(value)
+```
+
+
+
 ## obj spec.forProvider.projectIdRef
 
 "A Reference to a named object."
@@ -456,6 +521,304 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.replicationSpecs
+
+
+
+### fn spec.forProvider.replicationSpecs.withNumShards
+
+```ts
+withNumShards(numShards)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.withRegionConfigs
+
+```ts
+withRegionConfigs(regionConfigs)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.withRegionConfigsMixin
+
+```ts
+withRegionConfigsMixin(regionConfigs)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.replicationSpecs.withZoneName
+
+```ts
+withZoneName(zoneName)
+```
+
+
+
+## obj spec.forProvider.replicationSpecs.regionConfigs
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withAnalyticsSpecs
+
+```ts
+withAnalyticsSpecs(analyticsSpecs)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withAnalyticsSpecsMixin
+
+```ts
+withAnalyticsSpecsMixin(analyticsSpecs)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withAutoScaling
+
+```ts
+withAutoScaling(autoScaling)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withAutoScalingMixin
+
+```ts
+withAutoScalingMixin(autoScaling)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withBackingProviderName
+
+```ts
+withBackingProviderName(backingProviderName)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withElectableSpecs
+
+```ts
+withElectableSpecs(electableSpecs)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withElectableSpecsMixin
+
+```ts
+withElectableSpecsMixin(electableSpecs)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withPriority
+
+```ts
+withPriority(priority)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withProviderName
+
+```ts
+withProviderName(providerName)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withReadOnlySpecs
+
+```ts
+withReadOnlySpecs(readOnlySpecs)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withReadOnlySpecsMixin
+
+```ts
+withReadOnlySpecsMixin(readOnlySpecs)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.withRegionName
+
+```ts
+withRegionName(regionName)
+```
+
+
+
+## obj spec.forProvider.replicationSpecs.regionConfigs.analyticsSpecs
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.analyticsSpecs.withDiskIops
+
+```ts
+withDiskIops(diskIops)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.analyticsSpecs.withEbsVolumeType
+
+```ts
+withEbsVolumeType(ebsVolumeType)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.analyticsSpecs.withInstanceSize
+
+```ts
+withInstanceSize(instanceSize)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.analyticsSpecs.withNodeCount
+
+```ts
+withNodeCount(nodeCount)
+```
+
+
+
+## obj spec.forProvider.replicationSpecs.regionConfigs.autoScaling
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.autoScaling.withComputeEnabled
+
+```ts
+withComputeEnabled(computeEnabled)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.autoScaling.withComputeMaxInstanceSize
+
+```ts
+withComputeMaxInstanceSize(computeMaxInstanceSize)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.autoScaling.withComputeMinInstanceSize
+
+```ts
+withComputeMinInstanceSize(computeMinInstanceSize)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.autoScaling.withComputeScaleDownEnabled
+
+```ts
+withComputeScaleDownEnabled(computeScaleDownEnabled)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.autoScaling.withDiskGbEnabled
+
+```ts
+withDiskGbEnabled(diskGbEnabled)
+```
+
+
+
+## obj spec.forProvider.replicationSpecs.regionConfigs.electableSpecs
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.electableSpecs.withDiskIops
+
+```ts
+withDiskIops(diskIops)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.electableSpecs.withEbsVolumeType
+
+```ts
+withEbsVolumeType(ebsVolumeType)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.electableSpecs.withInstanceSize
+
+```ts
+withInstanceSize(instanceSize)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.electableSpecs.withNodeCount
+
+```ts
+withNodeCount(nodeCount)
+```
+
+
+
+## obj spec.forProvider.replicationSpecs.regionConfigs.readOnlySpecs
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.readOnlySpecs.withDiskIops
+
+```ts
+withDiskIops(diskIops)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.readOnlySpecs.withEbsVolumeType
+
+```ts
+withEbsVolumeType(ebsVolumeType)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.readOnlySpecs.withInstanceSize
+
+```ts
+withInstanceSize(instanceSize)
+```
+
+
+
+### fn spec.forProvider.replicationSpecs.regionConfigs.readOnlySpecs.withNodeCount
+
+```ts
+withNodeCount(nodeCount)
+```
+
+
 
 ## obj spec.providerConfigRef
 

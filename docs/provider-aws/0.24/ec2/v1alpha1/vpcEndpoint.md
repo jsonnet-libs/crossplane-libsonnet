@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/ec2/v1alpha1/vpcEndpoint/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -55,18 +53,31 @@ permalink: /provider-aws/0.24/ec2/v1alpha1/vpcEndpoint/
     * [`fn withTagSpecificationsMixin(tagSpecifications)`](#fn-specforproviderwithtagspecificationsmixin)
     * [`fn withVpcEndpointType(vpcEndpointType)`](#fn-specforproviderwithvpcendpointtype)
     * [`fn withVpcId(vpcId)`](#fn-specforproviderwithvpcid)
+    * [`obj spec.forProvider.routeTableIdRefs`](#obj-specforproviderroutetableidrefs)
+      * [`fn withName(name)`](#fn-specforproviderroutetableidrefswithname)
     * [`obj spec.forProvider.routeTableIdSelector`](#obj-specforproviderroutetableidselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderroutetableidselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderroutetableidselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderroutetableidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.securityGroupIdRefs`](#obj-specforprovidersecuritygroupidrefs)
+      * [`fn withName(name)`](#fn-specforprovidersecuritygroupidrefswithname)
     * [`obj spec.forProvider.securityGroupIdSelector`](#obj-specforprovidersecuritygroupidselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidersecuritygroupidselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidersecuritygroupidselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidersecuritygroupidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.subnetIdRefs`](#obj-specforprovidersubnetidrefs)
+      * [`fn withName(name)`](#fn-specforprovidersubnetidrefswithname)
     * [`obj spec.forProvider.subnetIdSelector`](#obj-specforprovidersubnetidselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidersubnetidselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidersubnetidselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidersubnetidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.tagSpecifications`](#obj-specforprovidertagspecifications)
+      * [`fn withResourceType(resourceType)`](#fn-specforprovidertagspecificationswithresourcetype)
+      * [`fn withTags(tags)`](#fn-specforprovidertagspecificationswithtags)
+      * [`fn withTagsMixin(tags)`](#fn-specforprovidertagspecificationswithtagsmixin)
+      * [`obj spec.forProvider.tagSpecifications.tags`](#obj-specforprovidertagspecificationstags)
+        * [`fn withKey(key)`](#fn-specforprovidertagspecificationstagswithkey)
+        * [`fn withValue(value)`](#fn-specforprovidertagspecificationstagswithvalue)
     * [`obj spec.forProvider.vpcIdRef`](#obj-specforprovidervpcidref)
       * [`fn withName(name)`](#fn-specforprovidervpcidrefwithname)
     * [`obj spec.forProvider.vpcIdSelector`](#obj-specforprovidervpcidselector)
@@ -194,24 +205,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -471,6 +464,18 @@ withVpcId(vpcId)
 
 "The ID of the VPC. You must specify this parameter in the request."
 
+## obj spec.forProvider.routeTableIdRefs
+
+"RouteTableIDRefs is a list of references to RouteTables used to set the RouteTableIDs."
+
+### fn spec.forProvider.routeTableIdRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
 ## obj spec.forProvider.routeTableIdSelector
 
 "RouteTableIDsSelector selects references to RouteTables used to set the RouteTableIDs."
@@ -500,6 +505,18 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.securityGroupIdRefs
+
+"SecurityGroupIDRefs is a list of references to SecurityGroups used to set the SecurityGroupIDs."
+
+### fn spec.forProvider.securityGroupIdRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
 
 ## obj spec.forProvider.securityGroupIdSelector
 
@@ -531,6 +548,18 @@ withMatchLabelsMixin(matchLabels)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.subnetIdRefs
+
+"SubnetIDRefs is a list of references to Subnets used to set the SubnetIDs."
+
+### fn spec.forProvider.subnetIdRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
 ## obj spec.forProvider.subnetIdSelector
 
 "SubnetIDsSelector selects references to Subnets used to set the SubnetIDs."
@@ -560,6 +589,56 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.tagSpecifications
+
+"The tags to associate with the endpoint."
+
+### fn spec.forProvider.tagSpecifications.withResourceType
+
+```ts
+withResourceType(resourceType)
+```
+
+
+
+### fn spec.forProvider.tagSpecifications.withTags
+
+```ts
+withTags(tags)
+```
+
+
+
+### fn spec.forProvider.tagSpecifications.withTagsMixin
+
+```ts
+withTagsMixin(tags)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.tagSpecifications.tags
+
+
+
+### fn spec.forProvider.tagSpecifications.tags.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.tagSpecifications.tags.withValue
+
+```ts
+withValue(value)
+```
+
+
 
 ## obj spec.forProvider.vpcIdRef
 

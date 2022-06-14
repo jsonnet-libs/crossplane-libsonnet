@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/monitoring/v1alpha2/alertPolicy/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,68 @@ permalink: /provider-jet-gcp/0.2/monitoring/v1alpha2/alertPolicy/
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withUserLabels(userLabels)`](#fn-specforproviderwithuserlabels)
     * [`fn withUserLabelsMixin(userLabels)`](#fn-specforproviderwithuserlabelsmixin)
+    * [`obj spec.forProvider.conditions`](#obj-specforproviderconditions)
+      * [`fn withConditionAbsent(conditionAbsent)`](#fn-specforproviderconditionswithconditionabsent)
+      * [`fn withConditionAbsentMixin(conditionAbsent)`](#fn-specforproviderconditionswithconditionabsentmixin)
+      * [`fn withConditionMonitoringQueryLanguage(conditionMonitoringQueryLanguage)`](#fn-specforproviderconditionswithconditionmonitoringquerylanguage)
+      * [`fn withConditionMonitoringQueryLanguageMixin(conditionMonitoringQueryLanguage)`](#fn-specforproviderconditionswithconditionmonitoringquerylanguagemixin)
+      * [`fn withConditionThreshold(conditionThreshold)`](#fn-specforproviderconditionswithconditionthreshold)
+      * [`fn withConditionThresholdMixin(conditionThreshold)`](#fn-specforproviderconditionswithconditionthresholdmixin)
+      * [`fn withDisplayName(displayName)`](#fn-specforproviderconditionswithdisplayname)
+      * [`obj spec.forProvider.conditions.conditionAbsent`](#obj-specforproviderconditionsconditionabsent)
+        * [`fn withAggregations(aggregations)`](#fn-specforproviderconditionsconditionabsentwithaggregations)
+        * [`fn withAggregationsMixin(aggregations)`](#fn-specforproviderconditionsconditionabsentwithaggregationsmixin)
+        * [`fn withDuration(duration)`](#fn-specforproviderconditionsconditionabsentwithduration)
+        * [`fn withFilter(filter)`](#fn-specforproviderconditionsconditionabsentwithfilter)
+        * [`fn withTrigger(trigger)`](#fn-specforproviderconditionsconditionabsentwithtrigger)
+        * [`fn withTriggerMixin(trigger)`](#fn-specforproviderconditionsconditionabsentwithtriggermixin)
+        * [`obj spec.forProvider.conditions.conditionAbsent.aggregations`](#obj-specforproviderconditionsconditionabsentaggregations)
+          * [`fn withAlignmentPeriod(alignmentPeriod)`](#fn-specforproviderconditionsconditionabsentaggregationswithalignmentperiod)
+          * [`fn withCrossSeriesReducer(crossSeriesReducer)`](#fn-specforproviderconditionsconditionabsentaggregationswithcrossseriesreducer)
+          * [`fn withGroupByFields(groupByFields)`](#fn-specforproviderconditionsconditionabsentaggregationswithgroupbyfields)
+          * [`fn withGroupByFieldsMixin(groupByFields)`](#fn-specforproviderconditionsconditionabsentaggregationswithgroupbyfieldsmixin)
+          * [`fn withPerSeriesAligner(perSeriesAligner)`](#fn-specforproviderconditionsconditionabsentaggregationswithperseriesaligner)
+        * [`obj spec.forProvider.conditions.conditionAbsent.trigger`](#obj-specforproviderconditionsconditionabsenttrigger)
+          * [`fn withCount(count)`](#fn-specforproviderconditionsconditionabsenttriggerwithcount)
+          * [`fn withPercent(percent)`](#fn-specforproviderconditionsconditionabsenttriggerwithpercent)
+      * [`obj spec.forProvider.conditions.conditionMonitoringQueryLanguage`](#obj-specforproviderconditionsconditionmonitoringquerylanguage)
+        * [`fn withDuration(duration)`](#fn-specforproviderconditionsconditionmonitoringquerylanguagewithduration)
+        * [`fn withQuery(query)`](#fn-specforproviderconditionsconditionmonitoringquerylanguagewithquery)
+        * [`fn withTrigger(trigger)`](#fn-specforproviderconditionsconditionmonitoringquerylanguagewithtrigger)
+        * [`fn withTriggerMixin(trigger)`](#fn-specforproviderconditionsconditionmonitoringquerylanguagewithtriggermixin)
+        * [`obj spec.forProvider.conditions.conditionMonitoringQueryLanguage.trigger`](#obj-specforproviderconditionsconditionmonitoringquerylanguagetrigger)
+          * [`fn withCount(count)`](#fn-specforproviderconditionsconditionmonitoringquerylanguagetriggerwithcount)
+          * [`fn withPercent(percent)`](#fn-specforproviderconditionsconditionmonitoringquerylanguagetriggerwithpercent)
+      * [`obj spec.forProvider.conditions.conditionThreshold`](#obj-specforproviderconditionsconditionthreshold)
+        * [`fn withAggregations(aggregations)`](#fn-specforproviderconditionsconditionthresholdwithaggregations)
+        * [`fn withAggregationsMixin(aggregations)`](#fn-specforproviderconditionsconditionthresholdwithaggregationsmixin)
+        * [`fn withComparison(comparison)`](#fn-specforproviderconditionsconditionthresholdwithcomparison)
+        * [`fn withDenominatorAggregations(denominatorAggregations)`](#fn-specforproviderconditionsconditionthresholdwithdenominatoraggregations)
+        * [`fn withDenominatorAggregationsMixin(denominatorAggregations)`](#fn-specforproviderconditionsconditionthresholdwithdenominatoraggregationsmixin)
+        * [`fn withDenominatorFilter(denominatorFilter)`](#fn-specforproviderconditionsconditionthresholdwithdenominatorfilter)
+        * [`fn withDuration(duration)`](#fn-specforproviderconditionsconditionthresholdwithduration)
+        * [`fn withFilter(filter)`](#fn-specforproviderconditionsconditionthresholdwithfilter)
+        * [`fn withThresholdValue(thresholdValue)`](#fn-specforproviderconditionsconditionthresholdwiththresholdvalue)
+        * [`fn withTrigger(trigger)`](#fn-specforproviderconditionsconditionthresholdwithtrigger)
+        * [`fn withTriggerMixin(trigger)`](#fn-specforproviderconditionsconditionthresholdwithtriggermixin)
+        * [`obj spec.forProvider.conditions.conditionThreshold.aggregations`](#obj-specforproviderconditionsconditionthresholdaggregations)
+          * [`fn withAlignmentPeriod(alignmentPeriod)`](#fn-specforproviderconditionsconditionthresholdaggregationswithalignmentperiod)
+          * [`fn withCrossSeriesReducer(crossSeriesReducer)`](#fn-specforproviderconditionsconditionthresholdaggregationswithcrossseriesreducer)
+          * [`fn withGroupByFields(groupByFields)`](#fn-specforproviderconditionsconditionthresholdaggregationswithgroupbyfields)
+          * [`fn withGroupByFieldsMixin(groupByFields)`](#fn-specforproviderconditionsconditionthresholdaggregationswithgroupbyfieldsmixin)
+          * [`fn withPerSeriesAligner(perSeriesAligner)`](#fn-specforproviderconditionsconditionthresholdaggregationswithperseriesaligner)
+        * [`obj spec.forProvider.conditions.conditionThreshold.denominatorAggregations`](#obj-specforproviderconditionsconditionthresholddenominatoraggregations)
+          * [`fn withAlignmentPeriod(alignmentPeriod)`](#fn-specforproviderconditionsconditionthresholddenominatoraggregationswithalignmentperiod)
+          * [`fn withCrossSeriesReducer(crossSeriesReducer)`](#fn-specforproviderconditionsconditionthresholddenominatoraggregationswithcrossseriesreducer)
+          * [`fn withGroupByFields(groupByFields)`](#fn-specforproviderconditionsconditionthresholddenominatoraggregationswithgroupbyfields)
+          * [`fn withGroupByFieldsMixin(groupByFields)`](#fn-specforproviderconditionsconditionthresholddenominatoraggregationswithgroupbyfieldsmixin)
+          * [`fn withPerSeriesAligner(perSeriesAligner)`](#fn-specforproviderconditionsconditionthresholddenominatoraggregationswithperseriesaligner)
+        * [`obj spec.forProvider.conditions.conditionThreshold.trigger`](#obj-specforproviderconditionsconditionthresholdtrigger)
+          * [`fn withCount(count)`](#fn-specforproviderconditionsconditionthresholdtriggerwithcount)
+          * [`fn withPercent(percent)`](#fn-specforproviderconditionsconditionthresholdtriggerwithpercent)
+    * [`obj spec.forProvider.documentation`](#obj-specforproviderdocumentation)
+      * [`fn withContent(content)`](#fn-specforproviderdocumentationwithcontent)
+      * [`fn withMimeType(mimeType)`](#fn-specforproviderdocumentationwithmimetype)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +227,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -365,6 +407,482 @@ withUserLabelsMixin(userLabels)
 "This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.conditions
+
+"A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions."
+
+### fn spec.forProvider.conditions.withConditionAbsent
+
+```ts
+withConditionAbsent(conditionAbsent)
+```
+
+"A condition that checks that a time series continues to receive new data points."
+
+### fn spec.forProvider.conditions.withConditionAbsentMixin
+
+```ts
+withConditionAbsentMixin(conditionAbsent)
+```
+
+"A condition that checks that a time series continues to receive new data points."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.conditions.withConditionMonitoringQueryLanguage
+
+```ts
+withConditionMonitoringQueryLanguage(conditionMonitoringQueryLanguage)
+```
+
+"A Monitoring Query Language query that outputs a boolean stream"
+
+### fn spec.forProvider.conditions.withConditionMonitoringQueryLanguageMixin
+
+```ts
+withConditionMonitoringQueryLanguageMixin(conditionMonitoringQueryLanguage)
+```
+
+"A Monitoring Query Language query that outputs a boolean stream"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.conditions.withConditionThreshold
+
+```ts
+withConditionThreshold(conditionThreshold)
+```
+
+"A condition that compares a time series against a threshold."
+
+### fn spec.forProvider.conditions.withConditionThresholdMixin
+
+```ts
+withConditionThresholdMixin(conditionThreshold)
+```
+
+"A condition that compares a time series against a threshold."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.conditions.withDisplayName
+
+```ts
+withDisplayName(displayName)
+```
+
+"A short name or phrase used to identify the condition in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple conditions in the same policy."
+
+## obj spec.forProvider.conditions.conditionAbsent
+
+"A condition that checks that a time series continues to receive new data points."
+
+### fn spec.forProvider.conditions.conditionAbsent.withAggregations
+
+```ts
+withAggregations(aggregations)
+```
+
+"Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources). Multiple aggregations are applied in the order specified."
+
+### fn spec.forProvider.conditions.conditionAbsent.withAggregationsMixin
+
+```ts
+withAggregationsMixin(aggregations)
+```
+
+"Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources). Multiple aggregations are applied in the order specified."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.conditions.conditionAbsent.withDuration
+
+```ts
+withDuration(duration)
+```
+
+"The amount of time that a time series must fail to report new data to be considered failing. Currently, only values that are a multiple of a minute--e.g. 60s, 120s, or 300s --are supported."
+
+### fn spec.forProvider.conditions.conditionAbsent.withFilter
+
+```ts
+withFilter(filter)
+```
+
+"A filter that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the MetricService.ListTimeSeries request (that call is useful to verify the time series that will be retrieved / processed) and must specify the metric type and optionally may contain restrictions on resource type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in length."
+
+### fn spec.forProvider.conditions.conditionAbsent.withTrigger
+
+```ts
+withTrigger(trigger)
+```
+
+"The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations."
+
+### fn spec.forProvider.conditions.conditionAbsent.withTriggerMixin
+
+```ts
+withTriggerMixin(trigger)
+```
+
+"The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.conditions.conditionAbsent.aggregations
+
+"Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources). Multiple aggregations are applied in the order specified."
+
+### fn spec.forProvider.conditions.conditionAbsent.aggregations.withAlignmentPeriod
+
+```ts
+withAlignmentPeriod(alignmentPeriod)
+```
+
+"The alignment period for per-time series alignment. If present, alignmentPeriod must be at least 60 seconds. After per-time series alignment, each time series will contain data points only on the period boundaries. If perSeriesAligner is not specified or equals ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not equal ALIGN_NONE, then this field must be defined; otherwise an error is returned."
+
+### fn spec.forProvider.conditions.conditionAbsent.aggregations.withCrossSeriesReducer
+
+```ts
+withCrossSeriesReducer(crossSeriesReducer)
+```
+
+"The approach to be used to combine time series. Not all reducer functions may be applied to all time series, depending on the metric type and the value type of the original time series. Reduction may change the metric type of value type of the time series.Time series data must be aligned in order to perform cross- time series reduction. If crossSeriesReducer is specified, then perSeriesAligner must be specified and not equal ALIGN_NONE and alignmentPeriod must be specified; otherwise, an error is returned. Possible values: [\"REDUCE_NONE\", \"REDUCE_MEAN\", \"REDUCE_MIN\", \"REDUCE_MAX\", \"REDUCE_SUM\", \"REDUCE_STDDEV\", \"REDUCE_COUNT\", \"REDUCE_COUNT_TRUE\", \"REDUCE_COUNT_FALSE\", \"REDUCE_FRACTION_TRUE\", \"REDUCE_PERCENTILE_99\", \"REDUCE_PERCENTILE_95\", \"REDUCE_PERCENTILE_50\", \"REDUCE_PERCENTILE_05\"]"
+
+### fn spec.forProvider.conditions.conditionAbsent.aggregations.withGroupByFields
+
+```ts
+withGroupByFields(groupByFields)
+```
+
+"The set of fields to preserve when crossSeriesReducer is specified. The groupByFields determine how the time series are partitioned into subsets prior to applying the aggregation function. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The crossSeriesReducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in groupByFields are aggregated away. If groupByFields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If crossSeriesReducer is not defined, this field is ignored."
+
+### fn spec.forProvider.conditions.conditionAbsent.aggregations.withGroupByFieldsMixin
+
+```ts
+withGroupByFieldsMixin(groupByFields)
+```
+
+"The set of fields to preserve when crossSeriesReducer is specified. The groupByFields determine how the time series are partitioned into subsets prior to applying the aggregation function. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The crossSeriesReducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in groupByFields are aggregated away. If groupByFields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If crossSeriesReducer is not defined, this field is ignored."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.conditions.conditionAbsent.aggregations.withPerSeriesAligner
+
+```ts
+withPerSeriesAligner(perSeriesAligner)
+```
+
+"The approach to be used to align individual time series. Not all alignment functions may be applied to all time series, depending on the metric type and value type of the original time series. Alignment may change the metric type or the value type of the time series.Time series data must be aligned in order to perform cross- time series reduction. If crossSeriesReducer is specified, then perSeriesAligner must be specified and not equal ALIGN_NONE and alignmentPeriod must be specified; otherwise, an error is returned. Possible values: [\"ALIGN_NONE\", \"ALIGN_DELTA\", \"ALIGN_RATE\", \"ALIGN_INTERPOLATE\", \"ALIGN_NEXT_OLDER\", \"ALIGN_MIN\", \"ALIGN_MAX\", \"ALIGN_MEAN\", \"ALIGN_COUNT\", \"ALIGN_SUM\", \"ALIGN_STDDEV\", \"ALIGN_COUNT_TRUE\", \"ALIGN_COUNT_FALSE\", \"ALIGN_FRACTION_TRUE\", \"ALIGN_PERCENTILE_99\", \"ALIGN_PERCENTILE_95\", \"ALIGN_PERCENTILE_50\", \"ALIGN_PERCENTILE_05\", \"ALIGN_PERCENT_CHANGE\"]"
+
+## obj spec.forProvider.conditions.conditionAbsent.trigger
+
+"The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations."
+
+### fn spec.forProvider.conditions.conditionAbsent.trigger.withCount
+
+```ts
+withCount(count)
+```
+
+"The absolute number of time series that must fail the predicate for the condition to be triggered."
+
+### fn spec.forProvider.conditions.conditionAbsent.trigger.withPercent
+
+```ts
+withPercent(percent)
+```
+
+"The percentage of time series that must fail the predicate for the condition to be triggered."
+
+## obj spec.forProvider.conditions.conditionMonitoringQueryLanguage
+
+"A Monitoring Query Language query that outputs a boolean stream"
+
+### fn spec.forProvider.conditions.conditionMonitoringQueryLanguage.withDuration
+
+```ts
+withDuration(duration)
+```
+
+"The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly."
+
+### fn spec.forProvider.conditions.conditionMonitoringQueryLanguage.withQuery
+
+```ts
+withQuery(query)
+```
+
+"Monitoring Query Language query that outputs a boolean stream."
+
+### fn spec.forProvider.conditions.conditionMonitoringQueryLanguage.withTrigger
+
+```ts
+withTrigger(trigger)
+```
+
+"The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified."
+
+### fn spec.forProvider.conditions.conditionMonitoringQueryLanguage.withTriggerMixin
+
+```ts
+withTriggerMixin(trigger)
+```
+
+"The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.conditions.conditionMonitoringQueryLanguage.trigger
+
+"The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified."
+
+### fn spec.forProvider.conditions.conditionMonitoringQueryLanguage.trigger.withCount
+
+```ts
+withCount(count)
+```
+
+"The absolute number of time series that must fail the predicate for the condition to be triggered."
+
+### fn spec.forProvider.conditions.conditionMonitoringQueryLanguage.trigger.withPercent
+
+```ts
+withPercent(percent)
+```
+
+"The percentage of time series that must fail the predicate for the condition to be triggered."
+
+## obj spec.forProvider.conditions.conditionThreshold
+
+"A condition that compares a time series against a threshold."
+
+### fn spec.forProvider.conditions.conditionThreshold.withAggregations
+
+```ts
+withAggregations(aggregations)
+```
+
+"Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources). Multiple aggregations are applied in the order specified.This field is similar to the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when debugging this field."
+
+### fn spec.forProvider.conditions.conditionThreshold.withAggregationsMixin
+
+```ts
+withAggregationsMixin(aggregations)
+```
+
+"Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources). Multiple aggregations are applied in the order specified.This field is similar to the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when debugging this field."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.conditions.conditionThreshold.withComparison
+
+```ts
+withComparison(comparison)
+```
+
+"The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side. Only COMPARISON_LT and COMPARISON_GT are supported currently. Possible values: [\"COMPARISON_GT\", \"COMPARISON_GE\", \"COMPARISON_LT\", \"COMPARISON_LE\", \"COMPARISON_EQ\", \"COMPARISON_NE\"]"
+
+### fn spec.forProvider.conditions.conditionThreshold.withDenominatorAggregations
+
+```ts
+withDenominatorAggregations(denominatorAggregations)
+```
+
+"Specifies the alignment of data points in individual time series selected by denominatorFilter as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources).When computing ratios, the aggregations and denominator_aggregations fields must use the same alignment period and produce time series that have the same periodicity and labels.This field is similar to the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when debugging this field."
+
+### fn spec.forProvider.conditions.conditionThreshold.withDenominatorAggregationsMixin
+
+```ts
+withDenominatorAggregationsMixin(denominatorAggregations)
+```
+
+"Specifies the alignment of data points in individual time series selected by denominatorFilter as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources).When computing ratios, the aggregations and denominator_aggregations fields must use the same alignment period and produce time series that have the same periodicity and labels.This field is similar to the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when debugging this field."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.conditions.conditionThreshold.withDenominatorFilter
+
+```ts
+withDenominatorFilter(denominatorFilter)
+```
+
+"A filter that identifies a time series that should be used as the denominator of a ratio that will be compared with the threshold. If a denominator_filter is specified, the time series specified by the filter field will be used as the numerator.The filter is similar to the one that is specified in the MetricService.ListTimeSeries request (that call is useful to verify the time series that will be retrieved / processed) and must specify the metric type and optionally may contain restrictions on resource type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in length."
+
+### fn spec.forProvider.conditions.conditionThreshold.withDuration
+
+```ts
+withDuration(duration)
+```
+
+"The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly."
+
+### fn spec.forProvider.conditions.conditionThreshold.withFilter
+
+```ts
+withFilter(filter)
+```
+
+"A filter that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the MetricService.ListTimeSeries request (that call is useful to verify the time series that will be retrieved / processed) and must specify the metric type and optionally may contain restrictions on resource type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in length."
+
+### fn spec.forProvider.conditions.conditionThreshold.withThresholdValue
+
+```ts
+withThresholdValue(thresholdValue)
+```
+
+"A value against which to compare the time series."
+
+### fn spec.forProvider.conditions.conditionThreshold.withTrigger
+
+```ts
+withTrigger(trigger)
+```
+
+"The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified."
+
+### fn spec.forProvider.conditions.conditionThreshold.withTriggerMixin
+
+```ts
+withTriggerMixin(trigger)
+```
+
+"The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.conditions.conditionThreshold.aggregations
+
+"Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources). Multiple aggregations are applied in the order specified.This field is similar to the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when debugging this field."
+
+### fn spec.forProvider.conditions.conditionThreshold.aggregations.withAlignmentPeriod
+
+```ts
+withAlignmentPeriod(alignmentPeriod)
+```
+
+"The alignment period for per-time series alignment. If present, alignmentPeriod must be at least 60 seconds. After per-time series alignment, each time series will contain data points only on the period boundaries. If perSeriesAligner is not specified or equals ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not equal ALIGN_NONE, then this field must be defined; otherwise an error is returned."
+
+### fn spec.forProvider.conditions.conditionThreshold.aggregations.withCrossSeriesReducer
+
+```ts
+withCrossSeriesReducer(crossSeriesReducer)
+```
+
+"The approach to be used to combine time series. Not all reducer functions may be applied to all time series, depending on the metric type and the value type of the original time series. Reduction may change the metric type of value type of the time series.Time series data must be aligned in order to perform cross- time series reduction. If crossSeriesReducer is specified, then perSeriesAligner must be specified and not equal ALIGN_NONE and alignmentPeriod must be specified; otherwise, an error is returned. Possible values: [\"REDUCE_NONE\", \"REDUCE_MEAN\", \"REDUCE_MIN\", \"REDUCE_MAX\", \"REDUCE_SUM\", \"REDUCE_STDDEV\", \"REDUCE_COUNT\", \"REDUCE_COUNT_TRUE\", \"REDUCE_COUNT_FALSE\", \"REDUCE_FRACTION_TRUE\", \"REDUCE_PERCENTILE_99\", \"REDUCE_PERCENTILE_95\", \"REDUCE_PERCENTILE_50\", \"REDUCE_PERCENTILE_05\"]"
+
+### fn spec.forProvider.conditions.conditionThreshold.aggregations.withGroupByFields
+
+```ts
+withGroupByFields(groupByFields)
+```
+
+"The set of fields to preserve when crossSeriesReducer is specified. The groupByFields determine how the time series are partitioned into subsets prior to applying the aggregation function. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The crossSeriesReducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in groupByFields are aggregated away. If groupByFields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If crossSeriesReducer is not defined, this field is ignored."
+
+### fn spec.forProvider.conditions.conditionThreshold.aggregations.withGroupByFieldsMixin
+
+```ts
+withGroupByFieldsMixin(groupByFields)
+```
+
+"The set of fields to preserve when crossSeriesReducer is specified. The groupByFields determine how the time series are partitioned into subsets prior to applying the aggregation function. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The crossSeriesReducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in groupByFields are aggregated away. If groupByFields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If crossSeriesReducer is not defined, this field is ignored."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.conditions.conditionThreshold.aggregations.withPerSeriesAligner
+
+```ts
+withPerSeriesAligner(perSeriesAligner)
+```
+
+"The approach to be used to align individual time series. Not all alignment functions may be applied to all time series, depending on the metric type and value type of the original time series. Alignment may change the metric type or the value type of the time series.Time series data must be aligned in order to perform cross- time series reduction. If crossSeriesReducer is specified, then perSeriesAligner must be specified and not equal ALIGN_NONE and alignmentPeriod must be specified; otherwise, an error is returned. Possible values: [\"ALIGN_NONE\", \"ALIGN_DELTA\", \"ALIGN_RATE\", \"ALIGN_INTERPOLATE\", \"ALIGN_NEXT_OLDER\", \"ALIGN_MIN\", \"ALIGN_MAX\", \"ALIGN_MEAN\", \"ALIGN_COUNT\", \"ALIGN_SUM\", \"ALIGN_STDDEV\", \"ALIGN_COUNT_TRUE\", \"ALIGN_COUNT_FALSE\", \"ALIGN_FRACTION_TRUE\", \"ALIGN_PERCENTILE_99\", \"ALIGN_PERCENTILE_95\", \"ALIGN_PERCENTILE_50\", \"ALIGN_PERCENTILE_05\", \"ALIGN_PERCENT_CHANGE\"]"
+
+## obj spec.forProvider.conditions.conditionThreshold.denominatorAggregations
+
+"Specifies the alignment of data points in individual time series selected by denominatorFilter as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources).When computing ratios, the aggregations and denominator_aggregations fields must use the same alignment period and produce time series that have the same periodicity and labels.This field is similar to the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when debugging this field."
+
+### fn spec.forProvider.conditions.conditionThreshold.denominatorAggregations.withAlignmentPeriod
+
+```ts
+withAlignmentPeriod(alignmentPeriod)
+```
+
+"The alignment period for per-time series alignment. If present, alignmentPeriod must be at least 60 seconds. After per-time series alignment, each time series will contain data points only on the period boundaries. If perSeriesAligner is not specified or equals ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not equal ALIGN_NONE, then this field must be defined; otherwise an error is returned."
+
+### fn spec.forProvider.conditions.conditionThreshold.denominatorAggregations.withCrossSeriesReducer
+
+```ts
+withCrossSeriesReducer(crossSeriesReducer)
+```
+
+"The approach to be used to combine time series. Not all reducer functions may be applied to all time series, depending on the metric type and the value type of the original time series. Reduction may change the metric type of value type of the time series.Time series data must be aligned in order to perform cross- time series reduction. If crossSeriesReducer is specified, then perSeriesAligner must be specified and not equal ALIGN_NONE and alignmentPeriod must be specified; otherwise, an error is returned. Possible values: [\"REDUCE_NONE\", \"REDUCE_MEAN\", \"REDUCE_MIN\", \"REDUCE_MAX\", \"REDUCE_SUM\", \"REDUCE_STDDEV\", \"REDUCE_COUNT\", \"REDUCE_COUNT_TRUE\", \"REDUCE_COUNT_FALSE\", \"REDUCE_FRACTION_TRUE\", \"REDUCE_PERCENTILE_99\", \"REDUCE_PERCENTILE_95\", \"REDUCE_PERCENTILE_50\", \"REDUCE_PERCENTILE_05\"]"
+
+### fn spec.forProvider.conditions.conditionThreshold.denominatorAggregations.withGroupByFields
+
+```ts
+withGroupByFields(groupByFields)
+```
+
+"The set of fields to preserve when crossSeriesReducer is specified. The groupByFields determine how the time series are partitioned into subsets prior to applying the aggregation function. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The crossSeriesReducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in groupByFields are aggregated away. If groupByFields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If crossSeriesReducer is not defined, this field is ignored."
+
+### fn spec.forProvider.conditions.conditionThreshold.denominatorAggregations.withGroupByFieldsMixin
+
+```ts
+withGroupByFieldsMixin(groupByFields)
+```
+
+"The set of fields to preserve when crossSeriesReducer is specified. The groupByFields determine how the time series are partitioned into subsets prior to applying the aggregation function. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The crossSeriesReducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in groupByFields are aggregated away. If groupByFields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If crossSeriesReducer is not defined, this field is ignored."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.conditions.conditionThreshold.denominatorAggregations.withPerSeriesAligner
+
+```ts
+withPerSeriesAligner(perSeriesAligner)
+```
+
+"The approach to be used to align individual time series. Not all alignment functions may be applied to all time series, depending on the metric type and value type of the original time series. Alignment may change the metric type or the value type of the time series.Time series data must be aligned in order to perform cross- time series reduction. If crossSeriesReducer is specified, then perSeriesAligner must be specified and not equal ALIGN_NONE and alignmentPeriod must be specified; otherwise, an error is returned. Possible values: [\"ALIGN_NONE\", \"ALIGN_DELTA\", \"ALIGN_RATE\", \"ALIGN_INTERPOLATE\", \"ALIGN_NEXT_OLDER\", \"ALIGN_MIN\", \"ALIGN_MAX\", \"ALIGN_MEAN\", \"ALIGN_COUNT\", \"ALIGN_SUM\", \"ALIGN_STDDEV\", \"ALIGN_COUNT_TRUE\", \"ALIGN_COUNT_FALSE\", \"ALIGN_FRACTION_TRUE\", \"ALIGN_PERCENTILE_99\", \"ALIGN_PERCENTILE_95\", \"ALIGN_PERCENTILE_50\", \"ALIGN_PERCENTILE_05\", \"ALIGN_PERCENT_CHANGE\"]"
+
+## obj spec.forProvider.conditions.conditionThreshold.trigger
+
+"The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified."
+
+### fn spec.forProvider.conditions.conditionThreshold.trigger.withCount
+
+```ts
+withCount(count)
+```
+
+"The absolute number of time series that must fail the predicate for the condition to be triggered."
+
+### fn spec.forProvider.conditions.conditionThreshold.trigger.withPercent
+
+```ts
+withPercent(percent)
+```
+
+"The percentage of time series that must fail the predicate for the condition to be triggered."
+
+## obj spec.forProvider.documentation
+
+"Documentation that is included with notifications and incidents related to this policy. Best practice is for the documentation to include information to help responders understand, mitigate, escalate, and correct the underlying problems detected by the alerting policy. Notification channels that have limited capacity might not show this documentation."
+
+### fn spec.forProvider.documentation.withContent
+
+```ts
+withContent(content)
+```
+
+"The text of the documentation, interpreted according to mimeType. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller."
+
+### fn spec.forProvider.documentation.withMimeType
+
+```ts
+withMimeType(mimeType)
+```
+
+"The format of the content field. Presently, only the value \"text/markdown\" is supported."
 
 ## obj spec.providerConfigRef
 

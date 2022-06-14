@@ -22,8 +22,6 @@ permalink: /provider-gcp/0.20/iam/v1alpha1/serviceAccountPolicy/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -40,6 +38,31 @@ permalink: /provider-gcp/0.20/iam/v1alpha1/serviceAccountPolicy/
       * [`fn withAuditConfigsMixin(auditConfigs)`](#fn-specforproviderpolicywithauditconfigsmixin)
       * [`fn withBindings(bindings)`](#fn-specforproviderpolicywithbindings)
       * [`fn withBindingsMixin(bindings)`](#fn-specforproviderpolicywithbindingsmixin)
+      * [`obj spec.forProvider.policy.auditConfigs`](#obj-specforproviderpolicyauditconfigs)
+        * [`fn withAuditLogConfigs(auditLogConfigs)`](#fn-specforproviderpolicyauditconfigswithauditlogconfigs)
+        * [`fn withAuditLogConfigsMixin(auditLogConfigs)`](#fn-specforproviderpolicyauditconfigswithauditlogconfigsmixin)
+        * [`fn withService(service)`](#fn-specforproviderpolicyauditconfigswithservice)
+        * [`obj spec.forProvider.policy.auditConfigs.auditLogConfigs`](#obj-specforproviderpolicyauditconfigsauditlogconfigs)
+          * [`fn withExemptedMembers(exemptedMembers)`](#fn-specforproviderpolicyauditconfigsauditlogconfigswithexemptedmembers)
+          * [`fn withExemptedMembersMixin(exemptedMembers)`](#fn-specforproviderpolicyauditconfigsauditlogconfigswithexemptedmembersmixin)
+          * [`fn withLogType(logType)`](#fn-specforproviderpolicyauditconfigsauditlogconfigswithlogtype)
+      * [`obj spec.forProvider.policy.bindings`](#obj-specforproviderpolicybindings)
+        * [`fn withMembers(members)`](#fn-specforproviderpolicybindingswithmembers)
+        * [`fn withMembersMixin(members)`](#fn-specforproviderpolicybindingswithmembersmixin)
+        * [`fn withRole(role)`](#fn-specforproviderpolicybindingswithrole)
+        * [`fn withServiceAccountMemberRefs(serviceAccountMemberRefs)`](#fn-specforproviderpolicybindingswithserviceaccountmemberrefs)
+        * [`fn withServiceAccountMemberRefsMixin(serviceAccountMemberRefs)`](#fn-specforproviderpolicybindingswithserviceaccountmemberrefsmixin)
+        * [`obj spec.forProvider.policy.bindings.condition`](#obj-specforproviderpolicybindingscondition)
+          * [`fn withDescription(description)`](#fn-specforproviderpolicybindingsconditionwithdescription)
+          * [`fn withExpression(expression)`](#fn-specforproviderpolicybindingsconditionwithexpression)
+          * [`fn withLocation(location)`](#fn-specforproviderpolicybindingsconditionwithlocation)
+          * [`fn withTitle(title)`](#fn-specforproviderpolicybindingsconditionwithtitle)
+        * [`obj spec.forProvider.policy.bindings.serviceAccountMemberRefs`](#obj-specforproviderpolicybindingsserviceaccountmemberrefs)
+          * [`fn withName(name)`](#fn-specforproviderpolicybindingsserviceaccountmemberrefswithname)
+        * [`obj spec.forProvider.policy.bindings.serviceAccountMemberSelector`](#obj-specforproviderpolicybindingsserviceaccountmemberselector)
+          * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderpolicybindingsserviceaccountmemberselectorwithmatchcontrollerref)
+          * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderpolicybindingsserviceaccountmemberselectorwithmatchlabels)
+          * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderpolicybindingsserviceaccountmemberselectorwithmatchlabelsmixin)
     * [`obj spec.forProvider.serviceAccountRef`](#obj-specforproviderserviceaccountref)
       * [`fn withName(name)`](#fn-specforproviderserviceaccountrefwithname)
     * [`obj spec.forProvider.serviceAccountSelector`](#obj-specforproviderserviceaccountselector)
@@ -170,24 +193,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -307,6 +312,192 @@ withBindingsMixin(bindings)
 ```
 
 "Bindings: Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.policy.auditConfigs
+
+"AuditConfigs: Specifies cloud audit logging configuration for this policy."
+
+### fn spec.forProvider.policy.auditConfigs.withAuditLogConfigs
+
+```ts
+withAuditLogConfigs(auditLogConfigs)
+```
+
+"AuditLogConfigs: The configuration for logging of each type of permission."
+
+### fn spec.forProvider.policy.auditConfigs.withAuditLogConfigsMixin
+
+```ts
+withAuditLogConfigsMixin(auditLogConfigs)
+```
+
+"AuditLogConfigs: The configuration for logging of each type of permission."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.auditConfigs.withService
+
+```ts
+withService(service)
+```
+
+"Service: Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services."
+
+## obj spec.forProvider.policy.auditConfigs.auditLogConfigs
+
+"AuditLogConfigs: The configuration for logging of each type of permission."
+
+### fn spec.forProvider.policy.auditConfigs.auditLogConfigs.withExemptedMembers
+
+```ts
+withExemptedMembers(exemptedMembers)
+```
+
+"ExemptedMembers: Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members."
+
+### fn spec.forProvider.policy.auditConfigs.auditLogConfigs.withExemptedMembersMixin
+
+```ts
+withExemptedMembersMixin(exemptedMembers)
+```
+
+"ExemptedMembers: Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.auditConfigs.auditLogConfigs.withLogType
+
+```ts
+withLogType(logType)
+```
+
+"LogType: The log type that this config enables. \n Possible values:   \"LOG_TYPE_UNSPECIFIED\" - Default case. Should never be this.   \"ADMIN_READ\" - Admin reads. Example: CloudIAM getIamPolicy   \"DATA_WRITE\" - Data writes. Example: CloudSQL Users create   \"DATA_READ\" - Data reads. Example: CloudSQL Users list"
+
+## obj spec.forProvider.policy.bindings
+
+"Bindings: Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member."
+
+### fn spec.forProvider.policy.bindings.withMembers
+
+```ts
+withMembers(members)
+```
+
+"Members: Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: \n * `allUsers`: A special identifier that represents anyone who is    on the internet; with or without a Google account. \n * `allAuthenticatedUsers`: A special identifier that represents anyone    who is authenticated with a Google account or a service account. \n * `user:{emailid}`: An email address that represents a specific Google    account. For example, `alice@example.com` . \n * `serviceAccount:{emailid}`: An email address that represents a service    account. For example, `my-other-app@appspot.gserviceaccount.com`. \n * `group:{emailid}`: An email address that represents a Google group.    For example, `admins@example.com`. \n * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier) representing a user that has been recently deleted. For    example, `alice@example.com?uid=123456789012345678901`. If the user is    recovered, this value reverts to `user:{emailid}` and the recovered user    retains the role in the binding. \n * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus    unique identifier) representing a service account that has been recently    deleted. For example, \n `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. \n    If the service account is undeleted, this value reverts to    `serviceAccount:{emailid}` and the undeleted service account retains the    role in the binding. \n * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier) representing a Google group that has been recently    deleted. For example, `admins@example.com?uid=123456789012345678901`. If    the group is recovered, this value reverts to `group:{emailid}` and the    recovered group retains the role in the binding. \n * `domain:{domain}`: The G Suite domain (primary) that represents all the    users of that domain. For example, `google.com` or `example.com`."
+
+### fn spec.forProvider.policy.bindings.withMembersMixin
+
+```ts
+withMembersMixin(members)
+```
+
+"Members: Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: \n * `allUsers`: A special identifier that represents anyone who is    on the internet; with or without a Google account. \n * `allAuthenticatedUsers`: A special identifier that represents anyone    who is authenticated with a Google account or a service account. \n * `user:{emailid}`: An email address that represents a specific Google    account. For example, `alice@example.com` . \n * `serviceAccount:{emailid}`: An email address that represents a service    account. For example, `my-other-app@appspot.gserviceaccount.com`. \n * `group:{emailid}`: An email address that represents a Google group.    For example, `admins@example.com`. \n * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier) representing a user that has been recently deleted. For    example, `alice@example.com?uid=123456789012345678901`. If the user is    recovered, this value reverts to `user:{emailid}` and the recovered user    retains the role in the binding. \n * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus    unique identifier) representing a service account that has been recently    deleted. For example, \n `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. \n    If the service account is undeleted, this value reverts to    `serviceAccount:{emailid}` and the undeleted service account retains the    role in the binding. \n * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier) representing a Google group that has been recently    deleted. For example, `admins@example.com?uid=123456789012345678901`. If    the group is recovered, this value reverts to `group:{emailid}` and the    recovered group retains the role in the binding. \n * `domain:{domain}`: The G Suite domain (primary) that represents all the    users of that domain. For example, `google.com` or `example.com`."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.policy.bindings.withRole
+
+```ts
+withRole(role)
+```
+
+"Role: Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`."
+
+### fn spec.forProvider.policy.bindings.withServiceAccountMemberRefs
+
+```ts
+withServiceAccountMemberRefs(serviceAccountMemberRefs)
+```
+
+"ServiceAccountMemberRefs are references to ServiceAccounts used to set the Members."
+
+### fn spec.forProvider.policy.bindings.withServiceAccountMemberRefsMixin
+
+```ts
+withServiceAccountMemberRefsMixin(serviceAccountMemberRefs)
+```
+
+"ServiceAccountMemberRefs are references to ServiceAccounts used to set the Members."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.policy.bindings.condition
+
+"Condition: The condition that is associated with this binding. NOTE: An unsatisfied condition will not allow user access via current binding. Different bindings, including their conditions, are examined independently."
+
+### fn spec.forProvider.policy.bindings.condition.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Description: Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI."
+
+### fn spec.forProvider.policy.bindings.condition.withExpression
+
+```ts
+withExpression(expression)
+```
+
+"Expression: Textual representation of an expression in Common Expression Language syntax."
+
+### fn spec.forProvider.policy.bindings.condition.withLocation
+
+```ts
+withLocation(location)
+```
+
+"Location: Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file."
+
+### fn spec.forProvider.policy.bindings.condition.withTitle
+
+```ts
+withTitle(title)
+```
+
+"Title: Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression."
+
+## obj spec.forProvider.policy.bindings.serviceAccountMemberRefs
+
+"ServiceAccountMemberRefs are references to ServiceAccounts used to set the Members."
+
+### fn spec.forProvider.policy.bindings.serviceAccountMemberRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.policy.bindings.serviceAccountMemberSelector
+
+"ServiceAccountMemberSelector selects references to ServiceAccounts used to set the Members."
+
+### fn spec.forProvider.policy.bindings.serviceAccountMemberSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."
+
+### fn spec.forProvider.policy.bindings.serviceAccountMemberSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.policy.bindings.serviceAccountMemberSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
 

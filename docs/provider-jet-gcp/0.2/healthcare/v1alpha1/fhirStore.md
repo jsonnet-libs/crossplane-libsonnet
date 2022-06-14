@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/healthcare/v1alpha1/fhirStore/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -47,6 +45,20 @@ permalink: /provider-jet-gcp/0.2/healthcare/v1alpha1/fhirStore/
     * [`fn withStreamConfigs(streamConfigs)`](#fn-specforproviderwithstreamconfigs)
     * [`fn withStreamConfigsMixin(streamConfigs)`](#fn-specforproviderwithstreamconfigsmixin)
     * [`fn withVersion(version)`](#fn-specforproviderwithversion)
+    * [`obj spec.forProvider.notificationConfig`](#obj-specforprovidernotificationconfig)
+      * [`fn withPubsubTopic(pubsubTopic)`](#fn-specforprovidernotificationconfigwithpubsubtopic)
+    * [`obj spec.forProvider.streamConfigs`](#obj-specforproviderstreamconfigs)
+      * [`fn withBigqueryDestination(bigqueryDestination)`](#fn-specforproviderstreamconfigswithbigquerydestination)
+      * [`fn withBigqueryDestinationMixin(bigqueryDestination)`](#fn-specforproviderstreamconfigswithbigquerydestinationmixin)
+      * [`fn withResourceTypes(resourceTypes)`](#fn-specforproviderstreamconfigswithresourcetypes)
+      * [`fn withResourceTypesMixin(resourceTypes)`](#fn-specforproviderstreamconfigswithresourcetypesmixin)
+      * [`obj spec.forProvider.streamConfigs.bigqueryDestination`](#obj-specforproviderstreamconfigsbigquerydestination)
+        * [`fn withDatasetUri(datasetUri)`](#fn-specforproviderstreamconfigsbigquerydestinationwithdataseturi)
+        * [`fn withSchemaConfig(schemaConfig)`](#fn-specforproviderstreamconfigsbigquerydestinationwithschemaconfig)
+        * [`fn withSchemaConfigMixin(schemaConfig)`](#fn-specforproviderstreamconfigsbigquerydestinationwithschemaconfigmixin)
+        * [`obj spec.forProvider.streamConfigs.bigqueryDestination.schemaConfig`](#obj-specforproviderstreamconfigsbigquerydestinationschemaconfig)
+          * [`fn withRecursiveStructureDepth(recursiveStructureDepth)`](#fn-specforproviderstreamconfigsbigquerydestinationschemaconfigwithrecursivestructuredepth)
+          * [`fn withSchemaType(schemaType)`](#fn-specforproviderstreamconfigsbigquerydestinationschemaconfigwithschematype)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -168,24 +180,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -372,6 +366,108 @@ withVersion(version)
 ```
 
 "The FHIR specification version. Possible values: [\"DSTU2\", \"STU3\", \"R4\"]"
+
+## obj spec.forProvider.notificationConfig
+
+"A nested object resource"
+
+### fn spec.forProvider.notificationConfig.withPubsubTopic
+
+```ts
+withPubsubTopic(pubsubTopic)
+```
+
+"The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail."
+
+## obj spec.forProvider.streamConfigs
+
+"A list of streaming configs that configure the destinations of streaming export for every resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next resource mutation is streamed to the new location in addition to the existing ones. When a location is removed from the list, the server stops streaming to that location. Before adding a new config, you must add the required bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on the order of dozens of seconds) is expected before the results show up in the streaming destination."
+
+### fn spec.forProvider.streamConfigs.withBigqueryDestination
+
+```ts
+withBigqueryDestination(bigqueryDestination)
+```
+
+"The destination BigQuery structure that contains both the dataset location and corresponding schema config. The output is organized in one table per resource type. The server reuses the existing tables (if any) that are named after the resource types, e.g. \"Patient\", \"Observation\". When there is no existing table for a given resource type, the server attempts to create one. See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details."
+
+### fn spec.forProvider.streamConfigs.withBigqueryDestinationMixin
+
+```ts
+withBigqueryDestinationMixin(bigqueryDestination)
+```
+
+"The destination BigQuery structure that contains both the dataset location and corresponding schema config. The output is organized in one table per resource type. The server reuses the existing tables (if any) that are named after the resource types, e.g. \"Patient\", \"Observation\". When there is no existing table for a given resource type, the server attempts to create one. See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.streamConfigs.withResourceTypes
+
+```ts
+withResourceTypes(resourceTypes)
+```
+
+"Supply a FHIR resource type (such as \"Patient\" or \"Observation\"). See https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats an empty list as an intent to stream all the supported resource types in this FHIR store."
+
+### fn spec.forProvider.streamConfigs.withResourceTypesMixin
+
+```ts
+withResourceTypesMixin(resourceTypes)
+```
+
+"Supply a FHIR resource type (such as \"Patient\" or \"Observation\"). See https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats an empty list as an intent to stream all the supported resource types in this FHIR store."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.streamConfigs.bigqueryDestination
+
+"The destination BigQuery structure that contains both the dataset location and corresponding schema config. The output is organized in one table per resource type. The server reuses the existing tables (if any) that are named after the resource types, e.g. \"Patient\", \"Observation\". When there is no existing table for a given resource type, the server attempts to create one. See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details."
+
+### fn spec.forProvider.streamConfigs.bigqueryDestination.withDatasetUri
+
+```ts
+withDatasetUri(datasetUri)
+```
+
+"BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId"
+
+### fn spec.forProvider.streamConfigs.bigqueryDestination.withSchemaConfig
+
+```ts
+withSchemaConfig(schemaConfig)
+```
+
+"The configuration for the exported BigQuery schema."
+
+### fn spec.forProvider.streamConfigs.bigqueryDestination.withSchemaConfigMixin
+
+```ts
+withSchemaConfigMixin(schemaConfig)
+```
+
+"The configuration for the exported BigQuery schema."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.streamConfigs.bigqueryDestination.schemaConfig
+
+"The configuration for the exported BigQuery schema."
+
+### fn spec.forProvider.streamConfigs.bigqueryDestination.schemaConfig.withRecursiveStructureDepth
+
+```ts
+withRecursiveStructureDepth(recursiveStructureDepth)
+```
+
+"The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default value 2. The maximum depth allowed is 5."
+
+### fn spec.forProvider.streamConfigs.bigqueryDestination.schemaConfig.withSchemaType
+
+```ts
+withSchemaType(schemaType)
+```
+
+"Specifies the output schema type. Only ANALYTICS is supported at this time. * ANALYTICS: Analytics schema defined by the FHIR community. See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md. Default value: \"ANALYTICS\" Possible values: [\"ANALYTICS\"]"
 
 ## obj spec.providerConfigRef
 

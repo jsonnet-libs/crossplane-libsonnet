@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,13 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#advertisedIpRanges':: d.obj(help="\"User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.\""),
+      advertisedIpRanges: {
+        '#withDescription':: d.fn(help='"User-specified description for the IP range."', args=[d.arg(name='description', type=d.T.string)]),
+        withDescription(description): { description: description },
+        '#withRange':: d.fn(help='"The IP range to advertise. The value must be a CIDR-formatted string."', args=[d.arg(name='range', type=d.T.string)]),
+        withRange(range): { range: range },
+      },
       '#withAdvertiseMode':: d.fn(help="\"User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT', 'CUSTOM' Default value: \\\"DEFAULT\\\" Possible values: [\\\"DEFAULT\\\", \\\"CUSTOM\\\"]\"", args=[d.arg(name='advertiseMode', type=d.T.string)]),
       withAdvertiseMode(advertiseMode): { spec+: { forProvider+: { advertiseMode: advertiseMode } } },
       '#withAdvertisedGroups':: d.fn(help="\"User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: \\n * 'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. \\n Note that this field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the \\\"bgp\\\" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.\"", args=[d.arg(name='advertisedGroups', type=d.T.array)]),

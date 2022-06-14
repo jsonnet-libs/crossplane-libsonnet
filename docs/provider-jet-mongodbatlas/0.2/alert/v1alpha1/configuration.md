@@ -22,8 +22,6 @@ permalink: /provider-jet-mongodbatlas/0.2/alert/v1alpha1/configuration/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -49,12 +47,71 @@ permalink: /provider-jet-mongodbatlas/0.2/alert/v1alpha1/configuration/
     * [`fn withThresholdConfig(thresholdConfig)`](#fn-specforproviderwiththresholdconfig)
     * [`fn withThresholdConfigMixin(thresholdConfig)`](#fn-specforproviderwiththresholdconfigmixin)
     * [`fn withThresholdMixin(threshold)`](#fn-specforproviderwiththresholdmixin)
+    * [`obj spec.forProvider.matcher`](#obj-specforprovidermatcher)
+      * [`fn withFieldName(fieldName)`](#fn-specforprovidermatcherwithfieldname)
+      * [`fn withOperator(operator)`](#fn-specforprovidermatcherwithoperator)
+      * [`fn withValue(value)`](#fn-specforprovidermatcherwithvalue)
+    * [`obj spec.forProvider.metricThresholdConfig`](#obj-specforprovidermetricthresholdconfig)
+      * [`fn withMetricName(metricName)`](#fn-specforprovidermetricthresholdconfigwithmetricname)
+      * [`fn withMode(mode)`](#fn-specforprovidermetricthresholdconfigwithmode)
+      * [`fn withOperator(operator)`](#fn-specforprovidermetricthresholdconfigwithoperator)
+      * [`fn withThreshold(threshold)`](#fn-specforprovidermetricthresholdconfigwiththreshold)
+      * [`fn withUnits(units)`](#fn-specforprovidermetricthresholdconfigwithunits)
+    * [`obj spec.forProvider.notification`](#obj-specforprovidernotification)
+      * [`fn withChannelName(channelName)`](#fn-specforprovidernotificationwithchannelname)
+      * [`fn withDatadogRegion(datadogRegion)`](#fn-specforprovidernotificationwithdatadogregion)
+      * [`fn withDelayMin(delayMin)`](#fn-specforprovidernotificationwithdelaymin)
+      * [`fn withEmailAddress(emailAddress)`](#fn-specforprovidernotificationwithemailaddress)
+      * [`fn withEmailEnabled(emailEnabled)`](#fn-specforprovidernotificationwithemailenabled)
+      * [`fn withFlowName(flowName)`](#fn-specforprovidernotificationwithflowname)
+      * [`fn withIntervalMin(intervalMin)`](#fn-specforprovidernotificationwithintervalmin)
+      * [`fn withMobileNumber(mobileNumber)`](#fn-specforprovidernotificationwithmobilenumber)
+      * [`fn withOpsGenieRegion(opsGenieRegion)`](#fn-specforprovidernotificationwithopsgenieregion)
+      * [`fn withOrgName(orgName)`](#fn-specforprovidernotificationwithorgname)
+      * [`fn withRoles(roles)`](#fn-specforprovidernotificationwithroles)
+      * [`fn withRolesMixin(roles)`](#fn-specforprovidernotificationwithrolesmixin)
+      * [`fn withSmsEnabled(smsEnabled)`](#fn-specforprovidernotificationwithsmsenabled)
+      * [`fn withTeamId(teamId)`](#fn-specforprovidernotificationwithteamid)
+      * [`fn withTypeName(typeName)`](#fn-specforprovidernotificationwithtypename)
+      * [`fn withUsername(username)`](#fn-specforprovidernotificationwithusername)
+      * [`obj spec.forProvider.notification.apiTokenSecretRef`](#obj-specforprovidernotificationapitokensecretref)
+        * [`fn withKey(key)`](#fn-specforprovidernotificationapitokensecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidernotificationapitokensecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidernotificationapitokensecretrefwithnamespace)
+      * [`obj spec.forProvider.notification.datadogApiKeySecretRef`](#obj-specforprovidernotificationdatadogapikeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidernotificationdatadogapikeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidernotificationdatadogapikeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidernotificationdatadogapikeysecretrefwithnamespace)
+      * [`obj spec.forProvider.notification.flowdockApiTokenSecretRef`](#obj-specforprovidernotificationflowdockapitokensecretref)
+        * [`fn withKey(key)`](#fn-specforprovidernotificationflowdockapitokensecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidernotificationflowdockapitokensecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidernotificationflowdockapitokensecretrefwithnamespace)
+      * [`obj spec.forProvider.notification.opsGenieApiKeySecretRef`](#obj-specforprovidernotificationopsgenieapikeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidernotificationopsgenieapikeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidernotificationopsgenieapikeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidernotificationopsgenieapikeysecretrefwithnamespace)
+      * [`obj spec.forProvider.notification.serviceKeySecretRef`](#obj-specforprovidernotificationservicekeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidernotificationservicekeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidernotificationservicekeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidernotificationservicekeysecretrefwithnamespace)
+      * [`obj spec.forProvider.notification.victorOpsApiKeySecretRef`](#obj-specforprovidernotificationvictoropsapikeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidernotificationvictoropsapikeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidernotificationvictoropsapikeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidernotificationvictoropsapikeysecretrefwithnamespace)
+      * [`obj spec.forProvider.notification.victorOpsRoutingKeySecretRef`](#obj-specforprovidernotificationvictoropsroutingkeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidernotificationvictoropsroutingkeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidernotificationvictoropsroutingkeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidernotificationvictoropsroutingkeysecretrefwithnamespace)
     * [`obj spec.forProvider.projectIdRef`](#obj-specforproviderprojectidref)
       * [`fn withName(name)`](#fn-specforproviderprojectidrefwithname)
     * [`obj spec.forProvider.projectIdSelector`](#obj-specforproviderprojectidselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderprojectidselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderprojectidselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderprojectidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.thresholdConfig`](#obj-specforproviderthresholdconfig)
+      * [`fn withOperator(operator)`](#fn-specforproviderthresholdconfigwithoperator)
+      * [`fn withThreshold(threshold)`](#fn-specforproviderthresholdconfigwiththreshold)
+      * [`fn withUnits(units)`](#fn-specforproviderthresholdconfigwithunits)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -176,24 +233,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -403,6 +442,408 @@ withThresholdMixin(threshold)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.matcher
+
+
+
+### fn spec.forProvider.matcher.withFieldName
+
+```ts
+withFieldName(fieldName)
+```
+
+
+
+### fn spec.forProvider.matcher.withOperator
+
+```ts
+withOperator(operator)
+```
+
+
+
+### fn spec.forProvider.matcher.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.forProvider.metricThresholdConfig
+
+
+
+### fn spec.forProvider.metricThresholdConfig.withMetricName
+
+```ts
+withMetricName(metricName)
+```
+
+
+
+### fn spec.forProvider.metricThresholdConfig.withMode
+
+```ts
+withMode(mode)
+```
+
+
+
+### fn spec.forProvider.metricThresholdConfig.withOperator
+
+```ts
+withOperator(operator)
+```
+
+
+
+### fn spec.forProvider.metricThresholdConfig.withThreshold
+
+```ts
+withThreshold(threshold)
+```
+
+
+
+### fn spec.forProvider.metricThresholdConfig.withUnits
+
+```ts
+withUnits(units)
+```
+
+
+
+## obj spec.forProvider.notification
+
+
+
+### fn spec.forProvider.notification.withChannelName
+
+```ts
+withChannelName(channelName)
+```
+
+
+
+### fn spec.forProvider.notification.withDatadogRegion
+
+```ts
+withDatadogRegion(datadogRegion)
+```
+
+
+
+### fn spec.forProvider.notification.withDelayMin
+
+```ts
+withDelayMin(delayMin)
+```
+
+
+
+### fn spec.forProvider.notification.withEmailAddress
+
+```ts
+withEmailAddress(emailAddress)
+```
+
+
+
+### fn spec.forProvider.notification.withEmailEnabled
+
+```ts
+withEmailEnabled(emailEnabled)
+```
+
+
+
+### fn spec.forProvider.notification.withFlowName
+
+```ts
+withFlowName(flowName)
+```
+
+
+
+### fn spec.forProvider.notification.withIntervalMin
+
+```ts
+withIntervalMin(intervalMin)
+```
+
+
+
+### fn spec.forProvider.notification.withMobileNumber
+
+```ts
+withMobileNumber(mobileNumber)
+```
+
+
+
+### fn spec.forProvider.notification.withOpsGenieRegion
+
+```ts
+withOpsGenieRegion(opsGenieRegion)
+```
+
+
+
+### fn spec.forProvider.notification.withOrgName
+
+```ts
+withOrgName(orgName)
+```
+
+
+
+### fn spec.forProvider.notification.withRoles
+
+```ts
+withRoles(roles)
+```
+
+
+
+### fn spec.forProvider.notification.withRolesMixin
+
+```ts
+withRolesMixin(roles)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.notification.withSmsEnabled
+
+```ts
+withSmsEnabled(smsEnabled)
+```
+
+
+
+### fn spec.forProvider.notification.withTeamId
+
+```ts
+withTeamId(teamId)
+```
+
+
+
+### fn spec.forProvider.notification.withTypeName
+
+```ts
+withTypeName(typeName)
+```
+
+
+
+### fn spec.forProvider.notification.withUsername
+
+```ts
+withUsername(username)
+```
+
+
+
+## obj spec.forProvider.notification.apiTokenSecretRef
+
+"A SecretKeySelector is a reference to a secret key in an arbitrary namespace."
+
+### fn spec.forProvider.notification.apiTokenSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.notification.apiTokenSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.notification.apiTokenSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.notification.datadogApiKeySecretRef
+
+"A SecretKeySelector is a reference to a secret key in an arbitrary namespace."
+
+### fn spec.forProvider.notification.datadogApiKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.notification.datadogApiKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.notification.datadogApiKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.notification.flowdockApiTokenSecretRef
+
+"A SecretKeySelector is a reference to a secret key in an arbitrary namespace."
+
+### fn spec.forProvider.notification.flowdockApiTokenSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.notification.flowdockApiTokenSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.notification.flowdockApiTokenSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.notification.opsGenieApiKeySecretRef
+
+"A SecretKeySelector is a reference to a secret key in an arbitrary namespace."
+
+### fn spec.forProvider.notification.opsGenieApiKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.notification.opsGenieApiKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.notification.opsGenieApiKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.notification.serviceKeySecretRef
+
+"A SecretKeySelector is a reference to a secret key in an arbitrary namespace."
+
+### fn spec.forProvider.notification.serviceKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.notification.serviceKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.notification.serviceKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.notification.victorOpsApiKeySecretRef
+
+"A SecretKeySelector is a reference to a secret key in an arbitrary namespace."
+
+### fn spec.forProvider.notification.victorOpsApiKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.notification.victorOpsApiKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.notification.victorOpsApiKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.notification.victorOpsRoutingKeySecretRef
+
+"A SecretKeySelector is a reference to a secret key in an arbitrary namespace."
+
+### fn spec.forProvider.notification.victorOpsRoutingKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.notification.victorOpsRoutingKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.notification.victorOpsRoutingKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
 ## obj spec.forProvider.projectIdRef
 
 "A Reference to a named object."
@@ -444,6 +885,34 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.thresholdConfig
+
+
+
+### fn spec.forProvider.thresholdConfig.withOperator
+
+```ts
+withOperator(operator)
+```
+
+
+
+### fn spec.forProvider.thresholdConfig.withThreshold
+
+```ts
+withThreshold(threshold)
+```
+
+
+
+### fn spec.forProvider.thresholdConfig.withUnits
+
+```ts
+withUnits(units)
+```
+
+
 
 ## obj spec.providerConfigRef
 

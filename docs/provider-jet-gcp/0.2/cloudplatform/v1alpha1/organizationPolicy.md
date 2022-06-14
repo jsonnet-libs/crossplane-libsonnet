@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/cloudplatform/v1alpha1/organizationPolicy/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,25 @@ permalink: /provider-jet-gcp/0.2/cloudplatform/v1alpha1/organizationPolicy/
     * [`fn withRestorePolicy(restorePolicy)`](#fn-specforproviderwithrestorepolicy)
     * [`fn withRestorePolicyMixin(restorePolicy)`](#fn-specforproviderwithrestorepolicymixin)
     * [`fn withVersion(version)`](#fn-specforproviderwithversion)
+    * [`obj spec.forProvider.booleanPolicy`](#obj-specforproviderbooleanpolicy)
+      * [`fn withEnforced(enforced)`](#fn-specforproviderbooleanpolicywithenforced)
+    * [`obj spec.forProvider.listPolicy`](#obj-specforproviderlistpolicy)
+      * [`fn withAllow(allow)`](#fn-specforproviderlistpolicywithallow)
+      * [`fn withAllowMixin(allow)`](#fn-specforproviderlistpolicywithallowmixin)
+      * [`fn withDeny(deny)`](#fn-specforproviderlistpolicywithdeny)
+      * [`fn withDenyMixin(deny)`](#fn-specforproviderlistpolicywithdenymixin)
+      * [`fn withInheritFromParent(inheritFromParent)`](#fn-specforproviderlistpolicywithinheritfromparent)
+      * [`fn withSuggestedValue(suggestedValue)`](#fn-specforproviderlistpolicywithsuggestedvalue)
+      * [`obj spec.forProvider.listPolicy.allow`](#obj-specforproviderlistpolicyallow)
+        * [`fn withAll(all)`](#fn-specforproviderlistpolicyallowwithall)
+        * [`fn withValues(values)`](#fn-specforproviderlistpolicyallowwithvalues)
+        * [`fn withValuesMixin(values)`](#fn-specforproviderlistpolicyallowwithvaluesmixin)
+      * [`obj spec.forProvider.listPolicy.deny`](#obj-specforproviderlistpolicydeny)
+        * [`fn withAll(all)`](#fn-specforproviderlistpolicydenywithall)
+        * [`fn withValues(values)`](#fn-specforproviderlistpolicydenywithvalues)
+        * [`fn withValuesMixin(values)`](#fn-specforproviderlistpolicydenywithvaluesmixin)
+    * [`obj spec.forProvider.restorePolicy`](#obj-specforproviderrestorepolicy)
+      * [`fn withDefault(default)`](#fn-specforproviderrestorepolicywithdefault)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -164,24 +181,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -336,6 +335,146 @@ withVersion(version)
 ```
 
 "Version of the Policy. Default version is 0."
+
+## obj spec.forProvider.booleanPolicy
+
+"A boolean policy is a constraint that is either enforced or not."
+
+### fn spec.forProvider.booleanPolicy.withEnforced
+
+```ts
+withEnforced(enforced)
+```
+
+"If true, then the Policy is enforced. If false, then any configuration is acceptable."
+
+## obj spec.forProvider.listPolicy
+
+"A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values."
+
+### fn spec.forProvider.listPolicy.withAllow
+
+```ts
+withAllow(allow)
+```
+
+"One or the other must be set."
+
+### fn spec.forProvider.listPolicy.withAllowMixin
+
+```ts
+withAllowMixin(allow)
+```
+
+"One or the other must be set."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.listPolicy.withDeny
+
+```ts
+withDeny(deny)
+```
+
+"One or the other must be set."
+
+### fn spec.forProvider.listPolicy.withDenyMixin
+
+```ts
+withDenyMixin(deny)
+```
+
+"One or the other must be set."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.listPolicy.withInheritFromParent
+
+```ts
+withInheritFromParent(inheritFromParent)
+```
+
+"If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy."
+
+### fn spec.forProvider.listPolicy.withSuggestedValue
+
+```ts
+withSuggestedValue(suggestedValue)
+```
+
+"The Google Cloud Console will try to default to a configuration that matches the value specified in this field."
+
+## obj spec.forProvider.listPolicy.allow
+
+"One or the other must be set."
+
+### fn spec.forProvider.listPolicy.allow.withAll
+
+```ts
+withAll(all)
+```
+
+"The policy allows or denies all values."
+
+### fn spec.forProvider.listPolicy.allow.withValues
+
+```ts
+withValues(values)
+```
+
+"The policy can define specific values that are allowed or denied."
+
+### fn spec.forProvider.listPolicy.allow.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"The policy can define specific values that are allowed or denied."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.listPolicy.deny
+
+"One or the other must be set."
+
+### fn spec.forProvider.listPolicy.deny.withAll
+
+```ts
+withAll(all)
+```
+
+"The policy allows or denies all values."
+
+### fn spec.forProvider.listPolicy.deny.withValues
+
+```ts
+withValues(values)
+```
+
+"The policy can define specific values that are allowed or denied."
+
+### fn spec.forProvider.listPolicy.deny.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"The policy can define specific values that are allowed or denied."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.restorePolicy
+
+"A restore policy is a constraint to restore the default policy."
+
+### fn spec.forProvider.restorePolicy.withDefault
+
+```ts
+withDefault(default)
+```
+
+"May only be set to true. If set, then the default Policy is restored."
 
 ## obj spec.providerConfigRef
 

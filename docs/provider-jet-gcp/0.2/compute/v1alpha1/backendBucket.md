@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/backendBucket/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,19 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/backendBucket/
     * [`fn withEnableCdn(enableCdn)`](#fn-specforproviderwithenablecdn)
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.cdnPolicy`](#obj-specforprovidercdnpolicy)
+      * [`fn withCacheMode(cacheMode)`](#fn-specforprovidercdnpolicywithcachemode)
+      * [`fn withClientTtl(clientTtl)`](#fn-specforprovidercdnpolicywithclientttl)
+      * [`fn withDefaultTtl(defaultTtl)`](#fn-specforprovidercdnpolicywithdefaultttl)
+      * [`fn withMaxTtl(maxTtl)`](#fn-specforprovidercdnpolicywithmaxttl)
+      * [`fn withNegativeCaching(negativeCaching)`](#fn-specforprovidercdnpolicywithnegativecaching)
+      * [`fn withNegativeCachingPolicy(negativeCachingPolicy)`](#fn-specforprovidercdnpolicywithnegativecachingpolicy)
+      * [`fn withNegativeCachingPolicyMixin(negativeCachingPolicy)`](#fn-specforprovidercdnpolicywithnegativecachingpolicymixin)
+      * [`fn withServeWhileStale(serveWhileStale)`](#fn-specforprovidercdnpolicywithservewhilestale)
+      * [`fn withSignedUrlCacheMaxAgeSec(signedUrlCacheMaxAgeSec)`](#fn-specforprovidercdnpolicywithsignedurlcachemaxagesec)
+      * [`obj spec.forProvider.cdnPolicy.negativeCachingPolicy`](#obj-specforprovidercdnpolicynegativecachingpolicy)
+        * [`fn withCode(code)`](#fn-specforprovidercdnpolicynegativecachingpolicywithcode)
+        * [`fn withTtl(ttl)`](#fn-specforprovidercdnpolicynegativecachingpolicywithttl)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -164,24 +175,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -334,6 +327,104 @@ withProject(project)
 ```
 
 
+
+## obj spec.forProvider.cdnPolicy
+
+"Cloud CDN configuration for this Backend Bucket."
+
+### fn spec.forProvider.cdnPolicy.withCacheMode
+
+```ts
+withCacheMode(cacheMode)
+```
+
+"Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values: [\"USE_ORIGIN_HEADERS\", \"FORCE_CACHE_ALL\", \"CACHE_ALL_STATIC\"]"
+
+### fn spec.forProvider.cdnPolicy.withClientTtl
+
+```ts
+withClientTtl(clientTtl)
+```
+
+"Specifies the maximum allowed TTL for cached content served by this origin."
+
+### fn spec.forProvider.cdnPolicy.withDefaultTtl
+
+```ts
+withDefaultTtl(defaultTtl)
+```
+
+"Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age)."
+
+### fn spec.forProvider.cdnPolicy.withMaxTtl
+
+```ts
+withMaxTtl(maxTtl)
+```
+
+"Specifies the maximum allowed TTL for cached content served by this origin."
+
+### fn spec.forProvider.cdnPolicy.withNegativeCaching
+
+```ts
+withNegativeCaching(negativeCaching)
+```
+
+"Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects."
+
+### fn spec.forProvider.cdnPolicy.withNegativeCachingPolicy
+
+```ts
+withNegativeCachingPolicy(negativeCachingPolicy)
+```
+
+"Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy. Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs."
+
+### fn spec.forProvider.cdnPolicy.withNegativeCachingPolicyMixin
+
+```ts
+withNegativeCachingPolicyMixin(negativeCachingPolicy)
+```
+
+"Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy. Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.cdnPolicy.withServeWhileStale
+
+```ts
+withServeWhileStale(serveWhileStale)
+```
+
+"Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache."
+
+### fn spec.forProvider.cdnPolicy.withSignedUrlCacheMaxAgeSec
+
+```ts
+withSignedUrlCacheMaxAgeSec(signedUrlCacheMaxAgeSec)
+```
+
+"Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a \"Cache-Control: public, max-age=[TTL]\" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered."
+
+## obj spec.forProvider.cdnPolicy.negativeCachingPolicy
+
+"Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy. Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs."
+
+### fn spec.forProvider.cdnPolicy.negativeCachingPolicy.withCode
+
+```ts
+withCode(code)
+```
+
+"The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status code more than once."
+
+### fn spec.forProvider.cdnPolicy.negativeCachingPolicy.withTtl
+
+```ts
+withTtl(ttl)
+```
+
+"The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL."
 
 ## obj spec.providerConfigRef
 

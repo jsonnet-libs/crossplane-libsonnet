@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/accesscontextmanager/v1alpha1/accessLevel/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -42,6 +40,44 @@ permalink: /provider-jet-gcp/0.2/accesscontextmanager/v1alpha1/accessLevel/
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withParent(parent)`](#fn-specforproviderwithparent)
     * [`fn withTitle(title)`](#fn-specforproviderwithtitle)
+    * [`obj spec.forProvider.basic`](#obj-specforproviderbasic)
+      * [`fn withCombiningFunction(combiningFunction)`](#fn-specforproviderbasicwithcombiningfunction)
+      * [`fn withConditions(conditions)`](#fn-specforproviderbasicwithconditions)
+      * [`fn withConditionsMixin(conditions)`](#fn-specforproviderbasicwithconditionsmixin)
+      * [`obj spec.forProvider.basic.conditions`](#obj-specforproviderbasicconditions)
+        * [`fn withDevicePolicy(devicePolicy)`](#fn-specforproviderbasicconditionswithdevicepolicy)
+        * [`fn withDevicePolicyMixin(devicePolicy)`](#fn-specforproviderbasicconditionswithdevicepolicymixin)
+        * [`fn withIpSubnetworks(ipSubnetworks)`](#fn-specforproviderbasicconditionswithipsubnetworks)
+        * [`fn withIpSubnetworksMixin(ipSubnetworks)`](#fn-specforproviderbasicconditionswithipsubnetworksmixin)
+        * [`fn withMembers(members)`](#fn-specforproviderbasicconditionswithmembers)
+        * [`fn withMembersMixin(members)`](#fn-specforproviderbasicconditionswithmembersmixin)
+        * [`fn withNegate(negate)`](#fn-specforproviderbasicconditionswithnegate)
+        * [`fn withRegions(regions)`](#fn-specforproviderbasicconditionswithregions)
+        * [`fn withRegionsMixin(regions)`](#fn-specforproviderbasicconditionswithregionsmixin)
+        * [`fn withRequiredAccessLevels(requiredAccessLevels)`](#fn-specforproviderbasicconditionswithrequiredaccesslevels)
+        * [`fn withRequiredAccessLevelsMixin(requiredAccessLevels)`](#fn-specforproviderbasicconditionswithrequiredaccesslevelsmixin)
+        * [`obj spec.forProvider.basic.conditions.devicePolicy`](#obj-specforproviderbasicconditionsdevicepolicy)
+          * [`fn withAllowedDeviceManagementLevels(allowedDeviceManagementLevels)`](#fn-specforproviderbasicconditionsdevicepolicywithalloweddevicemanagementlevels)
+          * [`fn withAllowedDeviceManagementLevelsMixin(allowedDeviceManagementLevels)`](#fn-specforproviderbasicconditionsdevicepolicywithalloweddevicemanagementlevelsmixin)
+          * [`fn withAllowedEncryptionStatuses(allowedEncryptionStatuses)`](#fn-specforproviderbasicconditionsdevicepolicywithallowedencryptionstatuses)
+          * [`fn withAllowedEncryptionStatusesMixin(allowedEncryptionStatuses)`](#fn-specforproviderbasicconditionsdevicepolicywithallowedencryptionstatusesmixin)
+          * [`fn withOsConstraints(osConstraints)`](#fn-specforproviderbasicconditionsdevicepolicywithosconstraints)
+          * [`fn withOsConstraintsMixin(osConstraints)`](#fn-specforproviderbasicconditionsdevicepolicywithosconstraintsmixin)
+          * [`fn withRequireAdminApproval(requireAdminApproval)`](#fn-specforproviderbasicconditionsdevicepolicywithrequireadminapproval)
+          * [`fn withRequireCorpOwned(requireCorpOwned)`](#fn-specforproviderbasicconditionsdevicepolicywithrequirecorpowned)
+          * [`fn withRequireScreenLock(requireScreenLock)`](#fn-specforproviderbasicconditionsdevicepolicywithrequirescreenlock)
+          * [`obj spec.forProvider.basic.conditions.devicePolicy.osConstraints`](#obj-specforproviderbasicconditionsdevicepolicyosconstraints)
+            * [`fn withMinimumVersion(minimumVersion)`](#fn-specforproviderbasicconditionsdevicepolicyosconstraintswithminimumversion)
+            * [`fn withOsType(osType)`](#fn-specforproviderbasicconditionsdevicepolicyosconstraintswithostype)
+            * [`fn withRequireVerifiedChromeOs(requireVerifiedChromeOs)`](#fn-specforproviderbasicconditionsdevicepolicyosconstraintswithrequireverifiedchromeos)
+    * [`obj spec.forProvider.custom`](#obj-specforprovidercustom)
+      * [`fn withExpr(expr)`](#fn-specforprovidercustomwithexpr)
+      * [`fn withExprMixin(expr)`](#fn-specforprovidercustomwithexprmixin)
+      * [`obj spec.forProvider.custom.expr`](#obj-specforprovidercustomexpr)
+        * [`fn withDescription(description)`](#fn-specforprovidercustomexprwithdescription)
+        * [`fn withExpression(expression)`](#fn-specforprovidercustomexprwithexpression)
+        * [`fn withLocation(location)`](#fn-specforprovidercustomexprwithlocation)
+        * [`fn withTitle(title)`](#fn-specforprovidercustomexprwithtitle)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +199,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -325,6 +343,306 @@ withTitle(title)
 ```
 
 "Human readable title. Must be unique within the Policy."
+
+## obj spec.forProvider.basic
+
+"A set of predefined conditions for the access level and a combining function."
+
+### fn spec.forProvider.basic.withCombiningFunction
+
+```ts
+withCombiningFunction(combiningFunction)
+```
+
+"How the conditions list should be combined to determine if a request is granted this AccessLevel. If AND is used, each Condition in conditions must be satisfied for the AccessLevel to be applied. If OR is used, at least one Condition in conditions must be satisfied for the AccessLevel to be applied. Default value: \"AND\" Possible values: [\"AND\", \"OR\"]"
+
+### fn spec.forProvider.basic.withConditions
+
+```ts
+withConditions(conditions)
+```
+
+"A set of requirements for the AccessLevel to be granted."
+
+### fn spec.forProvider.basic.withConditionsMixin
+
+```ts
+withConditionsMixin(conditions)
+```
+
+"A set of requirements for the AccessLevel to be granted."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.basic.conditions
+
+"A set of requirements for the AccessLevel to be granted."
+
+### fn spec.forProvider.basic.conditions.withDevicePolicy
+
+```ts
+withDevicePolicy(devicePolicy)
+```
+
+"Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed."
+
+### fn spec.forProvider.basic.conditions.withDevicePolicyMixin
+
+```ts
+withDevicePolicyMixin(devicePolicy)
+```
+
+"Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.basic.conditions.withIpSubnetworks
+
+```ts
+withIpSubnetworks(ipSubnetworks)
+```
+
+"A list of CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, \"192.0.2.0/24\" is accepted but \"192.0.2.1/24\" is not. Similarly, for IPv6, \"2001:db8::/32\" is accepted whereas \"2001:db8::1/32\" is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed."
+
+### fn spec.forProvider.basic.conditions.withIpSubnetworksMixin
+
+```ts
+withIpSubnetworksMixin(ipSubnetworks)
+```
+
+"A list of CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, \"192.0.2.0/24\" is accepted but \"192.0.2.1/24\" is not. Similarly, for IPv6, \"2001:db8::/32\" is accepted whereas \"2001:db8::1/32\" is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.basic.conditions.withMembers
+
+```ts
+withMembers(members)
+```
+
+"An allowed list of members (users, service accounts). Using groups is not supported yet. \n The signed-in user originating the request must be a part of one of the provided members. If not specified, a request may come from any user (logged in/not logged in, not present in any groups, etc.). Formats: 'user:{emailid}', 'serviceAccount:{emailid}'"
+
+### fn spec.forProvider.basic.conditions.withMembersMixin
+
+```ts
+withMembersMixin(members)
+```
+
+"An allowed list of members (users, service accounts). Using groups is not supported yet. \n The signed-in user originating the request must be a part of one of the provided members. If not specified, a request may come from any user (logged in/not logged in, not present in any groups, etc.). Formats: 'user:{emailid}', 'serviceAccount:{emailid}'"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.basic.conditions.withNegate
+
+```ts
+withNegate(negate)
+```
+
+"Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty fields, each field must be false for the Condition overall to be satisfied. Defaults to false."
+
+### fn spec.forProvider.basic.conditions.withRegions
+
+```ts
+withRegions(regions)
+```
+
+"The request must originate from one of the provided countries/regions. Format: A valid ISO 3166-1 alpha-2 code."
+
+### fn spec.forProvider.basic.conditions.withRegionsMixin
+
+```ts
+withRegionsMixin(regions)
+```
+
+"The request must originate from one of the provided countries/regions. Format: A valid ISO 3166-1 alpha-2 code."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.basic.conditions.withRequiredAccessLevels
+
+```ts
+withRequiredAccessLevels(requiredAccessLevels)
+```
+
+"A list of other access levels defined in the same Policy, referenced by resource name. Referencing an AccessLevel which does not exist is an error. All access levels listed must be granted for the Condition to be true. Format: accessPolicies/{policy_id}/accessLevels/{short_name}"
+
+### fn spec.forProvider.basic.conditions.withRequiredAccessLevelsMixin
+
+```ts
+withRequiredAccessLevelsMixin(requiredAccessLevels)
+```
+
+"A list of other access levels defined in the same Policy, referenced by resource name. Referencing an AccessLevel which does not exist is an error. All access levels listed must be granted for the Condition to be true. Format: accessPolicies/{policy_id}/accessLevels/{short_name}"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.basic.conditions.devicePolicy
+
+"Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed."
+
+### fn spec.forProvider.basic.conditions.devicePolicy.withAllowedDeviceManagementLevels
+
+```ts
+withAllowedDeviceManagementLevels(allowedDeviceManagementLevels)
+```
+
+"A list of allowed device management levels. An empty list allows all management levels. Possible values: [\"MANAGEMENT_UNSPECIFIED\", \"NONE\", \"BASIC\", \"COMPLETE\"]"
+
+### fn spec.forProvider.basic.conditions.devicePolicy.withAllowedDeviceManagementLevelsMixin
+
+```ts
+withAllowedDeviceManagementLevelsMixin(allowedDeviceManagementLevels)
+```
+
+"A list of allowed device management levels. An empty list allows all management levels. Possible values: [\"MANAGEMENT_UNSPECIFIED\", \"NONE\", \"BASIC\", \"COMPLETE\"]"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.basic.conditions.devicePolicy.withAllowedEncryptionStatuses
+
+```ts
+withAllowedEncryptionStatuses(allowedEncryptionStatuses)
+```
+
+"A list of allowed encryptions statuses. An empty list allows all statuses. Possible values: [\"ENCRYPTION_UNSPECIFIED\", \"ENCRYPTION_UNSUPPORTED\", \"UNENCRYPTED\", \"ENCRYPTED\"]"
+
+### fn spec.forProvider.basic.conditions.devicePolicy.withAllowedEncryptionStatusesMixin
+
+```ts
+withAllowedEncryptionStatusesMixin(allowedEncryptionStatuses)
+```
+
+"A list of allowed encryptions statuses. An empty list allows all statuses. Possible values: [\"ENCRYPTION_UNSPECIFIED\", \"ENCRYPTION_UNSUPPORTED\", \"UNENCRYPTED\", \"ENCRYPTED\"]"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.basic.conditions.devicePolicy.withOsConstraints
+
+```ts
+withOsConstraints(osConstraints)
+```
+
+"A list of allowed OS versions. An empty list allows all types and all versions."
+
+### fn spec.forProvider.basic.conditions.devicePolicy.withOsConstraintsMixin
+
+```ts
+withOsConstraintsMixin(osConstraints)
+```
+
+"A list of allowed OS versions. An empty list allows all types and all versions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.basic.conditions.devicePolicy.withRequireAdminApproval
+
+```ts
+withRequireAdminApproval(requireAdminApproval)
+```
+
+"Whether the device needs to be approved by the customer admin."
+
+### fn spec.forProvider.basic.conditions.devicePolicy.withRequireCorpOwned
+
+```ts
+withRequireCorpOwned(requireCorpOwned)
+```
+
+"Whether the device needs to be corp owned."
+
+### fn spec.forProvider.basic.conditions.devicePolicy.withRequireScreenLock
+
+```ts
+withRequireScreenLock(requireScreenLock)
+```
+
+"Whether or not screenlock is required for the DevicePolicy to be true. Defaults to false."
+
+## obj spec.forProvider.basic.conditions.devicePolicy.osConstraints
+
+"A list of allowed OS versions. An empty list allows all types and all versions."
+
+### fn spec.forProvider.basic.conditions.devicePolicy.osConstraints.withMinimumVersion
+
+```ts
+withMinimumVersion(minimumVersion)
+```
+
+"The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: \"major.minor.patch\" such as \"10.5.301\", \"9.2.1\"."
+
+### fn spec.forProvider.basic.conditions.devicePolicy.osConstraints.withOsType
+
+```ts
+withOsType(osType)
+```
+
+"The operating system type of the device. Possible values: [\"OS_UNSPECIFIED\", \"DESKTOP_MAC\", \"DESKTOP_WINDOWS\", \"DESKTOP_LINUX\", \"DESKTOP_CHROME_OS\", \"ANDROID\", \"IOS\"]"
+
+### fn spec.forProvider.basic.conditions.devicePolicy.osConstraints.withRequireVerifiedChromeOs
+
+```ts
+withRequireVerifiedChromeOs(requireVerifiedChromeOs)
+```
+
+"If you specify DESKTOP_CHROME_OS for osType, you can optionally include requireVerifiedChromeOs to require Chrome Verified Access."
+
+## obj spec.forProvider.custom
+
+"Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request. See CEL spec at: https://github.com/google/cel-spec."
+
+### fn spec.forProvider.custom.withExpr
+
+```ts
+withExpr(expr)
+```
+
+"Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec."
+
+### fn spec.forProvider.custom.withExprMixin
+
+```ts
+withExprMixin(expr)
+```
+
+"Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.custom.expr
+
+"Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec."
+
+### fn spec.forProvider.custom.expr.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Description of the expression"
+
+### fn spec.forProvider.custom.expr.withExpression
+
+```ts
+withExpression(expression)
+```
+
+"Textual representation of an expression in Common Expression Language syntax."
+
+### fn spec.forProvider.custom.expr.withLocation
+
+```ts
+withLocation(location)
+```
+
+"String indicating the location of the expression for error reporting, e.g. a file name and a position in the file"
+
+### fn spec.forProvider.custom.expr.withTitle
+
+```ts
+withTitle(title)
+```
+
+"Title for the expression, i.e. a short string describing its purpose."
 
 ## obj spec.providerConfigRef
 

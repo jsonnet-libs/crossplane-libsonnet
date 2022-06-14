@@ -22,8 +22,6 @@ permalink: /provider-grafana/0.1/grafana/v1alpha1/report/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -48,6 +46,15 @@ permalink: /provider-grafana/0.1/grafana/v1alpha1/report/
     * [`fn withScheduleMixin(schedule)`](#fn-specforproviderwithschedulemixin)
     * [`fn withTimeRange(timeRange)`](#fn-specforproviderwithtimerange)
     * [`fn withTimeRangeMixin(timeRange)`](#fn-specforproviderwithtimerangemixin)
+    * [`obj spec.forProvider.schedule`](#obj-specforproviderschedule)
+      * [`fn withCustomInterval(customInterval)`](#fn-specforproviderschedulewithcustominterval)
+      * [`fn withEndTime(endTime)`](#fn-specforproviderschedulewithendtime)
+      * [`fn withFrequency(frequency)`](#fn-specforproviderschedulewithfrequency)
+      * [`fn withStartTime(startTime)`](#fn-specforproviderschedulewithstarttime)
+      * [`fn withWorkdaysOnly(workdaysOnly)`](#fn-specforproviderschedulewithworkdaysonly)
+    * [`obj spec.forProvider.timeRange`](#obj-specforprovidertimerange)
+      * [`fn withFrom(from)`](#fn-specforprovidertimerangewithfrom)
+      * [`fn withTo(to)`](#fn-specforprovidertimerangewithto)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -169,24 +176,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -381,6 +370,70 @@ withTimeRangeMixin(timeRange)
 "Time range of the report."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.schedule
+
+"Schedule of the report."
+
+### fn spec.forProvider.schedule.withCustomInterval
+
+```ts
+withCustomInterval(customInterval)
+```
+
+"Custom interval of the report. **Note:** This field is only available when frequency is set to `custom`."
+
+### fn spec.forProvider.schedule.withEndTime
+
+```ts
+withEndTime(endTime)
+```
+
+"End time of the report. If empty, the report will be sent indefinitely (according to frequency). Note that times will be saved as UTC in Grafana."
+
+### fn spec.forProvider.schedule.withFrequency
+
+```ts
+withFrequency(frequency)
+```
+
+"Frequency of the report. One of `never`, `once`, `hourly`, `daily`, `weekly`, `monthly` or `custom`."
+
+### fn spec.forProvider.schedule.withStartTime
+
+```ts
+withStartTime(startTime)
+```
+
+"Start time of the report. If empty, the start date will be set to the creation time. Note that times will be saved as UTC in Grafana."
+
+### fn spec.forProvider.schedule.withWorkdaysOnly
+
+```ts
+withWorkdaysOnly(workdaysOnly)
+```
+
+"Whether to send the report only on work days. Defaults to `false`."
+
+## obj spec.forProvider.timeRange
+
+"Time range of the report."
+
+### fn spec.forProvider.timeRange.withFrom
+
+```ts
+withFrom(from)
+```
+
+"Start of the time range."
+
+### fn spec.forProvider.timeRange.withTo
+
+```ts
+withTo(to)
+```
+
+"End of the time range."
 
 ## obj spec.providerConfigRef
 

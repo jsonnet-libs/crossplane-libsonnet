@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/pubsub/v1alpha1/liteTopic/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -44,6 +42,18 @@ permalink: /provider-jet-gcp/0.2/pubsub/v1alpha1/liteTopic/
     * [`fn withRetentionConfig(retentionConfig)`](#fn-specforproviderwithretentionconfig)
     * [`fn withRetentionConfigMixin(retentionConfig)`](#fn-specforproviderwithretentionconfigmixin)
     * [`fn withZone(zone)`](#fn-specforproviderwithzone)
+    * [`obj spec.forProvider.partitionConfig`](#obj-specforproviderpartitionconfig)
+      * [`fn withCapacity(capacity)`](#fn-specforproviderpartitionconfigwithcapacity)
+      * [`fn withCapacityMixin(capacity)`](#fn-specforproviderpartitionconfigwithcapacitymixin)
+      * [`fn withCount(count)`](#fn-specforproviderpartitionconfigwithcount)
+      * [`obj spec.forProvider.partitionConfig.capacity`](#obj-specforproviderpartitionconfigcapacity)
+        * [`fn withPublishMibPerSec(publishMibPerSec)`](#fn-specforproviderpartitionconfigcapacitywithpublishmibpersec)
+        * [`fn withSubscribeMibPerSec(subscribeMibPerSec)`](#fn-specforproviderpartitionconfigcapacitywithsubscribemibpersec)
+    * [`obj spec.forProvider.reservationConfig`](#obj-specforproviderreservationconfig)
+      * [`fn withThroughputReservation(throughputReservation)`](#fn-specforproviderreservationconfigwiththroughputreservation)
+    * [`obj spec.forProvider.retentionConfig`](#obj-specforproviderretentionconfig)
+      * [`fn withPerPartitionBytes(perPartitionBytes)`](#fn-specforproviderretentionconfigwithperpartitionbytes)
+      * [`fn withPeriod(period)`](#fn-specforproviderretentionconfigwithperiod)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -165,24 +175,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -345,6 +337,88 @@ withZone(zone)
 ```
 
 "The zone of the pubsub lite topic."
+
+## obj spec.forProvider.partitionConfig
+
+"The settings for this topic's partitions."
+
+### fn spec.forProvider.partitionConfig.withCapacity
+
+```ts
+withCapacity(capacity)
+```
+
+"The capacity configuration."
+
+### fn spec.forProvider.partitionConfig.withCapacityMixin
+
+```ts
+withCapacityMixin(capacity)
+```
+
+"The capacity configuration."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.partitionConfig.withCount
+
+```ts
+withCount(count)
+```
+
+"The number of partitions in the topic. Must be at least 1."
+
+## obj spec.forProvider.partitionConfig.capacity
+
+"The capacity configuration."
+
+### fn spec.forProvider.partitionConfig.capacity.withPublishMibPerSec
+
+```ts
+withPublishMibPerSec(publishMibPerSec)
+```
+
+"Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16."
+
+### fn spec.forProvider.partitionConfig.capacity.withSubscribeMibPerSec
+
+```ts
+withSubscribeMibPerSec(subscribeMibPerSec)
+```
+
+"Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16."
+
+## obj spec.forProvider.reservationConfig
+
+"The settings for this topic's Reservation usage."
+
+### fn spec.forProvider.reservationConfig.withThroughputReservation
+
+```ts
+withThroughputReservation(throughputReservation)
+```
+
+"The Reservation to use for this topic's throughput capacity."
+
+## obj spec.forProvider.retentionConfig
+
+"The settings for a topic's message retention."
+
+### fn spec.forProvider.retentionConfig.withPerPartitionBytes
+
+```ts
+withPerPartitionBytes(perPartitionBytes)
+```
+
+"The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of period."
+
+### fn spec.forProvider.retentionConfig.withPeriod
+
+```ts
+withPeriod(period)
+```
+
+"How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below perPartitionBytes."
 
 ## obj spec.providerConfigRef
 

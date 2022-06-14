@@ -22,8 +22,6 @@ permalink: /provider-grafana/0.1/grafana/v1alpha1/folderPermission/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -37,6 +35,11 @@ permalink: /provider-grafana/0.1/grafana/v1alpha1/folderPermission/
     * [`fn withFolderUid(folderUid)`](#fn-specforproviderwithfolderuid)
     * [`fn withPermissions(permissions)`](#fn-specforproviderwithpermissions)
     * [`fn withPermissionsMixin(permissions)`](#fn-specforproviderwithpermissionsmixin)
+    * [`obj spec.forProvider.permissions`](#obj-specforproviderpermissions)
+      * [`fn withPermission(permission)`](#fn-specforproviderpermissionswithpermission)
+      * [`fn withRole(role)`](#fn-specforproviderpermissionswithrole)
+      * [`fn withTeamId(teamId)`](#fn-specforproviderpermissionswithteamid)
+      * [`fn withUserId(userId)`](#fn-specforproviderpermissionswithuserid)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -161,24 +164,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -278,6 +263,42 @@ withPermissionsMixin(permissions)
 "The permission items to add/update. Items that are omitted from the list will be removed."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.permissions
+
+"The permission items to add/update. Items that are omitted from the list will be removed."
+
+### fn spec.forProvider.permissions.withPermission
+
+```ts
+withPermission(permission)
+```
+
+"Permission to associate with item. Must be one of `View`, `Edit`, or `Admin`."
+
+### fn spec.forProvider.permissions.withRole
+
+```ts
+withRole(role)
+```
+
+"Manage permissions for `Viewer` or `Editor` roles."
+
+### fn spec.forProvider.permissions.withTeamId
+
+```ts
+withTeamId(teamId)
+```
+
+"ID of the team to manage permissions for. Defaults to `0`."
+
+### fn spec.forProvider.permissions.withUserId
+
+```ts
+withUserId(userId)
+```
+
+"ID of the user to manage permissions for. Defaults to `0`."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/redshift/v1alpha1/cluster/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -77,14 +75,23 @@ permalink: /provider-aws/0.24/redshift/v1alpha1/cluster/
     * [`fn withVpcSecurityGroupIDRefsMixin(vpcSecurityGroupIDRefs)`](#fn-specforproviderwithvpcsecuritygroupidrefsmixin)
     * [`fn withVpcSecurityGroupIds(vpcSecurityGroupIds)`](#fn-specforproviderwithvpcsecuritygroupids)
     * [`fn withVpcSecurityGroupIdsMixin(vpcSecurityGroupIds)`](#fn-specforproviderwithvpcsecuritygroupidsmixin)
+    * [`obj spec.forProvider.clusterSecurityGroupRefs`](#obj-specforproviderclustersecuritygrouprefs)
+      * [`fn withName(name)`](#fn-specforproviderclustersecuritygrouprefswithname)
     * [`obj spec.forProvider.clusterSecurityGroupSelector`](#obj-specforproviderclustersecuritygroupselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderclustersecuritygroupselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderclustersecuritygroupselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderclustersecuritygroupselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.iamRoleRefs`](#obj-specforprovideriamrolerefs)
+      * [`fn withName(name)`](#fn-specforprovideriamrolerefswithname)
     * [`obj spec.forProvider.iamRoleSelector`](#obj-specforprovideriamroleselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovideriamroleselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovideriamroleselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovideriamroleselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.tags`](#obj-specforprovidertags)
+      * [`fn withTag(tag)`](#fn-specforprovidertagswithtag)
+      * [`fn withValue(value)`](#fn-specforprovidertagswithvalue)
+    * [`obj spec.forProvider.vpcSecurityGroupIDRefs`](#obj-specforprovidervpcsecuritygroupidrefs)
+      * [`fn withName(name)`](#fn-specforprovidervpcsecuritygroupidrefswithname)
     * [`obj spec.forProvider.vpcSecurityGroupIDSelector`](#obj-specforprovidervpcsecuritygroupidselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidervpcsecuritygroupidselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidervpcsecuritygroupidselectorwithmatchlabels)
@@ -210,24 +217,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -663,6 +652,18 @@ withVpcSecurityGroupIdsMixin(vpcSecurityGroupIds)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.clusterSecurityGroupRefs
+
+"ClusterSecurityGroupRefs are references to ClusterSecurityGroups used to set the ClusterSecurityGroups."
+
+### fn spec.forProvider.clusterSecurityGroupRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
 ## obj spec.forProvider.clusterSecurityGroupSelector
 
 "ClusterSecurityGroupSelector selects references to ClusterSecurityGroups used to set the ClusterSecurityGroups."
@@ -693,6 +694,18 @@ withMatchLabelsMixin(matchLabels)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.iamRoleRefs
+
+"IAMRoleRefs are references to IAMRoles used to set the IAMRoles."
+
+### fn spec.forProvider.iamRoleRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
 ## obj spec.forProvider.iamRoleSelector
 
 "IAMRoleSelector selects references to IAMRoles used to set the IAMRoles."
@@ -722,6 +735,38 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.tags
+
+"Tags indicates a list of tags for the clusters."
+
+### fn spec.forProvider.tags.withTag
+
+```ts
+withTag(tag)
+```
+
+"The key of the tag."
+
+### fn spec.forProvider.tags.withValue
+
+```ts
+withValue(value)
+```
+
+"The value of the tag."
+
+## obj spec.forProvider.vpcSecurityGroupIDRefs
+
+"VPCSecurityGroupIDRefs are references to VPCSecurityGroups used to set the VPCSecurityGroupIDs."
+
+### fn spec.forProvider.vpcSecurityGroupIDRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
 
 ## obj spec.forProvider.vpcSecurityGroupIDSelector
 

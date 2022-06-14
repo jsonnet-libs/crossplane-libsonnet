@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/acm/v1beta1/certificate/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -50,8 +48,14 @@ permalink: /provider-aws/0.24/acm/v1beta1/certificate/
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidercertificateauthorityarnselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidercertificateauthorityarnselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidercertificateauthorityarnselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.domainValidationOptions`](#obj-specforproviderdomainvalidationoptions)
+      * [`fn withDomainName(domainName)`](#fn-specforproviderdomainvalidationoptionswithdomainname)
+      * [`fn withValidationDomain(validationDomain)`](#fn-specforproviderdomainvalidationoptionswithvalidationdomain)
     * [`obj spec.forProvider.options`](#obj-specforprovideroptions)
       * [`fn withCertificateTransparencyLoggingPreference(certificateTransparencyLoggingPreference)`](#fn-specforprovideroptionswithcertificatetransparencyloggingpreference)
+    * [`obj spec.forProvider.tags`](#obj-specforprovidertags)
+      * [`fn withKey(key)`](#fn-specforprovidertagswithkey)
+      * [`fn withValue(value)`](#fn-specforprovidertagswithvalue)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -173,24 +177,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -396,6 +382,26 @@ withMatchLabelsMixin(matchLabels)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.domainValidationOptions
+
+"The domain name that you want ACM to use to send you emails so that you can validate domain ownership."
+
+### fn spec.forProvider.domainValidationOptions.withDomainName
+
+```ts
+withDomainName(domainName)
+```
+
+"Additinal Fully qualified domain name (FQDN),that to secure with an ACM certificate."
+
+### fn spec.forProvider.domainValidationOptions.withValidationDomain
+
+```ts
+withValidationDomain(validationDomain)
+```
+
+"Method to validate certificate"
+
 ## obj spec.forProvider.options
 
 "Currently, you can use this parameter to specify whether to add the certificate to a certificate transparency log. Certificate transparency makes it possible to detect SSL/TLS certificates that have been mistakenly or maliciously issued. Certificates that have not been logged typically produce an error message in a browser. For more information, see Opting Out of Certificate Transparency Logging (https://docs.aws.amazon.com/acm/latest/userguide/acm-bestpractices.html#best-practices-transparency)."
@@ -407,6 +413,26 @@ withCertificateTransparencyLoggingPreference(certificateTransparencyLoggingPrefe
 ```
 
 "You can opt out of certificate transparency logging by specifying the DISABLED option. Opt in by specifying ENABLED."
+
+## obj spec.forProvider.tags
+
+"One or more resource tags to associate with the certificate."
+
+### fn spec.forProvider.tags.withKey
+
+```ts
+withKey(key)
+```
+
+"The key name that can be used to look up or retrieve the associated value."
+
+### fn spec.forProvider.tags.withValue
+
+```ts
+withValue(value)
+```
+
+"The value associated with this tag."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-gcp/0.20/database/v1beta1/cloudSQLInstance/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -75,12 +73,19 @@ permalink: /provider-gcp/0.20/database/v1beta1/cloudSQLInstance/
         * [`fn withPointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled)`](#fn-specforprovidersettingsbackupconfigurationwithpointintimerecoveryenabled)
         * [`fn withReplicationLogArchivingEnabled(replicationLogArchivingEnabled)`](#fn-specforprovidersettingsbackupconfigurationwithreplicationlogarchivingenabled)
         * [`fn withStartTime(startTime)`](#fn-specforprovidersettingsbackupconfigurationwithstarttime)
+      * [`obj spec.forProvider.settings.databaseFlags`](#obj-specforprovidersettingsdatabaseflags)
+        * [`fn withName(name)`](#fn-specforprovidersettingsdatabaseflagswithname)
+        * [`fn withValue(value)`](#fn-specforprovidersettingsdatabaseflagswithvalue)
       * [`obj spec.forProvider.settings.ipConfiguration`](#obj-specforprovidersettingsipconfiguration)
         * [`fn withAuthorizedNetworks(authorizedNetworks)`](#fn-specforprovidersettingsipconfigurationwithauthorizednetworks)
         * [`fn withAuthorizedNetworksMixin(authorizedNetworks)`](#fn-specforprovidersettingsipconfigurationwithauthorizednetworksmixin)
         * [`fn withIpv4Enabled(ipv4Enabled)`](#fn-specforprovidersettingsipconfigurationwithipv4enabled)
         * [`fn withPrivateNetwork(privateNetwork)`](#fn-specforprovidersettingsipconfigurationwithprivatenetwork)
         * [`fn withRequireSsl(requireSsl)`](#fn-specforprovidersettingsipconfigurationwithrequiressl)
+        * [`obj spec.forProvider.settings.ipConfiguration.authorizedNetworks`](#obj-specforprovidersettingsipconfigurationauthorizednetworks)
+          * [`fn withExpirationTime(expirationTime)`](#fn-specforprovidersettingsipconfigurationauthorizednetworkswithexpirationtime)
+          * [`fn withName(name)`](#fn-specforprovidersettingsipconfigurationauthorizednetworkswithname)
+          * [`fn withValue(value)`](#fn-specforprovidersettingsipconfigurationauthorizednetworkswithvalue)
         * [`obj spec.forProvider.settings.ipConfiguration.privateNetworkRef`](#obj-specforprovidersettingsipconfigurationprivatenetworkref)
           * [`fn withName(name)`](#fn-specforprovidersettingsipconfigurationprivatenetworkrefwithname)
         * [`obj spec.forProvider.settings.ipConfiguration.privateNetworkSelector`](#obj-specforprovidersettingsipconfigurationprivatenetworkselector)
@@ -215,24 +220,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -628,6 +615,26 @@ withStartTime(startTime)
 
 "StartTime: Start time for the daily backup configuration in UTC timezone in the 24 hour format - HH:MM."
 
+## obj spec.forProvider.settings.databaseFlags
+
+"DatabaseFlags is the array of database flags passed to the instance at startup."
+
+### fn spec.forProvider.settings.databaseFlags.withName
+
+```ts
+withName(name)
+```
+
+"Name: The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags should be specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation."
+
+### fn spec.forProvider.settings.databaseFlags.withValue
+
+```ts
+withValue(value)
+```
+
+"Value: The value of the flag. Booleans should be set to on for true and off for false. This field must be omitted if the flag doesn't take a value."
+
 ## obj spec.forProvider.settings.ipConfiguration
 
 "IPConfiguration: The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled for Second Generation instances."
@@ -673,6 +680,34 @@ withRequireSsl(requireSsl)
 ```
 
 "RequireSsl: Whether SSL connections over IP should be enforced or not."
+
+## obj spec.forProvider.settings.ipConfiguration.authorizedNetworks
+
+"AuthorizedNetworks: The list of external networks that are allowed to connect to the instance using the IP. In CIDR notation, also known as 'slash' notation (e.g. 192.168.100.0/24)."
+
+### fn spec.forProvider.settings.ipConfiguration.authorizedNetworks.withExpirationTime
+
+```ts
+withExpirationTime(expirationTime)
+```
+
+"ExpirationTime: The time when this access control entry expires in RFC 3339 format, for example 2012-11-15T16:19:00.094Z."
+
+### fn spec.forProvider.settings.ipConfiguration.authorizedNetworks.withName
+
+```ts
+withName(name)
+```
+
+"Name: An optional label to identify this entry."
+
+### fn spec.forProvider.settings.ipConfiguration.authorizedNetworks.withValue
+
+```ts
+withValue(value)
+```
+
+"Value: The whitelisted value for the access control list."
 
 ## obj spec.forProvider.settings.ipConfiguration.privateNetworkRef
 

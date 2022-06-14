@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/glue/v1alpha1/crawler/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -70,6 +68,28 @@ permalink: /provider-aws/0.24/glue/v1alpha1/crawler/
       * [`fn withMongoDBTargetsMixin(mongoDBTargets)`](#fn-specforprovidertargetswithmongodbtargetsmixin)
       * [`fn withS3Targets(s3Targets)`](#fn-specforprovidertargetswiths3targets)
       * [`fn withS3TargetsMixin(s3Targets)`](#fn-specforprovidertargetswiths3targetsmixin)
+      * [`obj spec.forProvider.targets.catalogTargets`](#obj-specforprovidertargetscatalogtargets)
+        * [`fn withDatabaseName(databaseName)`](#fn-specforprovidertargetscatalogtargetswithdatabasename)
+        * [`fn withTables(tables)`](#fn-specforprovidertargetscatalogtargetswithtables)
+        * [`fn withTablesMixin(tables)`](#fn-specforprovidertargetscatalogtargetswithtablesmixin)
+      * [`obj spec.forProvider.targets.dynamoDBTargets`](#obj-specforprovidertargetsdynamodbtargets)
+        * [`fn withPath(path)`](#fn-specforprovidertargetsdynamodbtargetswithpath)
+        * [`fn withScanAll(scanAll)`](#fn-specforprovidertargetsdynamodbtargetswithscanall)
+        * [`fn withScanRate(scanRate)`](#fn-specforprovidertargetsdynamodbtargetswithscanrate)
+      * [`obj spec.forProvider.targets.jdbcTargets`](#obj-specforprovidertargetsjdbctargets)
+        * [`fn withConnectionName(connectionName)`](#fn-specforprovidertargetsjdbctargetswithconnectionname)
+        * [`fn withExclusions(exclusions)`](#fn-specforprovidertargetsjdbctargetswithexclusions)
+        * [`fn withExclusionsMixin(exclusions)`](#fn-specforprovidertargetsjdbctargetswithexclusionsmixin)
+        * [`fn withPath(path)`](#fn-specforprovidertargetsjdbctargetswithpath)
+      * [`obj spec.forProvider.targets.mongoDBTargets`](#obj-specforprovidertargetsmongodbtargets)
+        * [`fn withConnectionName(connectionName)`](#fn-specforprovidertargetsmongodbtargetswithconnectionname)
+        * [`fn withPath(path)`](#fn-specforprovidertargetsmongodbtargetswithpath)
+        * [`fn withScanAll(scanAll)`](#fn-specforprovidertargetsmongodbtargetswithscanall)
+      * [`obj spec.forProvider.targets.s3Targets`](#obj-specforprovidertargetss3targets)
+        * [`fn withConnectionName(connectionName)`](#fn-specforprovidertargetss3targetswithconnectionname)
+        * [`fn withExclusions(exclusions)`](#fn-specforprovidertargetss3targetswithexclusions)
+        * [`fn withExclusionsMixin(exclusions)`](#fn-specforprovidertargetss3targetswithexclusionsmixin)
+        * [`fn withPath(path)`](#fn-specforprovidertargetss3targetswithpath)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -191,24 +211,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -565,6 +567,168 @@ withS3TargetsMixin(s3Targets)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.targets.catalogTargets
+
+
+
+### fn spec.forProvider.targets.catalogTargets.withDatabaseName
+
+```ts
+withDatabaseName(databaseName)
+```
+
+
+
+### fn spec.forProvider.targets.catalogTargets.withTables
+
+```ts
+withTables(tables)
+```
+
+
+
+### fn spec.forProvider.targets.catalogTargets.withTablesMixin
+
+```ts
+withTablesMixin(tables)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.targets.dynamoDBTargets
+
+
+
+### fn spec.forProvider.targets.dynamoDBTargets.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.forProvider.targets.dynamoDBTargets.withScanAll
+
+```ts
+withScanAll(scanAll)
+```
+
+
+
+### fn spec.forProvider.targets.dynamoDBTargets.withScanRate
+
+```ts
+withScanRate(scanRate)
+```
+
+
+
+## obj spec.forProvider.targets.jdbcTargets
+
+
+
+### fn spec.forProvider.targets.jdbcTargets.withConnectionName
+
+```ts
+withConnectionName(connectionName)
+```
+
+
+
+### fn spec.forProvider.targets.jdbcTargets.withExclusions
+
+```ts
+withExclusions(exclusions)
+```
+
+
+
+### fn spec.forProvider.targets.jdbcTargets.withExclusionsMixin
+
+```ts
+withExclusionsMixin(exclusions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.targets.jdbcTargets.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+## obj spec.forProvider.targets.mongoDBTargets
+
+
+
+### fn spec.forProvider.targets.mongoDBTargets.withConnectionName
+
+```ts
+withConnectionName(connectionName)
+```
+
+
+
+### fn spec.forProvider.targets.mongoDBTargets.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.forProvider.targets.mongoDBTargets.withScanAll
+
+```ts
+withScanAll(scanAll)
+```
+
+
+
+## obj spec.forProvider.targets.s3Targets
+
+
+
+### fn spec.forProvider.targets.s3Targets.withConnectionName
+
+```ts
+withConnectionName(connectionName)
+```
+
+
+
+### fn spec.forProvider.targets.s3Targets.withExclusions
+
+```ts
+withExclusions(exclusions)
+```
+
+
+
+### fn spec.forProvider.targets.s3Targets.withExclusionsMixin
+
+```ts
+withExclusionsMixin(exclusions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.targets.s3Targets.withPath
+
+```ts
+withPath(path)
+```
+
+
 
 ## obj spec.providerConfigRef
 

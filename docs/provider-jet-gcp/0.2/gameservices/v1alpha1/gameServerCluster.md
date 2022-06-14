@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/gameservices/v1alpha1/gameServerCluster/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,12 @@ permalink: /provider-jet-gcp/0.2/gameservices/v1alpha1/gameServerCluster/
     * [`fn withLocation(location)`](#fn-specforproviderwithlocation)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withRealmId(realmId)`](#fn-specforproviderwithrealmid)
+    * [`obj spec.forProvider.connectionInfo`](#obj-specforproviderconnectioninfo)
+      * [`fn withGkeClusterReference(gkeClusterReference)`](#fn-specforproviderconnectioninfowithgkeclusterreference)
+      * [`fn withGkeClusterReferenceMixin(gkeClusterReference)`](#fn-specforproviderconnectioninfowithgkeclusterreferencemixin)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderconnectioninfowithnamespace)
+      * [`obj spec.forProvider.connectionInfo.gkeClusterReference`](#obj-specforproviderconnectioninfogkeclusterreference)
+        * [`fn withCluster(cluster)`](#fn-specforproviderconnectioninfogkeclusterreferencewithcluster)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -164,24 +168,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -334,6 +320,48 @@ withRealmId(realmId)
 ```
 
 "The realm id of the game server realm."
+
+## obj spec.forProvider.connectionInfo
+
+"Game server cluster connection information. This information is used to manage game server clusters."
+
+### fn spec.forProvider.connectionInfo.withGkeClusterReference
+
+```ts
+withGkeClusterReference(gkeClusterReference)
+```
+
+"Reference of the GKE cluster where the game servers are installed."
+
+### fn spec.forProvider.connectionInfo.withGkeClusterReferenceMixin
+
+```ts
+withGkeClusterReferenceMixin(gkeClusterReference)
+```
+
+"Reference of the GKE cluster where the game servers are installed."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.connectionInfo.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace designated on the game server cluster where the game server instances will be created. The namespace existence will be validated during creation."
+
+## obj spec.forProvider.connectionInfo.gkeClusterReference
+
+"Reference of the GKE cluster where the game servers are installed."
+
+### fn spec.forProvider.connectionInfo.gkeClusterReference.withCluster
+
+```ts
+withCluster(cluster)
+```
+
+"The full or partial name of a GKE cluster, using one of the following forms: \n * 'projects/{project_id}/locations/{location}/clusters/{cluster_id}' * 'locations/{location}/clusters/{cluster_id}' * '{cluster_id}' \n If project and location are not specified, the project and location of the GameServerCluster resource are used to generate the full name of the GKE cluster."
 
 ## obj spec.providerConfigRef
 

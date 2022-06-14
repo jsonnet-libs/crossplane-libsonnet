@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/cloudfront/v1alpha1/distribution/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -51,10 +49,70 @@ permalink: /provider-aws/0.24/cloudfront/v1alpha1/distribution/
         * [`fn withItems(items)`](#fn-specforproviderdistributionconfigcachebehaviorswithitems)
         * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigcachebehaviorswithitemsmixin)
         * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigcachebehaviorswithquantity)
+        * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items`](#obj-specforproviderdistributionconfigcachebehaviorsitems)
+          * [`fn withCachePolicyID(cachePolicyID)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithcachepolicyid)
+          * [`fn withCompress(compress)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithcompress)
+          * [`fn withDefaultTTL(defaultTTL)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithdefaultttl)
+          * [`fn withFieldLevelEncryptionID(fieldLevelEncryptionID)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithfieldlevelencryptionid)
+          * [`fn withMaxTTL(maxTTL)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithmaxttl)
+          * [`fn withMinTTL(minTTL)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithminttl)
+          * [`fn withOriginRequestPolicyID(originRequestPolicyID)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithoriginrequestpolicyid)
+          * [`fn withPathPattern(pathPattern)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithpathpattern)
+          * [`fn withRealtimeLogConfigARN(realtimeLogConfigARN)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithrealtimelogconfigarn)
+          * [`fn withSmoothStreaming(smoothStreaming)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithsmoothstreaming)
+          * [`fn withTargetOriginID(targetOriginID)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithtargetoriginid)
+          * [`fn withViewerProtocolPolicy(viewerProtocolPolicy)`](#fn-specforproviderdistributionconfigcachebehaviorsitemswithviewerprotocolpolicy)
+          * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items.allowedMethods`](#obj-specforproviderdistributionconfigcachebehaviorsitemsallowedmethods)
+            * [`fn withItems(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsallowedmethodswithitems)
+            * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsallowedmethodswithitemsmixin)
+            * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsallowedmethodswithquantity)
+            * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items.allowedMethods.cachedMethods`](#obj-specforproviderdistributionconfigcachebehaviorsitemsallowedmethodscachedmethods)
+              * [`fn withItems(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsallowedmethodscachedmethodswithitems)
+              * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsallowedmethodscachedmethodswithitemsmixin)
+              * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsallowedmethodscachedmethodswithquantity)
+          * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues`](#obj-specforproviderdistributionconfigcachebehaviorsitemsforwardedvalues)
+            * [`fn withQueryString(queryString)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsforwardedvalueswithquerystring)
+            * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.cookies`](#obj-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluescookies)
+              * [`fn withForward(forward)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluescookieswithforward)
+              * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.cookies.whitelistedNames`](#obj-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluescookieswhitelistednames)
+                * [`fn withItems(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluescookieswhitelistednameswithitems)
+                * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluescookieswhitelistednameswithitemsmixin)
+                * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluescookieswhitelistednameswithquantity)
+            * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.headers`](#obj-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluesheaders)
+              * [`fn withItems(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluesheaderswithitems)
+              * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluesheaderswithitemsmixin)
+              * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluesheaderswithquantity)
+            * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.queryStringCacheKeys`](#obj-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluesquerystringcachekeys)
+              * [`fn withItems(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluesquerystringcachekeyswithitems)
+              * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluesquerystringcachekeyswithitemsmixin)
+              * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigcachebehaviorsitemsforwardedvaluesquerystringcachekeyswithquantity)
+          * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items.lambdaFunctionAssociations`](#obj-specforproviderdistributionconfigcachebehaviorsitemslambdafunctionassociations)
+            * [`fn withItems(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemslambdafunctionassociationswithitems)
+            * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemslambdafunctionassociationswithitemsmixin)
+            * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigcachebehaviorsitemslambdafunctionassociationswithquantity)
+            * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items.lambdaFunctionAssociations.items`](#obj-specforproviderdistributionconfigcachebehaviorsitemslambdafunctionassociationsitems)
+              * [`fn withEventType(eventType)`](#fn-specforproviderdistributionconfigcachebehaviorsitemslambdafunctionassociationsitemswitheventtype)
+              * [`fn withIncludeBody(includeBody)`](#fn-specforproviderdistributionconfigcachebehaviorsitemslambdafunctionassociationsitemswithincludebody)
+              * [`fn withLambdaFunctionARN(lambdaFunctionARN)`](#fn-specforproviderdistributionconfigcachebehaviorsitemslambdafunctionassociationsitemswithlambdafunctionarn)
+          * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items.trustedKeyGroups`](#obj-specforproviderdistributionconfigcachebehaviorsitemstrustedkeygroups)
+            * [`fn withEnabled(enabled)`](#fn-specforproviderdistributionconfigcachebehaviorsitemstrustedkeygroupswithenabled)
+            * [`fn withItems(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemstrustedkeygroupswithitems)
+            * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemstrustedkeygroupswithitemsmixin)
+            * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigcachebehaviorsitemstrustedkeygroupswithquantity)
+          * [`obj spec.forProvider.distributionConfig.cacheBehaviors.items.trustedSigners`](#obj-specforproviderdistributionconfigcachebehaviorsitemstrustedsigners)
+            * [`fn withEnabled(enabled)`](#fn-specforproviderdistributionconfigcachebehaviorsitemstrustedsignerswithenabled)
+            * [`fn withItems(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemstrustedsignerswithitems)
+            * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigcachebehaviorsitemstrustedsignerswithitemsmixin)
+            * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigcachebehaviorsitemstrustedsignerswithquantity)
       * [`obj spec.forProvider.distributionConfig.customErrorResponses`](#obj-specforproviderdistributionconfigcustomerrorresponses)
         * [`fn withItems(items)`](#fn-specforproviderdistributionconfigcustomerrorresponseswithitems)
         * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigcustomerrorresponseswithitemsmixin)
         * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigcustomerrorresponseswithquantity)
+        * [`obj spec.forProvider.distributionConfig.customErrorResponses.items`](#obj-specforproviderdistributionconfigcustomerrorresponsesitems)
+          * [`fn withErrorCachingMinTTL(errorCachingMinTTL)`](#fn-specforproviderdistributionconfigcustomerrorresponsesitemswitherrorcachingminttl)
+          * [`fn withErrorCode(errorCode)`](#fn-specforproviderdistributionconfigcustomerrorresponsesitemswitherrorcode)
+          * [`fn withResponseCode(responseCode)`](#fn-specforproviderdistributionconfigcustomerrorresponsesitemswithresponsecode)
+          * [`fn withResponsePagePath(responsePagePath)`](#fn-specforproviderdistributionconfigcustomerrorresponsesitemswithresponsepagepath)
       * [`obj spec.forProvider.distributionConfig.defaultCacheBehavior`](#obj-specforproviderdistributionconfigdefaultcachebehavior)
         * [`fn withCachePolicyID(cachePolicyID)`](#fn-specforproviderdistributionconfigdefaultcachebehaviorwithcachepolicyid)
         * [`fn withCompress(compress)`](#fn-specforproviderdistributionconfigdefaultcachebehaviorwithcompress)
@@ -95,6 +153,10 @@ permalink: /provider-aws/0.24/cloudfront/v1alpha1/distribution/
           * [`fn withItems(items)`](#fn-specforproviderdistributionconfigdefaultcachebehaviorlambdafunctionassociationswithitems)
           * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigdefaultcachebehaviorlambdafunctionassociationswithitemsmixin)
           * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigdefaultcachebehaviorlambdafunctionassociationswithquantity)
+          * [`obj spec.forProvider.distributionConfig.defaultCacheBehavior.lambdaFunctionAssociations.items`](#obj-specforproviderdistributionconfigdefaultcachebehaviorlambdafunctionassociationsitems)
+            * [`fn withEventType(eventType)`](#fn-specforproviderdistributionconfigdefaultcachebehaviorlambdafunctionassociationsitemswitheventtype)
+            * [`fn withIncludeBody(includeBody)`](#fn-specforproviderdistributionconfigdefaultcachebehaviorlambdafunctionassociationsitemswithincludebody)
+            * [`fn withLambdaFunctionARN(lambdaFunctionARN)`](#fn-specforproviderdistributionconfigdefaultcachebehaviorlambdafunctionassociationsitemswithlambdafunctionarn)
         * [`obj spec.forProvider.distributionConfig.defaultCacheBehavior.trustedKeyGroups`](#obj-specforproviderdistributionconfigdefaultcachebehaviortrustedkeygroups)
           * [`fn withEnabled(enabled)`](#fn-specforproviderdistributionconfigdefaultcachebehaviortrustedkeygroupswithenabled)
           * [`fn withItems(items)`](#fn-specforproviderdistributionconfigdefaultcachebehaviortrustedkeygroupswithitems)
@@ -114,9 +176,50 @@ permalink: /provider-aws/0.24/cloudfront/v1alpha1/distribution/
         * [`fn withItems(items)`](#fn-specforproviderdistributionconfigorigingroupswithitems)
         * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigorigingroupswithitemsmixin)
         * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigorigingroupswithquantity)
+        * [`obj spec.forProvider.distributionConfig.originGroups.items`](#obj-specforproviderdistributionconfigorigingroupsitems)
+          * [`fn withId(id)`](#fn-specforproviderdistributionconfigorigingroupsitemswithid)
+          * [`obj spec.forProvider.distributionConfig.originGroups.items.failoverCriteria`](#obj-specforproviderdistributionconfigorigingroupsitemsfailovercriteria)
+            * [`obj spec.forProvider.distributionConfig.originGroups.items.failoverCriteria.statusCodes`](#obj-specforproviderdistributionconfigorigingroupsitemsfailovercriteriastatuscodes)
+              * [`fn withItems(items)`](#fn-specforproviderdistributionconfigorigingroupsitemsfailovercriteriastatuscodeswithitems)
+              * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigorigingroupsitemsfailovercriteriastatuscodeswithitemsmixin)
+              * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigorigingroupsitemsfailovercriteriastatuscodeswithquantity)
+          * [`obj spec.forProvider.distributionConfig.originGroups.items.members`](#obj-specforproviderdistributionconfigorigingroupsitemsmembers)
+            * [`fn withItems(items)`](#fn-specforproviderdistributionconfigorigingroupsitemsmemberswithitems)
+            * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigorigingroupsitemsmemberswithitemsmixin)
+            * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigorigingroupsitemsmemberswithquantity)
+            * [`obj spec.forProvider.distributionConfig.originGroups.items.members.items`](#obj-specforproviderdistributionconfigorigingroupsitemsmembersitems)
+              * [`fn withOriginID(originID)`](#fn-specforproviderdistributionconfigorigingroupsitemsmembersitemswithoriginid)
       * [`obj spec.forProvider.distributionConfig.origins`](#obj-specforproviderdistributionconfigorigins)
         * [`fn withItems(items)`](#fn-specforproviderdistributionconfigoriginswithitems)
         * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigoriginswithitemsmixin)
+        * [`obj spec.forProvider.distributionConfig.origins.items`](#obj-specforproviderdistributionconfigoriginsitems)
+          * [`fn withConnectionAttempts(connectionAttempts)`](#fn-specforproviderdistributionconfigoriginsitemswithconnectionattempts)
+          * [`fn withConnectionTimeout(connectionTimeout)`](#fn-specforproviderdistributionconfigoriginsitemswithconnectiontimeout)
+          * [`fn withDomainName(domainName)`](#fn-specforproviderdistributionconfigoriginsitemswithdomainname)
+          * [`fn withId(id)`](#fn-specforproviderdistributionconfigoriginsitemswithid)
+          * [`fn withOriginPath(originPath)`](#fn-specforproviderdistributionconfigoriginsitemswithoriginpath)
+          * [`obj spec.forProvider.distributionConfig.origins.items.customHeaders`](#obj-specforproviderdistributionconfigoriginsitemscustomheaders)
+            * [`fn withItems(items)`](#fn-specforproviderdistributionconfigoriginsitemscustomheaderswithitems)
+            * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigoriginsitemscustomheaderswithitemsmixin)
+            * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigoriginsitemscustomheaderswithquantity)
+            * [`obj spec.forProvider.distributionConfig.origins.items.customHeaders.items`](#obj-specforproviderdistributionconfigoriginsitemscustomheadersitems)
+              * [`fn withHeaderName(headerName)`](#fn-specforproviderdistributionconfigoriginsitemscustomheadersitemswithheadername)
+              * [`fn withHeaderValue(headerValue)`](#fn-specforproviderdistributionconfigoriginsitemscustomheadersitemswithheadervalue)
+          * [`obj spec.forProvider.distributionConfig.origins.items.customOriginConfig`](#obj-specforproviderdistributionconfigoriginsitemscustomoriginconfig)
+            * [`fn withHttpPort(httpPort)`](#fn-specforproviderdistributionconfigoriginsitemscustomoriginconfigwithhttpport)
+            * [`fn withHttpSPort(httpSPort)`](#fn-specforproviderdistributionconfigoriginsitemscustomoriginconfigwithhttpsport)
+            * [`fn withOriginKeepaliveTimeout(originKeepaliveTimeout)`](#fn-specforproviderdistributionconfigoriginsitemscustomoriginconfigwithoriginkeepalivetimeout)
+            * [`fn withOriginProtocolPolicy(originProtocolPolicy)`](#fn-specforproviderdistributionconfigoriginsitemscustomoriginconfigwithoriginprotocolpolicy)
+            * [`fn withOriginReadTimeout(originReadTimeout)`](#fn-specforproviderdistributionconfigoriginsitemscustomoriginconfigwithoriginreadtimeout)
+            * [`obj spec.forProvider.distributionConfig.origins.items.customOriginConfig.originSSLProtocols`](#obj-specforproviderdistributionconfigoriginsitemscustomoriginconfigoriginsslprotocols)
+              * [`fn withItems(items)`](#fn-specforproviderdistributionconfigoriginsitemscustomoriginconfigoriginsslprotocolswithitems)
+              * [`fn withItemsMixin(items)`](#fn-specforproviderdistributionconfigoriginsitemscustomoriginconfigoriginsslprotocolswithitemsmixin)
+              * [`fn withQuantity(quantity)`](#fn-specforproviderdistributionconfigoriginsitemscustomoriginconfigoriginsslprotocolswithquantity)
+          * [`obj spec.forProvider.distributionConfig.origins.items.originShield`](#obj-specforproviderdistributionconfigoriginsitemsoriginshield)
+            * [`fn withEnabled(enabled)`](#fn-specforproviderdistributionconfigoriginsitemsoriginshieldwithenabled)
+            * [`fn withOriginShieldRegion(originShieldRegion)`](#fn-specforproviderdistributionconfigoriginsitemsoriginshieldwithoriginshieldregion)
+          * [`obj spec.forProvider.distributionConfig.origins.items.s3OriginConfig`](#obj-specforproviderdistributionconfigoriginsitemss3originconfig)
+            * [`fn withOriginAccessIdentity(originAccessIdentity)`](#fn-specforproviderdistributionconfigoriginsitemss3originconfigwithoriginaccessidentity)
       * [`obj spec.forProvider.distributionConfig.restrictions`](#obj-specforproviderdistributionconfigrestrictions)
         * [`obj spec.forProvider.distributionConfig.restrictions.geoRestriction`](#obj-specforproviderdistributionconfigrestrictionsgeorestriction)
           * [`fn withItems(items)`](#fn-specforproviderdistributionconfigrestrictionsgeorestrictionwithitems)
@@ -252,24 +355,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -475,6 +560,414 @@ withQuantity(quantity)
 
 
 
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withCachePolicyID
+
+```ts
+withCachePolicyID(cachePolicyID)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withCompress
+
+```ts
+withCompress(compress)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withDefaultTTL
+
+```ts
+withDefaultTTL(defaultTTL)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withFieldLevelEncryptionID
+
+```ts
+withFieldLevelEncryptionID(fieldLevelEncryptionID)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withMaxTTL
+
+```ts
+withMaxTTL(maxTTL)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withMinTTL
+
+```ts
+withMinTTL(minTTL)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withOriginRequestPolicyID
+
+```ts
+withOriginRequestPolicyID(originRequestPolicyID)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withPathPattern
+
+```ts
+withPathPattern(pathPattern)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withRealtimeLogConfigARN
+
+```ts
+withRealtimeLogConfigARN(realtimeLogConfigARN)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withSmoothStreaming
+
+```ts
+withSmoothStreaming(smoothStreaming)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withTargetOriginID
+
+```ts
+withTargetOriginID(targetOriginID)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.withViewerProtocolPolicy
+
+```ts
+withViewerProtocolPolicy(viewerProtocolPolicy)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items.allowedMethods
+
+"A complex type that controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin. There are three choices: \n    * CloudFront forwards only GET and HEAD requests. \n    * CloudFront forwards only GET, HEAD, and OPTIONS requests. \n    * CloudFront forwards GET, HEAD, OPTIONS, PUT, PATCH, POST, and DELETE    requests. \n If you pick the third choice, you may need to restrict access to your Amazon S3 bucket or to your custom origin so users can't perform operations that you don't want them to. For example, you might not want users to have permissions to delete objects from your origin."
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.allowedMethods.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.allowedMethods.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.allowedMethods.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items.allowedMethods.cachedMethods
+
+"A complex type that controls whether CloudFront caches the response to requests using the specified HTTP methods. There are two choices: \n    * CloudFront caches responses to GET and HEAD requests. \n    * CloudFront caches responses to GET, HEAD, and OPTIONS requests. \n If you pick the second choice for your Amazon S3 Origin, you may need to forward Access-Control-Request-Method, Access-Control-Request-Headers, and Origin headers for the responses to be cached correctly."
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.allowedMethods.cachedMethods.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.allowedMethods.cachedMethods.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.allowedMethods.cachedMethods.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues
+
+"This field is deprecated. We recommend that you use a cache policy or an origin request policy instead of this field. \n If you want to include values in the cache key, use a cache policy. For more information, see Creating cache policies (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy) in the Amazon CloudFront Developer Guide. \n If you want to send values to the origin but not include them in the cache key, use an origin request policy. For more information, see Creating origin request policies (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html#origin-request-create-origin-request-policy) in the Amazon CloudFront Developer Guide. \n A complex type that specifies how CloudFront handles query strings, cookies, and HTTP headers."
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.withQueryString
+
+```ts
+withQueryString(queryString)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.cookies
+
+"This field is deprecated. We recommend that you use a cache policy or an origin request policy instead of this field. \n If you want to include cookies in the cache key, use CookiesConfig in a cache policy. See CachePolicy. \n If you want to send cookies to the origin but not include them in the cache key, use CookiesConfig in an origin request policy. See OriginRequestPolicy. \n A complex type that specifies whether you want CloudFront to forward cookies to the origin and, if so, which ones. For more information about forwarding cookies to the origin, see Caching Content Based on Cookies (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html) in the Amazon CloudFront Developer Guide."
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.cookies.withForward
+
+```ts
+withForward(forward)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.cookies.whitelistedNames
+
+"Contains a list of cookie names."
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.cookies.whitelistedNames.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.cookies.whitelistedNames.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.cookies.whitelistedNames.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.headers
+
+"Contains a list of HTTP header names."
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.headers.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.headers.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.headers.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.queryStringCacheKeys
+
+"This field is deprecated. We recommend that you use a cache policy or an origin request policy instead of this field. \n If you want to include query strings in the cache key, use QueryStringsConfig in a cache policy. See CachePolicy. \n If you want to send query strings to the origin but not include them in the cache key, use QueryStringsConfig in an origin request policy. See OriginRequestPolicy. \n A complex type that contains information about the query string parameters that you want CloudFront to use for caching for a cache behavior."
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.queryStringCacheKeys.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.queryStringCacheKeys.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.forwardedValues.queryStringCacheKeys.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items.lambdaFunctionAssociations
+
+"A complex type that specifies a list of Lambda functions associations for a cache behavior. \n If you want to invoke one or more Lambda functions triggered by requests that match the PathPattern of the cache behavior, specify the applicable values for Quantity and Items. Note that there can be up to 4 LambdaFunctionAssociation items in this list (one for each possible value of EventType) and each EventType can be associated with the Lambda function only once. \n If you don't want to invoke any Lambda functions for the requests that match PathPattern, specify 0 for Quantity and omit Items."
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.lambdaFunctionAssociations.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.lambdaFunctionAssociations.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.lambdaFunctionAssociations.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items.lambdaFunctionAssociations.items
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.lambdaFunctionAssociations.items.withEventType
+
+```ts
+withEventType(eventType)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.lambdaFunctionAssociations.items.withIncludeBody
+
+```ts
+withIncludeBody(includeBody)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.lambdaFunctionAssociations.items.withLambdaFunctionARN
+
+```ts
+withLambdaFunctionARN(lambdaFunctionARN)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items.trustedKeyGroups
+
+"A list of key groups whose public keys CloudFront can use to verify the signatures of signed URLs and signed cookies."
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.trustedKeyGroups.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.trustedKeyGroups.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.trustedKeyGroups.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.trustedKeyGroups.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.cacheBehaviors.items.trustedSigners
+
+"A list of AWS accounts whose public keys CloudFront can use to verify the signatures of signed URLs and signed cookies."
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.trustedSigners.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.trustedSigners.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.trustedSigners.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.cacheBehaviors.items.trustedSigners.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
 ## obj spec.forProvider.distributionConfig.customErrorResponses
 
 "A complex type that controls: \n    * Whether CloudFront replaces HTTP status codes in the 4xx and 5xx range    with custom error messages before returning the response to the viewer. \n    * How long CloudFront caches HTTP status codes in the 4xx and 5xx range. \n For more information about custom error pages, see Customizing Error Responses (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/custom-error-pages.html) in the Amazon CloudFront Developer Guide."
@@ -501,6 +994,42 @@ withItemsMixin(items)
 
 ```ts
 withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.customErrorResponses.items
+
+
+
+### fn spec.forProvider.distributionConfig.customErrorResponses.items.withErrorCachingMinTTL
+
+```ts
+withErrorCachingMinTTL(errorCachingMinTTL)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.customErrorResponses.items.withErrorCode
+
+```ts
+withErrorCode(errorCode)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.customErrorResponses.items.withResponseCode
+
+```ts
+withResponseCode(responseCode)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.customErrorResponses.items.withResponsePagePath
+
+```ts
+withResponsePagePath(responsePagePath)
 ```
 
 
@@ -801,6 +1330,34 @@ withQuantity(quantity)
 
 
 
+## obj spec.forProvider.distributionConfig.defaultCacheBehavior.lambdaFunctionAssociations.items
+
+
+
+### fn spec.forProvider.distributionConfig.defaultCacheBehavior.lambdaFunctionAssociations.items.withEventType
+
+```ts
+withEventType(eventType)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.defaultCacheBehavior.lambdaFunctionAssociations.items.withIncludeBody
+
+```ts
+withIncludeBody(includeBody)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.defaultCacheBehavior.lambdaFunctionAssociations.items.withLambdaFunctionARN
+
+```ts
+withLambdaFunctionARN(lambdaFunctionARN)
+```
+
+
+
 ## obj spec.forProvider.distributionConfig.defaultCacheBehavior.trustedKeyGroups
 
 "A list of key groups whose public keys CloudFront can use to verify the signatures of signed URLs and signed cookies."
@@ -943,6 +1500,94 @@ withQuantity(quantity)
 
 
 
+## obj spec.forProvider.distributionConfig.originGroups.items
+
+"List of origin groups for a distribution."
+
+### fn spec.forProvider.distributionConfig.originGroups.items.withId
+
+```ts
+withId(id)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.originGroups.items.failoverCriteria
+
+"A complex data type that includes information about the failover criteria for an origin group, including the status codes for which CloudFront will failover from the primary origin to the second origin."
+
+## obj spec.forProvider.distributionConfig.originGroups.items.failoverCriteria.statusCodes
+
+"A complex data type for the status codes that you specify that, when returned by a primary origin, trigger CloudFront to failover to a second origin."
+
+### fn spec.forProvider.distributionConfig.originGroups.items.failoverCriteria.statusCodes.withItems
+
+```ts
+withItems(items)
+```
+
+"List of status codes for origin failover."
+
+### fn spec.forProvider.distributionConfig.originGroups.items.failoverCriteria.statusCodes.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+"List of status codes for origin failover."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.originGroups.items.failoverCriteria.statusCodes.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.originGroups.items.members
+
+"A complex data type for the origins included in an origin group."
+
+### fn spec.forProvider.distributionConfig.originGroups.items.members.withItems
+
+```ts
+withItems(items)
+```
+
+"List of origins in an origin group."
+
+### fn spec.forProvider.distributionConfig.originGroups.items.members.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+"List of origins in an origin group."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.originGroups.items.members.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.originGroups.items.members.items
+
+"List of origins in an origin group."
+
+### fn spec.forProvider.distributionConfig.originGroups.items.members.items.withOriginID
+
+```ts
+withOriginID(originID)
+```
+
+
+
 ## obj spec.forProvider.distributionConfig.origins
 
 "Contains information about the origins for this distribution."
@@ -964,6 +1609,206 @@ withItemsMixin(items)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.distributionConfig.origins.items
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.withConnectionAttempts
+
+```ts
+withConnectionAttempts(connectionAttempts)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.withConnectionTimeout
+
+```ts
+withConnectionTimeout(connectionTimeout)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.withDomainName
+
+```ts
+withDomainName(domainName)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.withId
+
+```ts
+withId(id)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.withOriginPath
+
+```ts
+withOriginPath(originPath)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.origins.items.customHeaders
+
+"A complex type that contains the list of Custom Headers for each origin."
+
+### fn spec.forProvider.distributionConfig.origins.items.customHeaders.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.customHeaders.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.origins.items.customHeaders.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.origins.items.customHeaders.items
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.customHeaders.items.withHeaderName
+
+```ts
+withHeaderName(headerName)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.customHeaders.items.withHeaderValue
+
+```ts
+withHeaderValue(headerValue)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.origins.items.customOriginConfig
+
+"A custom origin. A custom origin is any origin that is not an Amazon S3 bucket, with one exception. An Amazon S3 bucket that is configured with static website hosting (https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) is a custom origin."
+
+### fn spec.forProvider.distributionConfig.origins.items.customOriginConfig.withHttpPort
+
+```ts
+withHttpPort(httpPort)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.customOriginConfig.withHttpSPort
+
+```ts
+withHttpSPort(httpSPort)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.customOriginConfig.withOriginKeepaliveTimeout
+
+```ts
+withOriginKeepaliveTimeout(originKeepaliveTimeout)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.customOriginConfig.withOriginProtocolPolicy
+
+```ts
+withOriginProtocolPolicy(originProtocolPolicy)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.customOriginConfig.withOriginReadTimeout
+
+```ts
+withOriginReadTimeout(originReadTimeout)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.origins.items.customOriginConfig.originSSLProtocols
+
+"A complex type that contains information about the SSL/TLS protocols that CloudFront can use when establishing an HTTPS connection with your origin."
+
+### fn spec.forProvider.distributionConfig.origins.items.customOriginConfig.originSSLProtocols.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.customOriginConfig.originSSLProtocols.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.distributionConfig.origins.items.customOriginConfig.originSSLProtocols.withQuantity
+
+```ts
+withQuantity(quantity)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.origins.items.originShield
+
+"CloudFront Origin Shield. \n Using Origin Shield can help reduce the load on your origin. For more information, see Using Origin Shield (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the Amazon CloudFront Developer Guide."
+
+### fn spec.forProvider.distributionConfig.origins.items.originShield.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
+### fn spec.forProvider.distributionConfig.origins.items.originShield.withOriginShieldRegion
+
+```ts
+withOriginShieldRegion(originShieldRegion)
+```
+
+
+
+## obj spec.forProvider.distributionConfig.origins.items.s3OriginConfig
+
+"A complex type that contains information about the Amazon S3 origin. If the origin is a custom origin or an S3 bucket that is configured as a website endpoint, use the CustomOriginConfig element instead."
+
+### fn spec.forProvider.distributionConfig.origins.items.s3OriginConfig.withOriginAccessIdentity
+
+```ts
+withOriginAccessIdentity(originAccessIdentity)
+```
+
+
 
 ## obj spec.forProvider.distributionConfig.restrictions
 

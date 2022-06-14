@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,20 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#autoscalingPolicy':: d.obj(help='"If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups."'),
+      autoscalingPolicy: {
+        '#withMaxNodes':: d.fn(help='"Maximum size of the node group. Set to a value less than or equal to 100 and greater than or equal to min-nodes."', args=[d.arg(name='maxNodes', type=d.T.integer)]),
+        withMaxNodes(maxNodes): { maxNodes: maxNodes },
+        '#withMinNodes':: d.fn(help='"Minimum size of the node group. Must be less than or equal to max-nodes. The default value is 0."', args=[d.arg(name='minNodes', type=d.T.integer)]),
+        withMinNodes(minNodes): { minNodes: minNodes },
+        '#withMode':: d.fn(help='"The autoscaling mode. Set to one of the following: - OFF: Disables the autoscaler. - ON: Enables scaling in and scaling out. - ONLY_SCALE_OUT: Enables only scaling out. You must use this mode if your node groups are configured to restart their hosted VMs on minimal servers. Possible values: [\\"OFF\\", \\"ON\\", \\"ONLY_SCALE_OUT\\"]"', args=[d.arg(name='mode', type=d.T.string)]),
+        withMode(mode): { mode: mode },
+      },
+      '#maintenanceWindow':: d.obj(help='"contains properties for the timeframe of maintenance"'),
+      maintenanceWindow: {
+        '#withStartTime':: d.fn(help='"instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid."', args=[d.arg(name='startTime', type=d.T.string)]),
+        withStartTime(startTime): { startTime: startTime },
+      },
       '#withAutoscalingPolicy':: d.fn(help='"If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups."', args=[d.arg(name='autoscalingPolicy', type=d.T.array)]),
       withAutoscalingPolicy(autoscalingPolicy): { spec+: { forProvider+: { autoscalingPolicy: if std.isArray(v=autoscalingPolicy) then autoscalingPolicy else [autoscalingPolicy] } } },
       '#withAutoscalingPolicyMixin':: d.fn(help='"If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='autoscalingPolicy', type=d.T.array)]),

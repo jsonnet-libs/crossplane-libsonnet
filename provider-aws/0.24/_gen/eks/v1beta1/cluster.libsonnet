@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,8 +53,29 @@
   spec: {
     '#forProvider':: d.obj(help='"ClusterParameters define the desired state of an AWS Elastic Kubernetes Service cluster."'),
     forProvider: {
+      '#encryptionConfig':: d.obj(help='"The encryption configuration for the cluster."'),
+      encryptionConfig: {
+        '#provider':: d.obj(help='"AWS Key Management Service (AWS KMS) customer master key (CMK). Either the ARN or the alias can be used."'),
+        provider: {
+          '#withKeyArn':: d.fn(help='"Amazon Resource Name (ARN) or alias of the customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see Allowing Users in Other Accounts to Use a CMK (https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html) in the AWS Key Management Service Developer Guide."', args=[d.arg(name='keyArn', type=d.T.string)]),
+          withKeyArn(keyArn): { provider+: { keyArn: keyArn } },
+        },
+        '#withResources':: d.fn(help='"Specifies the resources to be encrypted. The only supported value is \\"secrets\\"."', args=[d.arg(name='resources', type=d.T.array)]),
+        withResources(resources): { resources: if std.isArray(v=resources) then resources else [resources] },
+        '#withResourcesMixin':: d.fn(help='"Specifies the resources to be encrypted. The only supported value is \\"secrets\\"."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='resources', type=d.T.array)]),
+        withResourcesMixin(resources): { resources+: if std.isArray(v=resources) then resources else [resources] },
+      },
       '#logging':: d.obj(help="\"Enable or disable exporting the Kubernetes control plane logs for your cluster to CloudWatch Logs. By default, cluster control plane logs aren't exported to CloudWatch Logs. For more information, see Amazon EKS Cluster Control Plane Logs (https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html) in the Amazon EKS User Guide . \\n CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs. For more information, see Amazon CloudWatch Pricing (http://aws.amazon.com/cloudwatch/pricing/).\""),
       logging: {
+        '#clusterLogging':: d.obj(help='"The cluster control plane logging configuration for your cluster."'),
+        clusterLogging: {
+          '#withEnabled':: d.fn(help="\"If a log type is enabled, that log type exports its control plane logs to CloudWatch Logs. If a log type isn't enabled, that log type doesn't export its control plane logs. Each individual log type can be enabled or disabled independently.\"", args=[d.arg(name='enabled', type=d.T.boolean)]),
+          withEnabled(enabled): { enabled: enabled },
+          '#withTypes':: d.fn(help='"The available cluster control plane log types."', args=[d.arg(name='types', type=d.T.array)]),
+          withTypes(types): { types: if std.isArray(v=types) then types else [types] },
+          '#withTypesMixin':: d.fn(help='"The available cluster control plane log types."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='types', type=d.T.array)]),
+          withTypesMixin(types): { types+: if std.isArray(v=types) then types else [types] },
+        },
         '#withClusterLogging':: d.fn(help='"The cluster control plane logging configuration for your cluster."', args=[d.arg(name='clusterLogging', type=d.T.array)]),
         withClusterLogging(clusterLogging): { spec+: { forProvider+: { logging+: { clusterLogging: if std.isArray(v=clusterLogging) then clusterLogging else [clusterLogging] } } } },
         '#withClusterLoggingMixin':: d.fn(help='"The cluster control plane logging configuration for your cluster."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='clusterLogging', type=d.T.array)]),
@@ -66,6 +83,11 @@
       },
       '#resourcesVpcConfig':: d.obj(help='"The VPC configuration used by the cluster control plane. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see Cluster VPC Considerations (https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and Cluster Security Group Considerations (https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. You must specify at least two subnets. You can specify up to five security groups, but we recommend that you use a dedicated security group for your cluster control plane. \\n ResourcesVpcConfig is a required field"'),
       resourcesVpcConfig: {
+        '#securityGroupIdRefs':: d.obj(help='"SecurityGroupIDRefs are references to SecurityGroups used to set the SecurityGroupIDs."'),
+        securityGroupIdRefs: {
+          '#withName':: d.fn(help='"Name of the referenced object."', args=[d.arg(name='name', type=d.T.string)]),
+          withName(name): { name: name },
+        },
         '#securityGroupIdSelector':: d.obj(help='"SecurityGroupIDSelector selects references to SecurityGroups used to set the SecurityGroupIDs."'),
         securityGroupIdSelector: {
           '#withMatchControllerRef':: d.fn(help='"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."', args=[d.arg(name='matchControllerRef', type=d.T.boolean)]),
@@ -74,6 +96,11 @@
           withMatchLabels(matchLabels): { spec+: { forProvider+: { resourcesVpcConfig+: { securityGroupIdSelector+: { matchLabels: matchLabels } } } } },
           '#withMatchLabelsMixin':: d.fn(help='"MatchLabels ensures an object with matching labels is selected."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
           withMatchLabelsMixin(matchLabels): { spec+: { forProvider+: { resourcesVpcConfig+: { securityGroupIdSelector+: { matchLabels+: matchLabels } } } } },
+        },
+        '#subnetIdRefs':: d.obj(help='"SubnetIDRefs are references to Subnets used to set the SubnetIDs."'),
+        subnetIdRefs: {
+          '#withName':: d.fn(help='"Name of the referenced object."', args=[d.arg(name='name', type=d.T.string)]),
+          withName(name): { name: name },
         },
         '#subnetIdSelector':: d.obj(help='"SubnetIDSelector selects references to Subnets used to set the SubnetIDs."'),
         subnetIdSelector: {

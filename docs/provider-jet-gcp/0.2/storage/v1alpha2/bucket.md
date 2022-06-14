@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/storage/v1alpha2/bucket/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -57,6 +55,46 @@ permalink: /provider-jet-gcp/0.2/storage/v1alpha2/bucket/
     * [`fn withVersioningMixin(versioning)`](#fn-specforproviderwithversioningmixin)
     * [`fn withWebsite(website)`](#fn-specforproviderwithwebsite)
     * [`fn withWebsiteMixin(website)`](#fn-specforproviderwithwebsitemixin)
+    * [`obj spec.forProvider.cors`](#obj-specforprovidercors)
+      * [`fn withMaxAgeSeconds(maxAgeSeconds)`](#fn-specforprovidercorswithmaxageseconds)
+      * [`fn withMethod(method)`](#fn-specforprovidercorswithmethod)
+      * [`fn withMethodMixin(method)`](#fn-specforprovidercorswithmethodmixin)
+      * [`fn withOrigin(origin)`](#fn-specforprovidercorswithorigin)
+      * [`fn withOriginMixin(origin)`](#fn-specforprovidercorswithoriginmixin)
+      * [`fn withResponseHeader(responseHeader)`](#fn-specforprovidercorswithresponseheader)
+      * [`fn withResponseHeaderMixin(responseHeader)`](#fn-specforprovidercorswithresponseheadermixin)
+    * [`obj spec.forProvider.encryption`](#obj-specforproviderencryption)
+      * [`fn withDefaultKmsKeyName(defaultKmsKeyName)`](#fn-specforproviderencryptionwithdefaultkmskeyname)
+    * [`obj spec.forProvider.lifecycleRule`](#obj-specforproviderlifecyclerule)
+      * [`fn withAction(action)`](#fn-specforproviderlifecyclerulewithaction)
+      * [`fn withActionMixin(action)`](#fn-specforproviderlifecyclerulewithactionmixin)
+      * [`fn withCondition(condition)`](#fn-specforproviderlifecyclerulewithcondition)
+      * [`fn withConditionMixin(condition)`](#fn-specforproviderlifecyclerulewithconditionmixin)
+      * [`obj spec.forProvider.lifecycleRule.action`](#obj-specforproviderlifecycleruleaction)
+        * [`fn withStorageClass(storageClass)`](#fn-specforproviderlifecycleruleactionwithstorageclass)
+        * [`fn withType(type)`](#fn-specforproviderlifecycleruleactionwithtype)
+      * [`obj spec.forProvider.lifecycleRule.condition`](#obj-specforproviderlifecyclerulecondition)
+        * [`fn withAge(age)`](#fn-specforproviderlifecycleruleconditionwithage)
+        * [`fn withCreatedBefore(createdBefore)`](#fn-specforproviderlifecycleruleconditionwithcreatedbefore)
+        * [`fn withCustomTimeBefore(customTimeBefore)`](#fn-specforproviderlifecycleruleconditionwithcustomtimebefore)
+        * [`fn withDaysSinceCustomTime(daysSinceCustomTime)`](#fn-specforproviderlifecycleruleconditionwithdayssincecustomtime)
+        * [`fn withDaysSinceNoncurrentTime(daysSinceNoncurrentTime)`](#fn-specforproviderlifecycleruleconditionwithdayssincenoncurrenttime)
+        * [`fn withMatchesStorageClass(matchesStorageClass)`](#fn-specforproviderlifecycleruleconditionwithmatchesstorageclass)
+        * [`fn withMatchesStorageClassMixin(matchesStorageClass)`](#fn-specforproviderlifecycleruleconditionwithmatchesstorageclassmixin)
+        * [`fn withNoncurrentTimeBefore(noncurrentTimeBefore)`](#fn-specforproviderlifecycleruleconditionwithnoncurrenttimebefore)
+        * [`fn withNumNewerVersions(numNewerVersions)`](#fn-specforproviderlifecycleruleconditionwithnumnewerversions)
+        * [`fn withWithState(withState)`](#fn-specforproviderlifecycleruleconditionwithwithstate)
+    * [`obj spec.forProvider.logging`](#obj-specforproviderlogging)
+      * [`fn withLogBucket(logBucket)`](#fn-specforproviderloggingwithlogbucket)
+      * [`fn withLogObjectPrefix(logObjectPrefix)`](#fn-specforproviderloggingwithlogobjectprefix)
+    * [`obj spec.forProvider.retentionPolicy`](#obj-specforproviderretentionpolicy)
+      * [`fn withIsLocked(isLocked)`](#fn-specforproviderretentionpolicywithislocked)
+      * [`fn withRetentionPeriod(retentionPeriod)`](#fn-specforproviderretentionpolicywithretentionperiod)
+    * [`obj spec.forProvider.versioning`](#obj-specforproviderversioning)
+      * [`fn withEnabled(enabled)`](#fn-specforproviderversioningwithenabled)
+    * [`obj spec.forProvider.website`](#obj-specforproviderwebsite)
+      * [`fn withMainPageSuffix(mainPageSuffix)`](#fn-specforproviderwebsitewithmainpagesuffix)
+      * [`fn withNotFoundPage(notFoundPage)`](#fn-specforproviderwebsitewithnotfoundpage)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -178,24 +216,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -472,6 +492,302 @@ withWebsiteMixin(website)
 "Configuration if the bucket acts as a website."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.cors
+
+"The bucket's Cross-Origin Resource Sharing (CORS) configuration."
+
+### fn spec.forProvider.cors.withMaxAgeSeconds
+
+```ts
+withMaxAgeSeconds(maxAgeSeconds)
+```
+
+"The value, in seconds, to return in the Access-Control-Max-Age header used in preflight responses."
+
+### fn spec.forProvider.cors.withMethod
+
+```ts
+withMethod(method)
+```
+
+"The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: \"*\" is permitted in the list of methods, and means \"any method\"."
+
+### fn spec.forProvider.cors.withMethodMixin
+
+```ts
+withMethodMixin(method)
+```
+
+"The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: \"*\" is permitted in the list of methods, and means \"any method\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.cors.withOrigin
+
+```ts
+withOrigin(origin)
+```
+
+"The list of Origins eligible to receive CORS response headers. Note: \"*\" is permitted in the list of origins, and means \"any Origin\"."
+
+### fn spec.forProvider.cors.withOriginMixin
+
+```ts
+withOriginMixin(origin)
+```
+
+"The list of Origins eligible to receive CORS response headers. Note: \"*\" is permitted in the list of origins, and means \"any Origin\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.cors.withResponseHeader
+
+```ts
+withResponseHeader(responseHeader)
+```
+
+"The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains."
+
+### fn spec.forProvider.cors.withResponseHeaderMixin
+
+```ts
+withResponseHeaderMixin(responseHeader)
+```
+
+"The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.encryption
+
+"The bucket's encryption configuration."
+
+### fn spec.forProvider.encryption.withDefaultKmsKeyName
+
+```ts
+withDefaultKmsKeyName(defaultKmsKeyName)
+```
+
+"A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified. You must pay attention to whether the crypto key is available in the location that this bucket is created in. See the docs for more details."
+
+## obj spec.forProvider.lifecycleRule
+
+"The bucket's Lifecycle Rules configuration."
+
+### fn spec.forProvider.lifecycleRule.withAction
+
+```ts
+withAction(action)
+```
+
+"The Lifecycle Rule's action configuration. A single block of this type is supported."
+
+### fn spec.forProvider.lifecycleRule.withActionMixin
+
+```ts
+withActionMixin(action)
+```
+
+"The Lifecycle Rule's action configuration. A single block of this type is supported."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.lifecycleRule.withCondition
+
+```ts
+withCondition(condition)
+```
+
+"The Lifecycle Rule's condition configuration."
+
+### fn spec.forProvider.lifecycleRule.withConditionMixin
+
+```ts
+withConditionMixin(condition)
+```
+
+"The Lifecycle Rule's condition configuration."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.lifecycleRule.action
+
+"The Lifecycle Rule's action configuration. A single block of this type is supported."
+
+### fn spec.forProvider.lifecycleRule.action.withStorageClass
+
+```ts
+withStorageClass(storageClass)
+```
+
+"The target Storage Class of objects affected by this Lifecycle Rule. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE."
+
+### fn spec.forProvider.lifecycleRule.action.withType
+
+```ts
+withType(type)
+```
+
+"The type of the action of this Lifecycle Rule. Supported values include: Delete and SetStorageClass."
+
+## obj spec.forProvider.lifecycleRule.condition
+
+"The Lifecycle Rule's condition configuration."
+
+### fn spec.forProvider.lifecycleRule.condition.withAge
+
+```ts
+withAge(age)
+```
+
+"Minimum age of an object in days to satisfy this condition."
+
+### fn spec.forProvider.lifecycleRule.condition.withCreatedBefore
+
+```ts
+withCreatedBefore(createdBefore)
+```
+
+"Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition."
+
+### fn spec.forProvider.lifecycleRule.condition.withCustomTimeBefore
+
+```ts
+withCustomTimeBefore(customTimeBefore)
+```
+
+"Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition."
+
+### fn spec.forProvider.lifecycleRule.condition.withDaysSinceCustomTime
+
+```ts
+withDaysSinceCustomTime(daysSinceCustomTime)
+```
+
+"Number of days elapsed since the user-specified timestamp set on an object."
+
+### fn spec.forProvider.lifecycleRule.condition.withDaysSinceNoncurrentTime
+
+```ts
+withDaysSinceNoncurrentTime(daysSinceNoncurrentTime)
+```
+
+"Number of days elapsed since the noncurrent timestamp of an object. This condition is relevant only for versioned objects."
+
+### fn spec.forProvider.lifecycleRule.condition.withMatchesStorageClass
+
+```ts
+withMatchesStorageClass(matchesStorageClass)
+```
+
+"Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY."
+
+### fn spec.forProvider.lifecycleRule.condition.withMatchesStorageClassMixin
+
+```ts
+withMatchesStorageClassMixin(matchesStorageClass)
+```
+
+"Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.lifecycleRule.condition.withNoncurrentTimeBefore
+
+```ts
+withNoncurrentTimeBefore(noncurrentTimeBefore)
+```
+
+"Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition."
+
+### fn spec.forProvider.lifecycleRule.condition.withNumNewerVersions
+
+```ts
+withNumNewerVersions(numNewerVersions)
+```
+
+"Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition."
+
+### fn spec.forProvider.lifecycleRule.condition.withWithState
+
+```ts
+withWithState(withState)
+```
+
+"Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: \"LIVE\", \"ARCHIVED\", \"ANY\"."
+
+## obj spec.forProvider.logging
+
+"The bucket's Access & Storage Logs configuration."
+
+### fn spec.forProvider.logging.withLogBucket
+
+```ts
+withLogBucket(logBucket)
+```
+
+"The bucket that will receive log objects."
+
+### fn spec.forProvider.logging.withLogObjectPrefix
+
+```ts
+withLogObjectPrefix(logObjectPrefix)
+```
+
+"The object prefix for log objects. If it's not provided, by default Google Cloud Storage sets this to this bucket's name."
+
+## obj spec.forProvider.retentionPolicy
+
+"Configuration of the bucket's data retention policy for how long objects in the bucket should be retained."
+
+### fn spec.forProvider.retentionPolicy.withIsLocked
+
+```ts
+withIsLocked(isLocked)
+```
+
+"If set to true, the bucket will be locked and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action."
+
+### fn spec.forProvider.retentionPolicy.withRetentionPeriod
+
+```ts
+withRetentionPeriod(retentionPeriod)
+```
+
+"The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds."
+
+## obj spec.forProvider.versioning
+
+"The bucket's Versioning configuration."
+
+### fn spec.forProvider.versioning.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+"While set to true, versioning is fully enabled for this bucket."
+
+## obj spec.forProvider.website
+
+"Configuration if the bucket acts as a website."
+
+### fn spec.forProvider.website.withMainPageSuffix
+
+```ts
+withMainPageSuffix(mainPageSuffix)
+```
+
+"Behaves as the bucket's directory index where missing objects are treated as potential directories."
+
+### fn spec.forProvider.website.withNotFoundPage
+
+```ts
+withNotFoundPage(notFoundPage)
+```
+
+"The custom object to return when a requested resource is not found."
 
 ## obj spec.providerConfigRef
 

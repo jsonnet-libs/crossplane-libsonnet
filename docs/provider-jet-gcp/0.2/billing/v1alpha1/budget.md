@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/billing/v1alpha1/budget/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -44,6 +42,35 @@ permalink: /provider-jet-gcp/0.2/billing/v1alpha1/budget/
     * [`fn withDisplayName(displayName)`](#fn-specforproviderwithdisplayname)
     * [`fn withThresholdRules(thresholdRules)`](#fn-specforproviderwiththresholdrules)
     * [`fn withThresholdRulesMixin(thresholdRules)`](#fn-specforproviderwiththresholdrulesmixin)
+    * [`obj spec.forProvider.allUpdatesRule`](#obj-specforproviderallupdatesrule)
+      * [`fn withDisableDefaultIamRecipients(disableDefaultIamRecipients)`](#fn-specforproviderallupdatesrulewithdisabledefaultiamrecipients)
+      * [`fn withMonitoringNotificationChannels(monitoringNotificationChannels)`](#fn-specforproviderallupdatesrulewithmonitoringnotificationchannels)
+      * [`fn withMonitoringNotificationChannelsMixin(monitoringNotificationChannels)`](#fn-specforproviderallupdatesrulewithmonitoringnotificationchannelsmixin)
+      * [`fn withPubsubTopic(pubsubTopic)`](#fn-specforproviderallupdatesrulewithpubsubtopic)
+      * [`fn withSchemaVersion(schemaVersion)`](#fn-specforproviderallupdatesrulewithschemaversion)
+    * [`obj spec.forProvider.amount`](#obj-specforprovideramount)
+      * [`fn withLastPeriodAmount(lastPeriodAmount)`](#fn-specforprovideramountwithlastperiodamount)
+      * [`fn withSpecifiedAmount(specifiedAmount)`](#fn-specforprovideramountwithspecifiedamount)
+      * [`fn withSpecifiedAmountMixin(specifiedAmount)`](#fn-specforprovideramountwithspecifiedamountmixin)
+      * [`obj spec.forProvider.amount.specifiedAmount`](#obj-specforprovideramountspecifiedamount)
+        * [`fn withCurrencyCode(currencyCode)`](#fn-specforprovideramountspecifiedamountwithcurrencycode)
+        * [`fn withNanos(nanos)`](#fn-specforprovideramountspecifiedamountwithnanos)
+        * [`fn withUnits(units)`](#fn-specforprovideramountspecifiedamountwithunits)
+    * [`obj spec.forProvider.budgetFilter`](#obj-specforproviderbudgetfilter)
+      * [`fn withCreditTypes(creditTypes)`](#fn-specforproviderbudgetfilterwithcredittypes)
+      * [`fn withCreditTypesMixin(creditTypes)`](#fn-specforproviderbudgetfilterwithcredittypesmixin)
+      * [`fn withCreditTypesTreatment(creditTypesTreatment)`](#fn-specforproviderbudgetfilterwithcredittypestreatment)
+      * [`fn withLabels(labels)`](#fn-specforproviderbudgetfilterwithlabels)
+      * [`fn withLabelsMixin(labels)`](#fn-specforproviderbudgetfilterwithlabelsmixin)
+      * [`fn withProjects(projects)`](#fn-specforproviderbudgetfilterwithprojects)
+      * [`fn withProjectsMixin(projects)`](#fn-specforproviderbudgetfilterwithprojectsmixin)
+      * [`fn withServices(services)`](#fn-specforproviderbudgetfilterwithservices)
+      * [`fn withServicesMixin(services)`](#fn-specforproviderbudgetfilterwithservicesmixin)
+      * [`fn withSubaccounts(subaccounts)`](#fn-specforproviderbudgetfilterwithsubaccounts)
+      * [`fn withSubaccountsMixin(subaccounts)`](#fn-specforproviderbudgetfilterwithsubaccountsmixin)
+    * [`obj spec.forProvider.thresholdRules`](#obj-specforproviderthresholdrules)
+      * [`fn withSpendBasis(spendBasis)`](#fn-specforproviderthresholdruleswithspendbasis)
+      * [`fn withThresholdPercent(thresholdPercent)`](#fn-specforproviderthresholdruleswiththresholdpercent)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -165,24 +192,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -347,6 +356,232 @@ withThresholdRulesMixin(thresholdRules)
 "Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.allUpdatesRule
+
+"Defines notifications that are sent on every update to the billing account's spend, regardless of the thresholds defined using threshold rules."
+
+### fn spec.forProvider.allUpdatesRule.withDisableDefaultIamRecipients
+
+```ts
+withDisableDefaultIamRecipients(disableDefaultIamRecipients)
+```
+
+"Boolean. When set to true, disables default notifications sent when a threshold is exceeded. Default recipients are those with Billing Account Administrators and Billing Account Users IAM roles for the target account."
+
+### fn spec.forProvider.allUpdatesRule.withMonitoringNotificationChannels
+
+```ts
+withMonitoringNotificationChannels(monitoringNotificationChannels)
+```
+
+"The full resource name of a monitoring notification channel in the form projects/{project_id}/notificationChannels/{channel_id}. A maximum of 5 channels are allowed."
+
+### fn spec.forProvider.allUpdatesRule.withMonitoringNotificationChannelsMixin
+
+```ts
+withMonitoringNotificationChannelsMixin(monitoringNotificationChannels)
+```
+
+"The full resource name of a monitoring notification channel in the form projects/{project_id}/notificationChannels/{channel_id}. A maximum of 5 channels are allowed."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.allUpdatesRule.withPubsubTopic
+
+```ts
+withPubsubTopic(pubsubTopic)
+```
+
+"The name of the Cloud Pub/Sub topic where budget related messages will be published, in the form projects/{project_id}/topics/{topic_id}. Updates are sent at regular intervals to the topic."
+
+### fn spec.forProvider.allUpdatesRule.withSchemaVersion
+
+```ts
+withSchemaVersion(schemaVersion)
+```
+
+"The schema version of the notification. Only \"1.0\" is accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets#notification_format."
+
+## obj spec.forProvider.amount
+
+"The budgeted amount for each usage period."
+
+### fn spec.forProvider.amount.withLastPeriodAmount
+
+```ts
+withLastPeriodAmount(lastPeriodAmount)
+```
+
+"Configures a budget amount that is automatically set to 100% of last period's spend. Boolean. Set value to true to use. Do not set to false, instead use the 'specified_amount' block."
+
+### fn spec.forProvider.amount.withSpecifiedAmount
+
+```ts
+withSpecifiedAmount(specifiedAmount)
+```
+
+"A specified amount to use as the budget. currencyCode is optional. If specified, it must match the currency of the billing account. The currencyCode is provided on output."
+
+### fn spec.forProvider.amount.withSpecifiedAmountMixin
+
+```ts
+withSpecifiedAmountMixin(specifiedAmount)
+```
+
+"A specified amount to use as the budget. currencyCode is optional. If specified, it must match the currency of the billing account. The currencyCode is provided on output."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.amount.specifiedAmount
+
+"A specified amount to use as the budget. currencyCode is optional. If specified, it must match the currency of the billing account. The currencyCode is provided on output."
+
+### fn spec.forProvider.amount.specifiedAmount.withCurrencyCode
+
+```ts
+withCurrencyCode(currencyCode)
+```
+
+"The 3-letter currency code defined in ISO 4217."
+
+### fn spec.forProvider.amount.specifiedAmount.withNanos
+
+```ts
+withNanos(nanos)
+```
+
+"Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If units is positive, nanos must be positive or zero. If units is zero, nanos can be positive, zero, or negative. If units is negative, nanos must be negative or zero. For example $-1.75 is represented as units=-1 and nanos=-750,000,000."
+
+### fn spec.forProvider.amount.specifiedAmount.withUnits
+
+```ts
+withUnits(units)
+```
+
+"The whole units of the amount. For example if currencyCode is \"USD\", then 1 unit is one US dollar."
+
+## obj spec.forProvider.budgetFilter
+
+"Filters that define which resources are used to compute the actual spend against the budget."
+
+### fn spec.forProvider.budgetFilter.withCreditTypes
+
+```ts
+withCreditTypes(creditTypes)
+```
+
+"A set of subaccounts of the form billingAccounts/{account_id}, specifying that usage from only this set of subaccounts should be included in the budget. If a subaccount is set to the name of the parent account, usage from the parent account will be included. If the field is omitted, the report will include usage from the parent account and all subaccounts, if they exist."
+
+### fn spec.forProvider.budgetFilter.withCreditTypesMixin
+
+```ts
+withCreditTypesMixin(creditTypes)
+```
+
+"A set of subaccounts of the form billingAccounts/{account_id}, specifying that usage from only this set of subaccounts should be included in the budget. If a subaccount is set to the name of the parent account, usage from the parent account will be included. If the field is omitted, the report will include usage from the parent account and all subaccounts, if they exist."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.budgetFilter.withCreditTypesTreatment
+
+```ts
+withCreditTypesTreatment(creditTypesTreatment)
+```
+
+"Specifies how credits should be treated when determining spend for threshold calculations. Default value: \"INCLUDE_ALL_CREDITS\" Possible values: [\"INCLUDE_ALL_CREDITS\", \"EXCLUDE_ALL_CREDITS\", \"INCLUDE_SPECIFIED_CREDITS\"]"
+
+### fn spec.forProvider.budgetFilter.withLabels
+
+```ts
+withLabels(labels)
+```
+
+"A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget."
+
+### fn spec.forProvider.budgetFilter.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+"A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.budgetFilter.withProjects
+
+```ts
+withProjects(projects)
+```
+
+"A set of projects of the form projects/{project_number}, specifying that usage from only this set of projects should be included in the budget. If omitted, the report will include all usage for the billing account, regardless of which project the usage occurred on."
+
+### fn spec.forProvider.budgetFilter.withProjectsMixin
+
+```ts
+withProjectsMixin(projects)
+```
+
+"A set of projects of the form projects/{project_number}, specifying that usage from only this set of projects should be included in the budget. If omitted, the report will include all usage for the billing account, regardless of which project the usage occurred on."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.budgetFilter.withServices
+
+```ts
+withServices(services)
+```
+
+"A set of services of the form services/{service_id}, specifying that usage from only this set of services should be included in the budget. If omitted, the report will include usage for all the services. The service names are available through the Catalog API: https://cloud.google.com/billing/v1/how-tos/catalog-api."
+
+### fn spec.forProvider.budgetFilter.withServicesMixin
+
+```ts
+withServicesMixin(services)
+```
+
+"A set of services of the form services/{service_id}, specifying that usage from only this set of services should be included in the budget. If omitted, the report will include usage for all the services. The service names are available through the Catalog API: https://cloud.google.com/billing/v1/how-tos/catalog-api."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.budgetFilter.withSubaccounts
+
+```ts
+withSubaccounts(subaccounts)
+```
+
+"A set of subaccounts of the form billingAccounts/{account_id}, specifying that usage from only this set of subaccounts should be included in the budget. If a subaccount is set to the name of the parent account, usage from the parent account will be included. If the field is omitted, the report will include usage from the parent account and all subaccounts, if they exist."
+
+### fn spec.forProvider.budgetFilter.withSubaccountsMixin
+
+```ts
+withSubaccountsMixin(subaccounts)
+```
+
+"A set of subaccounts of the form billingAccounts/{account_id}, specifying that usage from only this set of subaccounts should be included in the budget. If a subaccount is set to the name of the parent account, usage from the parent account will be included. If the field is omitted, the report will include usage from the parent account and all subaccounts, if they exist."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.thresholdRules
+
+"Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget."
+
+### fn spec.forProvider.thresholdRules.withSpendBasis
+
+```ts
+withSpendBasis(spendBasis)
+```
+
+"The type of basis used to determine if spend has passed the threshold. Default value: \"CURRENT_SPEND\" Possible values: [\"CURRENT_SPEND\", \"FORECASTED_SPEND\"]"
+
+### fn spec.forProvider.thresholdRules.withThresholdPercent
+
+```ts
+withThresholdPercent(thresholdPercent)
+```
+
+"Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Must be >= 0."
 
 ## obj spec.providerConfigRef
 

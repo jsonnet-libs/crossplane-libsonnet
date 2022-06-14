@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/application/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,15 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/application/
     * [`fn withLocationId(locationId)`](#fn-specforproviderwithlocationid)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withServingStatus(servingStatus)`](#fn-specforproviderwithservingstatus)
+    * [`obj spec.forProvider.featureSettings`](#obj-specforproviderfeaturesettings)
+      * [`fn withSplitHealthChecks(splitHealthChecks)`](#fn-specforproviderfeaturesettingswithsplithealthchecks)
+    * [`obj spec.forProvider.iap`](#obj-specforprovideriap)
+      * [`fn withEnabled(enabled)`](#fn-specforprovideriapwithenabled)
+      * [`fn withOauth2ClientId(oauth2ClientId)`](#fn-specforprovideriapwithoauth2clientid)
+      * [`obj spec.forProvider.iap.oauth2ClientSecretSecretRef`](#obj-specforprovideriapoauth2clientsecretsecretref)
+        * [`fn withKey(key)`](#fn-specforprovideriapoauth2clientsecretsecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovideriapoauth2clientsecretsecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovideriapoauth2clientsecretsecretrefwithnamespace)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -164,24 +171,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -334,6 +323,66 @@ withServingStatus(servingStatus)
 ```
 
 "The serving status of the app."
+
+## obj spec.forProvider.featureSettings
+
+"A block of optional settings to configure specific App Engine features:"
+
+### fn spec.forProvider.featureSettings.withSplitHealthChecks
+
+```ts
+withSplitHealthChecks(splitHealthChecks)
+```
+
+
+
+## obj spec.forProvider.iap
+
+"Settings for enabling Cloud Identity Aware Proxy"
+
+### fn spec.forProvider.iap.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+"Adapted for use with the app"
+
+### fn spec.forProvider.iap.withOauth2ClientId
+
+```ts
+withOauth2ClientId(oauth2ClientId)
+```
+
+"OAuth2 client ID to use for the authentication flow."
+
+## obj spec.forProvider.iap.oauth2ClientSecretSecretRef
+
+"OAuth2 client secret to use for the authentication flow. The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field."
+
+### fn spec.forProvider.iap.oauth2ClientSecretSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.iap.oauth2ClientSecretSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.iap.oauth2ClientSecretSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/dialogflow/v1alpha1/fulfillment/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -41,6 +39,14 @@ permalink: /provider-jet-gcp/0.2/dialogflow/v1alpha1/fulfillment/
     * [`fn withGenericWebService(genericWebService)`](#fn-specforproviderwithgenericwebservice)
     * [`fn withGenericWebServiceMixin(genericWebService)`](#fn-specforproviderwithgenericwebservicemixin)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.features`](#obj-specforproviderfeatures)
+      * [`fn withType(type)`](#fn-specforproviderfeatureswithtype)
+    * [`obj spec.forProvider.genericWebService`](#obj-specforprovidergenericwebservice)
+      * [`fn withPassword(password)`](#fn-specforprovidergenericwebservicewithpassword)
+      * [`fn withRequestHeaders(requestHeaders)`](#fn-specforprovidergenericwebservicewithrequestheaders)
+      * [`fn withRequestHeadersMixin(requestHeaders)`](#fn-specforprovidergenericwebservicewithrequestheadersmixin)
+      * [`fn withUri(uri)`](#fn-specforprovidergenericwebservicewithuri)
+      * [`fn withUsername(username)`](#fn-specforprovidergenericwebservicewithusername)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -162,24 +168,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -316,6 +304,64 @@ withProject(project)
 ```
 
 
+
+## obj spec.forProvider.features
+
+"The field defines whether the fulfillment is enabled for certain features."
+
+### fn spec.forProvider.features.withType
+
+```ts
+withType(type)
+```
+
+"The type of the feature that enabled for fulfillment. * SMALLTALK: Fulfillment is enabled for SmallTalk. Possible values: [\"SMALLTALK\"]"
+
+## obj spec.forProvider.genericWebService
+
+"Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers."
+
+### fn spec.forProvider.genericWebService.withPassword
+
+```ts
+withPassword(password)
+```
+
+"The password for HTTP Basic authentication."
+
+### fn spec.forProvider.genericWebService.withRequestHeaders
+
+```ts
+withRequestHeaders(requestHeaders)
+```
+
+"The HTTP request headers to send together with fulfillment requests."
+
+### fn spec.forProvider.genericWebService.withRequestHeadersMixin
+
+```ts
+withRequestHeadersMixin(requestHeaders)
+```
+
+"The HTTP request headers to send together with fulfillment requests."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.genericWebService.withUri
+
+```ts
+withUri(uri)
+```
+
+"The fulfillment URI for receiving POST requests. It must use https protocol."
+
+### fn spec.forProvider.genericWebService.withUsername
+
+```ts
+withUsername(username)
+```
+
+"The user name for HTTP Basic authentication."
 
 ## obj spec.providerConfigRef
 

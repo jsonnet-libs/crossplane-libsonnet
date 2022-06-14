@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/route53/v1alpha1/resourceRecordSet/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -54,6 +52,8 @@ permalink: /provider-aws/0.24/route53/v1alpha1/resourceRecordSet/
       * [`fn withContinentCode(continentCode)`](#fn-specforprovidergeolocationwithcontinentcode)
       * [`fn withCountryCode(countryCode)`](#fn-specforprovidergeolocationwithcountrycode)
       * [`fn withSubdivisionCode(subdivisionCode)`](#fn-specforprovidergeolocationwithsubdivisioncode)
+    * [`obj spec.forProvider.resourceRecords`](#obj-specforproviderresourcerecords)
+      * [`fn withValue(value)`](#fn-specforproviderresourcerecordswithvalue)
     * [`obj spec.forProvider.zoneIdRef`](#obj-specforproviderzoneidref)
       * [`fn withName(name)`](#fn-specforproviderzoneidrefwithname)
     * [`obj spec.forProvider.zoneIdSelector`](#obj-specforproviderzoneidselector)
@@ -181,24 +181,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -429,6 +411,18 @@ withSubdivisionCode(subdivisionCode)
 ```
 
 "For geolocation resource record sets, the two-letter code for a state of the United States. Route 53 doesn't support any other values for SubdivisionCode. For a list of state abbreviations, see Appendix B: Two–Letter State and Possession Abbreviations (https://pe.usps.com/text/pub28/28apb.htm) on the United States Postal Service website. \n If you specify subdivision code, you must also specify US for CountryCode."
+
+## obj spec.forProvider.resourceRecords
+
+"Information about the resource records to act upon. \n If you're creating an alias resource record set, omit ResourceRecords."
+
+### fn spec.forProvider.resourceRecords.withValue
+
+```ts
+withValue(value)
+```
+
+"The current or new DNS record value, not to exceed 4,000 characters. In the case of a DELETE action, if the current value does not match the actual value, an error is returned. For descriptions about how to format Value for different record types, see Supported DNS Resource Record Types (https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html) in the Amazon Route 53 Developer Guide. \n You can specify more than one value for all record types except CNAME and SOA. \n If you're creating an alias resource record set, omit Value."
 
 ## obj spec.forProvider.zoneIdRef
 

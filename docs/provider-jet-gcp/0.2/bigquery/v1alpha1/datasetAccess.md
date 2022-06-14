@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/bigquery/v1alpha1/datasetAccess/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -44,6 +42,10 @@ permalink: /provider-jet-gcp/0.2/bigquery/v1alpha1/datasetAccess/
     * [`fn withUserByEmail(userByEmail)`](#fn-specforproviderwithuserbyemail)
     * [`fn withView(view)`](#fn-specforproviderwithview)
     * [`fn withViewMixin(view)`](#fn-specforproviderwithviewmixin)
+    * [`obj spec.forProvider.view`](#obj-specforproviderview)
+      * [`fn withDatasetId(datasetId)`](#fn-specforproviderviewwithdatasetid)
+      * [`fn withProjectId(projectId)`](#fn-specforproviderviewwithprojectid)
+      * [`fn withTableId(tableId)`](#fn-specforproviderviewwithtableid)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -165,24 +167,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -341,6 +325,34 @@ withViewMixin(view)
 "A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.view
+
+"A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation."
+
+### fn spec.forProvider.view.withDatasetId
+
+```ts
+withDatasetId(datasetId)
+```
+
+"The ID of the dataset containing this table."
+
+### fn spec.forProvider.view.withProjectId
+
+```ts
+withProjectId(projectId)
+```
+
+"The ID of the project containing this table."
+
+### fn spec.forProvider.view.withTableId
+
+```ts
+withTableId(tableId)
+```
+
+"The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters."
 
 ## obj spec.providerConfigRef
 

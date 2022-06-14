@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/rds/v1alpha1/dbParameterGroup/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -41,6 +39,22 @@ permalink: /provider-aws/0.24/rds/v1alpha1/dbParameterGroup/
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
+    * [`obj spec.forProvider.parameters`](#obj-specforproviderparameters)
+      * [`fn withAllowedValues(allowedValues)`](#fn-specforproviderparameterswithallowedvalues)
+      * [`fn withApplyMethod(applyMethod)`](#fn-specforproviderparameterswithapplymethod)
+      * [`fn withApplyType(applyType)`](#fn-specforproviderparameterswithapplytype)
+      * [`fn withDataType(dataType)`](#fn-specforproviderparameterswithdatatype)
+      * [`fn withDescription(description)`](#fn-specforproviderparameterswithdescription)
+      * [`fn withIsModifiable(isModifiable)`](#fn-specforproviderparameterswithismodifiable)
+      * [`fn withMinimumEngineVersion(minimumEngineVersion)`](#fn-specforproviderparameterswithminimumengineversion)
+      * [`fn withParameterName(parameterName)`](#fn-specforproviderparameterswithparametername)
+      * [`fn withParameterValue(parameterValue)`](#fn-specforproviderparameterswithparametervalue)
+      * [`fn withSource(source)`](#fn-specforproviderparameterswithsource)
+      * [`fn withSupportedEngineModes(supportedEngineModes)`](#fn-specforproviderparameterswithsupportedenginemodes)
+      * [`fn withSupportedEngineModesMixin(supportedEngineModes)`](#fn-specforproviderparameterswithsupportedenginemodesmixin)
+    * [`obj spec.forProvider.tags`](#obj-specforprovidertags)
+      * [`fn withKey(key)`](#fn-specforprovidertagswithkey)
+      * [`fn withValue(value)`](#fn-specforprovidertagswithvalue)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -162,24 +176,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -316,6 +312,128 @@ withTagsMixin(tags)
 "Tags to assign to the DB parameter group."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.parameters
+
+"A list of parameters to associate with this DB parameter group"
+
+### fn spec.forProvider.parameters.withAllowedValues
+
+```ts
+withAllowedValues(allowedValues)
+```
+
+
+
+### fn spec.forProvider.parameters.withApplyMethod
+
+```ts
+withApplyMethod(applyMethod)
+```
+
+
+
+### fn spec.forProvider.parameters.withApplyType
+
+```ts
+withApplyType(applyType)
+```
+
+
+
+### fn spec.forProvider.parameters.withDataType
+
+```ts
+withDataType(dataType)
+```
+
+
+
+### fn spec.forProvider.parameters.withDescription
+
+```ts
+withDescription(description)
+```
+
+
+
+### fn spec.forProvider.parameters.withIsModifiable
+
+```ts
+withIsModifiable(isModifiable)
+```
+
+
+
+### fn spec.forProvider.parameters.withMinimumEngineVersion
+
+```ts
+withMinimumEngineVersion(minimumEngineVersion)
+```
+
+
+
+### fn spec.forProvider.parameters.withParameterName
+
+```ts
+withParameterName(parameterName)
+```
+
+
+
+### fn spec.forProvider.parameters.withParameterValue
+
+```ts
+withParameterValue(parameterValue)
+```
+
+
+
+### fn spec.forProvider.parameters.withSource
+
+```ts
+withSource(source)
+```
+
+
+
+### fn spec.forProvider.parameters.withSupportedEngineModes
+
+```ts
+withSupportedEngineModes(supportedEngineModes)
+```
+
+
+
+### fn spec.forProvider.parameters.withSupportedEngineModesMixin
+
+```ts
+withSupportedEngineModesMixin(supportedEngineModes)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.tags
+
+"Tags to assign to the DB parameter group."
+
+### fn spec.forProvider.tags.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.tags.withValue
+
+```ts
+withValue(value)
+```
+
+
 
 ## obj spec.providerConfigRef
 

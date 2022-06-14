@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/privateca/v1alpha1/certificate/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,91 @@ permalink: /provider-jet-gcp/0.2/privateca/v1alpha1/certificate/
     * [`fn withPemCsr(pemCsr)`](#fn-specforproviderwithpemcsr)
     * [`fn withPool(pool)`](#fn-specforproviderwithpool)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.config`](#obj-specforproviderconfig)
+      * [`fn withPublicKey(publicKey)`](#fn-specforproviderconfigwithpublickey)
+      * [`fn withPublicKeyMixin(publicKey)`](#fn-specforproviderconfigwithpublickeymixin)
+      * [`fn withSubjectConfig(subjectConfig)`](#fn-specforproviderconfigwithsubjectconfig)
+      * [`fn withSubjectConfigMixin(subjectConfig)`](#fn-specforproviderconfigwithsubjectconfigmixin)
+      * [`fn withX509Config(x509Config)`](#fn-specforproviderconfigwithx509config)
+      * [`fn withX509ConfigMixin(x509Config)`](#fn-specforproviderconfigwithx509configmixin)
+      * [`obj spec.forProvider.config.publicKey`](#obj-specforproviderconfigpublickey)
+        * [`fn withFormat(format)`](#fn-specforproviderconfigpublickeywithformat)
+        * [`fn withKey(key)`](#fn-specforproviderconfigpublickeywithkey)
+      * [`obj spec.forProvider.config.subjectConfig`](#obj-specforproviderconfigsubjectconfig)
+        * [`fn withSubject(subject)`](#fn-specforproviderconfigsubjectconfigwithsubject)
+        * [`fn withSubjectAltName(subjectAltName)`](#fn-specforproviderconfigsubjectconfigwithsubjectaltname)
+        * [`fn withSubjectAltNameMixin(subjectAltName)`](#fn-specforproviderconfigsubjectconfigwithsubjectaltnamemixin)
+        * [`fn withSubjectMixin(subject)`](#fn-specforproviderconfigsubjectconfigwithsubjectmixin)
+        * [`obj spec.forProvider.config.subjectConfig.subject`](#obj-specforproviderconfigsubjectconfigsubject)
+          * [`fn withCommonName(commonName)`](#fn-specforproviderconfigsubjectconfigsubjectwithcommonname)
+          * [`fn withCountryCode(countryCode)`](#fn-specforproviderconfigsubjectconfigsubjectwithcountrycode)
+          * [`fn withLocality(locality)`](#fn-specforproviderconfigsubjectconfigsubjectwithlocality)
+          * [`fn withOrganization(organization)`](#fn-specforproviderconfigsubjectconfigsubjectwithorganization)
+          * [`fn withOrganizationalUnit(organizationalUnit)`](#fn-specforproviderconfigsubjectconfigsubjectwithorganizationalunit)
+          * [`fn withPostalCode(postalCode)`](#fn-specforproviderconfigsubjectconfigsubjectwithpostalcode)
+          * [`fn withProvince(province)`](#fn-specforproviderconfigsubjectconfigsubjectwithprovince)
+          * [`fn withStreetAddress(streetAddress)`](#fn-specforproviderconfigsubjectconfigsubjectwithstreetaddress)
+        * [`obj spec.forProvider.config.subjectConfig.subjectAltName`](#obj-specforproviderconfigsubjectconfigsubjectaltname)
+          * [`fn withDnsNames(dnsNames)`](#fn-specforproviderconfigsubjectconfigsubjectaltnamewithdnsnames)
+          * [`fn withDnsNamesMixin(dnsNames)`](#fn-specforproviderconfigsubjectconfigsubjectaltnamewithdnsnamesmixin)
+          * [`fn withEmailAddresses(emailAddresses)`](#fn-specforproviderconfigsubjectconfigsubjectaltnamewithemailaddresses)
+          * [`fn withEmailAddressesMixin(emailAddresses)`](#fn-specforproviderconfigsubjectconfigsubjectaltnamewithemailaddressesmixin)
+          * [`fn withIpAddresses(ipAddresses)`](#fn-specforproviderconfigsubjectconfigsubjectaltnamewithipaddresses)
+          * [`fn withIpAddressesMixin(ipAddresses)`](#fn-specforproviderconfigsubjectconfigsubjectaltnamewithipaddressesmixin)
+          * [`fn withUris(uris)`](#fn-specforproviderconfigsubjectconfigsubjectaltnamewithuris)
+          * [`fn withUrisMixin(uris)`](#fn-specforproviderconfigsubjectconfigsubjectaltnamewithurismixin)
+      * [`obj spec.forProvider.config.x509Config`](#obj-specforproviderconfigx509config)
+        * [`fn withAdditionalExtensions(additionalExtensions)`](#fn-specforproviderconfigx509configwithadditionalextensions)
+        * [`fn withAdditionalExtensionsMixin(additionalExtensions)`](#fn-specforproviderconfigx509configwithadditionalextensionsmixin)
+        * [`fn withAiaOcspServers(aiaOcspServers)`](#fn-specforproviderconfigx509configwithaiaocspservers)
+        * [`fn withAiaOcspServersMixin(aiaOcspServers)`](#fn-specforproviderconfigx509configwithaiaocspserversmixin)
+        * [`fn withCaOptions(caOptions)`](#fn-specforproviderconfigx509configwithcaoptions)
+        * [`fn withCaOptionsMixin(caOptions)`](#fn-specforproviderconfigx509configwithcaoptionsmixin)
+        * [`fn withKeyUsage(keyUsage)`](#fn-specforproviderconfigx509configwithkeyusage)
+        * [`fn withKeyUsageMixin(keyUsage)`](#fn-specforproviderconfigx509configwithkeyusagemixin)
+        * [`fn withPolicyIds(policyIds)`](#fn-specforproviderconfigx509configwithpolicyids)
+        * [`fn withPolicyIdsMixin(policyIds)`](#fn-specforproviderconfigx509configwithpolicyidsmixin)
+        * [`obj spec.forProvider.config.x509Config.additionalExtensions`](#obj-specforproviderconfigx509configadditionalextensions)
+          * [`fn withCritical(critical)`](#fn-specforproviderconfigx509configadditionalextensionswithcritical)
+          * [`fn withObjectId(objectId)`](#fn-specforproviderconfigx509configadditionalextensionswithobjectid)
+          * [`fn withObjectIdMixin(objectId)`](#fn-specforproviderconfigx509configadditionalextensionswithobjectidmixin)
+          * [`fn withValue(value)`](#fn-specforproviderconfigx509configadditionalextensionswithvalue)
+          * [`obj spec.forProvider.config.x509Config.additionalExtensions.objectId`](#obj-specforproviderconfigx509configadditionalextensionsobjectid)
+            * [`fn withObjectIdPath(objectIdPath)`](#fn-specforproviderconfigx509configadditionalextensionsobjectidwithobjectidpath)
+            * [`fn withObjectIdPathMixin(objectIdPath)`](#fn-specforproviderconfigx509configadditionalextensionsobjectidwithobjectidpathmixin)
+        * [`obj spec.forProvider.config.x509Config.caOptions`](#obj-specforproviderconfigx509configcaoptions)
+          * [`fn withIsCa(isCa)`](#fn-specforproviderconfigx509configcaoptionswithisca)
+          * [`fn withMaxIssuerPathLength(maxIssuerPathLength)`](#fn-specforproviderconfigx509configcaoptionswithmaxissuerpathlength)
+        * [`obj spec.forProvider.config.x509Config.keyUsage`](#obj-specforproviderconfigx509configkeyusage)
+          * [`fn withBaseKeyUsage(baseKeyUsage)`](#fn-specforproviderconfigx509configkeyusagewithbasekeyusage)
+          * [`fn withBaseKeyUsageMixin(baseKeyUsage)`](#fn-specforproviderconfigx509configkeyusagewithbasekeyusagemixin)
+          * [`fn withExtendedKeyUsage(extendedKeyUsage)`](#fn-specforproviderconfigx509configkeyusagewithextendedkeyusage)
+          * [`fn withExtendedKeyUsageMixin(extendedKeyUsage)`](#fn-specforproviderconfigx509configkeyusagewithextendedkeyusagemixin)
+          * [`fn withUnknownExtendedKeyUsages(unknownExtendedKeyUsages)`](#fn-specforproviderconfigx509configkeyusagewithunknownextendedkeyusages)
+          * [`fn withUnknownExtendedKeyUsagesMixin(unknownExtendedKeyUsages)`](#fn-specforproviderconfigx509configkeyusagewithunknownextendedkeyusagesmixin)
+          * [`obj spec.forProvider.config.x509Config.keyUsage.baseKeyUsage`](#obj-specforproviderconfigx509configkeyusagebasekeyusage)
+            * [`fn withCertSign(certSign)`](#fn-specforproviderconfigx509configkeyusagebasekeyusagewithcertsign)
+            * [`fn withContentCommitment(contentCommitment)`](#fn-specforproviderconfigx509configkeyusagebasekeyusagewithcontentcommitment)
+            * [`fn withCrlSign(crlSign)`](#fn-specforproviderconfigx509configkeyusagebasekeyusagewithcrlsign)
+            * [`fn withDataEncipherment(dataEncipherment)`](#fn-specforproviderconfigx509configkeyusagebasekeyusagewithdataencipherment)
+            * [`fn withDecipherOnly(decipherOnly)`](#fn-specforproviderconfigx509configkeyusagebasekeyusagewithdecipheronly)
+            * [`fn withDigitalSignature(digitalSignature)`](#fn-specforproviderconfigx509configkeyusagebasekeyusagewithdigitalsignature)
+            * [`fn withEncipherOnly(encipherOnly)`](#fn-specforproviderconfigx509configkeyusagebasekeyusagewithencipheronly)
+            * [`fn withKeyAgreement(keyAgreement)`](#fn-specforproviderconfigx509configkeyusagebasekeyusagewithkeyagreement)
+            * [`fn withKeyEncipherment(keyEncipherment)`](#fn-specforproviderconfigx509configkeyusagebasekeyusagewithkeyencipherment)
+          * [`obj spec.forProvider.config.x509Config.keyUsage.extendedKeyUsage`](#obj-specforproviderconfigx509configkeyusageextendedkeyusage)
+            * [`fn withClientAuth(clientAuth)`](#fn-specforproviderconfigx509configkeyusageextendedkeyusagewithclientauth)
+            * [`fn withCodeSigning(codeSigning)`](#fn-specforproviderconfigx509configkeyusageextendedkeyusagewithcodesigning)
+            * [`fn withEmailProtection(emailProtection)`](#fn-specforproviderconfigx509configkeyusageextendedkeyusagewithemailprotection)
+            * [`fn withOcspSigning(ocspSigning)`](#fn-specforproviderconfigx509configkeyusageextendedkeyusagewithocspsigning)
+            * [`fn withServerAuth(serverAuth)`](#fn-specforproviderconfigx509configkeyusageextendedkeyusagewithserverauth)
+            * [`fn withTimeStamping(timeStamping)`](#fn-specforproviderconfigx509configkeyusageextendedkeyusagewithtimestamping)
+          * [`obj spec.forProvider.config.x509Config.keyUsage.unknownExtendedKeyUsages`](#obj-specforproviderconfigx509configkeyusageunknownextendedkeyusages)
+            * [`fn withObjectIdPath(objectIdPath)`](#fn-specforproviderconfigx509configkeyusageunknownextendedkeyusageswithobjectidpath)
+            * [`fn withObjectIdPathMixin(objectIdPath)`](#fn-specforproviderconfigx509configkeyusageunknownextendedkeyusageswithobjectidpathmixin)
+        * [`obj spec.forProvider.config.x509Config.policyIds`](#obj-specforproviderconfigx509configpolicyids)
+          * [`fn withObjectIdPath(objectIdPath)`](#fn-specforproviderconfigx509configpolicyidswithobjectidpath)
+          * [`fn withObjectIdPathMixin(objectIdPath)`](#fn-specforproviderconfigx509configpolicyidswithobjectidpathmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +250,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -361,6 +426,672 @@ withProject(project)
 ```
 
 
+
+## obj spec.forProvider.config
+
+"The config used to create a self-signed X.509 certificate or CSR."
+
+### fn spec.forProvider.config.withPublicKey
+
+```ts
+withPublicKey(publicKey)
+```
+
+"A PublicKey describes a public key."
+
+### fn spec.forProvider.config.withPublicKeyMixin
+
+```ts
+withPublicKeyMixin(publicKey)
+```
+
+"A PublicKey describes a public key."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.withSubjectConfig
+
+```ts
+withSubjectConfig(subjectConfig)
+```
+
+"Specifies some of the values in a certificate that are related to the subject."
+
+### fn spec.forProvider.config.withSubjectConfigMixin
+
+```ts
+withSubjectConfigMixin(subjectConfig)
+```
+
+"Specifies some of the values in a certificate that are related to the subject."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.withX509Config
+
+```ts
+withX509Config(x509Config)
+```
+
+"Describes how some of the technical X.509 fields in a certificate should be populated."
+
+### fn spec.forProvider.config.withX509ConfigMixin
+
+```ts
+withX509ConfigMixin(x509Config)
+```
+
+"Describes how some of the technical X.509 fields in a certificate should be populated."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.config.publicKey
+
+"A PublicKey describes a public key."
+
+### fn spec.forProvider.config.publicKey.withFormat
+
+```ts
+withFormat(format)
+```
+
+"The format of the public key. Currently, only PEM format is supported. Possible values: [\"KEY_TYPE_UNSPECIFIED\", \"PEM\"]"
+
+### fn spec.forProvider.config.publicKey.withKey
+
+```ts
+withKey(key)
+```
+
+"Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string."
+
+## obj spec.forProvider.config.subjectConfig
+
+"Specifies some of the values in a certificate that are related to the subject."
+
+### fn spec.forProvider.config.subjectConfig.withSubject
+
+```ts
+withSubject(subject)
+```
+
+"Contains distinguished name fields such as the location and organization."
+
+### fn spec.forProvider.config.subjectConfig.withSubjectAltName
+
+```ts
+withSubjectAltName(subjectAltName)
+```
+
+"The subject alternative name fields."
+
+### fn spec.forProvider.config.subjectConfig.withSubjectAltNameMixin
+
+```ts
+withSubjectAltNameMixin(subjectAltName)
+```
+
+"The subject alternative name fields."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.subjectConfig.withSubjectMixin
+
+```ts
+withSubjectMixin(subject)
+```
+
+"Contains distinguished name fields such as the location and organization."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.config.subjectConfig.subject
+
+"Contains distinguished name fields such as the location and organization."
+
+### fn spec.forProvider.config.subjectConfig.subject.withCommonName
+
+```ts
+withCommonName(commonName)
+```
+
+"The common name of the distinguished name."
+
+### fn spec.forProvider.config.subjectConfig.subject.withCountryCode
+
+```ts
+withCountryCode(countryCode)
+```
+
+"The country code of the subject."
+
+### fn spec.forProvider.config.subjectConfig.subject.withLocality
+
+```ts
+withLocality(locality)
+```
+
+"The locality or city of the subject."
+
+### fn spec.forProvider.config.subjectConfig.subject.withOrganization
+
+```ts
+withOrganization(organization)
+```
+
+"The organization of the subject."
+
+### fn spec.forProvider.config.subjectConfig.subject.withOrganizationalUnit
+
+```ts
+withOrganizationalUnit(organizationalUnit)
+```
+
+"The organizational unit of the subject."
+
+### fn spec.forProvider.config.subjectConfig.subject.withPostalCode
+
+```ts
+withPostalCode(postalCode)
+```
+
+"The postal code of the subject."
+
+### fn spec.forProvider.config.subjectConfig.subject.withProvince
+
+```ts
+withProvince(province)
+```
+
+"The province, territory, or regional state of the subject."
+
+### fn spec.forProvider.config.subjectConfig.subject.withStreetAddress
+
+```ts
+withStreetAddress(streetAddress)
+```
+
+"The street address of the subject."
+
+## obj spec.forProvider.config.subjectConfig.subjectAltName
+
+"The subject alternative name fields."
+
+### fn spec.forProvider.config.subjectConfig.subjectAltName.withDnsNames
+
+```ts
+withDnsNames(dnsNames)
+```
+
+"Contains only valid, fully-qualified host names."
+
+### fn spec.forProvider.config.subjectConfig.subjectAltName.withDnsNamesMixin
+
+```ts
+withDnsNamesMixin(dnsNames)
+```
+
+"Contains only valid, fully-qualified host names."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.subjectConfig.subjectAltName.withEmailAddresses
+
+```ts
+withEmailAddresses(emailAddresses)
+```
+
+"Contains only valid RFC 2822 E-mail addresses."
+
+### fn spec.forProvider.config.subjectConfig.subjectAltName.withEmailAddressesMixin
+
+```ts
+withEmailAddressesMixin(emailAddresses)
+```
+
+"Contains only valid RFC 2822 E-mail addresses."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.subjectConfig.subjectAltName.withIpAddresses
+
+```ts
+withIpAddresses(ipAddresses)
+```
+
+"Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses."
+
+### fn spec.forProvider.config.subjectConfig.subjectAltName.withIpAddressesMixin
+
+```ts
+withIpAddressesMixin(ipAddresses)
+```
+
+"Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.subjectConfig.subjectAltName.withUris
+
+```ts
+withUris(uris)
+```
+
+"Contains only valid RFC 3986 URIs."
+
+### fn spec.forProvider.config.subjectConfig.subjectAltName.withUrisMixin
+
+```ts
+withUrisMixin(uris)
+```
+
+"Contains only valid RFC 3986 URIs."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.config.x509Config
+
+"Describes how some of the technical X.509 fields in a certificate should be populated."
+
+### fn spec.forProvider.config.x509Config.withAdditionalExtensions
+
+```ts
+withAdditionalExtensions(additionalExtensions)
+```
+
+"Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs."
+
+### fn spec.forProvider.config.x509Config.withAdditionalExtensionsMixin
+
+```ts
+withAdditionalExtensionsMixin(additionalExtensions)
+```
+
+"Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.x509Config.withAiaOcspServers
+
+```ts
+withAiaOcspServers(aiaOcspServers)
+```
+
+"Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the \"Authority Information Access\" extension in the certificate."
+
+### fn spec.forProvider.config.x509Config.withAiaOcspServersMixin
+
+```ts
+withAiaOcspServersMixin(aiaOcspServers)
+```
+
+"Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the \"Authority Information Access\" extension in the certificate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.x509Config.withCaOptions
+
+```ts
+withCaOptions(caOptions)
+```
+
+"Describes values that are relevant in a CA certificate."
+
+### fn spec.forProvider.config.x509Config.withCaOptionsMixin
+
+```ts
+withCaOptionsMixin(caOptions)
+```
+
+"Describes values that are relevant in a CA certificate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.x509Config.withKeyUsage
+
+```ts
+withKeyUsage(keyUsage)
+```
+
+"Indicates the intended use for keys that correspond to a certificate."
+
+### fn spec.forProvider.config.x509Config.withKeyUsageMixin
+
+```ts
+withKeyUsageMixin(keyUsage)
+```
+
+"Indicates the intended use for keys that correspond to a certificate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.x509Config.withPolicyIds
+
+```ts
+withPolicyIds(policyIds)
+```
+
+"Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4."
+
+### fn spec.forProvider.config.x509Config.withPolicyIdsMixin
+
+```ts
+withPolicyIdsMixin(policyIds)
+```
+
+"Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.config.x509Config.additionalExtensions
+
+"Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs."
+
+### fn spec.forProvider.config.x509Config.additionalExtensions.withCritical
+
+```ts
+withCritical(critical)
+```
+
+"Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error)."
+
+### fn spec.forProvider.config.x509Config.additionalExtensions.withObjectId
+
+```ts
+withObjectId(objectId)
+```
+
+"Describes values that are relevant in a CA certificate."
+
+### fn spec.forProvider.config.x509Config.additionalExtensions.withObjectIdMixin
+
+```ts
+withObjectIdMixin(objectId)
+```
+
+"Describes values that are relevant in a CA certificate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.x509Config.additionalExtensions.withValue
+
+```ts
+withValue(value)
+```
+
+"The value of this X.509 extension. A base64-encoded string."
+
+## obj spec.forProvider.config.x509Config.additionalExtensions.objectId
+
+"Describes values that are relevant in a CA certificate."
+
+### fn spec.forProvider.config.x509Config.additionalExtensions.objectId.withObjectIdPath
+
+```ts
+withObjectIdPath(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+### fn spec.forProvider.config.x509Config.additionalExtensions.objectId.withObjectIdPathMixin
+
+```ts
+withObjectIdPathMixin(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.config.x509Config.caOptions
+
+"Describes values that are relevant in a CA certificate."
+
+### fn spec.forProvider.config.x509Config.caOptions.withIsCa
+
+```ts
+withIsCa(isCa)
+```
+
+"Refers to the \"CA\" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate."
+
+### fn spec.forProvider.config.x509Config.caOptions.withMaxIssuerPathLength
+
+```ts
+withMaxIssuerPathLength(maxIssuerPathLength)
+```
+
+"Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate."
+
+## obj spec.forProvider.config.x509Config.keyUsage
+
+"Indicates the intended use for keys that correspond to a certificate."
+
+### fn spec.forProvider.config.x509Config.keyUsage.withBaseKeyUsage
+
+```ts
+withBaseKeyUsage(baseKeyUsage)
+```
+
+"Describes high-level ways in which a key may be used."
+
+### fn spec.forProvider.config.x509Config.keyUsage.withBaseKeyUsageMixin
+
+```ts
+withBaseKeyUsageMixin(baseKeyUsage)
+```
+
+"Describes high-level ways in which a key may be used."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.x509Config.keyUsage.withExtendedKeyUsage
+
+```ts
+withExtendedKeyUsage(extendedKeyUsage)
+```
+
+"Describes high-level ways in which a key may be used."
+
+### fn spec.forProvider.config.x509Config.keyUsage.withExtendedKeyUsageMixin
+
+```ts
+withExtendedKeyUsageMixin(extendedKeyUsage)
+```
+
+"Describes high-level ways in which a key may be used."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.config.x509Config.keyUsage.withUnknownExtendedKeyUsages
+
+```ts
+withUnknownExtendedKeyUsages(unknownExtendedKeyUsages)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+### fn spec.forProvider.config.x509Config.keyUsage.withUnknownExtendedKeyUsagesMixin
+
+```ts
+withUnknownExtendedKeyUsagesMixin(unknownExtendedKeyUsages)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.config.x509Config.keyUsage.baseKeyUsage
+
+"Describes high-level ways in which a key may be used."
+
+### fn spec.forProvider.config.x509Config.keyUsage.baseKeyUsage.withCertSign
+
+```ts
+withCertSign(certSign)
+```
+
+"The key may be used to sign certificates."
+
+### fn spec.forProvider.config.x509Config.keyUsage.baseKeyUsage.withContentCommitment
+
+```ts
+withContentCommitment(contentCommitment)
+```
+
+"The key may be used for cryptographic commitments. Note that this may also be referred to as \"non-repudiation\"."
+
+### fn spec.forProvider.config.x509Config.keyUsage.baseKeyUsage.withCrlSign
+
+```ts
+withCrlSign(crlSign)
+```
+
+"The key may be used sign certificate revocation lists."
+
+### fn spec.forProvider.config.x509Config.keyUsage.baseKeyUsage.withDataEncipherment
+
+```ts
+withDataEncipherment(dataEncipherment)
+```
+
+"The key may be used to encipher data."
+
+### fn spec.forProvider.config.x509Config.keyUsage.baseKeyUsage.withDecipherOnly
+
+```ts
+withDecipherOnly(decipherOnly)
+```
+
+"The key may be used to decipher only."
+
+### fn spec.forProvider.config.x509Config.keyUsage.baseKeyUsage.withDigitalSignature
+
+```ts
+withDigitalSignature(digitalSignature)
+```
+
+"The key may be used for digital signatures."
+
+### fn spec.forProvider.config.x509Config.keyUsage.baseKeyUsage.withEncipherOnly
+
+```ts
+withEncipherOnly(encipherOnly)
+```
+
+"The key may be used to encipher only."
+
+### fn spec.forProvider.config.x509Config.keyUsage.baseKeyUsage.withKeyAgreement
+
+```ts
+withKeyAgreement(keyAgreement)
+```
+
+"The key may be used in a key agreement protocol."
+
+### fn spec.forProvider.config.x509Config.keyUsage.baseKeyUsage.withKeyEncipherment
+
+```ts
+withKeyEncipherment(keyEncipherment)
+```
+
+"The key may be used to encipher other keys."
+
+## obj spec.forProvider.config.x509Config.keyUsage.extendedKeyUsage
+
+"Describes high-level ways in which a key may be used."
+
+### fn spec.forProvider.config.x509Config.keyUsage.extendedKeyUsage.withClientAuth
+
+```ts
+withClientAuth(clientAuth)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as \"TLS WWW client authentication\", though regularly used for non-WWW TLS."
+
+### fn spec.forProvider.config.x509Config.keyUsage.extendedKeyUsage.withCodeSigning
+
+```ts
+withCodeSigning(codeSigning)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as \"Signing of downloadable executable code client authentication\"."
+
+### fn spec.forProvider.config.x509Config.keyUsage.extendedKeyUsage.withEmailProtection
+
+```ts
+withEmailProtection(emailProtection)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as \"Email protection\"."
+
+### fn spec.forProvider.config.x509Config.keyUsage.extendedKeyUsage.withOcspSigning
+
+```ts
+withOcspSigning(ocspSigning)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as \"Signing OCSP responses\"."
+
+### fn spec.forProvider.config.x509Config.keyUsage.extendedKeyUsage.withServerAuth
+
+```ts
+withServerAuth(serverAuth)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as \"TLS WWW server authentication\", though regularly used for non-WWW TLS."
+
+### fn spec.forProvider.config.x509Config.keyUsage.extendedKeyUsage.withTimeStamping
+
+```ts
+withTimeStamping(timeStamping)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as \"Binding the hash of an object to a time\"."
+
+## obj spec.forProvider.config.x509Config.keyUsage.unknownExtendedKeyUsages
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+### fn spec.forProvider.config.x509Config.keyUsage.unknownExtendedKeyUsages.withObjectIdPath
+
+```ts
+withObjectIdPath(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+### fn spec.forProvider.config.x509Config.keyUsage.unknownExtendedKeyUsages.withObjectIdPathMixin
+
+```ts
+withObjectIdPathMixin(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.config.x509Config.policyIds
+
+"Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4."
+
+### fn spec.forProvider.config.x509Config.policyIds.withObjectIdPath
+
+```ts
+withObjectIdPath(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+### fn spec.forProvider.config.x509Config.policyIds.withObjectIdPathMixin
+
+```ts
+withObjectIdPathMixin(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 

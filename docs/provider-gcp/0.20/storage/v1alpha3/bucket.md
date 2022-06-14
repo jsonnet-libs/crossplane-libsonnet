@@ -22,8 +22,6 @@ permalink: /provider-gcp/0.20/storage/v1alpha3/bucket/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -48,14 +46,51 @@ permalink: /provider-gcp/0.20/storage/v1alpha3/bucket/
   * [`fn withRequesterPays(requesterPays)`](#fn-specwithrequesterpays)
   * [`fn withStorageClass(storageClass)`](#fn-specwithstorageclass)
   * [`fn withVersioningEnabled(versioningEnabled)`](#fn-specwithversioningenabled)
+  * [`obj spec.acl`](#obj-specacl)
+    * [`fn withDomain(domain)`](#fn-specaclwithdomain)
+    * [`fn withEmail(email)`](#fn-specaclwithemail)
+    * [`fn withEntity(entity)`](#fn-specaclwithentity)
+    * [`fn withEntityId(entityId)`](#fn-specaclwithentityid)
+    * [`fn withRole(role)`](#fn-specaclwithrole)
+    * [`obj spec.acl.projectTeam`](#obj-specaclprojectteam)
+      * [`fn withProjectNumber(projectNumber)`](#fn-specaclprojectteamwithprojectnumber)
+      * [`fn withTeam(team)`](#fn-specaclprojectteamwithteam)
   * [`obj spec.bucketPolicyOnly`](#obj-specbucketpolicyonly)
     * [`fn withEnabled(enabled)`](#fn-specbucketpolicyonlywithenabled)
     * [`fn withLockedTime(lockedTime)`](#fn-specbucketpolicyonlywithlockedtime)
+  * [`obj spec.cors`](#obj-speccors)
+    * [`fn withMaxAge(maxAge)`](#fn-speccorswithmaxage)
+    * [`fn withMethods(methods)`](#fn-speccorswithmethods)
+    * [`fn withMethodsMixin(methods)`](#fn-speccorswithmethodsmixin)
+    * [`fn withOrigins(origins)`](#fn-speccorswithorigins)
+    * [`fn withOriginsMixin(origins)`](#fn-speccorswithoriginsmixin)
+    * [`fn withResponseHeaders(responseHeaders)`](#fn-speccorswithresponseheaders)
+    * [`fn withResponseHeadersMixin(responseHeaders)`](#fn-speccorswithresponseheadersmixin)
+  * [`obj spec.defaultObjectAcl`](#obj-specdefaultobjectacl)
+    * [`fn withDomain(domain)`](#fn-specdefaultobjectaclwithdomain)
+    * [`fn withEmail(email)`](#fn-specdefaultobjectaclwithemail)
+    * [`fn withEntity(entity)`](#fn-specdefaultobjectaclwithentity)
+    * [`fn withEntityId(entityId)`](#fn-specdefaultobjectaclwithentityid)
+    * [`fn withRole(role)`](#fn-specdefaultobjectaclwithrole)
+    * [`obj spec.defaultObjectAcl.projectTeam`](#obj-specdefaultobjectaclprojectteam)
+      * [`fn withProjectNumber(projectNumber)`](#fn-specdefaultobjectaclprojectteamwithprojectnumber)
+      * [`fn withTeam(team)`](#fn-specdefaultobjectaclprojectteamwithteam)
   * [`obj spec.encryption`](#obj-specencryption)
     * [`fn withDefaultKmsKeyName(defaultKmsKeyName)`](#fn-specencryptionwithdefaultkmskeyname)
   * [`obj spec.lifecycle`](#obj-speclifecycle)
     * [`fn withRules(rules)`](#fn-speclifecyclewithrules)
     * [`fn withRulesMixin(rules)`](#fn-speclifecyclewithrulesmixin)
+    * [`obj spec.lifecycle.rules`](#obj-speclifecyclerules)
+      * [`obj spec.lifecycle.rules.action`](#obj-speclifecyclerulesaction)
+        * [`fn withStorageClass(storageClass)`](#fn-speclifecyclerulesactionwithstorageclass)
+        * [`fn withType(type)`](#fn-speclifecyclerulesactionwithtype)
+      * [`obj spec.lifecycle.rules.condition`](#obj-speclifecyclerulescondition)
+        * [`fn withAgeInDays(ageInDays)`](#fn-speclifecyclerulesconditionwithageindays)
+        * [`fn withCreatedBefore(createdBefore)`](#fn-speclifecyclerulesconditionwithcreatedbefore)
+        * [`fn withLiveness(liveness)`](#fn-speclifecyclerulesconditionwithliveness)
+        * [`fn withMatchesStorageClasses(matchesStorageClasses)`](#fn-speclifecyclerulesconditionwithmatchesstorageclasses)
+        * [`fn withMatchesStorageClassesMixin(matchesStorageClasses)`](#fn-speclifecyclerulesconditionwithmatchesstorageclassesmixin)
+        * [`fn withNumNewerVersions(numNewerVersions)`](#fn-speclifecyclerulesconditionwithnumnewerversions)
   * [`obj spec.logging`](#obj-speclogging)
     * [`fn withLogBucket(logBucket)`](#fn-specloggingwithlogbucket)
     * [`fn withLogObjectPrefix(logObjectPrefix)`](#fn-specloggingwithlogobjectprefix)
@@ -185,24 +220,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -404,6 +421,70 @@ withVersioningEnabled(versioningEnabled)
 
 "VersioningEnabled reports whether this bucket has versioning enabled."
 
+## obj spec.acl
+
+"ACL is the list of access control rules on the bucket."
+
+### fn spec.acl.withDomain
+
+```ts
+withDomain(domain)
+```
+
+"The domain associated with the entity, if any."
+
+### fn spec.acl.withEmail
+
+```ts
+withEmail(email)
+```
+
+"The email address associated with the entity, if any."
+
+### fn spec.acl.withEntity
+
+```ts
+withEntity(entity)
+```
+
+"Entity refers to a user or group. They are sometimes referred to as grantees. It could be in the form of: \"user-<userId>\", \"user-<email>\", \"group-<groupId>\", \"group-<email>\", \"domain-<domain>\" and \"project-team-<projectId>\". \n Or one of the predefined constants: AllUsers, AllAuthenticatedUsers."
+
+### fn spec.acl.withEntityId
+
+```ts
+withEntityId(entityId)
+```
+
+"EntityID is the ID for the entity, if any."
+
+### fn spec.acl.withRole
+
+```ts
+withRole(role)
+```
+
+"Role is the access permission for the entity. Valid values are \"OWNER\", \"READER\" and \"WRITER\
+
+## obj spec.acl.projectTeam
+
+"ProjectTeam that is associated with the entity, if any."
+
+### fn spec.acl.projectTeam.withProjectNumber
+
+```ts
+withProjectNumber(projectNumber)
+```
+
+"ProjectNumber is the number of the project."
+
+### fn spec.acl.projectTeam.withTeam
+
+```ts
+withTeam(team)
+```
+
+"The team. Acceptable values are: \"editors\", \"owners\" or \"viewers\
+
 ## obj spec.bucketPolicyOnly
 
 "BucketPolicyOnly configures access checks to use only bucket-level IAM policies."
@@ -423,6 +504,136 @@ withLockedTime(lockedTime)
 ```
 
 "LockedTime specifies the deadline for changing Enabled from true to false."
+
+## obj spec.cors
+
+"The bucket's Cross-Origin Resource Sharing (CORS) configuration."
+
+### fn spec.cors.withMaxAge
+
+```ts
+withMaxAge(maxAge)
+```
+
+"MaxAge is the value to return in the Access-Control-Max-Age header used in preflight responses."
+
+### fn spec.cors.withMethods
+
+```ts
+withMethods(methods)
+```
+
+"Methods is the list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: \"*\" is permitted in the list of methods, and means \"any method\"."
+
+### fn spec.cors.withMethodsMixin
+
+```ts
+withMethodsMixin(methods)
+```
+
+"Methods is the list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: \"*\" is permitted in the list of methods, and means \"any method\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.cors.withOrigins
+
+```ts
+withOrigins(origins)
+```
+
+"Origins is the list of Origins eligible to receive CORS response headers. Note: \"*\" is permitted in the list of origins, and means \"any Origin\"."
+
+### fn spec.cors.withOriginsMixin
+
+```ts
+withOriginsMixin(origins)
+```
+
+"Origins is the list of Origins eligible to receive CORS response headers. Note: \"*\" is permitted in the list of origins, and means \"any Origin\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.cors.withResponseHeaders
+
+```ts
+withResponseHeaders(responseHeaders)
+```
+
+"ResponseHeaders is the list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains."
+
+### fn spec.cors.withResponseHeadersMixin
+
+```ts
+withResponseHeadersMixin(responseHeaders)
+```
+
+"ResponseHeaders is the list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.defaultObjectAcl
+
+"DefaultObjectACL is the list of access controls to apply to new objects when no object ACL is provided."
+
+### fn spec.defaultObjectAcl.withDomain
+
+```ts
+withDomain(domain)
+```
+
+"The domain associated with the entity, if any."
+
+### fn spec.defaultObjectAcl.withEmail
+
+```ts
+withEmail(email)
+```
+
+"The email address associated with the entity, if any."
+
+### fn spec.defaultObjectAcl.withEntity
+
+```ts
+withEntity(entity)
+```
+
+"Entity refers to a user or group. They are sometimes referred to as grantees. It could be in the form of: \"user-<userId>\", \"user-<email>\", \"group-<groupId>\", \"group-<email>\", \"domain-<domain>\" and \"project-team-<projectId>\". \n Or one of the predefined constants: AllUsers, AllAuthenticatedUsers."
+
+### fn spec.defaultObjectAcl.withEntityId
+
+```ts
+withEntityId(entityId)
+```
+
+"EntityID is the ID for the entity, if any."
+
+### fn spec.defaultObjectAcl.withRole
+
+```ts
+withRole(role)
+```
+
+"Role is the access permission for the entity. Valid values are \"OWNER\", \"READER\" and \"WRITER\
+
+## obj spec.defaultObjectAcl.projectTeam
+
+"ProjectTeam that is associated with the entity, if any."
+
+### fn spec.defaultObjectAcl.projectTeam.withProjectNumber
+
+```ts
+withProjectNumber(projectNumber)
+```
+
+"ProjectNumber is the number of the project."
+
+### fn spec.defaultObjectAcl.projectTeam.withTeam
+
+```ts
+withTeam(team)
+```
+
+"The team. Acceptable values are: \"editors\", \"owners\" or \"viewers\
 
 ## obj spec.encryption
 
@@ -457,6 +668,84 @@ withRulesMixin(rules)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.lifecycle.rules
+
+
+
+## obj spec.lifecycle.rules.action
+
+"Action is the action to take when all of the associated conditions are met."
+
+### fn spec.lifecycle.rules.action.withStorageClass
+
+```ts
+withStorageClass(storageClass)
+```
+
+"StorageClass is the storage class to set on matching objects if the Action is \"SetStorageClass\"."
+
+### fn spec.lifecycle.rules.action.withType
+
+```ts
+withType(type)
+```
+
+"Type is the type of action to take on matching objects. \n Acceptable values are \"Delete\" to delete matching objects and \"SetStorageClass\" to set the storage class defined in StorageClass on matching objects."
+
+## obj spec.lifecycle.rules.condition
+
+"Condition is the set of conditions that must be met for the associated action to be taken."
+
+### fn spec.lifecycle.rules.condition.withAgeInDays
+
+```ts
+withAgeInDays(ageInDays)
+```
+
+"AgeInDays is the age of the object in days."
+
+### fn spec.lifecycle.rules.condition.withCreatedBefore
+
+```ts
+withCreatedBefore(createdBefore)
+```
+
+"CreatedBefore is the time the object was created. \n This condition is satisfied when an object is created before midnight of the specified date in UTC."
+
+### fn spec.lifecycle.rules.condition.withLiveness
+
+```ts
+withLiveness(liveness)
+```
+
+"Liveness specifies the object's liveness. Relevant only for versioned objects"
+
+### fn spec.lifecycle.rules.condition.withMatchesStorageClasses
+
+```ts
+withMatchesStorageClasses(matchesStorageClasses)
+```
+
+"MatchesStorageClasses is the condition matching the object's storage class. \n Values include \"MULTI_REGIONAL\", \"REGIONAL\", \"NEARLINE\", \"COLDLINE\", \"STANDARD\", and \"DURABLE_REDUCED_AVAILABILITY\"."
+
+### fn spec.lifecycle.rules.condition.withMatchesStorageClassesMixin
+
+```ts
+withMatchesStorageClassesMixin(matchesStorageClasses)
+```
+
+"MatchesStorageClasses is the condition matching the object's storage class. \n Values include \"MULTI_REGIONAL\", \"REGIONAL\", \"NEARLINE\", \"COLDLINE\", \"STANDARD\", and \"DURABLE_REDUCED_AVAILABILITY\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.lifecycle.rules.condition.withNumNewerVersions
+
+```ts
+withNumNewerVersions(numNewerVersions)
+```
+
+"NumNewerVersions is the condition matching objects with a number of newer versions. \n If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object."
 
 ## obj spec.logging
 

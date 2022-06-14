@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/binaryauthorization/v1alpha1/policy/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,19 @@ permalink: /provider-jet-gcp/0.2/binaryauthorization/v1alpha1/policy/
     * [`fn withDescription(description)`](#fn-specforproviderwithdescription)
     * [`fn withGlobalPolicyEvaluationMode(globalPolicyEvaluationMode)`](#fn-specforproviderwithglobalpolicyevaluationmode)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.admissionWhitelistPatterns`](#obj-specforprovideradmissionwhitelistpatterns)
+      * [`fn withNamePattern(namePattern)`](#fn-specforprovideradmissionwhitelistpatternswithnamepattern)
+    * [`obj spec.forProvider.clusterAdmissionRules`](#obj-specforproviderclusteradmissionrules)
+      * [`fn withCluster(cluster)`](#fn-specforproviderclusteradmissionruleswithcluster)
+      * [`fn withEnforcementMode(enforcementMode)`](#fn-specforproviderclusteradmissionruleswithenforcementmode)
+      * [`fn withEvaluationMode(evaluationMode)`](#fn-specforproviderclusteradmissionruleswithevaluationmode)
+      * [`fn withRequireAttestationsBy(requireAttestationsBy)`](#fn-specforproviderclusteradmissionruleswithrequireattestationsby)
+      * [`fn withRequireAttestationsByMixin(requireAttestationsBy)`](#fn-specforproviderclusteradmissionruleswithrequireattestationsbymixin)
+    * [`obj spec.forProvider.defaultAdmissionRule`](#obj-specforproviderdefaultadmissionrule)
+      * [`fn withEnforcementMode(enforcementMode)`](#fn-specforproviderdefaultadmissionrulewithenforcementmode)
+      * [`fn withEvaluationMode(evaluationMode)`](#fn-specforproviderdefaultadmissionrulewithevaluationmode)
+      * [`fn withRequireAttestationsBy(requireAttestationsBy)`](#fn-specforproviderdefaultadmissionrulewithrequireattestationsby)
+      * [`fn withRequireAttestationsByMixin(requireAttestationsBy)`](#fn-specforproviderdefaultadmissionrulewithrequireattestationsbymixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -164,24 +175,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -336,6 +329,102 @@ withProject(project)
 ```
 
 
+
+## obj spec.forProvider.admissionWhitelistPatterns
+
+"A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the image's admission requests will always be permitted regardless of your admission rules."
+
+### fn spec.forProvider.admissionWhitelistPatterns.withNamePattern
+
+```ts
+withNamePattern(namePattern)
+```
+
+"An image name pattern to whitelist, in the form 'registry/path/to/image'. This supports a trailing * as a wildcard, but this is allowed only in text after the registry/ part."
+
+## obj spec.forProvider.clusterAdmissionRules
+
+"Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be denied. There can be at most one admission rule per cluster spec. \n Identifier format: '{{location}}.{{clusterId}}'. A location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-central1')."
+
+### fn spec.forProvider.clusterAdmissionRules.withCluster
+
+```ts
+withCluster(cluster)
+```
+
+
+
+### fn spec.forProvider.clusterAdmissionRules.withEnforcementMode
+
+```ts
+withEnforcementMode(enforcementMode)
+```
+
+"The action when a pod creation is denied by the admission rule. Possible values: [\"ENFORCED_BLOCK_AND_AUDIT_LOG\", \"DRYRUN_AUDIT_LOG_ONLY\"]"
+
+### fn spec.forProvider.clusterAdmissionRules.withEvaluationMode
+
+```ts
+withEvaluationMode(evaluationMode)
+```
+
+"How this admission rule will be evaluated. Possible values: [\"ALWAYS_ALLOW\", \"REQUIRE_ATTESTATION\", \"ALWAYS_DENY\"]"
+
+### fn spec.forProvider.clusterAdmissionRules.withRequireAttestationsBy
+
+```ts
+withRequireAttestationsBy(requireAttestationsBy)
+```
+
+"The resource names of the attestors that must attest to a container image. If the attestor is in a different project from the policy, it should be specified in the format 'projects/*/attestors/*'. Each attestor must exist before a policy can reference it. To add an attestor to a policy the principal issuing the policy change request must be able to read the attestor resource. \n Note: this field must be non-empty when the evaluation_mode field specifies REQUIRE_ATTESTATION, otherwise it must be empty."
+
+### fn spec.forProvider.clusterAdmissionRules.withRequireAttestationsByMixin
+
+```ts
+withRequireAttestationsByMixin(requireAttestationsBy)
+```
+
+"The resource names of the attestors that must attest to a container image. If the attestor is in a different project from the policy, it should be specified in the format 'projects/*/attestors/*'. Each attestor must exist before a policy can reference it. To add an attestor to a policy the principal issuing the policy change request must be able to read the attestor resource. \n Note: this field must be non-empty when the evaluation_mode field specifies REQUIRE_ATTESTATION, otherwise it must be empty."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.defaultAdmissionRule
+
+"Default admission rule for a cluster without a per-cluster admission rule."
+
+### fn spec.forProvider.defaultAdmissionRule.withEnforcementMode
+
+```ts
+withEnforcementMode(enforcementMode)
+```
+
+"The action when a pod creation is denied by the admission rule. Possible values: [\"ENFORCED_BLOCK_AND_AUDIT_LOG\", \"DRYRUN_AUDIT_LOG_ONLY\"]"
+
+### fn spec.forProvider.defaultAdmissionRule.withEvaluationMode
+
+```ts
+withEvaluationMode(evaluationMode)
+```
+
+"How this admission rule will be evaluated. Possible values: [\"ALWAYS_ALLOW\", \"REQUIRE_ATTESTATION\", \"ALWAYS_DENY\"]"
+
+### fn spec.forProvider.defaultAdmissionRule.withRequireAttestationsBy
+
+```ts
+withRequireAttestationsBy(requireAttestationsBy)
+```
+
+"The resource names of the attestors that must attest to a container image. If the attestor is in a different project from the policy, it should be specified in the format 'projects/*/attestors/*'. Each attestor must exist before a policy can reference it. To add an attestor to a policy the principal issuing the policy change request must be able to read the attestor resource. \n Note: this field must be non-empty when the evaluation_mode field specifies REQUIRE_ATTESTATION, otherwise it must be empty."
+
+### fn spec.forProvider.defaultAdmissionRule.withRequireAttestationsByMixin
+
+```ts
+withRequireAttestationsByMixin(requireAttestationsBy)
+```
+
+"The resource names of the attestors that must attest to a container image. If the attestor is in a different project from the policy, it should be specified in the format 'projects/*/attestors/*'. Each attestor must exist before a policy can reference it. To add an attestor to a policy the principal issuing the policy change request must be able to read the attestor resource. \n Note: this field must be non-empty when the evaluation_mode field specifies REQUIRE_ATTESTATION, otherwise it must be empty."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 

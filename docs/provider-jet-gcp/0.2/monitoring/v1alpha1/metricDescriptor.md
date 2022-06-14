@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/monitoring/v1alpha1/metricDescriptor/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,13 @@ permalink: /provider-jet-gcp/0.2/monitoring/v1alpha1/metricDescriptor/
     * [`fn withType(type)`](#fn-specforproviderwithtype)
     * [`fn withUnit(unit)`](#fn-specforproviderwithunit)
     * [`fn withValueType(valueType)`](#fn-specforproviderwithvaluetype)
+    * [`obj spec.forProvider.labels`](#obj-specforproviderlabels)
+      * [`fn withDescription(description)`](#fn-specforproviderlabelswithdescription)
+      * [`fn withKey(key)`](#fn-specforproviderlabelswithkey)
+      * [`fn withValueType(valueType)`](#fn-specforproviderlabelswithvaluetype)
+    * [`obj spec.forProvider.metadata`](#obj-specforprovidermetadata)
+      * [`fn withIngestDelay(ingestDelay)`](#fn-specforprovidermetadatawithingestdelay)
+      * [`fn withSamplePeriod(samplePeriod)`](#fn-specforprovidermetadatawithsampleperiod)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +172,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -361,6 +348,54 @@ withValueType(valueType)
 ```
 
 "Whether the measurement is an integer, a floating-point number, etc. Some combinations of metricKind and valueType might not be supported. Possible values: [\"BOOL\", \"INT64\", \"DOUBLE\", \"STRING\", \"DISTRIBUTION\"]"
+
+## obj spec.forProvider.labels
+
+"The set of labels that can be used to describe a specific instance of this metric type. In order to delete a label, the entire resource must be deleted, then created with the desired labels."
+
+### fn spec.forProvider.labels.withDescription
+
+```ts
+withDescription(description)
+```
+
+"A human-readable description for the label."
+
+### fn spec.forProvider.labels.withKey
+
+```ts
+withKey(key)
+```
+
+"The key for this label. The key must not exceed 100 characters. The first character of the key must be an upper- or lower-case letter, the remaining characters must be letters, digits or underscores, and the key must match the regular expression [a-zA-Z][a-zA-Z0-9_]*"
+
+### fn spec.forProvider.labels.withValueType
+
+```ts
+withValueType(valueType)
+```
+
+"The type of data that can be assigned to the label. Default value: \"STRING\" Possible values: [\"STRING\", \"BOOL\", \"INT64\"]"
+
+## obj spec.forProvider.metadata
+
+"Metadata which can be used to guide usage of the metric."
+
+### fn spec.forProvider.metadata.withIngestDelay
+
+```ts
+withIngestDelay(ingestDelay)
+```
+
+"The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In '[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)'."
+
+### fn spec.forProvider.metadata.withSamplePeriod
+
+```ts
+withSamplePeriod(samplePeriod)
+```
+
+"The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period. In '[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)'."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/dialogflowcx/v1alpha1/flow/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,47 @@ permalink: /provider-jet-gcp/0.2/dialogflowcx/v1alpha1/flow/
     * [`fn withTransitionRouteGroupsMixin(transitionRouteGroups)`](#fn-specforproviderwithtransitionroutegroupsmixin)
     * [`fn withTransitionRoutes(transitionRoutes)`](#fn-specforproviderwithtransitionroutes)
     * [`fn withTransitionRoutesMixin(transitionRoutes)`](#fn-specforproviderwithtransitionroutesmixin)
+    * [`obj spec.forProvider.eventHandlers`](#obj-specforprovidereventhandlers)
+      * [`fn withEvent(event)`](#fn-specforprovidereventhandlerswithevent)
+      * [`fn withTargetFlow(targetFlow)`](#fn-specforprovidereventhandlerswithtargetflow)
+      * [`fn withTargetPage(targetPage)`](#fn-specforprovidereventhandlerswithtargetpage)
+      * [`fn withTriggerFulfillment(triggerFulfillment)`](#fn-specforprovidereventhandlerswithtriggerfulfillment)
+      * [`fn withTriggerFulfillmentMixin(triggerFulfillment)`](#fn-specforprovidereventhandlerswithtriggerfulfillmentmixin)
+      * [`obj spec.forProvider.eventHandlers.triggerFulfillment`](#obj-specforprovidereventhandlerstriggerfulfillment)
+        * [`fn withMessages(messages)`](#fn-specforprovidereventhandlerstriggerfulfillmentwithmessages)
+        * [`fn withMessagesMixin(messages)`](#fn-specforprovidereventhandlerstriggerfulfillmentwithmessagesmixin)
+        * [`fn withReturnPartialResponses(returnPartialResponses)`](#fn-specforprovidereventhandlerstriggerfulfillmentwithreturnpartialresponses)
+        * [`fn withTag(tag)`](#fn-specforprovidereventhandlerstriggerfulfillmentwithtag)
+        * [`fn withWebhook(webhook)`](#fn-specforprovidereventhandlerstriggerfulfillmentwithwebhook)
+        * [`obj spec.forProvider.eventHandlers.triggerFulfillment.messages`](#obj-specforprovidereventhandlerstriggerfulfillmentmessages)
+          * [`fn withText(text)`](#fn-specforprovidereventhandlerstriggerfulfillmentmessageswithtext)
+          * [`fn withTextMixin(text)`](#fn-specforprovidereventhandlerstriggerfulfillmentmessageswithtextmixin)
+          * [`obj spec.forProvider.eventHandlers.triggerFulfillment.messages.text`](#obj-specforprovidereventhandlerstriggerfulfillmentmessagestext)
+            * [`fn withText(text)`](#fn-specforprovidereventhandlerstriggerfulfillmentmessagestextwithtext)
+            * [`fn withTextMixin(text)`](#fn-specforprovidereventhandlerstriggerfulfillmentmessagestextwithtextmixin)
+    * [`obj spec.forProvider.nluSettings`](#obj-specforprovidernlusettings)
+      * [`fn withClassificationThreshold(classificationThreshold)`](#fn-specforprovidernlusettingswithclassificationthreshold)
+      * [`fn withModelTrainingMode(modelTrainingMode)`](#fn-specforprovidernlusettingswithmodeltrainingmode)
+      * [`fn withModelType(modelType)`](#fn-specforprovidernlusettingswithmodeltype)
+    * [`obj spec.forProvider.transitionRoutes`](#obj-specforprovidertransitionroutes)
+      * [`fn withCondition(condition)`](#fn-specforprovidertransitionrouteswithcondition)
+      * [`fn withIntent(intent)`](#fn-specforprovidertransitionrouteswithintent)
+      * [`fn withTargetFlow(targetFlow)`](#fn-specforprovidertransitionrouteswithtargetflow)
+      * [`fn withTargetPage(targetPage)`](#fn-specforprovidertransitionrouteswithtargetpage)
+      * [`fn withTriggerFulfillment(triggerFulfillment)`](#fn-specforprovidertransitionrouteswithtriggerfulfillment)
+      * [`fn withTriggerFulfillmentMixin(triggerFulfillment)`](#fn-specforprovidertransitionrouteswithtriggerfulfillmentmixin)
+      * [`obj spec.forProvider.transitionRoutes.triggerFulfillment`](#obj-specforprovidertransitionroutestriggerfulfillment)
+        * [`fn withMessages(messages)`](#fn-specforprovidertransitionroutestriggerfulfillmentwithmessages)
+        * [`fn withMessagesMixin(messages)`](#fn-specforprovidertransitionroutestriggerfulfillmentwithmessagesmixin)
+        * [`fn withReturnPartialResponses(returnPartialResponses)`](#fn-specforprovidertransitionroutestriggerfulfillmentwithreturnpartialresponses)
+        * [`fn withTag(tag)`](#fn-specforprovidertransitionroutestriggerfulfillmentwithtag)
+        * [`fn withWebhook(webhook)`](#fn-specforprovidertransitionroutestriggerfulfillmentwithwebhook)
+        * [`obj spec.forProvider.transitionRoutes.triggerFulfillment.messages`](#obj-specforprovidertransitionroutestriggerfulfillmentmessages)
+          * [`fn withText(text)`](#fn-specforprovidertransitionroutestriggerfulfillmentmessageswithtext)
+          * [`fn withTextMixin(text)`](#fn-specforprovidertransitionroutestriggerfulfillmentmessageswithtextmixin)
+          * [`obj spec.forProvider.transitionRoutes.triggerFulfillment.messages.text`](#obj-specforprovidertransitionroutestriggerfulfillmentmessagestext)
+            * [`fn withText(text)`](#fn-specforprovidertransitionroutestriggerfulfillmentmessagestextwithtext)
+            * [`fn withTextMixin(text)`](#fn-specforprovidertransitionroutestriggerfulfillmentmessagestextwithtextmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +206,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -363,6 +384,314 @@ withTransitionRoutesMixin(transitionRoutes)
 ```
 
 "A flow's transition routes serve two purposes: They are responsible for matching the user's first utterances in the flow. They are inherited by every page's [transition routes][Page.transition_routes] and can support use cases such as the user saying \"help\" or \"can I talk to a human?\", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow. \n TransitionRoutes are evalauted in the following order: TransitionRoutes with intent specified. TransitionRoutes with only condition specified. TransitionRoutes with intent specified are inherited by pages in the flow."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.eventHandlers
+
+"A flow's event handlers serve two purposes: They are responsible for handling events (e.g. no match, webhook errors) in the flow. They are inherited by every page's [event handlers][Page.event_handlers], which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow. Unlike transitionRoutes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored."
+
+### fn spec.forProvider.eventHandlers.withEvent
+
+```ts
+withEvent(event)
+```
+
+"The name of the event to handle."
+
+### fn spec.forProvider.eventHandlers.withTargetFlow
+
+```ts
+withTargetFlow(targetFlow)
+```
+
+"The target flow to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>."
+
+### fn spec.forProvider.eventHandlers.withTargetPage
+
+```ts
+withTargetPage(targetPage)
+```
+
+"The target page to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>."
+
+### fn spec.forProvider.eventHandlers.withTriggerFulfillment
+
+```ts
+withTriggerFulfillment(triggerFulfillment)
+```
+
+"The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks."
+
+### fn spec.forProvider.eventHandlers.withTriggerFulfillmentMixin
+
+```ts
+withTriggerFulfillmentMixin(triggerFulfillment)
+```
+
+"The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.eventHandlers.triggerFulfillment
+
+"The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks."
+
+### fn spec.forProvider.eventHandlers.triggerFulfillment.withMessages
+
+```ts
+withMessages(messages)
+```
+
+"The list of rich message responses to present to the user."
+
+### fn spec.forProvider.eventHandlers.triggerFulfillment.withMessagesMixin
+
+```ts
+withMessagesMixin(messages)
+```
+
+"The list of rich message responses to present to the user."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.eventHandlers.triggerFulfillment.withReturnPartialResponses
+
+```ts
+withReturnPartialResponses(returnPartialResponses)
+```
+
+"Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks."
+
+### fn spec.forProvider.eventHandlers.triggerFulfillment.withTag
+
+```ts
+withTag(tag)
+```
+
+"The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified."
+
+### fn spec.forProvider.eventHandlers.triggerFulfillment.withWebhook
+
+```ts
+withWebhook(webhook)
+```
+
+"The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>."
+
+## obj spec.forProvider.eventHandlers.triggerFulfillment.messages
+
+"The list of rich message responses to present to the user."
+
+### fn spec.forProvider.eventHandlers.triggerFulfillment.messages.withText
+
+```ts
+withText(text)
+```
+
+"The text response message."
+
+### fn spec.forProvider.eventHandlers.triggerFulfillment.messages.withTextMixin
+
+```ts
+withTextMixin(text)
+```
+
+"The text response message."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.eventHandlers.triggerFulfillment.messages.text
+
+"The text response message."
+
+### fn spec.forProvider.eventHandlers.triggerFulfillment.messages.text.withText
+
+```ts
+withText(text)
+```
+
+"A collection of text responses."
+
+### fn spec.forProvider.eventHandlers.triggerFulfillment.messages.text.withTextMixin
+
+```ts
+withTextMixin(text)
+```
+
+"A collection of text responses."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.nluSettings
+
+"NLU related settings of the flow."
+
+### fn spec.forProvider.nluSettings.withClassificationThreshold
+
+```ts
+withClassificationThreshold(classificationThreshold)
+```
+
+"To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used."
+
+### fn spec.forProvider.nluSettings.withModelTrainingMode
+
+```ts
+withModelTrainingMode(modelTrainingMode)
+```
+
+"Indicates NLU model training mode. * MODEL_TRAINING_MODE_AUTOMATIC: NLU model training is automatically triggered when a flow gets modified. User can also manually trigger model training in this mode. * MODEL_TRAINING_MODE_MANUAL: User needs to manually trigger NLU model training. Best for large flows whose models take long time to train. Possible values: [\"MODEL_TRAINING_MODE_AUTOMATIC\", \"MODEL_TRAINING_MODE_MANUAL\"]"
+
+### fn spec.forProvider.nluSettings.withModelType
+
+```ts
+withModelType(modelType)
+```
+
+"Indicates the type of NLU model. * MODEL_TYPE_STANDARD: Use standard NLU model. * MODEL_TYPE_ADVANCED: Use advanced NLU model. Possible values: [\"MODEL_TYPE_STANDARD\", \"MODEL_TYPE_ADVANCED\"]"
+
+## obj spec.forProvider.transitionRoutes
+
+"A flow's transition routes serve two purposes: They are responsible for matching the user's first utterances in the flow. They are inherited by every page's [transition routes][Page.transition_routes] and can support use cases such as the user saying \"help\" or \"can I talk to a human?\", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow. \n TransitionRoutes are evalauted in the following order: TransitionRoutes with intent specified. TransitionRoutes with only condition specified. TransitionRoutes with intent specified are inherited by pages in the flow."
+
+### fn spec.forProvider.transitionRoutes.withCondition
+
+```ts
+withCondition(condition)
+```
+
+"The condition to evaluate against form parameters or session parameters. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled."
+
+### fn spec.forProvider.transitionRoutes.withIntent
+
+```ts
+withIntent(intent)
+```
+
+"The unique identifier of an Intent. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled."
+
+### fn spec.forProvider.transitionRoutes.withTargetFlow
+
+```ts
+withTargetFlow(targetFlow)
+```
+
+"The target flow to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>."
+
+### fn spec.forProvider.transitionRoutes.withTargetPage
+
+```ts
+withTargetPage(targetPage)
+```
+
+"The target page to transition to. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>."
+
+### fn spec.forProvider.transitionRoutes.withTriggerFulfillment
+
+```ts
+withTriggerFulfillment(triggerFulfillment)
+```
+
+"The fulfillment to call when the condition is satisfied. At least one of triggerFulfillment and target must be specified. When both are defined, triggerFulfillment is executed first."
+
+### fn spec.forProvider.transitionRoutes.withTriggerFulfillmentMixin
+
+```ts
+withTriggerFulfillmentMixin(triggerFulfillment)
+```
+
+"The fulfillment to call when the condition is satisfied. At least one of triggerFulfillment and target must be specified. When both are defined, triggerFulfillment is executed first."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.transitionRoutes.triggerFulfillment
+
+"The fulfillment to call when the condition is satisfied. At least one of triggerFulfillment and target must be specified. When both are defined, triggerFulfillment is executed first."
+
+### fn spec.forProvider.transitionRoutes.triggerFulfillment.withMessages
+
+```ts
+withMessages(messages)
+```
+
+"The list of rich message responses to present to the user."
+
+### fn spec.forProvider.transitionRoutes.triggerFulfillment.withMessagesMixin
+
+```ts
+withMessagesMixin(messages)
+```
+
+"The list of rich message responses to present to the user."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.transitionRoutes.triggerFulfillment.withReturnPartialResponses
+
+```ts
+withReturnPartialResponses(returnPartialResponses)
+```
+
+"Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks."
+
+### fn spec.forProvider.transitionRoutes.triggerFulfillment.withTag
+
+```ts
+withTag(tag)
+```
+
+"The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified."
+
+### fn spec.forProvider.transitionRoutes.triggerFulfillment.withWebhook
+
+```ts
+withWebhook(webhook)
+```
+
+"The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>."
+
+## obj spec.forProvider.transitionRoutes.triggerFulfillment.messages
+
+"The list of rich message responses to present to the user."
+
+### fn spec.forProvider.transitionRoutes.triggerFulfillment.messages.withText
+
+```ts
+withText(text)
+```
+
+"The text response message."
+
+### fn spec.forProvider.transitionRoutes.triggerFulfillment.messages.withTextMixin
+
+```ts
+withTextMixin(text)
+```
+
+"The text response message."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.transitionRoutes.triggerFulfillment.messages.text
+
+"The text response message."
+
+### fn spec.forProvider.transitionRoutes.triggerFulfillment.messages.text.withText
+
+```ts
+withText(text)
+```
+
+"A collection of text responses."
+
+### fn spec.forProvider.transitionRoutes.triggerFulfillment.messages.text.withTextMixin
+
+```ts
+withTextMixin(text)
+```
+
+"A collection of text responses."
 
 **Note:** This function appends passed data to existing values
 

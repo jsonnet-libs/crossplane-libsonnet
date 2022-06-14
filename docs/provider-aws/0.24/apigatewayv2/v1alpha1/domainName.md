@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/apigatewayv2/v1alpha1/domainName/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -39,6 +37,16 @@ permalink: /provider-aws/0.24/apigatewayv2/v1alpha1/domainName/
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
+    * [`obj spec.forProvider.domainNameConfigurations`](#obj-specforproviderdomainnameconfigurations)
+      * [`fn withApiGatewayDomainName(apiGatewayDomainName)`](#fn-specforproviderdomainnameconfigurationswithapigatewaydomainname)
+      * [`fn withCertificateARN(certificateARN)`](#fn-specforproviderdomainnameconfigurationswithcertificatearn)
+      * [`fn withCertificateName(certificateName)`](#fn-specforproviderdomainnameconfigurationswithcertificatename)
+      * [`fn withCertificateUploadDate(certificateUploadDate)`](#fn-specforproviderdomainnameconfigurationswithcertificateuploaddate)
+      * [`fn withDomainNameStatus(domainNameStatus)`](#fn-specforproviderdomainnameconfigurationswithdomainnamestatus)
+      * [`fn withDomainNameStatusMessage(domainNameStatusMessage)`](#fn-specforproviderdomainnameconfigurationswithdomainnamestatusmessage)
+      * [`fn withEndpointType(endpointType)`](#fn-specforproviderdomainnameconfigurationswithendpointtype)
+      * [`fn withHostedZoneID(hostedZoneID)`](#fn-specforproviderdomainnameconfigurationswithhostedzoneid)
+      * [`fn withSecurityPolicy(securityPolicy)`](#fn-specforproviderdomainnameconfigurationswithsecuritypolicy)
     * [`obj spec.forProvider.mutualTLSAuthentication`](#obj-specforprovidermutualtlsauthentication)
       * [`fn withTruststoreURI(truststoreURI)`](#fn-specforprovidermutualtlsauthenticationwithtruststoreuri)
       * [`fn withTruststoreVersion(truststoreVersion)`](#fn-specforprovidermutualtlsauthenticationwithtruststoreversion)
@@ -166,24 +174,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -301,6 +291,82 @@ withTagsMixin(tags)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.domainNameConfigurations
+
+
+
+### fn spec.forProvider.domainNameConfigurations.withApiGatewayDomainName
+
+```ts
+withApiGatewayDomainName(apiGatewayDomainName)
+```
+
+
+
+### fn spec.forProvider.domainNameConfigurations.withCertificateARN
+
+```ts
+withCertificateARN(certificateARN)
+```
+
+"Represents an Amazon Resource Name (ARN)."
+
+### fn spec.forProvider.domainNameConfigurations.withCertificateName
+
+```ts
+withCertificateName(certificateName)
+```
+
+"A string with a length between [1-128]."
+
+### fn spec.forProvider.domainNameConfigurations.withCertificateUploadDate
+
+```ts
+withCertificateUploadDate(certificateUploadDate)
+```
+
+
+
+### fn spec.forProvider.domainNameConfigurations.withDomainNameStatus
+
+```ts
+withDomainNameStatus(domainNameStatus)
+```
+
+"The status of the domain name migration. The valid values are AVAILABLE and UPDATING. If the status is UPDATING, the domain cannot be modified further until the existing operation is complete. If it is AVAILABLE, the domain can be updated."
+
+### fn spec.forProvider.domainNameConfigurations.withDomainNameStatusMessage
+
+```ts
+withDomainNameStatusMessage(domainNameStatusMessage)
+```
+
+
+
+### fn spec.forProvider.domainNameConfigurations.withEndpointType
+
+```ts
+withEndpointType(endpointType)
+```
+
+"Represents an endpoint type."
+
+### fn spec.forProvider.domainNameConfigurations.withHostedZoneID
+
+```ts
+withHostedZoneID(hostedZoneID)
+```
+
+
+
+### fn spec.forProvider.domainNameConfigurations.withSecurityPolicy
+
+```ts
+withSecurityPolicy(securityPolicy)
+```
+
+"The Transport Layer Security (TLS) version of the security policy for this domain name. The valid values are TLS_1_0 and TLS_1_2."
 
 ## obj spec.forProvider.mutualTLSAuthentication
 

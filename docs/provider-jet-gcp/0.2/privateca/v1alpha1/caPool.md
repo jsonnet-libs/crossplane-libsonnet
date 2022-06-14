@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/privateca/v1alpha1/caPool/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -44,6 +42,94 @@ permalink: /provider-jet-gcp/0.2/privateca/v1alpha1/caPool/
     * [`fn withPublishingOptions(publishingOptions)`](#fn-specforproviderwithpublishingoptions)
     * [`fn withPublishingOptionsMixin(publishingOptions)`](#fn-specforproviderwithpublishingoptionsmixin)
     * [`fn withTier(tier)`](#fn-specforproviderwithtier)
+    * [`obj spec.forProvider.issuancePolicy`](#obj-specforproviderissuancepolicy)
+      * [`fn withAllowedIssuanceModes(allowedIssuanceModes)`](#fn-specforproviderissuancepolicywithallowedissuancemodes)
+      * [`fn withAllowedIssuanceModesMixin(allowedIssuanceModes)`](#fn-specforproviderissuancepolicywithallowedissuancemodesmixin)
+      * [`fn withAllowedKeyTypes(allowedKeyTypes)`](#fn-specforproviderissuancepolicywithallowedkeytypes)
+      * [`fn withAllowedKeyTypesMixin(allowedKeyTypes)`](#fn-specforproviderissuancepolicywithallowedkeytypesmixin)
+      * [`fn withBaselineValues(baselineValues)`](#fn-specforproviderissuancepolicywithbaselinevalues)
+      * [`fn withBaselineValuesMixin(baselineValues)`](#fn-specforproviderissuancepolicywithbaselinevaluesmixin)
+      * [`fn withIdentityConstraints(identityConstraints)`](#fn-specforproviderissuancepolicywithidentityconstraints)
+      * [`fn withIdentityConstraintsMixin(identityConstraints)`](#fn-specforproviderissuancepolicywithidentityconstraintsmixin)
+      * [`fn withMaximumLifetime(maximumLifetime)`](#fn-specforproviderissuancepolicywithmaximumlifetime)
+      * [`obj spec.forProvider.issuancePolicy.allowedIssuanceModes`](#obj-specforproviderissuancepolicyallowedissuancemodes)
+        * [`fn withAllowConfigBasedIssuance(allowConfigBasedIssuance)`](#fn-specforproviderissuancepolicyallowedissuancemodeswithallowconfigbasedissuance)
+        * [`fn withAllowCsrBasedIssuance(allowCsrBasedIssuance)`](#fn-specforproviderissuancepolicyallowedissuancemodeswithallowcsrbasedissuance)
+      * [`obj spec.forProvider.issuancePolicy.allowedKeyTypes`](#obj-specforproviderissuancepolicyallowedkeytypes)
+        * [`fn withEllipticCurve(ellipticCurve)`](#fn-specforproviderissuancepolicyallowedkeytypeswithellipticcurve)
+        * [`fn withEllipticCurveMixin(ellipticCurve)`](#fn-specforproviderissuancepolicyallowedkeytypeswithellipticcurvemixin)
+        * [`fn withRsa(rsa)`](#fn-specforproviderissuancepolicyallowedkeytypeswithrsa)
+        * [`fn withRsaMixin(rsa)`](#fn-specforproviderissuancepolicyallowedkeytypeswithrsamixin)
+        * [`obj spec.forProvider.issuancePolicy.allowedKeyTypes.ellipticCurve`](#obj-specforproviderissuancepolicyallowedkeytypesellipticcurve)
+          * [`fn withSignatureAlgorithm(signatureAlgorithm)`](#fn-specforproviderissuancepolicyallowedkeytypesellipticcurvewithsignaturealgorithm)
+        * [`obj spec.forProvider.issuancePolicy.allowedKeyTypes.rsa`](#obj-specforproviderissuancepolicyallowedkeytypesrsa)
+          * [`fn withMaxModulusSize(maxModulusSize)`](#fn-specforproviderissuancepolicyallowedkeytypesrsawithmaxmodulussize)
+          * [`fn withMinModulusSize(minModulusSize)`](#fn-specforproviderissuancepolicyallowedkeytypesrsawithminmodulussize)
+      * [`obj spec.forProvider.issuancePolicy.baselineValues`](#obj-specforproviderissuancepolicybaselinevalues)
+        * [`fn withAdditionalExtensions(additionalExtensions)`](#fn-specforproviderissuancepolicybaselinevalueswithadditionalextensions)
+        * [`fn withAdditionalExtensionsMixin(additionalExtensions)`](#fn-specforproviderissuancepolicybaselinevalueswithadditionalextensionsmixin)
+        * [`fn withAiaOcspServers(aiaOcspServers)`](#fn-specforproviderissuancepolicybaselinevalueswithaiaocspservers)
+        * [`fn withAiaOcspServersMixin(aiaOcspServers)`](#fn-specforproviderissuancepolicybaselinevalueswithaiaocspserversmixin)
+        * [`fn withCaOptions(caOptions)`](#fn-specforproviderissuancepolicybaselinevalueswithcaoptions)
+        * [`fn withCaOptionsMixin(caOptions)`](#fn-specforproviderissuancepolicybaselinevalueswithcaoptionsmixin)
+        * [`fn withKeyUsage(keyUsage)`](#fn-specforproviderissuancepolicybaselinevalueswithkeyusage)
+        * [`fn withKeyUsageMixin(keyUsage)`](#fn-specforproviderissuancepolicybaselinevalueswithkeyusagemixin)
+        * [`fn withPolicyIds(policyIds)`](#fn-specforproviderissuancepolicybaselinevalueswithpolicyids)
+        * [`fn withPolicyIdsMixin(policyIds)`](#fn-specforproviderissuancepolicybaselinevalueswithpolicyidsmixin)
+        * [`obj spec.forProvider.issuancePolicy.baselineValues.additionalExtensions`](#obj-specforproviderissuancepolicybaselinevaluesadditionalextensions)
+          * [`fn withCritical(critical)`](#fn-specforproviderissuancepolicybaselinevaluesadditionalextensionswithcritical)
+          * [`fn withObjectId(objectId)`](#fn-specforproviderissuancepolicybaselinevaluesadditionalextensionswithobjectid)
+          * [`fn withObjectIdMixin(objectId)`](#fn-specforproviderissuancepolicybaselinevaluesadditionalextensionswithobjectidmixin)
+          * [`fn withValue(value)`](#fn-specforproviderissuancepolicybaselinevaluesadditionalextensionswithvalue)
+          * [`obj spec.forProvider.issuancePolicy.baselineValues.additionalExtensions.objectId`](#obj-specforproviderissuancepolicybaselinevaluesadditionalextensionsobjectid)
+            * [`fn withObjectIdPath(objectIdPath)`](#fn-specforproviderissuancepolicybaselinevaluesadditionalextensionsobjectidwithobjectidpath)
+            * [`fn withObjectIdPathMixin(objectIdPath)`](#fn-specforproviderissuancepolicybaselinevaluesadditionalextensionsobjectidwithobjectidpathmixin)
+        * [`obj spec.forProvider.issuancePolicy.baselineValues.caOptions`](#obj-specforproviderissuancepolicybaselinevaluescaoptions)
+          * [`fn withIsCa(isCa)`](#fn-specforproviderissuancepolicybaselinevaluescaoptionswithisca)
+          * [`fn withMaxIssuerPathLength(maxIssuerPathLength)`](#fn-specforproviderissuancepolicybaselinevaluescaoptionswithmaxissuerpathlength)
+        * [`obj spec.forProvider.issuancePolicy.baselineValues.keyUsage`](#obj-specforproviderissuancepolicybaselinevalueskeyusage)
+          * [`fn withBaseKeyUsage(baseKeyUsage)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagewithbasekeyusage)
+          * [`fn withBaseKeyUsageMixin(baseKeyUsage)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagewithbasekeyusagemixin)
+          * [`fn withExtendedKeyUsage(extendedKeyUsage)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagewithextendedkeyusage)
+          * [`fn withExtendedKeyUsageMixin(extendedKeyUsage)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagewithextendedkeyusagemixin)
+          * [`fn withUnknownExtendedKeyUsages(unknownExtendedKeyUsages)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagewithunknownextendedkeyusages)
+          * [`fn withUnknownExtendedKeyUsagesMixin(unknownExtendedKeyUsages)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagewithunknownextendedkeyusagesmixin)
+          * [`obj spec.forProvider.issuancePolicy.baselineValues.keyUsage.baseKeyUsage`](#obj-specforproviderissuancepolicybaselinevalueskeyusagebasekeyusage)
+            * [`fn withCertSign(certSign)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagebasekeyusagewithcertsign)
+            * [`fn withContentCommitment(contentCommitment)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagebasekeyusagewithcontentcommitment)
+            * [`fn withCrlSign(crlSign)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagebasekeyusagewithcrlsign)
+            * [`fn withDataEncipherment(dataEncipherment)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagebasekeyusagewithdataencipherment)
+            * [`fn withDecipherOnly(decipherOnly)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagebasekeyusagewithdecipheronly)
+            * [`fn withDigitalSignature(digitalSignature)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagebasekeyusagewithdigitalsignature)
+            * [`fn withEncipherOnly(encipherOnly)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagebasekeyusagewithencipheronly)
+            * [`fn withKeyAgreement(keyAgreement)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagebasekeyusagewithkeyagreement)
+            * [`fn withKeyEncipherment(keyEncipherment)`](#fn-specforproviderissuancepolicybaselinevalueskeyusagebasekeyusagewithkeyencipherment)
+          * [`obj spec.forProvider.issuancePolicy.baselineValues.keyUsage.extendedKeyUsage`](#obj-specforproviderissuancepolicybaselinevalueskeyusageextendedkeyusage)
+            * [`fn withClientAuth(clientAuth)`](#fn-specforproviderissuancepolicybaselinevalueskeyusageextendedkeyusagewithclientauth)
+            * [`fn withCodeSigning(codeSigning)`](#fn-specforproviderissuancepolicybaselinevalueskeyusageextendedkeyusagewithcodesigning)
+            * [`fn withEmailProtection(emailProtection)`](#fn-specforproviderissuancepolicybaselinevalueskeyusageextendedkeyusagewithemailprotection)
+            * [`fn withOcspSigning(ocspSigning)`](#fn-specforproviderissuancepolicybaselinevalueskeyusageextendedkeyusagewithocspsigning)
+            * [`fn withServerAuth(serverAuth)`](#fn-specforproviderissuancepolicybaselinevalueskeyusageextendedkeyusagewithserverauth)
+            * [`fn withTimeStamping(timeStamping)`](#fn-specforproviderissuancepolicybaselinevalueskeyusageextendedkeyusagewithtimestamping)
+          * [`obj spec.forProvider.issuancePolicy.baselineValues.keyUsage.unknownExtendedKeyUsages`](#obj-specforproviderissuancepolicybaselinevalueskeyusageunknownextendedkeyusages)
+            * [`fn withObjectIdPath(objectIdPath)`](#fn-specforproviderissuancepolicybaselinevalueskeyusageunknownextendedkeyusageswithobjectidpath)
+            * [`fn withObjectIdPathMixin(objectIdPath)`](#fn-specforproviderissuancepolicybaselinevalueskeyusageunknownextendedkeyusageswithobjectidpathmixin)
+        * [`obj spec.forProvider.issuancePolicy.baselineValues.policyIds`](#obj-specforproviderissuancepolicybaselinevaluespolicyids)
+          * [`fn withObjectIdPath(objectIdPath)`](#fn-specforproviderissuancepolicybaselinevaluespolicyidswithobjectidpath)
+          * [`fn withObjectIdPathMixin(objectIdPath)`](#fn-specforproviderissuancepolicybaselinevaluespolicyidswithobjectidpathmixin)
+      * [`obj spec.forProvider.issuancePolicy.identityConstraints`](#obj-specforproviderissuancepolicyidentityconstraints)
+        * [`fn withAllowSubjectAltNamesPassthrough(allowSubjectAltNamesPassthrough)`](#fn-specforproviderissuancepolicyidentityconstraintswithallowsubjectaltnamespassthrough)
+        * [`fn withAllowSubjectPassthrough(allowSubjectPassthrough)`](#fn-specforproviderissuancepolicyidentityconstraintswithallowsubjectpassthrough)
+        * [`fn withCelExpression(celExpression)`](#fn-specforproviderissuancepolicyidentityconstraintswithcelexpression)
+        * [`fn withCelExpressionMixin(celExpression)`](#fn-specforproviderissuancepolicyidentityconstraintswithcelexpressionmixin)
+        * [`obj spec.forProvider.issuancePolicy.identityConstraints.celExpression`](#obj-specforproviderissuancepolicyidentityconstraintscelexpression)
+          * [`fn withDescription(description)`](#fn-specforproviderissuancepolicyidentityconstraintscelexpressionwithdescription)
+          * [`fn withExpression(expression)`](#fn-specforproviderissuancepolicyidentityconstraintscelexpressionwithexpression)
+          * [`fn withLocation(location)`](#fn-specforproviderissuancepolicyidentityconstraintscelexpressionwithlocation)
+          * [`fn withTitle(title)`](#fn-specforproviderissuancepolicyidentityconstraintscelexpressionwithtitle)
+    * [`obj spec.forProvider.publishingOptions`](#obj-specforproviderpublishingoptions)
+      * [`fn withPublishCaCert(publishCaCert)`](#fn-specforproviderpublishingoptionswithpublishcacert)
+      * [`fn withPublishCrl(publishCrl)`](#fn-specforproviderpublishingoptionswithpublishcrl)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -165,24 +251,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -345,6 +413,680 @@ withTier(tier)
 ```
 
 "The Tier of this CaPool. Possible values: [\"ENTERPRISE\", \"DEVOPS\"]"
+
+## obj spec.forProvider.issuancePolicy
+
+"The IssuancePolicy to control how Certificates will be issued from this CaPool."
+
+### fn spec.forProvider.issuancePolicy.withAllowedIssuanceModes
+
+```ts
+withAllowedIssuanceModes(allowedIssuanceModes)
+```
+
+"IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool."
+
+### fn spec.forProvider.issuancePolicy.withAllowedIssuanceModesMixin
+
+```ts
+withAllowedIssuanceModesMixin(allowedIssuanceModes)
+```
+
+"IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.withAllowedKeyTypes
+
+```ts
+withAllowedKeyTypes(allowedKeyTypes)
+```
+
+"If any AllowedKeyType is specified, then the certificate request's public key must match one of the key types listed here. Otherwise, any key may be used."
+
+### fn spec.forProvider.issuancePolicy.withAllowedKeyTypesMixin
+
+```ts
+withAllowedKeyTypesMixin(allowedKeyTypes)
+```
+
+"If any AllowedKeyType is specified, then the certificate request's public key must match one of the key types listed here. Otherwise, any key may be used."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.withBaselineValues
+
+```ts
+withBaselineValues(baselineValues)
+```
+
+"A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate request uses a CertificateTemplate that defines conflicting predefinedValues for the same properties, the certificate issuance request will fail."
+
+### fn spec.forProvider.issuancePolicy.withBaselineValuesMixin
+
+```ts
+withBaselineValuesMixin(baselineValues)
+```
+
+"A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate request uses a CertificateTemplate that defines conflicting predefinedValues for the same properties, the certificate issuance request will fail."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.withIdentityConstraints
+
+```ts
+withIdentityConstraints(identityConstraints)
+```
+
+"Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate's identity."
+
+### fn spec.forProvider.issuancePolicy.withIdentityConstraintsMixin
+
+```ts
+withIdentityConstraintsMixin(identityConstraints)
+```
+
+"Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate's identity."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.withMaximumLifetime
+
+```ts
+withMaximumLifetime(maximumLifetime)
+```
+
+"The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximumLifetime, the effective lifetime will be explicitly truncated to match it."
+
+## obj spec.forProvider.issuancePolicy.allowedIssuanceModes
+
+"IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool."
+
+### fn spec.forProvider.issuancePolicy.allowedIssuanceModes.withAllowConfigBasedIssuance
+
+```ts
+withAllowConfigBasedIssuance(allowConfigBasedIssuance)
+```
+
+"When true, allows callers to create Certificates by specifying a CertificateConfig."
+
+### fn spec.forProvider.issuancePolicy.allowedIssuanceModes.withAllowCsrBasedIssuance
+
+```ts
+withAllowCsrBasedIssuance(allowCsrBasedIssuance)
+```
+
+"When true, allows callers to create Certificates by specifying a CSR."
+
+## obj spec.forProvider.issuancePolicy.allowedKeyTypes
+
+"If any AllowedKeyType is specified, then the certificate request's public key must match one of the key types listed here. Otherwise, any key may be used."
+
+### fn spec.forProvider.issuancePolicy.allowedKeyTypes.withEllipticCurve
+
+```ts
+withEllipticCurve(ellipticCurve)
+```
+
+"Represents an allowed Elliptic Curve key type."
+
+### fn spec.forProvider.issuancePolicy.allowedKeyTypes.withEllipticCurveMixin
+
+```ts
+withEllipticCurveMixin(ellipticCurve)
+```
+
+"Represents an allowed Elliptic Curve key type."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.allowedKeyTypes.withRsa
+
+```ts
+withRsa(rsa)
+```
+
+"Describes an RSA key that may be used in a Certificate issued from a CaPool."
+
+### fn spec.forProvider.issuancePolicy.allowedKeyTypes.withRsaMixin
+
+```ts
+withRsaMixin(rsa)
+```
+
+"Describes an RSA key that may be used in a Certificate issued from a CaPool."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.issuancePolicy.allowedKeyTypes.ellipticCurve
+
+"Represents an allowed Elliptic Curve key type."
+
+### fn spec.forProvider.issuancePolicy.allowedKeyTypes.ellipticCurve.withSignatureAlgorithm
+
+```ts
+withSignatureAlgorithm(signatureAlgorithm)
+```
+
+"The algorithm used. Possible values: [\"ECDSA_P256\", \"ECDSA_P384\", \"EDDSA_25519\"]"
+
+## obj spec.forProvider.issuancePolicy.allowedKeyTypes.rsa
+
+"Describes an RSA key that may be used in a Certificate issued from a CaPool."
+
+### fn spec.forProvider.issuancePolicy.allowedKeyTypes.rsa.withMaxModulusSize
+
+```ts
+withMaxModulusSize(maxModulusSize)
+```
+
+"The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes."
+
+### fn spec.forProvider.issuancePolicy.allowedKeyTypes.rsa.withMinModulusSize
+
+```ts
+withMinModulusSize(minModulusSize)
+```
+
+"The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply."
+
+## obj spec.forProvider.issuancePolicy.baselineValues
+
+"A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate request uses a CertificateTemplate that defines conflicting predefinedValues for the same properties, the certificate issuance request will fail."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.withAdditionalExtensions
+
+```ts
+withAdditionalExtensions(additionalExtensions)
+```
+
+"Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.withAdditionalExtensionsMixin
+
+```ts
+withAdditionalExtensionsMixin(additionalExtensions)
+```
+
+"Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.baselineValues.withAiaOcspServers
+
+```ts
+withAiaOcspServers(aiaOcspServers)
+```
+
+"Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the \"Authority Information Access\" extension in the certificate."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.withAiaOcspServersMixin
+
+```ts
+withAiaOcspServersMixin(aiaOcspServers)
+```
+
+"Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the \"Authority Information Access\" extension in the certificate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.baselineValues.withCaOptions
+
+```ts
+withCaOptions(caOptions)
+```
+
+"Describes values that are relevant in a CA certificate."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.withCaOptionsMixin
+
+```ts
+withCaOptionsMixin(caOptions)
+```
+
+"Describes values that are relevant in a CA certificate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.baselineValues.withKeyUsage
+
+```ts
+withKeyUsage(keyUsage)
+```
+
+"Indicates the intended use for keys that correspond to a certificate."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.withKeyUsageMixin
+
+```ts
+withKeyUsageMixin(keyUsage)
+```
+
+"Indicates the intended use for keys that correspond to a certificate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.baselineValues.withPolicyIds
+
+```ts
+withPolicyIds(policyIds)
+```
+
+"Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.withPolicyIdsMixin
+
+```ts
+withPolicyIdsMixin(policyIds)
+```
+
+"Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.issuancePolicy.baselineValues.additionalExtensions
+
+"Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.additionalExtensions.withCritical
+
+```ts
+withCritical(critical)
+```
+
+"Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error)."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.additionalExtensions.withObjectId
+
+```ts
+withObjectId(objectId)
+```
+
+"Describes values that are relevant in a CA certificate."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.additionalExtensions.withObjectIdMixin
+
+```ts
+withObjectIdMixin(objectId)
+```
+
+"Describes values that are relevant in a CA certificate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.baselineValues.additionalExtensions.withValue
+
+```ts
+withValue(value)
+```
+
+"The value of this X.509 extension. A base64-encoded string."
+
+## obj spec.forProvider.issuancePolicy.baselineValues.additionalExtensions.objectId
+
+"Describes values that are relevant in a CA certificate."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.additionalExtensions.objectId.withObjectIdPath
+
+```ts
+withObjectIdPath(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.additionalExtensions.objectId.withObjectIdPathMixin
+
+```ts
+withObjectIdPathMixin(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.issuancePolicy.baselineValues.caOptions
+
+"Describes values that are relevant in a CA certificate."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.caOptions.withIsCa
+
+```ts
+withIsCa(isCa)
+```
+
+"Refers to the \"CA\" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.caOptions.withMaxIssuerPathLength
+
+```ts
+withMaxIssuerPathLength(maxIssuerPathLength)
+```
+
+"Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate."
+
+## obj spec.forProvider.issuancePolicy.baselineValues.keyUsage
+
+"Indicates the intended use for keys that correspond to a certificate."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.withBaseKeyUsage
+
+```ts
+withBaseKeyUsage(baseKeyUsage)
+```
+
+"Describes high-level ways in which a key may be used."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.withBaseKeyUsageMixin
+
+```ts
+withBaseKeyUsageMixin(baseKeyUsage)
+```
+
+"Describes high-level ways in which a key may be used."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.withExtendedKeyUsage
+
+```ts
+withExtendedKeyUsage(extendedKeyUsage)
+```
+
+"Describes high-level ways in which a key may be used."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.withExtendedKeyUsageMixin
+
+```ts
+withExtendedKeyUsageMixin(extendedKeyUsage)
+```
+
+"Describes high-level ways in which a key may be used."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.withUnknownExtendedKeyUsages
+
+```ts
+withUnknownExtendedKeyUsages(unknownExtendedKeyUsages)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.withUnknownExtendedKeyUsagesMixin
+
+```ts
+withUnknownExtendedKeyUsagesMixin(unknownExtendedKeyUsages)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.issuancePolicy.baselineValues.keyUsage.baseKeyUsage
+
+"Describes high-level ways in which a key may be used."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.baseKeyUsage.withCertSign
+
+```ts
+withCertSign(certSign)
+```
+
+"The key may be used to sign certificates."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.baseKeyUsage.withContentCommitment
+
+```ts
+withContentCommitment(contentCommitment)
+```
+
+"The key may be used for cryptographic commitments. Note that this may also be referred to as \"non-repudiation\"."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.baseKeyUsage.withCrlSign
+
+```ts
+withCrlSign(crlSign)
+```
+
+"The key may be used sign certificate revocation lists."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.baseKeyUsage.withDataEncipherment
+
+```ts
+withDataEncipherment(dataEncipherment)
+```
+
+"The key may be used to encipher data."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.baseKeyUsage.withDecipherOnly
+
+```ts
+withDecipherOnly(decipherOnly)
+```
+
+"The key may be used to decipher only."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.baseKeyUsage.withDigitalSignature
+
+```ts
+withDigitalSignature(digitalSignature)
+```
+
+"The key may be used for digital signatures."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.baseKeyUsage.withEncipherOnly
+
+```ts
+withEncipherOnly(encipherOnly)
+```
+
+"The key may be used to encipher only."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.baseKeyUsage.withKeyAgreement
+
+```ts
+withKeyAgreement(keyAgreement)
+```
+
+"The key may be used in a key agreement protocol."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.baseKeyUsage.withKeyEncipherment
+
+```ts
+withKeyEncipherment(keyEncipherment)
+```
+
+"The key may be used to encipher other keys."
+
+## obj spec.forProvider.issuancePolicy.baselineValues.keyUsage.extendedKeyUsage
+
+"Describes high-level ways in which a key may be used."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.extendedKeyUsage.withClientAuth
+
+```ts
+withClientAuth(clientAuth)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as \"TLS WWW client authentication\", though regularly used for non-WWW TLS."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.extendedKeyUsage.withCodeSigning
+
+```ts
+withCodeSigning(codeSigning)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as \"Signing of downloadable executable code client authentication\"."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.extendedKeyUsage.withEmailProtection
+
+```ts
+withEmailProtection(emailProtection)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as \"Email protection\"."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.extendedKeyUsage.withOcspSigning
+
+```ts
+withOcspSigning(ocspSigning)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as \"Signing OCSP responses\"."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.extendedKeyUsage.withServerAuth
+
+```ts
+withServerAuth(serverAuth)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as \"TLS WWW server authentication\", though regularly used for non-WWW TLS."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.extendedKeyUsage.withTimeStamping
+
+```ts
+withTimeStamping(timeStamping)
+```
+
+"Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as \"Binding the hash of an object to a time\"."
+
+## obj spec.forProvider.issuancePolicy.baselineValues.keyUsage.unknownExtendedKeyUsages
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.unknownExtendedKeyUsages.withObjectIdPath
+
+```ts
+withObjectIdPath(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.keyUsage.unknownExtendedKeyUsages.withObjectIdPathMixin
+
+```ts
+withObjectIdPathMixin(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.issuancePolicy.baselineValues.policyIds
+
+"Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.policyIds.withObjectIdPath
+
+```ts
+withObjectIdPath(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+### fn spec.forProvider.issuancePolicy.baselineValues.policyIds.withObjectIdPathMixin
+
+```ts
+withObjectIdPathMixin(objectIdPath)
+```
+
+"An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.issuancePolicy.identityConstraints
+
+"Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate's identity."
+
+### fn spec.forProvider.issuancePolicy.identityConstraints.withAllowSubjectAltNamesPassthrough
+
+```ts
+withAllowSubjectAltNamesPassthrough(allowSubjectAltNamesPassthrough)
+```
+
+"If this is set, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded."
+
+### fn spec.forProvider.issuancePolicy.identityConstraints.withAllowSubjectPassthrough
+
+```ts
+withAllowSubjectPassthrough(allowSubjectPassthrough)
+```
+
+"If this is set, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded."
+
+### fn spec.forProvider.issuancePolicy.identityConstraints.withCelExpression
+
+```ts
+withCelExpression(celExpression)
+```
+
+"A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/cel-guide"
+
+### fn spec.forProvider.issuancePolicy.identityConstraints.withCelExpressionMixin
+
+```ts
+withCelExpressionMixin(celExpression)
+```
+
+"A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/cel-guide"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.issuancePolicy.identityConstraints.celExpression
+
+"A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/cel-guide"
+
+### fn spec.forProvider.issuancePolicy.identityConstraints.celExpression.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI."
+
+### fn spec.forProvider.issuancePolicy.identityConstraints.celExpression.withExpression
+
+```ts
+withExpression(expression)
+```
+
+"Textual representation of an expression in Common Expression Language syntax."
+
+### fn spec.forProvider.issuancePolicy.identityConstraints.celExpression.withLocation
+
+```ts
+withLocation(location)
+```
+
+"String indicating the location of the expression for error reporting, e.g. a file name and a position in the file."
+
+### fn spec.forProvider.issuancePolicy.identityConstraints.celExpression.withTitle
+
+```ts
+withTitle(title)
+```
+
+"Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression."
+
+## obj spec.forProvider.publishingOptions
+
+"The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool."
+
+### fn spec.forProvider.publishingOptions.withPublishCaCert
+
+```ts
+withPublishCaCert(publishCaCert)
+```
+
+"When true, publishes each CertificateAuthority's CA certificate and includes its URL in the \"Authority Information Access\" X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding X.509 extension will not be written in issued certificates."
+
+### fn spec.forProvider.publishingOptions.withPublishCrl
+
+```ts
+withPublishCrl(publishCrl)
+```
+
+"When true, publishes each CertificateAuthority's CRL and includes its URL in the \"CRL Distribution Points\" X.509 extension in all issued Certificates. If this is false, CRLs will not be published and the corresponding X.509 extension will not be written in issued certificates. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked."
 
 ## obj spec.providerConfigRef
 

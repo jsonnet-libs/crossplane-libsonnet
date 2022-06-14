@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/binaryauthorization/v1alpha1/attestor/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -39,6 +37,19 @@ permalink: /provider-jet-gcp/0.2/binaryauthorization/v1alpha1/attestor/
     * [`fn withDescription(description)`](#fn-specforproviderwithdescription)
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.attestationAuthorityNote`](#obj-specforproviderattestationauthoritynote)
+      * [`fn withNoteReference(noteReference)`](#fn-specforproviderattestationauthoritynotewithnotereference)
+      * [`fn withPublicKeys(publicKeys)`](#fn-specforproviderattestationauthoritynotewithpublickeys)
+      * [`fn withPublicKeysMixin(publicKeys)`](#fn-specforproviderattestationauthoritynotewithpublickeysmixin)
+      * [`obj spec.forProvider.attestationAuthorityNote.publicKeys`](#obj-specforproviderattestationauthoritynotepublickeys)
+        * [`fn withAsciiArmoredPgpPublicKey(asciiArmoredPgpPublicKey)`](#fn-specforproviderattestationauthoritynotepublickeyswithasciiarmoredpgppublickey)
+        * [`fn withComment(comment)`](#fn-specforproviderattestationauthoritynotepublickeyswithcomment)
+        * [`fn withId(id)`](#fn-specforproviderattestationauthoritynotepublickeyswithid)
+        * [`fn withPkixPublicKey(pkixPublicKey)`](#fn-specforproviderattestationauthoritynotepublickeyswithpkixpublickey)
+        * [`fn withPkixPublicKeyMixin(pkixPublicKey)`](#fn-specforproviderattestationauthoritynotepublickeyswithpkixpublickeymixin)
+        * [`obj spec.forProvider.attestationAuthorityNote.publicKeys.pkixPublicKey`](#obj-specforproviderattestationauthoritynotepublickeyspkixpublickey)
+          * [`fn withPublicKeyPem(publicKeyPem)`](#fn-specforproviderattestationauthoritynotepublickeyspkixpublickeywithpublickeypem)
+          * [`fn withSignatureAlgorithm(signatureAlgorithm)`](#fn-specforproviderattestationauthoritynotepublickeyspkixpublickeywithsignaturealgorithm)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +174,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -296,6 +289,102 @@ withProject(project)
 ```
 
 
+
+## obj spec.forProvider.attestationAuthorityNote
+
+"A Container Analysis ATTESTATION_AUTHORITY Note, created by the user."
+
+### fn spec.forProvider.attestationAuthorityNote.withNoteReference
+
+```ts
+withNoteReference(noteReference)
+```
+
+"The resource name of a ATTESTATION_AUTHORITY Note, created by the user. If the Note is in a different project from the Attestor, it should be specified in the format 'projects/*/notes/*' (or the legacy 'providers/*/notes/*'). This field may not be updated. An attestation by this attestor is stored as a Container Analysis ATTESTATION_AUTHORITY Occurrence that names a container image and that links to this Note."
+
+### fn spec.forProvider.attestationAuthorityNote.withPublicKeys
+
+```ts
+withPublicKeys(publicKeys)
+```
+
+"Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist."
+
+### fn spec.forProvider.attestationAuthorityNote.withPublicKeysMixin
+
+```ts
+withPublicKeysMixin(publicKeys)
+```
+
+"Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.attestationAuthorityNote.publicKeys
+
+"Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist."
+
+### fn spec.forProvider.attestationAuthorityNote.publicKeys.withAsciiArmoredPgpPublicKey
+
+```ts
+withAsciiArmoredPgpPublicKey(asciiArmoredPgpPublicKey)
+```
+
+"ASCII-armored representation of a PGP public key, as the entire output by the command 'gpg --export --armor foo@example.com' (either LF or CRLF line endings). When using this field, id should be left blank. The BinAuthz API handlers will calculate the ID and fill it in automatically. BinAuthz computes this ID as the OpenPGP RFC4880 V4 fingerprint, represented as upper-case hex. If id is provided by the caller, it will be overwritten by the API-calculated ID."
+
+### fn spec.forProvider.attestationAuthorityNote.publicKeys.withComment
+
+```ts
+withComment(comment)
+```
+
+"A descriptive comment. This field may be updated."
+
+### fn spec.forProvider.attestationAuthorityNote.publicKeys.withId
+
+```ts
+withId(id)
+```
+
+"The ID of this public key. Signatures verified by BinAuthz must include the ID of the public key that can be used to verify them, and that ID must match the contents of this field exactly. Additional restrictions on this field can be imposed based on which public key type is encapsulated. See the documentation on publicKey cases below for details."
+
+### fn spec.forProvider.attestationAuthorityNote.publicKeys.withPkixPublicKey
+
+```ts
+withPkixPublicKey(pkixPublicKey)
+```
+
+"A raw PKIX SubjectPublicKeyInfo format public key. \n NOTE: id may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If id is left blank, a default one will be computed based on the digest of the DER encoding of the public key."
+
+### fn spec.forProvider.attestationAuthorityNote.publicKeys.withPkixPublicKeyMixin
+
+```ts
+withPkixPublicKeyMixin(pkixPublicKey)
+```
+
+"A raw PKIX SubjectPublicKeyInfo format public key. \n NOTE: id may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If id is left blank, a default one will be computed based on the digest of the DER encoding of the public key."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.attestationAuthorityNote.publicKeys.pkixPublicKey
+
+"A raw PKIX SubjectPublicKeyInfo format public key. \n NOTE: id may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If id is left blank, a default one will be computed based on the digest of the DER encoding of the public key."
+
+### fn spec.forProvider.attestationAuthorityNote.publicKeys.pkixPublicKey.withPublicKeyPem
+
+```ts
+withPublicKeyPem(publicKeyPem)
+```
+
+"A PEM-encoded public key, as described in 'https://tools.ietf.org/html/rfc7468#section-13'"
+
+### fn spec.forProvider.attestationAuthorityNote.publicKeys.pkixPublicKey.withSignatureAlgorithm
+
+```ts
+withSignatureAlgorithm(signatureAlgorithm)
+```
+
+"The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in publicKeyPem (i.e. this algorithm must match that of the public key)."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-jet-mongodbatlas/0.2/event/v1alpha1/trigger/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -55,6 +53,12 @@ permalink: /provider-jet-mongodbatlas/0.2/event/v1alpha1/trigger/
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withProjectId(projectId)`](#fn-specforproviderwithprojectid)
     * [`fn withType(type)`](#fn-specforproviderwithtype)
+    * [`obj spec.forProvider.eventProcessors`](#obj-specforprovidereventprocessors)
+      * [`fn withAwsEventbridge(awsEventbridge)`](#fn-specforprovidereventprocessorswithawseventbridge)
+      * [`fn withAwsEventbridgeMixin(awsEventbridge)`](#fn-specforprovidereventprocessorswithawseventbridgemixin)
+      * [`obj spec.forProvider.eventProcessors.awsEventbridge`](#obj-specforprovidereventprocessorsawseventbridge)
+        * [`fn withConfigAccountId(configAccountId)`](#fn-specforprovidereventprocessorsawseventbridgewithconfigaccountid)
+        * [`fn withConfigRegion(configRegion)`](#fn-specforprovidereventprocessorsawseventbridgewithconfigregion)
     * [`obj spec.forProvider.projectIdRef`](#obj-specforproviderprojectidref)
       * [`fn withName(name)`](#fn-specforproviderprojectidrefwithname)
     * [`obj spec.forProvider.projectIdSelector`](#obj-specforproviderprojectidselector)
@@ -182,24 +186,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -447,6 +433,48 @@ withProjectId(projectId)
 
 ```ts
 withType(type)
+```
+
+
+
+## obj spec.forProvider.eventProcessors
+
+
+
+### fn spec.forProvider.eventProcessors.withAwsEventbridge
+
+```ts
+withAwsEventbridge(awsEventbridge)
+```
+
+
+
+### fn spec.forProvider.eventProcessors.withAwsEventbridgeMixin
+
+```ts
+withAwsEventbridgeMixin(awsEventbridge)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.eventProcessors.awsEventbridge
+
+
+
+### fn spec.forProvider.eventProcessors.awsEventbridge.withConfigAccountId
+
+```ts
+withConfigAccountId(configAccountId)
+```
+
+
+
+### fn spec.forProvider.eventProcessors.awsEventbridge.withConfigRegion
+
+```ts
+withConfigRegion(configRegion)
 ```
 
 

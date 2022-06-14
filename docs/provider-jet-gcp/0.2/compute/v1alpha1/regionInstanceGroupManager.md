@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/regionInstanceGroupManager/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -57,6 +55,32 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/regionInstanceGroupManager/
     * [`fn withVersionMixin(version)`](#fn-specforproviderwithversionmixin)
     * [`fn withWaitForInstances(waitForInstances)`](#fn-specforproviderwithwaitforinstances)
     * [`fn withWaitForInstancesStatus(waitForInstancesStatus)`](#fn-specforproviderwithwaitforinstancesstatus)
+    * [`obj spec.forProvider.autoHealingPolicies`](#obj-specforproviderautohealingpolicies)
+      * [`fn withHealthCheck(healthCheck)`](#fn-specforproviderautohealingpolicieswithhealthcheck)
+      * [`fn withInitialDelaySec(initialDelaySec)`](#fn-specforproviderautohealingpolicieswithinitialdelaysec)
+    * [`obj spec.forProvider.namedPort`](#obj-specforprovidernamedport)
+      * [`fn withName(name)`](#fn-specforprovidernamedportwithname)
+      * [`fn withPort(port)`](#fn-specforprovidernamedportwithport)
+    * [`obj spec.forProvider.statefulDisk`](#obj-specforproviderstatefuldisk)
+      * [`fn withDeleteRule(deleteRule)`](#fn-specforproviderstatefuldiskwithdeleterule)
+      * [`fn withDeviceName(deviceName)`](#fn-specforproviderstatefuldiskwithdevicename)
+    * [`obj spec.forProvider.updatePolicy`](#obj-specforproviderupdatepolicy)
+      * [`fn withInstanceRedistributionType(instanceRedistributionType)`](#fn-specforproviderupdatepolicywithinstanceredistributiontype)
+      * [`fn withMaxSurgeFixed(maxSurgeFixed)`](#fn-specforproviderupdatepolicywithmaxsurgefixed)
+      * [`fn withMaxSurgePercent(maxSurgePercent)`](#fn-specforproviderupdatepolicywithmaxsurgepercent)
+      * [`fn withMaxUnavailableFixed(maxUnavailableFixed)`](#fn-specforproviderupdatepolicywithmaxunavailablefixed)
+      * [`fn withMaxUnavailablePercent(maxUnavailablePercent)`](#fn-specforproviderupdatepolicywithmaxunavailablepercent)
+      * [`fn withMinimalAction(minimalAction)`](#fn-specforproviderupdatepolicywithminimalaction)
+      * [`fn withReplacementMethod(replacementMethod)`](#fn-specforproviderupdatepolicywithreplacementmethod)
+      * [`fn withType(type)`](#fn-specforproviderupdatepolicywithtype)
+    * [`obj spec.forProvider.version`](#obj-specforproviderversion)
+      * [`fn withInstanceTemplate(instanceTemplate)`](#fn-specforproviderversionwithinstancetemplate)
+      * [`fn withName(name)`](#fn-specforproviderversionwithname)
+      * [`fn withTargetSize(targetSize)`](#fn-specforproviderversionwithtargetsize)
+      * [`fn withTargetSizeMixin(targetSize)`](#fn-specforproviderversionwithtargetsizemixin)
+      * [`obj spec.forProvider.version.targetSize`](#obj-specforproviderversiontargetsize)
+        * [`fn withFixed(fixed)`](#fn-specforproviderversiontargetsizewithfixed)
+        * [`fn withPercent(percent)`](#fn-specforproviderversiontargetsizewithpercent)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -178,24 +202,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -470,6 +476,192 @@ withWaitForInstancesStatus(waitForInstancesStatus)
 ```
 
 "When used with wait_for_instances specifies the status to wait for. When STABLE is specified this resource will wait until the instances are stable before returning. When UPDATED is set, it will wait for the version target to be reached and any per instance configs to be effective as well as all instances to be stable before returning."
+
+## obj spec.forProvider.autoHealingPolicies
+
+"The autohealing policies for this managed instance group. You can specify only one value."
+
+### fn spec.forProvider.autoHealingPolicies.withHealthCheck
+
+```ts
+withHealthCheck(healthCheck)
+```
+
+"The health check resource that signals autohealing."
+
+### fn spec.forProvider.autoHealingPolicies.withInitialDelaySec
+
+```ts
+withInitialDelaySec(initialDelaySec)
+```
+
+"The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600."
+
+## obj spec.forProvider.namedPort
+
+"The named port configuration."
+
+### fn spec.forProvider.namedPort.withName
+
+```ts
+withName(name)
+```
+
+"The name of the port."
+
+### fn spec.forProvider.namedPort.withPort
+
+```ts
+withPort(port)
+```
+
+"The port number."
+
+## obj spec.forProvider.statefulDisk
+
+"Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the official documentation. Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the update_policy."
+
+### fn spec.forProvider.statefulDisk.withDeleteRule
+
+```ts
+withDeleteRule(deleteRule)
+```
+
+"A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. The default is NEVER."
+
+### fn spec.forProvider.statefulDisk.withDeviceName
+
+```ts
+withDeviceName(deviceName)
+```
+
+"The device name of the disk to be attached."
+
+## obj spec.forProvider.updatePolicy
+
+"The update policy for this managed instance group."
+
+### fn spec.forProvider.updatePolicy.withInstanceRedistributionType
+
+```ts
+withInstanceRedistributionType(instanceRedistributionType)
+```
+
+"The instance redistribution policy for regional managed instance groups. Valid values are: \"PROACTIVE\", \"NONE\". If PROACTIVE (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If NONE, proactive redistribution is disabled."
+
+### fn spec.forProvider.updatePolicy.withMaxSurgeFixed
+
+```ts
+withMaxSurgeFixed(maxSurgeFixed)
+```
+
+"The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with max_surge_percent. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of max_unavailable_fixed or max_surge_fixed must be greater than 0."
+
+### fn spec.forProvider.updatePolicy.withMaxSurgePercent
+
+```ts
+withMaxSurgePercent(maxSurgePercent)
+```
+
+"The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with max_surge_fixed. Percent value is only allowed for regional managed instance groups with size at least 10."
+
+### fn spec.forProvider.updatePolicy.withMaxUnavailableFixed
+
+```ts
+withMaxUnavailableFixed(maxUnavailableFixed)
+```
+
+"The maximum number of instances that can be unavailable during the update process. Conflicts with max_unavailable_percent. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of max_unavailable_fixed or max_surge_fixed must be greater than 0."
+
+### fn spec.forProvider.updatePolicy.withMaxUnavailablePercent
+
+```ts
+withMaxUnavailablePercent(maxUnavailablePercent)
+```
+
+"The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with max_unavailable_fixed. Percent value is only allowed for regional managed instance groups with size at least 10."
+
+### fn spec.forProvider.updatePolicy.withMinimalAction
+
+```ts
+withMinimalAction(minimalAction)
+```
+
+"Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action."
+
+### fn spec.forProvider.updatePolicy.withReplacementMethod
+
+```ts
+withReplacementMethod(replacementMethod)
+```
+
+"The instance replacement method for regional managed instance groups. Valid values are: \"RECREATE\", \"SUBSTITUTE\". If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0."
+
+### fn spec.forProvider.updatePolicy.withType
+
+```ts
+withType(type)
+```
+
+"The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls)."
+
+## obj spec.forProvider.version
+
+"Application versions managed by this instance group. Each version deals with a specific instance template, allowing canary release scenarios."
+
+### fn spec.forProvider.version.withInstanceTemplate
+
+```ts
+withInstanceTemplate(instanceTemplate)
+```
+
+"The full URL to an instance template from which all new instances of this version will be created."
+
+### fn spec.forProvider.version.withName
+
+```ts
+withName(name)
+```
+
+"Version name."
+
+### fn spec.forProvider.version.withTargetSize
+
+```ts
+withTargetSize(targetSize)
+```
+
+"The number of instances calculated as a fixed number or a percentage depending on the settings."
+
+### fn spec.forProvider.version.withTargetSizeMixin
+
+```ts
+withTargetSizeMixin(targetSize)
+```
+
+"The number of instances calculated as a fixed number or a percentage depending on the settings."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.version.targetSize
+
+"The number of instances calculated as a fixed number or a percentage depending on the settings."
+
+### fn spec.forProvider.version.targetSize.withFixed
+
+```ts
+withFixed(fixed)
+```
+
+"The number of instances which are managed for this version. Conflicts with percent."
+
+### fn spec.forProvider.version.targetSize.withPercent
+
+```ts
+withPercent(percent)
+```
+
+"The number of instances (calculated as percentage) which are managed for this version. Conflicts with fixed. Note that when using percent, rounding will be in favor of explicitly set target_size values; a managed instance group with 2 instances and 2 versions, one of which has a target_size.percent of 60 will create 2 instances of that version."
 
 ## obj spec.providerConfigRef
 

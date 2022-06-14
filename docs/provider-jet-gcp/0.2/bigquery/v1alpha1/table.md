@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/bigquery/v1alpha1/table/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -58,6 +56,57 @@ permalink: /provider-jet-gcp/0.2/bigquery/v1alpha1/table/
     * [`fn withTimePartitioningMixin(timePartitioning)`](#fn-specforproviderwithtimepartitioningmixin)
     * [`fn withView(view)`](#fn-specforproviderwithview)
     * [`fn withViewMixin(view)`](#fn-specforproviderwithviewmixin)
+    * [`obj spec.forProvider.encryptionConfiguration`](#obj-specforproviderencryptionconfiguration)
+      * [`fn withKmsKeyName(kmsKeyName)`](#fn-specforproviderencryptionconfigurationwithkmskeyname)
+    * [`obj spec.forProvider.externalDataConfiguration`](#obj-specforproviderexternaldataconfiguration)
+      * [`fn withAutodetect(autodetect)`](#fn-specforproviderexternaldataconfigurationwithautodetect)
+      * [`fn withCompression(compression)`](#fn-specforproviderexternaldataconfigurationwithcompression)
+      * [`fn withCsvOptions(csvOptions)`](#fn-specforproviderexternaldataconfigurationwithcsvoptions)
+      * [`fn withCsvOptionsMixin(csvOptions)`](#fn-specforproviderexternaldataconfigurationwithcsvoptionsmixin)
+      * [`fn withGoogleSheetsOptions(googleSheetsOptions)`](#fn-specforproviderexternaldataconfigurationwithgooglesheetsoptions)
+      * [`fn withGoogleSheetsOptionsMixin(googleSheetsOptions)`](#fn-specforproviderexternaldataconfigurationwithgooglesheetsoptionsmixin)
+      * [`fn withHivePartitioningOptions(hivePartitioningOptions)`](#fn-specforproviderexternaldataconfigurationwithhivepartitioningoptions)
+      * [`fn withHivePartitioningOptionsMixin(hivePartitioningOptions)`](#fn-specforproviderexternaldataconfigurationwithhivepartitioningoptionsmixin)
+      * [`fn withIgnoreUnknownValues(ignoreUnknownValues)`](#fn-specforproviderexternaldataconfigurationwithignoreunknownvalues)
+      * [`fn withMaxBadRecords(maxBadRecords)`](#fn-specforproviderexternaldataconfigurationwithmaxbadrecords)
+      * [`fn withSchema(schema)`](#fn-specforproviderexternaldataconfigurationwithschema)
+      * [`fn withSourceFormat(sourceFormat)`](#fn-specforproviderexternaldataconfigurationwithsourceformat)
+      * [`fn withSourceUris(sourceUris)`](#fn-specforproviderexternaldataconfigurationwithsourceuris)
+      * [`fn withSourceUrisMixin(sourceUris)`](#fn-specforproviderexternaldataconfigurationwithsourceurismixin)
+      * [`obj spec.forProvider.externalDataConfiguration.csvOptions`](#obj-specforproviderexternaldataconfigurationcsvoptions)
+        * [`fn withAllowJaggedRows(allowJaggedRows)`](#fn-specforproviderexternaldataconfigurationcsvoptionswithallowjaggedrows)
+        * [`fn withAllowQuotedNewlines(allowQuotedNewlines)`](#fn-specforproviderexternaldataconfigurationcsvoptionswithallowquotednewlines)
+        * [`fn withEncoding(encoding)`](#fn-specforproviderexternaldataconfigurationcsvoptionswithencoding)
+        * [`fn withFieldDelimiter(fieldDelimiter)`](#fn-specforproviderexternaldataconfigurationcsvoptionswithfielddelimiter)
+        * [`fn withQuote(quote)`](#fn-specforproviderexternaldataconfigurationcsvoptionswithquote)
+        * [`fn withSkipLeadingRows(skipLeadingRows)`](#fn-specforproviderexternaldataconfigurationcsvoptionswithskipleadingrows)
+      * [`obj spec.forProvider.externalDataConfiguration.googleSheetsOptions`](#obj-specforproviderexternaldataconfigurationgooglesheetsoptions)
+        * [`fn withRange(range)`](#fn-specforproviderexternaldataconfigurationgooglesheetsoptionswithrange)
+        * [`fn withSkipLeadingRows(skipLeadingRows)`](#fn-specforproviderexternaldataconfigurationgooglesheetsoptionswithskipleadingrows)
+      * [`obj spec.forProvider.externalDataConfiguration.hivePartitioningOptions`](#obj-specforproviderexternaldataconfigurationhivepartitioningoptions)
+        * [`fn withMode(mode)`](#fn-specforproviderexternaldataconfigurationhivepartitioningoptionswithmode)
+        * [`fn withRequirePartitionFilter(requirePartitionFilter)`](#fn-specforproviderexternaldataconfigurationhivepartitioningoptionswithrequirepartitionfilter)
+        * [`fn withSourceUriPrefix(sourceUriPrefix)`](#fn-specforproviderexternaldataconfigurationhivepartitioningoptionswithsourceuriprefix)
+    * [`obj spec.forProvider.materializedView`](#obj-specforprovidermaterializedview)
+      * [`fn withEnableRefresh(enableRefresh)`](#fn-specforprovidermaterializedviewwithenablerefresh)
+      * [`fn withQuery(query)`](#fn-specforprovidermaterializedviewwithquery)
+      * [`fn withRefreshIntervalMs(refreshIntervalMs)`](#fn-specforprovidermaterializedviewwithrefreshintervalms)
+    * [`obj spec.forProvider.rangePartitioning`](#obj-specforproviderrangepartitioning)
+      * [`fn withField(field)`](#fn-specforproviderrangepartitioningwithfield)
+      * [`fn withRange(range)`](#fn-specforproviderrangepartitioningwithrange)
+      * [`fn withRangeMixin(range)`](#fn-specforproviderrangepartitioningwithrangemixin)
+      * [`obj spec.forProvider.rangePartitioning.range`](#obj-specforproviderrangepartitioningrange)
+        * [`fn withEnd(end)`](#fn-specforproviderrangepartitioningrangewithend)
+        * [`fn withInterval(interval)`](#fn-specforproviderrangepartitioningrangewithinterval)
+        * [`fn withStart(start)`](#fn-specforproviderrangepartitioningrangewithstart)
+    * [`obj spec.forProvider.timePartitioning`](#obj-specforprovidertimepartitioning)
+      * [`fn withExpirationMs(expirationMs)`](#fn-specforprovidertimepartitioningwithexpirationms)
+      * [`fn withField(field)`](#fn-specforprovidertimepartitioningwithfield)
+      * [`fn withRequirePartitionFilter(requirePartitionFilter)`](#fn-specforprovidertimepartitioningwithrequirepartitionfilter)
+      * [`fn withType(type)`](#fn-specforprovidertimepartitioningwithtype)
+    * [`obj spec.forProvider.view`](#obj-specforproviderview)
+      * [`fn withQuery(query)`](#fn-specforproviderviewwithquery)
+      * [`fn withUseLegacySql(useLegacySql)`](#fn-specforproviderviewwithuselegacysql)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -179,24 +228,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -481,6 +512,384 @@ withViewMixin(view)
 "If specified, configures this table as a view."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.encryptionConfiguration
+
+"Specifies how the table should be encrypted. If left blank, the table will be encrypted with a Google-managed key; that process is transparent to the user."
+
+### fn spec.forProvider.encryptionConfiguration.withKmsKeyName
+
+```ts
+withKmsKeyName(kmsKeyName)
+```
+
+"The self link or full name of a key which should be used to encrypt this table. Note that the default bigquery service account will need to have encrypt/decrypt permissions on this key - you may want to see the google_bigquery_default_service_account datasource and the google_kms_crypto_key_iam_binding resource."
+
+## obj spec.forProvider.externalDataConfiguration
+
+"Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table."
+
+### fn spec.forProvider.externalDataConfiguration.withAutodetect
+
+```ts
+withAutodetect(autodetect)
+```
+
+"Let BigQuery try to autodetect the schema and format of the table."
+
+### fn spec.forProvider.externalDataConfiguration.withCompression
+
+```ts
+withCompression(compression)
+```
+
+"The compression type of the data source. Valid values are \"NONE\" or \"GZIP\"."
+
+### fn spec.forProvider.externalDataConfiguration.withCsvOptions
+
+```ts
+withCsvOptions(csvOptions)
+```
+
+"Additional properties to set if source_format is set to \"CSV\"."
+
+### fn spec.forProvider.externalDataConfiguration.withCsvOptionsMixin
+
+```ts
+withCsvOptionsMixin(csvOptions)
+```
+
+"Additional properties to set if source_format is set to \"CSV\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.externalDataConfiguration.withGoogleSheetsOptions
+
+```ts
+withGoogleSheetsOptions(googleSheetsOptions)
+```
+
+"Additional options if source_format is set to \"GOOGLE_SHEETS\"."
+
+### fn spec.forProvider.externalDataConfiguration.withGoogleSheetsOptionsMixin
+
+```ts
+withGoogleSheetsOptionsMixin(googleSheetsOptions)
+```
+
+"Additional options if source_format is set to \"GOOGLE_SHEETS\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.externalDataConfiguration.withHivePartitioningOptions
+
+```ts
+withHivePartitioningOptions(hivePartitioningOptions)
+```
+
+"When set, configures hive partitioning support. Not all storage formats support hive partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as will providing an invalid specification."
+
+### fn spec.forProvider.externalDataConfiguration.withHivePartitioningOptionsMixin
+
+```ts
+withHivePartitioningOptionsMixin(hivePartitioningOptions)
+```
+
+"When set, configures hive partitioning support. Not all storage formats support hive partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as will providing an invalid specification."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.externalDataConfiguration.withIgnoreUnknownValues
+
+```ts
+withIgnoreUnknownValues(ignoreUnknownValues)
+```
+
+"Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false."
+
+### fn spec.forProvider.externalDataConfiguration.withMaxBadRecords
+
+```ts
+withMaxBadRecords(maxBadRecords)
+```
+
+"The maximum number of bad records that BigQuery can ignore when reading data."
+
+### fn spec.forProvider.externalDataConfiguration.withSchema
+
+```ts
+withSchema(schema)
+```
+
+"A JSON schema for the external table. Schema is required for CSV and JSON formats and is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats when using external tables."
+
+### fn spec.forProvider.externalDataConfiguration.withSourceFormat
+
+```ts
+withSourceFormat(sourceFormat)
+```
+
+"The data format. Supported values are: \"CSV\", \"GOOGLE_SHEETS\", \"NEWLINE_DELIMITED_JSON\", \"AVRO\", \"PARQUET\", \"ORC\" and \"DATASTORE_BACKUP\". To use \"GOOGLE_SHEETS\" the scopes must include \"googleapis.com/auth/drive.readonly\"."
+
+### fn spec.forProvider.externalDataConfiguration.withSourceUris
+
+```ts
+withSourceUris(sourceUris)
+```
+
+"A list of the fully-qualified URIs that point to your data in Google Cloud."
+
+### fn spec.forProvider.externalDataConfiguration.withSourceUrisMixin
+
+```ts
+withSourceUrisMixin(sourceUris)
+```
+
+"A list of the fully-qualified URIs that point to your data in Google Cloud."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.externalDataConfiguration.csvOptions
+
+"Additional properties to set if source_format is set to \"CSV\"."
+
+### fn spec.forProvider.externalDataConfiguration.csvOptions.withAllowJaggedRows
+
+```ts
+withAllowJaggedRows(allowJaggedRows)
+```
+
+"Indicates if BigQuery should accept rows that are missing trailing optional columns."
+
+### fn spec.forProvider.externalDataConfiguration.csvOptions.withAllowQuotedNewlines
+
+```ts
+withAllowQuotedNewlines(allowQuotedNewlines)
+```
+
+"Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false."
+
+### fn spec.forProvider.externalDataConfiguration.csvOptions.withEncoding
+
+```ts
+withEncoding(encoding)
+```
+
+"The character encoding of the data. The supported values are UTF-8 or ISO-8859-1."
+
+### fn spec.forProvider.externalDataConfiguration.csvOptions.withFieldDelimiter
+
+```ts
+withFieldDelimiter(fieldDelimiter)
+```
+
+"The separator for fields in a CSV file."
+
+### fn spec.forProvider.externalDataConfiguration.csvOptions.withQuote
+
+```ts
+withQuote(quote)
+```
+
+"The value that is used to quote data sections in a CSV file. If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allow_quoted_newlines property to true. The API-side default is \", specified in Terraform escaped as \\\". Due to limitations with Terraform default values, this value is required to be explicitly set."
+
+### fn spec.forProvider.externalDataConfiguration.csvOptions.withSkipLeadingRows
+
+```ts
+withSkipLeadingRows(skipLeadingRows)
+```
+
+"The number of rows at the top of a CSV file that BigQuery will skip when reading the data."
+
+## obj spec.forProvider.externalDataConfiguration.googleSheetsOptions
+
+"Additional options if source_format is set to \"GOOGLE_SHEETS\"."
+
+### fn spec.forProvider.externalDataConfiguration.googleSheetsOptions.withRange
+
+```ts
+withRange(range)
+```
+
+"Range of a sheet to query from. Only used when non-empty. At least one of range or skip_leading_rows must be set. Typical format: \"sheet_name!top_left_cell_id:bottom_right_cell_id\" For example: \"sheet1!A1:B20\
+
+### fn spec.forProvider.externalDataConfiguration.googleSheetsOptions.withSkipLeadingRows
+
+```ts
+withSkipLeadingRows(skipLeadingRows)
+```
+
+"The number of rows at the top of the sheet that BigQuery will skip when reading the data. At least one of range or skip_leading_rows must be set."
+
+## obj spec.forProvider.externalDataConfiguration.hivePartitioningOptions
+
+"When set, configures hive partitioning support. Not all storage formats support hive partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as will providing an invalid specification."
+
+### fn spec.forProvider.externalDataConfiguration.hivePartitioningOptions.withMode
+
+```ts
+withMode(mode)
+```
+
+"When set, what mode of hive partitioning to use when reading data."
+
+### fn spec.forProvider.externalDataConfiguration.hivePartitioningOptions.withRequirePartitionFilter
+
+```ts
+withRequirePartitionFilter(requirePartitionFilter)
+```
+
+"If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified."
+
+### fn spec.forProvider.externalDataConfiguration.hivePartitioningOptions.withSourceUriPrefix
+
+```ts
+withSourceUriPrefix(sourceUriPrefix)
+```
+
+"When hive partition detection is requested, a common for all source uris must be required. The prefix must end immediately before the partition key encoding begins."
+
+## obj spec.forProvider.materializedView
+
+"If specified, configures this table as a materialized view."
+
+### fn spec.forProvider.materializedView.withEnableRefresh
+
+```ts
+withEnableRefresh(enableRefresh)
+```
+
+"Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true."
+
+### fn spec.forProvider.materializedView.withQuery
+
+```ts
+withQuery(query)
+```
+
+"A query whose result is persisted."
+
+### fn spec.forProvider.materializedView.withRefreshIntervalMs
+
+```ts
+withRefreshIntervalMs(refreshIntervalMs)
+```
+
+"Specifies maximum frequency at which this materialized view will be refreshed. The default is 1800000"
+
+## obj spec.forProvider.rangePartitioning
+
+"If specified, configures range-based partitioning for this table."
+
+### fn spec.forProvider.rangePartitioning.withField
+
+```ts
+withField(field)
+```
+
+"The field used to determine how to create a range-based partition."
+
+### fn spec.forProvider.rangePartitioning.withRange
+
+```ts
+withRange(range)
+```
+
+"Information required to partition based on ranges. Structure is documented below."
+
+### fn spec.forProvider.rangePartitioning.withRangeMixin
+
+```ts
+withRangeMixin(range)
+```
+
+"Information required to partition based on ranges. Structure is documented below."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.rangePartitioning.range
+
+"Information required to partition based on ranges. Structure is documented below."
+
+### fn spec.forProvider.rangePartitioning.range.withEnd
+
+```ts
+withEnd(end)
+```
+
+"End of the range partitioning, exclusive."
+
+### fn spec.forProvider.rangePartitioning.range.withInterval
+
+```ts
+withInterval(interval)
+```
+
+"The width of each range within the partition."
+
+### fn spec.forProvider.rangePartitioning.range.withStart
+
+```ts
+withStart(start)
+```
+
+"Start of the range partitioning, inclusive."
+
+## obj spec.forProvider.timePartitioning
+
+"If specified, configures time-based partitioning for this table."
+
+### fn spec.forProvider.timePartitioning.withExpirationMs
+
+```ts
+withExpirationMs(expirationMs)
+```
+
+"Number of milliseconds for which to keep the storage for a partition."
+
+### fn spec.forProvider.timePartitioning.withField
+
+```ts
+withField(field)
+```
+
+"The field used to determine how to create a time-based partition. If time-based partitioning is enabled without this value, the table is partitioned based on the load time."
+
+### fn spec.forProvider.timePartitioning.withRequirePartitionFilter
+
+```ts
+withRequirePartitionFilter(requirePartitionFilter)
+```
+
+"If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified."
+
+### fn spec.forProvider.timePartitioning.withType
+
+```ts
+withType(type)
+```
+
+"The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively."
+
+## obj spec.forProvider.view
+
+"If specified, configures this table as a view."
+
+### fn spec.forProvider.view.withQuery
+
+```ts
+withQuery(query)
+```
+
+"A query that BigQuery executes when the view is referenced."
+
+### fn spec.forProvider.view.withUseLegacySql
+
+```ts
+withUseLegacySql(useLegacySql)
+```
+
+"Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL"
 
 ## obj spec.providerConfigRef
 

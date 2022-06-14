@@ -22,8 +22,6 @@ permalink: /provider-helm/0.10/helm/v1alpha1/release/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -52,6 +50,42 @@ permalink: /provider-helm/0.10/helm/v1alpha1/release/
       * [`obj spec.forProvider.chart.pullSecretRef`](#obj-specforproviderchartpullsecretref)
         * [`fn withName(name)`](#fn-specforproviderchartpullsecretrefwithname)
         * [`fn withNamespace(namespace)`](#fn-specforproviderchartpullsecretrefwithnamespace)
+    * [`obj spec.forProvider.patchesFrom`](#obj-specforproviderpatchesfrom)
+      * [`obj spec.forProvider.patchesFrom.configMapKeyRef`](#obj-specforproviderpatchesfromconfigmapkeyref)
+        * [`fn withKey(key)`](#fn-specforproviderpatchesfromconfigmapkeyrefwithkey)
+        * [`fn withName(name)`](#fn-specforproviderpatchesfromconfigmapkeyrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforproviderpatchesfromconfigmapkeyrefwithnamespace)
+        * [`fn withOptional(optional)`](#fn-specforproviderpatchesfromconfigmapkeyrefwithoptional)
+      * [`obj spec.forProvider.patchesFrom.secretKeyRef`](#obj-specforproviderpatchesfromsecretkeyref)
+        * [`fn withKey(key)`](#fn-specforproviderpatchesfromsecretkeyrefwithkey)
+        * [`fn withName(name)`](#fn-specforproviderpatchesfromsecretkeyrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforproviderpatchesfromsecretkeyrefwithnamespace)
+        * [`fn withOptional(optional)`](#fn-specforproviderpatchesfromsecretkeyrefwithoptional)
+    * [`obj spec.forProvider.set`](#obj-specforproviderset)
+      * [`fn withName(name)`](#fn-specforprovidersetwithname)
+      * [`fn withValue(value)`](#fn-specforprovidersetwithvalue)
+      * [`obj spec.forProvider.set.valueFrom`](#obj-specforprovidersetvaluefrom)
+        * [`obj spec.forProvider.set.valueFrom.configMapKeyRef`](#obj-specforprovidersetvaluefromconfigmapkeyref)
+          * [`fn withKey(key)`](#fn-specforprovidersetvaluefromconfigmapkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specforprovidersetvaluefromconfigmapkeyrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specforprovidersetvaluefromconfigmapkeyrefwithnamespace)
+          * [`fn withOptional(optional)`](#fn-specforprovidersetvaluefromconfigmapkeyrefwithoptional)
+        * [`obj spec.forProvider.set.valueFrom.secretKeyRef`](#obj-specforprovidersetvaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specforprovidersetvaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specforprovidersetvaluefromsecretkeyrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specforprovidersetvaluefromsecretkeyrefwithnamespace)
+          * [`fn withOptional(optional)`](#fn-specforprovidersetvaluefromsecretkeyrefwithoptional)
+    * [`obj spec.forProvider.valuesFrom`](#obj-specforprovidervaluesfrom)
+      * [`obj spec.forProvider.valuesFrom.configMapKeyRef`](#obj-specforprovidervaluesfromconfigmapkeyref)
+        * [`fn withKey(key)`](#fn-specforprovidervaluesfromconfigmapkeyrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidervaluesfromconfigmapkeyrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidervaluesfromconfigmapkeyrefwithnamespace)
+        * [`fn withOptional(optional)`](#fn-specforprovidervaluesfromconfigmapkeyrefwithoptional)
+      * [`obj spec.forProvider.valuesFrom.secretKeyRef`](#obj-specforprovidervaluesfromsecretkeyref)
+        * [`fn withKey(key)`](#fn-specforprovidervaluesfromsecretkeyrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidervaluesfromsecretkeyrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidervaluesfromsecretkeyrefwithnamespace)
+        * [`fn withOptional(optional)`](#fn-specforprovidervaluesfromsecretkeyrefwithoptional)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -173,24 +207,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -411,6 +427,254 @@ withNamespace(namespace)
 ```
 
 "Namespace of the secret."
+
+## obj spec.forProvider.patchesFrom
+
+
+
+## obj spec.forProvider.patchesFrom.configMapKeyRef
+
+"DataKeySelector defines required spec to access a key of a configmap or secret"
+
+### fn spec.forProvider.patchesFrom.configMapKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.patchesFrom.configMapKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forProvider.patchesFrom.configMapKeyRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+
+
+### fn spec.forProvider.patchesFrom.configMapKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.forProvider.patchesFrom.secretKeyRef
+
+"DataKeySelector defines required spec to access a key of a configmap or secret"
+
+### fn spec.forProvider.patchesFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.patchesFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forProvider.patchesFrom.secretKeyRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+
+
+### fn spec.forProvider.patchesFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.forProvider.set
+
+
+
+### fn spec.forProvider.set.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forProvider.set.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.forProvider.set.valueFrom
+
+"ValueFromSource represents source of a value"
+
+## obj spec.forProvider.set.valueFrom.configMapKeyRef
+
+"DataKeySelector defines required spec to access a key of a configmap or secret"
+
+### fn spec.forProvider.set.valueFrom.configMapKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.set.valueFrom.configMapKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forProvider.set.valueFrom.configMapKeyRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+
+
+### fn spec.forProvider.set.valueFrom.configMapKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.forProvider.set.valueFrom.secretKeyRef
+
+"DataKeySelector defines required spec to access a key of a configmap or secret"
+
+### fn spec.forProvider.set.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.set.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forProvider.set.valueFrom.secretKeyRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+
+
+### fn spec.forProvider.set.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.forProvider.valuesFrom
+
+
+
+## obj spec.forProvider.valuesFrom.configMapKeyRef
+
+"DataKeySelector defines required spec to access a key of a configmap or secret"
+
+### fn spec.forProvider.valuesFrom.configMapKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.valuesFrom.configMapKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forProvider.valuesFrom.configMapKeyRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+
+
+### fn spec.forProvider.valuesFrom.configMapKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.forProvider.valuesFrom.secretKeyRef
+
+"DataKeySelector defines required spec to access a key of a configmap or secret"
+
+### fn spec.forProvider.valuesFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.valuesFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forProvider.valuesFrom.secretKeyRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+
+
+### fn spec.forProvider.valuesFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-azure/0.18/network/v1alpha3/subnet/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -39,6 +37,11 @@ permalink: /provider-azure/0.18/network/v1alpha3/subnet/
     * [`fn withAddressPrefix(addressPrefix)`](#fn-specpropertieswithaddressprefix)
     * [`fn withServiceEndpoints(serviceEndpoints)`](#fn-specpropertieswithserviceendpoints)
     * [`fn withServiceEndpointsMixin(serviceEndpoints)`](#fn-specpropertieswithserviceendpointsmixin)
+    * [`obj spec.properties.serviceEndpoints`](#obj-specpropertiesserviceendpoints)
+      * [`fn withLocations(locations)`](#fn-specpropertiesserviceendpointswithlocations)
+      * [`fn withLocationsMixin(locations)`](#fn-specpropertiesserviceendpointswithlocationsmixin)
+      * [`fn withProvisioningState(provisioningState)`](#fn-specpropertiesserviceendpointswithprovisioningstate)
+      * [`fn withService(service)`](#fn-specpropertiesserviceendpointswithservice)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -175,24 +178,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -308,6 +293,44 @@ withServiceEndpointsMixin(serviceEndpoints)
 "ServiceEndpoints - An array of service endpoints."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.properties.serviceEndpoints
+
+"ServiceEndpoints - An array of service endpoints."
+
+### fn spec.properties.serviceEndpoints.withLocations
+
+```ts
+withLocations(locations)
+```
+
+"Locations - A list of locations."
+
+### fn spec.properties.serviceEndpoints.withLocationsMixin
+
+```ts
+withLocationsMixin(locations)
+```
+
+"Locations - A list of locations."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.properties.serviceEndpoints.withProvisioningState
+
+```ts
+withProvisioningState(provisioningState)
+```
+
+"ProvisioningState - The provisioning state of the resource."
+
+### fn spec.properties.serviceEndpoints.withService
+
+```ts
+withService(service)
+```
+
+"Service - The type of the endpoint service."
 
 ## obj spec.providerConfigRef
 

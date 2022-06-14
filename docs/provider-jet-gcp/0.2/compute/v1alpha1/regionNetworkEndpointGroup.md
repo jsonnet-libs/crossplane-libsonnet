@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/regionNetworkEndpointGroup/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -45,6 +43,17 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/regionNetworkEndpointGroup/
     * [`fn withNetworkEndpointType(networkEndpointType)`](#fn-specforproviderwithnetworkendpointtype)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
+    * [`obj spec.forProvider.appEngine`](#obj-specforproviderappengine)
+      * [`fn withService(service)`](#fn-specforproviderappenginewithservice)
+      * [`fn withUrlMask(urlMask)`](#fn-specforproviderappenginewithurlmask)
+      * [`fn withVersion(version)`](#fn-specforproviderappenginewithversion)
+    * [`obj spec.forProvider.cloudFunction`](#obj-specforprovidercloudfunction)
+      * [`fn withFunction(Function)`](#fn-specforprovidercloudfunctionwithfunction)
+      * [`fn withUrlMask(urlMask)`](#fn-specforprovidercloudfunctionwithurlmask)
+    * [`obj spec.forProvider.cloudRun`](#obj-specforprovidercloudrun)
+      * [`fn withService(service)`](#fn-specforprovidercloudrunwithservice)
+      * [`fn withTag(tag)`](#fn-specforprovidercloudrunwithtag)
+      * [`fn withUrlMask(urlMask)`](#fn-specforprovidercloudrunwithurlmask)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -166,24 +175,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -354,6 +345,82 @@ withRegion(region)
 ```
 
 "A reference to the region where the Serverless NEGs Reside."
+
+## obj spec.forProvider.appEngine
+
+"Only valid when networkEndpointType is \"SERVERLESS\". Only one of cloud_run, app_engine or cloud_function may be set."
+
+### fn spec.forProvider.appEngine.withService
+
+```ts
+withService(service)
+```
+
+"Optional serving service. The service name must be 1-63 characters long, and comply with RFC1035. Example value: \"default\", \"my-service\"."
+
+### fn spec.forProvider.appEngine.withUrlMask
+
+```ts
+withUrlMask(urlMask)
+```
+
+"A template to parse service and version fields from a request URL. URL mask allows for routing to multiple App Engine services without having to create multiple Network Endpoint Groups and backend services. \n For example, the request URLs \"foo1-dot-appname.appspot.com/v1\" and \"foo1-dot-appname.appspot.com/v2\" can be backed by the same Serverless NEG with URL mask \"-dot-appname.appspot.com/\". The URL mask will parse them to { service = \"foo1\", version = \"v1\" } and { service = \"foo1\", version = \"v2\" } respectively."
+
+### fn spec.forProvider.appEngine.withVersion
+
+```ts
+withVersion(version)
+```
+
+"Optional serving version. The version must be 1-63 characters long, and comply with RFC1035. Example value: \"v1\", \"v2\"."
+
+## obj spec.forProvider.cloudFunction
+
+"Only valid when networkEndpointType is \"SERVERLESS\". Only one of cloud_run, app_engine or cloud_function may be set."
+
+### fn spec.forProvider.cloudFunction.withFunction
+
+```ts
+withFunction(Function)
+```
+
+"A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: \"func1\"."
+
+### fn spec.forProvider.cloudFunction.withUrlMask
+
+```ts
+withUrlMask(urlMask)
+```
+
+"A template to parse function field from a request URL. URL mask allows for routing to multiple Cloud Functions without having to create multiple Network Endpoint Groups and backend services. \n For example, request URLs \"mydomain.com/function1\" and \"mydomain.com/function2\" can be backed by the same Serverless NEG with URL mask \"/\". The URL mask will parse them to { function = \"function1\" } and { function = \"function2\" } respectively."
+
+## obj spec.forProvider.cloudRun
+
+"Only valid when networkEndpointType is \"SERVERLESS\". Only one of cloud_run, app_engine or cloud_function may be set."
+
+### fn spec.forProvider.cloudRun.withService
+
+```ts
+withService(service)
+```
+
+"Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: \"run-service\"."
+
+### fn spec.forProvider.cloudRun.withTag
+
+```ts
+withTag(tag)
+```
+
+"Cloud Run tag represents the \"named-revision\" to provide additional fine-grained traffic routing information. The tag must be 1-63 characters long, and comply with RFC1035. Example value: \"revision-0010\"."
+
+### fn spec.forProvider.cloudRun.withUrlMask
+
+```ts
+withUrlMask(urlMask)
+```
+
+"A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. \n For example, request URLs \"foo1.domain.com/bar1\" and \"foo1.domain.com/bar2\" an be backed by the same Serverless Network Endpoint Group (NEG) with URL mask \".domain.com/\". The URL mask will parse them to { service=\"bar1\", tag=\"foo1\" } and { service=\"bar2\", tag=\"foo2\" } respectively."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/healthcare/v1alpha1/hl7V2Store/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -44,6 +42,16 @@ permalink: /provider-jet-gcp/0.2/healthcare/v1alpha1/hl7V2Store/
     * [`fn withNotificationConfigsMixin(notificationConfigs)`](#fn-specforproviderwithnotificationconfigsmixin)
     * [`fn withParserConfig(parserConfig)`](#fn-specforproviderwithparserconfig)
     * [`fn withParserConfigMixin(parserConfig)`](#fn-specforproviderwithparserconfigmixin)
+    * [`obj spec.forProvider.notificationConfig`](#obj-specforprovidernotificationconfig)
+      * [`fn withPubsubTopic(pubsubTopic)`](#fn-specforprovidernotificationconfigwithpubsubtopic)
+    * [`obj spec.forProvider.notificationConfigs`](#obj-specforprovidernotificationconfigs)
+      * [`fn withFilter(filter)`](#fn-specforprovidernotificationconfigswithfilter)
+      * [`fn withPubsubTopic(pubsubTopic)`](#fn-specforprovidernotificationconfigswithpubsubtopic)
+    * [`obj spec.forProvider.parserConfig`](#obj-specforproviderparserconfig)
+      * [`fn withAllowNullHeader(allowNullHeader)`](#fn-specforproviderparserconfigwithallownullheader)
+      * [`fn withSchema(schema)`](#fn-specforproviderparserconfigwithschema)
+      * [`fn withSegmentTerminator(segmentTerminator)`](#fn-specforproviderparserconfigwithsegmentterminator)
+      * [`fn withVersion(version)`](#fn-specforproviderparserconfigwithversion)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -165,24 +173,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -347,6 +337,74 @@ withParserConfigMixin(parserConfig)
 "A nested object resource"
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.notificationConfig
+
+"A nested object resource"
+
+### fn spec.forProvider.notificationConfig.withPubsubTopic
+
+```ts
+withPubsubTopic(pubsubTopic)
+```
+
+"The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail."
+
+## obj spec.forProvider.notificationConfigs
+
+"A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest & Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client."
+
+### fn spec.forProvider.notificationConfigs.withFilter
+
+```ts
+withFilter(filter)
+```
+
+"Restricts notifications sent for messages matching a filter. If this is empty, all messages are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings \n Fields/functions available for filtering are: \n * messageType, from the MSH-9.1 field. For example, NOT messageType = \"ADT\". * send_date or sendDate, the YYYY-MM-DD date the message was sent in the dataset's timeZone, from the MSH-7 segment. For example, send_date < \"2017-01-02\". * sendTime, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, sendTime < \"2017-01-02T00:00:00-05:00\". * sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = \"ABC\". * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId(\"123456\", \"MRN\"). * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels.\"priority\"=\"high\". The operator :* can be used to assert the existence of a label. For example, labels.\"priority\":*."
+
+### fn spec.forProvider.notificationConfigs.withPubsubTopic
+
+```ts
+withPubsubTopic(pubsubTopic)
+```
+
+"The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail. \n If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Stackdriver"
+
+## obj spec.forProvider.parserConfig
+
+"A nested object resource"
+
+### fn spec.forProvider.parserConfig.withAllowNullHeader
+
+```ts
+withAllowNullHeader(allowNullHeader)
+```
+
+"Determines whether messages with no header are allowed."
+
+### fn spec.forProvider.parserConfig.withSchema
+
+```ts
+withSchema(schema)
+```
+
+"JSON encoded string for schemas used to parse messages in this store if schematized parsing is desired."
+
+### fn spec.forProvider.parserConfig.withSegmentTerminator
+
+```ts
+withSegmentTerminator(segmentTerminator)
+```
+
+"Byte(s) to be used as the segment terminator. If this is unset, '\\r' will be used as segment terminator. \n A base64-encoded string."
+
+### fn spec.forProvider.parserConfig.withVersion
+
+```ts
+withVersion(version)
+```
+
+"The version of the unschematized parser to be used when a custom 'schema' is not set. Default value: \"V1\" Possible values: [\"V1\", \"V2\"]"
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/datalossprevention/v1alpha1/deidentifyTemplate/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -39,6 +37,114 @@ permalink: /provider-jet-gcp/0.2/datalossprevention/v1alpha1/deidentifyTemplate/
     * [`fn withDescription(description)`](#fn-specforproviderwithdescription)
     * [`fn withDisplayName(displayName)`](#fn-specforproviderwithdisplayname)
     * [`fn withParent(parent)`](#fn-specforproviderwithparent)
+    * [`obj spec.forProvider.deidentifyConfig`](#obj-specforproviderdeidentifyconfig)
+      * [`fn withInfoTypeTransformations(infoTypeTransformations)`](#fn-specforproviderdeidentifyconfigwithinfotypetransformations)
+      * [`fn withInfoTypeTransformationsMixin(infoTypeTransformations)`](#fn-specforproviderdeidentifyconfigwithinfotypetransformationsmixin)
+      * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations`](#obj-specforproviderdeidentifyconfiginfotypetransformations)
+        * [`fn withTransformations(transformations)`](#fn-specforproviderdeidentifyconfiginfotypetransformationswithtransformations)
+        * [`fn withTransformationsMixin(transformations)`](#fn-specforproviderdeidentifyconfiginfotypetransformationswithtransformationsmixin)
+        * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformations)
+          * [`fn withInfoTypes(infoTypes)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationswithinfotypes)
+          * [`fn withInfoTypesMixin(infoTypes)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationswithinfotypesmixin)
+          * [`fn withPrimitiveTransformation(primitiveTransformation)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationswithprimitivetransformation)
+          * [`fn withPrimitiveTransformationMixin(primitiveTransformation)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationswithprimitivetransformationmixin)
+          * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.infoTypes`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsinfotypes)
+            * [`fn withName(name)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsinfotypeswithname)
+          * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformation)
+            * [`fn withCharacterMaskConfig(characterMaskConfig)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationwithcharactermaskconfig)
+            * [`fn withCharacterMaskConfigMixin(characterMaskConfig)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationwithcharactermaskconfigmixin)
+            * [`fn withCryptoDeterministicConfig(cryptoDeterministicConfig)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationwithcryptodeterministicconfig)
+            * [`fn withCryptoDeterministicConfigMixin(cryptoDeterministicConfig)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationwithcryptodeterministicconfigmixin)
+            * [`fn withCryptoReplaceFfxFpeConfig(cryptoReplaceFfxFpeConfig)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationwithcryptoreplaceffxfpeconfig)
+            * [`fn withCryptoReplaceFfxFpeConfigMixin(cryptoReplaceFfxFpeConfig)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationwithcryptoreplaceffxfpeconfigmixin)
+            * [`fn withReplaceConfig(replaceConfig)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationwithreplaceconfig)
+            * [`fn withReplaceConfigMixin(replaceConfig)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationwithreplaceconfigmixin)
+            * [`fn withReplaceWithInfoTypeConfig(replaceWithInfoTypeConfig)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationwithreplacewithinfotypeconfig)
+            * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.characterMaskConfig`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcharactermaskconfig)
+              * [`fn withCharactersToIgnore(charactersToIgnore)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcharactermaskconfigwithcharacterstoignore)
+              * [`fn withCharactersToIgnoreMixin(charactersToIgnore)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcharactermaskconfigwithcharacterstoignoremixin)
+              * [`fn withMaskingCharacter(maskingCharacter)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcharactermaskconfigwithmaskingcharacter)
+              * [`fn withNumberToMask(numberToMask)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcharactermaskconfigwithnumbertomask)
+              * [`fn withReverseOrder(reverseOrder)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcharactermaskconfigwithreverseorder)
+              * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.characterMaskConfig.charactersToIgnore`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcharactermaskconfigcharacterstoignore)
+                * [`fn withCharacterToSkip(characterToSkip)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcharactermaskconfigcharacterstoignorewithcharactertoskip)
+                * [`fn withCommonCharactersToIgnore(commonCharactersToIgnore)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcharactermaskconfigcharacterstoignorewithcommoncharacterstoignore)
+            * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfig)
+              * [`fn withContext(context)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigwithcontext)
+              * [`fn withContextMixin(context)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigwithcontextmixin)
+              * [`fn withCryptoKey(cryptoKey)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigwithcryptokey)
+              * [`fn withCryptoKeyMixin(cryptoKey)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigwithcryptokeymixin)
+              * [`fn withSurrogateInfoType(surrogateInfoType)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigwithsurrogateinfotype)
+              * [`fn withSurrogateInfoTypeMixin(surrogateInfoType)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigwithsurrogateinfotypemixin)
+              * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.context`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcontext)
+                * [`fn withName(name)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcontextwithname)
+              * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokey)
+                * [`fn withKmsWrapped(kmsWrapped)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeywithkmswrapped)
+                * [`fn withKmsWrappedMixin(kmsWrapped)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeywithkmswrappedmixin)
+                * [`fn withTransient(transient)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeywithtransient)
+                * [`fn withTransientMixin(transient)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeywithtransientmixin)
+                * [`fn withUnwrapped(unwrapped)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeywithunwrapped)
+                * [`fn withUnwrappedMixin(unwrapped)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeywithunwrappedmixin)
+                * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.kmsWrapped`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeykmswrapped)
+                  * [`fn withCryptoKeyName(cryptoKeyName)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeykmswrappedwithcryptokeyname)
+                  * [`fn withWrappedKey(wrappedKey)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeykmswrappedwithwrappedkey)
+                * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.transient`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeytransient)
+                  * [`fn withName(name)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeytransientwithname)
+                * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.unwrapped`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeyunwrapped)
+                  * [`fn withKey(key)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigcryptokeyunwrappedwithkey)
+              * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.surrogateInfoType`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigsurrogateinfotype)
+                * [`fn withName(name)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptodeterministicconfigsurrogateinfotypewithname)
+            * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfig)
+              * [`fn withCommonAlphabet(commonAlphabet)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigwithcommonalphabet)
+              * [`fn withContext(context)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigwithcontext)
+              * [`fn withContextMixin(context)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigwithcontextmixin)
+              * [`fn withCryptoKey(cryptoKey)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigwithcryptokey)
+              * [`fn withCryptoKeyMixin(cryptoKey)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigwithcryptokeymixin)
+              * [`fn withCustomAlphabet(customAlphabet)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigwithcustomalphabet)
+              * [`fn withRadix(radix)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigwithradix)
+              * [`fn withSurrogateInfoType(surrogateInfoType)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigwithsurrogateinfotype)
+              * [`fn withSurrogateInfoTypeMixin(surrogateInfoType)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigwithsurrogateinfotypemixin)
+              * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.context`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcontext)
+                * [`fn withName(name)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcontextwithname)
+              * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokey)
+                * [`fn withKmsWrapped(kmsWrapped)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeywithkmswrapped)
+                * [`fn withKmsWrappedMixin(kmsWrapped)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeywithkmswrappedmixin)
+                * [`fn withTransient(transient)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeywithtransient)
+                * [`fn withTransientMixin(transient)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeywithtransientmixin)
+                * [`fn withUnwrapped(unwrapped)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeywithunwrapped)
+                * [`fn withUnwrappedMixin(unwrapped)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeywithunwrappedmixin)
+                * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.kmsWrapped`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeykmswrapped)
+                  * [`fn withCryptoKeyName(cryptoKeyName)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeykmswrappedwithcryptokeyname)
+                  * [`fn withWrappedKey(wrappedKey)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeykmswrappedwithwrappedkey)
+                * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.transient`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeytransient)
+                  * [`fn withName(name)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeytransientwithname)
+                * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.unwrapped`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeyunwrapped)
+                  * [`fn withKey(key)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigcryptokeyunwrappedwithkey)
+              * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.surrogateInfoType`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigsurrogateinfotype)
+                * [`fn withName(name)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationcryptoreplaceffxfpeconfigsurrogateinfotypewithname)
+            * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfig)
+              * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvalue)
+                * [`fn withBooleanValue(booleanValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluewithbooleanvalue)
+                * [`fn withDateValue(dateValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluewithdatevalue)
+                * [`fn withDateValueMixin(dateValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluewithdatevaluemixin)
+                * [`fn withDayOfWeekValue(dayOfWeekValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluewithdayofweekvalue)
+                * [`fn withFloatValue(floatValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluewithfloatvalue)
+                * [`fn withIntegerValue(integerValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluewithintegervalue)
+                * [`fn withStringValue(stringValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluewithstringvalue)
+                * [`fn withTimeValue(timeValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluewithtimevalue)
+                * [`fn withTimeValueMixin(timeValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluewithtimevaluemixin)
+                * [`fn withTimestampValue(timestampValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluewithtimestampvalue)
+                * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.dateValue`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluedatevalue)
+                  * [`fn withDay(day)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluedatevaluewithday)
+                  * [`fn withMonth(month)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluedatevaluewithmonth)
+                  * [`fn withYear(year)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluedatevaluewithyear)
+                * [`obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.timeValue`](#obj-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluetimevalue)
+                  * [`fn withHours(hours)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluetimevaluewithhours)
+                  * [`fn withMinutes(minutes)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluetimevaluewithminutes)
+                  * [`fn withNanos(nanos)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluetimevaluewithnanos)
+                  * [`fn withSeconds(seconds)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfignewvaluetimevaluewithseconds)
+              * [`fn withNewValue(newValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfigwithnewvalue)
+              * [`fn withNewValueMixin(newValue)`](#fn-specforproviderdeidentifyconfiginfotypetransformationstransformationsprimitivetransformationreplaceconfigwithnewvaluemixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +269,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -296,6 +384,818 @@ withParent(parent)
 ```
 
 "The parent of the template in any of the following formats: \n * 'projects/{{project}}' * 'projects/{{project}}/locations/{{location}}' * 'organizations/{{organization_id}}' * 'organizations/{{organization_id}}/locations/{{location}}'"
+
+## obj spec.forProvider.deidentifyConfig
+
+"Configuration of the deidentify template"
+
+### fn spec.forProvider.deidentifyConfig.withInfoTypeTransformations
+
+```ts
+withInfoTypeTransformations(infoTypeTransformations)
+```
+
+"Specifies free-text based transformations to be applied to the dataset."
+
+### fn spec.forProvider.deidentifyConfig.withInfoTypeTransformationsMixin
+
+```ts
+withInfoTypeTransformationsMixin(infoTypeTransformations)
+```
+
+"Specifies free-text based transformations to be applied to the dataset."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations
+
+"Specifies free-text based transformations to be applied to the dataset."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.withTransformations
+
+```ts
+withTransformations(transformations)
+```
+
+"Transformation for each infoType. Cannot specify more than one for a given infoType."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.withTransformationsMixin
+
+```ts
+withTransformationsMixin(transformations)
+```
+
+"Transformation for each infoType. Cannot specify more than one for a given infoType."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations
+
+"Transformation for each infoType. Cannot specify more than one for a given infoType."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.withInfoTypes
+
+```ts
+withInfoTypes(infoTypes)
+```
+
+"InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to all findings that correspond to infoTypes that were requested in InspectConfig."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.withInfoTypesMixin
+
+```ts
+withInfoTypesMixin(infoTypes)
+```
+
+"InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to all findings that correspond to infoTypes that were requested in InspectConfig."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.withPrimitiveTransformation
+
+```ts
+withPrimitiveTransformation(primitiveTransformation)
+```
+
+"Primitive transformation to apply to the infoType."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.withPrimitiveTransformationMixin
+
+```ts
+withPrimitiveTransformationMixin(primitiveTransformation)
+```
+
+"Primitive transformation to apply to the infoType."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.infoTypes
+
+"InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to all findings that correspond to infoTypes that were requested in InspectConfig."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.infoTypes.withName
+
+```ts
+withName(name)
+```
+
+"Name of the information type."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation
+
+"Primitive transformation to apply to the infoType."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.withCharacterMaskConfig
+
+```ts
+withCharacterMaskConfig(characterMaskConfig)
+```
+
+"Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.withCharacterMaskConfigMixin
+
+```ts
+withCharacterMaskConfigMixin(characterMaskConfig)
+```
+
+"Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.withCryptoDeterministicConfig
+
+```ts
+withCryptoDeterministicConfig(cryptoDeterministicConfig)
+```
+
+"Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC [https://tools.ietf.org/html/rfc5297](https://tools.ietf.org/html/rfc5297)."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.withCryptoDeterministicConfigMixin
+
+```ts
+withCryptoDeterministicConfigMixin(cryptoDeterministicConfig)
+```
+
+"Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC [https://tools.ietf.org/html/rfc5297](https://tools.ietf.org/html/rfc5297)."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.withCryptoReplaceFfxFpeConfig
+
+```ts
+withCryptoReplaceFfxFpeConfig(cryptoReplaceFfxFpeConfig)
+```
+
+"Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the 'content.reidentify' API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See [https://cloud.google.com/dlp/docs/pseudonymization](https://cloud.google.com/dlp/docs/pseudonymization) to learn more. \n Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.withCryptoReplaceFfxFpeConfigMixin
+
+```ts
+withCryptoReplaceFfxFpeConfigMixin(cryptoReplaceFfxFpeConfig)
+```
+
+"Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the 'content.reidentify' API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See [https://cloud.google.com/dlp/docs/pseudonymization](https://cloud.google.com/dlp/docs/pseudonymization) to learn more. \n Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.withReplaceConfig
+
+```ts
+withReplaceConfig(replaceConfig)
+```
+
+"Replace each input value with a given value."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.withReplaceConfigMixin
+
+```ts
+withReplaceConfigMixin(replaceConfig)
+```
+
+"Replace each input value with a given value."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.withReplaceWithInfoTypeConfig
+
+```ts
+withReplaceWithInfoTypeConfig(replaceWithInfoTypeConfig)
+```
+
+"Replace each matching finding with the name of the info type."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.characterMaskConfig
+
+"Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.characterMaskConfig.withCharactersToIgnore
+
+```ts
+withCharactersToIgnore(charactersToIgnore)
+```
+
+"Characters to skip when doing de-identification of a value. These will be left alone and skipped."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.characterMaskConfig.withCharactersToIgnoreMixin
+
+```ts
+withCharactersToIgnoreMixin(charactersToIgnore)
+```
+
+"Characters to skip when doing de-identification of a value. These will be left alone and skipped."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.characterMaskConfig.withMaskingCharacter
+
+```ts
+withMaskingCharacter(maskingCharacter)
+```
+
+"Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for strings, and 0 for digits."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.characterMaskConfig.withNumberToMask
+
+```ts
+withNumberToMask(numberToMask)
+```
+
+"Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.characterMaskConfig.withReverseOrder
+
+```ts
+withReverseOrder(reverseOrder)
+```
+
+"Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is 'false', then the input string '1234-5678-9012-3456' is masked as '00000000000000-3456'."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.characterMaskConfig.charactersToIgnore
+
+"Characters to skip when doing de-identification of a value. These will be left alone and skipped."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.characterMaskConfig.charactersToIgnore.withCharacterToSkip
+
+```ts
+withCharacterToSkip(characterToSkip)
+```
+
+"Characters to not transform when masking."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.characterMaskConfig.charactersToIgnore.withCommonCharactersToIgnore
+
+```ts
+withCommonCharactersToIgnore(commonCharactersToIgnore)
+```
+
+"Common characters to not transform when masking. Useful to avoid removing punctuation. Possible values: [\"NUMERIC\", \"ALPHA_UPPER_CASE\", \"ALPHA_LOWER_CASE\", \"PUNCTUATION\", \"WHITESPACE\"]"
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig
+
+"Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC [https://tools.ietf.org/html/rfc5297](https://tools.ietf.org/html/rfc5297)."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.withContext
+
+```ts
+withContext(context)
+```
+
+"A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. \n If the context is not set, plaintext would be used as is for encryption. If the context is set but: \n 1.  there is no record present when transforming a given value or 2.  the field is not present when transforming a given value, \n plaintext would be used as is for encryption. \n Note that case (1) is expected when an 'InfoTypeTransformation' is applied to both structured and non-structured 'ContentItem's."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.withContextMixin
+
+```ts
+withContextMixin(context)
+```
+
+"A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. \n If the context is not set, plaintext would be used as is for encryption. If the context is set but: \n 1.  there is no record present when transforming a given value or 2.  the field is not present when transforming a given value, \n plaintext would be used as is for encryption. \n Note that case (1) is expected when an 'InfoTypeTransformation' is applied to both structured and non-structured 'ContentItem's."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.withCryptoKey
+
+```ts
+withCryptoKey(cryptoKey)
+```
+
+"The key used by the encryption function."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.withCryptoKeyMixin
+
+```ts
+withCryptoKeyMixin(cryptoKey)
+```
+
+"The key used by the encryption function."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.withSurrogateInfoType
+
+```ts
+withSurrogateInfoType(surrogateInfoType)
+```
+
+"The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} \n For example, if the name of custom info type is 'MY\\_TOKEN\\_INFO\\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\\_TOKEN\\_INFO\\_TYPE(3):abc' \n This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. \n Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. \n In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either \n *   reverse a surrogate that does not correspond to an actual identifier *   be unable to parse the surrogate and result in an error \n Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\\_TOKEN\\_TYPE."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.withSurrogateInfoTypeMixin
+
+```ts
+withSurrogateInfoTypeMixin(surrogateInfoType)
+```
+
+"The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} \n For example, if the name of custom info type is 'MY\\_TOKEN\\_INFO\\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\\_TOKEN\\_INFO\\_TYPE(3):abc' \n This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. \n Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. \n In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either \n *   reverse a surrogate that does not correspond to an actual identifier *   be unable to parse the surrogate and result in an error \n Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\\_TOKEN\\_TYPE."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.context
+
+"A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. \n If the context is not set, plaintext would be used as is for encryption. If the context is set but: \n 1.  there is no record present when transforming a given value or 2.  the field is not present when transforming a given value, \n plaintext would be used as is for encryption. \n Note that case (1) is expected when an 'InfoTypeTransformation' is applied to both structured and non-structured 'ContentItem's."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.context.withName
+
+```ts
+withName(name)
+```
+
+"Name describing the field."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey
+
+"The key used by the encryption function."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.withKmsWrapped
+
+```ts
+withKmsWrapped(kmsWrapped)
+```
+
+"Kms wrapped key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.withKmsWrappedMixin
+
+```ts
+withKmsWrappedMixin(kmsWrapped)
+```
+
+"Kms wrapped key"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.withTransient
+
+```ts
+withTransient(transient)
+```
+
+"Transient crypto key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.withTransientMixin
+
+```ts
+withTransientMixin(transient)
+```
+
+"Transient crypto key"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.withUnwrapped
+
+```ts
+withUnwrapped(unwrapped)
+```
+
+"Unwrapped crypto key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.withUnwrappedMixin
+
+```ts
+withUnwrappedMixin(unwrapped)
+```
+
+"Unwrapped crypto key"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.kmsWrapped
+
+"Kms wrapped key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.kmsWrapped.withCryptoKeyName
+
+```ts
+withCryptoKeyName(cryptoKeyName)
+```
+
+"The resource name of the KMS CryptoKey to use for unwrapping."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.kmsWrapped.withWrappedKey
+
+```ts
+withWrappedKey(wrappedKey)
+```
+
+"The wrapped data crypto key. \n A base64-encoded string."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.transient
+
+"Transient crypto key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.transient.withName
+
+```ts
+withName(name)
+```
+
+"Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate 'TransientCryptoKey' protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated)."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.unwrapped
+
+"Unwrapped crypto key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.cryptoKey.unwrapped.withKey
+
+```ts
+withKey(key)
+```
+
+"A 128/192/256 bit key. \n A base64-encoded string."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.surrogateInfoType
+
+"The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} \n For example, if the name of custom info type is 'MY\\_TOKEN\\_INFO\\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\\_TOKEN\\_INFO\\_TYPE(3):abc' \n This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. \n Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. \n In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either \n *   reverse a surrogate that does not correspond to an actual identifier *   be unable to parse the surrogate and result in an error \n Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\\_TOKEN\\_TYPE."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoDeterministicConfig.surrogateInfoType.withName
+
+```ts
+withName(name)
+```
+
+"Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern '[A-Za-z0-9$-_]{1,64}'."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig
+
+"Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the 'content.reidentify' API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See [https://cloud.google.com/dlp/docs/pseudonymization](https://cloud.google.com/dlp/docs/pseudonymization) to learn more. \n Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.withCommonAlphabet
+
+```ts
+withCommonAlphabet(commonAlphabet)
+```
+
+"Common alphabets. Possible values: [\"FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED\", \"NUMERIC\", \"HEXADECIMAL\", \"UPPER_CASE_ALPHA_NUMERIC\", \"ALPHA_NUMERIC\"]"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.withContext
+
+```ts
+withContext(context)
+```
+
+"The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. \n If the context is set but: \n 1.  there is no record present when transforming a given value or 2.  the field is not present when transforming a given value, \n a default tweak will be used. \n Note that case (1) is expected when an 'InfoTypeTransformation' is applied to both structured and non-structured 'ContentItem's. Currently, the referenced field may be of value type integer or string. \n The tweak is constructed as a sequence of bytes in big endian byte order such that: \n *   a 64 bit integer is encoded followed by a single byte of value 1 *   a string is encoded in UTF-8 format followed by a single byte of value 2"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.withContextMixin
+
+```ts
+withContextMixin(context)
+```
+
+"The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. \n If the context is set but: \n 1.  there is no record present when transforming a given value or 2.  the field is not present when transforming a given value, \n a default tweak will be used. \n Note that case (1) is expected when an 'InfoTypeTransformation' is applied to both structured and non-structured 'ContentItem's. Currently, the referenced field may be of value type integer or string. \n The tweak is constructed as a sequence of bytes in big endian byte order such that: \n *   a 64 bit integer is encoded followed by a single byte of value 1 *   a string is encoded in UTF-8 format followed by a single byte of value 2"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.withCryptoKey
+
+```ts
+withCryptoKey(cryptoKey)
+```
+
+"The key used by the encryption algorithm."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.withCryptoKeyMixin
+
+```ts
+withCryptoKeyMixin(cryptoKey)
+```
+
+"The key used by the encryption algorithm."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.withCustomAlphabet
+
+```ts
+withCustomAlphabet(customAlphabet)
+```
+
+"This is supported by mapping these to the alphanumeric characters that the FFX mode natively supports. This happens before/after encryption/decryption. Each character listed must appear only once. Number of characters must be in the range \\[2, 95\\]. This must be encoded as ASCII. The order of characters does not matter. The full list of allowed characters is: \n ''0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~'!@#$%^&*()_-+={[}]|:;\"'<,>.?/''"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.withRadix
+
+```ts
+withRadix(radix)
+```
+
+"The native way to select the alphabet. Must be in the range \\[2, 95\\]."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.withSurrogateInfoType
+
+```ts
+withSurrogateInfoType(surrogateInfoType)
+```
+
+"The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\\_type\\_name(surrogate\\_character\\_count):surrogate \n For example, if the name of custom infoType is 'MY\\_TOKEN\\_INFO\\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\\_TOKEN\\_INFO\\_TYPE(3):abc' \n This annotation identifies the surrogate when inspecting content using the custom infoType ['SurrogateType'](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. \n In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\\_TOKEN\\_TYPE"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.withSurrogateInfoTypeMixin
+
+```ts
+withSurrogateInfoTypeMixin(surrogateInfoType)
+```
+
+"The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\\_type\\_name(surrogate\\_character\\_count):surrogate \n For example, if the name of custom infoType is 'MY\\_TOKEN\\_INFO\\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\\_TOKEN\\_INFO\\_TYPE(3):abc' \n This annotation identifies the surrogate when inspecting content using the custom infoType ['SurrogateType'](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. \n In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\\_TOKEN\\_TYPE"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.context
+
+"The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. \n If the context is set but: \n 1.  there is no record present when transforming a given value or 2.  the field is not present when transforming a given value, \n a default tweak will be used. \n Note that case (1) is expected when an 'InfoTypeTransformation' is applied to both structured and non-structured 'ContentItem's. Currently, the referenced field may be of value type integer or string. \n The tweak is constructed as a sequence of bytes in big endian byte order such that: \n *   a 64 bit integer is encoded followed by a single byte of value 1 *   a string is encoded in UTF-8 format followed by a single byte of value 2"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.context.withName
+
+```ts
+withName(name)
+```
+
+"Name describing the field."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey
+
+"The key used by the encryption algorithm."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.withKmsWrapped
+
+```ts
+withKmsWrapped(kmsWrapped)
+```
+
+"Kms wrapped key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.withKmsWrappedMixin
+
+```ts
+withKmsWrappedMixin(kmsWrapped)
+```
+
+"Kms wrapped key"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.withTransient
+
+```ts
+withTransient(transient)
+```
+
+"Transient crypto key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.withTransientMixin
+
+```ts
+withTransientMixin(transient)
+```
+
+"Transient crypto key"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.withUnwrapped
+
+```ts
+withUnwrapped(unwrapped)
+```
+
+"Unwrapped crypto key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.withUnwrappedMixin
+
+```ts
+withUnwrappedMixin(unwrapped)
+```
+
+"Unwrapped crypto key"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.kmsWrapped
+
+"Kms wrapped key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.kmsWrapped.withCryptoKeyName
+
+```ts
+withCryptoKeyName(cryptoKeyName)
+```
+
+"The resource name of the KMS CryptoKey to use for unwrapping."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.kmsWrapped.withWrappedKey
+
+```ts
+withWrappedKey(wrappedKey)
+```
+
+"The wrapped data crypto key. \n A base64-encoded string."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.transient
+
+"Transient crypto key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.transient.withName
+
+```ts
+withName(name)
+```
+
+"Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate 'TransientCryptoKey' protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated)."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.unwrapped
+
+"Unwrapped crypto key"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.cryptoKey.unwrapped.withKey
+
+```ts
+withKey(key)
+```
+
+"A 128/192/256 bit key. \n A base64-encoded string."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.surrogateInfoType
+
+"The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\\_type\\_name(surrogate\\_character\\_count):surrogate \n For example, if the name of custom infoType is 'MY\\_TOKEN\\_INFO\\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\\_TOKEN\\_INFO\\_TYPE(3):abc' \n This annotation identifies the surrogate when inspecting content using the custom infoType ['SurrogateType'](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. \n In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\\_TOKEN\\_TYPE"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.cryptoReplaceFfxFpeConfig.surrogateInfoType.withName
+
+```ts
+withName(name)
+```
+
+"Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern '[A-Za-z0-9$-_]{1,64}'."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig
+
+"Replace each input value with a given value."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue
+
+"Replace each input value with a given value."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.withBooleanValue
+
+```ts
+withBooleanValue(booleanValue)
+```
+
+"A boolean value."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.withDateValue
+
+```ts
+withDateValue(dateValue)
+```
+
+"Represents a whole or partial calendar date."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.withDateValueMixin
+
+```ts
+withDateValueMixin(dateValue)
+```
+
+"Represents a whole or partial calendar date."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.withDayOfWeekValue
+
+```ts
+withDayOfWeekValue(dayOfWeekValue)
+```
+
+"Represents a day of the week. Possible values: [\"MONDAY\", \"TUESDAY\", \"WEDNESDAY\", \"THURSDAY\", \"FRIDAY\", \"SATURDAY\", \"SUNDAY\"]"
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.withFloatValue
+
+```ts
+withFloatValue(floatValue)
+```
+
+"A float value."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.withIntegerValue
+
+```ts
+withIntegerValue(integerValue)
+```
+
+"An integer value."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.withStringValue
+
+```ts
+withStringValue(stringValue)
+```
+
+"A string value."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.withTimeValue
+
+```ts
+withTimeValue(timeValue)
+```
+
+"Represents a time of day."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.withTimeValueMixin
+
+```ts
+withTimeValueMixin(timeValue)
+```
+
+"Represents a time of day."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.withTimestampValue
+
+```ts
+withTimestampValue(timestampValue)
+```
+
+"A timestamp in RFC3339 UTC \"Zulu\" format, with nanosecond resolution and up to nine fractional digits. Examples: \"2014-10-02T15:01:23Z\" and \"2014-10-02T15:01:23.045123456Z\"."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.dateValue
+
+"Represents a whole or partial calendar date."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.dateValue.withDay
+
+```ts
+withDay(day)
+```
+
+"Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a year by itself or a year and month where the day is not significant."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.dateValue.withMonth
+
+```ts
+withMonth(month)
+```
+
+"Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.dateValue.withYear
+
+```ts
+withYear(year)
+```
+
+"Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year."
+
+## obj spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.timeValue
+
+"Represents a time of day."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.timeValue.withHours
+
+```ts
+withHours(hours)
+```
+
+"Hours of day in 24 hour format. Should be from 0 to 23."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.timeValue.withMinutes
+
+```ts
+withMinutes(minutes)
+```
+
+"Minutes of hour of day. Must be from 0 to 59."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.timeValue.withNanos
+
+```ts
+withNanos(nanos)
+```
+
+"Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.newValue.timeValue.withSeconds
+
+```ts
+withSeconds(seconds)
+```
+
+"Seconds of minutes of the time. Must normally be from 0 to 59."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.withNewValue
+
+```ts
+withNewValue(newValue)
+```
+
+"Replace each input value with a given value."
+
+### fn spec.forProvider.deidentifyConfig.infoTypeTransformations.transformations.primitiveTransformation.replaceConfig.withNewValueMixin
+
+```ts
+withNewValueMixin(newValue)
+```
+
+"Replace each input value with a given value."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 

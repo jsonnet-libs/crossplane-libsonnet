@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/dataproc/v1alpha1/autoscalingPolicy/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,24 @@ permalink: /provider-jet-gcp/0.2/dataproc/v1alpha1/autoscalingPolicy/
     * [`fn withSecondaryWorkerConfigMixin(secondaryWorkerConfig)`](#fn-specforproviderwithsecondaryworkerconfigmixin)
     * [`fn withWorkerConfig(workerConfig)`](#fn-specforproviderwithworkerconfig)
     * [`fn withWorkerConfigMixin(workerConfig)`](#fn-specforproviderwithworkerconfigmixin)
+    * [`obj spec.forProvider.basicAlgorithm`](#obj-specforproviderbasicalgorithm)
+      * [`fn withCooldownPeriod(cooldownPeriod)`](#fn-specforproviderbasicalgorithmwithcooldownperiod)
+      * [`fn withYarnConfig(yarnConfig)`](#fn-specforproviderbasicalgorithmwithyarnconfig)
+      * [`fn withYarnConfigMixin(yarnConfig)`](#fn-specforproviderbasicalgorithmwithyarnconfigmixin)
+      * [`obj spec.forProvider.basicAlgorithm.yarnConfig`](#obj-specforproviderbasicalgorithmyarnconfig)
+        * [`fn withGracefulDecommissionTimeout(gracefulDecommissionTimeout)`](#fn-specforproviderbasicalgorithmyarnconfigwithgracefuldecommissiontimeout)
+        * [`fn withScaleDownFactor(scaleDownFactor)`](#fn-specforproviderbasicalgorithmyarnconfigwithscaledownfactor)
+        * [`fn withScaleDownMinWorkerFraction(scaleDownMinWorkerFraction)`](#fn-specforproviderbasicalgorithmyarnconfigwithscaledownminworkerfraction)
+        * [`fn withScaleUpFactor(scaleUpFactor)`](#fn-specforproviderbasicalgorithmyarnconfigwithscaleupfactor)
+        * [`fn withScaleUpMinWorkerFraction(scaleUpMinWorkerFraction)`](#fn-specforproviderbasicalgorithmyarnconfigwithscaleupminworkerfraction)
+    * [`obj spec.forProvider.secondaryWorkerConfig`](#obj-specforprovidersecondaryworkerconfig)
+      * [`fn withMaxInstances(maxInstances)`](#fn-specforprovidersecondaryworkerconfigwithmaxinstances)
+      * [`fn withMinInstances(minInstances)`](#fn-specforprovidersecondaryworkerconfigwithmininstances)
+      * [`fn withWeight(weight)`](#fn-specforprovidersecondaryworkerconfigwithweight)
+    * [`obj spec.forProvider.workerConfig`](#obj-specforproviderworkerconfig)
+      * [`fn withMaxInstances(maxInstances)`](#fn-specforproviderworkerconfigwithmaxinstances)
+      * [`fn withMinInstances(minInstances)`](#fn-specforproviderworkerconfigwithmininstances)
+      * [`fn withWeight(weight)`](#fn-specforproviderworkerconfigwithweight)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -164,24 +180,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -336,6 +334,136 @@ withWorkerConfigMixin(workerConfig)
 "Describes how the autoscaler will operate for primary workers."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.basicAlgorithm
+
+"Basic algorithm for autoscaling."
+
+### fn spec.forProvider.basicAlgorithm.withCooldownPeriod
+
+```ts
+withCooldownPeriod(cooldownPeriod)
+```
+
+"Duration between scaling events. A scaling period starts after the update operation from the previous event has completed. \n Bounds: [2m, 1d]. Default: 2m."
+
+### fn spec.forProvider.basicAlgorithm.withYarnConfig
+
+```ts
+withYarnConfig(yarnConfig)
+```
+
+"YARN autoscaling configuration."
+
+### fn spec.forProvider.basicAlgorithm.withYarnConfigMixin
+
+```ts
+withYarnConfigMixin(yarnConfig)
+```
+
+"YARN autoscaling configuration."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.basicAlgorithm.yarnConfig
+
+"YARN autoscaling configuration."
+
+### fn spec.forProvider.basicAlgorithm.yarnConfig.withGracefulDecommissionTimeout
+
+```ts
+withGracefulDecommissionTimeout(gracefulDecommissionTimeout)
+```
+
+"Timeout for YARN graceful decommissioning of Node Managers. Specifies the duration to wait for jobs to complete before forcefully removing workers (and potentially interrupting jobs). Only applicable to downscaling operations. \n Bounds: [0s, 1d]."
+
+### fn spec.forProvider.basicAlgorithm.yarnConfig.withScaleDownFactor
+
+```ts
+withScaleDownFactor(scaleDownFactor)
+```
+
+"Fraction of average pending memory in the last cooldown period for which to remove workers. A scale-down factor of 1 will result in scaling down so that there is no available memory remaining after the update (more aggressive scaling). A scale-down factor of 0 disables removing workers, which can be beneficial for autoscaling a single job. \n Bounds: [0.0, 1.0]."
+
+### fn spec.forProvider.basicAlgorithm.yarnConfig.withScaleDownMinWorkerFraction
+
+```ts
+withScaleDownMinWorkerFraction(scaleDownMinWorkerFraction)
+```
+
+"Minimum scale-down threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0 means the autoscaler will scale down on any recommended change. \n Bounds: [0.0, 1.0]. Default: 0.0."
+
+### fn spec.forProvider.basicAlgorithm.yarnConfig.withScaleUpFactor
+
+```ts
+withScaleUpFactor(scaleUpFactor)
+```
+
+"Fraction of average pending memory in the last cooldown period for which to add workers. A scale-up factor of 1.0 will result in scaling up so that there is no pending memory remaining after the update (more aggressive scaling). A scale-up factor closer to 0 will result in a smaller magnitude of scaling up (less aggressive scaling). \n Bounds: [0.0, 1.0]."
+
+### fn spec.forProvider.basicAlgorithm.yarnConfig.withScaleUpMinWorkerFraction
+
+```ts
+withScaleUpMinWorkerFraction(scaleUpMinWorkerFraction)
+```
+
+"Minimum scale-up threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of 0 means the autoscaler will scale up on any recommended change. \n Bounds: [0.0, 1.0]. Default: 0.0."
+
+## obj spec.forProvider.secondaryWorkerConfig
+
+"Describes how the autoscaler will operate for secondary workers."
+
+### fn spec.forProvider.secondaryWorkerConfig.withMaxInstances
+
+```ts
+withMaxInstances(maxInstances)
+```
+
+"Maximum number of instances for this group. Note that by default, clusters will not use secondary workers. Required for secondary workers if the minimum secondary instances is set. Bounds: [minInstances, ). Defaults to 0."
+
+### fn spec.forProvider.secondaryWorkerConfig.withMinInstances
+
+```ts
+withMinInstances(minInstances)
+```
+
+"Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0."
+
+### fn spec.forProvider.secondaryWorkerConfig.withWeight
+
+```ts
+withWeight(weight)
+```
+
+"Weight for the instance group, which is used to determine the fraction of total workers in the cluster from this instance group. For example, if primary workers have weight 2, and secondary workers have weight 1, the cluster will have approximately 2 primary workers for each secondary worker. \n The cluster may not reach the specified balance if constrained by min/max bounds or other autoscaling settings. For example, if maxInstances for secondary workers is 0, then only primary workers will be added. The cluster can also be out of balance when created. \n If weight is not set on any instance group, the cluster will default to equal weight for all groups: the cluster will attempt to maintain an equal number of workers in each group within the configured size bounds for each group. If weight is set for one group only, the cluster will default to zero weight on the unset group. For example if weight is set only on primary workers, the cluster will use primary workers only and no secondary workers."
+
+## obj spec.forProvider.workerConfig
+
+"Describes how the autoscaler will operate for primary workers."
+
+### fn spec.forProvider.workerConfig.withMaxInstances
+
+```ts
+withMaxInstances(maxInstances)
+```
+
+"Maximum number of instances for this group."
+
+### fn spec.forProvider.workerConfig.withMinInstances
+
+```ts
+withMinInstances(minInstances)
+```
+
+"Minimum number of instances for this group. Bounds: [2, maxInstances]. Defaults to 2."
+
+### fn spec.forProvider.workerConfig.withWeight
+
+```ts
+withWeight(weight)
+```
+
+"Weight for the instance group, which is used to determine the fraction of total workers in the cluster from this instance group. For example, if primary workers have weight 2, and secondary workers have weight 1, the cluster will have approximately 2 primary workers for each secondary worker. \n The cluster may not reach the specified balance if constrained by min/max bounds or other autoscaling settings. For example, if maxInstances for secondary workers is 0, then only primary workers will be added. The cluster can also be out of balance when created. \n If weight is not set on any instance group, the cluster will default to equal weight for all groups: the cluster will attempt to maintain an equal number of workers in each group within the configured size bounds for each group. If weight is set for one group only, the cluster will default to zero weight on the unset group. For example if weight is set only on primary workers, the cluster will use primary workers only and no secondary workers."
 
 ## obj spec.providerConfigRef
 

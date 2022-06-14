@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/cloudtasks/v1alpha1/queue/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -45,6 +43,21 @@ permalink: /provider-jet-gcp/0.2/cloudtasks/v1alpha1/queue/
     * [`fn withRetryConfigMixin(retryConfig)`](#fn-specforproviderwithretryconfigmixin)
     * [`fn withStackdriverLoggingConfig(stackdriverLoggingConfig)`](#fn-specforproviderwithstackdriverloggingconfig)
     * [`fn withStackdriverLoggingConfigMixin(stackdriverLoggingConfig)`](#fn-specforproviderwithstackdriverloggingconfigmixin)
+    * [`obj spec.forProvider.appEngineRoutingOverride`](#obj-specforproviderappengineroutingoverride)
+      * [`fn withInstance(instance)`](#fn-specforproviderappengineroutingoverridewithinstance)
+      * [`fn withService(service)`](#fn-specforproviderappengineroutingoverridewithservice)
+      * [`fn withVersion(version)`](#fn-specforproviderappengineroutingoverridewithversion)
+    * [`obj spec.forProvider.rateLimits`](#obj-specforproviderratelimits)
+      * [`fn withMaxConcurrentDispatches(maxConcurrentDispatches)`](#fn-specforproviderratelimitswithmaxconcurrentdispatches)
+      * [`fn withMaxDispatchesPerSecond(maxDispatchesPerSecond)`](#fn-specforproviderratelimitswithmaxdispatchespersecond)
+    * [`obj spec.forProvider.retryConfig`](#obj-specforproviderretryconfig)
+      * [`fn withMaxAttempts(maxAttempts)`](#fn-specforproviderretryconfigwithmaxattempts)
+      * [`fn withMaxBackoff(maxBackoff)`](#fn-specforproviderretryconfigwithmaxbackoff)
+      * [`fn withMaxDoublings(maxDoublings)`](#fn-specforproviderretryconfigwithmaxdoublings)
+      * [`fn withMaxRetryDuration(maxRetryDuration)`](#fn-specforproviderretryconfigwithmaxretryduration)
+      * [`fn withMinBackoff(minBackoff)`](#fn-specforproviderretryconfigwithminbackoff)
+    * [`obj spec.forProvider.stackdriverLoggingConfig`](#obj-specforproviderstackdriverloggingconfig)
+      * [`fn withSamplingRatio(samplingRatio)`](#fn-specforproviderstackdriverloggingconfigwithsamplingratio)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -166,24 +179,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -356,6 +351,110 @@ withStackdriverLoggingConfigMixin(stackdriverLoggingConfig)
 "Configuration options for writing logs to Stackdriver Logging."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.appEngineRoutingOverride
+
+"Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue"
+
+### fn spec.forProvider.appEngineRoutingOverride.withInstance
+
+```ts
+withInstance(instance)
+```
+
+"App instance. \n By default, the task is sent to an instance which is available when the task is attempted."
+
+### fn spec.forProvider.appEngineRoutingOverride.withService
+
+```ts
+withService(service)
+```
+
+"App service. \n By default, the task is sent to the service which is the default service when the task is attempted."
+
+### fn spec.forProvider.appEngineRoutingOverride.withVersion
+
+```ts
+withVersion(version)
+```
+
+"App version. \n By default, the task is sent to the version which is the default version when the task is attempted."
+
+## obj spec.forProvider.rateLimits
+
+"Rate limits for task dispatches. \n The queue's actual dispatch rate is the result of: \n * Number of tasks in the queue * User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic spikes."
+
+### fn spec.forProvider.rateLimits.withMaxConcurrentDispatches
+
+```ts
+withMaxConcurrentDispatches(maxConcurrentDispatches)
+```
+
+"The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases."
+
+### fn spec.forProvider.rateLimits.withMaxDispatchesPerSecond
+
+```ts
+withMaxDispatchesPerSecond(maxDispatchesPerSecond)
+```
+
+"The maximum rate at which tasks are dispatched from this queue. \n If unspecified when the queue is created, Cloud Tasks will pick the default."
+
+## obj spec.forProvider.retryConfig
+
+"Settings that determine the retry behavior."
+
+### fn spec.forProvider.retryConfig.withMaxAttempts
+
+```ts
+withMaxAttempts(maxAttempts)
+```
+
+"Number of attempts per task. \n Cloud Tasks will attempt the task maxAttempts times (that is, if the first attempt fails, then there will be maxAttempts - 1 retries). Must be >= -1. \n If unspecified when the queue is created, Cloud Tasks will pick the default. \n -1 indicates unlimited attempts."
+
+### fn spec.forProvider.retryConfig.withMaxBackoff
+
+```ts
+withMaxBackoff(maxBackoff)
+```
+
+"A task will be scheduled for retry between minBackoff and maxBackoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried."
+
+### fn spec.forProvider.retryConfig.withMaxDoublings
+
+```ts
+withMaxDoublings(maxDoublings)
+```
+
+"The time between retries will double maxDoublings times. \n A task's retry interval starts at minBackoff, then doubles maxDoublings times, then increases linearly, and finally retries retries at intervals of maxBackoff up to maxAttempts times."
+
+### fn spec.forProvider.retryConfig.withMaxRetryDuration
+
+```ts
+withMaxRetryDuration(maxRetryDuration)
+```
+
+"If positive, maxRetryDuration specifies the time limit for retrying a failed task, measured from when the task was first attempted. Once maxRetryDuration time has passed and the task has been attempted maxAttempts times, no further attempts will be made and the task will be deleted. \n If zero, then the task age is unlimited."
+
+### fn spec.forProvider.retryConfig.withMinBackoff
+
+```ts
+withMinBackoff(minBackoff)
+```
+
+"A task will be scheduled for retry between minBackoff and maxBackoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried."
+
+## obj spec.forProvider.stackdriverLoggingConfig
+
+"Configuration options for writing logs to Stackdriver Logging."
+
+### fn spec.forProvider.stackdriverLoggingConfig.withSamplingRatio
+
+```ts
+withSamplingRatio(samplingRatio)
+```
+
+"Specifies the fraction of operations to write to Stackdriver Logging. This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the default and means that no operations are logged."
 
 ## obj spec.providerConfigRef
 

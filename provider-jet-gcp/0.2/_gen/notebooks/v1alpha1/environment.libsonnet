@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,22 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#containerImage':: d.obj(help='"Use a container image to start the notebook instance."'),
+      containerImage: {
+        '#withRepository':: d.fn(help='"The path to the container image repository. For example: gcr.io/{project_id}/{imageName}"', args=[d.arg(name='repository', type=d.T.string)]),
+        withRepository(repository): { repository: repository },
+        '#withTag':: d.fn(help='"The tag of the container image. If not specified, this defaults to the latest tag."', args=[d.arg(name='tag', type=d.T.string)]),
+        withTag(tag): { tag: tag },
+      },
+      '#vmImage':: d.obj(help='"Use a Compute Engine VM image to start the notebook instance."'),
+      vmImage: {
+        '#withImageFamily':: d.fn(help='"Use this VM image family to find the image; the newest image in this family will be used."', args=[d.arg(name='imageFamily', type=d.T.string)]),
+        withImageFamily(imageFamily): { imageFamily: imageFamily },
+        '#withImageName':: d.fn(help='"Use VM image name to find the image."', args=[d.arg(name='imageName', type=d.T.string)]),
+        withImageName(imageName): { imageName: imageName },
+        '#withProject':: d.fn(help='"The name of the Google Cloud project that this VM image belongs to. Format: projects/{project_id}"', args=[d.arg(name='project', type=d.T.string)]),
+        withProject(project): { project: project },
+      },
       '#withContainerImage':: d.fn(help='"Use a container image to start the notebook instance."', args=[d.arg(name='containerImage', type=d.T.array)]),
       withContainerImage(containerImage): { spec+: { forProvider+: { containerImage: if std.isArray(v=containerImage) then containerImage else [containerImage] } } },
       '#withContainerImageMixin':: d.fn(help='"Use a container image to start the notebook instance."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='containerImage', type=d.T.array)]),

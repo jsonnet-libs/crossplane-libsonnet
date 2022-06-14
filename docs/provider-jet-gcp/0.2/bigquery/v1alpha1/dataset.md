@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/bigquery/v1alpha1/dataset/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -48,6 +46,20 @@ permalink: /provider-jet-gcp/0.2/bigquery/v1alpha1/dataset/
     * [`fn withLabelsMixin(labels)`](#fn-specforproviderwithlabelsmixin)
     * [`fn withLocation(location)`](#fn-specforproviderwithlocation)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.access`](#obj-specforprovideraccess)
+      * [`fn withDomain(domain)`](#fn-specforprovideraccesswithdomain)
+      * [`fn withGroupByEmail(groupByEmail)`](#fn-specforprovideraccesswithgroupbyemail)
+      * [`fn withRole(role)`](#fn-specforprovideraccesswithrole)
+      * [`fn withSpecialGroup(specialGroup)`](#fn-specforprovideraccesswithspecialgroup)
+      * [`fn withUserByEmail(userByEmail)`](#fn-specforprovideraccesswithuserbyemail)
+      * [`fn withView(view)`](#fn-specforprovideraccesswithview)
+      * [`fn withViewMixin(view)`](#fn-specforprovideraccesswithviewmixin)
+      * [`obj spec.forProvider.access.view`](#obj-specforprovideraccessview)
+        * [`fn withDatasetId(datasetId)`](#fn-specforprovideraccessviewwithdatasetid)
+        * [`fn withProjectId(projectId)`](#fn-specforprovideraccessviewwithprojectid)
+        * [`fn withTableId(tableId)`](#fn-specforprovideraccessviewwithtableid)
+    * [`obj spec.forProvider.defaultEncryptionConfiguration`](#obj-specforproviderdefaultencryptionconfiguration)
+      * [`fn withKmsKeyName(kmsKeyName)`](#fn-specforproviderdefaultencryptionconfigurationwithkmskeyname)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -169,24 +181,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -381,6 +375,108 @@ withProject(project)
 ```
 
 
+
+## obj spec.forProvider.access
+
+"An array of objects that define dataset access for one or more entities."
+
+### fn spec.forProvider.access.withDomain
+
+```ts
+withDomain(domain)
+```
+
+"A domain to grant access to. Any users signed in with the domain specified will be granted the specified access"
+
+### fn spec.forProvider.access.withGroupByEmail
+
+```ts
+withGroupByEmail(groupByEmail)
+```
+
+"An email address of a Google Group to grant access to."
+
+### fn spec.forProvider.access.withRole
+
+```ts
+withRole(role)
+```
+
+"Describes the rights granted to the user specified by the other member of the access object. Basic, predefined, and custom roles are supported. Predefined roles that have equivalent basic roles are swapped by the API to their basic counterparts. See [official docs](https://cloud.google.com/bigquery/docs/access-control)."
+
+### fn spec.forProvider.access.withSpecialGroup
+
+```ts
+withSpecialGroup(specialGroup)
+```
+
+"A special group to grant access to. Possible values include: \n * 'projectOwners': Owners of the enclosing project. \n * 'projectReaders': Readers of the enclosing project. \n * 'projectWriters': Writers of the enclosing project. \n * 'allAuthenticatedUsers': All authenticated BigQuery users."
+
+### fn spec.forProvider.access.withUserByEmail
+
+```ts
+withUserByEmail(userByEmail)
+```
+
+"An email address of a user to grant access to. For example: fred@example.com"
+
+### fn spec.forProvider.access.withView
+
+```ts
+withView(view)
+```
+
+"A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation."
+
+### fn spec.forProvider.access.withViewMixin
+
+```ts
+withViewMixin(view)
+```
+
+"A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.access.view
+
+"A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation."
+
+### fn spec.forProvider.access.view.withDatasetId
+
+```ts
+withDatasetId(datasetId)
+```
+
+"The ID of the dataset containing this table."
+
+### fn spec.forProvider.access.view.withProjectId
+
+```ts
+withProjectId(projectId)
+```
+
+"The ID of the project containing this table."
+
+### fn spec.forProvider.access.view.withTableId
+
+```ts
+withTableId(tableId)
+```
+
+"The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters."
+
+## obj spec.forProvider.defaultEncryptionConfiguration
+
+"The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the key."
+
+### fn spec.forProvider.defaultEncryptionConfiguration.withKmsKeyName
+
+```ts
+withKmsKeyName(kmsKeyName)
+```
+
+"Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key."
 
 ## obj spec.providerConfigRef
 

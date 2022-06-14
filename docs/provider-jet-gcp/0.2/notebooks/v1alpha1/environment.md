@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/notebooks/v1alpha1/environment/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -44,6 +42,13 @@ permalink: /provider-jet-gcp/0.2/notebooks/v1alpha1/environment/
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withVmImage(vmImage)`](#fn-specforproviderwithvmimage)
     * [`fn withVmImageMixin(vmImage)`](#fn-specforproviderwithvmimagemixin)
+    * [`obj spec.forProvider.containerImage`](#obj-specforprovidercontainerimage)
+      * [`fn withRepository(repository)`](#fn-specforprovidercontainerimagewithrepository)
+      * [`fn withTag(tag)`](#fn-specforprovidercontainerimagewithtag)
+    * [`obj spec.forProvider.vmImage`](#obj-specforprovidervmimage)
+      * [`fn withImageFamily(imageFamily)`](#fn-specforprovidervmimagewithimagefamily)
+      * [`fn withImageName(imageName)`](#fn-specforprovidervmimagewithimagename)
+      * [`fn withProject(project)`](#fn-specforprovidervmimagewithproject)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -165,24 +170,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -343,6 +330,54 @@ withVmImageMixin(vmImage)
 "Use a Compute Engine VM image to start the notebook instance."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.containerImage
+
+"Use a container image to start the notebook instance."
+
+### fn spec.forProvider.containerImage.withRepository
+
+```ts
+withRepository(repository)
+```
+
+"The path to the container image repository. For example: gcr.io/{project_id}/{imageName}"
+
+### fn spec.forProvider.containerImage.withTag
+
+```ts
+withTag(tag)
+```
+
+"The tag of the container image. If not specified, this defaults to the latest tag."
+
+## obj spec.forProvider.vmImage
+
+"Use a Compute Engine VM image to start the notebook instance."
+
+### fn spec.forProvider.vmImage.withImageFamily
+
+```ts
+withImageFamily(imageFamily)
+```
+
+"Use this VM image family to find the image; the newest image in this family will be used."
+
+### fn spec.forProvider.vmImage.withImageName
+
+```ts
+withImageName(imageName)
+```
+
+"Use VM image name to find the image."
+
+### fn spec.forProvider.vmImage.withProject
+
+```ts
+withProject(project)
+```
+
+"The name of the Google Cloud project that this VM image belongs to. Format: projects/{project_id}"
 
 ## obj spec.providerConfigRef
 

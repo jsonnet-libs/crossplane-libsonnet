@@ -22,8 +22,6 @@ permalink: /provider-gcp/0.20/container/v1beta1/nodePool/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -73,6 +71,9 @@ permalink: /provider-gcp/0.20/container/v1beta1/nodePool/
       * [`fn withTagsMixin(tags)`](#fn-specforproviderconfigwithtagsmixin)
       * [`fn withTaints(taints)`](#fn-specforproviderconfigwithtaints)
       * [`fn withTaintsMixin(taints)`](#fn-specforproviderconfigwithtaintsmixin)
+      * [`obj spec.forProvider.config.accelerators`](#obj-specforproviderconfigaccelerators)
+        * [`fn withAcceleratorCount(acceleratorCount)`](#fn-specforproviderconfigacceleratorswithacceleratorcount)
+        * [`fn withAcceleratorType(acceleratorType)`](#fn-specforproviderconfigacceleratorswithacceleratortype)
       * [`obj spec.forProvider.config.kubeletConfig`](#obj-specforproviderconfigkubeletconfig)
         * [`fn withCpuCfsQuota(cpuCfsQuota)`](#fn-specforproviderconfigkubeletconfigwithcpucfsquota)
         * [`fn withCpuCfsQuotaPeriod(cpuCfsQuotaPeriod)`](#fn-specforproviderconfigkubeletconfigwithcpucfsquotaperiod)
@@ -90,6 +91,10 @@ permalink: /provider-gcp/0.20/container/v1beta1/nodePool/
       * [`obj spec.forProvider.config.shieldedInstanceConfig`](#obj-specforproviderconfigshieldedinstanceconfig)
         * [`fn withEnableIntegrityMonitoring(enableIntegrityMonitoring)`](#fn-specforproviderconfigshieldedinstanceconfigwithenableintegritymonitoring)
         * [`fn withEnableSecureBoot(enableSecureBoot)`](#fn-specforproviderconfigshieldedinstanceconfigwithenablesecureboot)
+      * [`obj spec.forProvider.config.taints`](#obj-specforproviderconfigtaints)
+        * [`fn withEffect(effect)`](#fn-specforproviderconfigtaintswitheffect)
+        * [`fn withKey(key)`](#fn-specforproviderconfigtaintswithkey)
+        * [`fn withValue(value)`](#fn-specforproviderconfigtaintswithvalue)
       * [`obj spec.forProvider.config.workloadMetadataConfig`](#obj-specforproviderconfigworkloadmetadataconfig)
         * [`fn withMode(mode)`](#fn-specforproviderconfigworkloadmetadataconfigwithmode)
     * [`obj spec.forProvider.management`](#obj-specforprovidermanagement)
@@ -221,24 +226,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -628,6 +615,26 @@ withTaintsMixin(taints)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.config.accelerators
+
+"Accelerators: A list of hardware accelerators to be attached to each node. See https://cloud.google.com/compute/docs/gpus for more information about support for GPUs."
+
+### fn spec.forProvider.config.accelerators.withAcceleratorCount
+
+```ts
+withAcceleratorCount(acceleratorCount)
+```
+
+"AcceleratorCount: The number of the accelerator cards exposed to an instance."
+
+### fn spec.forProvider.config.accelerators.withAcceleratorType
+
+```ts
+withAcceleratorType(acceleratorType)
+```
+
+"AcceleratorType: The accelerator type resource name. List of supported accelerators [here](/compute/docs/gpus/#Introduction)"
+
 ## obj spec.forProvider.config.kubeletConfig
 
 "KubeletConfig: Node kubelet configs."
@@ -747,6 +754,34 @@ withEnableSecureBoot(enableSecureBoot)
 ```
 
 "EnableSecureBoot: Defines whether the instance has Secure Boot enabled. \n Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails."
+
+## obj spec.forProvider.config.taints
+
+"Taints: List of kubernetes taints to be applied to each node. \n For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toler ation/"
+
+### fn spec.forProvider.config.taints.withEffect
+
+```ts
+withEffect(effect)
+```
+
+"Effect: Effect for taint. \n Possible values:   \"EFFECT_UNSPECIFIED\" - Not set   \"NO_SCHEDULE\" - NoSchedule   \"PREFER_NO_SCHEDULE\" - PreferNoSchedule   \"NO_EXECUTE\" - NoExecute"
+
+### fn spec.forProvider.config.taints.withKey
+
+```ts
+withKey(key)
+```
+
+"Key: Key for taint."
+
+### fn spec.forProvider.config.taints.withValue
+
+```ts
+withValue(value)
+```
+
+"Value: Value for taint."
 
 ## obj spec.forProvider.config.workloadMetadataConfig
 

@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,27 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
+      '#featureSettings':: d.obj(help='"A block of optional settings to configure specific App Engine features:"'),
+      featureSettings: {
+        '#withSplitHealthChecks':: d.fn(help='', args=[d.arg(name='splitHealthChecks', type=d.T.boolean)]),
+        withSplitHealthChecks(splitHealthChecks): { splitHealthChecks: splitHealthChecks },
+      },
+      '#iap':: d.obj(help='"Settings for enabling Cloud Identity Aware Proxy"'),
+      iap: {
+        '#oauth2ClientSecretSecretRef':: d.obj(help='"OAuth2 client secret to use for the authentication flow. The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field."'),
+        oauth2ClientSecretSecretRef: {
+          '#withKey':: d.fn(help='"The key to select."', args=[d.arg(name='key', type=d.T.string)]),
+          withKey(key): { oauth2ClientSecretSecretRef+: { key: key } },
+          '#withName':: d.fn(help='"Name of the secret."', args=[d.arg(name='name', type=d.T.string)]),
+          withName(name): { oauth2ClientSecretSecretRef+: { name: name } },
+          '#withNamespace':: d.fn(help='"Namespace of the secret."', args=[d.arg(name='namespace', type=d.T.string)]),
+          withNamespace(namespace): { oauth2ClientSecretSecretRef+: { namespace: namespace } },
+        },
+        '#withEnabled':: d.fn(help='"Adapted for use with the app"', args=[d.arg(name='enabled', type=d.T.boolean)]),
+        withEnabled(enabled): { enabled: enabled },
+        '#withOauth2ClientId':: d.fn(help='"OAuth2 client ID to use for the authentication flow."', args=[d.arg(name='oauth2ClientId', type=d.T.string)]),
+        withOauth2ClientId(oauth2ClientId): { oauth2ClientId: oauth2ClientId },
+      },
       '#withAuthDomain':: d.fn(help="\"The domain to authenticate users with when using App Engine's User API.\"", args=[d.arg(name='authDomain', type=d.T.string)]),
       withAuthDomain(authDomain): { spec+: { forProvider+: { authDomain: authDomain } } },
       '#withDatabaseType':: d.fn(help='', args=[d.arg(name='databaseType', type=d.T.string)]),

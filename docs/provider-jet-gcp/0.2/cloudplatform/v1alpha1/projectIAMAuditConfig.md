@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/cloudplatform/v1alpha1/projectIAMAuditConfig/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -38,6 +36,10 @@ permalink: /provider-jet-gcp/0.2/cloudplatform/v1alpha1/projectIAMAuditConfig/
     * [`fn withAuditLogConfigMixin(auditLogConfig)`](#fn-specforproviderwithauditlogconfigmixin)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withService(service)`](#fn-specforproviderwithservice)
+    * [`obj spec.forProvider.auditLogConfig`](#obj-specforproviderauditlogconfig)
+      * [`fn withExemptedMembers(exemptedMembers)`](#fn-specforproviderauditlogconfigwithexemptedmembers)
+      * [`fn withExemptedMembersMixin(exemptedMembers)`](#fn-specforproviderauditlogconfigwithexemptedmembersmixin)
+      * [`fn withLogType(logType)`](#fn-specforproviderauditlogconfigwithlogtype)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -162,24 +164,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -287,6 +271,36 @@ withService(service)
 ```
 
 "Service which will be enabled for audit logging. The special value allServices covers all services."
+
+## obj spec.forProvider.auditLogConfig
+
+"The configuration for logging of each type of permission. This can be specified multiple times."
+
+### fn spec.forProvider.auditLogConfig.withExemptedMembers
+
+```ts
+withExemptedMembers(exemptedMembers)
+```
+
+"Identities that do not cause logging for this type of permission. Each entry can have one of the following values:user:{emailid}: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com. serviceAccount:{emailid}: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com. group:{emailid}: An email address that represents a Google group. For example, admins@example.com. domain:{domain}: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com."
+
+### fn spec.forProvider.auditLogConfig.withExemptedMembersMixin
+
+```ts
+withExemptedMembersMixin(exemptedMembers)
+```
+
+"Identities that do not cause logging for this type of permission. Each entry can have one of the following values:user:{emailid}: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com. serviceAccount:{emailid}: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com. group:{emailid}: An email address that represents a Google group. For example, admins@example.com. domain:{domain}: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.auditLogConfig.withLogType
+
+```ts
+withLogType(logType)
+```
+
+"Permission type for which logging is to be configured. Must be one of DATA_READ, DATA_WRITE, or ADMIN_READ."
 
 ## obj spec.providerConfigRef
 

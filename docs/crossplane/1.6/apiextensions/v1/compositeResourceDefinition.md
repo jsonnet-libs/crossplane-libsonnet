@@ -24,8 +24,6 @@ permalink: /crossplane/1.6/apiextensions/v1/compositeResourceDefinition/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -61,6 +59,22 @@ permalink: /crossplane/1.6/apiextensions/v1/compositeResourceDefinition/
     * [`fn withShortNames(shortNames)`](#fn-specnameswithshortnames)
     * [`fn withShortNamesMixin(shortNames)`](#fn-specnameswithshortnamesmixin)
     * [`fn withSingular(singular)`](#fn-specnameswithsingular)
+  * [`obj spec.versions`](#obj-specversions)
+    * [`fn withAdditionalPrinterColumns(additionalPrinterColumns)`](#fn-specversionswithadditionalprintercolumns)
+    * [`fn withAdditionalPrinterColumnsMixin(additionalPrinterColumns)`](#fn-specversionswithadditionalprintercolumnsmixin)
+    * [`fn withName(name)`](#fn-specversionswithname)
+    * [`fn withReferenceable(referenceable)`](#fn-specversionswithreferenceable)
+    * [`fn withServed(served)`](#fn-specversionswithserved)
+    * [`obj spec.versions.additionalPrinterColumns`](#obj-specversionsadditionalprintercolumns)
+      * [`fn withDescription(description)`](#fn-specversionsadditionalprintercolumnswithdescription)
+      * [`fn withFormat(format)`](#fn-specversionsadditionalprintercolumnswithformat)
+      * [`fn withJsonPath(jsonPath)`](#fn-specversionsadditionalprintercolumnswithjsonpath)
+      * [`fn withName(name)`](#fn-specversionsadditionalprintercolumnswithname)
+      * [`fn withPriority(priority)`](#fn-specversionsadditionalprintercolumnswithpriority)
+      * [`fn withType(type)`](#fn-specversionsadditionalprintercolumnswithtype)
+    * [`obj spec.versions.schema`](#obj-specversionsschema)
+      * [`fn withOpenAPIV3Schema(openAPIV3Schema)`](#fn-specversionsschemawithopenapiv3schema)
+      * [`fn withOpenAPIV3SchemaMixin(openAPIV3Schema)`](#fn-specversionsschemawithopenapiv3schemamixin)
 
 ## Fields
 
@@ -220,24 +234,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -514,3 +510,123 @@ withSingular(singular)
 ```
 
 "singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`."
+
+## obj spec.versions
+
+"Versions is the list of all API versions of the defined composite resource. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is \"kube-like\", it will sort above non \"kube-like\" version strings, which are ordered lexicographically. \"Kube-like\" versions start with a \"v\", then are followed by a number (the major version), then optionally the string \"alpha\" or \"beta\" and another number (the minor version). These are sorted first by GA > beta > alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10. Note that all versions must have identical schemas; Crossplane does not currently support conversion between different version schemas."
+
+### fn spec.versions.withAdditionalPrinterColumns
+
+```ts
+withAdditionalPrinterColumns(additionalPrinterColumns)
+```
+
+"AdditionalPrinterColumns specifies additional columns returned in Table output. If no columns are specified, a single column displaying the age of the custom resource is used. See the following link for details: https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables"
+
+### fn spec.versions.withAdditionalPrinterColumnsMixin
+
+```ts
+withAdditionalPrinterColumnsMixin(additionalPrinterColumns)
+```
+
+"AdditionalPrinterColumns specifies additional columns returned in Table output. If no columns are specified, a single column displaying the age of the custom resource is used. See the following link for details: https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.versions.withName
+
+```ts
+withName(name)
+```
+
+"Name of this version, e.g. “v1”, “v2beta1”, etc. Composite resources are served under this version at `/apis/<group>/<version>/...` if `served` is true."
+
+### fn spec.versions.withReferenceable
+
+```ts
+withReferenceable(referenceable)
+```
+
+"Referenceable specifies that this version may be referenced by a Composition in order to configure which resources an XR may be composed of. Exactly one version must be marked as referenceable; all Compositions must target only the referenceable version. The referenceable version must be served."
+
+### fn spec.versions.withServed
+
+```ts
+withServed(served)
+```
+
+"Served specifies that this version should be served via REST APIs."
+
+## obj spec.versions.additionalPrinterColumns
+
+"AdditionalPrinterColumns specifies additional columns returned in Table output. If no columns are specified, a single column displaying the age of the custom resource is used. See the following link for details: https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables"
+
+### fn spec.versions.additionalPrinterColumns.withDescription
+
+```ts
+withDescription(description)
+```
+
+"description is a human readable description of this column."
+
+### fn spec.versions.additionalPrinterColumns.withFormat
+
+```ts
+withFormat(format)
+```
+
+"format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details."
+
+### fn spec.versions.additionalPrinterColumns.withJsonPath
+
+```ts
+withJsonPath(jsonPath)
+```
+
+"jsonPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column."
+
+### fn spec.versions.additionalPrinterColumns.withName
+
+```ts
+withName(name)
+```
+
+"name is a human readable name for the column."
+
+### fn spec.versions.additionalPrinterColumns.withPriority
+
+```ts
+withPriority(priority)
+```
+
+"priority is an integer defining the relative importance of this column compared to others. Lower numbers are considered higher priority. Columns that may be omitted in limited space scenarios should be given a priority greater than 0."
+
+### fn spec.versions.additionalPrinterColumns.withType
+
+```ts
+withType(type)
+```
+
+"type is an OpenAPI type definition for this column. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details."
+
+## obj spec.versions.schema
+
+"Schema describes the schema used for validation, pruning, and defaulting of this version of the defined composite resource. Fields required by all composite resources will be injected into this schema automatically, and will override equivalently named fields in this schema. Omitting this schema results in a schema that contains only the fields required by all composite resources."
+
+### fn spec.versions.schema.withOpenAPIV3Schema
+
+```ts
+withOpenAPIV3Schema(openAPIV3Schema)
+```
+
+"OpenAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning."
+
+### fn spec.versions.schema.withOpenAPIV3SchemaMixin
+
+```ts
+withOpenAPIV3SchemaMixin(openAPIV3Schema)
+```
+
+"OpenAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning."
+
+**Note:** This function appends passed data to existing values

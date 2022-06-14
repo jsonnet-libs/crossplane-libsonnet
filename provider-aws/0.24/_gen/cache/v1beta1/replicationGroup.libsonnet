@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,11 @@
   spec: {
     '#forProvider':: d.obj(help='"ReplicationGroupParameters define the desired state of an AWS ElastiCache Replication Group. Most fields map directly to an AWS ReplicationGroup: https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateReplicationGroup.html#API_CreateReplicationGroup_RequestParameters"'),
     forProvider: {
+      '#cacheSecurityGroupNameRefs':: d.obj(help='"CacheSecurityGroupNameRefs are references to SecurityGroups used to set the CacheSecurityGroupNames."'),
+      cacheSecurityGroupNameRefs: {
+        '#withName':: d.fn(help='"Name of the referenced object."', args=[d.arg(name='name', type=d.T.string)]),
+        withName(name): { name: name },
+      },
       '#cacheSecurityGroupNameSelector':: d.obj(help='"CacheSecurityGroupNameSelector selects references to SecurityGroups."'),
       cacheSecurityGroupNameSelector: {
         '#withMatchControllerRef':: d.fn(help='"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."', args=[d.arg(name='matchControllerRef', type=d.T.boolean)]),
@@ -85,6 +86,24 @@
         '#withMatchLabelsMixin':: d.fn(help='"MatchLabels ensures an object with matching labels is selected."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
         withMatchLabelsMixin(matchLabels): { spec+: { forProvider+: { cacheSubnetGroupNameSelector+: { matchLabels+: matchLabels } } } },
       },
+      '#nodeGroupConfiguration':: d.obj(help="\"NodeGroupConfigurationSpec specifies a list of node group (shard) configuration options. \\n If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group, you can use this parameter to individually configure each node group (shard), or you can omit this parameter. However, when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file, you must configure each node group (shard) using this parameter because you must specify the slots for each node group.\""),
+      nodeGroupConfiguration: {
+        '#withPrimaryAvailabilityZone':: d.fn(help='"PrimaryAvailabilityZone specifies the Availability Zone where the primary node of this node group (shard) is launched."', args=[d.arg(name='primaryAvailabilityZone', type=d.T.string)]),
+        withPrimaryAvailabilityZone(primaryAvailabilityZone): { primaryAvailabilityZone: primaryAvailabilityZone },
+        '#withReplicaAvailabilityZones':: d.fn(help='"ReplicaAvailabilityZones specifies a list of Availability Zones to be used for the read replicas. The number of Availability Zones in this list must match the value of ReplicaCount or ReplicasPerNodeGroup if not specified."', args=[d.arg(name='replicaAvailabilityZones', type=d.T.array)]),
+        withReplicaAvailabilityZones(replicaAvailabilityZones): { replicaAvailabilityZones: if std.isArray(v=replicaAvailabilityZones) then replicaAvailabilityZones else [replicaAvailabilityZones] },
+        '#withReplicaAvailabilityZonesMixin':: d.fn(help='"ReplicaAvailabilityZones specifies a list of Availability Zones to be used for the read replicas. The number of Availability Zones in this list must match the value of ReplicaCount or ReplicasPerNodeGroup if not specified."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='replicaAvailabilityZones', type=d.T.array)]),
+        withReplicaAvailabilityZonesMixin(replicaAvailabilityZones): { replicaAvailabilityZones+: if std.isArray(v=replicaAvailabilityZones) then replicaAvailabilityZones else [replicaAvailabilityZones] },
+        '#withReplicaCount':: d.fn(help='"ReplicaCount specifies the number of read replica nodes in this node group (shard)."', args=[d.arg(name='replicaCount', type=d.T.integer)]),
+        withReplicaCount(replicaCount): { replicaCount: replicaCount },
+        '#withSlots':: d.fn(help='"Slots specifies the keyspace for a particular node group. Keyspaces range from 0 to 16,383. The string is in the format startkey-endkey. \\n Example: \\"0-3999\\', args=[d.arg(name='slots', type=d.T.string)]),
+        withSlots(slots): { slots: slots },
+      },
+      '#securityGroupIdRefs':: d.obj(help='"SecurityGroupIDRefs are references to SecurityGroups used to set the SecurityGroupIDs."'),
+      securityGroupIdRefs: {
+        '#withName':: d.fn(help='"Name of the referenced object."', args=[d.arg(name='name', type=d.T.string)]),
+        withName(name): { name: name },
+      },
       '#securityGroupIdSelector':: d.obj(help='"SecurityGroupIDSelector selects references to SecurityGroups used to set the SecurityGroupIDs."'),
       securityGroupIdSelector: {
         '#withMatchControllerRef':: d.fn(help='"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."', args=[d.arg(name='matchControllerRef', type=d.T.boolean)]),
@@ -93,6 +112,13 @@
         withMatchLabels(matchLabels): { spec+: { forProvider+: { securityGroupIdSelector+: { matchLabels: matchLabels } } } },
         '#withMatchLabelsMixin':: d.fn(help='"MatchLabels ensures an object with matching labels is selected."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
         withMatchLabelsMixin(matchLabels): { spec+: { forProvider+: { securityGroupIdSelector+: { matchLabels+: matchLabels } } } },
+      },
+      '#tags':: d.obj(help='"A list of cost allocation tags to be added to this resource. A tag is a key-value pair."'),
+      tags: {
+        '#withKey':: d.fn(help='"Key for the tag."', args=[d.arg(name='key', type=d.T.string)]),
+        withKey(key): { key: key },
+        '#withValue':: d.fn(help='"Value of the tag."', args=[d.arg(name='value', type=d.T.string)]),
+        withValue(value): { value: value },
       },
       '#withApplyModificationsImmediately':: d.fn(help='"If true, this parameter causes the modifications in this request and any pending modifications to be applied, asynchronously and as soon as possible, regardless of the PreferredMaintenanceWindow setting for the replication group. \\n If false, changes to the nodes in the replication group are applied on the next maintenance reboot, or the next failure reboot, whichever occurs first."', args=[d.arg(name='applyModificationsImmediately', type=d.T.boolean)]),
       withApplyModificationsImmediately(applyModificationsImmediately): { spec+: { forProvider+: { applyModificationsImmediately: applyModificationsImmediately } } },

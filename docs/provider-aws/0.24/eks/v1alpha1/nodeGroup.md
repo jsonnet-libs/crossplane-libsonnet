@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/eks/v1alpha1/nodeGroup/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -88,6 +86,8 @@ permalink: /provider-aws/0.24/eks/v1alpha1/nodeGroup/
       * [`fn withSourceSecurityGroupRefsMixin(sourceSecurityGroupRefs)`](#fn-specforproviderremoteaccesswithsourcesecuritygrouprefsmixin)
       * [`fn withSourceSecurityGroups(sourceSecurityGroups)`](#fn-specforproviderremoteaccesswithsourcesecuritygroups)
       * [`fn withSourceSecurityGroupsMixin(sourceSecurityGroups)`](#fn-specforproviderremoteaccesswithsourcesecuritygroupsmixin)
+      * [`obj spec.forProvider.remoteAccess.sourceSecurityGroupRefs`](#obj-specforproviderremoteaccesssourcesecuritygrouprefs)
+        * [`fn withName(name)`](#fn-specforproviderremoteaccesssourcesecuritygrouprefswithname)
       * [`obj spec.forProvider.remoteAccess.sourceSecurityGroupSelector`](#obj-specforproviderremoteaccesssourcesecuritygroupselector)
         * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderremoteaccesssourcesecuritygroupselectorwithmatchcontrollerref)
         * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderremoteaccesssourcesecuritygroupselectorwithmatchlabels)
@@ -96,10 +96,16 @@ permalink: /provider-aws/0.24/eks/v1alpha1/nodeGroup/
       * [`fn withDesiredSize(desiredSize)`](#fn-specforproviderscalingconfigwithdesiredsize)
       * [`fn withMaxSize(maxSize)`](#fn-specforproviderscalingconfigwithmaxsize)
       * [`fn withMinSize(minSize)`](#fn-specforproviderscalingconfigwithminsize)
+    * [`obj spec.forProvider.subnetRefs`](#obj-specforprovidersubnetrefs)
+      * [`fn withName(name)`](#fn-specforprovidersubnetrefswithname)
     * [`obj spec.forProvider.subnetSelector`](#obj-specforprovidersubnetselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidersubnetselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidersubnetselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidersubnetselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.taints`](#obj-specforprovidertaints)
+      * [`fn withEffect(effect)`](#fn-specforprovidertaintswitheffect)
+      * [`fn withKey(key)`](#fn-specforprovidertaintswithkey)
+      * [`fn withValue(value)`](#fn-specforprovidertaintswithvalue)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -221,24 +227,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -732,6 +720,18 @@ withSourceSecurityGroupsMixin(sourceSecurityGroups)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.remoteAccess.sourceSecurityGroupRefs
+
+"SourceSecurityGroupRefs are references to SecurityGroups used to set the SourceSecurityGroups."
+
+### fn spec.forProvider.remoteAccess.sourceSecurityGroupRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
 ## obj spec.forProvider.remoteAccess.sourceSecurityGroupSelector
 
 "SourceSecurityGroupSelector selects references to SecurityGroups used to set the SourceSecurityGroups."
@@ -790,6 +790,18 @@ withMinSize(minSize)
 
 "The minimum number of worker nodes that the managed node group can scale in to. This number must be greater than zero."
 
+## obj spec.forProvider.subnetRefs
+
+"SubnetRefs are references to Subnets used to set the Subnets."
+
+### fn spec.forProvider.subnetRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
 ## obj spec.forProvider.subnetSelector
 
 "SubnetSelector selects references to Subnets used to set the Subnets."
@@ -819,6 +831,34 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.taints
+
+"The Kubernetes taints to be applied to the nodes in the node group."
+
+### fn spec.forProvider.taints.withEffect
+
+```ts
+withEffect(effect)
+```
+
+"The effect of the taint."
+
+### fn spec.forProvider.taints.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the taint."
+
+### fn spec.forProvider.taints.withValue
+
+```ts
+withValue(value)
+```
+
+"The value of the taint."
 
 ## obj spec.providerConfigRef
 

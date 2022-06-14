@@ -27,10 +27,6 @@
     withLabels(labels): { metadata+: { labels: labels } },
     '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
     withLabelsMixin(labels): { metadata+: { labels+: labels } },
-    '#withManagedFields':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFields(managedFields): { metadata+: { managedFields: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
-    '#withManagedFieldsMixin':: d.fn(help="\"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \\\"ci-cd\\\". The set of fields is always in the version that the workflow used when modifying the object.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='managedFields', type=d.T.array)]),
-    withManagedFieldsMixin(managedFields): { metadata+: { managedFields+: if std.isArray(v=managedFields) then managedFields else [managedFields] } },
     '#withName':: d.fn(help='"Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { metadata+: { name: name } },
     '#withNamespace':: d.fn(help='"Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \\"default\\" namespace, but \\"default\\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\\n\\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"', args=[d.arg(name='namespace', type=d.T.string)]),
@@ -57,6 +53,11 @@
   spec: {
     '#forProvider':: d.obj(help='"LoadBalancerParameters defines the desired state of LoadBalancer"'),
     forProvider: {
+      '#securityGroupRefs':: d.obj(help='"Reference to Security Groups for SecurityGroups field"'),
+      securityGroupRefs: {
+        '#withName':: d.fn(help='"Name of the referenced object."', args=[d.arg(name='name', type=d.T.string)]),
+        withName(name): { name: name },
+      },
       '#securityGroupSelector':: d.obj(help='"Selector for references to SecurityGroups"'),
       securityGroupSelector: {
         '#withMatchControllerRef':: d.fn(help='"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."', args=[d.arg(name='matchControllerRef', type=d.T.boolean)]),
@@ -66,6 +67,22 @@
         '#withMatchLabelsMixin':: d.fn(help='"MatchLabels ensures an object with matching labels is selected."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
         withMatchLabelsMixin(matchLabels): { spec+: { forProvider+: { securityGroupSelector+: { matchLabels+: matchLabels } } } },
       },
+      '#subnetMappings':: d.obj(help='"The IDs of the public subnets. You can specify only one subnet per Availability Zone. You must specify either subnets or subnet mappings. \\n [Application Load Balancers] You must specify subnets from at least two Availability Zones. You cannot specify Elastic IP addresses for your subnets. \\n [Application Load Balancers on Outposts] You must specify one Outpost subnet. \\n [Application Load Balancers on Local Zones] You can specify subnets from one or more Local Zones. \\n [Network Load Balancers] You can specify subnets from one or more Availability Zones. You can specify one Elastic IP address per subnet if you need static IP addresses for your internet-facing load balancer. For internal load balancers, you can specify one private IP address per subnet from the IPv4 range of the subnet. For internet-facing load balancer, you can specify one IPv6 address per subnet. \\n [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You cannot specify Elastic IP addresses for your subnets."'),
+      subnetMappings: {
+        '#withAllocationID':: d.fn(help='', args=[d.arg(name='allocationID', type=d.T.string)]),
+        withAllocationID(allocationID): { allocationID: allocationID },
+        '#withIPv6Address':: d.fn(help='', args=[d.arg(name='iPv6Address', type=d.T.string)]),
+        withIPv6Address(iPv6Address): { iPv6Address: iPv6Address },
+        '#withPrivateIPv4Address':: d.fn(help='', args=[d.arg(name='privateIPv4Address', type=d.T.string)]),
+        withPrivateIPv4Address(privateIPv4Address): { privateIPv4Address: privateIPv4Address },
+        '#withSubnetID':: d.fn(help='', args=[d.arg(name='subnetID', type=d.T.string)]),
+        withSubnetID(subnetID): { subnetID: subnetID },
+      },
+      '#subnetRefs':: d.obj(help='"Reference to Subnets for Subnets field"'),
+      subnetRefs: {
+        '#withName':: d.fn(help='"Name of the referenced object."', args=[d.arg(name='name', type=d.T.string)]),
+        withName(name): { name: name },
+      },
       '#subnetSelector':: d.obj(help='"Selector for references to Subnets"'),
       subnetSelector: {
         '#withMatchControllerRef':: d.fn(help='"MatchControllerRef ensures an object with the same controller reference as the selecting object is selected."', args=[d.arg(name='matchControllerRef', type=d.T.boolean)]),
@@ -74,6 +91,13 @@
         withMatchLabels(matchLabels): { spec+: { forProvider+: { subnetSelector+: { matchLabels: matchLabels } } } },
         '#withMatchLabelsMixin':: d.fn(help='"MatchLabels ensures an object with matching labels is selected."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
         withMatchLabelsMixin(matchLabels): { spec+: { forProvider+: { subnetSelector+: { matchLabels+: matchLabels } } } },
+      },
+      '#tags':: d.obj(help='"The tags to assign to the load balancer."'),
+      tags: {
+        '#withKey':: d.fn(help='', args=[d.arg(name='key', type=d.T.string)]),
+        withKey(key): { key: key },
+        '#withValue':: d.fn(help='', args=[d.arg(name='value', type=d.T.string)]),
+        withValue(value): { value: value },
       },
       '#withCustomerOwnedIPv4Pool':: d.fn(help='"[Application Load Balancers on Outposts] The ID of the customer-owned address pool (CoIP pool)."', args=[d.arg(name='customerOwnedIPv4Pool', type=d.T.string)]),
       withCustomerOwnedIPv4Pool(customerOwnedIPv4Pool): { spec+: { forProvider+: { customerOwnedIPv4Pool: customerOwnedIPv4Pool } } },

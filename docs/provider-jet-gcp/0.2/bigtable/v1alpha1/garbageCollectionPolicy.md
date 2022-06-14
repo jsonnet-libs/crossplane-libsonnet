@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/bigtable/v1alpha1/garbageCollectionPolicy/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,11 @@ permalink: /provider-jet-gcp/0.2/bigtable/v1alpha1/garbageCollectionPolicy/
     * [`fn withMode(mode)`](#fn-specforproviderwithmode)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withTable(table)`](#fn-specforproviderwithtable)
+    * [`obj spec.forProvider.maxAge`](#obj-specforprovidermaxage)
+      * [`fn withDays(days)`](#fn-specforprovidermaxagewithdays)
+      * [`fn withDuration(duration)`](#fn-specforprovidermaxagewithduration)
+    * [`obj spec.forProvider.maxVersion`](#obj-specforprovidermaxversion)
+      * [`fn withNumber(number)`](#fn-specforprovidermaxversionwithnumber)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -164,24 +167,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -334,6 +319,38 @@ withTable(table)
 ```
 
 "The name of the table."
+
+## obj spec.forProvider.maxAge
+
+"GC policy that applies to all cells older than the given age."
+
+### fn spec.forProvider.maxAge.withDays
+
+```ts
+withDays(days)
+```
+
+"Number of days before applying GC policy."
+
+### fn spec.forProvider.maxAge.withDuration
+
+```ts
+withDuration(duration)
+```
+
+"Duration before applying GC policy"
+
+## obj spec.forProvider.maxVersion
+
+"GC policy that applies to all versions of a cell except for the most recent."
+
+### fn spec.forProvider.maxVersion.withNumber
+
+```ts
+withNumber(number)
+```
+
+"Number of version before applying the GC policy."
 
 ## obj spec.providerConfigRef
 

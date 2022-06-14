@@ -22,8 +22,6 @@ permalink: /provider-jet-mongodbatlas/0.2/custom/v1alpha1/dbRole/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -40,6 +38,17 @@ permalink: /provider-jet-mongodbatlas/0.2/custom/v1alpha1/dbRole/
     * [`fn withInheritedRolesMixin(inheritedRoles)`](#fn-specforproviderwithinheritedrolesmixin)
     * [`fn withProjectId(projectId)`](#fn-specforproviderwithprojectid)
     * [`fn withRoleName(roleName)`](#fn-specforproviderwithrolename)
+    * [`obj spec.forProvider.actions`](#obj-specforprovideractions)
+      * [`fn withAction(action)`](#fn-specforprovideractionswithaction)
+      * [`fn withResources(resources)`](#fn-specforprovideractionswithresources)
+      * [`fn withResourcesMixin(resources)`](#fn-specforprovideractionswithresourcesmixin)
+      * [`obj spec.forProvider.actions.resources`](#obj-specforprovideractionsresources)
+        * [`fn withCluster(cluster)`](#fn-specforprovideractionsresourceswithcluster)
+        * [`fn withCollectionName(collectionName)`](#fn-specforprovideractionsresourceswithcollectionname)
+        * [`fn withDatabaseName(databaseName)`](#fn-specforprovideractionsresourceswithdatabasename)
+    * [`obj spec.forProvider.inheritedRoles`](#obj-specforproviderinheritedroles)
+      * [`fn withDatabaseName(databaseName)`](#fn-specforproviderinheritedroleswithdatabasename)
+      * [`fn withRoleName(roleName)`](#fn-specforproviderinheritedroleswithrolename)
     * [`obj spec.forProvider.projectIdRef`](#obj-specforproviderprojectidref)
       * [`fn withName(name)`](#fn-specforproviderprojectidrefwithname)
     * [`obj spec.forProvider.projectIdSelector`](#obj-specforproviderprojectidselector)
@@ -170,24 +179,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -307,6 +298,84 @@ withProjectId(projectId)
 
 
 ### fn spec.forProvider.withRoleName
+
+```ts
+withRoleName(roleName)
+```
+
+
+
+## obj spec.forProvider.actions
+
+
+
+### fn spec.forProvider.actions.withAction
+
+```ts
+withAction(action)
+```
+
+
+
+### fn spec.forProvider.actions.withResources
+
+```ts
+withResources(resources)
+```
+
+
+
+### fn spec.forProvider.actions.withResourcesMixin
+
+```ts
+withResourcesMixin(resources)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.actions.resources
+
+
+
+### fn spec.forProvider.actions.resources.withCluster
+
+```ts
+withCluster(cluster)
+```
+
+
+
+### fn spec.forProvider.actions.resources.withCollectionName
+
+```ts
+withCollectionName(collectionName)
+```
+
+
+
+### fn spec.forProvider.actions.resources.withDatabaseName
+
+```ts
+withDatabaseName(databaseName)
+```
+
+
+
+## obj spec.forProvider.inheritedRoles
+
+
+
+### fn spec.forProvider.inheritedRoles.withDatabaseName
+
+```ts
+withDatabaseName(databaseName)
+```
+
+
+
+### fn spec.forProvider.inheritedRoles.withRoleName
 
 ```ts
 withRoleName(roleName)

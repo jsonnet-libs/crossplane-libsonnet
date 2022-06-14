@@ -22,8 +22,6 @@ permalink: /provider-grafana/0.1/grafana/v1alpha1/builtinRoleAssignment/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -37,6 +35,9 @@ permalink: /provider-grafana/0.1/grafana/v1alpha1/builtinRoleAssignment/
     * [`fn withBuiltinRole(builtinRole)`](#fn-specforproviderwithbuiltinrole)
     * [`fn withRoles(roles)`](#fn-specforproviderwithroles)
     * [`fn withRolesMixin(roles)`](#fn-specforproviderwithrolesmixin)
+    * [`obj spec.forProvider.roles`](#obj-specforproviderroles)
+      * [`fn withGlobal(global)`](#fn-specforproviderroleswithglobal)
+      * [`fn withUid(uid)`](#fn-specforproviderroleswithuid)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -161,24 +162,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -278,6 +261,26 @@ withRolesMixin(roles)
 "Fixed or custom roles which provide granular access for specific resources within Grafana."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.roles
+
+"Fixed or custom roles which provide granular access for specific resources within Grafana."
+
+### fn spec.forProvider.roles.withGlobal
+
+```ts
+withGlobal(global)
+```
+
+"States whether the assignment is available across all organizations or not. Defaults to `false`."
+
+### fn spec.forProvider.roles.withUid
+
+```ts
+withUid(uid)
+```
+
+"Unique identifier of the role to assign to `builtin_role`."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/elasticache/v1alpha1/cacheParameterGroup/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -39,6 +37,9 @@ permalink: /provider-aws/0.24/elasticache/v1alpha1/cacheParameterGroup/
     * [`fn withParameters(parameters)`](#fn-specforproviderwithparameters)
     * [`fn withParametersMixin(parameters)`](#fn-specforproviderwithparametersmixin)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
+    * [`obj spec.forProvider.parameters`](#obj-specforproviderparameters)
+      * [`fn withParameterName(parameterName)`](#fn-specforproviderparameterswithparametername)
+      * [`fn withParameterValue(parameterValue)`](#fn-specforproviderparameterswithparametervalue)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +164,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -296,6 +279,26 @@ withRegion(region)
 ```
 
 "Region is which region the CacheParameterGroup will be created."
+
+## obj spec.forProvider.parameters
+
+"A list of parameters to associate with this DB parameter group"
+
+### fn spec.forProvider.parameters.withParameterName
+
+```ts
+withParameterName(parameterName)
+```
+
+
+
+### fn spec.forProvider.parameters.withParameterValue
+
+```ts
+withParameterValue(parameterValue)
+```
+
+
 
 ## obj spec.providerConfigRef
 

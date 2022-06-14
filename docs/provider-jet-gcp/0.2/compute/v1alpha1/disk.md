@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/disk/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -52,6 +50,21 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/disk/
     * [`fn withSourceSnapshotEncryptionKeyMixin(sourceSnapshotEncryptionKey)`](#fn-specforproviderwithsourcesnapshotencryptionkeymixin)
     * [`fn withType(type)`](#fn-specforproviderwithtype)
     * [`fn withZone(zone)`](#fn-specforproviderwithzone)
+    * [`obj spec.forProvider.diskEncryptionKey`](#obj-specforproviderdiskencryptionkey)
+      * [`fn withKmsKeySelfLink(kmsKeySelfLink)`](#fn-specforproviderdiskencryptionkeywithkmskeyselflink)
+      * [`fn withKmsKeyServiceAccount(kmsKeyServiceAccount)`](#fn-specforproviderdiskencryptionkeywithkmskeyserviceaccount)
+      * [`obj spec.forProvider.diskEncryptionKey.rawKeySecretRef`](#obj-specforproviderdiskencryptionkeyrawkeysecretref)
+        * [`fn withKey(key)`](#fn-specforproviderdiskencryptionkeyrawkeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforproviderdiskencryptionkeyrawkeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforproviderdiskencryptionkeyrawkeysecretrefwithnamespace)
+    * [`obj spec.forProvider.sourceImageEncryptionKey`](#obj-specforprovidersourceimageencryptionkey)
+      * [`fn withKmsKeySelfLink(kmsKeySelfLink)`](#fn-specforprovidersourceimageencryptionkeywithkmskeyselflink)
+      * [`fn withKmsKeyServiceAccount(kmsKeyServiceAccount)`](#fn-specforprovidersourceimageencryptionkeywithkmskeyserviceaccount)
+      * [`fn withRawKey(rawKey)`](#fn-specforprovidersourceimageencryptionkeywithrawkey)
+    * [`obj spec.forProvider.sourceSnapshotEncryptionKey`](#obj-specforprovidersourcesnapshotencryptionkey)
+      * [`fn withKmsKeySelfLink(kmsKeySelfLink)`](#fn-specforprovidersourcesnapshotencryptionkeywithkmskeyselflink)
+      * [`fn withKmsKeyServiceAccount(kmsKeyServiceAccount)`](#fn-specforprovidersourcesnapshotencryptionkeywithkmskeyserviceaccount)
+      * [`fn withRawKey(rawKey)`](#fn-specforprovidersourcesnapshotencryptionkeywithrawkey)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -173,24 +186,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -419,6 +414,110 @@ withZone(zone)
 ```
 
 "A reference to the zone where the disk resides."
+
+## obj spec.forProvider.diskEncryptionKey
+
+"Encrypts the disk using a customer-supplied encryption key. \n After you encrypt a disk with a customer-supplied key, you must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk to a virtual machine). \n Customer-supplied encryption keys do not protect access to metadata of the disk. \n If you do not provide an encryption key when creating the disk, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the disk later."
+
+### fn spec.forProvider.diskEncryptionKey.withKmsKeySelfLink
+
+```ts
+withKmsKeySelfLink(kmsKeySelfLink)
+```
+
+"The self link of the encryption key used to encrypt the disk. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys"
+
+### fn spec.forProvider.diskEncryptionKey.withKmsKeyServiceAccount
+
+```ts
+withKmsKeyServiceAccount(kmsKeyServiceAccount)
+```
+
+"The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used."
+
+## obj spec.forProvider.diskEncryptionKey.rawKeySecretRef
+
+"Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource."
+
+### fn spec.forProvider.diskEncryptionKey.rawKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.diskEncryptionKey.rawKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.diskEncryptionKey.rawKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.sourceImageEncryptionKey
+
+"The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key."
+
+### fn spec.forProvider.sourceImageEncryptionKey.withKmsKeySelfLink
+
+```ts
+withKmsKeySelfLink(kmsKeySelfLink)
+```
+
+"The self link of the encryption key used to encrypt the disk. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys"
+
+### fn spec.forProvider.sourceImageEncryptionKey.withKmsKeyServiceAccount
+
+```ts
+withKmsKeyServiceAccount(kmsKeyServiceAccount)
+```
+
+"The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used."
+
+### fn spec.forProvider.sourceImageEncryptionKey.withRawKey
+
+```ts
+withRawKey(rawKey)
+```
+
+"Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource."
+
+## obj spec.forProvider.sourceSnapshotEncryptionKey
+
+"The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key."
+
+### fn spec.forProvider.sourceSnapshotEncryptionKey.withKmsKeySelfLink
+
+```ts
+withKmsKeySelfLink(kmsKeySelfLink)
+```
+
+"The self link of the encryption key used to encrypt the disk. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys"
+
+### fn spec.forProvider.sourceSnapshotEncryptionKey.withKmsKeyServiceAccount
+
+```ts
+withKmsKeyServiceAccount(kmsKeyServiceAccount)
+```
+
+"The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used."
+
+### fn spec.forProvider.sourceSnapshotEncryptionKey.withRawKey
+
+```ts
+withRawKey(rawKey)
+```
+
+"Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource."
 
 ## obj spec.providerConfigRef
 

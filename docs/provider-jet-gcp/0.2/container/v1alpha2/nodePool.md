@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/container/v1alpha2/nodePool/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -51,12 +49,59 @@ permalink: /provider-jet-gcp/0.2/container/v1alpha2/nodePool/
     * [`fn withUpgradeSettings(upgradeSettings)`](#fn-specforproviderwithupgradesettings)
     * [`fn withUpgradeSettingsMixin(upgradeSettings)`](#fn-specforproviderwithupgradesettingsmixin)
     * [`fn withVersion(version)`](#fn-specforproviderwithversion)
+    * [`obj spec.forProvider.autoscaling`](#obj-specforproviderautoscaling)
+      * [`fn withMaxNodeCount(maxNodeCount)`](#fn-specforproviderautoscalingwithmaxnodecount)
+      * [`fn withMinNodeCount(minNodeCount)`](#fn-specforproviderautoscalingwithminnodecount)
     * [`obj spec.forProvider.clusterRef`](#obj-specforproviderclusterref)
       * [`fn withName(name)`](#fn-specforproviderclusterrefwithname)
     * [`obj spec.forProvider.clusterSelector`](#obj-specforproviderclusterselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderclusterselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderclusterselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderclusterselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.management`](#obj-specforprovidermanagement)
+      * [`fn withAutoRepair(autoRepair)`](#fn-specforprovidermanagementwithautorepair)
+      * [`fn withAutoUpgrade(autoUpgrade)`](#fn-specforprovidermanagementwithautoupgrade)
+    * [`obj spec.forProvider.nodeConfig`](#obj-specforprovidernodeconfig)
+      * [`fn withDiskSizeGb(diskSizeGb)`](#fn-specforprovidernodeconfigwithdisksizegb)
+      * [`fn withDiskType(diskType)`](#fn-specforprovidernodeconfigwithdisktype)
+      * [`fn withGuestAccelerator(guestAccelerator)`](#fn-specforprovidernodeconfigwithguestaccelerator)
+      * [`fn withGuestAcceleratorMixin(guestAccelerator)`](#fn-specforprovidernodeconfigwithguestacceleratormixin)
+      * [`fn withImageType(imageType)`](#fn-specforprovidernodeconfigwithimagetype)
+      * [`fn withLabels(labels)`](#fn-specforprovidernodeconfigwithlabels)
+      * [`fn withLabelsMixin(labels)`](#fn-specforprovidernodeconfigwithlabelsmixin)
+      * [`fn withLocalSsdCount(localSsdCount)`](#fn-specforprovidernodeconfigwithlocalssdcount)
+      * [`fn withMachineType(machineType)`](#fn-specforprovidernodeconfigwithmachinetype)
+      * [`fn withMetadata(metadata)`](#fn-specforprovidernodeconfigwithmetadata)
+      * [`fn withMetadataMixin(metadata)`](#fn-specforprovidernodeconfigwithmetadatamixin)
+      * [`fn withMinCpuPlatform(minCpuPlatform)`](#fn-specforprovidernodeconfigwithmincpuplatform)
+      * [`fn withOauthScopes(oauthScopes)`](#fn-specforprovidernodeconfigwithoauthscopes)
+      * [`fn withOauthScopesMixin(oauthScopes)`](#fn-specforprovidernodeconfigwithoauthscopesmixin)
+      * [`fn withPreemptible(preemptible)`](#fn-specforprovidernodeconfigwithpreemptible)
+      * [`fn withServiceAccount(serviceAccount)`](#fn-specforprovidernodeconfigwithserviceaccount)
+      * [`fn withShieldedInstanceConfig(shieldedInstanceConfig)`](#fn-specforprovidernodeconfigwithshieldedinstanceconfig)
+      * [`fn withShieldedInstanceConfigMixin(shieldedInstanceConfig)`](#fn-specforprovidernodeconfigwithshieldedinstanceconfigmixin)
+      * [`fn withTags(tags)`](#fn-specforprovidernodeconfigwithtags)
+      * [`fn withTagsMixin(tags)`](#fn-specforprovidernodeconfigwithtagsmixin)
+      * [`fn withTaint(taint)`](#fn-specforprovidernodeconfigwithtaint)
+      * [`fn withTaintMixin(taint)`](#fn-specforprovidernodeconfigwithtaintmixin)
+      * [`fn withWorkloadMetadataConfig(workloadMetadataConfig)`](#fn-specforprovidernodeconfigwithworkloadmetadataconfig)
+      * [`fn withWorkloadMetadataConfigMixin(workloadMetadataConfig)`](#fn-specforprovidernodeconfigwithworkloadmetadataconfigmixin)
+      * [`obj spec.forProvider.nodeConfig.guestAccelerator`](#obj-specforprovidernodeconfigguestaccelerator)
+        * [`fn withCount(count)`](#fn-specforprovidernodeconfigguestacceleratorwithcount)
+        * [`fn withGpuPartitionSize(gpuPartitionSize)`](#fn-specforprovidernodeconfigguestacceleratorwithgpupartitionsize)
+        * [`fn withType(type)`](#fn-specforprovidernodeconfigguestacceleratorwithtype)
+      * [`obj spec.forProvider.nodeConfig.shieldedInstanceConfig`](#obj-specforprovidernodeconfigshieldedinstanceconfig)
+        * [`fn withEnableIntegrityMonitoring(enableIntegrityMonitoring)`](#fn-specforprovidernodeconfigshieldedinstanceconfigwithenableintegritymonitoring)
+        * [`fn withEnableSecureBoot(enableSecureBoot)`](#fn-specforprovidernodeconfigshieldedinstanceconfigwithenablesecureboot)
+      * [`obj spec.forProvider.nodeConfig.taint`](#obj-specforprovidernodeconfigtaint)
+        * [`fn withEffect(effect)`](#fn-specforprovidernodeconfigtaintwitheffect)
+        * [`fn withKey(key)`](#fn-specforprovidernodeconfigtaintwithkey)
+        * [`fn withValue(value)`](#fn-specforprovidernodeconfigtaintwithvalue)
+      * [`obj spec.forProvider.nodeConfig.workloadMetadataConfig`](#obj-specforprovidernodeconfigworkloadmetadataconfig)
+        * [`fn withMode(mode)`](#fn-specforprovidernodeconfigworkloadmetadataconfigwithmode)
+    * [`obj spec.forProvider.upgradeSettings`](#obj-specforproviderupgradesettings)
+      * [`fn withMaxSurge(maxSurge)`](#fn-specforproviderupgradesettingswithmaxsurge)
+      * [`fn withMaxUnavailable(maxUnavailable)`](#fn-specforproviderupgradesettingswithmaxunavailable)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -178,24 +223,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -419,6 +446,26 @@ withVersion(version)
 
 "The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged. While a fuzzy version can be specified, it's recommended that you specify explicit versions as Terraform will see spurious diffs when fuzzy versions are used. See the google_container_engine_versions data source's version_prefix field to approximate fuzzy versions in a Terraform-compatible way."
 
+## obj spec.forProvider.autoscaling
+
+"Configuration required by cluster autoscaler to adjust the size of the node pool to the current cluster usage."
+
+### fn spec.forProvider.autoscaling.withMaxNodeCount
+
+```ts
+withMaxNodeCount(maxNodeCount)
+```
+
+"Maximum number of nodes in the NodePool. Must be >= min_node_count."
+
+### fn spec.forProvider.autoscaling.withMinNodeCount
+
+```ts
+withMinNodeCount(minNodeCount)
+```
+
+"Minimum number of nodes in the NodePool. Must be >=0 and <= max_node_count."
+
 ## obj spec.forProvider.clusterRef
 
 "A Reference to a named object."
@@ -460,6 +507,346 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.management
+
+"Node management configuration, wherein auto-repair and auto-upgrade is configured."
+
+### fn spec.forProvider.management.withAutoRepair
+
+```ts
+withAutoRepair(autoRepair)
+```
+
+"Whether the nodes will be automatically repaired."
+
+### fn spec.forProvider.management.withAutoUpgrade
+
+```ts
+withAutoUpgrade(autoUpgrade)
+```
+
+"Whether the nodes will be automatically upgraded."
+
+## obj spec.forProvider.nodeConfig
+
+"The configuration of the nodepool"
+
+### fn spec.forProvider.nodeConfig.withDiskSizeGb
+
+```ts
+withDiskSizeGb(diskSizeGb)
+```
+
+"Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB."
+
+### fn spec.forProvider.nodeConfig.withDiskType
+
+```ts
+withDiskType(diskType)
+```
+
+"Type of the disk attached to each node."
+
+### fn spec.forProvider.nodeConfig.withGuestAccelerator
+
+```ts
+withGuestAccelerator(guestAccelerator)
+```
+
+"List of the type and count of accelerator cards attached to the instance."
+
+### fn spec.forProvider.nodeConfig.withGuestAcceleratorMixin
+
+```ts
+withGuestAcceleratorMixin(guestAccelerator)
+```
+
+"List of the type and count of accelerator cards attached to the instance."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.nodeConfig.withImageType
+
+```ts
+withImageType(imageType)
+```
+
+"The image type to use for this node. Note that for a given image type, the latest version of it will be used."
+
+### fn spec.forProvider.nodeConfig.withLabels
+
+```ts
+withLabels(labels)
+```
+
+"The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node."
+
+### fn spec.forProvider.nodeConfig.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+"The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.nodeConfig.withLocalSsdCount
+
+```ts
+withLocalSsdCount(localSsdCount)
+```
+
+"The number of local SSD disks to be attached to the node."
+
+### fn spec.forProvider.nodeConfig.withMachineType
+
+```ts
+withMachineType(machineType)
+```
+
+"The name of a Google Compute Engine machine type."
+
+### fn spec.forProvider.nodeConfig.withMetadata
+
+```ts
+withMetadata(metadata)
+```
+
+"The metadata key/value pairs assigned to instances in the cluster."
+
+### fn spec.forProvider.nodeConfig.withMetadataMixin
+
+```ts
+withMetadataMixin(metadata)
+```
+
+"The metadata key/value pairs assigned to instances in the cluster."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.nodeConfig.withMinCpuPlatform
+
+```ts
+withMinCpuPlatform(minCpuPlatform)
+```
+
+"Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform."
+
+### fn spec.forProvider.nodeConfig.withOauthScopes
+
+```ts
+withOauthScopes(oauthScopes)
+```
+
+"The set of Google API scopes to be made available on all of the node VMs."
+
+### fn spec.forProvider.nodeConfig.withOauthScopesMixin
+
+```ts
+withOauthScopesMixin(oauthScopes)
+```
+
+"The set of Google API scopes to be made available on all of the node VMs."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.nodeConfig.withPreemptible
+
+```ts
+withPreemptible(preemptible)
+```
+
+"Whether the nodes are created as preemptible VM instances."
+
+### fn spec.forProvider.nodeConfig.withServiceAccount
+
+```ts
+withServiceAccount(serviceAccount)
+```
+
+"The Google Cloud Platform Service Account to be used by the node VMs."
+
+### fn spec.forProvider.nodeConfig.withShieldedInstanceConfig
+
+```ts
+withShieldedInstanceConfig(shieldedInstanceConfig)
+```
+
+"Shielded Instance options."
+
+### fn spec.forProvider.nodeConfig.withShieldedInstanceConfigMixin
+
+```ts
+withShieldedInstanceConfigMixin(shieldedInstanceConfig)
+```
+
+"Shielded Instance options."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.nodeConfig.withTags
+
+```ts
+withTags(tags)
+```
+
+"The list of instance tags applied to all nodes."
+
+### fn spec.forProvider.nodeConfig.withTagsMixin
+
+```ts
+withTagsMixin(tags)
+```
+
+"The list of instance tags applied to all nodes."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.nodeConfig.withTaint
+
+```ts
+withTaint(taint)
+```
+
+"List of Kubernetes taints to be applied to each node."
+
+### fn spec.forProvider.nodeConfig.withTaintMixin
+
+```ts
+withTaintMixin(taint)
+```
+
+"List of Kubernetes taints to be applied to each node."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.nodeConfig.withWorkloadMetadataConfig
+
+```ts
+withWorkloadMetadataConfig(workloadMetadataConfig)
+```
+
+"The workload metadata configuration for this node."
+
+### fn spec.forProvider.nodeConfig.withWorkloadMetadataConfigMixin
+
+```ts
+withWorkloadMetadataConfigMixin(workloadMetadataConfig)
+```
+
+"The workload metadata configuration for this node."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.nodeConfig.guestAccelerator
+
+"List of the type and count of accelerator cards attached to the instance."
+
+### fn spec.forProvider.nodeConfig.guestAccelerator.withCount
+
+```ts
+withCount(count)
+```
+
+"The number of the accelerator cards exposed to an instance."
+
+### fn spec.forProvider.nodeConfig.guestAccelerator.withGpuPartitionSize
+
+```ts
+withGpuPartitionSize(gpuPartitionSize)
+```
+
+"Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig user guide (https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning)"
+
+### fn spec.forProvider.nodeConfig.guestAccelerator.withType
+
+```ts
+withType(type)
+```
+
+"The accelerator type resource name."
+
+## obj spec.forProvider.nodeConfig.shieldedInstanceConfig
+
+"Shielded Instance options."
+
+### fn spec.forProvider.nodeConfig.shieldedInstanceConfig.withEnableIntegrityMonitoring
+
+```ts
+withEnableIntegrityMonitoring(enableIntegrityMonitoring)
+```
+
+"Defines whether the instance has integrity monitoring enabled."
+
+### fn spec.forProvider.nodeConfig.shieldedInstanceConfig.withEnableSecureBoot
+
+```ts
+withEnableSecureBoot(enableSecureBoot)
+```
+
+"Defines whether the instance has Secure Boot enabled."
+
+## obj spec.forProvider.nodeConfig.taint
+
+"List of Kubernetes taints to be applied to each node."
+
+### fn spec.forProvider.nodeConfig.taint.withEffect
+
+```ts
+withEffect(effect)
+```
+
+"Effect for taint."
+
+### fn spec.forProvider.nodeConfig.taint.withKey
+
+```ts
+withKey(key)
+```
+
+"Key for taint."
+
+### fn spec.forProvider.nodeConfig.taint.withValue
+
+```ts
+withValue(value)
+```
+
+"Value for taint."
+
+## obj spec.forProvider.nodeConfig.workloadMetadataConfig
+
+"The workload metadata configuration for this node."
+
+### fn spec.forProvider.nodeConfig.workloadMetadataConfig.withMode
+
+```ts
+withMode(mode)
+```
+
+"Mode is the configuration for how to expose metadata to workloads running on the node."
+
+## obj spec.forProvider.upgradeSettings
+
+"Specify node upgrade settings to change how many nodes GKE attempts to upgrade at once. The number of nodes upgraded simultaneously is the sum of max_surge and max_unavailable. The maximum number of nodes upgraded simultaneously is limited to 20."
+
+### fn spec.forProvider.upgradeSettings.withMaxSurge
+
+```ts
+withMaxSurge(maxSurge)
+```
+
+"The number of additional nodes that can be added to the node pool during an upgrade. Increasing max_surge raises the number of nodes that can be upgraded simultaneously. Can be set to 0 or greater."
+
+### fn spec.forProvider.upgradeSettings.withMaxUnavailable
+
+```ts
+withMaxUnavailable(maxUnavailable)
+```
+
+"The number of nodes that can be simultaneously unavailable during an upgrade. Increasing max_unavailable raises the number of nodes that can be upgraded in parallel. Can be set to 0 or greater."
 
 ## obj spec.providerConfigRef
 

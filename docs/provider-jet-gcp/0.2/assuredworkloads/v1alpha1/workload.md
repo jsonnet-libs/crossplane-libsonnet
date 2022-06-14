@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/assuredworkloads/v1alpha1/workload/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -46,6 +44,12 @@ permalink: /provider-jet-gcp/0.2/assuredworkloads/v1alpha1/workload/
     * [`fn withProvisionedResourcesParent(provisionedResourcesParent)`](#fn-specforproviderwithprovisionedresourcesparent)
     * [`fn withResourceSettings(resourceSettings)`](#fn-specforproviderwithresourcesettings)
     * [`fn withResourceSettingsMixin(resourceSettings)`](#fn-specforproviderwithresourcesettingsmixin)
+    * [`obj spec.forProvider.kmsSettings`](#obj-specforproviderkmssettings)
+      * [`fn withNextRotationTime(nextRotationTime)`](#fn-specforproviderkmssettingswithnextrotationtime)
+      * [`fn withRotationPeriod(rotationPeriod)`](#fn-specforproviderkmssettingswithrotationperiod)
+    * [`obj spec.forProvider.resourceSettings`](#obj-specforproviderresourcesettings)
+      * [`fn withResourceId(resourceId)`](#fn-specforproviderresourcesettingswithresourceid)
+      * [`fn withResourceType(resourceType)`](#fn-specforproviderresourcesettingswithresourcetype)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -167,24 +171,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -363,6 +349,46 @@ withResourceSettingsMixin(resourceSettings)
 "Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.kmsSettings
+
+"Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes."
+
+### fn spec.forProvider.kmsSettings.withNextRotationTime
+
+```ts
+withNextRotationTime(nextRotationTime)
+```
+
+"Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary."
+
+### fn spec.forProvider.kmsSettings.withRotationPeriod
+
+```ts
+withRotationPeriod(rotationPeriod)
+```
+
+"Required. Input only. Immutable. will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours."
+
+## obj spec.forProvider.resourceSettings
+
+"Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional."
+
+### fn spec.forProvider.resourceSettings.withResourceId
+
+```ts
+withResourceId(resourceId)
+```
+
+"Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail."
+
+### fn spec.forProvider.resourceSettings.withResourceType
+
+```ts
+withResourceType(resourceType)
+```
+
+"Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER"
 
 ## obj spec.providerConfigRef
 

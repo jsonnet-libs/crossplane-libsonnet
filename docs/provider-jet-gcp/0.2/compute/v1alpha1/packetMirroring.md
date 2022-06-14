@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/packetMirroring/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -47,6 +45,27 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/packetMirroring/
     * [`fn withPriority(priority)`](#fn-specforproviderwithpriority)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
+    * [`obj spec.forProvider.collectorIlb`](#obj-specforprovidercollectorilb)
+      * [`fn withUrl(url)`](#fn-specforprovidercollectorilbwithurl)
+    * [`obj spec.forProvider.filter`](#obj-specforproviderfilter)
+      * [`fn withCidrRanges(cidrRanges)`](#fn-specforproviderfilterwithcidrranges)
+      * [`fn withCidrRangesMixin(cidrRanges)`](#fn-specforproviderfilterwithcidrrangesmixin)
+      * [`fn withDirection(direction)`](#fn-specforproviderfilterwithdirection)
+      * [`fn withIpProtocols(ipProtocols)`](#fn-specforproviderfilterwithipprotocols)
+      * [`fn withIpProtocolsMixin(ipProtocols)`](#fn-specforproviderfilterwithipprotocolsmixin)
+    * [`obj spec.forProvider.mirroredResources`](#obj-specforprovidermirroredresources)
+      * [`fn withInstances(instances)`](#fn-specforprovidermirroredresourceswithinstances)
+      * [`fn withInstancesMixin(instances)`](#fn-specforprovidermirroredresourceswithinstancesmixin)
+      * [`fn withSubnetworks(subnetworks)`](#fn-specforprovidermirroredresourceswithsubnetworks)
+      * [`fn withSubnetworksMixin(subnetworks)`](#fn-specforprovidermirroredresourceswithsubnetworksmixin)
+      * [`fn withTags(tags)`](#fn-specforprovidermirroredresourceswithtags)
+      * [`fn withTagsMixin(tags)`](#fn-specforprovidermirroredresourceswithtagsmixin)
+      * [`obj spec.forProvider.mirroredResources.instances`](#obj-specforprovidermirroredresourcesinstances)
+        * [`fn withUrl(url)`](#fn-specforprovidermirroredresourcesinstanceswithurl)
+      * [`obj spec.forProvider.mirroredResources.subnetworks`](#obj-specforprovidermirroredresourcessubnetworks)
+        * [`fn withUrl(url)`](#fn-specforprovidermirroredresourcessubnetworkswithurl)
+    * [`obj spec.forProvider.network`](#obj-specforprovidernetwork)
+      * [`fn withUrl(url)`](#fn-specforprovidernetworkwithurl)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -168,24 +187,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -374,6 +375,160 @@ withRegion(region)
 ```
 
 "The Region in which the created address should reside. If it is not provided, the provider region is used."
+
+## obj spec.forProvider.collectorIlb
+
+"The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored traffic. The specified forwarding rule must have is_mirroring_collector set to true."
+
+### fn spec.forProvider.collectorIlb.withUrl
+
+```ts
+withUrl(url)
+```
+
+"The URL of the forwarding rule."
+
+## obj spec.forProvider.filter
+
+"A filter for mirrored traffic.  If unset, all traffic is mirrored."
+
+### fn spec.forProvider.filter.withCidrRanges
+
+```ts
+withCidrRanges(cidrRanges)
+```
+
+"IP CIDR ranges that apply as a filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported."
+
+### fn spec.forProvider.filter.withCidrRangesMixin
+
+```ts
+withCidrRangesMixin(cidrRanges)
+```
+
+"IP CIDR ranges that apply as a filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.filter.withDirection
+
+```ts
+withDirection(direction)
+```
+
+"Direction of traffic to mirror. Default value: \"BOTH\" Possible values: [\"INGRESS\", \"EGRESS\", \"BOTH\"]"
+
+### fn spec.forProvider.filter.withIpProtocols
+
+```ts
+withIpProtocols(ipProtocols)
+```
+
+"Protocols that apply as a filter on mirrored traffic. Possible values: [\"tcp\", \"udp\", \"icmp\"]"
+
+### fn spec.forProvider.filter.withIpProtocolsMixin
+
+```ts
+withIpProtocolsMixin(ipProtocols)
+```
+
+"Protocols that apply as a filter on mirrored traffic. Possible values: [\"tcp\", \"udp\", \"icmp\"]"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.mirroredResources
+
+"A means of specifying which resources to mirror."
+
+### fn spec.forProvider.mirroredResources.withInstances
+
+```ts
+withInstances(instances)
+```
+
+"All the listed instances will be mirrored.  Specify at most 50."
+
+### fn spec.forProvider.mirroredResources.withInstancesMixin
+
+```ts
+withInstancesMixin(instances)
+```
+
+"All the listed instances will be mirrored.  Specify at most 50."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.mirroredResources.withSubnetworks
+
+```ts
+withSubnetworks(subnetworks)
+```
+
+"All instances in one of these subnetworks will be mirrored."
+
+### fn spec.forProvider.mirroredResources.withSubnetworksMixin
+
+```ts
+withSubnetworksMixin(subnetworks)
+```
+
+"All instances in one of these subnetworks will be mirrored."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.mirroredResources.withTags
+
+```ts
+withTags(tags)
+```
+
+"All instances with these tags will be mirrored."
+
+### fn spec.forProvider.mirroredResources.withTagsMixin
+
+```ts
+withTagsMixin(tags)
+```
+
+"All instances with these tags will be mirrored."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.mirroredResources.instances
+
+"All the listed instances will be mirrored.  Specify at most 50."
+
+### fn spec.forProvider.mirroredResources.instances.withUrl
+
+```ts
+withUrl(url)
+```
+
+"The URL of the instances where this rule should be active."
+
+## obj spec.forProvider.mirroredResources.subnetworks
+
+"All instances in one of these subnetworks will be mirrored."
+
+### fn spec.forProvider.mirroredResources.subnetworks.withUrl
+
+```ts
+withUrl(url)
+```
+
+"The URL of the subnetwork where this rule should be active."
+
+## obj spec.forProvider.network
+
+"Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network."
+
+### fn spec.forProvider.network.withUrl
+
+```ts
+withUrl(url)
+```
+
+"The full self_link URL of the network where this rule is active."
 
 ## obj spec.providerConfigRef
 

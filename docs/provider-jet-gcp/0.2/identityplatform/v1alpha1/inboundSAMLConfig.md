@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/identityplatform/v1alpha1/inboundSAMLConfig/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -42,6 +40,17 @@ permalink: /provider-jet-gcp/0.2/identityplatform/v1alpha1/inboundSAMLConfig/
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withSpConfig(spConfig)`](#fn-specforproviderwithspconfig)
     * [`fn withSpConfigMixin(spConfig)`](#fn-specforproviderwithspconfigmixin)
+    * [`obj spec.forProvider.idpConfig`](#obj-specforprovideridpconfig)
+      * [`fn withIdpCertificates(idpCertificates)`](#fn-specforprovideridpconfigwithidpcertificates)
+      * [`fn withIdpCertificatesMixin(idpCertificates)`](#fn-specforprovideridpconfigwithidpcertificatesmixin)
+      * [`fn withIdpEntityId(idpEntityId)`](#fn-specforprovideridpconfigwithidpentityid)
+      * [`fn withSignRequest(signRequest)`](#fn-specforprovideridpconfigwithsignrequest)
+      * [`fn withSsoUrl(ssoUrl)`](#fn-specforprovideridpconfigwithssourl)
+      * [`obj spec.forProvider.idpConfig.idpCertificates`](#obj-specforprovideridpconfigidpcertificates)
+        * [`fn withX509Certificate(x509Certificate)`](#fn-specforprovideridpconfigidpcertificateswithx509certificate)
+    * [`obj spec.forProvider.spConfig`](#obj-specforproviderspconfig)
+      * [`fn withCallbackUri(callbackUri)`](#fn-specforproviderspconfigwithcallbackuri)
+      * [`fn withSpEntityId(spEntityId)`](#fn-specforproviderspconfigwithspentityid)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +172,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -325,6 +316,84 @@ withSpConfigMixin(spConfig)
 "SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an authentication assertion issued by a SAML identity provider."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.idpConfig
+
+"SAML IdP configuration when the project acts as the relying party"
+
+### fn spec.forProvider.idpConfig.withIdpCertificates
+
+```ts
+withIdpCertificates(idpCertificates)
+```
+
+"The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP."
+
+### fn spec.forProvider.idpConfig.withIdpCertificatesMixin
+
+```ts
+withIdpCertificatesMixin(idpCertificates)
+```
+
+"The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.idpConfig.withIdpEntityId
+
+```ts
+withIdpEntityId(idpEntityId)
+```
+
+"Unique identifier for all SAML entities"
+
+### fn spec.forProvider.idpConfig.withSignRequest
+
+```ts
+withSignRequest(signRequest)
+```
+
+"Indicates if outbounding SAMLRequest should be signed."
+
+### fn spec.forProvider.idpConfig.withSsoUrl
+
+```ts
+withSsoUrl(ssoUrl)
+```
+
+"URL to send Authentication request to."
+
+## obj spec.forProvider.idpConfig.idpCertificates
+
+"The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP."
+
+### fn spec.forProvider.idpConfig.idpCertificates.withX509Certificate
+
+```ts
+withX509Certificate(x509Certificate)
+```
+
+"The IdP's x509 certificate."
+
+## obj spec.forProvider.spConfig
+
+"SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an authentication assertion issued by a SAML identity provider."
+
+### fn spec.forProvider.spConfig.withCallbackUri
+
+```ts
+withCallbackUri(callbackUri)
+```
+
+"Callback URI where responses from IDP are handled. Must start with 'https://'."
+
+### fn spec.forProvider.spConfig.withSpEntityId
+
+```ts
+withSpEntityId(spEntityId)
+```
+
+"Unique identifier for all SAML entities."
 
 ## obj spec.providerConfigRef
 

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/osconfig/v1alpha1/patchDeployment/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -48,6 +46,159 @@ permalink: /provider-jet-gcp/0.2/osconfig/v1alpha1/patchDeployment/
     * [`fn withRecurringScheduleMixin(recurringSchedule)`](#fn-specforproviderwithrecurringschedulemixin)
     * [`fn withRollout(rollout)`](#fn-specforproviderwithrollout)
     * [`fn withRolloutMixin(rollout)`](#fn-specforproviderwithrolloutmixin)
+    * [`obj spec.forProvider.instanceFilter`](#obj-specforproviderinstancefilter)
+      * [`fn withAll(all)`](#fn-specforproviderinstancefilterwithall)
+      * [`fn withGroupLabels(groupLabels)`](#fn-specforproviderinstancefilterwithgrouplabels)
+      * [`fn withGroupLabelsMixin(groupLabels)`](#fn-specforproviderinstancefilterwithgrouplabelsmixin)
+      * [`fn withInstanceNamePrefixes(instanceNamePrefixes)`](#fn-specforproviderinstancefilterwithinstancenameprefixes)
+      * [`fn withInstanceNamePrefixesMixin(instanceNamePrefixes)`](#fn-specforproviderinstancefilterwithinstancenameprefixesmixin)
+      * [`fn withInstances(instances)`](#fn-specforproviderinstancefilterwithinstances)
+      * [`fn withInstancesMixin(instances)`](#fn-specforproviderinstancefilterwithinstancesmixin)
+      * [`fn withZones(zones)`](#fn-specforproviderinstancefilterwithzones)
+      * [`fn withZonesMixin(zones)`](#fn-specforproviderinstancefilterwithzonesmixin)
+      * [`obj spec.forProvider.instanceFilter.groupLabels`](#obj-specforproviderinstancefiltergrouplabels)
+        * [`fn withLabels(labels)`](#fn-specforproviderinstancefiltergrouplabelswithlabels)
+        * [`fn withLabelsMixin(labels)`](#fn-specforproviderinstancefiltergrouplabelswithlabelsmixin)
+    * [`obj spec.forProvider.oneTimeSchedule`](#obj-specforprovideronetimeschedule)
+      * [`fn withExecuteTime(executeTime)`](#fn-specforprovideronetimeschedulewithexecutetime)
+    * [`obj spec.forProvider.patchConfig`](#obj-specforproviderpatchconfig)
+      * [`fn withApt(apt)`](#fn-specforproviderpatchconfigwithapt)
+      * [`fn withAptMixin(apt)`](#fn-specforproviderpatchconfigwithaptmixin)
+      * [`fn withGoo(goo)`](#fn-specforproviderpatchconfigwithgoo)
+      * [`fn withGooMixin(goo)`](#fn-specforproviderpatchconfigwithgoomixin)
+      * [`fn withPostStep(postStep)`](#fn-specforproviderpatchconfigwithpoststep)
+      * [`fn withPostStepMixin(postStep)`](#fn-specforproviderpatchconfigwithpoststepmixin)
+      * [`fn withPreStep(preStep)`](#fn-specforproviderpatchconfigwithprestep)
+      * [`fn withPreStepMixin(preStep)`](#fn-specforproviderpatchconfigwithprestepmixin)
+      * [`fn withRebootConfig(rebootConfig)`](#fn-specforproviderpatchconfigwithrebootconfig)
+      * [`fn withWindowsUpdate(windowsUpdate)`](#fn-specforproviderpatchconfigwithwindowsupdate)
+      * [`fn withWindowsUpdateMixin(windowsUpdate)`](#fn-specforproviderpatchconfigwithwindowsupdatemixin)
+      * [`fn withYum(yum)`](#fn-specforproviderpatchconfigwithyum)
+      * [`fn withYumMixin(yum)`](#fn-specforproviderpatchconfigwithyummixin)
+      * [`fn withZypper(zypper)`](#fn-specforproviderpatchconfigwithzypper)
+      * [`fn withZypperMixin(zypper)`](#fn-specforproviderpatchconfigwithzyppermixin)
+      * [`obj spec.forProvider.patchConfig.apt`](#obj-specforproviderpatchconfigapt)
+        * [`fn withExcludes(excludes)`](#fn-specforproviderpatchconfigaptwithexcludes)
+        * [`fn withExcludesMixin(excludes)`](#fn-specforproviderpatchconfigaptwithexcludesmixin)
+        * [`fn withExclusivePackages(exclusivePackages)`](#fn-specforproviderpatchconfigaptwithexclusivepackages)
+        * [`fn withExclusivePackagesMixin(exclusivePackages)`](#fn-specforproviderpatchconfigaptwithexclusivepackagesmixin)
+        * [`fn withType(type)`](#fn-specforproviderpatchconfigaptwithtype)
+      * [`obj spec.forProvider.patchConfig.goo`](#obj-specforproviderpatchconfiggoo)
+        * [`fn withEnabled(enabled)`](#fn-specforproviderpatchconfiggoowithenabled)
+      * [`obj spec.forProvider.patchConfig.postStep`](#obj-specforproviderpatchconfigpoststep)
+        * [`fn withLinuxExecStepConfig(linuxExecStepConfig)`](#fn-specforproviderpatchconfigpoststepwithlinuxexecstepconfig)
+        * [`fn withLinuxExecStepConfigMixin(linuxExecStepConfig)`](#fn-specforproviderpatchconfigpoststepwithlinuxexecstepconfigmixin)
+        * [`fn withWindowsExecStepConfig(windowsExecStepConfig)`](#fn-specforproviderpatchconfigpoststepwithwindowsexecstepconfig)
+        * [`fn withWindowsExecStepConfigMixin(windowsExecStepConfig)`](#fn-specforproviderpatchconfigpoststepwithwindowsexecstepconfigmixin)
+        * [`obj spec.forProvider.patchConfig.postStep.linuxExecStepConfig`](#obj-specforproviderpatchconfigpoststeplinuxexecstepconfig)
+          * [`fn withAllowedSuccessCodes(allowedSuccessCodes)`](#fn-specforproviderpatchconfigpoststeplinuxexecstepconfigwithallowedsuccesscodes)
+          * [`fn withAllowedSuccessCodesMixin(allowedSuccessCodes)`](#fn-specforproviderpatchconfigpoststeplinuxexecstepconfigwithallowedsuccesscodesmixin)
+          * [`fn withGcsObject(gcsObject)`](#fn-specforproviderpatchconfigpoststeplinuxexecstepconfigwithgcsobject)
+          * [`fn withGcsObjectMixin(gcsObject)`](#fn-specforproviderpatchconfigpoststeplinuxexecstepconfigwithgcsobjectmixin)
+          * [`fn withInterpreter(interpreter)`](#fn-specforproviderpatchconfigpoststeplinuxexecstepconfigwithinterpreter)
+          * [`fn withLocalPath(localPath)`](#fn-specforproviderpatchconfigpoststeplinuxexecstepconfigwithlocalpath)
+          * [`obj spec.forProvider.patchConfig.postStep.linuxExecStepConfig.gcsObject`](#obj-specforproviderpatchconfigpoststeplinuxexecstepconfiggcsobject)
+            * [`fn withBucket(bucket)`](#fn-specforproviderpatchconfigpoststeplinuxexecstepconfiggcsobjectwithbucket)
+            * [`fn withGenerationNumber(generationNumber)`](#fn-specforproviderpatchconfigpoststeplinuxexecstepconfiggcsobjectwithgenerationnumber)
+            * [`fn withObject(object)`](#fn-specforproviderpatchconfigpoststeplinuxexecstepconfiggcsobjectwithobject)
+        * [`obj spec.forProvider.patchConfig.postStep.windowsExecStepConfig`](#obj-specforproviderpatchconfigpoststepwindowsexecstepconfig)
+          * [`fn withAllowedSuccessCodes(allowedSuccessCodes)`](#fn-specforproviderpatchconfigpoststepwindowsexecstepconfigwithallowedsuccesscodes)
+          * [`fn withAllowedSuccessCodesMixin(allowedSuccessCodes)`](#fn-specforproviderpatchconfigpoststepwindowsexecstepconfigwithallowedsuccesscodesmixin)
+          * [`fn withGcsObject(gcsObject)`](#fn-specforproviderpatchconfigpoststepwindowsexecstepconfigwithgcsobject)
+          * [`fn withGcsObjectMixin(gcsObject)`](#fn-specforproviderpatchconfigpoststepwindowsexecstepconfigwithgcsobjectmixin)
+          * [`fn withInterpreter(interpreter)`](#fn-specforproviderpatchconfigpoststepwindowsexecstepconfigwithinterpreter)
+          * [`fn withLocalPath(localPath)`](#fn-specforproviderpatchconfigpoststepwindowsexecstepconfigwithlocalpath)
+          * [`obj spec.forProvider.patchConfig.postStep.windowsExecStepConfig.gcsObject`](#obj-specforproviderpatchconfigpoststepwindowsexecstepconfiggcsobject)
+            * [`fn withBucket(bucket)`](#fn-specforproviderpatchconfigpoststepwindowsexecstepconfiggcsobjectwithbucket)
+            * [`fn withGenerationNumber(generationNumber)`](#fn-specforproviderpatchconfigpoststepwindowsexecstepconfiggcsobjectwithgenerationnumber)
+            * [`fn withObject(object)`](#fn-specforproviderpatchconfigpoststepwindowsexecstepconfiggcsobjectwithobject)
+      * [`obj spec.forProvider.patchConfig.preStep`](#obj-specforproviderpatchconfigprestep)
+        * [`fn withLinuxExecStepConfig(linuxExecStepConfig)`](#fn-specforproviderpatchconfigprestepwithlinuxexecstepconfig)
+        * [`fn withLinuxExecStepConfigMixin(linuxExecStepConfig)`](#fn-specforproviderpatchconfigprestepwithlinuxexecstepconfigmixin)
+        * [`fn withWindowsExecStepConfig(windowsExecStepConfig)`](#fn-specforproviderpatchconfigprestepwithwindowsexecstepconfig)
+        * [`fn withWindowsExecStepConfigMixin(windowsExecStepConfig)`](#fn-specforproviderpatchconfigprestepwithwindowsexecstepconfigmixin)
+        * [`obj spec.forProvider.patchConfig.preStep.linuxExecStepConfig`](#obj-specforproviderpatchconfigpresteplinuxexecstepconfig)
+          * [`fn withAllowedSuccessCodes(allowedSuccessCodes)`](#fn-specforproviderpatchconfigpresteplinuxexecstepconfigwithallowedsuccesscodes)
+          * [`fn withAllowedSuccessCodesMixin(allowedSuccessCodes)`](#fn-specforproviderpatchconfigpresteplinuxexecstepconfigwithallowedsuccesscodesmixin)
+          * [`fn withGcsObject(gcsObject)`](#fn-specforproviderpatchconfigpresteplinuxexecstepconfigwithgcsobject)
+          * [`fn withGcsObjectMixin(gcsObject)`](#fn-specforproviderpatchconfigpresteplinuxexecstepconfigwithgcsobjectmixin)
+          * [`fn withInterpreter(interpreter)`](#fn-specforproviderpatchconfigpresteplinuxexecstepconfigwithinterpreter)
+          * [`fn withLocalPath(localPath)`](#fn-specforproviderpatchconfigpresteplinuxexecstepconfigwithlocalpath)
+          * [`obj spec.forProvider.patchConfig.preStep.linuxExecStepConfig.gcsObject`](#obj-specforproviderpatchconfigpresteplinuxexecstepconfiggcsobject)
+            * [`fn withBucket(bucket)`](#fn-specforproviderpatchconfigpresteplinuxexecstepconfiggcsobjectwithbucket)
+            * [`fn withGenerationNumber(generationNumber)`](#fn-specforproviderpatchconfigpresteplinuxexecstepconfiggcsobjectwithgenerationnumber)
+            * [`fn withObject(object)`](#fn-specforproviderpatchconfigpresteplinuxexecstepconfiggcsobjectwithobject)
+        * [`obj spec.forProvider.patchConfig.preStep.windowsExecStepConfig`](#obj-specforproviderpatchconfigprestepwindowsexecstepconfig)
+          * [`fn withAllowedSuccessCodes(allowedSuccessCodes)`](#fn-specforproviderpatchconfigprestepwindowsexecstepconfigwithallowedsuccesscodes)
+          * [`fn withAllowedSuccessCodesMixin(allowedSuccessCodes)`](#fn-specforproviderpatchconfigprestepwindowsexecstepconfigwithallowedsuccesscodesmixin)
+          * [`fn withGcsObject(gcsObject)`](#fn-specforproviderpatchconfigprestepwindowsexecstepconfigwithgcsobject)
+          * [`fn withGcsObjectMixin(gcsObject)`](#fn-specforproviderpatchconfigprestepwindowsexecstepconfigwithgcsobjectmixin)
+          * [`fn withInterpreter(interpreter)`](#fn-specforproviderpatchconfigprestepwindowsexecstepconfigwithinterpreter)
+          * [`fn withLocalPath(localPath)`](#fn-specforproviderpatchconfigprestepwindowsexecstepconfigwithlocalpath)
+          * [`obj spec.forProvider.patchConfig.preStep.windowsExecStepConfig.gcsObject`](#obj-specforproviderpatchconfigprestepwindowsexecstepconfiggcsobject)
+            * [`fn withBucket(bucket)`](#fn-specforproviderpatchconfigprestepwindowsexecstepconfiggcsobjectwithbucket)
+            * [`fn withGenerationNumber(generationNumber)`](#fn-specforproviderpatchconfigprestepwindowsexecstepconfiggcsobjectwithgenerationnumber)
+            * [`fn withObject(object)`](#fn-specforproviderpatchconfigprestepwindowsexecstepconfiggcsobjectwithobject)
+      * [`obj spec.forProvider.patchConfig.windowsUpdate`](#obj-specforproviderpatchconfigwindowsupdate)
+        * [`fn withClassifications(classifications)`](#fn-specforproviderpatchconfigwindowsupdatewithclassifications)
+        * [`fn withClassificationsMixin(classifications)`](#fn-specforproviderpatchconfigwindowsupdatewithclassificationsmixin)
+        * [`fn withExcludes(excludes)`](#fn-specforproviderpatchconfigwindowsupdatewithexcludes)
+        * [`fn withExcludesMixin(excludes)`](#fn-specforproviderpatchconfigwindowsupdatewithexcludesmixin)
+        * [`fn withExclusivePatches(exclusivePatches)`](#fn-specforproviderpatchconfigwindowsupdatewithexclusivepatches)
+        * [`fn withExclusivePatchesMixin(exclusivePatches)`](#fn-specforproviderpatchconfigwindowsupdatewithexclusivepatchesmixin)
+      * [`obj spec.forProvider.patchConfig.yum`](#obj-specforproviderpatchconfigyum)
+        * [`fn withExcludes(excludes)`](#fn-specforproviderpatchconfigyumwithexcludes)
+        * [`fn withExcludesMixin(excludes)`](#fn-specforproviderpatchconfigyumwithexcludesmixin)
+        * [`fn withExclusivePackages(exclusivePackages)`](#fn-specforproviderpatchconfigyumwithexclusivepackages)
+        * [`fn withExclusivePackagesMixin(exclusivePackages)`](#fn-specforproviderpatchconfigyumwithexclusivepackagesmixin)
+        * [`fn withMinimal(minimal)`](#fn-specforproviderpatchconfigyumwithminimal)
+        * [`fn withSecurity(security)`](#fn-specforproviderpatchconfigyumwithsecurity)
+      * [`obj spec.forProvider.patchConfig.zypper`](#obj-specforproviderpatchconfigzypper)
+        * [`fn withCategories(categories)`](#fn-specforproviderpatchconfigzypperwithcategories)
+        * [`fn withCategoriesMixin(categories)`](#fn-specforproviderpatchconfigzypperwithcategoriesmixin)
+        * [`fn withExcludes(excludes)`](#fn-specforproviderpatchconfigzypperwithexcludes)
+        * [`fn withExcludesMixin(excludes)`](#fn-specforproviderpatchconfigzypperwithexcludesmixin)
+        * [`fn withExclusivePatches(exclusivePatches)`](#fn-specforproviderpatchconfigzypperwithexclusivepatches)
+        * [`fn withExclusivePatchesMixin(exclusivePatches)`](#fn-specforproviderpatchconfigzypperwithexclusivepatchesmixin)
+        * [`fn withSeverities(severities)`](#fn-specforproviderpatchconfigzypperwithseverities)
+        * [`fn withSeveritiesMixin(severities)`](#fn-specforproviderpatchconfigzypperwithseveritiesmixin)
+        * [`fn withWithOptional(withOptional)`](#fn-specforproviderpatchconfigzypperwithwithoptional)
+        * [`fn withWithUpdate(withUpdate)`](#fn-specforproviderpatchconfigzypperwithwithupdate)
+    * [`obj spec.forProvider.recurringSchedule`](#obj-specforproviderrecurringschedule)
+      * [`fn withEndTime(endTime)`](#fn-specforproviderrecurringschedulewithendtime)
+      * [`fn withMonthly(monthly)`](#fn-specforproviderrecurringschedulewithmonthly)
+      * [`fn withMonthlyMixin(monthly)`](#fn-specforproviderrecurringschedulewithmonthlymixin)
+      * [`fn withStartTime(startTime)`](#fn-specforproviderrecurringschedulewithstarttime)
+      * [`fn withTimeOfDay(timeOfDay)`](#fn-specforproviderrecurringschedulewithtimeofday)
+      * [`fn withTimeOfDayMixin(timeOfDay)`](#fn-specforproviderrecurringschedulewithtimeofdaymixin)
+      * [`fn withTimeZone(timeZone)`](#fn-specforproviderrecurringschedulewithtimezone)
+      * [`fn withTimeZoneMixin(timeZone)`](#fn-specforproviderrecurringschedulewithtimezonemixin)
+      * [`fn withWeekly(weekly)`](#fn-specforproviderrecurringschedulewithweekly)
+      * [`fn withWeeklyMixin(weekly)`](#fn-specforproviderrecurringschedulewithweeklymixin)
+      * [`obj spec.forProvider.recurringSchedule.monthly`](#obj-specforproviderrecurringschedulemonthly)
+        * [`fn withMonthDay(monthDay)`](#fn-specforproviderrecurringschedulemonthlywithmonthday)
+        * [`fn withWeekDayOfMonth(weekDayOfMonth)`](#fn-specforproviderrecurringschedulemonthlywithweekdayofmonth)
+        * [`fn withWeekDayOfMonthMixin(weekDayOfMonth)`](#fn-specforproviderrecurringschedulemonthlywithweekdayofmonthmixin)
+        * [`obj spec.forProvider.recurringSchedule.monthly.weekDayOfMonth`](#obj-specforproviderrecurringschedulemonthlyweekdayofmonth)
+          * [`fn withDayOfWeek(dayOfWeek)`](#fn-specforproviderrecurringschedulemonthlyweekdayofmonthwithdayofweek)
+          * [`fn withWeekOrdinal(weekOrdinal)`](#fn-specforproviderrecurringschedulemonthlyweekdayofmonthwithweekordinal)
+      * [`obj spec.forProvider.recurringSchedule.timeOfDay`](#obj-specforproviderrecurringscheduletimeofday)
+        * [`fn withHours(hours)`](#fn-specforproviderrecurringscheduletimeofdaywithhours)
+        * [`fn withMinutes(minutes)`](#fn-specforproviderrecurringscheduletimeofdaywithminutes)
+        * [`fn withNanos(nanos)`](#fn-specforproviderrecurringscheduletimeofdaywithnanos)
+        * [`fn withSeconds(seconds)`](#fn-specforproviderrecurringscheduletimeofdaywithseconds)
+      * [`obj spec.forProvider.recurringSchedule.timeZone`](#obj-specforproviderrecurringscheduletimezone)
+        * [`fn withId(id)`](#fn-specforproviderrecurringscheduletimezonewithid)
+        * [`fn withVersion(version)`](#fn-specforproviderrecurringscheduletimezonewithversion)
+      * [`obj spec.forProvider.recurringSchedule.weekly`](#obj-specforproviderrecurringscheduleweekly)
+        * [`fn withDayOfWeek(dayOfWeek)`](#fn-specforproviderrecurringscheduleweeklywithdayofweek)
+    * [`obj spec.forProvider.rollout`](#obj-specforproviderrollout)
+      * [`fn withDisruptionBudget(disruptionBudget)`](#fn-specforproviderrolloutwithdisruptionbudget)
+      * [`fn withDisruptionBudgetMixin(disruptionBudget)`](#fn-specforproviderrolloutwithdisruptionbudgetmixin)
+      * [`fn withMode(mode)`](#fn-specforproviderrolloutwithmode)
+      * [`obj spec.forProvider.rollout.disruptionBudget`](#obj-specforproviderrolloutdisruptionbudget)
+        * [`fn withFixed(fixed)`](#fn-specforproviderrolloutdisruptionbudgetwithfixed)
+        * [`fn withPercentage(percentage)`](#fn-specforproviderrolloutdisruptionbudgetwithpercentage)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -169,24 +320,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -385,6 +518,1204 @@ withRolloutMixin(rollout)
 "Rollout strategy of the patch job."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.instanceFilter
+
+"VM instances to patch."
+
+### fn spec.forProvider.instanceFilter.withAll
+
+```ts
+withAll(all)
+```
+
+"Target all VM instances in the project. If true, no other criteria is permitted."
+
+### fn spec.forProvider.instanceFilter.withGroupLabels
+
+```ts
+withGroupLabels(groupLabels)
+```
+
+"Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances."
+
+### fn spec.forProvider.instanceFilter.withGroupLabelsMixin
+
+```ts
+withGroupLabelsMixin(groupLabels)
+```
+
+"Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.instanceFilter.withInstanceNamePrefixes
+
+```ts
+withInstanceNamePrefixes(instanceNamePrefixes)
+```
+
+"Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=\"prod-\"."
+
+### fn spec.forProvider.instanceFilter.withInstanceNamePrefixesMixin
+
+```ts
+withInstanceNamePrefixesMixin(instanceNamePrefixes)
+```
+
+"Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=\"prod-\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.instanceFilter.withInstances
+
+```ts
+withInstances(instances)
+```
+
+"Targets any of the VM instances specified. Instances are specified by their URI in the 'form zones/{{zone}}/instances/{{instance_name}}', 'projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}', or 'https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}'"
+
+### fn spec.forProvider.instanceFilter.withInstancesMixin
+
+```ts
+withInstancesMixin(instances)
+```
+
+"Targets any of the VM instances specified. Instances are specified by their URI in the 'form zones/{{zone}}/instances/{{instance_name}}', 'projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}', or 'https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}'"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.instanceFilter.withZones
+
+```ts
+withZones(zones)
+```
+
+"Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone."
+
+### fn spec.forProvider.instanceFilter.withZonesMixin
+
+```ts
+withZonesMixin(zones)
+```
+
+"Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.instanceFilter.groupLabels
+
+"Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances."
+
+### fn spec.forProvider.instanceFilter.groupLabels.withLabels
+
+```ts
+withLabels(labels)
+```
+
+"Compute Engine instance labels that must be present for a VM instance to be targeted by this filter"
+
+### fn spec.forProvider.instanceFilter.groupLabels.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+"Compute Engine instance labels that must be present for a VM instance to be targeted by this filter"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.oneTimeSchedule
+
+"Schedule a one-time execution."
+
+### fn spec.forProvider.oneTimeSchedule.withExecuteTime
+
+```ts
+withExecuteTime(executeTime)
+```
+
+"The desired patch job execution time. A timestamp in RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example: \"2014-10-02T15:01:23.045123456Z\"."
+
+## obj spec.forProvider.patchConfig
+
+"Patch configuration that is applied."
+
+### fn spec.forProvider.patchConfig.withApt
+
+```ts
+withApt(apt)
+```
+
+"Apt update settings. Use this setting to override the default apt patch rules."
+
+### fn spec.forProvider.patchConfig.withAptMixin
+
+```ts
+withAptMixin(apt)
+```
+
+"Apt update settings. Use this setting to override the default apt patch rules."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.withGoo
+
+```ts
+withGoo(goo)
+```
+
+"goo update settings. Use this setting to override the default goo patch rules."
+
+### fn spec.forProvider.patchConfig.withGooMixin
+
+```ts
+withGooMixin(goo)
+```
+
+"goo update settings. Use this setting to override the default goo patch rules."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.withPostStep
+
+```ts
+withPostStep(postStep)
+```
+
+"The ExecStep to run after the patch update."
+
+### fn spec.forProvider.patchConfig.withPostStepMixin
+
+```ts
+withPostStepMixin(postStep)
+```
+
+"The ExecStep to run after the patch update."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.withPreStep
+
+```ts
+withPreStep(preStep)
+```
+
+"The ExecStep to run before the patch update."
+
+### fn spec.forProvider.patchConfig.withPreStepMixin
+
+```ts
+withPreStepMixin(preStep)
+```
+
+"The ExecStep to run before the patch update."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.withRebootConfig
+
+```ts
+withRebootConfig(rebootConfig)
+```
+
+"Post-patch reboot settings. Possible values: [\"DEFAULT\", \"ALWAYS\", \"NEVER\"]"
+
+### fn spec.forProvider.patchConfig.withWindowsUpdate
+
+```ts
+withWindowsUpdate(windowsUpdate)
+```
+
+"Windows update settings. Use this setting to override the default Windows patch rules."
+
+### fn spec.forProvider.patchConfig.withWindowsUpdateMixin
+
+```ts
+withWindowsUpdateMixin(windowsUpdate)
+```
+
+"Windows update settings. Use this setting to override the default Windows patch rules."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.withYum
+
+```ts
+withYum(yum)
+```
+
+"Yum update settings. Use this setting to override the default yum patch rules."
+
+### fn spec.forProvider.patchConfig.withYumMixin
+
+```ts
+withYumMixin(yum)
+```
+
+"Yum update settings. Use this setting to override the default yum patch rules."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.withZypper
+
+```ts
+withZypper(zypper)
+```
+
+"zypper update settings. Use this setting to override the default zypper patch rules."
+
+### fn spec.forProvider.patchConfig.withZypperMixin
+
+```ts
+withZypperMixin(zypper)
+```
+
+"zypper update settings. Use this setting to override the default zypper patch rules."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.patchConfig.apt
+
+"Apt update settings. Use this setting to override the default apt patch rules."
+
+### fn spec.forProvider.patchConfig.apt.withExcludes
+
+```ts
+withExcludes(excludes)
+```
+
+"List of packages to exclude from update. These packages will be excluded."
+
+### fn spec.forProvider.patchConfig.apt.withExcludesMixin
+
+```ts
+withExcludesMixin(excludes)
+```
+
+"List of packages to exclude from update. These packages will be excluded."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.apt.withExclusivePackages
+
+```ts
+withExclusivePackages(exclusivePackages)
+```
+
+"An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields."
+
+### fn spec.forProvider.patchConfig.apt.withExclusivePackagesMixin
+
+```ts
+withExclusivePackagesMixin(exclusivePackages)
+```
+
+"An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.apt.withType
+
+```ts
+withType(type)
+```
+
+"By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead. Possible values: [\"DIST\", \"UPGRADE\"]"
+
+## obj spec.forProvider.patchConfig.goo
+
+"goo update settings. Use this setting to override the default goo patch rules."
+
+### fn spec.forProvider.patchConfig.goo.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+"goo update settings. Use this setting to override the default goo patch rules."
+
+## obj spec.forProvider.patchConfig.postStep
+
+"The ExecStep to run after the patch update."
+
+### fn spec.forProvider.patchConfig.postStep.withLinuxExecStepConfig
+
+```ts
+withLinuxExecStepConfig(linuxExecStepConfig)
+```
+
+"The ExecStepConfig for all Linux VMs targeted by the PatchJob."
+
+### fn spec.forProvider.patchConfig.postStep.withLinuxExecStepConfigMixin
+
+```ts
+withLinuxExecStepConfigMixin(linuxExecStepConfig)
+```
+
+"The ExecStepConfig for all Linux VMs targeted by the PatchJob."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.postStep.withWindowsExecStepConfig
+
+```ts
+withWindowsExecStepConfig(windowsExecStepConfig)
+```
+
+"The ExecStepConfig for all Windows VMs targeted by the PatchJob."
+
+### fn spec.forProvider.patchConfig.postStep.withWindowsExecStepConfigMixin
+
+```ts
+withWindowsExecStepConfigMixin(windowsExecStepConfig)
+```
+
+"The ExecStepConfig for all Windows VMs targeted by the PatchJob."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.patchConfig.postStep.linuxExecStepConfig
+
+"The ExecStepConfig for all Linux VMs targeted by the PatchJob."
+
+### fn spec.forProvider.patchConfig.postStep.linuxExecStepConfig.withAllowedSuccessCodes
+
+```ts
+withAllowedSuccessCodes(allowedSuccessCodes)
+```
+
+"Defaults to [0]. A list of possible return values that the execution can return to indicate a success."
+
+### fn spec.forProvider.patchConfig.postStep.linuxExecStepConfig.withAllowedSuccessCodesMixin
+
+```ts
+withAllowedSuccessCodesMixin(allowedSuccessCodes)
+```
+
+"Defaults to [0]. A list of possible return values that the execution can return to indicate a success."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.postStep.linuxExecStepConfig.withGcsObject
+
+```ts
+withGcsObject(gcsObject)
+```
+
+"A Cloud Storage object containing the executable."
+
+### fn spec.forProvider.patchConfig.postStep.linuxExecStepConfig.withGcsObjectMixin
+
+```ts
+withGcsObjectMixin(gcsObject)
+```
+
+"A Cloud Storage object containing the executable."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.postStep.linuxExecStepConfig.withInterpreter
+
+```ts
+withInterpreter(interpreter)
+```
+
+"The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: [\"SHELL\", \"POWERSHELL\"]"
+
+### fn spec.forProvider.patchConfig.postStep.linuxExecStepConfig.withLocalPath
+
+```ts
+withLocalPath(localPath)
+```
+
+"An absolute path to the executable on the VM."
+
+## obj spec.forProvider.patchConfig.postStep.linuxExecStepConfig.gcsObject
+
+"A Cloud Storage object containing the executable."
+
+### fn spec.forProvider.patchConfig.postStep.linuxExecStepConfig.gcsObject.withBucket
+
+```ts
+withBucket(bucket)
+```
+
+"Bucket of the Cloud Storage object."
+
+### fn spec.forProvider.patchConfig.postStep.linuxExecStepConfig.gcsObject.withGenerationNumber
+
+```ts
+withGenerationNumber(generationNumber)
+```
+
+"Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change."
+
+### fn spec.forProvider.patchConfig.postStep.linuxExecStepConfig.gcsObject.withObject
+
+```ts
+withObject(object)
+```
+
+"Name of the Cloud Storage object."
+
+## obj spec.forProvider.patchConfig.postStep.windowsExecStepConfig
+
+"The ExecStepConfig for all Windows VMs targeted by the PatchJob."
+
+### fn spec.forProvider.patchConfig.postStep.windowsExecStepConfig.withAllowedSuccessCodes
+
+```ts
+withAllowedSuccessCodes(allowedSuccessCodes)
+```
+
+"Defaults to [0]. A list of possible return values that the execution can return to indicate a success."
+
+### fn spec.forProvider.patchConfig.postStep.windowsExecStepConfig.withAllowedSuccessCodesMixin
+
+```ts
+withAllowedSuccessCodesMixin(allowedSuccessCodes)
+```
+
+"Defaults to [0]. A list of possible return values that the execution can return to indicate a success."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.postStep.windowsExecStepConfig.withGcsObject
+
+```ts
+withGcsObject(gcsObject)
+```
+
+"A Cloud Storage object containing the executable."
+
+### fn spec.forProvider.patchConfig.postStep.windowsExecStepConfig.withGcsObjectMixin
+
+```ts
+withGcsObjectMixin(gcsObject)
+```
+
+"A Cloud Storage object containing the executable."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.postStep.windowsExecStepConfig.withInterpreter
+
+```ts
+withInterpreter(interpreter)
+```
+
+"The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: [\"SHELL\", \"POWERSHELL\"]"
+
+### fn spec.forProvider.patchConfig.postStep.windowsExecStepConfig.withLocalPath
+
+```ts
+withLocalPath(localPath)
+```
+
+"An absolute path to the executable on the VM."
+
+## obj spec.forProvider.patchConfig.postStep.windowsExecStepConfig.gcsObject
+
+"A Cloud Storage object containing the executable."
+
+### fn spec.forProvider.patchConfig.postStep.windowsExecStepConfig.gcsObject.withBucket
+
+```ts
+withBucket(bucket)
+```
+
+"Bucket of the Cloud Storage object."
+
+### fn spec.forProvider.patchConfig.postStep.windowsExecStepConfig.gcsObject.withGenerationNumber
+
+```ts
+withGenerationNumber(generationNumber)
+```
+
+"Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change."
+
+### fn spec.forProvider.patchConfig.postStep.windowsExecStepConfig.gcsObject.withObject
+
+```ts
+withObject(object)
+```
+
+"Name of the Cloud Storage object."
+
+## obj spec.forProvider.patchConfig.preStep
+
+"The ExecStep to run before the patch update."
+
+### fn spec.forProvider.patchConfig.preStep.withLinuxExecStepConfig
+
+```ts
+withLinuxExecStepConfig(linuxExecStepConfig)
+```
+
+"The ExecStepConfig for all Linux VMs targeted by the PatchJob."
+
+### fn spec.forProvider.patchConfig.preStep.withLinuxExecStepConfigMixin
+
+```ts
+withLinuxExecStepConfigMixin(linuxExecStepConfig)
+```
+
+"The ExecStepConfig for all Linux VMs targeted by the PatchJob."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.preStep.withWindowsExecStepConfig
+
+```ts
+withWindowsExecStepConfig(windowsExecStepConfig)
+```
+
+"The ExecStepConfig for all Windows VMs targeted by the PatchJob."
+
+### fn spec.forProvider.patchConfig.preStep.withWindowsExecStepConfigMixin
+
+```ts
+withWindowsExecStepConfigMixin(windowsExecStepConfig)
+```
+
+"The ExecStepConfig for all Windows VMs targeted by the PatchJob."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.patchConfig.preStep.linuxExecStepConfig
+
+"The ExecStepConfig for all Linux VMs targeted by the PatchJob."
+
+### fn spec.forProvider.patchConfig.preStep.linuxExecStepConfig.withAllowedSuccessCodes
+
+```ts
+withAllowedSuccessCodes(allowedSuccessCodes)
+```
+
+"Defaults to [0]. A list of possible return values that the execution can return to indicate a success."
+
+### fn spec.forProvider.patchConfig.preStep.linuxExecStepConfig.withAllowedSuccessCodesMixin
+
+```ts
+withAllowedSuccessCodesMixin(allowedSuccessCodes)
+```
+
+"Defaults to [0]. A list of possible return values that the execution can return to indicate a success."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.preStep.linuxExecStepConfig.withGcsObject
+
+```ts
+withGcsObject(gcsObject)
+```
+
+"A Cloud Storage object containing the executable."
+
+### fn spec.forProvider.patchConfig.preStep.linuxExecStepConfig.withGcsObjectMixin
+
+```ts
+withGcsObjectMixin(gcsObject)
+```
+
+"A Cloud Storage object containing the executable."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.preStep.linuxExecStepConfig.withInterpreter
+
+```ts
+withInterpreter(interpreter)
+```
+
+"The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: [\"SHELL\", \"POWERSHELL\"]"
+
+### fn spec.forProvider.patchConfig.preStep.linuxExecStepConfig.withLocalPath
+
+```ts
+withLocalPath(localPath)
+```
+
+"An absolute path to the executable on the VM."
+
+## obj spec.forProvider.patchConfig.preStep.linuxExecStepConfig.gcsObject
+
+"A Cloud Storage object containing the executable."
+
+### fn spec.forProvider.patchConfig.preStep.linuxExecStepConfig.gcsObject.withBucket
+
+```ts
+withBucket(bucket)
+```
+
+"Bucket of the Cloud Storage object."
+
+### fn spec.forProvider.patchConfig.preStep.linuxExecStepConfig.gcsObject.withGenerationNumber
+
+```ts
+withGenerationNumber(generationNumber)
+```
+
+"Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change."
+
+### fn spec.forProvider.patchConfig.preStep.linuxExecStepConfig.gcsObject.withObject
+
+```ts
+withObject(object)
+```
+
+"Name of the Cloud Storage object."
+
+## obj spec.forProvider.patchConfig.preStep.windowsExecStepConfig
+
+"The ExecStepConfig for all Windows VMs targeted by the PatchJob."
+
+### fn spec.forProvider.patchConfig.preStep.windowsExecStepConfig.withAllowedSuccessCodes
+
+```ts
+withAllowedSuccessCodes(allowedSuccessCodes)
+```
+
+"Defaults to [0]. A list of possible return values that the execution can return to indicate a success."
+
+### fn spec.forProvider.patchConfig.preStep.windowsExecStepConfig.withAllowedSuccessCodesMixin
+
+```ts
+withAllowedSuccessCodesMixin(allowedSuccessCodes)
+```
+
+"Defaults to [0]. A list of possible return values that the execution can return to indicate a success."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.preStep.windowsExecStepConfig.withGcsObject
+
+```ts
+withGcsObject(gcsObject)
+```
+
+"A Cloud Storage object containing the executable."
+
+### fn spec.forProvider.patchConfig.preStep.windowsExecStepConfig.withGcsObjectMixin
+
+```ts
+withGcsObjectMixin(gcsObject)
+```
+
+"A Cloud Storage object containing the executable."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.preStep.windowsExecStepConfig.withInterpreter
+
+```ts
+withInterpreter(interpreter)
+```
+
+"The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: [\"SHELL\", \"POWERSHELL\"]"
+
+### fn spec.forProvider.patchConfig.preStep.windowsExecStepConfig.withLocalPath
+
+```ts
+withLocalPath(localPath)
+```
+
+"An absolute path to the executable on the VM."
+
+## obj spec.forProvider.patchConfig.preStep.windowsExecStepConfig.gcsObject
+
+"A Cloud Storage object containing the executable."
+
+### fn spec.forProvider.patchConfig.preStep.windowsExecStepConfig.gcsObject.withBucket
+
+```ts
+withBucket(bucket)
+```
+
+"Bucket of the Cloud Storage object."
+
+### fn spec.forProvider.patchConfig.preStep.windowsExecStepConfig.gcsObject.withGenerationNumber
+
+```ts
+withGenerationNumber(generationNumber)
+```
+
+"Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change."
+
+### fn spec.forProvider.patchConfig.preStep.windowsExecStepConfig.gcsObject.withObject
+
+```ts
+withObject(object)
+```
+
+"Name of the Cloud Storage object."
+
+## obj spec.forProvider.patchConfig.windowsUpdate
+
+"Windows update settings. Use this setting to override the default Windows patch rules."
+
+### fn spec.forProvider.patchConfig.windowsUpdate.withClassifications
+
+```ts
+withClassifications(classifications)
+```
+
+"Only apply updates of these windows update classifications. If empty, all updates are applied. Possible values: [\"CRITICAL\", \"SECURITY\", \"DEFINITION\", \"DRIVER\", \"FEATURE_PACK\", \"SERVICE_PACK\", \"TOOL\", \"UPDATE_ROLLUP\", \"UPDATE\"]"
+
+### fn spec.forProvider.patchConfig.windowsUpdate.withClassificationsMixin
+
+```ts
+withClassificationsMixin(classifications)
+```
+
+"Only apply updates of these windows update classifications. If empty, all updates are applied. Possible values: [\"CRITICAL\", \"SECURITY\", \"DEFINITION\", \"DRIVER\", \"FEATURE_PACK\", \"SERVICE_PACK\", \"TOOL\", \"UPDATE_ROLLUP\", \"UPDATE\"]"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.windowsUpdate.withExcludes
+
+```ts
+withExcludes(excludes)
+```
+
+"List of KBs to exclude from update."
+
+### fn spec.forProvider.patchConfig.windowsUpdate.withExcludesMixin
+
+```ts
+withExcludesMixin(excludes)
+```
+
+"List of KBs to exclude from update."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.windowsUpdate.withExclusivePatches
+
+```ts
+withExclusivePatches(exclusivePatches)
+```
+
+"An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations."
+
+### fn spec.forProvider.patchConfig.windowsUpdate.withExclusivePatchesMixin
+
+```ts
+withExclusivePatchesMixin(exclusivePatches)
+```
+
+"An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.patchConfig.yum
+
+"Yum update settings. Use this setting to override the default yum patch rules."
+
+### fn spec.forProvider.patchConfig.yum.withExcludes
+
+```ts
+withExcludes(excludes)
+```
+
+"List of packages to exclude from update. These packages will be excluded."
+
+### fn spec.forProvider.patchConfig.yum.withExcludesMixin
+
+```ts
+withExcludesMixin(excludes)
+```
+
+"List of packages to exclude from update. These packages will be excluded."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.yum.withExclusivePackages
+
+```ts
+withExclusivePackages(exclusivePackages)
+```
+
+"An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields."
+
+### fn spec.forProvider.patchConfig.yum.withExclusivePackagesMixin
+
+```ts
+withExclusivePackagesMixin(exclusivePackages)
+```
+
+"An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.yum.withMinimal
+
+```ts
+withMinimal(minimal)
+```
+
+"Will cause patch to run yum update-minimal instead."
+
+### fn spec.forProvider.patchConfig.yum.withSecurity
+
+```ts
+withSecurity(security)
+```
+
+"Adds the --security flag to yum update. Not supported on all platforms."
+
+## obj spec.forProvider.patchConfig.zypper
+
+"zypper update settings. Use this setting to override the default zypper patch rules."
+
+### fn spec.forProvider.patchConfig.zypper.withCategories
+
+```ts
+withCategories(categories)
+```
+
+"Install only patches with these categories. Common categories include security, recommended, and feature."
+
+### fn spec.forProvider.patchConfig.zypper.withCategoriesMixin
+
+```ts
+withCategoriesMixin(categories)
+```
+
+"Install only patches with these categories. Common categories include security, recommended, and feature."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.zypper.withExcludes
+
+```ts
+withExcludes(excludes)
+```
+
+"List of packages to exclude from update."
+
+### fn spec.forProvider.patchConfig.zypper.withExcludesMixin
+
+```ts
+withExcludesMixin(excludes)
+```
+
+"List of packages to exclude from update."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.zypper.withExclusivePatches
+
+```ts
+withExclusivePatches(exclusivePatches)
+```
+
+"An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields."
+
+### fn spec.forProvider.patchConfig.zypper.withExclusivePatchesMixin
+
+```ts
+withExclusivePatchesMixin(exclusivePatches)
+```
+
+"An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.zypper.withSeverities
+
+```ts
+withSeverities(severities)
+```
+
+"Install only patches with these severities. Common severities include critical, important, moderate, and low."
+
+### fn spec.forProvider.patchConfig.zypper.withSeveritiesMixin
+
+```ts
+withSeveritiesMixin(severities)
+```
+
+"Install only patches with these severities. Common severities include critical, important, moderate, and low."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.patchConfig.zypper.withWithOptional
+
+```ts
+withWithOptional(withOptional)
+```
+
+"Adds the --with-optional flag to zypper patch."
+
+### fn spec.forProvider.patchConfig.zypper.withWithUpdate
+
+```ts
+withWithUpdate(withUpdate)
+```
+
+"Adds the --with-update flag, to zypper patch."
+
+## obj spec.forProvider.recurringSchedule
+
+"Schedule recurring executions."
+
+### fn spec.forProvider.recurringSchedule.withEndTime
+
+```ts
+withEndTime(endTime)
+```
+
+"The end time at which a recurring patch deployment schedule is no longer active. A timestamp in RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example: \"2014-10-02T15:01:23.045123456Z\"."
+
+### fn spec.forProvider.recurringSchedule.withMonthly
+
+```ts
+withMonthly(monthly)
+```
+
+"Schedule with monthly executions."
+
+### fn spec.forProvider.recurringSchedule.withMonthlyMixin
+
+```ts
+withMonthlyMixin(monthly)
+```
+
+"Schedule with monthly executions."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.recurringSchedule.withStartTime
+
+```ts
+withStartTime(startTime)
+```
+
+"The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment. A timestamp in RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example: \"2014-10-02T15:01:23.045123456Z\"."
+
+### fn spec.forProvider.recurringSchedule.withTimeOfDay
+
+```ts
+withTimeOfDay(timeOfDay)
+```
+
+"Time of the day to run a recurring deployment."
+
+### fn spec.forProvider.recurringSchedule.withTimeOfDayMixin
+
+```ts
+withTimeOfDayMixin(timeOfDay)
+```
+
+"Time of the day to run a recurring deployment."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.recurringSchedule.withTimeZone
+
+```ts
+withTimeZone(timeZone)
+```
+
+"Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are determined by the chosen time zone."
+
+### fn spec.forProvider.recurringSchedule.withTimeZoneMixin
+
+```ts
+withTimeZoneMixin(timeZone)
+```
+
+"Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are determined by the chosen time zone."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.recurringSchedule.withWeekly
+
+```ts
+withWeekly(weekly)
+```
+
+"Schedule with weekly executions."
+
+### fn spec.forProvider.recurringSchedule.withWeeklyMixin
+
+```ts
+withWeeklyMixin(weekly)
+```
+
+"Schedule with weekly executions."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.recurringSchedule.monthly
+
+"Schedule with monthly executions."
+
+### fn spec.forProvider.recurringSchedule.monthly.withMonthDay
+
+```ts
+withMonthDay(monthDay)
+```
+
+"One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run \"every month on the 31st\" will not run in February, April, June, etc."
+
+### fn spec.forProvider.recurringSchedule.monthly.withWeekDayOfMonth
+
+```ts
+withWeekDayOfMonth(weekDayOfMonth)
+```
+
+"Week day in a month."
+
+### fn spec.forProvider.recurringSchedule.monthly.withWeekDayOfMonthMixin
+
+```ts
+withWeekDayOfMonthMixin(weekDayOfMonth)
+```
+
+"Week day in a month."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.recurringSchedule.monthly.weekDayOfMonth
+
+"Week day in a month."
+
+### fn spec.forProvider.recurringSchedule.monthly.weekDayOfMonth.withDayOfWeek
+
+```ts
+withDayOfWeek(dayOfWeek)
+```
+
+"A day of the week. Possible values: [\"MONDAY\", \"TUESDAY\", \"WEDNESDAY\", \"THURSDAY\", \"FRIDAY\", \"SATURDAY\", \"SUNDAY\"]"
+
+### fn spec.forProvider.recurringSchedule.monthly.weekDayOfMonth.withWeekOrdinal
+
+```ts
+withWeekOrdinal(weekOrdinal)
+```
+
+"Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month."
+
+## obj spec.forProvider.recurringSchedule.timeOfDay
+
+"Time of the day to run a recurring deployment."
+
+### fn spec.forProvider.recurringSchedule.timeOfDay.withHours
+
+```ts
+withHours(hours)
+```
+
+"Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value \"24:00:00\" for scenarios like business closing time."
+
+### fn spec.forProvider.recurringSchedule.timeOfDay.withMinutes
+
+```ts
+withMinutes(minutes)
+```
+
+"Minutes of hour of day. Must be from 0 to 59."
+
+### fn spec.forProvider.recurringSchedule.timeOfDay.withNanos
+
+```ts
+withNanos(nanos)
+```
+
+"Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999."
+
+### fn spec.forProvider.recurringSchedule.timeOfDay.withSeconds
+
+```ts
+withSeconds(seconds)
+```
+
+"Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds."
+
+## obj spec.forProvider.recurringSchedule.timeZone
+
+"Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are determined by the chosen time zone."
+
+### fn spec.forProvider.recurringSchedule.timeZone.withId
+
+```ts
+withId(id)
+```
+
+"IANA Time Zone Database time zone, e.g. \"America/New_York\"."
+
+### fn spec.forProvider.recurringSchedule.timeZone.withVersion
+
+```ts
+withVersion(version)
+```
+
+"IANA Time Zone Database version number, e.g. \"2019a\"."
+
+## obj spec.forProvider.recurringSchedule.weekly
+
+"Schedule with weekly executions."
+
+### fn spec.forProvider.recurringSchedule.weekly.withDayOfWeek
+
+```ts
+withDayOfWeek(dayOfWeek)
+```
+
+"IANA Time Zone Database time zone, e.g. \"America/New_York\". Possible values: [\"MONDAY\", \"TUESDAY\", \"WEDNESDAY\", \"THURSDAY\", \"FRIDAY\", \"SATURDAY\", \"SUNDAY\"]"
+
+## obj spec.forProvider.rollout
+
+"Rollout strategy of the patch job."
+
+### fn spec.forProvider.rollout.withDisruptionBudget
+
+```ts
+withDisruptionBudget(disruptionBudget)
+```
+
+"The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops."
+
+### fn spec.forProvider.rollout.withDisruptionBudgetMixin
+
+```ts
+withDisruptionBudgetMixin(disruptionBudget)
+```
+
+"The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.rollout.withMode
+
+```ts
+withMode(mode)
+```
+
+"Mode of the patch rollout. Possible values: [\"ZONE_BY_ZONE\", \"CONCURRENT_ZONES\"]"
+
+## obj spec.forProvider.rollout.disruptionBudget
+
+"The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops."
+
+### fn spec.forProvider.rollout.disruptionBudget.withFixed
+
+```ts
+withFixed(fixed)
+```
+
+"Specifies a fixed value."
+
+### fn spec.forProvider.rollout.disruptionBudget.withPercentage
+
+```ts
+withPercentage(percentage)
+```
+
+"Specifies the relative value defined as a percentage, which will be multiplied by a reference value."
 
 ## obj spec.providerConfigRef
 

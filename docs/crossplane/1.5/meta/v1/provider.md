@@ -22,8 +22,6 @@ permalink: /crossplane/1.5/meta/v1/provider/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -38,8 +36,23 @@ permalink: /crossplane/1.5/meta/v1/provider/
     * [`fn withImage(image)`](#fn-speccontrollerwithimage)
     * [`fn withPermissionRequests(permissionRequests)`](#fn-speccontrollerwithpermissionrequests)
     * [`fn withPermissionRequestsMixin(permissionRequests)`](#fn-speccontrollerwithpermissionrequestsmixin)
+    * [`obj spec.controller.permissionRequests`](#obj-speccontrollerpermissionrequests)
+      * [`fn withApiGroups(apiGroups)`](#fn-speccontrollerpermissionrequestswithapigroups)
+      * [`fn withApiGroupsMixin(apiGroups)`](#fn-speccontrollerpermissionrequestswithapigroupsmixin)
+      * [`fn withNonResourceURLs(nonResourceURLs)`](#fn-speccontrollerpermissionrequestswithnonresourceurls)
+      * [`fn withNonResourceURLsMixin(nonResourceURLs)`](#fn-speccontrollerpermissionrequestswithnonresourceurlsmixin)
+      * [`fn withResourceNames(resourceNames)`](#fn-speccontrollerpermissionrequestswithresourcenames)
+      * [`fn withResourceNamesMixin(resourceNames)`](#fn-speccontrollerpermissionrequestswithresourcenamesmixin)
+      * [`fn withResources(resources)`](#fn-speccontrollerpermissionrequestswithresources)
+      * [`fn withResourcesMixin(resources)`](#fn-speccontrollerpermissionrequestswithresourcesmixin)
+      * [`fn withVerbs(verbs)`](#fn-speccontrollerpermissionrequestswithverbs)
+      * [`fn withVerbsMixin(verbs)`](#fn-speccontrollerpermissionrequestswithverbsmixin)
   * [`obj spec.crossplane`](#obj-speccrossplane)
     * [`fn withVersion(version)`](#fn-speccrossplanewithversion)
+  * [`obj spec.dependsOn`](#obj-specdependson)
+    * [`fn withConfiguration(configuration)`](#fn-specdependsonwithconfiguration)
+    * [`fn withProvider(provider)`](#fn-specdependsonwithprovider)
+    * [`fn withVersion(version)`](#fn-specdependsonwithversion)
 
 ## Fields
 
@@ -157,24 +170,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -285,6 +280,100 @@ withPermissionRequestsMixin(permissionRequests)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.controller.permissionRequests
+
+"PermissionRequests for RBAC rules required for this provider's controller to function. The RBAC manager is responsible for assessing the requested permissions."
+
+### fn spec.controller.permissionRequests.withApiGroups
+
+```ts
+withApiGroups(apiGroups)
+```
+
+"APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed."
+
+### fn spec.controller.permissionRequests.withApiGroupsMixin
+
+```ts
+withApiGroupsMixin(apiGroups)
+```
+
+"APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.controller.permissionRequests.withNonResourceURLs
+
+```ts
+withNonResourceURLs(nonResourceURLs)
+```
+
+"NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as \"pods\" or \"secrets\") or non-resource URL paths (such as \"/api\"),  but not both."
+
+### fn spec.controller.permissionRequests.withNonResourceURLsMixin
+
+```ts
+withNonResourceURLsMixin(nonResourceURLs)
+```
+
+"NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as \"pods\" or \"secrets\") or non-resource URL paths (such as \"/api\"),  but not both."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.controller.permissionRequests.withResourceNames
+
+```ts
+withResourceNames(resourceNames)
+```
+
+"ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed."
+
+### fn spec.controller.permissionRequests.withResourceNamesMixin
+
+```ts
+withResourceNamesMixin(resourceNames)
+```
+
+"ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.controller.permissionRequests.withResources
+
+```ts
+withResources(resources)
+```
+
+"Resources is a list of resources this rule applies to.  ResourceAll represents all resources."
+
+### fn spec.controller.permissionRequests.withResourcesMixin
+
+```ts
+withResourcesMixin(resources)
+```
+
+"Resources is a list of resources this rule applies to.  ResourceAll represents all resources."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.controller.permissionRequests.withVerbs
+
+```ts
+withVerbs(verbs)
+```
+
+"Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds."
+
+### fn spec.controller.permissionRequests.withVerbsMixin
+
+```ts
+withVerbsMixin(verbs)
+```
+
+"Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.crossplane
 
 "Semantic version constraints of Crossplane that package is compatible with."
@@ -296,3 +385,31 @@ withVersion(version)
 ```
 
 "Semantic version constraints of Crossplane that package is compatible with."
+
+## obj spec.dependsOn
+
+"Dependencies on other packages."
+
+### fn spec.dependsOn.withConfiguration
+
+```ts
+withConfiguration(configuration)
+```
+
+"Configuration is the name of a Configuration package image."
+
+### fn spec.dependsOn.withProvider
+
+```ts
+withProvider(provider)
+```
+
+"Provider is the name of a Provider package image."
+
+### fn spec.dependsOn.withVersion
+
+```ts
+withVersion(version)
+```
+
+"Version is the semantic version constraints of the dependency image."

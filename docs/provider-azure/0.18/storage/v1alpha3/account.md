@@ -22,8 +22,6 @@ permalink: /provider-azure/0.18/storage/v1alpha3/account/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -69,6 +67,12 @@ permalink: /provider-azure/0.18/storage/v1alpha3/account/
         * [`fn withIpRulesMixin(ipRules)`](#fn-specstorageaccountspecpropertiesnetworkaclswithiprulesmixin)
         * [`fn withVirtualNetworkRules(virtualNetworkRules)`](#fn-specstorageaccountspecpropertiesnetworkaclswithvirtualnetworkrules)
         * [`fn withVirtualNetworkRulesMixin(virtualNetworkRules)`](#fn-specstorageaccountspecpropertiesnetworkaclswithvirtualnetworkrulesmixin)
+        * [`obj spec.storageAccountSpec.properties.networkAcls.ipRules`](#obj-specstorageaccountspecpropertiesnetworkaclsiprules)
+          * [`fn withAction(action)`](#fn-specstorageaccountspecpropertiesnetworkaclsipruleswithaction)
+          * [`fn withValue(value)`](#fn-specstorageaccountspecpropertiesnetworkaclsipruleswithvalue)
+        * [`obj spec.storageAccountSpec.properties.networkAcls.virtualNetworkRules`](#obj-specstorageaccountspecpropertiesnetworkaclsvirtualnetworkrules)
+          * [`fn withAction(action)`](#fn-specstorageaccountspecpropertiesnetworkaclsvirtualnetworkruleswithaction)
+          * [`fn withId(id)`](#fn-specstorageaccountspecpropertiesnetworkaclsvirtualnetworkruleswithid)
     * [`obj spec.storageAccountSpec.sku`](#obj-specstorageaccountspecsku)
       * [`fn withCapabilities(capabilities)`](#fn-specstorageaccountspecskuwithcapabilities)
       * [`fn withCapabilitiesMixin(capabilities)`](#fn-specstorageaccountspecskuwithcapabilitiesmixin)
@@ -78,6 +82,9 @@ permalink: /provider-azure/0.18/storage/v1alpha3/account/
       * [`fn withName(name)`](#fn-specstorageaccountspecskuwithname)
       * [`fn withResourceType(resourceType)`](#fn-specstorageaccountspecskuwithresourcetype)
       * [`fn withTier(tier)`](#fn-specstorageaccountspecskuwithtier)
+      * [`obj spec.storageAccountSpec.sku.capabilities`](#obj-specstorageaccountspecskucapabilities)
+        * [`fn withName(name)`](#fn-specstorageaccountspecskucapabilitieswithname)
+        * [`fn withValue(value)`](#fn-specstorageaccountspecskucapabilitieswithvalue)
   * [`obj spec.writeConnectionSecretToRef`](#obj-specwriteconnectionsecrettoref)
     * [`fn withName(name)`](#fn-specwriteconnectionsecrettorefwithname)
     * [`fn withNamespace(namespace)`](#fn-specwriteconnectionsecrettorefwithnamespace)
@@ -195,24 +202,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -540,6 +529,46 @@ withVirtualNetworkRulesMixin(virtualNetworkRules)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.storageAccountSpec.properties.networkAcls.ipRules
+
+"IPRules - Sets the IP ACL rules"
+
+### fn spec.storageAccountSpec.properties.networkAcls.ipRules.withAction
+
+```ts
+withAction(action)
+```
+
+"Action - The action of IP ACL rule. Possible values include: 'Allow'"
+
+### fn spec.storageAccountSpec.properties.networkAcls.ipRules.withValue
+
+```ts
+withValue(value)
+```
+
+"IPAddressOrRange - Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed."
+
+## obj spec.storageAccountSpec.properties.networkAcls.virtualNetworkRules
+
+"VirtualNetworkRules - Sets the virtual network rules"
+
+### fn spec.storageAccountSpec.properties.networkAcls.virtualNetworkRules.withAction
+
+```ts
+withAction(action)
+```
+
+"Action - The action of virtual network rule. Possible values include: 'Allow'"
+
+### fn spec.storageAccountSpec.properties.networkAcls.virtualNetworkRules.withId
+
+```ts
+withId(id)
+```
+
+"VirtualNetworkResourceID - Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}."
+
 ## obj spec.storageAccountSpec.sku
 
 "Sku of the storage account."
@@ -611,6 +640,26 @@ withTier(tier)
 ```
 
 "Tier - Gets the sku tier. This is based on the Sku name. \n Possible values include: 'Standard', 'Premium'"
+
+## obj spec.storageAccountSpec.sku.capabilities
+
+"Capabilities - The capability information in the specified sku, including file encryption, network acls, change notification, etc."
+
+### fn spec.storageAccountSpec.sku.capabilities.withName
+
+```ts
+withName(name)
+```
+
+"Name - The name of capability, The capability information in the specified sku, including file encryption, network acls, change notification, etc."
+
+### fn spec.storageAccountSpec.sku.capabilities.withValue
+
+```ts
+withValue(value)
+```
+
+"Value - A string value to indicate states of given capability. Possibly 'true' or 'false'."
 
 ## obj spec.writeConnectionSecretToRef
 

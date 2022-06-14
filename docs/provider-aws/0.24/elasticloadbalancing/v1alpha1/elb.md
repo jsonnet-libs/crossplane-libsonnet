@@ -22,8 +22,6 @@ permalink: /provider-aws/0.24/elasticloadbalancing/v1alpha1/elb/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -56,14 +54,27 @@ permalink: /provider-aws/0.24/elasticloadbalancing/v1alpha1/elb/
       * [`fn withTarget(target)`](#fn-specforproviderhealthcheckwithtarget)
       * [`fn withTimeout(timeout)`](#fn-specforproviderhealthcheckwithtimeout)
       * [`fn withUnhealthyThreshold(unhealthyThreshold)`](#fn-specforproviderhealthcheckwithunhealthythreshold)
+    * [`obj spec.forProvider.listeners`](#obj-specforproviderlisteners)
+      * [`fn withInstancePort(instancePort)`](#fn-specforproviderlistenerswithinstanceport)
+      * [`fn withInstanceProtocol(instanceProtocol)`](#fn-specforproviderlistenerswithinstanceprotocol)
+      * [`fn withLoadBalancerPort(loadBalancerPort)`](#fn-specforproviderlistenerswithloadbalancerport)
+      * [`fn withProtocol(protocol)`](#fn-specforproviderlistenerswithprotocol)
+      * [`fn withSslCertificateId(sslCertificateId)`](#fn-specforproviderlistenerswithsslcertificateid)
+    * [`obj spec.forProvider.securityGroupIdRefs`](#obj-specforprovidersecuritygroupidrefs)
+      * [`fn withName(name)`](#fn-specforprovidersecuritygroupidrefswithname)
     * [`obj spec.forProvider.securityGroupIdSelector`](#obj-specforprovidersecuritygroupidselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidersecuritygroupidselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidersecuritygroupidselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidersecuritygroupidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.subnetIdRefs`](#obj-specforprovidersubnetidrefs)
+      * [`fn withName(name)`](#fn-specforprovidersubnetidrefswithname)
     * [`obj spec.forProvider.subnetIdSelector`](#obj-specforprovidersubnetidselector)
       * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidersubnetidselectorwithmatchcontrollerref)
       * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidersubnetidselectorwithmatchlabels)
       * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidersubnetidselectorwithmatchlabelsmixin)
+    * [`obj spec.forProvider.tags`](#obj-specforprovidertags)
+      * [`fn withKey(key)`](#fn-specforprovidertagswithkey)
+      * [`fn withValue(value)`](#fn-specforprovidertagswithvalue)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -185,24 +196,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -466,6 +459,62 @@ withUnhealthyThreshold(unhealthyThreshold)
 
 "The number of consecutive health check failures required before moving the instance to the Unhealthy state."
 
+## obj spec.forProvider.listeners
+
+"The listeners for this ELB."
+
+### fn spec.forProvider.listeners.withInstancePort
+
+```ts
+withInstancePort(instancePort)
+```
+
+"The port on which the instance is listening."
+
+### fn spec.forProvider.listeners.withInstanceProtocol
+
+```ts
+withInstanceProtocol(instanceProtocol)
+```
+
+"The protocol to use for routing traffic to instances: HTTP, HTTPS, TCP, or SSL. If not specified, the value is same as for Protocol."
+
+### fn spec.forProvider.listeners.withLoadBalancerPort
+
+```ts
+withLoadBalancerPort(loadBalancerPort)
+```
+
+"The port on which the load balancer is listening."
+
+### fn spec.forProvider.listeners.withProtocol
+
+```ts
+withProtocol(protocol)
+```
+
+"The load balancer transport protocol to use for routing: HTTP, HTTPS, TCP, or SSL."
+
+### fn spec.forProvider.listeners.withSslCertificateId
+
+```ts
+withSslCertificateId(sslCertificateId)
+```
+
+"The Amazon Resource Name (ARN) of the server certificate."
+
+## obj spec.forProvider.securityGroupIdRefs
+
+"SecurityGroupIDRefs references to a SecurityGroup and retrieves its SecurityGroupID"
+
+### fn spec.forProvider.securityGroupIdRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
 ## obj spec.forProvider.securityGroupIdSelector
 
 "SecurityGroupIDSelector selects a set of references that each retrieve the SecurityGroupID from the referenced SecurityGroup"
@@ -496,6 +545,18 @@ withMatchLabelsMixin(matchLabels)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.forProvider.subnetIdRefs
+
+"SubnetRefs references to a Subnet to and retrieves its SubnetID"
+
+### fn spec.forProvider.subnetIdRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
 ## obj spec.forProvider.subnetIdSelector
 
 "SubnetSelector selects a set of references that each retrieve the subnetID from the referenced Subnet"
@@ -525,6 +586,26 @@ withMatchLabelsMixin(matchLabels)
 "MatchLabels ensures an object with matching labels is selected."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.tags
+
+"A list of tags to assign to the load balancer."
+
+### fn spec.forProvider.tags.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the tag."
+
+### fn spec.forProvider.tags.withValue
+
+```ts
+withValue(value)
+```
+
+"The value of the tag."
 
 ## obj spec.providerConfigRef
 

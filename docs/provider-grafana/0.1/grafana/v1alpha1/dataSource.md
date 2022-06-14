@@ -22,8 +22,6 @@ permalink: /provider-grafana/0.1/grafana/v1alpha1/dataSource/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -54,10 +52,116 @@ permalink: /provider-grafana/0.1/grafana/v1alpha1/dataSource/
       * [`fn withKey(key)`](#fn-specforproviderbasicauthpasswordsecretrefwithkey)
       * [`fn withName(name)`](#fn-specforproviderbasicauthpasswordsecretrefwithname)
       * [`fn withNamespace(namespace)`](#fn-specforproviderbasicauthpasswordsecretrefwithnamespace)
+    * [`obj spec.forProvider.jsonData`](#obj-specforproviderjsondata)
+      * [`fn withAssumeRoleArn(assumeRoleArn)`](#fn-specforproviderjsondatawithassumerolearn)
+      * [`fn withAuthType(authType)`](#fn-specforproviderjsondatawithauthtype)
+      * [`fn withAuthenticationType(authenticationType)`](#fn-specforproviderjsondatawithauthenticationtype)
+      * [`fn withCatalog(catalog)`](#fn-specforproviderjsondatawithcatalog)
+      * [`fn withClientEmail(clientEmail)`](#fn-specforproviderjsondatawithclientemail)
+      * [`fn withConnMaxLifetime(connMaxLifetime)`](#fn-specforproviderjsondatawithconnmaxlifetime)
+      * [`fn withCustomMetricsNamespaces(customMetricsNamespaces)`](#fn-specforproviderjsondatawithcustommetricsnamespaces)
+      * [`fn withDatabase(database)`](#fn-specforproviderjsondatawithdatabase)
+      * [`fn withDefaultBucket(defaultBucket)`](#fn-specforproviderjsondatawithdefaultbucket)
+      * [`fn withDefaultProject(defaultProject)`](#fn-specforproviderjsondatawithdefaultproject)
+      * [`fn withDefaultRegion(defaultRegion)`](#fn-specforproviderjsondatawithdefaultregion)
+      * [`fn withDerivedField(derivedField)`](#fn-specforproviderjsondatawithderivedfield)
+      * [`fn withDerivedFieldMixin(derivedField)`](#fn-specforproviderjsondatawithderivedfieldmixin)
+      * [`fn withEncrypt(encrypt)`](#fn-specforproviderjsondatawithencrypt)
+      * [`fn withEsVersion(esVersion)`](#fn-specforproviderjsondatawithesversion)
+      * [`fn withExternalId(externalId)`](#fn-specforproviderjsondatawithexternalid)
+      * [`fn withGithubUrl(githubUrl)`](#fn-specforproviderjsondatawithgithuburl)
+      * [`fn withGraphiteVersion(graphiteVersion)`](#fn-specforproviderjsondatawithgraphiteversion)
+      * [`fn withHttpMethod(httpMethod)`](#fn-specforproviderjsondatawithhttpmethod)
+      * [`fn withInterval(interval)`](#fn-specforproviderjsondatawithinterval)
+      * [`fn withLogLevelField(logLevelField)`](#fn-specforproviderjsondatawithloglevelfield)
+      * [`fn withLogMessageField(logMessageField)`](#fn-specforproviderjsondatawithlogmessagefield)
+      * [`fn withMaxConcurrentShardRequests(maxConcurrentShardRequests)`](#fn-specforproviderjsondatawithmaxconcurrentshardrequests)
+      * [`fn withMaxIdleConns(maxIdleConns)`](#fn-specforproviderjsondatawithmaxidleconns)
+      * [`fn withMaxLines(maxLines)`](#fn-specforproviderjsondatawithmaxlines)
+      * [`fn withMaxOpenConns(maxOpenConns)`](#fn-specforproviderjsondatawithmaxopenconns)
+      * [`fn withOrgSlug(orgSlug)`](#fn-specforproviderjsondatawithorgslug)
+      * [`fn withOrganization(organization)`](#fn-specforproviderjsondatawithorganization)
+      * [`fn withOutputLocation(outputLocation)`](#fn-specforproviderjsondatawithoutputlocation)
+      * [`fn withPostgresVersion(postgresVersion)`](#fn-specforproviderjsondatawithpostgresversion)
+      * [`fn withProfile(profile)`](#fn-specforproviderjsondatawithprofile)
+      * [`fn withQueryTimeout(queryTimeout)`](#fn-specforproviderjsondatawithquerytimeout)
+      * [`fn withSigv4AssumeRoleArn(sigv4AssumeRoleArn)`](#fn-specforproviderjsondatawithsigv4assumerolearn)
+      * [`fn withSigv4Auth(sigv4Auth)`](#fn-specforproviderjsondatawithsigv4auth)
+      * [`fn withSigv4AuthType(sigv4AuthType)`](#fn-specforproviderjsondatawithsigv4authtype)
+      * [`fn withSigv4ExternalId(sigv4ExternalId)`](#fn-specforproviderjsondatawithsigv4externalid)
+      * [`fn withSigv4Profile(sigv4Profile)`](#fn-specforproviderjsondatawithsigv4profile)
+      * [`fn withSigv4Region(sigv4Region)`](#fn-specforproviderjsondatawithsigv4region)
+      * [`fn withSslMode(sslMode)`](#fn-specforproviderjsondatawithsslmode)
+      * [`fn withTimeField(timeField)`](#fn-specforproviderjsondatawithtimefield)
+      * [`fn withTimeInterval(timeInterval)`](#fn-specforproviderjsondatawithtimeinterval)
+      * [`fn withTimescaledb(timescaledb)`](#fn-specforproviderjsondatawithtimescaledb)
+      * [`fn withTlsAuth(tlsAuth)`](#fn-specforproviderjsondatawithtlsauth)
+      * [`fn withTlsAuthWithCaCert(tlsAuthWithCaCert)`](#fn-specforproviderjsondatawithtlsauthwithcacert)
+      * [`fn withTlsConfigurationMethod(tlsConfigurationMethod)`](#fn-specforproviderjsondatawithtlsconfigurationmethod)
+      * [`fn withTlsSkipVerify(tlsSkipVerify)`](#fn-specforproviderjsondatawithtlsskipverify)
+      * [`fn withTokenUri(tokenUri)`](#fn-specforproviderjsondatawithtokenuri)
+      * [`fn withTsdbResolution(tsdbResolution)`](#fn-specforproviderjsondatawithtsdbresolution)
+      * [`fn withTsdbVersion(tsdbVersion)`](#fn-specforproviderjsondatawithtsdbversion)
+      * [`fn withVersion(version)`](#fn-specforproviderjsondatawithversion)
+      * [`fn withWorkgroup(workgroup)`](#fn-specforproviderjsondatawithworkgroup)
+      * [`obj spec.forProvider.jsonData.derivedField`](#obj-specforproviderjsondataderivedfield)
+        * [`fn withDatasourceUid(datasourceUid)`](#fn-specforproviderjsondataderivedfieldwithdatasourceuid)
+        * [`fn withMatcherRegex(matcherRegex)`](#fn-specforproviderjsondataderivedfieldwithmatcherregex)
+        * [`fn withName(name)`](#fn-specforproviderjsondataderivedfieldwithname)
+        * [`fn withUrl(url)`](#fn-specforproviderjsondataderivedfieldwithurl)
     * [`obj spec.forProvider.passwordSecretRef`](#obj-specforproviderpasswordsecretref)
       * [`fn withKey(key)`](#fn-specforproviderpasswordsecretrefwithkey)
       * [`fn withName(name)`](#fn-specforproviderpasswordsecretrefwithname)
       * [`fn withNamespace(namespace)`](#fn-specforproviderpasswordsecretrefwithnamespace)
+    * [`obj spec.forProvider.secureJsonData`](#obj-specforprovidersecurejsondata)
+      * [`obj spec.forProvider.secureJsonData.accessKeySecretRef`](#obj-specforprovidersecurejsondataaccesskeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondataaccesskeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondataaccesskeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondataaccesskeysecretrefwithnamespace)
+      * [`obj spec.forProvider.secureJsonData.accessTokenSecretRef`](#obj-specforprovidersecurejsondataaccesstokensecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondataaccesstokensecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondataaccesstokensecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondataaccesstokensecretrefwithnamespace)
+      * [`obj spec.forProvider.secureJsonData.authTokenSecretRef`](#obj-specforprovidersecurejsondataauthtokensecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondataauthtokensecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondataauthtokensecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondataauthtokensecretrefwithnamespace)
+      * [`obj spec.forProvider.secureJsonData.basicAuthPasswordSecretRef`](#obj-specforprovidersecurejsondatabasicauthpasswordsecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondatabasicauthpasswordsecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondatabasicauthpasswordsecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondatabasicauthpasswordsecretrefwithnamespace)
+      * [`obj spec.forProvider.secureJsonData.passwordSecretRef`](#obj-specforprovidersecurejsondatapasswordsecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondatapasswordsecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondatapasswordsecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondatapasswordsecretrefwithnamespace)
+      * [`obj spec.forProvider.secureJsonData.privateKeySecretRef`](#obj-specforprovidersecurejsondataprivatekeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondataprivatekeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondataprivatekeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondataprivatekeysecretrefwithnamespace)
+      * [`obj spec.forProvider.secureJsonData.secretKeySecretRef`](#obj-specforprovidersecurejsondatasecretkeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondatasecretkeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondatasecretkeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondatasecretkeysecretrefwithnamespace)
+      * [`obj spec.forProvider.secureJsonData.sigv4AccessKeySecretRef`](#obj-specforprovidersecurejsondatasigv4accesskeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondatasigv4accesskeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondatasigv4accesskeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondatasigv4accesskeysecretrefwithnamespace)
+      * [`obj spec.forProvider.secureJsonData.sigv4SecretKeySecretRef`](#obj-specforprovidersecurejsondatasigv4secretkeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondatasigv4secretkeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondatasigv4secretkeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondatasigv4secretkeysecretrefwithnamespace)
+      * [`obj spec.forProvider.secureJsonData.tlsClientCertSecretRef`](#obj-specforprovidersecurejsondatatlsclientcertsecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondatatlsclientcertsecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondatatlsclientcertsecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondatatlsclientcertsecretrefwithnamespace)
+      * [`obj spec.forProvider.secureJsonData.tlsClientKeySecretRef`](#obj-specforprovidersecurejsondatatlsclientkeysecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondatatlsclientkeysecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondatatlsclientkeysecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondatatlsclientkeysecretrefwithnamespace)
+      * [`obj spec.forProvider.secureJsonData.tlscaCertSecretRef`](#obj-specforprovidersecurejsondatatlscacertsecretref)
+        * [`fn withKey(key)`](#fn-specforprovidersecurejsondatatlscacertsecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovidersecurejsondatatlscacertsecretrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovidersecurejsondatatlscacertsecretrefwithnamespace)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -179,24 +283,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -436,6 +522,456 @@ withNamespace(namespace)
 
 "Namespace of the secret."
 
+## obj spec.forProvider.jsonData
+
+"(Required by some data source types)"
+
+### fn spec.forProvider.jsonData.withAssumeRoleArn
+
+```ts
+withAssumeRoleArn(assumeRoleArn)
+```
+
+"(CloudWatch, Athena) The ARN of the role to be assumed by Grafana when using the CloudWatch or Athena data source."
+
+### fn spec.forProvider.jsonData.withAuthType
+
+```ts
+withAuthType(authType)
+```
+
+"(CloudWatch, Athena) The authentication type used to access the data source."
+
+### fn spec.forProvider.jsonData.withAuthenticationType
+
+```ts
+withAuthenticationType(authenticationType)
+```
+
+"(Stackdriver) The authentication type: `jwt` or `gce`."
+
+### fn spec.forProvider.jsonData.withCatalog
+
+```ts
+withCatalog(catalog)
+```
+
+"(Athena) Athena catalog."
+
+### fn spec.forProvider.jsonData.withClientEmail
+
+```ts
+withClientEmail(clientEmail)
+```
+
+"(Stackdriver) Service account email address."
+
+### fn spec.forProvider.jsonData.withConnMaxLifetime
+
+```ts
+withConnMaxLifetime(connMaxLifetime)
+```
+
+"(MySQL, PostgreSQL, and MSSQL) Maximum amount of time in seconds a connection may be reused (Grafana v5.4+)."
+
+### fn spec.forProvider.jsonData.withCustomMetricsNamespaces
+
+```ts
+withCustomMetricsNamespaces(customMetricsNamespaces)
+```
+
+"(CloudWatch) A comma-separated list of custom namespaces to be queried by the CloudWatch data source."
+
+### fn spec.forProvider.jsonData.withDatabase
+
+```ts
+withDatabase(database)
+```
+
+"(Athena) Name of the database within the catalog."
+
+### fn spec.forProvider.jsonData.withDefaultBucket
+
+```ts
+withDefaultBucket(defaultBucket)
+```
+
+"(InfluxDB) The default bucket for the data source."
+
+### fn spec.forProvider.jsonData.withDefaultProject
+
+```ts
+withDefaultProject(defaultProject)
+```
+
+"(Stackdriver) The default project for the data source."
+
+### fn spec.forProvider.jsonData.withDefaultRegion
+
+```ts
+withDefaultRegion(defaultRegion)
+```
+
+"(CloudWatch, Athena) The default region for the data source."
+
+### fn spec.forProvider.jsonData.withDerivedField
+
+```ts
+withDerivedField(derivedField)
+```
+
+"(Loki) See https://grafana.com/docs/grafana/latest/datasources/loki/#derived-fields"
+
+### fn spec.forProvider.jsonData.withDerivedFieldMixin
+
+```ts
+withDerivedFieldMixin(derivedField)
+```
+
+"(Loki) See https://grafana.com/docs/grafana/latest/datasources/loki/#derived-fields"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.jsonData.withEncrypt
+
+```ts
+withEncrypt(encrypt)
+```
+
+"(MSSQL) Connection SSL encryption handling: 'disable', 'false' or 'true'."
+
+### fn spec.forProvider.jsonData.withEsVersion
+
+```ts
+withEsVersion(esVersion)
+```
+
+"(Elasticsearch) Elasticsearch semantic version (Grafana v8.0+)."
+
+### fn spec.forProvider.jsonData.withExternalId
+
+```ts
+withExternalId(externalId)
+```
+
+"(CloudWatch, Athena) If you are assuming a role in another account, that has been created with an external ID, specify the external ID here."
+
+### fn spec.forProvider.jsonData.withGithubUrl
+
+```ts
+withGithubUrl(githubUrl)
+```
+
+"(Github) Github URL"
+
+### fn spec.forProvider.jsonData.withGraphiteVersion
+
+```ts
+withGraphiteVersion(graphiteVersion)
+```
+
+"(Graphite) Graphite version."
+
+### fn spec.forProvider.jsonData.withHttpMethod
+
+```ts
+withHttpMethod(httpMethod)
+```
+
+"(Prometheus) HTTP method to use for making requests."
+
+### fn spec.forProvider.jsonData.withInterval
+
+```ts
+withInterval(interval)
+```
+
+"(Elasticsearch) Index date time format. nil(No Pattern), 'Hourly', 'Daily', 'Weekly', 'Monthly' or 'Yearly'."
+
+### fn spec.forProvider.jsonData.withLogLevelField
+
+```ts
+withLogLevelField(logLevelField)
+```
+
+"(Elasticsearch) Which field should be used to indicate the priority of the log message."
+
+### fn spec.forProvider.jsonData.withLogMessageField
+
+```ts
+withLogMessageField(logMessageField)
+```
+
+"(Elasticsearch) Which field should be used as the log message."
+
+### fn spec.forProvider.jsonData.withMaxConcurrentShardRequests
+
+```ts
+withMaxConcurrentShardRequests(maxConcurrentShardRequests)
+```
+
+"(Elasticsearch) Maximum number of concurrent shard requests."
+
+### fn spec.forProvider.jsonData.withMaxIdleConns
+
+```ts
+withMaxIdleConns(maxIdleConns)
+```
+
+"(MySQL, PostgreSQL and MSSQL) Maximum number of connections in the idle connection pool (Grafana v5.4+)."
+
+### fn spec.forProvider.jsonData.withMaxLines
+
+```ts
+withMaxLines(maxLines)
+```
+
+"(Loki) Upper limit for the number of log lines returned by Loki"
+
+### fn spec.forProvider.jsonData.withMaxOpenConns
+
+```ts
+withMaxOpenConns(maxOpenConns)
+```
+
+"(MySQL, PostgreSQL and MSSQL) Maximum number of open connections to the database (Grafana v5.4+)."
+
+### fn spec.forProvider.jsonData.withOrgSlug
+
+```ts
+withOrgSlug(orgSlug)
+```
+
+"(Sentry) Organization slug."
+
+### fn spec.forProvider.jsonData.withOrganization
+
+```ts
+withOrganization(organization)
+```
+
+"(InfluxDB) An organization is a workspace for a group of users. All dashboards, tasks, buckets, members, etc., belong to an organization."
+
+### fn spec.forProvider.jsonData.withOutputLocation
+
+```ts
+withOutputLocation(outputLocation)
+```
+
+"(Athena) AWS S3 bucket to store execution outputs. If not specified, the default query result location from the Workgroup configuration will be used."
+
+### fn spec.forProvider.jsonData.withPostgresVersion
+
+```ts
+withPostgresVersion(postgresVersion)
+```
+
+"(PostgreSQL) Postgres version as a number (903/904/905/906/1000) meaning v9.3, v9.4, etc."
+
+### fn spec.forProvider.jsonData.withProfile
+
+```ts
+withProfile(profile)
+```
+
+"(CloudWatch, Athena) The credentials profile name to use when authentication type is set as 'Credentials file'."
+
+### fn spec.forProvider.jsonData.withQueryTimeout
+
+```ts
+withQueryTimeout(queryTimeout)
+```
+
+"(Prometheus) Timeout for queries made to the Prometheus data source in seconds."
+
+### fn spec.forProvider.jsonData.withSigv4AssumeRoleArn
+
+```ts
+withSigv4AssumeRoleArn(sigv4AssumeRoleArn)
+```
+
+"(Elasticsearch and Prometheus) Specifies the ARN of an IAM role to assume."
+
+### fn spec.forProvider.jsonData.withSigv4Auth
+
+```ts
+withSigv4Auth(sigv4Auth)
+```
+
+"(Elasticsearch and Prometheus) Enable usage of SigV4."
+
+### fn spec.forProvider.jsonData.withSigv4AuthType
+
+```ts
+withSigv4AuthType(sigv4AuthType)
+```
+
+"(Elasticsearch and Prometheus) The Sigv4 authentication provider to use: 'default', 'credentials' or 'keys' (AMG: 'workspace-iam-role')."
+
+### fn spec.forProvider.jsonData.withSigv4ExternalId
+
+```ts
+withSigv4ExternalId(sigv4ExternalId)
+```
+
+"(Elasticsearch and Prometheus) When assuming a role in another account use this external ID."
+
+### fn spec.forProvider.jsonData.withSigv4Profile
+
+```ts
+withSigv4Profile(sigv4Profile)
+```
+
+"(Elasticsearch and Prometheus) Credentials profile name, leave blank for default."
+
+### fn spec.forProvider.jsonData.withSigv4Region
+
+```ts
+withSigv4Region(sigv4Region)
+```
+
+"(Elasticsearch and Prometheus) AWS region to use for Sigv4."
+
+### fn spec.forProvider.jsonData.withSslMode
+
+```ts
+withSslMode(sslMode)
+```
+
+"(PostgreSQL) SSLmode. 'disable', 'require', 'verify-ca' or 'verify-full'."
+
+### fn spec.forProvider.jsonData.withTimeField
+
+```ts
+withTimeField(timeField)
+```
+
+"(Elasticsearch) Which field that should be used as timestamp."
+
+### fn spec.forProvider.jsonData.withTimeInterval
+
+```ts
+withTimeInterval(timeInterval)
+```
+
+"(Prometheus, Elasticsearch, InfluxDB, MySQL, PostgreSQL, and MSSQL) Lowest interval/step value that should be used for this data source."
+
+### fn spec.forProvider.jsonData.withTimescaledb
+
+```ts
+withTimescaledb(timescaledb)
+```
+
+"(PostgreSQL) Enable usage of TimescaleDB extension."
+
+### fn spec.forProvider.jsonData.withTlsAuth
+
+```ts
+withTlsAuth(tlsAuth)
+```
+
+"(All) Enable TLS authentication using client cert configured in secure json data."
+
+### fn spec.forProvider.jsonData.withTlsAuthWithCaCert
+
+```ts
+withTlsAuthWithCaCert(tlsAuthWithCaCert)
+```
+
+"(All) Enable TLS authentication using CA cert."
+
+### fn spec.forProvider.jsonData.withTlsConfigurationMethod
+
+```ts
+withTlsConfigurationMethod(tlsConfigurationMethod)
+```
+
+"(All) SSL Certificate configuration, either by ‘file-path’ or ‘file-content’."
+
+### fn spec.forProvider.jsonData.withTlsSkipVerify
+
+```ts
+withTlsSkipVerify(tlsSkipVerify)
+```
+
+"(All) Controls whether a client verifies the server’s certificate chain and host name."
+
+### fn spec.forProvider.jsonData.withTokenUri
+
+```ts
+withTokenUri(tokenUri)
+```
+
+"(Stackdriver) The token URI used, provided in the service account key."
+
+### fn spec.forProvider.jsonData.withTsdbResolution
+
+```ts
+withTsdbResolution(tsdbResolution)
+```
+
+"(OpenTSDB) Resolution."
+
+### fn spec.forProvider.jsonData.withTsdbVersion
+
+```ts
+withTsdbVersion(tsdbVersion)
+```
+
+"(OpenTSDB) Version."
+
+### fn spec.forProvider.jsonData.withVersion
+
+```ts
+withVersion(version)
+```
+
+"(InfluxDB) InfluxQL or Flux."
+
+### fn spec.forProvider.jsonData.withWorkgroup
+
+```ts
+withWorkgroup(workgroup)
+```
+
+"(Athena) Workgroup to use."
+
+## obj spec.forProvider.jsonData.derivedField
+
+"(Loki) See https://grafana.com/docs/grafana/latest/datasources/loki/#derived-fields"
+
+### fn spec.forProvider.jsonData.derivedField.withDatasourceUid
+
+```ts
+withDatasourceUid(datasourceUid)
+```
+
+
+
+### fn spec.forProvider.jsonData.derivedField.withMatcherRegex
+
+```ts
+withMatcherRegex(matcherRegex)
+```
+
+
+
+### fn spec.forProvider.jsonData.derivedField.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forProvider.jsonData.derivedField.withUrl
+
+```ts
+withUrl(url)
+```
+
+
+
 ## obj spec.forProvider.passwordSecretRef
 
 "(Required by some data source types) The password to use to authenticate to the data source. Defaults to ``."
@@ -457,6 +993,346 @@ withName(name)
 "Name of the secret."
 
 ### fn spec.forProvider.passwordSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData
+
+
+
+## obj spec.forProvider.secureJsonData.accessKeySecretRef
+
+"(CloudWatch, Athena) The access key used to access the data source."
+
+### fn spec.forProvider.secureJsonData.accessKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.accessKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.accessKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData.accessTokenSecretRef
+
+"(Github) The access token used to access the data source."
+
+### fn spec.forProvider.secureJsonData.accessTokenSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.accessTokenSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.accessTokenSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData.authTokenSecretRef
+
+"(Sentry) Authorization token."
+
+### fn spec.forProvider.secureJsonData.authTokenSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.authTokenSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.authTokenSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData.basicAuthPasswordSecretRef
+
+"(All) Password to use for basic authentication."
+
+### fn spec.forProvider.secureJsonData.basicAuthPasswordSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.basicAuthPasswordSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.basicAuthPasswordSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData.passwordSecretRef
+
+"(All) Password to use for authentication."
+
+### fn spec.forProvider.secureJsonData.passwordSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.passwordSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.passwordSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData.privateKeySecretRef
+
+"(Stackdriver) The service account key `private_key` to use to access the data source."
+
+### fn spec.forProvider.secureJsonData.privateKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.privateKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.privateKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData.secretKeySecretRef
+
+"(CloudWatch, Athena) The secret key to use to access the data source."
+
+### fn spec.forProvider.secureJsonData.secretKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.secretKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.secretKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData.sigv4AccessKeySecretRef
+
+"(Elasticsearch and Prometheus) SigV4 access key. Required when using 'keys' auth provider."
+
+### fn spec.forProvider.secureJsonData.sigv4AccessKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.sigv4AccessKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.sigv4AccessKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData.sigv4SecretKeySecretRef
+
+"(Elasticsearch and Prometheus) SigV4 secret key. Required when using 'keys' auth provider."
+
+### fn spec.forProvider.secureJsonData.sigv4SecretKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.sigv4SecretKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.sigv4SecretKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData.tlsClientCertSecretRef
+
+"(All) TLS Client cert for outgoing requests."
+
+### fn spec.forProvider.secureJsonData.tlsClientCertSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.tlsClientCertSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.tlsClientCertSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData.tlsClientKeySecretRef
+
+"(All) TLS Client key for outgoing requests."
+
+### fn spec.forProvider.secureJsonData.tlsClientKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.tlsClientKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.tlsClientKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.secureJsonData.tlscaCertSecretRef
+
+"(All) CA cert for out going requests."
+
+### fn spec.forProvider.secureJsonData.tlscaCertSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.secureJsonData.tlscaCertSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.secureJsonData.tlscaCertSecretRef.withNamespace
 
 ```ts
 withNamespace(namespace)

@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/monitoring/v1alpha2/uptimeCheckConfig/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -50,6 +48,37 @@ permalink: /provider-jet-gcp/0.2/monitoring/v1alpha2/uptimeCheckConfig/
     * [`fn withTcpCheck(tcpCheck)`](#fn-specforproviderwithtcpcheck)
     * [`fn withTcpCheckMixin(tcpCheck)`](#fn-specforproviderwithtcpcheckmixin)
     * [`fn withTimeout(timeout)`](#fn-specforproviderwithtimeout)
+    * [`obj spec.forProvider.contentMatchers`](#obj-specforprovidercontentmatchers)
+      * [`fn withContent(content)`](#fn-specforprovidercontentmatcherswithcontent)
+      * [`fn withMatcher(matcher)`](#fn-specforprovidercontentmatcherswithmatcher)
+    * [`obj spec.forProvider.httpCheck`](#obj-specforproviderhttpcheck)
+      * [`fn withAuthInfo(authInfo)`](#fn-specforproviderhttpcheckwithauthinfo)
+      * [`fn withAuthInfoMixin(authInfo)`](#fn-specforproviderhttpcheckwithauthinfomixin)
+      * [`fn withBody(body)`](#fn-specforproviderhttpcheckwithbody)
+      * [`fn withContentType(contentType)`](#fn-specforproviderhttpcheckwithcontenttype)
+      * [`fn withHeaders(headers)`](#fn-specforproviderhttpcheckwithheaders)
+      * [`fn withHeadersMixin(headers)`](#fn-specforproviderhttpcheckwithheadersmixin)
+      * [`fn withMaskHeaders(maskHeaders)`](#fn-specforproviderhttpcheckwithmaskheaders)
+      * [`fn withPath(path)`](#fn-specforproviderhttpcheckwithpath)
+      * [`fn withPort(port)`](#fn-specforproviderhttpcheckwithport)
+      * [`fn withRequestMethod(requestMethod)`](#fn-specforproviderhttpcheckwithrequestmethod)
+      * [`fn withUseSsl(useSsl)`](#fn-specforproviderhttpcheckwithusessl)
+      * [`fn withValidateSsl(validateSsl)`](#fn-specforproviderhttpcheckwithvalidatessl)
+      * [`obj spec.forProvider.httpCheck.authInfo`](#obj-specforproviderhttpcheckauthinfo)
+        * [`fn withUsername(username)`](#fn-specforproviderhttpcheckauthinfowithusername)
+        * [`obj spec.forProvider.httpCheck.authInfo.passwordSecretRef`](#obj-specforproviderhttpcheckauthinfopasswordsecretref)
+          * [`fn withKey(key)`](#fn-specforproviderhttpcheckauthinfopasswordsecretrefwithkey)
+          * [`fn withName(name)`](#fn-specforproviderhttpcheckauthinfopasswordsecretrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specforproviderhttpcheckauthinfopasswordsecretrefwithnamespace)
+    * [`obj spec.forProvider.monitoredResource`](#obj-specforprovidermonitoredresource)
+      * [`fn withLabels(labels)`](#fn-specforprovidermonitoredresourcewithlabels)
+      * [`fn withLabelsMixin(labels)`](#fn-specforprovidermonitoredresourcewithlabelsmixin)
+      * [`fn withType(type)`](#fn-specforprovidermonitoredresourcewithtype)
+    * [`obj spec.forProvider.resourceGroup`](#obj-specforproviderresourcegroup)
+      * [`fn withGroupId(groupId)`](#fn-specforproviderresourcegroupwithgroupid)
+      * [`fn withResourceType(resourceType)`](#fn-specforproviderresourcegroupwithresourcetype)
+    * [`obj spec.forProvider.tcpCheck`](#obj-specforprovidertcpcheck)
+      * [`fn withPort(port)`](#fn-specforprovidertcpcheckwithport)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -171,24 +200,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -405,6 +416,232 @@ withTimeout(timeout)
 ```
 
 "The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration"
+
+## obj spec.forProvider.contentMatchers
+
+"The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required."
+
+### fn spec.forProvider.contentMatchers.withContent
+
+```ts
+withContent(content)
+```
+
+"String or regex content to match (max 1024 bytes)"
+
+### fn spec.forProvider.contentMatchers.withMatcher
+
+```ts
+withMatcher(matcher)
+```
+
+"The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value: \"CONTAINS_STRING\" Possible values: [\"CONTAINS_STRING\", \"NOT_CONTAINS_STRING\", \"MATCHES_REGEX\", \"NOT_MATCHES_REGEX\"]"
+
+## obj spec.forProvider.httpCheck
+
+"Contains information needed to make an HTTP or HTTPS check."
+
+### fn spec.forProvider.httpCheck.withAuthInfo
+
+```ts
+withAuthInfo(authInfo)
+```
+
+"The authentication information. Optional when creating an HTTP check; defaults to empty."
+
+### fn spec.forProvider.httpCheck.withAuthInfoMixin
+
+```ts
+withAuthInfoMixin(authInfo)
+```
+
+"The authentication information. Optional when creating an HTTP check; defaults to empty."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.httpCheck.withBody
+
+```ts
+withBody(body)
+```
+
+"The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. \"foo=bar\" in URL-encoded form is \"foo%3Dbar\" and in base64 encoding is \"Zm9vJTI1M0RiYXI=\"."
+
+### fn spec.forProvider.httpCheck.withContentType
+
+```ts
+withContentType(contentType)
+```
+
+"The content type to use for the check. Possible values: [\"TYPE_UNSPECIFIED\", \"URL_ENCODED\"]"
+
+### fn spec.forProvider.httpCheck.withHeaders
+
+```ts
+withHeaders(headers)
+```
+
+"The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100."
+
+### fn spec.forProvider.httpCheck.withHeadersMixin
+
+```ts
+withHeadersMixin(headers)
+```
+
+"The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.httpCheck.withMaskHeaders
+
+```ts
+withMaskHeaders(maskHeaders)
+```
+
+"Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******."
+
+### fn spec.forProvider.httpCheck.withPath
+
+```ts
+withPath(path)
+```
+
+"The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to \"/\")."
+
+### fn spec.forProvider.httpCheck.withPort
+
+```ts
+withPort(port)
+```
+
+"The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) and path to construct the full URL. Optional (defaults to 80 without SSL, or 443 with SSL)."
+
+### fn spec.forProvider.httpCheck.withRequestMethod
+
+```ts
+withRequestMethod(requestMethod)
+```
+
+"The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET. Default value: \"GET\" Possible values: [\"METHOD_UNSPECIFIED\", \"GET\", \"POST\"]"
+
+### fn spec.forProvider.httpCheck.withUseSsl
+
+```ts
+withUseSsl(useSsl)
+```
+
+"If true, use HTTPS instead of HTTP to run the check."
+
+### fn spec.forProvider.httpCheck.withValidateSsl
+
+```ts
+withValidateSsl(validateSsl)
+```
+
+"Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect."
+
+## obj spec.forProvider.httpCheck.authInfo
+
+"The authentication information. Optional when creating an HTTP check; defaults to empty."
+
+### fn spec.forProvider.httpCheck.authInfo.withUsername
+
+```ts
+withUsername(username)
+```
+
+"The username to authenticate."
+
+## obj spec.forProvider.httpCheck.authInfo.passwordSecretRef
+
+"The password to authenticate."
+
+### fn spec.forProvider.httpCheck.authInfo.passwordSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select."
+
+### fn spec.forProvider.httpCheck.authInfo.passwordSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.forProvider.httpCheck.authInfo.passwordSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.forProvider.monitoredResource
+
+"The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer"
+
+### fn spec.forProvider.monitoredResource.withLabels
+
+```ts
+withLabels(labels)
+```
+
+"Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels \"project_id\", \"instance_id\", and \"zone\"."
+
+### fn spec.forProvider.monitoredResource.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+"Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels \"project_id\", \"instance_id\", and \"zone\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.monitoredResource.withType
+
+```ts
+withType(type)
+```
+
+"The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types (https://cloud.google.com/monitoring/api/resources) and Logging resource types (https://cloud.google.com/logging/docs/api/v2/resource-list)."
+
+## obj spec.forProvider.resourceGroup
+
+"The group resource associated with the configuration."
+
+### fn spec.forProvider.resourceGroup.withGroupId
+
+```ts
+withGroupId(groupId)
+```
+
+"The group of resources being monitored. Should be the 'name' of a group"
+
+### fn spec.forProvider.resourceGroup.withResourceType
+
+```ts
+withResourceType(resourceType)
+```
+
+"The resource type of the group members. Possible values: [\"RESOURCE_TYPE_UNSPECIFIED\", \"INSTANCE\", \"AWS_ELB_LOAD_BALANCER\"]"
+
+## obj spec.forProvider.tcpCheck
+
+"Contains information needed to make a TCP check."
+
+### fn spec.forProvider.tcpCheck.withPort
+
+```ts
+withPort(port)
+```
+
+"The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL."
 
 ## obj spec.providerConfigRef
 

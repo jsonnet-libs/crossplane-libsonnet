@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha2/managedSSLCertificate/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -40,6 +38,9 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha2/managedSSLCertificate/
     * [`fn withManagedMixin(managed)`](#fn-specforproviderwithmanagedmixin)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withType(type)`](#fn-specforproviderwithtype)
+    * [`obj spec.forProvider.managed`](#obj-specforprovidermanaged)
+      * [`fn withDomains(domains)`](#fn-specforprovidermanagedwithdomains)
+      * [`fn withDomainsMixin(domains)`](#fn-specforprovidermanagedwithdomainsmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -161,24 +162,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -305,6 +288,28 @@ withType(type)
 ```
 
 "Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: \"MANAGED\" Possible values: [\"MANAGED\"]"
+
+## obj spec.forProvider.managed
+
+"Properties relevant to a managed certificate.  These will be used if the certificate is managed (as indicated by a value of 'MANAGED' in 'type')."
+
+### fn spec.forProvider.managed.withDomains
+
+```ts
+withDomains(domains)
+```
+
+"Domains for which a managed SSL certificate will be valid.  Currently, there can be up to 100 domains in this list."
+
+### fn spec.forProvider.managed.withDomainsMixin
+
+```ts
+withDomainsMixin(domains)
+```
+
+"Domains for which a managed SSL certificate will be valid.  Currently, there can be up to 100 domains in this list."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.providerConfigRef
 

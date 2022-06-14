@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/orgpolicy/v1alpha1/policy/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -38,6 +36,29 @@ permalink: /provider-jet-gcp/0.2/orgpolicy/v1alpha1/policy/
     * [`fn withParent(parent)`](#fn-specforproviderwithparent)
     * [`fn withSpec(spec)`](#fn-specforproviderwithspec)
     * [`fn withSpecMixin(spec)`](#fn-specforproviderwithspecmixin)
+    * [`obj spec.forProvider.spec`](#obj-specforproviderspec)
+      * [`fn withInheritFromParent(inheritFromParent)`](#fn-specforproviderspecwithinheritfromparent)
+      * [`fn withReset(reset)`](#fn-specforproviderspecwithreset)
+      * [`fn withRules(rules)`](#fn-specforproviderspecwithrules)
+      * [`fn withRulesMixin(rules)`](#fn-specforproviderspecwithrulesmixin)
+      * [`obj spec.forProvider.spec.rules`](#obj-specforproviderspecrules)
+        * [`fn withAllowAll(allowAll)`](#fn-specforproviderspecruleswithallowall)
+        * [`fn withCondition(condition)`](#fn-specforproviderspecruleswithcondition)
+        * [`fn withConditionMixin(condition)`](#fn-specforproviderspecruleswithconditionmixin)
+        * [`fn withDenyAll(denyAll)`](#fn-specforproviderspecruleswithdenyall)
+        * [`fn withEnforce(enforce)`](#fn-specforproviderspecruleswithenforce)
+        * [`fn withValues(values)`](#fn-specforproviderspecruleswithvalues)
+        * [`fn withValuesMixin(values)`](#fn-specforproviderspecruleswithvaluesmixin)
+        * [`obj spec.forProvider.spec.rules.condition`](#obj-specforproviderspecrulescondition)
+          * [`fn withDescription(description)`](#fn-specforproviderspecrulesconditionwithdescription)
+          * [`fn withExpression(expression)`](#fn-specforproviderspecrulesconditionwithexpression)
+          * [`fn withLocation(location)`](#fn-specforproviderspecrulesconditionwithlocation)
+          * [`fn withTitle(title)`](#fn-specforproviderspecrulesconditionwithtitle)
+        * [`obj spec.forProvider.spec.rules.values`](#obj-specforproviderspecrulesvalues)
+          * [`fn withAllowedValues(allowedValues)`](#fn-specforproviderspecrulesvalueswithallowedvalues)
+          * [`fn withAllowedValuesMixin(allowedValues)`](#fn-specforproviderspecrulesvalueswithallowedvaluesmixin)
+          * [`fn withDeniedValues(deniedValues)`](#fn-specforproviderspecrulesvalueswithdeniedvalues)
+          * [`fn withDeniedValuesMixin(deniedValues)`](#fn-specforproviderspecrulesvalueswithdeniedvaluesmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -162,24 +183,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -285,6 +288,184 @@ withSpecMixin(spec)
 ```
 
 "Basic information about the Organization Policy."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.spec
+
+"Basic information about the Organization Policy."
+
+### fn spec.forProvider.spec.withInheritFromParent
+
+```ts
+withInheritFromParent(inheritFromParent)
+```
+
+"Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true, PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present in the effective policy. If it is false, then no rules are inherited, and this Policy becomes the new root for evaluation. This field can be set only for Policies which configure list constraints."
+
+### fn spec.forProvider.spec.withReset
+
+```ts
+withReset(reset)
+```
+
+"Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific `Constraint` at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false."
+
+### fn spec.forProvider.spec.withRules
+
+```ts
+withRules(rules)
+```
+
+"Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence."
+
+### fn spec.forProvider.spec.withRulesMixin
+
+```ts
+withRulesMixin(rules)
+```
+
+"Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.spec.rules
+
+"Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence."
+
+### fn spec.forProvider.spec.rules.withAllowAll
+
+```ts
+withAllowAll(allowAll)
+```
+
+"Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints."
+
+### fn spec.forProvider.spec.rules.withCondition
+
+```ts
+withCondition(condition)
+```
+
+"A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr' must include from 1 to 10 subexpressions, joined by the \"||\" or \"&&\" operators. Each subexpression must be of the form \"resource.matchTag('/tag_key_short_name, 'tag_value_short_name')\". or \"resource.matchTagId('tagKeys/key_id', 'tagValues/value_id')\". where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: \"resource.matchTag('123456789/environment, 'prod')\". or \"resource.matchTagId('tagKeys/123', 'tagValues/456')\"."
+
+### fn spec.forProvider.spec.rules.withConditionMixin
+
+```ts
+withConditionMixin(condition)
+```
+
+"A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr' must include from 1 to 10 subexpressions, joined by the \"||\" or \"&&\" operators. Each subexpression must be of the form \"resource.matchTag('/tag_key_short_name, 'tag_value_short_name')\". or \"resource.matchTagId('tagKeys/key_id', 'tagValues/value_id')\". where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: \"resource.matchTag('123456789/environment, 'prod')\". or \"resource.matchTagId('tagKeys/123', 'tagValues/456')\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.rules.withDenyAll
+
+```ts
+withDenyAll(denyAll)
+```
+
+"Setting this to true means that all values are denied. This field can be set only in Policies for list constraints."
+
+### fn spec.forProvider.spec.rules.withEnforce
+
+```ts
+withEnforce(enforce)
+```
+
+"If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints."
+
+### fn spec.forProvider.spec.rules.withValues
+
+```ts
+withValues(values)
+```
+
+"List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints."
+
+### fn spec.forProvider.spec.rules.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.spec.rules.condition
+
+"A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr' must include from 1 to 10 subexpressions, joined by the \"||\" or \"&&\" operators. Each subexpression must be of the form \"resource.matchTag('/tag_key_short_name, 'tag_value_short_name')\". or \"resource.matchTagId('tagKeys/key_id', 'tagValues/value_id')\". where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: \"resource.matchTag('123456789/environment, 'prod')\". or \"resource.matchTagId('tagKeys/123', 'tagValues/456')\"."
+
+### fn spec.forProvider.spec.rules.condition.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI."
+
+### fn spec.forProvider.spec.rules.condition.withExpression
+
+```ts
+withExpression(expression)
+```
+
+"Textual representation of an expression in Common Expression Language syntax."
+
+### fn spec.forProvider.spec.rules.condition.withLocation
+
+```ts
+withLocation(location)
+```
+
+"Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file."
+
+### fn spec.forProvider.spec.rules.condition.withTitle
+
+```ts
+withTitle(title)
+```
+
+"Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression."
+
+## obj spec.forProvider.spec.rules.values
+
+"List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints."
+
+### fn spec.forProvider.spec.rules.values.withAllowedValues
+
+```ts
+withAllowedValues(allowedValues)
+```
+
+"List of values allowed at this resource."
+
+### fn spec.forProvider.spec.rules.values.withAllowedValuesMixin
+
+```ts
+withAllowedValuesMixin(allowedValues)
+```
+
+"List of values allowed at this resource."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.spec.rules.values.withDeniedValues
+
+```ts
+withDeniedValues(deniedValues)
+```
+
+"List of values denied at this resource."
+
+### fn spec.forProvider.spec.rules.values.withDeniedValuesMixin
+
+```ts
+withDeniedValuesMixin(deniedValues)
+```
+
+"List of values denied at this resource."
 
 **Note:** This function appends passed data to existing values
 

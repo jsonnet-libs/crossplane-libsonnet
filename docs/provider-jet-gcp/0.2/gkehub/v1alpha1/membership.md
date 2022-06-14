@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/gkehub/v1alpha1/membership/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -42,6 +40,13 @@ permalink: /provider-jet-gcp/0.2/gkehub/v1alpha1/membership/
     * [`fn withLabelsMixin(labels)`](#fn-specforproviderwithlabelsmixin)
     * [`fn withMembershipId(membershipId)`](#fn-specforproviderwithmembershipid)
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
+    * [`obj spec.forProvider.authority`](#obj-specforproviderauthority)
+      * [`fn withIssuer(issuer)`](#fn-specforproviderauthoritywithissuer)
+    * [`obj spec.forProvider.endpoint`](#obj-specforproviderendpoint)
+      * [`fn withGkeCluster(gkeCluster)`](#fn-specforproviderendpointwithgkecluster)
+      * [`fn withGkeClusterMixin(gkeCluster)`](#fn-specforproviderendpointwithgkeclustermixin)
+      * [`obj spec.forProvider.endpoint.gkeCluster`](#obj-specforproviderendpointgkecluster)
+        * [`fn withResourceLink(resourceLink)`](#fn-specforproviderendpointgkeclusterwithresourcelink)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +168,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -327,6 +314,52 @@ withProject(project)
 ```
 
 
+
+## obj spec.forProvider.authority
+
+"Authority encodes how Google will recognize identities from this Membership. See the workload identity documentation for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity"
+
+### fn spec.forProvider.authority.withIssuer
+
+```ts
+withIssuer(issuer)
+```
+
+"A JSON Web Token (JWT) issuer URI. 'issuer' must start with 'https://' and // be a valid with length <2000 characters. For example: 'https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster' (must be 'locations' rather than 'zones'). If the cluster is provisioned with Terraform, this is '\"https://container.googleapis.com/v1/${google_container_cluster.my-cluster.id}\"'."
+
+## obj spec.forProvider.endpoint
+
+"If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource."
+
+### fn spec.forProvider.endpoint.withGkeCluster
+
+```ts
+withGkeCluster(gkeCluster)
+```
+
+"If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource."
+
+### fn spec.forProvider.endpoint.withGkeClusterMixin
+
+```ts
+withGkeClusterMixin(gkeCluster)
+```
+
+"If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.endpoint.gkeCluster
+
+"If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource."
+
+### fn spec.forProvider.endpoint.gkeCluster.withResourceLink
+
+```ts
+withResourceLink(resourceLink)
+```
+
+"Self-link of the GCP resource for the GKE cluster. For example: '//container.googleapis.com/projects/my-project/zones/us-west1-a/clusters/my-cluster'. It can be at the most 1000 characters in length. If the cluster is provisioned with Terraform, this can be '\"//container.googleapis.com/${google_container_cluster.my-cluster.id}\"' or 'google_container_cluster.my-cluster.id'."
 
 ## obj spec.providerConfigRef
 

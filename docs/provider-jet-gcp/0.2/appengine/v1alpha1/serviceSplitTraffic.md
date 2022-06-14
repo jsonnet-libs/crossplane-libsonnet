@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/serviceSplitTraffic/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -39,6 +37,10 @@ permalink: /provider-jet-gcp/0.2/appengine/v1alpha1/serviceSplitTraffic/
     * [`fn withService(service)`](#fn-specforproviderwithservice)
     * [`fn withSplit(split)`](#fn-specforproviderwithsplit)
     * [`fn withSplitMixin(split)`](#fn-specforproviderwithsplitmixin)
+    * [`obj spec.forProvider.split`](#obj-specforprovidersplit)
+      * [`fn withAllocations(allocations)`](#fn-specforprovidersplitwithallocations)
+      * [`fn withAllocationsMixin(allocations)`](#fn-specforprovidersplitwithallocationsmixin)
+      * [`fn withShardBy(shardBy)`](#fn-specforprovidersplitwithshardby)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -163,24 +165,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -296,6 +280,36 @@ withSplitMixin(split)
 "Mapping that defines fractional HTTP traffic diversion to different versions within the service."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.split
+
+"Mapping that defines fractional HTTP traffic diversion to different versions within the service."
+
+### fn spec.forProvider.split.withAllocations
+
+```ts
+withAllocations(allocations)
+```
+
+"Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits."
+
+### fn spec.forProvider.split.withAllocationsMixin
+
+```ts
+withAllocationsMixin(allocations)
+```
+
+"Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.split.withShardBy
+
+```ts
+withShardBy(shardBy)
+```
+
+"Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed. Possible values: [\"UNSPECIFIED\", \"COOKIE\", \"IP\", \"RANDOM\"]"
 
 ## obj spec.providerConfigRef
 

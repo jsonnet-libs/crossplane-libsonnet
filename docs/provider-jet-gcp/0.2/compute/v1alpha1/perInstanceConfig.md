@@ -22,8 +22,6 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/perInstanceConfig/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -43,6 +41,16 @@ permalink: /provider-jet-gcp/0.2/compute/v1alpha1/perInstanceConfig/
     * [`fn withProject(project)`](#fn-specforproviderwithproject)
     * [`fn withRemoveInstanceStateOnDestroy(removeInstanceStateOnDestroy)`](#fn-specforproviderwithremoveinstancestateondestroy)
     * [`fn withZone(zone)`](#fn-specforproviderwithzone)
+    * [`obj spec.forProvider.preservedState`](#obj-specforproviderpreservedstate)
+      * [`fn withDisk(disk)`](#fn-specforproviderpreservedstatewithdisk)
+      * [`fn withDiskMixin(disk)`](#fn-specforproviderpreservedstatewithdiskmixin)
+      * [`fn withMetadata(metadata)`](#fn-specforproviderpreservedstatewithmetadata)
+      * [`fn withMetadataMixin(metadata)`](#fn-specforproviderpreservedstatewithmetadatamixin)
+      * [`obj spec.forProvider.preservedState.disk`](#obj-specforproviderpreservedstatedisk)
+        * [`fn withDeleteRule(deleteRule)`](#fn-specforproviderpreservedstatediskwithdeleterule)
+        * [`fn withDeviceName(deviceName)`](#fn-specforproviderpreservedstatediskwithdevicename)
+        * [`fn withMode(mode)`](#fn-specforproviderpreservedstatediskwithmode)
+        * [`fn withSource(source)`](#fn-specforproviderpreservedstatediskwithsource)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
   * [`obj spec.providerRef`](#obj-specproviderref)
@@ -164,24 +172,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -332,6 +322,82 @@ withZone(zone)
 ```
 
 "Zone where the containing instance group manager is located"
+
+## obj spec.forProvider.preservedState
+
+"The preserved state for this instance."
+
+### fn spec.forProvider.preservedState.withDisk
+
+```ts
+withDisk(disk)
+```
+
+"Stateful disks for the instance."
+
+### fn spec.forProvider.preservedState.withDiskMixin
+
+```ts
+withDiskMixin(disk)
+```
+
+"Stateful disks for the instance."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.preservedState.withMetadata
+
+```ts
+withMetadata(metadata)
+```
+
+"Preserved metadata defined for this instance. This is a list of key->value pairs."
+
+### fn spec.forProvider.preservedState.withMetadataMixin
+
+```ts
+withMetadataMixin(metadata)
+```
+
+"Preserved metadata defined for this instance. This is a list of key->value pairs."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.preservedState.disk
+
+"Stateful disks for the instance."
+
+### fn spec.forProvider.preservedState.disk.withDeleteRule
+
+```ts
+withDeleteRule(deleteRule)
+```
+
+"A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are 'NEVER' and 'ON_PERMANENT_INSTANCE_DELETION'. 'NEVER' - detach the disk when the VM is deleted, but do not delete the disk. 'ON_PERMANENT_INSTANCE_DELETION' will delete the stateful disk when the VM is permanently deleted from the instance group. Default value: \"NEVER\" Possible values: [\"NEVER\", \"ON_PERMANENT_INSTANCE_DELETION\"]"
+
+### fn spec.forProvider.preservedState.disk.withDeviceName
+
+```ts
+withDeviceName(deviceName)
+```
+
+"A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance."
+
+### fn spec.forProvider.preservedState.disk.withMode
+
+```ts
+withMode(mode)
+```
+
+"The mode of the disk. Default value: \"READ_WRITE\" Possible values: [\"READ_ONLY\", \"READ_WRITE\"]"
+
+### fn spec.forProvider.preservedState.disk.withSource
+
+```ts
+withSource(source)
+```
+
+"The URI of an existing persistent disk to attach under the specified device-name in the format 'projects/project-id/zones/zone/disks/disk-name'."
 
 ## obj spec.providerConfigRef
 
