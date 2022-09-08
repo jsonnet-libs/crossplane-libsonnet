@@ -1,9 +1,0 @@
-{
-  local d = (import 'doc-util/main.libsonnet'),
-  '#':: d.pkg(name='v1beta1', url='', help=''),
-  configuration: (import 'configuration.libsonnet'),
-  configurationRevision: (import 'configurationRevision.libsonnet'),
-  lock: (import 'lock.libsonnet'),
-  provider: (import 'provider.libsonnet'),
-  providerRevision: (import 'providerRevision.libsonnet'),
-}
