@@ -47,7 +47,7 @@
     apiVersion: 'container.gcp.crossplane.io/v1beta2',
     kind: 'Cluster',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A ClusterSpec defines the desired state of a Cluster."'),
   spec: {

@@ -47,7 +47,7 @@
     apiVersion: 'spanner.gcp.jet.crossplane.io/v1alpha1',
     kind: 'InstanceIAMBinding',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"InstanceIAMBindingSpec defines the desired state of InstanceIAMBinding"'),
   spec: {

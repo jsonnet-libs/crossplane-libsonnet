@@ -47,7 +47,7 @@
     apiVersion: 'grafana.jet.crossplane.io/v1alpha1',
     kind: 'FolderPermission',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"FolderPermissionSpec defines the desired state of FolderPermission"'),
   spec: {

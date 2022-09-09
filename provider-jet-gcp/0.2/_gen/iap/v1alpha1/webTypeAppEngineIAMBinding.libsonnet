@@ -47,7 +47,7 @@
     apiVersion: 'iap.gcp.jet.crossplane.io/v1alpha1',
     kind: 'WebTypeAppEngineIAMBinding',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"WebTypeAppEngineIAMBindingSpec defines the desired state of WebTypeAppEngineIAMBinding"'),
   spec: {

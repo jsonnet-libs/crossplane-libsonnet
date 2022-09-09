@@ -47,7 +47,7 @@
     apiVersion: 'storage.azure.crossplane.io/v1alpha3',
     kind: 'Container',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A ContainerSpec defines the desired state of a Container."'),
   spec: {

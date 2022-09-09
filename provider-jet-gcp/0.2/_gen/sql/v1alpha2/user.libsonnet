@@ -47,7 +47,7 @@
     apiVersion: 'sql.gcp.jet.crossplane.io/v1alpha2',
     kind: 'User',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"UserSpec defines the desired state of User"'),
   spec: {

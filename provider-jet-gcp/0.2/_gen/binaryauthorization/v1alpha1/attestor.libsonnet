@@ -47,7 +47,7 @@
     apiVersion: 'binaryauthorization.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Attestor',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"AttestorSpec defines the desired state of Attestor"'),
   spec: {

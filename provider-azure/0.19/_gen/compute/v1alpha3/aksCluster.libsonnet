@@ -47,7 +47,7 @@
     apiVersion: 'compute.azure.crossplane.io/v1alpha3',
     kind: 'AKSCluster',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"An AKSClusterSpec defines the desired state of a AKSCluster."'),
   spec: {

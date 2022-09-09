@@ -47,7 +47,7 @@
     apiVersion: 'database.azure.crossplane.io/v1beta1',
     kind: 'MySQLServerConfiguration',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A SQLServerConfigurationSpec defines the desired state of a SQLServer Configuration."'),
   spec: {

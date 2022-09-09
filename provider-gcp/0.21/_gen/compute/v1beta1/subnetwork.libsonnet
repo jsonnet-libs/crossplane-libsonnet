@@ -47,7 +47,7 @@
     apiVersion: 'compute.gcp.crossplane.io/v1beta1',
     kind: 'Subnetwork',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A SubnetworkSpec defines the desired state of a Subnetwork."'),
   spec: {

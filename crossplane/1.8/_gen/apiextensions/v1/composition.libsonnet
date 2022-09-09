@@ -47,7 +47,7 @@
     apiVersion: 'apiextensions.crossplane.io/v1',
     kind: 'Composition',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"CompositionSpec specifies desired state of a composition."'),
   spec: {

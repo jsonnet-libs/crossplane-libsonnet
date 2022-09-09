@@ -47,7 +47,7 @@
     apiVersion: 'mq.aws.crossplane.io/v1alpha1',
     kind: 'Broker',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"BrokerSpec defines the desired state of Broker"'),
   spec: {

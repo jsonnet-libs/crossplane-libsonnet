@@ -47,7 +47,7 @@
     apiVersion: 'sqs.aws.crossplane.io/v1beta1',
     kind: 'Queue',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"QueueSpec defines the desired state of a Queue."'),
   spec: {

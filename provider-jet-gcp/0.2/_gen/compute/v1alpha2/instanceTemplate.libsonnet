@@ -47,7 +47,7 @@
     apiVersion: 'compute.gcp.jet.crossplane.io/v1alpha2',
     kind: 'InstanceTemplate',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"InstanceTemplateSpec defines the desired state of InstanceTemplate"'),
   spec: {

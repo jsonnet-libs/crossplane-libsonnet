@@ -47,7 +47,7 @@
     apiVersion: 'billing.gcp.jet.crossplane.io/v1alpha1',
     kind: 'AccountIAMMember',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"AccountIAMMemberSpec defines the desired state of AccountIAMMember"'),
   spec: {

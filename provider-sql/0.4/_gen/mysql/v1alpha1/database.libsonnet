@@ -47,7 +47,7 @@
     apiVersion: 'mysql.sql.crossplane.io/v1alpha1',
     kind: 'Database',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A DatabaseSpec defines the desired state of a Database."'),
   spec: {

@@ -47,7 +47,7 @@
     apiVersion: 'apigatewayv2.aws.crossplane.io/v1beta1',
     kind: 'VPCLink',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"VPCLinkSpec defines the desired state of VPCLink"'),
   spec: {

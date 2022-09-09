@@ -47,7 +47,7 @@
     apiVersion: 'tags.gcp.jet.crossplane.io/v1alpha1',
     kind: 'TagValueIAMBinding',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"TagValueIAMBindingSpec defines the desired state of TagValueIAMBinding"'),
   spec: {

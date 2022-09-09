@@ -47,7 +47,7 @@
     apiVersion: 'route53.aws.crossplane.io/v1alpha1',
     kind: 'HostedZone',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"HostedZoneSpec defines the desired state of an AWS Route53 Hosted HostedZone."'),
   spec: {

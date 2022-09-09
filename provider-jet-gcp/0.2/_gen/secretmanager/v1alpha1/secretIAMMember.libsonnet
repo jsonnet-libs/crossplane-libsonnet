@@ -47,7 +47,7 @@
     apiVersion: 'secretmanager.gcp.jet.crossplane.io/v1alpha1',
     kind: 'SecretIAMMember',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"SecretIAMMemberSpec defines the desired state of SecretIAMMember"'),
   spec: {

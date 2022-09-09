@@ -47,7 +47,7 @@
     apiVersion: 'ec2.aws.crossplane.io/v1alpha1',
     kind: 'TransitGatewayRoute',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"TransitGatewayRouteSpec defines the desired state of TransitGatewayRoute"'),
   spec: {

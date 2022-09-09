@@ -47,7 +47,7 @@
     apiVersion: 'compute.gcp.jet.crossplane.io/v1alpha1',
     kind: 'RegionTargetHTTPProxy',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"RegionTargetHTTPProxySpec defines the desired state of RegionTargetHTTPProxy"'),
   spec: {

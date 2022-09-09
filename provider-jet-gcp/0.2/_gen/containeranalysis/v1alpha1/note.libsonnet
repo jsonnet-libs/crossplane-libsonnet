@@ -47,7 +47,7 @@
     apiVersion: 'containeranalysis.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Note',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"NoteSpec defines the desired state of Note"'),
   spec: {

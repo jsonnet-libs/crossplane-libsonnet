@@ -47,7 +47,7 @@
     apiVersion: 'iam.aws.crossplane.io/v1beta1',
     kind: 'UserPolicyAttachment',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"An UserPolicyAttachmentSpec defines the desired state of an UserPolicyAttachment."'),
   spec: {

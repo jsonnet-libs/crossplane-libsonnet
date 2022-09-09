@@ -47,7 +47,7 @@
     apiVersion: 'cloudfunctions.gcp.jet.crossplane.io/v1alpha1',
     kind: 'FunctionIAMPolicy',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"FunctionIAMPolicySpec defines the desired state of FunctionIAMPolicy"'),
   spec: {

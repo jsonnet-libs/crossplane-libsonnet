@@ -47,7 +47,7 @@
     apiVersion: 'pkg.crossplane.io/v1alpha1',
     kind: 'Lock',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#packages':: d.obj(help=''),
   packages: {

@@ -47,7 +47,7 @@
     apiVersion: 'iam.gcp.crossplane.io/v1alpha1',
     kind: 'ServiceAccount',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ServiceAccountSpec defines the desired state of a ServiceAccount."'),
   spec: {

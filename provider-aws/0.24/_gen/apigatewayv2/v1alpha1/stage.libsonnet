@@ -47,7 +47,7 @@
     apiVersion: 'apigatewayv2.aws.crossplane.io/v1alpha1',
     kind: 'Stage',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"StageSpec defines the desired state of Stage"'),
   spec: {

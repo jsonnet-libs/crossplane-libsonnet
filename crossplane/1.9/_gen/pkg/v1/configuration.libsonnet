@@ -47,7 +47,7 @@
     apiVersion: 'pkg.crossplane.io/v1',
     kind: 'Configuration',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ConfigurationSpec specifies details about a request to install a configuration to Crossplane."'),
   spec: {

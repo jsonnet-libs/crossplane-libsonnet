@@ -47,7 +47,7 @@
     apiVersion: 'iot.aws.crossplane.io/v1alpha1',
     kind: 'Thing',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ThingSpec defines the desired state of Thing"'),
   spec: {

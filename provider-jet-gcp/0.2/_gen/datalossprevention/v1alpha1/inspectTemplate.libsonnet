@@ -47,7 +47,7 @@
     apiVersion: 'datalossprevention.gcp.jet.crossplane.io/v1alpha1',
     kind: 'InspectTemplate',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"InspectTemplateSpec defines the desired state of InspectTemplate"'),
   spec: {

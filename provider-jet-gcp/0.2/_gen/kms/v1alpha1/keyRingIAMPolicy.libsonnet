@@ -47,7 +47,7 @@
     apiVersion: 'kms.gcp.jet.crossplane.io/v1alpha1',
     kind: 'KeyRingIAMPolicy',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"KeyRingIAMPolicySpec defines the desired state of KeyRingIAMPolicy"'),
   spec: {

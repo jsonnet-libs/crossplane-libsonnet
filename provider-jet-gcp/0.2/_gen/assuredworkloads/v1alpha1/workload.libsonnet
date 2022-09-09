@@ -47,7 +47,7 @@
     apiVersion: 'assuredworkloads.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Workload',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"WorkloadSpec defines the desired state of Workload"'),
   spec: {

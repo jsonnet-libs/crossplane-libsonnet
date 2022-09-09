@@ -47,7 +47,7 @@
     apiVersion: 'pkg.crossplane.io/v1',
     kind: 'Provider',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ProviderSpec specifies details about a request to install a provider to Crossplane."'),
   spec: {

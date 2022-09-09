@@ -47,7 +47,7 @@
     apiVersion: 'lambda.aws.crossplane.io/v1beta1',
     kind: 'Function',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"FunctionSpec defines the desired state of Function"'),
   spec: {

@@ -47,7 +47,7 @@
     apiVersion: 'pkg.crossplane.io/v1',
     kind: 'ProviderRevision',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"PackageRevisionSpec specifies the desired state of a PackageRevision."'),
   spec: {

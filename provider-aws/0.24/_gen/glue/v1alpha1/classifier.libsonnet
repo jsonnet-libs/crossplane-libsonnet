@@ -47,7 +47,7 @@
     apiVersion: 'glue.aws.crossplane.io/v1alpha1',
     kind: 'Classifier',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ClassifierSpec defines the desired state of Classifier"'),
   spec: {

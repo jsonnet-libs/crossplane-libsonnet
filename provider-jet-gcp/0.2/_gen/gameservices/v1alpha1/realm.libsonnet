@@ -47,7 +47,7 @@
     apiVersion: 'gameservices.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Realm',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"RealmSpec defines the desired state of Realm"'),
   spec: {

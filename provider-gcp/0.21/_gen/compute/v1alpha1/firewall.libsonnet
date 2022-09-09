@@ -47,7 +47,7 @@
     apiVersion: 'compute.gcp.crossplane.io/v1alpha1',
     kind: 'Firewall',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A FirewallSpec defines the desired state of a Firewall."'),
   spec: {

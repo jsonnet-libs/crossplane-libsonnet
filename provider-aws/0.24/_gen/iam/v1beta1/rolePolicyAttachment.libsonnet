@@ -47,7 +47,7 @@
     apiVersion: 'iam.aws.crossplane.io/v1beta1',
     kind: 'RolePolicyAttachment',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"An RolePolicyAttachmentSpec defines the desired state of an RolePolicyAttachment."'),
   spec: {

@@ -47,7 +47,7 @@
     apiVersion: 'cloudplatform.gcp.jet.crossplane.io/v1alpha1',
     kind: 'ProjectIAMBinding',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ProjectIAMBindingSpec defines the desired state of ProjectIAMBinding"'),
   spec: {

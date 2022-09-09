@@ -47,7 +47,7 @@
     apiVersion: 'sns.aws.crossplane.io/v1beta1',
     kind: 'Subscription',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"SubscriptionSpec defined the desired state of a AWS SNS Topic"'),
   spec: {

@@ -47,7 +47,7 @@
     apiVersion: 'ec2.aws.crossplane.io/v1beta1',
     kind: 'Address',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"An AddressSpec defines the desired state of an Address."'),
   spec: {

@@ -47,7 +47,7 @@
     apiVersion: 'pkg.crossplane.io/v1alpha1',
     kind: 'ControllerConfig',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ControllerConfigSpec specifies the configuration for a packaged controller. Values provided will override package manager defaults. Labels and annotations are passed to both the controller Deployment and ServiceAccount."'),
   spec: {

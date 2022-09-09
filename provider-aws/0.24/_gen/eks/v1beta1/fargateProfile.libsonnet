@@ -47,7 +47,7 @@
     apiVersion: 'eks.aws.crossplane.io/v1beta1',
     kind: 'FargateProfile',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A FargateProfileSpec defines the desired state of an EKS FargateProfile."'),
   spec: {

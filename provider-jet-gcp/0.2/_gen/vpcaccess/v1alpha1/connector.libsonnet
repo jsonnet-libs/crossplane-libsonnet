@@ -47,7 +47,7 @@
     apiVersion: 'vpcaccess.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Connector',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ConnectorSpec defines the desired state of Connector"'),
   spec: {

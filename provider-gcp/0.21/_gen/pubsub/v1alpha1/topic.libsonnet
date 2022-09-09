@@ -47,7 +47,7 @@
     apiVersion: 'pubsub.gcp.crossplane.io/v1alpha1',
     kind: 'Topic',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"TopicSpec defines the desired state of a Topic."'),
   spec: {

@@ -47,7 +47,7 @@
     apiVersion: 'route53resolver.aws.crossplane.io/v1alpha1',
     kind: 'ResolverRuleAssociation',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ResolverRuleAssociationSpec defines the desired state of an AWS Route53 Hosted ResolverRuleAssociation."'),
   spec: {

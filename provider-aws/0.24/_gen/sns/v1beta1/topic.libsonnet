@@ -47,7 +47,7 @@
     apiVersion: 'sns.aws.crossplane.io/v1beta1',
     kind: 'Topic',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"TopicSpec defined the desired state of a AWS SNS Topic"'),
   spec: {

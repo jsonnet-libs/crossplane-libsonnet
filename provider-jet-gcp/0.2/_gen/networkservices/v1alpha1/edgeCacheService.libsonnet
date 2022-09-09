@@ -47,7 +47,7 @@
     apiVersion: 'networkservices.gcp.jet.crossplane.io/v1alpha1',
     kind: 'EdgeCacheService',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"EdgeCacheServiceSpec defines the desired state of EdgeCacheService"'),
   spec: {

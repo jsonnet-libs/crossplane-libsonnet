@@ -47,7 +47,7 @@
     apiVersion: 'storage.gcp.crossplane.io/v1alpha3',
     kind: 'Bucket',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A BucketSpec defines the desired state of a Bucket."'),
   spec: {

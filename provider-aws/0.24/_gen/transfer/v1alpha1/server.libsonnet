@@ -47,7 +47,7 @@
     apiVersion: 'transfer.aws.crossplane.io/v1alpha1',
     kind: 'Server',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ServerSpec defines the desired state of Server"'),
   spec: {

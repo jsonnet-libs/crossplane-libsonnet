@@ -47,7 +47,7 @@
     apiVersion: 'apiextensions.crossplane.io/v1',
     kind: 'CompositeResourceDefinition',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"CompositeResourceDefinitionSpec specifies the desired state of the definition."'),
   spec: {

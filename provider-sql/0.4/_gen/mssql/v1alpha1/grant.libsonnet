@@ -47,7 +47,7 @@
     apiVersion: 'mssql.sql.crossplane.io/v1alpha1',
     kind: 'Grant',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A GrantSpec defines the desired state of a Grant."'),
   spec: {

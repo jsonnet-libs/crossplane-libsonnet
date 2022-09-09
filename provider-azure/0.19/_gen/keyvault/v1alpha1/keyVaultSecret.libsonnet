@@ -47,7 +47,7 @@
     apiVersion: 'keyvault.azure.crossplane.io/v1alpha1',
     kind: 'KeyVaultSecret',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A KeyVaultSecretSpec defines the desired state of a Secret."'),
   spec: {

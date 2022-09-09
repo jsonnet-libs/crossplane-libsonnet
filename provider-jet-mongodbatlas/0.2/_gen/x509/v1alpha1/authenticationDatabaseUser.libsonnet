@@ -47,7 +47,7 @@
     apiVersion: 'x509.mongodbatlas.jet.crossplane.io/v1alpha1',
     kind: 'AuthenticationDatabaseUser',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"AuthenticationDatabaseUserSpec defines the desired state of AuthenticationDatabaseUser"'),
   spec: {

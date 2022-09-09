@@ -47,7 +47,7 @@
     apiVersion: 'database.azure.crossplane.io/v1alpha3',
     kind: 'PostgreSQLServerFirewallRule',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A FirewallRuleSpec defines the desired state of an Azure SQL firewall rule."'),
   spec: {

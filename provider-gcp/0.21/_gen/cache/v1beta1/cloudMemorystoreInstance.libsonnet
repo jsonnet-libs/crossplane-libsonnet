@@ -47,7 +47,7 @@
     apiVersion: 'cache.gcp.crossplane.io/v1beta1',
     kind: 'CloudMemorystoreInstance',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A CloudMemorystoreInstanceSpec defines the desired state of a CloudMemorystoreInstance."'),
   spec: {

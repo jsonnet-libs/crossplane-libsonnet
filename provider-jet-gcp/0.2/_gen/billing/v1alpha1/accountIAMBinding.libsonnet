@@ -47,7 +47,7 @@
     apiVersion: 'billing.gcp.jet.crossplane.io/v1alpha1',
     kind: 'AccountIAMBinding',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"AccountIAMBindingSpec defines the desired state of AccountIAMBinding"'),
   spec: {

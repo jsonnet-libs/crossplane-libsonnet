@@ -47,7 +47,7 @@
     apiVersion: 'efs.aws.crossplane.io/v1alpha1',
     kind: 'MountTarget',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"MountTargetSpec defines the desired state of MountTarget"'),
   spec: {

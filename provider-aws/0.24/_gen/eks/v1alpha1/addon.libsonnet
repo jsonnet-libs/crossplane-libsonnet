@@ -47,7 +47,7 @@
     apiVersion: 'eks.aws.crossplane.io/v1alpha1',
     kind: 'Addon',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"AddonSpec defines the desired state of Addon"'),
   spec: {

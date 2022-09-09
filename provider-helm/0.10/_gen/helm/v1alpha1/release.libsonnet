@@ -47,7 +47,7 @@
     apiVersion: 'helm.crossplane.io/v1alpha1',
     kind: 'Release',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A ReleaseSpec defines the desired state of a Release."'),
   spec: {

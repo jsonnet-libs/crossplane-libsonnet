@@ -47,7 +47,7 @@
     apiVersion: 'cloudplatform.gcp.jet.crossplane.io/v1alpha2',
     kind: 'ServiceAccountKey',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ServiceAccountKeySpec defines the desired state of ServiceAccountKey"'),
   spec: {

@@ -47,7 +47,7 @@
     apiVersion: 'composer.gcp.jet.crossplane.io/v1alpha1',
     kind: 'Environment',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"EnvironmentSpec defines the desired state of Environment"'),
   spec: {

@@ -47,7 +47,7 @@
     apiVersion: 'mysql.sql.crossplane.io/v1alpha1',
     kind: 'ProviderConfigUsage',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#providerConfigRef':: d.obj(help='"ProviderConfigReference to the provider config being used."'),
   providerConfigRef: {

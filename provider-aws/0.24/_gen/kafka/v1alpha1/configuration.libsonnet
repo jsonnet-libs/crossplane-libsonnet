@@ -47,7 +47,7 @@
     apiVersion: 'kafka.aws.crossplane.io/v1alpha1',
     kind: 'Configuration',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ConfigurationSpec defines the desired state of Configuration"'),
   spec: {

@@ -47,7 +47,7 @@
     apiVersion: 'privatelink.mongodbatlas.jet.crossplane.io/v1alpha1',
     kind: 'EndpointServiceAdl',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"EndpointServiceAdlSpec defines the desired state of EndpointServiceAdl"'),
   spec: {

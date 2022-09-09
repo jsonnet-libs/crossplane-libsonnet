@@ -47,7 +47,7 @@
     apiVersion: 'route53.aws.crossplane.io/v1alpha1',
     kind: 'ResourceRecordSet',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ResourceRecordSetSpec defines the desired state of an AWS Route53 Resource Record."'),
   spec: {

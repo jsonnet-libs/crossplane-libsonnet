@@ -47,7 +47,7 @@
     apiVersion: 's3.aws.crossplane.io/v1beta1',
     kind: 'Bucket',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"BucketSpec represents the desired state of the Bucket."'),
   spec: {

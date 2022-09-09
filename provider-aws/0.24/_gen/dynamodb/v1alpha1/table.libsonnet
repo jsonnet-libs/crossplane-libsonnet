@@ -47,7 +47,7 @@
     apiVersion: 'dynamodb.aws.crossplane.io/v1alpha1',
     kind: 'Table',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"TableSpec defines the desired state of Table"'),
   spec: {

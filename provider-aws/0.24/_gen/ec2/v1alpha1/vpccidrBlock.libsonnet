@@ -47,7 +47,7 @@
     apiVersion: 'ec2.aws.crossplane.io/v1alpha1',
     kind: 'VPCCIDRBlock',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A VPCCIDRBlockSpec defines the desired state of a VPCCIDRBlock."'),
   spec: {

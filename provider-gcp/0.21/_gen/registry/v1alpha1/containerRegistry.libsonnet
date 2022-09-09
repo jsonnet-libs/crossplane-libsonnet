@@ -47,7 +47,7 @@
     apiVersion: 'registry.gcp.crossplane.io/v1alpha1',
     kind: 'ContainerRegistry',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ContainerRegistrySpec defines the desired state of ContainerRegistry"'),
   spec: {

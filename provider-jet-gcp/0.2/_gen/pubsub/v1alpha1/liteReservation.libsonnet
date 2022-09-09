@@ -47,7 +47,7 @@
     apiVersion: 'pubsub.gcp.jet.crossplane.io/v1alpha1',
     kind: 'LiteReservation',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"LiteReservationSpec defines the desired state of LiteReservation"'),
   spec: {

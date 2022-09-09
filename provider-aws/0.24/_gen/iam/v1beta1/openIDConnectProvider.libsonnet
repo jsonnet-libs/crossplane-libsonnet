@@ -47,7 +47,7 @@
     apiVersion: 'iam.aws.crossplane.io/v1beta1',
     kind: 'OpenIDConnectProvider',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"OpenIDConnectProviderSpec defines the desired state of OpenIDConnectProvider"'),
   spec: {

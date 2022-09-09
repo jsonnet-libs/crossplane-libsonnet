@@ -47,7 +47,7 @@
     apiVersion: 'compute.gcp.crossplane.io/v1beta1',
     kind: 'Network',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"A NetworkSpec defines the desired state of a Network."'),
   spec: {

@@ -47,7 +47,7 @@
     apiVersion: 'grafana.jet.crossplane.io/v1alpha1',
     kind: 'Organization',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"OrganizationSpec defines the desired state of Organization"'),
   spec: {

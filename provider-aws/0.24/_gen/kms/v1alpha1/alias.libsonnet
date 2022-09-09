@@ -47,7 +47,7 @@
     apiVersion: 'kms.aws.crossplane.io/v1alpha1',
     kind: 'Alias',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"AliasSpec defines the desired state of Alias"'),
   spec: {
