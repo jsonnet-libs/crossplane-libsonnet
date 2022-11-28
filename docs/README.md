@@ -13,6 +13,6 @@ This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 - [provider-azure/0.19](provider-azure/0.19/README.md)
 - [provider-sql/0.4](provider-sql/0.4/README.md)
 - [provider-kubernetes/0.3](provider-kubernetes/0.3/README.md)
-- [provider-grafana/0.1](provider-grafana/0.1/README.md)
+- [provider-grafana/0.0](provider-grafana/0.0/README.md)
 - [provider-helm/0.10](provider-helm/0.10/README.md)
 - [provider-terraform/0.3](provider-terraform/0.3/README.md)
