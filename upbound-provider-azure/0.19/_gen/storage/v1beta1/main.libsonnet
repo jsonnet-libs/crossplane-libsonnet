@@ -1,0 +1,16 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  account: (import 'account.libsonnet'),
+  accountNetworkRules: (import 'accountNetworkRules.libsonnet'),
+  blob: (import 'blob.libsonnet'),
+  blobInventoryPolicy: (import 'blobInventoryPolicy.libsonnet'),
+  container: (import 'container.libsonnet'),
+  dataLakeGen2FileSystem: (import 'dataLakeGen2FileSystem.libsonnet'),
+  encryptionScope: (import 'encryptionScope.libsonnet'),
+  managementPolicy: (import 'managementPolicy.libsonnet'),
+  objectReplication: (import 'objectReplication.libsonnet'),
+  queue: (import 'queue.libsonnet'),
+  share: (import 'share.libsonnet'),
+  table: (import 'table.libsonnet'),
+}
