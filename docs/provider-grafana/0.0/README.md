@@ -12,6 +12,7 @@ local crossplane_grafana = import "github.com/jsonnet-libs/crossplane-libsonnet/
 
 * [alerting](alerting/index.md)
 * [cloud](cloud/index.md)
+* [enterprise](enterprise/index.md)
 * [grafana](grafana/index.md)
 * [oncall](oncall/index.md)
 * [oss](oss/index.md)
