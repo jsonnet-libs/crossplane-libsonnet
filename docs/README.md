@@ -16,6 +16,6 @@ This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 - [provider-grafana/0.0](provider-grafana/0.0/README.md)
 - [provider-helm/0.10](provider-helm/0.10/README.md)
 - [provider-terraform/0.3](provider-terraform/0.3/README.md)
-- [upbound-provider-aws/0.21](upbound-provider-aws/0.21/README.md)
+- [upbound-provider-aws/0.24](upbound-provider-aws/0.24/README.md)
 - [upbound-provider-azure/0.19](upbound-provider-azure/0.19/README.md)
 - [upbound-provider-gcp/0.19](upbound-provider-gcp/0.19/README.md)
