@@ -2,9 +2,12 @@
 permalink: /provider-terraform/0.4/
 ---
 
-# crossplane_terraform
+# upbound_terraform
 
 ```jsonnet
-local crossplane_terraform = import "github.com/jsonnet-libs/crossplane-libsonnet/provider-terraform/0.4/main.libsonnet"
+local upbound_terraform = import "github.com/jsonnet-libs/crossplane-libsonnet/provider-terraform/0.4/main.libsonnet"
 ```
 
+
+
+* [tf](tf/index.md)

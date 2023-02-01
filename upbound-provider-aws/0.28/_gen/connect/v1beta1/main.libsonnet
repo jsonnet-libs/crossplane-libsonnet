@@ -1,0 +1,15 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  botAssociation: (import 'botAssociation.libsonnet'),
+  contactFlow: (import 'contactFlow.libsonnet'),
+  contactFlowModule: (import 'contactFlowModule.libsonnet'),
+  hoursOfOperation: (import 'hoursOfOperation.libsonnet'),
+  instance: (import 'instance.libsonnet'),
+  lambdaFunctionAssociation: (import 'lambdaFunctionAssociation.libsonnet'),
+  queue: (import 'queue.libsonnet'),
+  quickConnect: (import 'quickConnect.libsonnet'),
+  routingProfile: (import 'routingProfile.libsonnet'),
+  securityProfile: (import 'securityProfile.libsonnet'),
+  userHierarchyStructure: (import 'userHierarchyStructure.libsonnet'),
+}

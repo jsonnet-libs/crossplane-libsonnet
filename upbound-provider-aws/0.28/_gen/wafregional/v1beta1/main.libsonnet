@@ -1,0 +1,15 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  byteMatchSet: (import 'byteMatchSet.libsonnet'),
+  geoMatchSet: (import 'geoMatchSet.libsonnet'),
+  ipSet: (import 'ipSet.libsonnet'),
+  rateBasedRule: (import 'rateBasedRule.libsonnet'),
+  regexMatchSet: (import 'regexMatchSet.libsonnet'),
+  regexPatternSet: (import 'regexPatternSet.libsonnet'),
+  rule: (import 'rule.libsonnet'),
+  sizeConstraintSet: (import 'sizeConstraintSet.libsonnet'),
+  sqlInjectionMatchSet: (import 'sqlInjectionMatchSet.libsonnet'),
+  webACL: (import 'webACL.libsonnet'),
+  xssMatchSet: (import 'xssMatchSet.libsonnet'),
+}

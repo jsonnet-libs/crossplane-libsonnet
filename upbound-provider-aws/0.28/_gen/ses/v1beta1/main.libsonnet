@@ -1,0 +1,17 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  activeReceiptRuleSet: (import 'activeReceiptRuleSet.libsonnet'),
+  configurationSet: (import 'configurationSet.libsonnet'),
+  domainDKIM: (import 'domainDKIM.libsonnet'),
+  domainIdentity: (import 'domainIdentity.libsonnet'),
+  domainMailFrom: (import 'domainMailFrom.libsonnet'),
+  emailIdentity: (import 'emailIdentity.libsonnet'),
+  eventDestination: (import 'eventDestination.libsonnet'),
+  identityNotificationTopic: (import 'identityNotificationTopic.libsonnet'),
+  identityPolicy: (import 'identityPolicy.libsonnet'),
+  receiptFilter: (import 'receiptFilter.libsonnet'),
+  receiptRule: (import 'receiptRule.libsonnet'),
+  receiptRuleSet: (import 'receiptRuleSet.libsonnet'),
+  template: (import 'template.libsonnet'),
+}
