@@ -8,6 +8,8 @@ Create patches for Composition resources.
 
 ## Index
 
+* [`fn combineFromComposite(toFieldPath, fmtString, fromFieldPaths)`](#fn-combinefromcomposite)
+* [`fn combineToComposite(toFieldPath, fmtString, fromFieldPaths)`](#fn-combinetocomposite)
 * [`fn fromCompositeFieldPath(from, to)`](#fn-fromcompositefieldpath)
 * [`fn toCompositeFieldPath(from, to)`](#fn-tocompositefieldpath)
 * [`obj policy`](#obj-policy)
@@ -18,6 +20,28 @@ Create patches for Composition resources.
   * [`fn map(map)`](#fn-transformsmap)
 
 ## Fields
+
+### fn combineFromComposite
+
+```ts
+combineFromComposite(toFieldPath, fmtString, fromFieldPaths)
+```
+
+This type patches from a combination of multiple fields within the XR 
+to a field within the composed resource. 
+It’s commonly used to expose a composed resource spec field as an XR spec field.
+
+
+### fn combineToComposite
+
+```ts
+combineToComposite(toFieldPath, fmtString, fromFieldPaths)
+```
+
+The inverse of CombineFromComposite. This type patches from multiple fields 
+within the composed resource to a a field within the XR.
+It’s commonly used to derive an XR status field from a combination of resource fields.
+
 
 ### fn fromCompositeFieldPath
 
