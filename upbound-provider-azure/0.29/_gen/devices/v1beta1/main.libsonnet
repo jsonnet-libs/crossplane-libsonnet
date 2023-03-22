@@ -1,0 +1,18 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  iotHub: (import 'iotHub.libsonnet'),
+  iotHubCertificate: (import 'iotHubCertificate.libsonnet'),
+  iotHubConsumerGroup: (import 'iotHubConsumerGroup.libsonnet'),
+  iotHubDPS: (import 'iotHubDPS.libsonnet'),
+  iotHubDPSCertificate: (import 'iotHubDPSCertificate.libsonnet'),
+  iotHubDPSSharedAccessPolicy: (import 'iotHubDPSSharedAccessPolicy.libsonnet'),
+  iotHubEndpointEventHub: (import 'iotHubEndpointEventHub.libsonnet'),
+  iotHubEndpointServiceBusQueue: (import 'iotHubEndpointServiceBusQueue.libsonnet'),
+  iotHubEndpointServiceBusTopic: (import 'iotHubEndpointServiceBusTopic.libsonnet'),
+  iotHubEndpointStorageContainer: (import 'iotHubEndpointStorageContainer.libsonnet'),
+  iotHubEnrichment: (import 'iotHubEnrichment.libsonnet'),
+  iotHubFallbackRoute: (import 'iotHubFallbackRoute.libsonnet'),
+  iotHubRoute: (import 'iotHubRoute.libsonnet'),
+  iotHubSharedAccessPolicy: (import 'iotHubSharedAccessPolicy.libsonnet'),
+}

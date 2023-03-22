@@ -1,0 +1,18 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  account: (import 'account.libsonnet'),
+  connection: (import 'connection.libsonnet'),
+  connectionClassicCertificate: (import 'connectionClassicCertificate.libsonnet'),
+  connectionType: (import 'connectionType.libsonnet'),
+  credential: (import 'credential.libsonnet'),
+  hybridRunBookWorkerGroup: (import 'hybridRunBookWorkerGroup.libsonnet'),
+  module: (import 'module.libsonnet'),
+  runBook: (import 'runBook.libsonnet'),
+  schedule: (import 'schedule.libsonnet'),
+  variableBool: (import 'variableBool.libsonnet'),
+  variableDateTime: (import 'variableDateTime.libsonnet'),
+  variableInt: (import 'variableInt.libsonnet'),
+  variableString: (import 'variableString.libsonnet'),
+  webhook: (import 'webhook.libsonnet'),
+}

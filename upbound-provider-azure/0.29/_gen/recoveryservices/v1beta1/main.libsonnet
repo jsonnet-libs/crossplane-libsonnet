@@ -1,0 +1,16 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  backupContainerStorageAccount: (import 'backupContainerStorageAccount.libsonnet'),
+  backupPolicyFileShare: (import 'backupPolicyFileShare.libsonnet'),
+  backupPolicyVM: (import 'backupPolicyVM.libsonnet'),
+  backupPolicyVMWorkload: (import 'backupPolicyVMWorkload.libsonnet'),
+  backupProtectedFileShare: (import 'backupProtectedFileShare.libsonnet'),
+  backupProtectedVM: (import 'backupProtectedVM.libsonnet'),
+  siteRecoveryFabric: (import 'siteRecoveryFabric.libsonnet'),
+  siteRecoveryNetworkMapping: (import 'siteRecoveryNetworkMapping.libsonnet'),
+  siteRecoveryProtectionContainer: (import 'siteRecoveryProtectionContainer.libsonnet'),
+  siteRecoveryProtectionContainerMapping: (import 'siteRecoveryProtectionContainerMapping.libsonnet'),
+  siteRecoveryReplicationPolicy: (import 'siteRecoveryReplicationPolicy.libsonnet'),
+  vault: (import 'vault.libsonnet'),
+}

@@ -1,0 +1,16 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  asset: (import 'asset.libsonnet'),
+  assetFilter: (import 'assetFilter.libsonnet'),
+  contentKeyPolicy: (import 'contentKeyPolicy.libsonnet'),
+  job: (import 'job.libsonnet'),
+  liveEvent: (import 'liveEvent.libsonnet'),
+  liveEventOutput: (import 'liveEventOutput.libsonnet'),
+  servicesAccount: (import 'servicesAccount.libsonnet'),
+  servicesAccountFilter: (import 'servicesAccountFilter.libsonnet'),
+  streamingEndpoint: (import 'streamingEndpoint.libsonnet'),
+  streamingLocator: (import 'streamingLocator.libsonnet'),
+  streamingPolicy: (import 'streamingPolicy.libsonnet'),
+  transform: (import 'transform.libsonnet'),
+}
