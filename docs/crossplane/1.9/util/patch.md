@@ -17,7 +17,10 @@ Create patches for Composition resources.
   * [`fn withMergeOptions(appendSlice, keepMapValues)`](#fn-policywithmergeoptions)
 * [`obj transforms`](#obj-transforms)
   * [`fn bool(true_value, false_value)`](#fn-transformsbool)
+  * [`fn literalPattern(literal, result)`](#fn-transformsliteralpattern)
   * [`fn map(map)`](#fn-transformsmap)
+  * [`fn match(patterns, fallbackValue)`](#fn-transformsmatch)
+  * [`fn regexpPattern(regexp, result)`](#fn-transformsregexppattern)
 
 ## Fields
 
@@ -107,6 +110,16 @@ Transform strings to booleans.
 Example: `bool(true_value='Orphan', false_value='Delete')`
 
 
+### fn transforms.literalPattern
+
+```ts
+literalPattern(literal, result)
+```
+
+Match a value against a literal, and return the result if the value matches.
+To be used with the match transform.
+
+
 ### fn transforms.map
 
 ```ts
@@ -114,3 +127,24 @@ map(map)
 ```
 
 Use a Map to transform keys into values.
+
+
+### fn transforms.match
+
+```ts
+match(patterns, fallbackValue)
+```
+
+Match a value to a list of patterns.
+Use the literalPattern or regexpPattern function to create the patterns.
+Return the fallbackValue if no pattern matches.
+
+
+### fn transforms.regexpPattern
+
+```ts
+regexpPattern(regexp, result)
+```
+
+Match a value against a regexp, and return the result if the value matches.
+To be used with the match transform.

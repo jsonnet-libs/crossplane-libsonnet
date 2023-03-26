@@ -1,5 +1,5 @@
 ---
-permalink: /crossplane/1.10/util/patch/
+permalink: /crossplane/1.11/util/patch/
 ---
 
 # util.patch
