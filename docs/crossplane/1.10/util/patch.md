@@ -17,6 +17,7 @@ Create patches for Composition resources.
   * [`fn withMergeOptions(appendSlice, keepMapValues)`](#fn-policywithmergeoptions)
 * [`obj transforms`](#obj-transforms)
   * [`fn bool(true_value, false_value)`](#fn-transformsbool)
+  * [`fn convert(toType)`](#fn-transformsconvert)
   * [`fn literalPattern(literal, result)`](#fn-transformsliteralpattern)
   * [`fn map(map)`](#fn-transformsmap)
   * [`fn match(patterns, fallbackValue)`](#fn-transformsmatch)
@@ -108,6 +109,15 @@ bool(true_value, false_value)
 
 Transform strings to booleans.
 Example: `bool(true_value='Orphan', false_value='Delete')`
+
+
+### fn transforms.convert
+
+```ts
+convert(toType)
+```
+
+Convert a field to a different type.
 
 
 ### fn transforms.literalPattern
