@@ -45,7 +45,6 @@ permalink: /upbound-provider-aws/0.31/lightsail/v1beta1/instance/
     * [`fn withUserData(userData)`](#fn-specforproviderwithuserdata)
     * [`obj spec.forProvider.addOn`](#obj-specforprovideraddon)
       * [`fn withSnapshotTime(snapshotTime)`](#fn-specforprovideraddonwithsnapshottime)
-      * [`fn withStatus(status)`](#fn-specforprovideraddonwithstatus)
       * [`fn withType(type)`](#fn-specforprovideraddonwithtype)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
@@ -367,14 +366,6 @@ withSnapshotTime(snapshotTime)
 ```
 
 "The daily time when an automatic snapshot will be created. Must be in HH:00 format, and in an hourly increment and specified in Coordinated Universal Time (UTC). The snapshot will be automatically created between the time specified and up to 45 minutes after."
-
-### fn spec.forProvider.addOn.withStatus
-
-```ts
-withStatus(status)
-```
-
-"The status of the add on. Valid Values: Enabled, Disabled."
 
 ### fn spec.forProvider.addOn.withType
 

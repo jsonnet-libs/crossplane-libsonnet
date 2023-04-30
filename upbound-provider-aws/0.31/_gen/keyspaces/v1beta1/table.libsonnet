@@ -103,10 +103,7 @@
         withMatchLabelsMixin(matchLabels): { spec+: { forProvider+: { keyspaceNameSelector+: { matchLabels+: matchLabels } } } },
       },
       '#pointInTimeRecovery':: d.obj(help='"Specifies if point-in-time recovery is enabled or disabled for the table. More information can be found in the Developer Guide."'),
-      pointInTimeRecovery: {
-        '#withStatus':: d.fn(help='"Valid values: ENABLED, DISABLED. The default value is DISABLED."', args=[d.arg(name='status', type=d.T.string)]),
-        withStatus(status): { status: status },
-      },
+      pointInTimeRecovery: {},
       '#schemaDefinition':: d.obj(help='"Describes the schema of the table."'),
       schemaDefinition: {
         '#clusteringKey':: d.obj(help='"The columns that are part of the clustering key of the table."'),
@@ -151,10 +148,7 @@
         withStaticColumnMixin(staticColumn): { staticColumn+: if std.isArray(v=staticColumn) then staticColumn else [staticColumn] },
       },
       '#ttl':: d.obj(help='"Enables Time to Live custom settings for the table. More information can be found in the Developer Guide."'),
-      ttl: {
-        '#withStatus':: d.fn(help='"Valid values: ENABLED, DISABLED. The default value is DISABLED."', args=[d.arg(name='status', type=d.T.string)]),
-        withStatus(status): { status: status },
-      },
+      ttl: {},
       '#withCapacitySpecification':: d.fn(help='"Specifies the read/write throughput capacity mode for the table."', args=[d.arg(name='capacitySpecification', type=d.T.array)]),
       withCapacitySpecification(capacitySpecification): { spec+: { forProvider+: { capacitySpecification: if std.isArray(v=capacitySpecification) then capacitySpecification else [capacitySpecification] } } },
       '#withCapacitySpecificationMixin':: d.fn(help='"Specifies the read/write throughput capacity mode for the table."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='capacitySpecification', type=d.T.array)]),

@@ -33,7 +33,6 @@ permalink: /upbound-provider-aws/0.31/iam/v1beta1/accessKey/
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`obj spec.forProvider`](#obj-specforprovider)
     * [`fn withPgpKey(pgpKey)`](#fn-specforproviderwithpgpkey)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withUser(user)`](#fn-specforproviderwithuser)
     * [`obj spec.forProvider.userRef`](#obj-specforprovideruserref)
       * [`fn withName(name)`](#fn-specforprovideruserrefwithname)
@@ -271,14 +270,6 @@ withPgpKey(pgpKey)
 ```
 
 "Either a base-64 encoded PGP public key, or a keybase username in the form keybase:some_person_that_exists, for use in the encrypted_secret output attribute. If providing a base-64 encoded PGP public key, make sure to provide the \"raw\" version and not the \"armored\" one (e.g. avoid passing the -a option to gpg --export)."
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Access key status to apply. Defaults to Active. Valid values are Active and Inactive."
 
 ### fn spec.forProvider.withUser
 

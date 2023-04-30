@@ -42,7 +42,6 @@ permalink: /upbound-provider-azure/0.29/servicebus/v1beta1/topic/
     * [`fn withMaxSizeInMegabytes(maxSizeInMegabytes)`](#fn-specforproviderwithmaxsizeinmegabytes)
     * [`fn withNamespaceId(namespaceId)`](#fn-specforproviderwithnamespaceid)
     * [`fn withRequiresDuplicateDetection(requiresDuplicateDetection)`](#fn-specforproviderwithrequiresduplicatedetection)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withSupportOrdering(supportOrdering)`](#fn-specforproviderwithsupportordering)
     * [`obj spec.forProvider.namespaceIdRef`](#obj-specforprovidernamespaceidref)
       * [`fn withName(name)`](#fn-specforprovidernamespaceidrefwithname)
@@ -352,14 +351,6 @@ withRequiresDuplicateDetection(requiresDuplicateDetection)
 ```
 
 "Boolean flag which controls whether Changing this forces a new resource to be created. the Topic requires duplicate detection. Defaults to false. Changing this forces a new resource to be created."
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"The Status of the Service Bus Topic. Acceptable values are Active or Disabled. Defaults to Active."
 
 ### fn spec.forProvider.withSupportOrdering
 

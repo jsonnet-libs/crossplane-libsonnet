@@ -83,8 +83,6 @@
       },
       '#withServiceName':: d.fn(help='"The name of the AWS service that is to be associated with the credentials. The service you specify here is the only service that can be accessed using these credentials."', args=[d.arg(name='serviceName', type=d.T.string)]),
       withServiceName(serviceName): { spec+: { forProvider+: { serviceName: serviceName } } },
-      '#withStatus':: d.fn(help='"The status to be assigned to the service-specific credential. Valid values are Active and Inactive. Default value is Active."', args=[d.arg(name='status', type=d.T.string)]),
-      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withUserName':: d.fn(help='"The name of the IAM user that is to be associated with the credentials. The new service-specific credentials have the same permissions as the associated user except that they can be used only to access the specified service."', args=[d.arg(name='userName', type=d.T.string)]),
       withUserName(userName): { spec+: { forProvider+: { userName: userName } } },
     },

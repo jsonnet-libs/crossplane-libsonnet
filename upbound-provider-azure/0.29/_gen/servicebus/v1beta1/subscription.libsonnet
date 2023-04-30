@@ -114,8 +114,6 @@
       withMaxDeliveryCount(maxDeliveryCount): { spec+: { forProvider+: { maxDeliveryCount: maxDeliveryCount } } },
       '#withRequiresSession':: d.fn(help='"Boolean flag which controls whether this Subscription supports the concept of a session. Changing this forces a new resource to be created."', args=[d.arg(name='requiresSession', type=d.T.boolean)]),
       withRequiresSession(requiresSession): { spec+: { forProvider+: { requiresSession: requiresSession } } },
-      '#withStatus':: d.fn(help='"The status of the Subscription. Possible values are Active,ReceiveDisabled, or Disabled. Defaults to Active."', args=[d.arg(name='status', type=d.T.string)]),
-      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withTopicId':: d.fn(help='"The ID of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created."', args=[d.arg(name='topicId', type=d.T.string)]),
       withTopicId(topicId): { spec+: { forProvider+: { topicId: topicId } } },
     },

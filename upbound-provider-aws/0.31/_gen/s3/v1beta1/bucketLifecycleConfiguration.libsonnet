@@ -183,8 +183,6 @@
         withNoncurrentVersionTransitionMixin(noncurrentVersionTransition): { noncurrentVersionTransition+: if std.isArray(v=noncurrentVersionTransition) then noncurrentVersionTransition else [noncurrentVersionTransition] },
         '#withPrefix':: d.fn(help='"DEPRECATED Use filter instead. This has been deprecated by Amazon S3. Prefix identifying one or more objects to which the rule applies. Defaults to an empty string (\\"\\") if filter is not specified."', args=[d.arg(name='prefix', type=d.T.string)]),
         withPrefix(prefix): { prefix: prefix },
-        '#withStatus':: d.fn(help='"Whether the rule is currently being applied. Valid values: Enabled or Disabled."', args=[d.arg(name='status', type=d.T.string)]),
-        withStatus(status): { status: status },
         '#withTransition':: d.fn(help='"Set of configuration blocks that specify when an Amazon S3 object transitions to a specified storage class. See below."', args=[d.arg(name='transition', type=d.T.array)]),
         withTransition(transition): { transition: if std.isArray(v=transition) then transition else [transition] },
         '#withTransitionMixin':: d.fn(help='"Set of configuration blocks that specify when an Amazon S3 object transitions to a specified storage class. See below."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='transition', type=d.T.array)]),

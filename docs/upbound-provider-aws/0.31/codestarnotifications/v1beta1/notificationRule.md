@@ -38,7 +38,6 @@ permalink: /upbound-provider-aws/0.31/codestarnotifications/v1beta1/notification
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
     * [`fn withResource(resource)`](#fn-specforproviderwithresource)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
     * [`fn withTarget(target)`](#fn-specforproviderwithtarget)
@@ -336,14 +335,6 @@ withResource(resource)
 ```
 
 "The ARN of the resource to associate with the notification rule."
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"The status of the notification rule. Possible values are ENABLED and DISABLED, default is ENABLED."
 
 ### fn spec.forProvider.withTags
 

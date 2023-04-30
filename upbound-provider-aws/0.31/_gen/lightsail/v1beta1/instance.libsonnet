@@ -57,8 +57,6 @@
       addOn: {
         '#withSnapshotTime':: d.fn(help='"The daily time when an automatic snapshot will be created. Must be in HH:00 format, and in an hourly increment and specified in Coordinated Universal Time (UTC). The snapshot will be automatically created between the time specified and up to 45 minutes after."', args=[d.arg(name='snapshotTime', type=d.T.string)]),
         withSnapshotTime(snapshotTime): { snapshotTime: snapshotTime },
-        '#withStatus':: d.fn(help='"The status of the add on. Valid Values: Enabled, Disabled."', args=[d.arg(name='status', type=d.T.string)]),
-        withStatus(status): { status: status },
         '#withType':: d.fn(help='"The add-on type. There is currently only one valid type AutoSnapshot."', args=[d.arg(name='type', type=d.T.string)]),
         withType(type): { type: type },
       },

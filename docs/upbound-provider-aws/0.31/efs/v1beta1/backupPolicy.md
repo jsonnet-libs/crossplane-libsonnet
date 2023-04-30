@@ -37,7 +37,7 @@ permalink: /upbound-provider-aws/0.31/efs/v1beta1/backupPolicy/
     * [`fn withFileSystemId(fileSystemId)`](#fn-specforproviderwithfilesystemid)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
     * [`obj spec.forProvider.backupPolicy`](#obj-specforproviderbackuppolicy)
-      * [`fn withStatus(status)`](#fn-specforproviderbackuppolicywithstatus)
+      
     * [`obj spec.forProvider.fileSystemIdRef`](#obj-specforproviderfilesystemidref)
       * [`fn withName(name)`](#fn-specforproviderfilesystemidrefwithname)
       * [`obj spec.forProvider.fileSystemIdRef.policy`](#obj-specforproviderfilesystemidrefpolicy)
@@ -304,14 +304,6 @@ withRegion(region)
 ## obj spec.forProvider.backupPolicy
 
 "A backup_policy object (documented below)."
-
-### fn spec.forProvider.backupPolicy.withStatus
-
-```ts
-withStatus(status)
-```
-
-"A status of the backup policy. Valid values: ENABLED, DISABLED."
 
 ## obj spec.forProvider.fileSystemIdRef
 

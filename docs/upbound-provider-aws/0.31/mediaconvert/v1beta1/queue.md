@@ -37,7 +37,6 @@ permalink: /upbound-provider-aws/0.31/mediaconvert/v1beta1/queue/
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
     * [`fn withReservationPlanSettings(reservationPlanSettings)`](#fn-specforproviderwithreservationplansettings)
     * [`fn withReservationPlanSettingsMixin(reservationPlanSettings)`](#fn-specforproviderwithreservationplansettingsmixin)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
     * [`obj spec.forProvider.reservationPlanSettings`](#obj-specforproviderreservationplansettings)
@@ -302,14 +301,6 @@ withReservationPlanSettingsMixin(reservationPlanSettings)
 "A detail pricing plan of the  reserved queue. See below."
 
 **Note:** This function appends passed data to existing values
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"A status of the queue. Valid values are ACTIVE or RESERVED. Default to PAUSED."
 
 ### fn spec.forProvider.withTags
 

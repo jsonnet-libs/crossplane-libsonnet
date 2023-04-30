@@ -83,8 +83,6 @@
       },
       '#withPgpKey':: d.fn(help='"Either a base-64 encoded PGP public key, or a keybase username in the form keybase:some_person_that_exists, for use in the encrypted_secret output attribute. If providing a base-64 encoded PGP public key, make sure to provide the \\"raw\\" version and not the \\"armored\\" one (e.g. avoid passing the -a option to gpg --export)."', args=[d.arg(name='pgpKey', type=d.T.string)]),
       withPgpKey(pgpKey): { spec+: { forProvider+: { pgpKey: pgpKey } } },
-      '#withStatus':: d.fn(help='"Access key status to apply. Defaults to Active. Valid values are Active and Inactive."', args=[d.arg(name='status', type=d.T.string)]),
-      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withUser':: d.fn(help='"IAM user to associate with this access key."', args=[d.arg(name='user', type=d.T.string)]),
       withUser(user): { spec+: { forProvider+: { user: user } } },
     },

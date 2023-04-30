@@ -37,7 +37,6 @@ permalink: /upbound-provider-gcp/0.29/datalossprevention/v1beta1/jobTrigger/
     * [`fn withInspectJob(inspectJob)`](#fn-specforproviderwithinspectjob)
     * [`fn withInspectJobMixin(inspectJob)`](#fn-specforproviderwithinspectjobmixin)
     * [`fn withParent(parent)`](#fn-specforproviderwithparent)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withTriggers(triggers)`](#fn-specforproviderwithtriggers)
     * [`fn withTriggersMixin(triggers)`](#fn-specforproviderwithtriggersmixin)
     * [`obj spec.forProvider.inspectJob`](#obj-specforproviderinspectjob)
@@ -391,14 +390,6 @@ withParent(parent)
 ```
 
 "The parent of the trigger, either in the format projects/{{project}} or projects/{{project}}/locations/{{location}}"
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Whether the trigger is currently active. Default value is HEALTHY. Possible values are PAUSED, HEALTHY, and CANCELLED."
 
 ### fn spec.forProvider.withTriggers
 

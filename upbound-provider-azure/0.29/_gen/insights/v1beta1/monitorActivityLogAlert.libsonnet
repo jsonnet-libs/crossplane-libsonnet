@@ -180,8 +180,6 @@
         withServiceHealth(serviceHealth): { serviceHealth: if std.isArray(v=serviceHealth) then serviceHealth else [serviceHealth] },
         '#withServiceHealthMixin':: d.fn(help='"A block to define fine grain service health settings."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='serviceHealth', type=d.T.array)]),
         withServiceHealthMixin(serviceHealth): { serviceHealth+: if std.isArray(v=serviceHealth) then serviceHealth else [serviceHealth] },
-        '#withStatus':: d.fn(help='"The status of the event. For example, Started, Failed, or Succeeded."', args=[d.arg(name='status', type=d.T.string)]),
-        withStatus(status): { status: status },
         '#withSubStatus':: d.fn(help='"The sub status of the event."', args=[d.arg(name='subStatus', type=d.T.string)]),
         withSubStatus(subStatus): { subStatus: subStatus },
       },

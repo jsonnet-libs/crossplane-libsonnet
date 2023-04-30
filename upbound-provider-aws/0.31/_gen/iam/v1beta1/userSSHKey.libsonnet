@@ -85,8 +85,6 @@
       withEncoding(encoding): { spec+: { forProvider+: { encoding: encoding } } },
       '#withPublicKey':: d.fn(help='"The SSH public key. The public key must be encoded in ssh-rsa format or PEM format."', args=[d.arg(name='publicKey', type=d.T.string)]),
       withPublicKey(publicKey): { spec+: { forProvider+: { publicKey: publicKey } } },
-      '#withStatus':: d.fn(help='"The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is active."', args=[d.arg(name='status', type=d.T.string)]),
-      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withUsername':: d.fn(help='"The name of the IAM user to associate the SSH public key with."', args=[d.arg(name='username', type=d.T.string)]),
       withUsername(username): { spec+: { forProvider+: { username: username } } },
     },

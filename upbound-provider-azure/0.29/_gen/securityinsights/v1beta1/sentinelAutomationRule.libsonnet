@@ -69,8 +69,6 @@
         withOwnerId(ownerId): { ownerId: ownerId },
         '#withSeverity':: d.fn(help='"The severity to add to the incident. Possible values are High, Informational, Low and Medium."', args=[d.arg(name='severity', type=d.T.string)]),
         withSeverity(severity): { severity: severity },
-        '#withStatus':: d.fn(help='"The status to set to the incident. Possible values are: Active, Closed, New."', args=[d.arg(name='status', type=d.T.string)]),
-        withStatus(status): { status: status },
       },
       '#actionPlaybook':: d.obj(help='"One or more action_playbook blocks as defined below."'),
       actionPlaybook: {

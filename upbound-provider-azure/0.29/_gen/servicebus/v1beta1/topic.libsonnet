@@ -101,8 +101,6 @@
       withNamespaceId(namespaceId): { spec+: { forProvider+: { namespaceId: namespaceId } } },
       '#withRequiresDuplicateDetection':: d.fn(help='"Boolean flag which controls whether Changing this forces a new resource to be created. the Topic requires duplicate detection. Defaults to false. Changing this forces a new resource to be created."', args=[d.arg(name='requiresDuplicateDetection', type=d.T.boolean)]),
       withRequiresDuplicateDetection(requiresDuplicateDetection): { spec+: { forProvider+: { requiresDuplicateDetection: requiresDuplicateDetection } } },
-      '#withStatus':: d.fn(help='"The Status of the Service Bus Topic. Acceptable values are Active or Disabled. Defaults to Active."', args=[d.arg(name='status', type=d.T.string)]),
-      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withSupportOrdering':: d.fn(help='"Boolean flag which controls whether the Topic supports ordering."', args=[d.arg(name='supportOrdering', type=d.T.boolean)]),
       withSupportOrdering(supportOrdering): { spec+: { forProvider+: { supportOrdering: supportOrdering } } },
     },

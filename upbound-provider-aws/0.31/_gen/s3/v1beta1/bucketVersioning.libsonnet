@@ -85,8 +85,6 @@
       versioningConfiguration: {
         '#withMfaDelete':: d.fn(help='"Specifies whether MFA delete is enabled in the bucket versioning configuration. Valid values: Enabled or Disabled."', args=[d.arg(name='mfaDelete', type=d.T.string)]),
         withMfaDelete(mfaDelete): { mfaDelete: mfaDelete },
-        '#withStatus':: d.fn(help='"Versioning state of the bucket. Valid values: Enabled, Suspended, or Disabled. Disabled should only be used when creating or importing resources that correspond to unversioned S3 buckets."', args=[d.arg(name='status', type=d.T.string)]),
-        withStatus(status): { status: status },
       },
       '#withBucket':: d.fn(help='"Name of the S3 bucket."', args=[d.arg(name='bucket', type=d.T.string)]),
       withBucket(bucket): { spec+: { forProvider+: { bucket: bucket } } },

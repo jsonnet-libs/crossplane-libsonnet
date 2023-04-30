@@ -33,7 +33,6 @@ permalink: /upbound-provider-aws/0.31/iam/v1beta1/signingCertificate/
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`obj spec.forProvider`](#obj-specforprovider)
     * [`fn withCertificateBody(certificateBody)`](#fn-specforproviderwithcertificatebody)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withUserName(userName)`](#fn-specforproviderwithusername)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
@@ -259,14 +258,6 @@ withCertificateBody(certificateBody)
 ```
 
 "encoded format."
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"–   The status you want to assign to the certificate. Active means that the certificate can be used for programmatic calls to Amazon Web Services Inactive means that the certificate cannot be used."
 
 ### fn spec.forProvider.withUserName
 

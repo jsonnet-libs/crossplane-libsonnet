@@ -44,7 +44,6 @@ permalink: /upbound-provider-aws/0.31/imagebuilder/v1beta1/imagePipeline/
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
     * [`fn withSchedule(schedule)`](#fn-specforproviderwithschedule)
     * [`fn withScheduleMixin(schedule)`](#fn-specforproviderwithschedulemixin)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
     * [`obj spec.forProvider.imageRecipeArnRef`](#obj-specforproviderimagerecipearnref)
@@ -394,14 +393,6 @@ withScheduleMixin(schedule)
 "Configuration block with schedule settings. Detailed below."
 
 **Note:** This function appends passed data to existing values
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Status of the image pipeline. Valid values are DISABLED and ENABLED. Defaults to ENABLED."
 
 ### fn spec.forProvider.withTags
 

@@ -48,7 +48,6 @@ permalink: /upbound-provider-azure/0.29/servicebus/v1beta1/queue/
     * [`fn withNamespaceId(namespaceId)`](#fn-specforproviderwithnamespaceid)
     * [`fn withRequiresDuplicateDetection(requiresDuplicateDetection)`](#fn-specforproviderwithrequiresduplicatedetection)
     * [`fn withRequiresSession(requiresSession)`](#fn-specforproviderwithrequiressession)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`obj spec.forProvider.namespaceIdRef`](#obj-specforprovidernamespaceidref)
       * [`fn withName(name)`](#fn-specforprovidernamespaceidrefwithname)
       * [`obj spec.forProvider.namespaceIdRef.policy`](#obj-specforprovidernamespaceidrefpolicy)
@@ -405,14 +404,6 @@ withRequiresSession(requiresSession)
 ```
 
 "Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to false."
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"The status of the Queue. Possible values are Active, Creating, Deleting, Disabled, ReceiveDisabled, Renaming, SendDisabled, Unknown. Note that Restoring is not accepted. Defaults to Active."
 
 ## obj spec.forProvider.namespaceIdRef
 

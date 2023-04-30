@@ -34,7 +34,6 @@ permalink: /provider-aws/0.36/acmpca/v1alpha1/certificateAuthority/
   * [`obj spec.forProvider`](#obj-specforprovider)
     * [`fn withPermanentDeletionTimeInDays(permanentDeletionTimeInDays)`](#fn-specforproviderwithpermanentdeletiontimeindays)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
     * [`fn withType(type)`](#fn-specforproviderwithtype)
@@ -296,14 +295,6 @@ withRegion(region)
 ```
 
 "Region is the region you'd like your CertificateAuthority to be created in."
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Status of the certificate authority. This value cannot be configured at creation, but can be updated to set a CA to ACTIVE or DISABLED."
 
 ### fn spec.forProvider.withTags
 

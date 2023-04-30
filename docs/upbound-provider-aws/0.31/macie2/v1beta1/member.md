@@ -38,7 +38,6 @@ permalink: /upbound-provider-aws/0.31/macie2/v1beta1/member/
     * [`fn withInvitationMessage(invitationMessage)`](#fn-specforproviderwithinvitationmessage)
     * [`fn withInvite(invite)`](#fn-specforproviderwithinvite)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
@@ -305,14 +304,6 @@ withRegion(region)
 ```
 
 "Region is the region you'd like your resource to be created in."
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to ENABLED. Valid values are ENABLED or PAUSED."
 
 ### fn spec.forProvider.withTags
 

@@ -93,8 +93,6 @@
       },
       '#notificationSettings':: d.obj(help='"The notification setting of a schedule. A notification_settings as defined below."'),
       notificationSettings: {
-        '#withStatus':: d.fn(help='"The status of the notification. Possible values are Enabled and Disabled. Defaults to Disabled"', args=[d.arg(name='status', type=d.T.string)]),
-        withStatus(status): { status: status },
         '#withTimeInMinutes':: d.fn(help='"Time in minutes before event at which notification will be sent."', args=[d.arg(name='timeInMinutes', type=d.T.number)]),
         withTimeInMinutes(timeInMinutes): { timeInMinutes: timeInMinutes },
         '#withWebhookUrl':: d.fn(help='"The webhook URL to which the notification will be sent."', args=[d.arg(name='webhookUrl', type=d.T.string)]),
@@ -155,8 +153,6 @@
       withNotificationSettingsMixin(notificationSettings): { spec+: { forProvider+: { notificationSettings+: if std.isArray(v=notificationSettings) then notificationSettings else [notificationSettings] } } },
       '#withResourceGroupName':: d.fn(help='"The name of the resource group in which to create the dev test lab schedule. Changing this forces a new resource to be created."', args=[d.arg(name='resourceGroupName', type=d.T.string)]),
       withResourceGroupName(resourceGroupName): { spec+: { forProvider+: { resourceGroupName: resourceGroupName } } },
-      '#withStatus':: d.fn(help='"The status of this schedule. Possible values are Enabled and Disabled. Defaults to Disabled."', args=[d.arg(name='status', type=d.T.string)]),
-      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withTags':: d.fn(help='"A mapping of tags to assign to the resource."', args=[d.arg(name='tags', type=d.T.object)]),
       withTags(tags): { spec+: { forProvider+: { tags: tags } } },
       '#withTagsMixin':: d.fn(help='"A mapping of tags to assign to the resource."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='tags', type=d.T.object)]),

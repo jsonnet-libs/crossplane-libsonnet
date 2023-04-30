@@ -75,9 +75,8 @@ permalink: /upbound-provider-aws/0.31/s3/v1beta1/bucketReplicationConfiguration/
       * [`fn withPriority(priority)`](#fn-specforproviderrulewithpriority)
       * [`fn withSourceSelectionCriteria(sourceSelectionCriteria)`](#fn-specforproviderrulewithsourceselectioncriteria)
       * [`fn withSourceSelectionCriteriaMixin(sourceSelectionCriteria)`](#fn-specforproviderrulewithsourceselectioncriteriamixin)
-      * [`fn withStatus(status)`](#fn-specforproviderrulewithstatus)
       * [`obj spec.forProvider.rule.deleteMarkerReplication`](#obj-specforproviderruledeletemarkerreplication)
-        * [`fn withStatus(status)`](#fn-specforproviderruledeletemarkerreplicationwithstatus)
+        
       * [`obj spec.forProvider.rule.destination`](#obj-specforproviderruledestination)
         * [`fn withAccessControlTranslation(accessControlTranslation)`](#fn-specforproviderruledestinationwithaccesscontroltranslation)
         * [`fn withAccessControlTranslationMixin(accessControlTranslation)`](#fn-specforproviderruledestinationwithaccesscontroltranslationmixin)
@@ -109,17 +108,15 @@ permalink: /upbound-provider-aws/0.31/s3/v1beta1/bucketReplicationConfiguration/
         * [`obj spec.forProvider.rule.destination.metrics`](#obj-specforproviderruledestinationmetrics)
           * [`fn withEventThreshold(eventThreshold)`](#fn-specforproviderruledestinationmetricswitheventthreshold)
           * [`fn withEventThresholdMixin(eventThreshold)`](#fn-specforproviderruledestinationmetricswitheventthresholdmixin)
-          * [`fn withStatus(status)`](#fn-specforproviderruledestinationmetricswithstatus)
           * [`obj spec.forProvider.rule.destination.metrics.eventThreshold`](#obj-specforproviderruledestinationmetricseventthreshold)
             * [`fn withMinutes(minutes)`](#fn-specforproviderruledestinationmetricseventthresholdwithminutes)
         * [`obj spec.forProvider.rule.destination.replicationTime`](#obj-specforproviderruledestinationreplicationtime)
-          * [`fn withStatus(status)`](#fn-specforproviderruledestinationreplicationtimewithstatus)
           * [`fn withTime(time)`](#fn-specforproviderruledestinationreplicationtimewithtime)
           * [`fn withTimeMixin(time)`](#fn-specforproviderruledestinationreplicationtimewithtimemixin)
           * [`obj spec.forProvider.rule.destination.replicationTime.time`](#obj-specforproviderruledestinationreplicationtimetime)
             * [`fn withMinutes(minutes)`](#fn-specforproviderruledestinationreplicationtimetimewithminutes)
       * [`obj spec.forProvider.rule.existingObjectReplication`](#obj-specforproviderruleexistingobjectreplication)
-        * [`fn withStatus(status)`](#fn-specforproviderruleexistingobjectreplicationwithstatus)
+        
       * [`obj spec.forProvider.rule.filter`](#obj-specforproviderrulefilter)
         * [`fn withAnd(and)`](#fn-specforproviderrulefilterwithand)
         * [`fn withAndMixin(and)`](#fn-specforproviderrulefilterwithandmixin)
@@ -139,9 +136,9 @@ permalink: /upbound-provider-aws/0.31/s3/v1beta1/bucketReplicationConfiguration/
         * [`fn withSseKmsEncryptedObjects(sseKmsEncryptedObjects)`](#fn-specforproviderrulesourceselectioncriteriawithssekmsencryptedobjects)
         * [`fn withSseKmsEncryptedObjectsMixin(sseKmsEncryptedObjects)`](#fn-specforproviderrulesourceselectioncriteriawithssekmsencryptedobjectsmixin)
         * [`obj spec.forProvider.rule.sourceSelectionCriteria.replicaModifications`](#obj-specforproviderrulesourceselectioncriteriareplicamodifications)
-          * [`fn withStatus(status)`](#fn-specforproviderrulesourceselectioncriteriareplicamodificationswithstatus)
+          
         * [`obj spec.forProvider.rule.sourceSelectionCriteria.sseKmsEncryptedObjects`](#obj-specforproviderrulesourceselectioncriteriassekmsencryptedobjects)
-          * [`fn withStatus(status)`](#fn-specforproviderrulesourceselectioncriteriassekmsencryptedobjectswithstatus)
+          
     * [`obj spec.forProvider.tokenSecretRef`](#obj-specforprovidertokensecretref)
       * [`fn withKey(key)`](#fn-specforprovidertokensecretrefwithkey)
       * [`fn withName(name)`](#fn-specforprovidertokensecretrefwithname)
@@ -687,25 +684,9 @@ withSourceSelectionCriteriaMixin(sourceSelectionCriteria)
 
 **Note:** This function appends passed data to existing values
 
-### fn spec.forProvider.rule.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Status of the rule. Either \"Enabled\" or \"Disabled\". The rule is ignored if status is not \"Enabled\"."
-
 ## obj spec.forProvider.rule.deleteMarkerReplication
 
 "Whether delete markers are replicated. This argument is only valid with V2 replication configurations (i.e., when filter is used)documented below."
-
-### fn spec.forProvider.rule.deleteMarkerReplication.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Whether delete markers should be replicated. Either \"Enabled\" or \"Disabled\"."
 
 ## obj spec.forProvider.rule.destination
 
@@ -935,14 +916,6 @@ withEventThresholdMixin(eventThreshold)
 
 **Note:** This function appends passed data to existing values
 
-### fn spec.forProvider.rule.destination.metrics.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Whether the existing objects should be replicated. Either \"Enabled\" or \"Disabled\"."
-
 ## obj spec.forProvider.rule.destination.metrics.eventThreshold
 
 "Configuration block that specifies the time threshold for emitting the s3:Replication:OperationMissedThreshold event. See below."
@@ -958,14 +931,6 @@ withMinutes(minutes)
 ## obj spec.forProvider.rule.destination.replicationTime
 
 "Configuration block that specifies S3 Replication Time Control (S3 RTC), including whether S3 RTC is enabled and the time when all objects and operations on objects must be replicated. See below. Replication Time Control must be used in conjunction with metrics."
-
-### fn spec.forProvider.rule.destination.replicationTime.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Whether the existing objects should be replicated. Either \"Enabled\" or \"Disabled\"."
 
 ### fn spec.forProvider.rule.destination.replicationTime.withTime
 
@@ -1000,14 +965,6 @@ withMinutes(minutes)
 ## obj spec.forProvider.rule.existingObjectReplication
 
 "Replicate existing objects in the source bucket according to the rule configurations. See below."
-
-### fn spec.forProvider.rule.existingObjectReplication.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Whether the existing objects should be replicated. Either \"Enabled\" or \"Disabled\"."
 
 ## obj spec.forProvider.rule.filter
 
@@ -1151,25 +1108,9 @@ withSseKmsEncryptedObjectsMixin(sseKmsEncryptedObjects)
 
 "Configuration block that you can specify for selections for modifications on replicas. Amazon S3 doesn't replicate replica modifications by default. In the latest version of replication configuration (when filter is specified), you can specify this element and set the status to Enabled to replicate modifications on replicas."
 
-### fn spec.forProvider.rule.sourceSelectionCriteria.replicaModifications.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Whether the existing objects should be replicated. Either \"Enabled\" or \"Disabled\"."
-
 ## obj spec.forProvider.rule.sourceSelectionCriteria.sseKmsEncryptedObjects
 
 "Configuration block for filter information for the selection of Amazon S3 objects encrypted with AWS KMS. If specified, replica_kms_key_id in destination encryption_configuration must be specified as well."
-
-### fn spec.forProvider.rule.sourceSelectionCriteria.sseKmsEncryptedObjects.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Whether the existing objects should be replicated. Either \"Enabled\" or \"Disabled\"."
 
 ## obj spec.forProvider.tokenSecretRef
 

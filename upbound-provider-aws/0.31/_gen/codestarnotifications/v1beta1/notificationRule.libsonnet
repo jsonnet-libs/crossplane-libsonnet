@@ -128,8 +128,6 @@
       withRegion(region): { spec+: { forProvider+: { region: region } } },
       '#withResource':: d.fn(help='"The ARN of the resource to associate with the notification rule."', args=[d.arg(name='resource', type=d.T.string)]),
       withResource(resource): { spec+: { forProvider+: { resource: resource } } },
-      '#withStatus':: d.fn(help='"The status of the notification rule. Possible values are ENABLED and DISABLED, default is ENABLED."', args=[d.arg(name='status', type=d.T.string)]),
-      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withTags':: d.fn(help='"Key-value map of resource tags."', args=[d.arg(name='tags', type=d.T.object)]),
       withTags(tags): { spec+: { forProvider+: { tags: tags } } },
       '#withTagsMixin':: d.fn(help='"Key-value map of resource tags."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='tags', type=d.T.object)]),

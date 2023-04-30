@@ -41,7 +41,6 @@ permalink: /upbound-provider-azure/0.29/devtestlab/v1beta1/schedule/
     * [`fn withNotificationSettings(notificationSettings)`](#fn-specforproviderwithnotificationsettings)
     * [`fn withNotificationSettingsMixin(notificationSettings)`](#fn-specforproviderwithnotificationsettingsmixin)
     * [`fn withResourceGroupName(resourceGroupName)`](#fn-specforproviderwithresourcegroupname)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
     * [`fn withTaskType(taskType)`](#fn-specforproviderwithtasktype)
@@ -65,7 +64,6 @@ permalink: /upbound-provider-azure/0.29/devtestlab/v1beta1/schedule/
         * [`fn withResolution(resolution)`](#fn-specforproviderlabnameselectorpolicywithresolution)
         * [`fn withResolve(resolve)`](#fn-specforproviderlabnameselectorpolicywithresolve)
     * [`obj spec.forProvider.notificationSettings`](#obj-specforprovidernotificationsettings)
-      * [`fn withStatus(status)`](#fn-specforprovidernotificationsettingswithstatus)
       * [`fn withTimeInMinutes(timeInMinutes)`](#fn-specforprovidernotificationsettingswithtimeinminutes)
       * [`fn withWebhookUrl(webhookUrl)`](#fn-specforprovidernotificationsettingswithwebhookurl)
     * [`obj spec.forProvider.resourceGroupNameRef`](#obj-specforproviderresourcegroupnameref)
@@ -379,14 +377,6 @@ withResourceGroupName(resourceGroupName)
 
 "The name of the resource group in which to create the dev test lab schedule. Changing this forces a new resource to be created."
 
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"The status of this schedule. Possible values are Enabled and Disabled. Defaults to Disabled."
-
 ### fn spec.forProvider.withTags
 
 ```ts
@@ -548,14 +538,6 @@ withResolve(resolve)
 ## obj spec.forProvider.notificationSettings
 
 "The notification setting of a schedule. A notification_settings as defined below."
-
-### fn spec.forProvider.notificationSettings.withStatus
-
-```ts
-withStatus(status)
-```
-
-"The status of the notification. Possible values are Enabled and Disabled. Defaults to Disabled"
 
 ### fn spec.forProvider.notificationSettings.withTimeInMinutes
 

@@ -112,7 +112,6 @@ permalink: /upbound-provider-aws/0.31/sagemaker/v1beta1/domain/
         * [`fn withTimeSeriesForecastingSettingsMixin(timeSeriesForecastingSettings)`](#fn-specforproviderdefaultusersettingscanvasappsettingswithtimeseriesforecastingsettingsmixin)
         * [`obj spec.forProvider.defaultUserSettings.canvasAppSettings.timeSeriesForecastingSettings`](#obj-specforproviderdefaultusersettingscanvasappsettingstimeseriesforecastingsettings)
           * [`fn withAmazonForecastRoleArn(amazonForecastRoleArn)`](#fn-specforproviderdefaultusersettingscanvasappsettingstimeseriesforecastingsettingswithamazonforecastrolearn)
-          * [`fn withStatus(status)`](#fn-specforproviderdefaultusersettingscanvasappsettingstimeseriesforecastingsettingswithstatus)
       * [`obj spec.forProvider.defaultUserSettings.executionRoleRef`](#obj-specforproviderdefaultusersettingsexecutionroleref)
         * [`fn withName(name)`](#fn-specforproviderdefaultusersettingsexecutionrolerefwithname)
         * [`obj spec.forProvider.defaultUserSettings.executionRoleRef.policy`](#obj-specforproviderdefaultusersettingsexecutionrolerefpolicy)
@@ -1111,14 +1110,6 @@ withAmazonForecastRoleArn(amazonForecastRoleArn)
 ```
 
 "The IAM role that Canvas passes to Amazon Forecast for time series forecasting. By default, Canvas uses the execution role specified in the UserProfile that launches the Canvas app. If an execution role is not specified in the UserProfile, Canvas uses the execution role specified in the Domain that owns the UserProfile. To allow time series forecasting, this IAM role should have the AmazonSageMakerCanvasForecastAccess policy attached and forecast.amazonaws.com added in the trust relationship as a service principal."
-
-### fn spec.forProvider.defaultUserSettings.canvasAppSettings.timeSeriesForecastingSettings.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED."
 
 ## obj spec.forProvider.defaultUserSettings.executionRoleRef
 

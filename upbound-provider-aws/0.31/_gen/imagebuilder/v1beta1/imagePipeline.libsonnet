@@ -149,8 +149,6 @@
       withSchedule(schedule): { spec+: { forProvider+: { schedule: if std.isArray(v=schedule) then schedule else [schedule] } } },
       '#withScheduleMixin':: d.fn(help='"Configuration block with schedule settings. Detailed below."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='schedule', type=d.T.array)]),
       withScheduleMixin(schedule): { spec+: { forProvider+: { schedule+: if std.isArray(v=schedule) then schedule else [schedule] } } },
-      '#withStatus':: d.fn(help='"Status of the image pipeline. Valid values are DISABLED and ENABLED. Defaults to ENABLED."', args=[d.arg(name='status', type=d.T.string)]),
-      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withTags':: d.fn(help='"Key-value map of resource tags."', args=[d.arg(name='tags', type=d.T.object)]),
       withTags(tags): { spec+: { forProvider+: { tags: tags } } },
       '#withTagsMixin':: d.fn(help='"Key-value map of resource tags."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='tags', type=d.T.object)]),

@@ -113,8 +113,6 @@
       withRequiresDuplicateDetection(requiresDuplicateDetection): { spec+: { forProvider+: { requiresDuplicateDetection: requiresDuplicateDetection } } },
       '#withRequiresSession':: d.fn(help='"Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to false."', args=[d.arg(name='requiresSession', type=d.T.boolean)]),
       withRequiresSession(requiresSession): { spec+: { forProvider+: { requiresSession: requiresSession } } },
-      '#withStatus':: d.fn(help='"The status of the Queue. Possible values are Active, Creating, Deleting, Disabled, ReceiveDisabled, Renaming, SendDisabled, Unknown. Note that Restoring is not accepted. Defaults to Active."', args=[d.arg(name='status', type=d.T.string)]),
-      withStatus(status): { spec+: { forProvider+: { status: status } } },
     },
     '#providerConfigRef':: d.obj(help='"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."'),
     providerConfigRef: {

@@ -113,8 +113,6 @@
       withPermanentDeletionTimeInDays(permanentDeletionTimeInDays): { spec+: { forProvider+: { permanentDeletionTimeInDays: permanentDeletionTimeInDays } } },
       '#withRegion':: d.fn(help="\"Region is the region you'd like your CertificateAuthority to be created in.\"", args=[d.arg(name='region', type=d.T.string)]),
       withRegion(region): { spec+: { forProvider+: { region: region } } },
-      '#withStatus':: d.fn(help='"Status of the certificate authority. This value cannot be configured at creation, but can be updated to set a CA to ACTIVE or DISABLED."', args=[d.arg(name='status', type=d.T.string)]),
-      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withTags':: d.fn(help='"One or more resource tags to associate with the certificateAuthority."', args=[d.arg(name='tags', type=d.T.array)]),
       withTags(tags): { spec+: { forProvider+: { tags: if std.isArray(v=tags) then tags else [tags] } } },
       '#withTagsMixin':: d.fn(help='"One or more resource tags to associate with the certificateAuthority."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='tags', type=d.T.array)]),

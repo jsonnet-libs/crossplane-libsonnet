@@ -42,7 +42,7 @@ permalink: /provider-aws/0.36/s3/v1beta1/bucket/
     * [`fn withObjectLockEnabledForBucket(objectLockEnabledForBucket)`](#fn-specforproviderwithobjectlockenabledforbucket)
     * [`fn withObjectOwnership(objectOwnership)`](#fn-specforproviderwithobjectownership)
     * [`obj spec.forProvider.accelerateConfiguration`](#obj-specforprovideraccelerateconfiguration)
-      * [`fn withStatus(status)`](#fn-specforprovideraccelerateconfigurationwithstatus)
+      
     * [`obj spec.forProvider.corsConfiguration`](#obj-specforprovidercorsconfiguration)
       * [`fn withCorsRules(corsRules)`](#fn-specforprovidercorsconfigurationwithcorsrules)
       * [`fn withCorsRulesMixin(corsRules)`](#fn-specforprovidercorsconfigurationwithcorsrulesmixin)
@@ -63,7 +63,6 @@ permalink: /provider-aws/0.36/s3/v1beta1/bucket/
         * [`fn withId(id)`](#fn-specforproviderlifecycleconfigurationruleswithid)
         * [`fn withNoncurrentVersionTransitions(noncurrentVersionTransitions)`](#fn-specforproviderlifecycleconfigurationruleswithnoncurrentversiontransitions)
         * [`fn withNoncurrentVersionTransitionsMixin(noncurrentVersionTransitions)`](#fn-specforproviderlifecycleconfigurationruleswithnoncurrentversiontransitionsmixin)
-        * [`fn withStatus(status)`](#fn-specforproviderlifecycleconfigurationruleswithstatus)
         * [`fn withTransitions(transitions)`](#fn-specforproviderlifecycleconfigurationruleswithtransitions)
         * [`fn withTransitionsMixin(transitions)`](#fn-specforproviderlifecycleconfigurationruleswithtransitionsmixin)
         * [`obj spec.forProvider.lifecycleConfiguration.rules.abortIncompleteMultipartUpload`](#obj-specforproviderlifecycleconfigurationrulesabortincompletemultipartupload)
@@ -211,9 +210,8 @@ permalink: /provider-aws/0.36/s3/v1beta1/bucket/
       * [`obj spec.forProvider.replicationConfiguration.rules`](#obj-specforproviderreplicationconfigurationrules)
         * [`fn withId(id)`](#fn-specforproviderreplicationconfigurationruleswithid)
         * [`fn withPriority(priority)`](#fn-specforproviderreplicationconfigurationruleswithpriority)
-        * [`fn withStatus(status)`](#fn-specforproviderreplicationconfigurationruleswithstatus)
         * [`obj spec.forProvider.replicationConfiguration.rules.deleteMarkerReplication`](#obj-specforproviderreplicationconfigurationrulesdeletemarkerreplication)
-          * [`fn withStatus(status)`](#fn-specforproviderreplicationconfigurationrulesdeletemarkerreplicationwithstatus)
+          
         * [`obj spec.forProvider.replicationConfiguration.rules.destination`](#obj-specforproviderreplicationconfigurationrulesdestination)
           * [`fn withAccount(account)`](#fn-specforproviderreplicationconfigurationrulesdestinationwithaccount)
           * [`fn withBucket(bucket)`](#fn-specforproviderreplicationconfigurationrulesdestinationwithbucket)
@@ -247,15 +245,13 @@ permalink: /provider-aws/0.36/s3/v1beta1/bucket/
                 * [`fn withResolution(resolution)`](#fn-specforproviderreplicationconfigurationrulesdestinationencryptionconfigurationreplicakmskeyidselectorpolicywithresolution)
                 * [`fn withResolve(resolve)`](#fn-specforproviderreplicationconfigurationrulesdestinationencryptionconfigurationreplicakmskeyidselectorpolicywithresolve)
           * [`obj spec.forProvider.replicationConfiguration.rules.destination.metrics`](#obj-specforproviderreplicationconfigurationrulesdestinationmetrics)
-            * [`fn withStatus(status)`](#fn-specforproviderreplicationconfigurationrulesdestinationmetricswithstatus)
             * [`obj spec.forProvider.replicationConfiguration.rules.destination.metrics.eventThreshold`](#obj-specforproviderreplicationconfigurationrulesdestinationmetricseventthreshold)
               * [`fn withMinutes(minutes)`](#fn-specforproviderreplicationconfigurationrulesdestinationmetricseventthresholdwithminutes)
           * [`obj spec.forProvider.replicationConfiguration.rules.destination.replicationTime`](#obj-specforproviderreplicationconfigurationrulesdestinationreplicationtime)
-            * [`fn withStatus(status)`](#fn-specforproviderreplicationconfigurationrulesdestinationreplicationtimewithstatus)
             * [`obj spec.forProvider.replicationConfiguration.rules.destination.replicationTime.time`](#obj-specforproviderreplicationconfigurationrulesdestinationreplicationtimetime)
               * [`fn withMinutes(minutes)`](#fn-specforproviderreplicationconfigurationrulesdestinationreplicationtimetimewithminutes)
         * [`obj spec.forProvider.replicationConfiguration.rules.existingObjectReplication`](#obj-specforproviderreplicationconfigurationrulesexistingobjectreplication)
-          * [`fn withStatus(status)`](#fn-specforproviderreplicationconfigurationrulesexistingobjectreplicationwithstatus)
+          
         * [`obj spec.forProvider.replicationConfiguration.rules.filter`](#obj-specforproviderreplicationconfigurationrulesfilter)
           * [`fn withPrefix(prefix)`](#fn-specforproviderreplicationconfigurationrulesfilterwithprefix)
           * [`obj spec.forProvider.replicationConfiguration.rules.filter.and`](#obj-specforproviderreplicationconfigurationrulesfilterand)
@@ -270,7 +266,7 @@ permalink: /provider-aws/0.36/s3/v1beta1/bucket/
             * [`fn withValue(value)`](#fn-specforproviderreplicationconfigurationrulesfiltertagwithvalue)
         * [`obj spec.forProvider.replicationConfiguration.rules.sourceSelectionCriteria`](#obj-specforproviderreplicationconfigurationrulessourceselectioncriteria)
           * [`obj spec.forProvider.replicationConfiguration.rules.sourceSelectionCriteria.sseKmsEncryptedObjects`](#obj-specforproviderreplicationconfigurationrulessourceselectioncriteriassekmsencryptedobjects)
-            * [`fn withStatus(status)`](#fn-specforproviderreplicationconfigurationrulessourceselectioncriteriassekmsencryptedobjectswithstatus)
+            
     * [`obj spec.forProvider.serverSideEncryptionConfiguration`](#obj-specforproviderserversideencryptionconfiguration)
       * [`fn withRules(rules)`](#fn-specforproviderserversideencryptionconfigurationwithrules)
       * [`fn withRulesMixin(rules)`](#fn-specforproviderserversideencryptionconfigurationwithrulesmixin)
@@ -299,7 +295,6 @@ permalink: /provider-aws/0.36/s3/v1beta1/bucket/
         * [`fn withValue(value)`](#fn-specforprovidertaggingtagsetwithvalue)
     * [`obj spec.forProvider.versioningConfiguration`](#obj-specforproviderversioningconfiguration)
       * [`fn withMfaDelete(mfaDelete)`](#fn-specforproviderversioningconfigurationwithmfadelete)
-      * [`fn withStatus(status)`](#fn-specforproviderversioningconfigurationwithstatus)
     * [`obj spec.forProvider.websiteConfiguration`](#obj-specforproviderwebsiteconfiguration)
       * [`fn withRoutingRules(routingRules)`](#fn-specforproviderwebsiteconfigurationwithroutingrules)
       * [`fn withRoutingRulesMixin(routingRules)`](#fn-specforproviderwebsiteconfigurationwithroutingrulesmixin)
@@ -613,14 +608,6 @@ withObjectOwnership(objectOwnership)
 
 "AccelerateConfiguration configures the transfer acceleration state for an Amazon S3 bucket. For more information, see Amazon S3 Transfer Acceleration (https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html) in the Amazon Simple Storage Service Developer Guide."
 
-### fn spec.forProvider.accelerateConfiguration.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Status specifies the transfer acceleration status of the bucket."
-
 ## obj spec.forProvider.corsConfiguration
 
 "Describes the cross-origin access configuration for objects in an Amazon S3 bucket. For more information, see Enabling Cross-Origin Resource Sharing (https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the Amazon Simple Storage Service Developer Guide."
@@ -778,14 +765,6 @@ withNoncurrentVersionTransitionsMixin(noncurrentVersionTransitions)
 "Specifies the transition rule for the lifecycle rule that describes when noncurrent objects transition to a specific storage class. If your bucket is versioning-enabled (or versioning is suspended), you can set this action to request that Amazon S3 transition noncurrent object versions to a specific storage class at a set period in the object's lifetime."
 
 **Note:** This function appends passed data to existing values
-
-### fn spec.forProvider.lifecycleConfiguration.rules.withStatus
-
-```ts
-withStatus(status)
-```
-
-"If 'Enabled', the rule is currently being applied. If 'Disabled', the rule is not currently being applied. \n Status is a required field, valid values are Enabled or Disabled"
 
 ### fn spec.forProvider.lifecycleConfiguration.rules.withTransitions
 
@@ -1817,25 +1796,9 @@ withPriority(priority)
 
 "The priority associated with the rule. If you specify multiple rules in a replication configuration, Amazon S3 prioritizes the rules to prevent conflicts when filtering. If two or more rules identify the same object based on a specified filter, the rule with higher priority takes precedence. For example: \n * Same object quality prefix-based filter criteria if prefixes you specified in multiple rules overlap \n * Same object qualify tag-based filter criteria specified in multiple rules \n For more information, see Replication (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the Amazon Simple Storage Service Developer Guide."
 
-### fn spec.forProvider.replicationConfiguration.rules.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Specifies whether the rule is enabled. \n Status is a required field Valid values are \"Enabled\" or \"Disabled\
-
 ## obj spec.forProvider.replicationConfiguration.rules.deleteMarkerReplication
 
 "Specifies whether Amazon S3 replicates the delete markers. If you specify a Filter, you must specify this element. However, in the latest version of replication configuration (when Filter is specified), Amazon S3 doesn't replicate delete markers. Therefore, the DeleteMarkerReplication element can contain only <Status>Disabled</Status>. For an example configuration, see Basic Rule Configuration (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-config-min-rule-config). \n If you don't specify the Filter element, Amazon S3 assumes that the replication configuration is the earlier version, V1. In the earlier version, Amazon S3 handled replication of delete markers differently. For more information, see Backward Compatibility (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-backward-compat-considerations)."
-
-### fn spec.forProvider.replicationConfiguration.rules.deleteMarkerReplication.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Indicates whether to replicate delete markers. Valid values are \"Enabled\" or \"Disabled\
 
 ## obj spec.forProvider.replicationConfiguration.rules.destination
 
@@ -2057,14 +2020,6 @@ withResolve(resolve)
 
 "A container specifying replication metrics-related settings enabling metrics and Amazon S3 events for S3 Replication Time Control (S3 RTC). Must be specified together with a ReplicationTime block."
 
-### fn spec.forProvider.replicationConfiguration.rules.destination.metrics.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Specifies whether the replication metrics are enabled. \n Status is a required field, valid values are \"Enabled\" and \"Disabled\
-
 ## obj spec.forProvider.replicationConfiguration.rules.destination.metrics.eventThreshold
 
 "A container specifying the time threshold for emitting the s3:Replication:OperationMissedThreshold event."
@@ -2081,14 +2036,6 @@ withMinutes(minutes)
 
 "A container specifying S3 Replication Time Control (S3 RTC), including whether S3 RTC is enabled and the time when all objects and operations on objects must be replicated. Must be specified together with a Metrics block."
 
-### fn spec.forProvider.replicationConfiguration.rules.destination.replicationTime.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Specifies whether the replication time is enabled Status is a required field Valid values are \"Enabled\" and \"Disabled\
-
 ## obj spec.forProvider.replicationConfiguration.rules.destination.replicationTime.time
 
 "A container specifying the time by which replication should be complete for all objects and operations on objects. Time is a required field"
@@ -2104,14 +2051,6 @@ withMinutes(minutes)
 ## obj spec.forProvider.replicationConfiguration.rules.existingObjectReplication
 
 "Optional configuration to replicate existing source bucket objects. For more information, see Replicating Existing Objects (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-what-is-isnot-replicated.html#existing-object-replication) in the Amazon S3 Developer Guide."
-
-### fn spec.forProvider.replicationConfiguration.rules.existingObjectReplication.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Status is a required field Valid values are \"Enabled\" and \"Disabled\
 
 ## obj spec.forProvider.replicationConfiguration.rules.filter
 
@@ -2202,14 +2141,6 @@ withValue(value)
 ## obj spec.forProvider.replicationConfiguration.rules.sourceSelectionCriteria.sseKmsEncryptedObjects
 
 "A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS. If you include SourceSelectionCriteria in the replication configuration, this element is required."
-
-### fn spec.forProvider.replicationConfiguration.rules.sourceSelectionCriteria.sseKmsEncryptedObjects.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service. \n Status is a required field Valid values are \"Enabled\" or \"Disabled\
 
 ## obj spec.forProvider.serverSideEncryptionConfiguration
 
@@ -2400,14 +2331,6 @@ withMfaDelete(mfaDelete)
 ```
 
 "MFADelete specifies whether MFA delete is enabled in the bucket versioning configuration. This element is only returned if the bucket has been configured with MFA delete. If the bucket has never been so configured, this element is not returned."
-
-### fn spec.forProvider.versioningConfiguration.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Status is the desired versioning state of the bucket."
 
 ## obj spec.forProvider.websiteConfiguration
 

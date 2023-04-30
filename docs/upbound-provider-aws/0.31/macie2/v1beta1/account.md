@@ -34,7 +34,6 @@ permalink: /upbound-provider-aws/0.31/macie2/v1beta1/account/
   * [`obj spec.forProvider`](#obj-specforprovider)
     * [`fn withFindingPublishingFrequency(findingPublishingFrequency)`](#fn-specforproviderwithfindingpublishingfrequency)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
     * [`obj spec.providerConfigRef.policy`](#obj-specproviderconfigrefpolicy)
@@ -267,14 +266,6 @@ withRegion(region)
 ```
 
 "Region is the region you'd like your resource to be created in."
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to ENABLED. Valid values are ENABLED or PAUSED."
 
 ## obj spec.providerConfigRef
 

@@ -41,7 +41,6 @@ permalink: /upbound-provider-azure/0.29/containerregistry/v1beta1/webhook/
     * [`fn withResourceGroupName(resourceGroupName)`](#fn-specforproviderwithresourcegroupname)
     * [`fn withScope(scope)`](#fn-specforproviderwithscope)
     * [`fn withServiceUri(serviceUri)`](#fn-specforproviderwithserviceuri)
-    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
     * [`obj spec.forProvider.registryNameRef`](#obj-specforproviderregistrynameref)
@@ -360,14 +359,6 @@ withServiceUri(serviceUri)
 ```
 
 "Specifies the service URI for the Webhook to post notifications."
-
-### fn spec.forProvider.withStatus
-
-```ts
-withStatus(status)
-```
-
-"Specifies if this Webhook triggers notifications or not. Valid values: enabled and disabled. Default is enabled."
 
 ### fn spec.forProvider.withTags
 
