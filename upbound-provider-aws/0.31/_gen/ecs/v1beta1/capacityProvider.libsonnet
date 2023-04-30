@@ -91,6 +91,8 @@
           withMaximumScalingStepSize(maximumScalingStepSize): { maximumScalingStepSize: maximumScalingStepSize },
           '#withMinimumScalingStepSize':: d.fn(help='"Minimum step adjustment size. A number between 1 and 10,000."', args=[d.arg(name='minimumScalingStepSize', type=d.T.number)]),
           withMinimumScalingStepSize(minimumScalingStepSize): { minimumScalingStepSize: minimumScalingStepSize },
+          '#withStatus':: d.fn(help='"Whether auto scaling is managed by ECS. Valid values are ENABLED and DISABLED."', args=[d.arg(name='status', type=d.T.string)]),
+          withStatus(status): { status: status },
           '#withTargetCapacity':: d.fn(help='"Target utilization for the capacity provider. A number between 1 and 100."', args=[d.arg(name='targetCapacity', type=d.T.number)]),
           withTargetCapacity(targetCapacity): { targetCapacity: targetCapacity },
         },

@@ -72,7 +72,7 @@ permalink: /upbound-provider-aws/0.31/keyspaces/v1beta1/table/
         * [`fn withResolution(resolution)`](#fn-specforproviderkeyspacenameselectorpolicywithresolution)
         * [`fn withResolve(resolve)`](#fn-specforproviderkeyspacenameselectorpolicywithresolve)
     * [`obj spec.forProvider.pointInTimeRecovery`](#obj-specforproviderpointintimerecovery)
-      
+      * [`fn withStatus(status)`](#fn-specforproviderpointintimerecoverywithstatus)
     * [`obj spec.forProvider.schemaDefinition`](#obj-specforproviderschemadefinition)
       * [`fn withClusteringKey(clusteringKey)`](#fn-specforproviderschemadefinitionwithclusteringkey)
       * [`fn withClusteringKeyMixin(clusteringKey)`](#fn-specforproviderschemadefinitionwithclusteringkeymixin)
@@ -93,7 +93,7 @@ permalink: /upbound-provider-aws/0.31/keyspaces/v1beta1/table/
       * [`obj spec.forProvider.schemaDefinition.staticColumn`](#obj-specforproviderschemadefinitionstaticcolumn)
         * [`fn withName(name)`](#fn-specforproviderschemadefinitionstaticcolumnwithname)
     * [`obj spec.forProvider.ttl`](#obj-specforproviderttl)
-      
+      * [`fn withStatus(status)`](#fn-specforproviderttlwithstatus)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
     * [`obj spec.providerConfigRef.policy`](#obj-specproviderconfigrefpolicy)
@@ -615,6 +615,14 @@ withResolve(resolve)
 
 "Specifies if point-in-time recovery is enabled or disabled for the table. More information can be found in the Developer Guide."
 
+### fn spec.forProvider.pointInTimeRecovery.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Valid values: ENABLED, DISABLED. The default value is DISABLED."
+
 ## obj spec.forProvider.schemaDefinition
 
 "Describes the schema of the table."
@@ -758,6 +766,14 @@ withName(name)
 ## obj spec.forProvider.ttl
 
 "Enables Time to Live custom settings for the table. More information can be found in the Developer Guide."
+
+### fn spec.forProvider.ttl.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Valid values: ENABLED, DISABLED. The default value is DISABLED."
 
 ## obj spec.providerConfigRef
 

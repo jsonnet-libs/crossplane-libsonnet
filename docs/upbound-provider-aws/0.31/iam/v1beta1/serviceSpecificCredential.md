@@ -33,6 +33,7 @@ permalink: /upbound-provider-aws/0.31/iam/v1beta1/serviceSpecificCredential/
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`obj spec.forProvider`](#obj-specforprovider)
     * [`fn withServiceName(serviceName)`](#fn-specforproviderwithservicename)
+    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withUserName(userName)`](#fn-specforproviderwithusername)
     * [`obj spec.forProvider.userNameRef`](#obj-specforproviderusernameref)
       * [`fn withName(name)`](#fn-specforproviderusernamerefwithname)
@@ -270,6 +271,14 @@ withServiceName(serviceName)
 ```
 
 "The name of the AWS service that is to be associated with the credentials. The service you specify here is the only service that can be accessed using these credentials."
+
+### fn spec.forProvider.withStatus
+
+```ts
+withStatus(status)
+```
+
+"The status to be assigned to the service-specific credential. Valid values are Active and Inactive. Default value is Active."
 
 ### fn spec.forProvider.withUserName
 

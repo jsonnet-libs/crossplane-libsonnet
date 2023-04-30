@@ -96,6 +96,8 @@
       withProjectId(projectId): { spec+: { forProvider+: { projectId: projectId } } },
       '#withSearchAnalyzer':: d.fn(help='', args=[d.arg(name='searchAnalyzer', type=d.T.string)]),
       withSearchAnalyzer(searchAnalyzer): { spec+: { forProvider+: { searchAnalyzer: searchAnalyzer } } },
+      '#withStatus':: d.fn(help='', args=[d.arg(name='status', type=d.T.string)]),
+      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withSynonyms':: d.fn(help='', args=[d.arg(name='synonyms', type=d.T.array)]),
       withSynonyms(synonyms): { spec+: { forProvider+: { synonyms: if std.isArray(v=synonyms) then synonyms else [synonyms] } } },
       '#withSynonymsMixin':: d.fn(help='\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='synonyms', type=d.T.array)]),

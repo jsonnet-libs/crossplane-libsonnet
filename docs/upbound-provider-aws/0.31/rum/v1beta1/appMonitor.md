@@ -56,7 +56,7 @@ permalink: /upbound-provider-aws/0.31/rum/v1beta1/appMonitor/
       * [`fn withTelemetries(telemetries)`](#fn-specforproviderappmonitorconfigurationwithtelemetries)
       * [`fn withTelemetriesMixin(telemetries)`](#fn-specforproviderappmonitorconfigurationwithtelemetriesmixin)
     * [`obj spec.forProvider.customEvents`](#obj-specforprovidercustomevents)
-      
+      * [`fn withStatus(status)`](#fn-specforprovidercustomeventswithstatus)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
     * [`obj spec.providerConfigRef.policy`](#obj-specproviderconfigrefpolicy)
@@ -471,6 +471,14 @@ withTelemetriesMixin(telemetries)
 ## obj spec.forProvider.customEvents
 
 "Specifies whether this app monitor allows the web client to define and send custom events. If you omit this parameter, custom events are DISABLED. See custom_events below."
+
+### fn spec.forProvider.customEvents.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Specifies whether this app monitor allows the web client to define and send custom events. The default is for custom events to be DISABLED. Valid values are DISABLED and ENABLED."
 
 ## obj spec.providerConfigRef
 

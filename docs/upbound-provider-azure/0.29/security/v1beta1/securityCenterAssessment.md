@@ -35,6 +35,8 @@ permalink: /upbound-provider-azure/0.29/security/v1beta1/securityCenterAssessmen
     * [`fn withAdditionalData(additionalData)`](#fn-specforproviderwithadditionaldata)
     * [`fn withAdditionalDataMixin(additionalData)`](#fn-specforproviderwithadditionaldatamixin)
     * [`fn withAssessmentPolicyId(assessmentPolicyId)`](#fn-specforproviderwithassessmentpolicyid)
+    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
+    * [`fn withStatusMixin(status)`](#fn-specforproviderwithstatusmixin)
     * [`fn withTargetResourceId(targetResourceId)`](#fn-specforproviderwithtargetresourceid)
     * [`obj spec.forProvider.assessmentPolicyIdRef`](#obj-specforproviderassessmentpolicyidref)
       * [`fn withName(name)`](#fn-specforproviderassessmentpolicyidrefwithname)
@@ -48,6 +50,10 @@ permalink: /upbound-provider-azure/0.29/security/v1beta1/securityCenterAssessmen
       * [`obj spec.forProvider.assessmentPolicyIdSelector.policy`](#obj-specforproviderassessmentpolicyidselectorpolicy)
         * [`fn withResolution(resolution)`](#fn-specforproviderassessmentpolicyidselectorpolicywithresolution)
         * [`fn withResolve(resolve)`](#fn-specforproviderassessmentpolicyidselectorpolicywithresolve)
+    * [`obj spec.forProvider.status`](#obj-specforproviderstatus)
+      * [`fn withCause(cause)`](#fn-specforproviderstatuswithcause)
+      * [`fn withCode(code)`](#fn-specforproviderstatuswithcode)
+      * [`fn withDescription(description)`](#fn-specforproviderstatuswithdescription)
     * [`obj spec.forProvider.targetResourceIdRef`](#obj-specforprovidertargetresourceidref)
       * [`fn withName(name)`](#fn-specforprovidertargetresourceidrefwithname)
       * [`obj spec.forProvider.targetResourceIdRef.policy`](#obj-specforprovidertargetresourceidrefpolicy)
@@ -303,6 +309,24 @@ withAssessmentPolicyId(assessmentPolicyId)
 
 "The ID of the security Assessment policy to apply to this resource. Changing this forces a new security Assessment to be created."
 
+### fn spec.forProvider.withStatus
+
+```ts
+withStatus(status)
+```
+
+"A status block as defined below."
+
+### fn spec.forProvider.withStatusMixin
+
+```ts
+withStatusMixin(status)
+```
+
+"A status block as defined below."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.forProvider.withTargetResourceId
 
 ```ts
@@ -392,6 +416,34 @@ withResolve(resolve)
 ```
 
 "Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile."
+
+## obj spec.forProvider.status
+
+"A status block as defined below."
+
+### fn spec.forProvider.status.withCause
+
+```ts
+withCause(cause)
+```
+
+"Specifies the cause of the assessment status."
+
+### fn spec.forProvider.status.withCode
+
+```ts
+withCode(code)
+```
+
+"Specifies the programmatic code of the assessment status. Possible values are Healthy, Unhealthy and NotApplicable."
+
+### fn spec.forProvider.status.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Specifies the human readable description of the assessment status."
 
 ## obj spec.forProvider.targetResourceIdRef
 

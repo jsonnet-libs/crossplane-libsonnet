@@ -45,6 +45,7 @@ permalink: /upbound-provider-azure/0.29/servicebus/v1beta1/subscription/
     * [`fn withLockDuration(lockDuration)`](#fn-specforproviderwithlockduration)
     * [`fn withMaxDeliveryCount(maxDeliveryCount)`](#fn-specforproviderwithmaxdeliverycount)
     * [`fn withRequiresSession(requiresSession)`](#fn-specforproviderwithrequiressession)
+    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withTopicId(topicId)`](#fn-specforproviderwithtopicid)
     * [`obj spec.forProvider.clientScopedSubscription`](#obj-specforproviderclientscopedsubscription)
       * [`fn withClientId(clientId)`](#fn-specforproviderclientscopedsubscriptionwithclientid)
@@ -383,6 +384,14 @@ withRequiresSession(requiresSession)
 ```
 
 "Boolean flag which controls whether this Subscription supports the concept of a session. Changing this forces a new resource to be created."
+
+### fn spec.forProvider.withStatus
+
+```ts
+withStatus(status)
+```
+
+"The status of the Subscription. Possible values are Active,ReceiveDisabled, or Disabled. Defaults to Active."
 
 ### fn spec.forProvider.withTopicId
 

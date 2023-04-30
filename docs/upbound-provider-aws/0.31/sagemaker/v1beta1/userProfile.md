@@ -74,6 +74,7 @@ permalink: /upbound-provider-aws/0.31/sagemaker/v1beta1/userProfile/
         * [`fn withTimeSeriesForecastingSettingsMixin(timeSeriesForecastingSettings)`](#fn-specforproviderusersettingscanvasappsettingswithtimeseriesforecastingsettingsmixin)
         * [`obj spec.forProvider.userSettings.canvasAppSettings.timeSeriesForecastingSettings`](#obj-specforproviderusersettingscanvasappsettingstimeseriesforecastingsettings)
           * [`fn withAmazonForecastRoleArn(amazonForecastRoleArn)`](#fn-specforproviderusersettingscanvasappsettingstimeseriesforecastingsettingswithamazonforecastrolearn)
+          * [`fn withStatus(status)`](#fn-specforproviderusersettingscanvasappsettingstimeseriesforecastingsettingswithstatus)
       * [`obj spec.forProvider.userSettings.jupyterServerAppSettings`](#obj-specforproviderusersettingsjupyterserverappsettings)
         * [`fn withCodeRepository(codeRepository)`](#fn-specforproviderusersettingsjupyterserverappsettingswithcoderepository)
         * [`fn withCodeRepositoryMixin(codeRepository)`](#fn-specforproviderusersettingsjupyterserverappsettingswithcoderepositorymixin)
@@ -676,6 +677,14 @@ withAmazonForecastRoleArn(amazonForecastRoleArn)
 ```
 
 "The IAM role that Canvas passes to Amazon Forecast for time series forecasting. By default, Canvas uses the execution role specified in the UserProfile that launches the Canvas app. If an execution role is not specified in the UserProfile, Canvas uses the execution role specified in the Domain that owns the UserProfile. To allow time series forecasting, this IAM role should have the AmazonSageMakerCanvasForecastAccess policy attached and forecast.amazonaws.com added in the trust relationship as a service principal."
+
+### fn spec.forProvider.userSettings.canvasAppSettings.timeSeriesForecastingSettings.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED."
 
 ## obj spec.forProvider.userSettings.jupyterServerAppSettings
 

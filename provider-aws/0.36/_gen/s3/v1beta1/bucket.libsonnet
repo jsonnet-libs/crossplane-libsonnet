@@ -54,7 +54,10 @@
     '#forProvider':: d.obj(help='"BucketParameters are parameters for configuring the calls made to AWS Bucket API."'),
     forProvider: {
       '#accelerateConfiguration':: d.obj(help='"AccelerateConfiguration configures the transfer acceleration state for an Amazon S3 bucket. For more information, see Amazon S3 Transfer Acceleration (https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html) in the Amazon Simple Storage Service Developer Guide."'),
-      accelerateConfiguration: {},
+      accelerateConfiguration: {
+        '#withStatus':: d.fn(help='"Status specifies the transfer acceleration status of the bucket."', args=[d.arg(name='status', type=d.T.string)]),
+        withStatus(status): { spec+: { forProvider+: { accelerateConfiguration+: { status: status } } } },
+      },
       '#corsConfiguration':: d.obj(help='"Describes the cross-origin access configuration for objects in an Amazon S3 bucket. For more information, see Enabling Cross-Origin Resource Sharing (https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the Amazon Simple Storage Service Developer Guide."'),
       corsConfiguration: {
         '#corsRules':: d.obj(help='"A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration."'),
@@ -156,6 +159,8 @@
           withNoncurrentVersionTransitions(noncurrentVersionTransitions): { noncurrentVersionTransitions: if std.isArray(v=noncurrentVersionTransitions) then noncurrentVersionTransitions else [noncurrentVersionTransitions] },
           '#withNoncurrentVersionTransitionsMixin':: d.fn(help="\"Specifies the transition rule for the lifecycle rule that describes when noncurrent objects transition to a specific storage class. If your bucket is versioning-enabled (or versioning is suspended), you can set this action to request that Amazon S3 transition noncurrent object versions to a specific storage class at a set period in the object's lifetime.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='noncurrentVersionTransitions', type=d.T.array)]),
           withNoncurrentVersionTransitionsMixin(noncurrentVersionTransitions): { noncurrentVersionTransitions+: if std.isArray(v=noncurrentVersionTransitions) then noncurrentVersionTransitions else [noncurrentVersionTransitions] },
+          '#withStatus':: d.fn(help="\"If 'Enabled', the rule is currently being applied. If 'Disabled', the rule is not currently being applied. \\n Status is a required field, valid values are Enabled or Disabled\"", args=[d.arg(name='status', type=d.T.string)]),
+          withStatus(status): { status: status },
           '#withTransitions':: d.fn(help='"Specifies when an Amazon S3 object transitions to a specified storage class."', args=[d.arg(name='transitions', type=d.T.array)]),
           withTransitions(transitions): { transitions: if std.isArray(v=transitions) then transitions else [transitions] },
           '#withTransitionsMixin':: d.fn(help='"Specifies when an Amazon S3 object transitions to a specified storage class."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='transitions', type=d.T.array)]),
@@ -427,7 +432,10 @@
         '#rules':: d.obj(help='"A container for one or more replication rules. A replication configuration must have at least one rule and can contain a maximum of 1,000 rules. \\n Rules is a required field"'),
         rules: {
           '#deleteMarkerReplication':: d.obj(help="\"Specifies whether Amazon S3 replicates the delete markers. If you specify a Filter, you must specify this element. However, in the latest version of replication configuration (when Filter is specified), Amazon S3 doesn't replicate delete markers. Therefore, the DeleteMarkerReplication element can contain only \u003cStatus\u003eDisabled\u003c/Status\u003e. For an example configuration, see Basic Rule Configuration (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-config-min-rule-config). \\n If you don't specify the Filter element, Amazon S3 assumes that the replication configuration is the earlier version, V1. In the earlier version, Amazon S3 handled replication of delete markers differently. For more information, see Backward Compatibility (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-backward-compat-considerations).\""),
-          deleteMarkerReplication: {},
+          deleteMarkerReplication: {
+            '#withStatus':: d.fn(help='"Indicates whether to replicate delete markers. Valid values are \\"Enabled\\" or \\"Disabled\\', args=[d.arg(name='status', type=d.T.string)]),
+            withStatus(status): { deleteMarkerReplication+: { status: status } },
+          },
           '#destination':: d.obj(help='"A container for information about the replication destination and its configurations including enabling the S3 Replication Time Control (S3 RTC). \\n Destination is a required field"'),
           destination: {
             '#accessControlTranslation':: d.obj(help='"Specify this only in a cross-account scenario (where source and destination bucket owners are not the same), and you want to change replica ownership to the AWS account that owns the destination bucket. If this is not specified in the replication configuration, the replicas are owned by same AWS account that owns the source object."'),
@@ -503,6 +511,8 @@
                 '#withMinutes':: d.fn(help='"Contains an integer specifying time in minutes. \\n Valid values: 15 minutes."', args=[d.arg(name='minutes', type=d.T.integer)]),
                 withMinutes(minutes): { destination+: { metrics+: { eventThreshold+: { minutes: minutes } } } },
               },
+              '#withStatus':: d.fn(help='"Specifies whether the replication metrics are enabled. \\n Status is a required field, valid values are \\"Enabled\\" and \\"Disabled\\', args=[d.arg(name='status', type=d.T.string)]),
+              withStatus(status): { destination+: { metrics+: { status: status } } },
             },
             '#replicationTime':: d.obj(help='"A container specifying S3 Replication Time Control (S3 RTC), including whether S3 RTC is enabled and the time when all objects and operations on objects must be replicated. Must be specified together with a Metrics block."'),
             replicationTime: {
@@ -511,6 +521,8 @@
                 '#withMinutes':: d.fn(help='"Contains an integer specifying time in minutes. \\n Valid values: 15 minutes."', args=[d.arg(name='minutes', type=d.T.integer)]),
                 withMinutes(minutes): { destination+: { replicationTime+: { time+: { minutes: minutes } } } },
               },
+              '#withStatus':: d.fn(help='"Specifies whether the replication time is enabled Status is a required field Valid values are \\"Enabled\\" and \\"Disabled\\', args=[d.arg(name='status', type=d.T.string)]),
+              withStatus(status): { destination+: { replicationTime+: { status: status } } },
             },
             '#withAccount':: d.fn(help='"Destination bucket owner account ID. In a cross-account scenario, if you direct Amazon S3 to change replica ownership to the AWS account that owns the destination bucket by specifying the AccessControlTranslation property, this is the account ID of the destination bucket owner. For more information, see Replication Additional Configuration: Changing the Replica Owner (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-change-owner.html) in the Amazon Simple Storage Service Developer Guide."', args=[d.arg(name='account', type=d.T.string)]),
             withAccount(account): { destination+: { account: account } },
@@ -520,7 +532,10 @@
             withStorageClass(storageClass): { destination+: { storageClass: storageClass } },
           },
           '#existingObjectReplication':: d.obj(help='"Optional configuration to replicate existing source bucket objects. For more information, see Replicating Existing Objects (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-what-is-isnot-replicated.html#existing-object-replication) in the Amazon S3 Developer Guide."'),
-          existingObjectReplication: {},
+          existingObjectReplication: {
+            '#withStatus':: d.fn(help='"Status is a required field Valid values are \\"Enabled\\" and \\"Disabled\\', args=[d.arg(name='status', type=d.T.string)]),
+            withStatus(status): { existingObjectReplication+: { status: status } },
+          },
           '#filter':: d.obj(help='"A filter that identifies the subset of objects to which the replication rule applies. A Filter must specify exactly one Prefix, Tag, or an And child element."'),
           filter: {
             '#and':: d.obj(help='"A container for specifying rule filters. The filters determine the subset of objects to which the rule applies. This element is required only if you specify more than one filter. For example: \\n * If you specify both a Prefix and a Tag filter, wrap these filters in an And tag. \\n * If you specify a filter based on multiple tags, wrap the Tag elements in an And tag."'),
@@ -552,12 +567,17 @@
           '#sourceSelectionCriteria':: d.obj(help='"A container that describes additional filters for identifying the source objects that you want to replicate. You can choose to enable or disable the replication of these objects. Currently, Amazon S3 supports only the filter that you can specify for objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service (SSE-KMS)."'),
           sourceSelectionCriteria: {
             '#sseKmsEncryptedObjects':: d.obj(help='"A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS. If you include SourceSelectionCriteria in the replication configuration, this element is required."'),
-            sseKmsEncryptedObjects: {},
+            sseKmsEncryptedObjects: {
+              '#withStatus':: d.fn(help='"Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service. \\n Status is a required field Valid values are \\"Enabled\\" or \\"Disabled\\', args=[d.arg(name='status', type=d.T.string)]),
+              withStatus(status): { sourceSelectionCriteria+: { sseKmsEncryptedObjects+: { status: status } } },
+            },
           },
           '#withId':: d.fn(help='"A unique identifier for the rule. The maximum value is 255 characters."', args=[d.arg(name='id', type=d.T.string)]),
           withId(id): { id: id },
           '#withPriority':: d.fn(help='"The priority associated with the rule. If you specify multiple rules in a replication configuration, Amazon S3 prioritizes the rules to prevent conflicts when filtering. If two or more rules identify the same object based on a specified filter, the rule with higher priority takes precedence. For example: \\n * Same object quality prefix-based filter criteria if prefixes you specified in multiple rules overlap \\n * Same object qualify tag-based filter criteria specified in multiple rules \\n For more information, see Replication (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the Amazon Simple Storage Service Developer Guide."', args=[d.arg(name='priority', type=d.T.integer)]),
           withPriority(priority): { priority: priority },
+          '#withStatus':: d.fn(help='"Specifies whether the rule is enabled. \\n Status is a required field Valid values are \\"Enabled\\" or \\"Disabled\\', args=[d.arg(name='status', type=d.T.string)]),
+          withStatus(status): { status: status },
         },
         '#withRole':: d.fn(help='"The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects. For more information, see How to Set Up Replication (https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-how-setup.html) in the Amazon Simple Storage Service Developer Guide. \\n At least one of role, roleRef or roleSelector fields is required."', args=[d.arg(name='role', type=d.T.string)]),
         withRole(role): { spec+: { forProvider+: { replicationConfiguration+: { role: role } } } },
@@ -631,6 +651,8 @@
       versioningConfiguration: {
         '#withMfaDelete':: d.fn(help='"MFADelete specifies whether MFA delete is enabled in the bucket versioning configuration. This element is only returned if the bucket has been configured with MFA delete. If the bucket has never been so configured, this element is not returned."', args=[d.arg(name='mfaDelete', type=d.T.string)]),
         withMfaDelete(mfaDelete): { spec+: { forProvider+: { versioningConfiguration+: { mfaDelete: mfaDelete } } } },
+        '#withStatus':: d.fn(help='"Status is the desired versioning state of the bucket."', args=[d.arg(name='status', type=d.T.string)]),
+        withStatus(status): { spec+: { forProvider+: { versioningConfiguration+: { status: status } } } },
       },
       '#websiteConfiguration':: d.obj(help="\"Specifies website configuration parameters for an Amazon S3 bucket. See the AWS API reference guide for Amazon Simple Storage Service's API operation PutBucketWebsite for usage and error information. See also, https://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketWebsite\""),
       websiteConfiguration: {

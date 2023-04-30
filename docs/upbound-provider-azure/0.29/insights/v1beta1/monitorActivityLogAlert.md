@@ -78,6 +78,7 @@ permalink: /upbound-provider-azure/0.29/insights/v1beta1/monitorActivityLogAlert
       * [`fn withResourceType(resourceType)`](#fn-specforprovidercriteriawithresourcetype)
       * [`fn withServiceHealth(serviceHealth)`](#fn-specforprovidercriteriawithservicehealth)
       * [`fn withServiceHealthMixin(serviceHealth)`](#fn-specforprovidercriteriawithservicehealthmixin)
+      * [`fn withStatus(status)`](#fn-specforprovidercriteriawithstatus)
       * [`fn withSubStatus(subStatus)`](#fn-specforprovidercriteriawithsubstatus)
       * [`obj spec.forProvider.criteria.resourceHealth`](#obj-specforprovidercriteriaresourcehealth)
         * [`fn withCurrent(current)`](#fn-specforprovidercriteriaresourcehealthwithcurrent)
@@ -707,6 +708,14 @@ withServiceHealthMixin(serviceHealth)
 "A block to define fine grain service health settings."
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.criteria.withStatus
+
+```ts
+withStatus(status)
+```
+
+"The status of the event. For example, Started, Failed, or Succeeded."
 
 ### fn spec.forProvider.criteria.withSubStatus
 

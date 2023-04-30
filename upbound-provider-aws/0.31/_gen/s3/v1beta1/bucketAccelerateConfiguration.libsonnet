@@ -87,6 +87,8 @@
       withExpectedBucketOwner(expectedBucketOwner): { spec+: { forProvider+: { expectedBucketOwner: expectedBucketOwner } } },
       '#withRegion':: d.fn(help="\"Region is the region you'd like your resource to be created in.\"", args=[d.arg(name='region', type=d.T.string)]),
       withRegion(region): { spec+: { forProvider+: { region: region } } },
+      '#withStatus':: d.fn(help='"Transfer acceleration state of the bucket. Valid values: Enabled, Suspended."', args=[d.arg(name='status', type=d.T.string)]),
+      withStatus(status): { spec+: { forProvider+: { status: status } } },
     },
     '#providerConfigRef':: d.obj(help='"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."'),
     providerConfigRef: {

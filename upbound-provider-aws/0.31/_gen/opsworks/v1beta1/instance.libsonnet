@@ -268,6 +268,8 @@
       withStackId(stackId): { spec+: { forProvider+: { stackId: stackId } } },
       '#withState':: d.fn(help='"Desired state of the instance. Valid values are running or stopped."', args=[d.arg(name='state', type=d.T.string)]),
       withState(state): { spec+: { forProvider+: { state: state } } },
+      '#withStatus':: d.fn(help='"Instance status. Will be one of booting, connection_lost, online, pending, rebooting, requested, running_setup, setup_failed, shutting_down, start_failed, stop_failed, stopped, stopping, terminated, or terminating."', args=[d.arg(name='status', type=d.T.string)]),
+      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withSubnetId':: d.fn(help='"Subnet ID to attach to."', args=[d.arg(name='subnetId', type=d.T.string)]),
       withSubnetId(subnetId): { spec+: { forProvider+: { subnetId: subnetId } } },
       '#withTenancy':: d.fn(help='"Instance tenancy to use. Valid values are default, dedicated or host."', args=[d.arg(name='tenancy', type=d.T.string)]),

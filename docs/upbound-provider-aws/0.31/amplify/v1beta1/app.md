@@ -79,6 +79,7 @@ permalink: /upbound-provider-aws/0.31/amplify/v1beta1/app/
     * [`obj spec.forProvider.customRule`](#obj-specforprovidercustomrule)
       * [`fn withCondition(condition)`](#fn-specforprovidercustomrulewithcondition)
       * [`fn withSource(source)`](#fn-specforprovidercustomrulewithsource)
+      * [`fn withStatus(status)`](#fn-specforprovidercustomrulewithstatus)
       * [`fn withTarget(target)`](#fn-specforprovidercustomrulewithtarget)
     * [`obj spec.forProvider.iamServiceRoleArnRef`](#obj-specforprovideriamservicerolearnref)
       * [`fn withName(name)`](#fn-specforprovideriamservicerolearnrefwithname)
@@ -680,6 +681,14 @@ withSource(source)
 ```
 
 "Source pattern for a URL rewrite or redirect rule."
+
+### fn spec.forProvider.customRule.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Status code for a URL rewrite or redirect rule. Valid values: 200, 301, 302, 404, 404-200."
 
 ### fn spec.forProvider.customRule.withTarget
 

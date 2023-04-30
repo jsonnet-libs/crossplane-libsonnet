@@ -34,6 +34,7 @@ permalink: /upbound-provider-aws/0.31/iam/v1beta1/userSSHKey/
   * [`obj spec.forProvider`](#obj-specforprovider)
     * [`fn withEncoding(encoding)`](#fn-specforproviderwithencoding)
     * [`fn withPublicKey(publicKey)`](#fn-specforproviderwithpublickey)
+    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withUsername(username)`](#fn-specforproviderwithusername)
     * [`obj spec.forProvider.usernameRef`](#obj-specforproviderusernameref)
       * [`fn withName(name)`](#fn-specforproviderusernamerefwithname)
@@ -279,6 +280,14 @@ withPublicKey(publicKey)
 ```
 
 "The SSH public key. The public key must be encoded in ssh-rsa format or PEM format."
+
+### fn spec.forProvider.withStatus
+
+```ts
+withStatus(status)
+```
+
+"The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is active."
 
 ### fn spec.forProvider.withUsername
 

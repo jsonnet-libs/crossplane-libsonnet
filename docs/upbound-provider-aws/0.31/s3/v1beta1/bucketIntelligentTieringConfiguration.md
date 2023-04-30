@@ -37,6 +37,7 @@ permalink: /upbound-provider-aws/0.31/s3/v1beta1/bucketIntelligentTieringConfigu
     * [`fn withFilterMixin(filter)`](#fn-specforproviderwithfiltermixin)
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
+    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withTiering(tiering)`](#fn-specforproviderwithtiering)
     * [`fn withTieringMixin(tiering)`](#fn-specforproviderwithtieringmixin)
     * [`obj spec.forProvider.bucketRef`](#obj-specforproviderbucketref)
@@ -316,6 +317,14 @@ withRegion(region)
 ```
 
 "Region is the region you'd like your resource to be created in."
+
+### fn spec.forProvider.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Specifies the status of the configuration. Valid values: Enabled, Disabled."
 
 ### fn spec.forProvider.withTiering
 

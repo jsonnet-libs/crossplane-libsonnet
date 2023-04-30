@@ -112,7 +112,10 @@
       '#rule':: d.obj(help='"List of configuration blocks describing the rules managing the replication. See below."'),
       rule: {
         '#deleteMarkerReplication':: d.obj(help='"Whether delete markers are replicated. This argument is only valid with V2 replication configurations (i.e., when filter is used)documented below."'),
-        deleteMarkerReplication: {},
+        deleteMarkerReplication: {
+          '#withStatus':: d.fn(help='"Whether delete markers should be replicated. Either \\"Enabled\\" or \\"Disabled\\"."', args=[d.arg(name='status', type=d.T.string)]),
+          withStatus(status): { status: status },
+        },
         '#destination':: d.obj(help='"Specifies the destination for the rule. See below."'),
         destination: {
           '#accessControlTranslation':: d.obj(help='"Configuration block that specifies the overrides to use for object owners on replication. See below. Specify this only in a cross-account scenario (where source and destination bucket owners are not the same), and you want to change replica ownership to the AWS account that owns the destination bucket. If this is not specified in the replication configuration, the replicas are owned by same AWS account that owns the source object. Must be used in conjunction with account owner override configuration."'),
@@ -164,6 +167,8 @@
             withEventThreshold(eventThreshold): { eventThreshold: if std.isArray(v=eventThreshold) then eventThreshold else [eventThreshold] },
             '#withEventThresholdMixin':: d.fn(help='"Configuration block that specifies the time threshold for emitting the s3:Replication:OperationMissedThreshold event. See below."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='eventThreshold', type=d.T.array)]),
             withEventThresholdMixin(eventThreshold): { eventThreshold+: if std.isArray(v=eventThreshold) then eventThreshold else [eventThreshold] },
+            '#withStatus':: d.fn(help='"Whether the existing objects should be replicated. Either \\"Enabled\\" or \\"Disabled\\"."', args=[d.arg(name='status', type=d.T.string)]),
+            withStatus(status): { status: status },
           },
           '#replicationTime':: d.obj(help='"Configuration block that specifies S3 Replication Time Control (S3 RTC), including whether S3 RTC is enabled and the time when all objects and operations on objects must be replicated. See below. Replication Time Control must be used in conjunction with metrics."'),
           replicationTime: {
@@ -172,6 +177,8 @@
               '#withMinutes':: d.fn(help='"Time in minutes. Valid values: 15."', args=[d.arg(name='minutes', type=d.T.number)]),
               withMinutes(minutes): { minutes: minutes },
             },
+            '#withStatus':: d.fn(help='"Whether the existing objects should be replicated. Either \\"Enabled\\" or \\"Disabled\\"."', args=[d.arg(name='status', type=d.T.string)]),
+            withStatus(status): { status: status },
             '#withTime':: d.fn(help='"Configuration block specifying the time by which replication should be complete for all objects and operations on objects. See below."', args=[d.arg(name='time', type=d.T.array)]),
             withTime(time): { time: if std.isArray(v=time) then time else [time] },
             '#withTimeMixin':: d.fn(help='"Configuration block specifying the time by which replication should be complete for all objects and operations on objects. See below."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='time', type=d.T.array)]),
@@ -201,7 +208,10 @@
           withStorageClass(storageClass): { storageClass: storageClass },
         },
         '#existingObjectReplication':: d.obj(help='"Replicate existing objects in the source bucket according to the rule configurations. See below."'),
-        existingObjectReplication: {},
+        existingObjectReplication: {
+          '#withStatus':: d.fn(help='"Whether the existing objects should be replicated. Either \\"Enabled\\" or \\"Disabled\\"."', args=[d.arg(name='status', type=d.T.string)]),
+          withStatus(status): { status: status },
+        },
         '#filter':: d.obj(help='"Filter that identifies subset of objects to which the replication rule applies. See below. If not specified, the rule will default to using prefix."'),
         filter: {
           '#and':: d.obj(help='"Configuration block for specifying rule filters. This element is required only if you specify more than one filter. See and below for more details."'),
@@ -234,9 +244,15 @@
         '#sourceSelectionCriteria':: d.obj(help='"Specifies special object selection criteria. See below."'),
         sourceSelectionCriteria: {
           '#replicaModifications':: d.obj(help="\"Configuration block that you can specify for selections for modifications on replicas. Amazon S3 doesn't replicate replica modifications by default. In the latest version of replication configuration (when filter is specified), you can specify this element and set the status to Enabled to replicate modifications on replicas.\""),
-          replicaModifications: {},
+          replicaModifications: {
+            '#withStatus':: d.fn(help='"Whether the existing objects should be replicated. Either \\"Enabled\\" or \\"Disabled\\"."', args=[d.arg(name='status', type=d.T.string)]),
+            withStatus(status): { status: status },
+          },
           '#sseKmsEncryptedObjects':: d.obj(help='"Configuration block for filter information for the selection of Amazon S3 objects encrypted with AWS KMS. If specified, replica_kms_key_id in destination encryption_configuration must be specified as well."'),
-          sseKmsEncryptedObjects: {},
+          sseKmsEncryptedObjects: {
+            '#withStatus':: d.fn(help='"Whether the existing objects should be replicated. Either \\"Enabled\\" or \\"Disabled\\"."', args=[d.arg(name='status', type=d.T.string)]),
+            withStatus(status): { status: status },
+          },
           '#withReplicaModifications':: d.fn(help="\"Configuration block that you can specify for selections for modifications on replicas. Amazon S3 doesn't replicate replica modifications by default. In the latest version of replication configuration (when filter is specified), you can specify this element and set the status to Enabled to replicate modifications on replicas.\"", args=[d.arg(name='replicaModifications', type=d.T.array)]),
           withReplicaModifications(replicaModifications): { replicaModifications: if std.isArray(v=replicaModifications) then replicaModifications else [replicaModifications] },
           '#withReplicaModificationsMixin':: d.fn(help="\"Configuration block that you can specify for selections for modifications on replicas. Amazon S3 doesn't replicate replica modifications by default. In the latest version of replication configuration (when filter is specified), you can specify this element and set the status to Enabled to replicate modifications on replicas.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='replicaModifications', type=d.T.array)]),
@@ -272,6 +288,8 @@
         withSourceSelectionCriteria(sourceSelectionCriteria): { sourceSelectionCriteria: if std.isArray(v=sourceSelectionCriteria) then sourceSelectionCriteria else [sourceSelectionCriteria] },
         '#withSourceSelectionCriteriaMixin':: d.fn(help='"Specifies special object selection criteria. See below."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='sourceSelectionCriteria', type=d.T.array)]),
         withSourceSelectionCriteriaMixin(sourceSelectionCriteria): { sourceSelectionCriteria+: if std.isArray(v=sourceSelectionCriteria) then sourceSelectionCriteria else [sourceSelectionCriteria] },
+        '#withStatus':: d.fn(help='"Status of the rule. Either \\"Enabled\\" or \\"Disabled\\". The rule is ignored if status is not \\"Enabled\\"."', args=[d.arg(name='status', type=d.T.string)]),
+        withStatus(status): { status: status },
       },
       '#tokenSecretRef':: d.obj(help="\"Token to allow replication to be enabled on an Object Lock-enabled bucket. You must contact AWS support for the bucket's \\\"Object Lock token\\\". For more details, see Using S3 Object Lock with replication.\""),
       tokenSecretRef: {

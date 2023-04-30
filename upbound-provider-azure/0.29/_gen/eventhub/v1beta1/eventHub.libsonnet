@@ -149,6 +149,8 @@
       withPartitionCount(partitionCount): { spec+: { forProvider+: { partitionCount: partitionCount } } },
       '#withResourceGroupName':: d.fn(help="\"The name of the resource group in which the EventHub's parent Namespace exists. Changing this forces a new resource to be created.\"", args=[d.arg(name='resourceGroupName', type=d.T.string)]),
       withResourceGroupName(resourceGroupName): { spec+: { forProvider+: { resourceGroupName: resourceGroupName } } },
+      '#withStatus':: d.fn(help='"Specifies the status of the Event Hub resource. Possible values are Active, Disabled and SendDisabled. Defaults to Active."', args=[d.arg(name='status', type=d.T.string)]),
+      withStatus(status): { spec+: { forProvider+: { status: status } } },
     },
     '#providerConfigRef':: d.obj(help='"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."'),
     providerConfigRef: {

@@ -58,6 +58,7 @@ permalink: /upbound-provider-aws/0.31/ecs/v1beta1/capacityProvider/
         * [`fn withInstanceWarmupPeriod(instanceWarmupPeriod)`](#fn-specforproviderautoscalinggroupprovidermanagedscalingwithinstancewarmupperiod)
         * [`fn withMaximumScalingStepSize(maximumScalingStepSize)`](#fn-specforproviderautoscalinggroupprovidermanagedscalingwithmaximumscalingstepsize)
         * [`fn withMinimumScalingStepSize(minimumScalingStepSize)`](#fn-specforproviderautoscalinggroupprovidermanagedscalingwithminimumscalingstepsize)
+        * [`fn withStatus(status)`](#fn-specforproviderautoscalinggroupprovidermanagedscalingwithstatus)
         * [`fn withTargetCapacity(targetCapacity)`](#fn-specforproviderautoscalinggroupprovidermanagedscalingwithtargetcapacity)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
@@ -467,6 +468,14 @@ withMinimumScalingStepSize(minimumScalingStepSize)
 ```
 
 "Minimum step adjustment size. A number between 1 and 10,000."
+
+### fn spec.forProvider.autoScalingGroupProvider.managedScaling.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Whether auto scaling is managed by ECS. Valid values are ENABLED and DISABLED."
 
 ### fn spec.forProvider.autoScalingGroupProvider.managedScaling.withTargetCapacity
 

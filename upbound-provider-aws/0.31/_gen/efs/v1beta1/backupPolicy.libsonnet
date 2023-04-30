@@ -54,7 +54,10 @@
     '#forProvider':: d.obj(help=''),
     forProvider: {
       '#backupPolicy':: d.obj(help='"A backup_policy object (documented below)."'),
-      backupPolicy: {},
+      backupPolicy: {
+        '#withStatus':: d.fn(help='"A status of the backup policy. Valid values: ENABLED, DISABLED."', args=[d.arg(name='status', type=d.T.string)]),
+        withStatus(status): { status: status },
+      },
       '#fileSystemIdRef':: d.obj(help='"Reference to a FileSystem to populate fileSystemId."'),
       fileSystemIdRef: {
         '#policy':: d.obj(help='"Policies for referencing."'),

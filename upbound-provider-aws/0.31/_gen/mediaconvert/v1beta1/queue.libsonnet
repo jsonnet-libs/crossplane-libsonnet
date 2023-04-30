@@ -72,6 +72,8 @@
       withReservationPlanSettings(reservationPlanSettings): { spec+: { forProvider+: { reservationPlanSettings: if std.isArray(v=reservationPlanSettings) then reservationPlanSettings else [reservationPlanSettings] } } },
       '#withReservationPlanSettingsMixin':: d.fn(help='"A detail pricing plan of the  reserved queue. See below."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='reservationPlanSettings', type=d.T.array)]),
       withReservationPlanSettingsMixin(reservationPlanSettings): { spec+: { forProvider+: { reservationPlanSettings+: if std.isArray(v=reservationPlanSettings) then reservationPlanSettings else [reservationPlanSettings] } } },
+      '#withStatus':: d.fn(help='"A status of the queue. Valid values are ACTIVE or RESERVED. Default to PAUSED."', args=[d.arg(name='status', type=d.T.string)]),
+      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withTags':: d.fn(help='"Key-value map of resource tags."', args=[d.arg(name='tags', type=d.T.object)]),
       withTags(tags): { spec+: { forProvider+: { tags: tags } } },
       '#withTagsMixin':: d.fn(help='"Key-value map of resource tags."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='tags', type=d.T.object)]),

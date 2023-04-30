@@ -42,6 +42,7 @@ permalink: /provider-jet-mongodbatlas/0.3/search/v1alpha1/index/
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withProjectId(projectId)`](#fn-specforproviderwithprojectid)
     * [`fn withSearchAnalyzer(searchAnalyzer)`](#fn-specforproviderwithsearchanalyzer)
+    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withSynonyms(synonyms)`](#fn-specforproviderwithsynonyms)
     * [`fn withSynonymsMixin(synonyms)`](#fn-specforproviderwithsynonymsmixin)
     * [`obj spec.forProvider.projectIdRef`](#obj-specforproviderprojectidref)
@@ -328,6 +329,14 @@ withProjectId(projectId)
 
 ```ts
 withSearchAnalyzer(searchAnalyzer)
+```
+
+
+
+### fn spec.forProvider.withStatus
+
+```ts
+withStatus(status)
 ```
 
 

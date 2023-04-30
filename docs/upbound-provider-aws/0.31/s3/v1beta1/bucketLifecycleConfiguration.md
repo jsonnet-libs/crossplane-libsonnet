@@ -62,6 +62,7 @@ permalink: /upbound-provider-aws/0.31/s3/v1beta1/bucketLifecycleConfiguration/
       * [`fn withNoncurrentVersionTransition(noncurrentVersionTransition)`](#fn-specforproviderrulewithnoncurrentversiontransition)
       * [`fn withNoncurrentVersionTransitionMixin(noncurrentVersionTransition)`](#fn-specforproviderrulewithnoncurrentversiontransitionmixin)
       * [`fn withPrefix(prefix)`](#fn-specforproviderrulewithprefix)
+      * [`fn withStatus(status)`](#fn-specforproviderrulewithstatus)
       * [`fn withTransition(transition)`](#fn-specforproviderrulewithtransition)
       * [`fn withTransitionMixin(transition)`](#fn-specforproviderrulewithtransitionmixin)
       * [`obj spec.forProvider.rule.abortIncompleteMultipartUpload`](#obj-specforproviderruleabortincompletemultipartupload)
@@ -548,6 +549,14 @@ withPrefix(prefix)
 ```
 
 "DEPRECATED Use filter instead. This has been deprecated by Amazon S3. Prefix identifying one or more objects to which the rule applies. Defaults to an empty string (\"\") if filter is not specified."
+
+### fn spec.forProvider.rule.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Whether the rule is currently being applied. Valid values: Enabled or Disabled."
 
 ### fn spec.forProvider.rule.withTransition
 

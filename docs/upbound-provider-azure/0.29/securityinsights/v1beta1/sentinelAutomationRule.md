@@ -55,6 +55,7 @@ permalink: /upbound-provider-azure/0.29/securityinsights/v1beta1/sentinelAutomat
       * [`fn withOrder(order)`](#fn-specforprovideractionincidentwithorder)
       * [`fn withOwnerId(ownerId)`](#fn-specforprovideractionincidentwithownerid)
       * [`fn withSeverity(severity)`](#fn-specforprovideractionincidentwithseverity)
+      * [`fn withStatus(status)`](#fn-specforprovideractionincidentwithstatus)
     * [`obj spec.forProvider.actionPlaybook`](#obj-specforprovideractionplaybook)
       * [`fn withLogicAppId(logicAppId)`](#fn-specforprovideractionplaybookwithlogicappid)
       * [`fn withOrder(order)`](#fn-specforprovideractionplaybookwithorder)
@@ -480,6 +481,14 @@ withSeverity(severity)
 ```
 
 "The severity to add to the incident. Possible values are High, Informational, Low and Medium."
+
+### fn spec.forProvider.actionIncident.withStatus
+
+```ts
+withStatus(status)
+```
+
+"The status to set to the incident. Possible values are: Active, Closed, New."
 
 ## obj spec.forProvider.actionPlaybook
 

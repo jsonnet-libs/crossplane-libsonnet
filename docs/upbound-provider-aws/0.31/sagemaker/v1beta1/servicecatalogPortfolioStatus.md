@@ -33,6 +33,7 @@ permalink: /upbound-provider-aws/0.31/sagemaker/v1beta1/servicecatalogPortfolioS
   * [`fn withDeletionPolicy(deletionPolicy)`](#fn-specwithdeletionpolicy)
   * [`obj spec.forProvider`](#obj-specforprovider)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
+    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
     * [`obj spec.providerConfigRef.policy`](#obj-specproviderconfigrefpolicy)
@@ -257,6 +258,14 @@ withRegion(region)
 ```
 
 "Region is the region you'd like your resource to be created in."
+
+### fn spec.forProvider.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Whether Service Catalog is enabled or disabled in SageMaker. Valid values are Enabled and Disabled."
 
 ## obj spec.providerConfigRef
 

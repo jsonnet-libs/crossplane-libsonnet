@@ -107,6 +107,8 @@
       withName(name): { spec+: { forProvider+: { name: name } } },
       '#withRegion':: d.fn(help="\"Region is the region you'd like your resource to be created in.\"", args=[d.arg(name='region', type=d.T.string)]),
       withRegion(region): { spec+: { forProvider+: { region: region } } },
+      '#withStatus':: d.fn(help='"Specifies the status of the configuration. Valid values: Enabled, Disabled."', args=[d.arg(name='status', type=d.T.string)]),
+      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withTiering':: d.fn(help='"S3 Intelligent-Tiering storage class tiers of the configuration (documented below)."', args=[d.arg(name='tiering', type=d.T.array)]),
       withTiering(tiering): { spec+: { forProvider+: { tiering: if std.isArray(v=tiering) then tiering else [tiering] } } },
       '#withTieringMixin':: d.fn(help='"S3 Intelligent-Tiering storage class tiers of the configuration (documented below)."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='tiering', type=d.T.array)]),

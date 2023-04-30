@@ -38,6 +38,7 @@ permalink: /upbound-provider-azure/0.29/eventhub/v1beta1/eventHub/
     * [`fn withNamespaceName(namespaceName)`](#fn-specforproviderwithnamespacename)
     * [`fn withPartitionCount(partitionCount)`](#fn-specforproviderwithpartitioncount)
     * [`fn withResourceGroupName(resourceGroupName)`](#fn-specforproviderwithresourcegroupname)
+    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`obj spec.forProvider.captureDescription`](#obj-specforprovidercapturedescription)
       * [`fn withDestination(destination)`](#fn-specforprovidercapturedescriptionwithdestination)
       * [`fn withDestinationMixin(destination)`](#fn-specforprovidercapturedescriptionwithdestinationmixin)
@@ -341,6 +342,14 @@ withResourceGroupName(resourceGroupName)
 ```
 
 "The name of the resource group in which the EventHub's parent Namespace exists. Changing this forces a new resource to be created."
+
+### fn spec.forProvider.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Specifies the status of the Event Hub resource. Possible values are Active, Disabled and SendDisabled. Defaults to Active."
 
 ## obj spec.forProvider.captureDescription
 

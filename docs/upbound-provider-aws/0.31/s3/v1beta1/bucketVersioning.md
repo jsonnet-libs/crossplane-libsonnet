@@ -52,6 +52,7 @@ permalink: /upbound-provider-aws/0.31/s3/v1beta1/bucketVersioning/
         * [`fn withResolve(resolve)`](#fn-specforproviderbucketselectorpolicywithresolve)
     * [`obj spec.forProvider.versioningConfiguration`](#obj-specforproviderversioningconfiguration)
       * [`fn withMfaDelete(mfaDelete)`](#fn-specforproviderversioningconfigurationwithmfadelete)
+      * [`fn withStatus(status)`](#fn-specforproviderversioningconfigurationwithstatus)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
     * [`obj spec.providerConfigRef.policy`](#obj-specproviderconfigrefpolicy)
@@ -412,6 +413,14 @@ withMfaDelete(mfaDelete)
 ```
 
 "Specifies whether MFA delete is enabled in the bucket versioning configuration. Valid values: Enabled or Disabled."
+
+### fn spec.forProvider.versioningConfiguration.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Versioning state of the bucket. Valid values: Enabled, Suspended, or Disabled. Disabled should only be used when creating or importing resources that correspond to unversioned S3 buckets."
 
 ## obj spec.providerConfigRef
 

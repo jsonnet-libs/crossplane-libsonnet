@@ -35,6 +35,7 @@ permalink: /upbound-provider-aws/0.31/s3/v1beta1/bucketAccelerateConfiguration/
     * [`fn withBucket(bucket)`](#fn-specforproviderwithbucket)
     * [`fn withExpectedBucketOwner(expectedBucketOwner)`](#fn-specforproviderwithexpectedbucketowner)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
+    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`obj spec.forProvider.bucketRef`](#obj-specforproviderbucketref)
       * [`fn withName(name)`](#fn-specforproviderbucketrefwithname)
       * [`obj spec.forProvider.bucketRef.policy`](#obj-specforproviderbucketrefpolicy)
@@ -287,6 +288,14 @@ withRegion(region)
 ```
 
 "Region is the region you'd like your resource to be created in."
+
+### fn spec.forProvider.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Transfer acceleration state of the bucket. Valid values: Enabled, Suspended."
 
 ## obj spec.forProvider.bucketRef
 

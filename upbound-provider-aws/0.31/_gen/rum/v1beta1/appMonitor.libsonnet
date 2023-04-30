@@ -83,7 +83,10 @@
         withTelemetriesMixin(telemetries): { telemetries+: if std.isArray(v=telemetries) then telemetries else [telemetries] },
       },
       '#customEvents':: d.obj(help='"Specifies whether this app monitor allows the web client to define and send custom events. If you omit this parameter, custom events are DISABLED. See custom_events below."'),
-      customEvents: {},
+      customEvents: {
+        '#withStatus':: d.fn(help='"Specifies whether this app monitor allows the web client to define and send custom events. The default is for custom events to be DISABLED. Valid values are DISABLED and ENABLED."', args=[d.arg(name='status', type=d.T.string)]),
+        withStatus(status): { status: status },
+      },
       '#withAppMonitorConfiguration':: d.fn(help='"configuration data for the app monitor. See app_monitor_configuration below."', args=[d.arg(name='appMonitorConfiguration', type=d.T.array)]),
       withAppMonitorConfiguration(appMonitorConfiguration): { spec+: { forProvider+: { appMonitorConfiguration: if std.isArray(v=appMonitorConfiguration) then appMonitorConfiguration else [appMonitorConfiguration] } } },
       '#withAppMonitorConfigurationMixin':: d.fn(help='"configuration data for the app monitor. See app_monitor_configuration below."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='appMonitorConfiguration', type=d.T.array)]),

@@ -109,6 +109,8 @@
         withCondition(condition): { condition: condition },
         '#withSource':: d.fn(help='"Source pattern for a URL rewrite or redirect rule."', args=[d.arg(name='source', type=d.T.string)]),
         withSource(source): { source: source },
+        '#withStatus':: d.fn(help='"Status code for a URL rewrite or redirect rule. Valid values: 200, 301, 302, 404, 404-200."', args=[d.arg(name='status', type=d.T.string)]),
+        withStatus(status): { status: status },
         '#withTarget':: d.fn(help='"Target pattern for a URL rewrite or redirect rule."', args=[d.arg(name='target', type=d.T.string)]),
         withTarget(target): { target: target },
       },

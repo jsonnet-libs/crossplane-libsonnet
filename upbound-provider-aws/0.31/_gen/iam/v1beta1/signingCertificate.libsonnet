@@ -55,6 +55,8 @@
     forProvider: {
       '#withCertificateBody':: d.fn(help='"encoded format."', args=[d.arg(name='certificateBody', type=d.T.string)]),
       withCertificateBody(certificateBody): { spec+: { forProvider+: { certificateBody: certificateBody } } },
+      '#withStatus':: d.fn(help='"–   The status you want to assign to the certificate. Active means that the certificate can be used for programmatic calls to Amazon Web Services Inactive means that the certificate cannot be used."', args=[d.arg(name='status', type=d.T.string)]),
+      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withUserName':: d.fn(help='"–  The name of the user the signing certificate is for."', args=[d.arg(name='userName', type=d.T.string)]),
       withUserName(userName): { spec+: { forProvider+: { userName: userName } } },
     },

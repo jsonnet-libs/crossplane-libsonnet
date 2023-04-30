@@ -269,6 +269,8 @@
       withInspectJobMixin(inspectJob): { spec+: { forProvider+: { inspectJob+: if std.isArray(v=inspectJob) then inspectJob else [inspectJob] } } },
       '#withParent':: d.fn(help='"The parent of the trigger, either in the format projects/{{project}} or projects/{{project}}/locations/{{location}}"', args=[d.arg(name='parent', type=d.T.string)]),
       withParent(parent): { spec+: { forProvider+: { parent: parent } } },
+      '#withStatus':: d.fn(help='"Whether the trigger is currently active. Default value is HEALTHY. Possible values are PAUSED, HEALTHY, and CANCELLED."', args=[d.arg(name='status', type=d.T.string)]),
+      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withTriggers':: d.fn(help='"What event needs to occur for a new job to be started. Structure is documented below."', args=[d.arg(name='triggers', type=d.T.array)]),
       withTriggers(triggers): { spec+: { forProvider+: { triggers: if std.isArray(v=triggers) then triggers else [triggers] } } },
       '#withTriggersMixin':: d.fn(help='"What event needs to occur for a new job to be started. Structure is documented below."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='triggers', type=d.T.array)]),

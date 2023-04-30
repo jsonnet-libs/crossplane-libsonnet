@@ -127,6 +127,8 @@
       withScope(scope): { spec+: { forProvider+: { scope: scope } } },
       '#withServiceUri':: d.fn(help='"Specifies the service URI for the Webhook to post notifications."', args=[d.arg(name='serviceUri', type=d.T.string)]),
       withServiceUri(serviceUri): { spec+: { forProvider+: { serviceUri: serviceUri } } },
+      '#withStatus':: d.fn(help='"Specifies if this Webhook triggers notifications or not. Valid values: enabled and disabled. Default is enabled."', args=[d.arg(name='status', type=d.T.string)]),
+      withStatus(status): { spec+: { forProvider+: { status: status } } },
       '#withTags':: d.fn(help='"A mapping of tags to assign to the resource."', args=[d.arg(name='tags', type=d.T.object)]),
       withTags(tags): { spec+: { forProvider+: { tags: tags } } },
       '#withTagsMixin':: d.fn(help='"A mapping of tags to assign to the resource."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='tags', type=d.T.object)]),

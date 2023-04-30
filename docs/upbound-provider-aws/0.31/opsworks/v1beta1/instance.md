@@ -67,6 +67,7 @@ permalink: /upbound-provider-aws/0.31/opsworks/v1beta1/instance/
     * [`fn withSshKeyName(sshKeyName)`](#fn-specforproviderwithsshkeyname)
     * [`fn withStackId(stackId)`](#fn-specforproviderwithstackid)
     * [`fn withState(state)`](#fn-specforproviderwithstate)
+    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withSubnetId(subnetId)`](#fn-specforproviderwithsubnetid)
     * [`fn withTenancy(tenancy)`](#fn-specforproviderwithtenancy)
     * [`fn withVirtualizationType(virtualizationType)`](#fn-specforproviderwithvirtualizationtype)
@@ -643,6 +644,14 @@ withState(state)
 ```
 
 "Desired state of the instance. Valid values are running or stopped."
+
+### fn spec.forProvider.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Instance status. Will be one of booting, connection_lost, online, pending, rebooting, requested, running_setup, setup_failed, shutting_down, start_failed, stop_failed, stopped, stopping, terminated, or terminating."
 
 ### fn spec.forProvider.withSubnetId
 

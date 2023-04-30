@@ -42,6 +42,7 @@ permalink: /upbound-provider-aws/0.31/connect/v1beta1/queue/
     * [`fn withQuickConnectIds(quickConnectIds)`](#fn-specforproviderwithquickconnectids)
     * [`fn withQuickConnectIdsMixin(quickConnectIds)`](#fn-specforproviderwithquickconnectidsmixin)
     * [`fn withRegion(region)`](#fn-specforproviderwithregion)
+    * [`fn withStatus(status)`](#fn-specforproviderwithstatus)
     * [`fn withTags(tags)`](#fn-specforproviderwithtags)
     * [`fn withTagsMixin(tags)`](#fn-specforproviderwithtagsmixin)
     * [`obj spec.forProvider.hoursOfOperationIdRef`](#obj-specforproviderhoursofoperationidref)
@@ -372,6 +373,14 @@ withRegion(region)
 ```
 
 "Region is the region you'd like your resource to be created in."
+
+### fn spec.forProvider.withStatus
+
+```ts
+withStatus(status)
+```
+
+"Specifies the description of the Queue. Valid values are ENABLED, DISABLED."
 
 ### fn spec.forProvider.withTags
 
