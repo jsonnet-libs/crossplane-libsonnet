@@ -17,10 +17,12 @@ Create patches for Composition resources.
   * [`fn withMergeOptions(appendSlice, keepMapValues)`](#fn-policywithmergeoptions)
 * [`obj transforms`](#obj-transforms)
   * [`fn bool(true_value, false_value)`](#fn-transformsbool)
+  * [`fn clampMax(max)`](#fn-transformsclampmax)
+  * [`fn clampMin(min)`](#fn-transformsclampmin)
   * [`fn convert(toType)`](#fn-transformsconvert)
   * [`fn literalPattern(literal, result)`](#fn-transformsliteralpattern)
   * [`fn map(map)`](#fn-transformsmap)
-  * [`fn match(patterns, fallbackValue)`](#fn-transformsmatch)
+  * [`fn match(patterns, fallbackValue, fallbackTo)`](#fn-transformsmatch)
   * [`fn regexpPattern(regexp, result)`](#fn-transformsregexppattern)
 
 ## Fields
@@ -111,6 +113,24 @@ Transform strings to booleans.
 Example: `bool(true_value='Orphan', false_value='Delete')`
 
 
+### fn transforms.clampMax
+
+```ts
+clampMax(max)
+```
+
+Clamp a number to a maximum value.
+
+
+### fn transforms.clampMin
+
+```ts
+clampMin(min)
+```
+
+Clamp a number to a minimum value.
+
+
 ### fn transforms.convert
 
 ```ts
@@ -142,12 +162,12 @@ Use a Map to transform keys into values.
 ### fn transforms.match
 
 ```ts
-match(patterns, fallbackValue)
+match(patterns, fallbackValue, fallbackTo)
 ```
 
 Match a value to a list of patterns.
 Use the literalPattern or regexpPattern function to create the patterns.
-Return the fallbackValue if no pattern matches.
+Return the fallbackValue or fallback to the input if no pattern matches.
 
 
 ### fn transforms.regexpPattern
