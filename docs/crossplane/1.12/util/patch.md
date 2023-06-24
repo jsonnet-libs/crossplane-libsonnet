@@ -24,6 +24,19 @@ Create patches for Composition resources.
   * [`fn map(map)`](#fn-transformsmap)
   * [`fn match(patterns, fallbackValue, fallbackTo)`](#fn-transformsmatch)
   * [`fn regexpPattern(regexp, result)`](#fn-transformsregexppattern)
+  * [`obj transforms.string`](#obj-transformsstring)
+    * [`fn convertFromBase64()`](#fn-transformsstringconvertfrombase64)
+    * [`fn convertToBase64()`](#fn-transformsstringconverttobase64)
+    * [`fn convertToJson()`](#fn-transformsstringconverttojson)
+    * [`fn convertToLower()`](#fn-transformsstringconverttolower)
+    * [`fn convertToSha1()`](#fn-transformsstringconverttosha1)
+    * [`fn convertToSha256()`](#fn-transformsstringconverttosha256)
+    * [`fn convertToSha512()`](#fn-transformsstringconverttosha512)
+    * [`fn convertToUpper()`](#fn-transformsstringconverttoupper)
+    * [`fn fmt(fmt)`](#fn-transformsstringfmt)
+    * [`fn regexp(match, group)`](#fn-transformsstringregexp)
+    * [`fn trimPrefix(trim)`](#fn-transformsstringtrimprefix)
+    * [`fn trimSuffix(trim)`](#fn-transformsstringtrimsuffix)
 
 ## Fields
 
@@ -178,3 +191,115 @@ regexpPattern(regexp, result)
 
 Match a value against a regexp, and return the result if the value matches.
 To be used with the match transform.
+
+
+## obj transforms.string
+
+
+
+### fn transforms.string.convertFromBase64
+
+```ts
+convertFromBase64()
+```
+
+Convert a base64 string to a string.
+
+
+### fn transforms.string.convertToBase64
+
+```ts
+convertToBase64()
+```
+
+Convert a string to base64.
+
+
+### fn transforms.string.convertToJson
+
+```ts
+convertToJson()
+```
+
+Convert a string to JSON.
+
+
+### fn transforms.string.convertToLower
+
+```ts
+convertToLower()
+```
+
+Convert a string to lower case.
+
+
+### fn transforms.string.convertToSha1
+
+```ts
+convertToSha1()
+```
+
+Convert a string to a SHA1 hash.
+
+
+### fn transforms.string.convertToSha256
+
+```ts
+convertToSha256()
+```
+
+Convert a string to a SHA256 hash.
+
+
+### fn transforms.string.convertToSha512
+
+```ts
+convertToSha512()
+```
+
+Convert a string to a SHA512 hash.
+
+
+### fn transforms.string.convertToUpper
+
+```ts
+convertToUpper()
+```
+
+Convert a string to upper case.
+
+
+### fn transforms.string.fmt
+
+```ts
+fmt(fmt)
+```
+
+Format a string. The format string is a Go format string.
+
+
+### fn transforms.string.regexp
+
+```ts
+regexp(match, group)
+```
+
+Match a regexp against a string. The group is optional and if omitted, the whole match is returned.
+
+
+### fn transforms.string.trimPrefix
+
+```ts
+trimPrefix(trim)
+```
+
+Trim a prefix from a string.
+
+
+### fn transforms.string.trimSuffix
+
+```ts
+trimSuffix(trim)
+```
+
+Trim a suffix from a string.
