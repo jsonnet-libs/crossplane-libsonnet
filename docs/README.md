@@ -2,6 +2,7 @@
 
 This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 
+- [crossplane/1.14](crossplane/1.14/README.md)
 - [crossplane/1.13](crossplane/1.13/README.md)
 - [crossplane/1.12](crossplane/1.12/README.md)
 - [provider-aws/0.36](provider-aws/0.36/README.md)
