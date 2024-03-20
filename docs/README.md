@@ -13,7 +13,7 @@ This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 - [provider-helm/0.13](provider-helm/0.13/README.md)
 - [provider-jet-mongodbatlas/0.3](provider-jet-mongodbatlas/0.3/README.md)
 - [provider-nop/0.2.0](provider-nop/0.2.0/README.md)
-- [provider-grafana/0.7](provider-grafana/0.7/README.md)
+- [provider-grafana/0.12](provider-grafana/0.12/README.md)
 - [upbound-provider-aws/0.40](upbound-provider-aws/0.40/README.md)
 - [upbound-provider-azure/0.29](upbound-provider-azure/0.29/README.md)
 - [upbound-provider-azuread/0.11](upbound-provider-azuread/0.11/README.md)
