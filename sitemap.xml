@@ -2546,362 +2546,362 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/alerting/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/alerting/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/alerting/v1alpha1/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/alerting/v1alpha1/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/alerting/v1alpha1/contactPoint/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/alerting/v1alpha1/contactPoint/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/alerting/v1alpha1/messageTemplate/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/alerting/v1alpha1/messageTemplate/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/alerting/v1alpha1/muteTiming/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/alerting/v1alpha1/muteTiming/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/alerting/v1alpha1/notificationPolicy/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/alerting/v1alpha1/notificationPolicy/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/alerting/v1alpha1/ruleGroup/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/alerting/v1alpha1/ruleGroup/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/cloud/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/cloud/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/cloud/v1alpha1/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/cloud/v1alpha1/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/cloud/v1alpha1/accessPolicy/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/cloud/v1alpha1/accessPolicy/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/cloud/v1alpha1/accessPolicyToken/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/cloud/v1alpha1/accessPolicyToken/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/cloud/v1alpha1/apiKey/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/cloud/v1alpha1/apiKey/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/cloud/v1alpha1/pluginInstallation/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/cloud/v1alpha1/pluginInstallation/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/cloud/v1alpha1/stack/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/cloud/v1alpha1/stack/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/cloud/v1alpha1/stackServiceAccount/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/cloud/v1alpha1/stackServiceAccount/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/cloud/v1alpha1/stackServiceAccountToken/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/cloud/v1alpha1/stackServiceAccountToken/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/enterprise/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/enterprise/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/enterprise/v1alpha1/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/enterprise/v1alpha1/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/enterprise/v1alpha1/dataSourcePermission/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/enterprise/v1alpha1/dataSourcePermission/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/enterprise/v1alpha1/report/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/enterprise/v1alpha1/report/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/enterprise/v1alpha1/role/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/enterprise/v1alpha1/role/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/enterprise/v1alpha1/roleAssignment/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/enterprise/v1alpha1/roleAssignment/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/enterprise/v1alpha1/teamExternalGroup/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/enterprise/v1alpha1/teamExternalGroup/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/grafana/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/grafana/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/grafana/v1alpha1/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/grafana/v1alpha1/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/grafana/v1alpha1/storeConfig/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/grafana/v1alpha1/storeConfig/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/grafana/v1beta1/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/grafana/v1beta1/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/grafana/v1beta1/providerConfig/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/grafana/v1beta1/providerConfig/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/grafana/v1beta1/providerConfigUsage/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/grafana/v1beta1/providerConfigUsage/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/ml/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/ml/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/ml/v1alpha1/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/ml/v1alpha1/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/ml/v1alpha1/holiday/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/ml/v1alpha1/holiday/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/ml/v1alpha1/job/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/ml/v1alpha1/job/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/ml/v1alpha1/outlierDetector/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/ml/v1alpha1/outlierDetector/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oncall/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oncall/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oncall/v1alpha1/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oncall/v1alpha1/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oncall/v1alpha1/escalation/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oncall/v1alpha1/escalation/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oncall/v1alpha1/escalationChain/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oncall/v1alpha1/escalationChain/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oncall/v1alpha1/integration/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oncall/v1alpha1/integration/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oncall/v1alpha1/onCallShift/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oncall/v1alpha1/onCallShift/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oncall/v1alpha1/outgoingWebhook/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oncall/v1alpha1/outgoingWebhook/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oncall/v1alpha1/route/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oncall/v1alpha1/route/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oncall/v1alpha1/schedule/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oncall/v1alpha1/schedule/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/annotation/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/annotation/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/apiKey/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/apiKey/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/dashboard/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/dashboard/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/dashboardPermission/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/dashboardPermission/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/dashboardPublic/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/dashboardPublic/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/dataSource/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/dataSource/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/folder/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/folder/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/folderPermission/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/folderPermission/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/libraryPanel/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/libraryPanel/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/organization/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/organization/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/organizationPreferences/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/organizationPreferences/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/playlist/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/playlist/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/serviceAccount/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/serviceAccount/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/serviceAccountPermission/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/serviceAccountPermission/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/serviceAccountToken/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/serviceAccountToken/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/ssoSettings/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/ssoSettings/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/team/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/team/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/oss/v1alpha1/user/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/oss/v1alpha1/user/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/slo/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/slo/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/slo/v1alpha1/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/slo/v1alpha1/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/slo/v1alpha1/slo/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/slo/v1alpha1/slo/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/sm/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/sm/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/sm/v1alpha1/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/sm/v1alpha1/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/sm/v1alpha1/check/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/sm/v1alpha1/check/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/sm/v1alpha1/installation/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/sm/v1alpha1/installation/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.12/sm/v1alpha1/probe/</loc>
+         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-grafana/0.13/sm/v1alpha1/probe/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
