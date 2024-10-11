@@ -1,0 +1,17 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  authenticationProfile: (import 'authenticationProfile.libsonnet'),
+  cluster: (import 'cluster.libsonnet'),
+  endpointAccess: (import 'endpointAccess.libsonnet'),
+  eventSubscription: (import 'eventSubscription.libsonnet'),
+  hsmClientCertificate: (import 'hsmClientCertificate.libsonnet'),
+  hsmConfiguration: (import 'hsmConfiguration.libsonnet'),
+  parameterGroup: (import 'parameterGroup.libsonnet'),
+  scheduledAction: (import 'scheduledAction.libsonnet'),
+  snapshotCopyGrant: (import 'snapshotCopyGrant.libsonnet'),
+  snapshotSchedule: (import 'snapshotSchedule.libsonnet'),
+  snapshotScheduleAssociation: (import 'snapshotScheduleAssociation.libsonnet'),
+  subnetGroup: (import 'subnetGroup.libsonnet'),
+  usageLimit: (import 'usageLimit.libsonnet'),
+}

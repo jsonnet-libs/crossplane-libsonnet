@@ -2,6 +2,7 @@
 
 This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 
+- [crossplane/1.15](crossplane/1.15/README.md)
 - [crossplane/1.14](crossplane/1.14/README.md)
 - [crossplane/1.13](crossplane/1.13/README.md)
 - [crossplane/1.12](crossplane/1.12/README.md)
@@ -15,6 +16,7 @@ This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 - [provider-nop/0.2.0](provider-nop/0.2.0/README.md)
 - [provider-grafana/0.15](provider-grafana/0.15/README.md)
 - [upbound-provider-aws/1.6.0](upbound-provider-aws/1.6.0/README.md)
+- [upbound-provider-aws/1.6](upbound-provider-aws/1.6/README.md)
 - [upbound-provider-azure/0.29](upbound-provider-azure/0.29/README.md)
 - [upbound-provider-azuread/0.11](upbound-provider-azuread/0.11/README.md)
 - [upbound-provider-gcp/0.36](upbound-provider-gcp/0.36/README.md)

@@ -1,0 +1,17 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  cachePolicy: (import 'cachePolicy.libsonnet'),
+  distribution: (import 'distribution.libsonnet'),
+  fieldLevelEncryptionConfig: (import 'fieldLevelEncryptionConfig.libsonnet'),
+  fieldLevelEncryptionProfile: (import 'fieldLevelEncryptionProfile.libsonnet'),
+  'function': (import 'function.libsonnet'),
+  keyGroup: (import 'keyGroup.libsonnet'),
+  monitoringSubscription: (import 'monitoringSubscription.libsonnet'),
+  originAccessControl: (import 'originAccessControl.libsonnet'),
+  originAccessIdentity: (import 'originAccessIdentity.libsonnet'),
+  originRequestPolicy: (import 'originRequestPolicy.libsonnet'),
+  publicKey: (import 'publicKey.libsonnet'),
+  realtimeLogConfig: (import 'realtimeLogConfig.libsonnet'),
+  responseHeadersPolicy: (import 'responseHeadersPolicy.libsonnet'),
+}

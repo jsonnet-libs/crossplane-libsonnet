@@ -1,0 +1,15 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  budgetResourceAssociation: (import 'budgetResourceAssociation.libsonnet'),
+  constraint: (import 'constraint.libsonnet'),
+  portfolio: (import 'portfolio.libsonnet'),
+  portfolioShare: (import 'portfolioShare.libsonnet'),
+  principalPortfolioAssociation: (import 'principalPortfolioAssociation.libsonnet'),
+  product: (import 'product.libsonnet'),
+  productPortfolioAssociation: (import 'productPortfolioAssociation.libsonnet'),
+  provisioningArtifact: (import 'provisioningArtifact.libsonnet'),
+  serviceAction: (import 'serviceAction.libsonnet'),
+  tagOption: (import 'tagOption.libsonnet'),
+  tagOptionResourceAssociation: (import 'tagOptionResourceAssociation.libsonnet'),
+}
