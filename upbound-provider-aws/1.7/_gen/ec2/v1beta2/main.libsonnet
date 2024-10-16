@@ -1,0 +1,18 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta2', url='', help=''),
+  ebsSnapshotImport: (import 'ebsSnapshotImport.libsonnet'),
+  flowLog: (import 'flowLog.libsonnet'),
+  instance: (import 'instance.libsonnet'),
+  launchTemplate: (import 'launchTemplate.libsonnet'),
+  route: (import 'route.libsonnet'),
+  spotFleetRequest: (import 'spotFleetRequest.libsonnet'),
+  spotInstanceRequest: (import 'spotInstanceRequest.libsonnet'),
+  trafficMirrorFilterRule: (import 'trafficMirrorFilterRule.libsonnet'),
+  vpcEndpoint: (import 'vpcEndpoint.libsonnet'),
+  vpcIpamPoolCidr: (import 'vpcIpamPoolCidr.libsonnet'),
+  vpcPeeringConnection: (import 'vpcPeeringConnection.libsonnet'),
+  vpcPeeringConnectionAccepter: (import 'vpcPeeringConnectionAccepter.libsonnet'),
+  vpcPeeringConnectionOptions: (import 'vpcPeeringConnectionOptions.libsonnet'),
+  vpnConnection: (import 'vpnConnection.libsonnet'),
+}
