@@ -18,6 +18,6 @@ This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 - [upbound-provider-aws/1.7](upbound-provider-aws/1.7/README.md)
 - [upbound-provider-azure/0.29](upbound-provider-azure/0.29/README.md)
 - [upbound-provider-azuread/0.11](upbound-provider-azuread/0.11/README.md)
-- [upbound-provider-gcp/0.36](upbound-provider-gcp/0.36/README.md)
+- [upbound-provider-gcp/1.8](upbound-provider-gcp/1.8/README.md)
 - [provider-terraform/0.10](provider-terraform/0.10/README.md)
 - [provider-terraform/0.16](provider-terraform/0.16/README.md)

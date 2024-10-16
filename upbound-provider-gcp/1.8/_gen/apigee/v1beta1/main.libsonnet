@@ -1,0 +1,15 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
+  addonsConfig: (import 'addonsConfig.libsonnet'),
+  endpointAttachment: (import 'endpointAttachment.libsonnet'),
+  envgroup: (import 'envgroup.libsonnet'),
+  envgroupAttachment: (import 'envgroupAttachment.libsonnet'),
+  environment: (import 'environment.libsonnet'),
+  environmentIAMMember: (import 'environmentIAMMember.libsonnet'),
+  instance: (import 'instance.libsonnet'),
+  instanceAttachment: (import 'instanceAttachment.libsonnet'),
+  natAddress: (import 'natAddress.libsonnet'),
+  organization: (import 'organization.libsonnet'),
+  syncAuthorization: (import 'syncAuthorization.libsonnet'),
+}
