@@ -1,0 +1,15 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta2', url='', help=''),
+  account: (import 'account.libsonnet'),
+  cassandraCluster: (import 'cassandraCluster.libsonnet'),
+  cassandraKeySpace: (import 'cassandraKeySpace.libsonnet'),
+  cassandraTable: (import 'cassandraTable.libsonnet'),
+  gremlinDatabase: (import 'gremlinDatabase.libsonnet'),
+  gremlinGraph: (import 'gremlinGraph.libsonnet'),
+  mongoCollection: (import 'mongoCollection.libsonnet'),
+  mongoDatabase: (import 'mongoDatabase.libsonnet'),
+  sqlContainer: (import 'sqlContainer.libsonnet'),
+  sqlDatabase: (import 'sqlDatabase.libsonnet'),
+  table: (import 'table.libsonnet'),
+}

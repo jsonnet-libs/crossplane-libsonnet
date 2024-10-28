@@ -1,0 +1,16 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta2', url='', help=''),
+  appServicePlan: (import 'appServicePlan.libsonnet'),
+  functionApp: (import 'functionApp.libsonnet'),
+  functionAppSlot: (import 'functionAppSlot.libsonnet'),
+  linuxFunctionApp: (import 'linuxFunctionApp.libsonnet'),
+  linuxFunctionAppSlot: (import 'linuxFunctionAppSlot.libsonnet'),
+  linuxWebApp: (import 'linuxWebApp.libsonnet'),
+  linuxWebAppSlot: (import 'linuxWebAppSlot.libsonnet'),
+  staticSite: (import 'staticSite.libsonnet'),
+  windowsFunctionApp: (import 'windowsFunctionApp.libsonnet'),
+  windowsFunctionAppSlot: (import 'windowsFunctionAppSlot.libsonnet'),
+  windowsWebApp: (import 'windowsWebApp.libsonnet'),
+  windowsWebAppSlot: (import 'windowsWebAppSlot.libsonnet'),
+}

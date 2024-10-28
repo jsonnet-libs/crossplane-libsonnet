@@ -1,0 +1,15 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta2', url='', help=''),
+  springCloudAPIPortal: (import 'springCloudAPIPortal.libsonnet'),
+  springCloudApp: (import 'springCloudApp.libsonnet'),
+  springCloudBuildDeployment: (import 'springCloudBuildDeployment.libsonnet'),
+  springCloudBuildPackBinding: (import 'springCloudBuildPackBinding.libsonnet'),
+  springCloudBuilder: (import 'springCloudBuilder.libsonnet'),
+  springCloudContainerDeployment: (import 'springCloudContainerDeployment.libsonnet'),
+  springCloudCustomizedAccelerator: (import 'springCloudCustomizedAccelerator.libsonnet'),
+  springCloudDevToolPortal: (import 'springCloudDevToolPortal.libsonnet'),
+  springCloudGateway: (import 'springCloudGateway.libsonnet'),
+  springCloudJavaDeployment: (import 'springCloudJavaDeployment.libsonnet'),
+  springCloudService: (import 'springCloudService.libsonnet'),
+}

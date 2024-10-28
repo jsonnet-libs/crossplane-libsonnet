@@ -1,0 +1,15 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1beta2', url='', help=''),
+  applicationInsightsStandardWebTest: (import 'applicationInsightsStandardWebTest.libsonnet'),
+  applicationInsightsWorkbook: (import 'applicationInsightsWorkbook.libsonnet'),
+  monitorActionGroup: (import 'monitorActionGroup.libsonnet'),
+  monitorActivityLogAlert: (import 'monitorActivityLogAlert.libsonnet'),
+  monitorAutoscaleSetting: (import 'monitorAutoscaleSetting.libsonnet'),
+  monitorDataCollectionRule: (import 'monitorDataCollectionRule.libsonnet'),
+  monitorDiagnosticSetting: (import 'monitorDiagnosticSetting.libsonnet'),
+  monitorMetricAlert: (import 'monitorMetricAlert.libsonnet'),
+  monitorScheduledQueryRulesAlert: (import 'monitorScheduledQueryRulesAlert.libsonnet'),
+  monitorScheduledQueryRulesAlertV2: (import 'monitorScheduledQueryRulesAlertV2.libsonnet'),
+  monitorScheduledQueryRulesLog: (import 'monitorScheduledQueryRulesLog.libsonnet'),
+}
