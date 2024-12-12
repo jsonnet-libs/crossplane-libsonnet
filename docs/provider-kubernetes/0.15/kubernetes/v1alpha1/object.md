@@ -1,10 +1,10 @@
 ---
-permalink: /provider-kubernetes/0.9/kubernetes/v1alpha1/object/
+permalink: /provider-kubernetes/0.15/kubernetes/v1alpha1/object/
 ---
 
 # kubernetes.v1alpha1.object
 
-"A Object is an provider Kubernetes API type"
+"A Object is an provider Kubernetes API type\nDeprecated: v1alpha1.Object is deprecated in favor of v1alpha2.Object"
 
 ## Index
 
@@ -36,6 +36,7 @@ permalink: /provider-kubernetes/0.9/kubernetes/v1alpha1/object/
   * [`fn withManagementPolicy(managementPolicy)`](#fn-specwithmanagementpolicy)
   * [`fn withReferences(references)`](#fn-specwithreferences)
   * [`fn withReferencesMixin(references)`](#fn-specwithreferencesmixin)
+  * [`fn withWatch(watch)`](#fn-specwithwatch)
   * [`obj spec.connectionDetails`](#obj-specconnectiondetails)
     * [`fn withApiVersion(apiVersion)`](#fn-specconnectiondetailswithapiversion)
     * [`fn withFieldPath(fieldPath)`](#fn-specconnectiondetailswithfieldpath)
@@ -292,7 +293,7 @@ withConnectionDetailsMixin(connectionDetails)
 withDeletionPolicy(deletionPolicy)
 ```
 
-"DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either \"Delete\" or \"Orphan\" the external resource. This field is planned to be deprecated in favor of the ManagementPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223"
+"DeletionPolicy specifies what will happen to the underlying external\nwhen this managed resource is deleted - either \"Delete\" or \"Orphan\" the\nexternal resource.\nThis field is planned to be deprecated in favor of the ManagementPolicy\nfield in a future release. Currently, both could be set independently and\nnon-default values would be honored if the feature flag is enabled.\nSee the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223"
 
 ### fn spec.withManagementPolicy
 
@@ -300,7 +301,7 @@ withDeletionPolicy(deletionPolicy)
 withManagementPolicy(managementPolicy)
 ```
 
-"A ManagementPolicy determines what should happen to the underlying external resource when a managed resource is created, updated, deleted, or observed."
+"A ManagementPolicy determines what should happen to the underlying external\nresource when a managed resource is created, updated, deleted, or observed."
 
 ### fn spec.withReferences
 
@@ -320,6 +321,14 @@ withReferencesMixin(references)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.withWatch
+
+```ts
+withWatch(watch)
+```
+
+"Watch enables watching the referenced or managed kubernetes resources.\n\n\nTHIS IS AN ALPHA FIELD. Do not use it in production. It is not honored\nunless \"watches\" feature gate is enabled, and may be changed or removed\nwithout notice."
+
 ## obj spec.connectionDetails
 
 
@@ -338,7 +347,7 @@ withApiVersion(apiVersion)
 withFieldPath(fieldPath)
 ```
 
-"If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: \"spec.containers{name}\" (where \"name\" refers to the name of the container that triggered the event) or if no container name is specified \"spec.containers[2]\" (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object. TODO: this design is not final and this field is subject to change in the future."
+"If referring to a piece of an object instead of an entire object, this string\nshould contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2].\nFor example, if the object reference is to a container within a pod, this would take on a value like:\n\"spec.containers{name}\" (where \"name\" refers to the name of the container that triggered\nthe event) or if no container name is specified \"spec.containers[2]\" (container with\nindex 2 in this pod). This syntax is chosen only to have some well-defined way of\nreferencing a part of an object.\nTODO: this design is not final and this field is subject to change in the future."
 
 ### fn spec.connectionDetails.withKind
 
@@ -346,7 +355,7 @@ withFieldPath(fieldPath)
 withKind(kind)
 ```
 
-"Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"
+"Kind of the referent.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"
 
 ### fn spec.connectionDetails.withName
 
@@ -354,7 +363,7 @@ withKind(kind)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names"
 
 ### fn spec.connectionDetails.withNamespace
 
@@ -362,7 +371,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/"
+"Namespace of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/"
 
 ### fn spec.connectionDetails.withResourceVersion
 
@@ -370,7 +379,7 @@ withNamespace(namespace)
 withResourceVersion(resourceVersion)
 ```
 
-"Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency"
+"Specific resourceVersion to which this reference is made, if any.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency"
 
 ### fn spec.connectionDetails.withToConnectionSecretKey
 
@@ -386,7 +395,7 @@ withToConnectionSecretKey(toConnectionSecretKey)
 withUid(uid)
 ```
 
-"UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids"
+"UID of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids"
 
 ## obj spec.forProvider
 
@@ -412,7 +421,7 @@ withManifestMixin(manifest)
 
 ## obj spec.providerConfigRef
 
-"ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured."
+"ProviderConfigReference specifies how the provider that will be used to\ncreate, observe, update, and delete this managed resource should be\nconfigured."
 
 ### fn spec.providerConfigRef.withName
 
@@ -432,7 +441,7 @@ withName(name)
 withResolution(resolution)
 ```
 
-"Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved."
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
 
 ### fn spec.providerConfigRef.policy.withResolve
 
@@ -440,11 +449,11 @@ withResolution(resolution)
 withResolve(resolve)
 ```
 
-"Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile."
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
 ## obj spec.providerRef
 
-"ProviderReference specifies the provider that will be used to create, observe, update, and delete this managed resource. Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`"
+"ProviderReference specifies the provider that will be used to create,\nobserve, update, and delete this managed resource.\nDeprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`"
 
 ### fn spec.providerRef.withName
 
@@ -464,7 +473,7 @@ withName(name)
 withResolution(resolution)
 ```
 
-"Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved."
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
 
 ### fn spec.providerRef.policy.withResolve
 
@@ -472,11 +481,11 @@ withResolution(resolution)
 withResolve(resolve)
 ```
 
-"Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile."
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
 ## obj spec.publishConnectionDetailsTo
 
-"PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource."
+"PublishConnectionDetailsTo specifies the connection secret config which\ncontains a name, metadata and a reference to secret store config to\nwhich any connection details for this managed resource should be written.\nConnection details frequently include the endpoint, username,\nand password required to connect to the managed resource."
 
 ### fn spec.publishConnectionDetailsTo.withName
 
@@ -488,7 +497,7 @@ withName(name)
 
 ## obj spec.publishConnectionDetailsTo.configRef
 
-"SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret."
+"SecretStoreConfigRef specifies which secret store config should be used\nfor this ConnectionSecret."
 
 ### fn spec.publishConnectionDetailsTo.configRef.withName
 
@@ -508,7 +517,7 @@ withName(name)
 withResolution(resolution)
 ```
 
-"Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved."
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
 
 ### fn spec.publishConnectionDetailsTo.configRef.policy.withResolve
 
@@ -516,7 +525,7 @@ withResolution(resolution)
 withResolve(resolve)
 ```
 
-"Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile."
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
 ## obj spec.publishConnectionDetailsTo.metadata
 
@@ -528,7 +537,7 @@ withResolve(resolve)
 withAnnotations(annotations)
 ```
 
-"Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as \"metadata.annotations\". - It is up to Secret Store implementation for others store types."
+"Annotations are the annotations to be added to connection secret.\n- For Kubernetes secrets, this will be used as \"metadata.annotations\".\n- It is up to Secret Store implementation for others store types."
 
 ### fn spec.publishConnectionDetailsTo.metadata.withAnnotationsMixin
 
@@ -536,7 +545,7 @@ withAnnotations(annotations)
 withAnnotationsMixin(annotations)
 ```
 
-"Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as \"metadata.annotations\". - It is up to Secret Store implementation for others store types."
+"Annotations are the annotations to be added to connection secret.\n- For Kubernetes secrets, this will be used as \"metadata.annotations\".\n- It is up to Secret Store implementation for others store types."
 
 **Note:** This function appends passed data to existing values
 
@@ -546,7 +555,7 @@ withAnnotationsMixin(annotations)
 withLabels(labels)
 ```
 
-"Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as \"metadata.labels\". - It is up to Secret Store implementation for others store types."
+"Labels are the labels/tags to be added to connection secret.\n- For Kubernetes secrets, this will be used as \"metadata.labels\".\n- It is up to Secret Store implementation for others store types."
 
 ### fn spec.publishConnectionDetailsTo.metadata.withLabelsMixin
 
@@ -554,7 +563,7 @@ withLabels(labels)
 withLabelsMixin(labels)
 ```
 
-"Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as \"metadata.labels\". - It is up to Secret Store implementation for others store types."
+"Labels are the labels/tags to be added to connection secret.\n- For Kubernetes secrets, this will be used as \"metadata.labels\".\n- It is up to Secret Store implementation for others store types."
 
 **Note:** This function appends passed data to existing values
 
@@ -564,11 +573,11 @@ withLabelsMixin(labels)
 withType(type)
 ```
 
-"Type is the SecretType for the connection secret. - Only valid for Kubernetes Secret Stores."
+"Type is the SecretType for the connection secret.\n- Only valid for Kubernetes Secret Stores."
 
 ## obj spec.readiness
 
-"Readiness defines how the object's readiness condition should be computed, if not specified it will be considered ready as soon as the underlying external resource is considered up-to-date."
+"Readiness defines how the object's readiness condition should be computed,\nif not specified it will be considered ready as soon as the underlying external\nresource is considered up-to-date."
 
 ### fn spec.readiness.withPolicy
 
@@ -588,11 +597,11 @@ withPolicy(policy)
 withToFieldPath(toFieldPath)
 ```
 
-"ToFieldPath is the path of the field on the resource whose value will be changed with the result of transforms. Leave empty if you'd like to propagate to the same path as patchesFrom.fieldPath."
+"ToFieldPath is the path of the field on the resource whose value will\nbe changed with the result of transforms. Leave empty if you'd like to\npropagate to the same path as patchesFrom.fieldPath."
 
 ## obj spec.references.dependsOn
 
-"DependsOn is used to declare dependency on other Object or arbitrary Kubernetes resource."
+"DependsOn is used to declare dependency on other Object or arbitrary\nKubernetes resource."
 
 ### fn spec.references.dependsOn.withApiVersion
 
@@ -628,7 +637,7 @@ withNamespace(namespace)
 
 ## obj spec.references.patchesFrom
 
-"PatchesFrom is used to declare dependency on other Object or arbitrary Kubernetes resource, and also patch fields from this object."
+"PatchesFrom is used to declare dependency on other Object or arbitrary\nKubernetes resource, and also patch fields from this object."
 
 ### fn spec.references.patchesFrom.withApiVersion
 
@@ -644,7 +653,7 @@ withApiVersion(apiVersion)
 withFieldPath(fieldPath)
 ```
 
-"FieldPath is the path of the field on the resource whose value is to be used as input."
+"FieldPath is the path of the field on the resource whose value is to be\nused as input."
 
 ### fn spec.references.patchesFrom.withKind
 
@@ -672,7 +681,7 @@ withNamespace(namespace)
 
 ## obj spec.writeConnectionSecretToRef
 
-"WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other."
+"WriteConnectionSecretToReference specifies the namespace and name of a\nSecret to which any connection details for this managed resource should\nbe written. Connection details frequently include the endpoint, username,\nand password required to connect to the managed resource.\nThis field is planned to be replaced in a future release in favor of\nPublishConnectionDetailsTo. Currently, both could be set independently\nand connection details would be published to both without affecting\neach other."
 
 ### fn spec.writeConnectionSecretToRef.withName
 

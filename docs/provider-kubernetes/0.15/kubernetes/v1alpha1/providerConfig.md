@@ -1,5 +1,5 @@
 ---
-permalink: /provider-kubernetes/0.9/kubernetes/v1alpha1/providerConfig/
+permalink: /provider-kubernetes/0.15/kubernetes/v1alpha1/providerConfig/
 ---
 
 # kubernetes.v1alpha1.providerConfig
@@ -232,7 +232,7 @@ withUid(uid)
 
 ## obj spec.credentials
 
-"Credentials used to connect to the Kubernetes API. Typically a kubeconfig file. Use InjectedIdentity for in-cluster config."
+"Credentials used to connect to the Kubernetes API. Typically a\nkubeconfig file. Use InjectedIdentity for in-cluster config."
 
 ### fn spec.credentials.withSource
 
@@ -244,7 +244,7 @@ withSource(source)
 
 ## obj spec.credentials.env
 
-"Env is a reference to an environment variable that contains credentials that must be used to connect to the provider."
+"Env is a reference to an environment variable that contains credentials\nthat must be used to connect to the provider."
 
 ### fn spec.credentials.env.withName
 
@@ -256,7 +256,7 @@ withName(name)
 
 ## obj spec.credentials.fs
 
-"Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider."
+"Fs is a reference to a filesystem location that contains credentials that\nmust be used to connect to the provider."
 
 ### fn spec.credentials.fs.withPath
 
@@ -268,7 +268,7 @@ withPath(path)
 
 ## obj spec.credentials.secretRef
 
-"A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider."
+"A SecretRef is a reference to a secret key that contains the credentials\nthat must be used to connect to the provider."
 
 ### fn spec.credentials.secretRef.withKey
 
@@ -296,7 +296,7 @@ withNamespace(namespace)
 
 ## obj spec.identity
 
-"Identity used to authenticate to the Kubernetes API. The identity credentials can be used to supplement kubeconfig 'credentials', for example by configuring a bearer token source such as OAuth."
+"Identity used to authenticate to the Kubernetes API. The identity\ncredentials can be used to supplement kubeconfig 'credentials', for\nexample by configuring a bearer token source such as OAuth."
 
 ### fn spec.identity.withSource
 
@@ -316,7 +316,7 @@ withType(type)
 
 ## obj spec.identity.env
 
-"Env is a reference to an environment variable that contains credentials that must be used to connect to the provider."
+"Env is a reference to an environment variable that contains credentials\nthat must be used to connect to the provider."
 
 ### fn spec.identity.env.withName
 
@@ -328,7 +328,7 @@ withName(name)
 
 ## obj spec.identity.fs
 
-"Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider."
+"Fs is a reference to a filesystem location that contains credentials that\nmust be used to connect to the provider."
 
 ### fn spec.identity.fs.withPath
 
@@ -340,7 +340,7 @@ withPath(path)
 
 ## obj spec.identity.secretRef
 
-"A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider."
+"A SecretRef is a reference to a secret key that contains the credentials\nthat must be used to connect to the provider."
 
 ### fn spec.identity.secretRef.withKey
 
