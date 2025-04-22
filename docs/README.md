@@ -25,3 +25,4 @@ This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 - [provider-terraform/0.16](provider-terraform/0.16/README.md)
 - [function-patch-and-transform/0.7](function-patch-and-transform/0.7/README.md)
 - [function-cel-filter/0.1](function-cel-filter/0.1/README.md)
+- [function-kcl/0.11](function-kcl/0.11/README.md)
