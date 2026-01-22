@@ -2,12 +2,6 @@
 
 This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 
-- [crossplane/1.17](crossplane/1.17/README.md)
-- [crossplane/1.16](crossplane/1.16/README.md)
-- [crossplane/1.15](crossplane/1.15/README.md)
-- [crossplane/1.14](crossplane/1.14/README.md)
-- [crossplane/1.13](crossplane/1.13/README.md)
-- [crossplane/1.12](crossplane/1.12/README.md)
 - [provider-aws/0.36](provider-aws/0.36/README.md)
 - [provider-gcp/0.22](provider-gcp/0.22/README.md)
 - [provider-azure/0.20](provider-azure/0.20/README.md)
