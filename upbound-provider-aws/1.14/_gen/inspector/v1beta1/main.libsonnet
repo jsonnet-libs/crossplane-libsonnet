@@ -1,7 +1,0 @@
-{
-  local d = (import 'doc-util/main.libsonnet'),
-  '#':: d.pkg(name='v1beta1', url='', help=''),
-  assessmentTarget: (import 'assessmentTarget.libsonnet'),
-  assessmentTemplate: (import 'assessmentTemplate.libsonnet'),
-  resourceGroup: (import 'resourceGroup.libsonnet'),
-}
