@@ -2504,8 +2504,4 @@
          <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/provider-terraform/0.16/tf/v1beta1/workspace/</loc>
          <lastmod>2026-02-05</lastmod>
     </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/crossplane-libsonnet/upbound-provider-azuread/0.11/</loc>
-         <lastmod>2026-02-05</lastmod>
-    </url>
 </urlset>
