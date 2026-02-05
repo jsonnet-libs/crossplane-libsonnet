@@ -10,7 +10,6 @@ This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 - [provider-helm/0.13](provider-helm/0.13/README.md)
 - [provider-jet-mongodbatlas/0.3](provider-jet-mongodbatlas/0.3/README.md)
 - [provider-nop/0.2.0](provider-nop/0.2.0/README.md)
-- [provider-grafana/0.21](provider-grafana/0.21/README.md)
 - [provider-terraform/0.10](provider-terraform/0.10/README.md)
 - [provider-terraform/0.16](provider-terraform/0.16/README.md)
 - [function-patch-and-transform/0.7](function-patch-and-transform/0.7/README.md)
